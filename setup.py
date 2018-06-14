@@ -54,9 +54,13 @@ class CMakeBuild(build_ext):
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+version_ns = {}
+with open(os.path.join('ppap4lmp', '_version.py')) as f:
+    exec(f.read(), {}, version_ns)
+
 setup(
     name="ppap4lmp",
-    version="0.0.0a",
+    version=version_ns['__version__'],
     author="Takayuki Kobayashi",
     author_email="iris.takayuki@gmail.com",
     description="PostProcess and Analysis Program for LAMMPS",

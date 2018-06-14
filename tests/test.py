@@ -1,6 +1,11 @@
-import ppap4lmp as m
+import ppap4lmp as pp
+import ppap4lmp.data as ppd
 
-print(m.__version__)
+print(pp.__version__)
 
-assert m.add(1, 2) == 3
-assert m.subtract(1, 2) == -1
+data_name = "test"
+
+d = ppd.Data(data_name)
+assert d.get_name() == data_name
+
+print("Pass! (^o^)b")
