@@ -4,31 +4,36 @@ This file is for Data class.
 create: 2018/06/12 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
+#ifndef DATA_H
+#define DATA_H
+
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 #include <string>
 
-//#include "main.h"
+namespace py = pybind11;
 
 class Data {
  public:
   Data(const std::string &);
   void set_name(const std::string &);
-  const std::string &get_name();
+  const std::string &get_name() const;
  private:
   std::string name;
 };
 
-/* ---------------------------------------------------------------------
-  Section for pybind11
---------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ */
+// for pubind11
 
-namespace py = pybind11;
+static void setup_pybind_data(py::module &m)  {
 
-PYBIND11_MODULE(data, m) {
-  m.attr("__name__") = "ppap4lmp.data";
-  py::class_<Data>(m, "Data")
+  py::module m_sub = m.def_submodule("data");
+
+  py::class_<Data>(m_sub, "Data")
     .def(py::init<const std::string &>())
     .def("set_name", &Data::set_name)
     .def("get_name", &Data::get_name);
+
 }
+
+#endif
