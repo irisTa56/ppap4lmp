@@ -29,9 +29,7 @@ class Processor {
 
 static void setup_pybind_processor(py::module &m)  {
 
-  py::module m_sub = m.def_submodule("processor");
-
-  py::class_<Processor>(m_sub, "Processor")
+  py::class_<Processor>(m, "Processor")
     .def(py::init<>())
     .def("execute", &Processor::execute)
     .def("get_result", &Processor::get_result);

@@ -4,7 +4,7 @@
 #include "headers_data.h"
 #include "headers_processor.h"
 
-PYBIND11_MODULE(ppap4lmp, m) {
+PYBIND11_MODULE(_ppap4lmp, m) {
   m.doc() = "PostProcess and Analysis Program for LAMMPS";
 #ifdef VERSION_INFO
   m.attr("__version__") = VERSION_INFO;

@@ -4,6 +4,11 @@ PostProcess and Analysis Program for LAMMPS
 
 ## Installation
 
+```bash
+git clone --recursive https://github.com/irisTa56/ppap4lmp.git
+pip install ./ppap4lmp
+```
+
 ## Acknowledgement
 
 This project would not be possible without the following fine open-source projects.

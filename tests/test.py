@@ -1,13 +1,12 @@
-import ppap4lmp as pp
-import ppap4lmp.data as ppd
-import ppap4lmp.processor as ppp
+from ppap4lmp import __version__, \
+  Data, Processor
 
-print("version: " + pp.__version__)
+print("version: " + __version__)
 
 data_name = "test"
 
-d = ppd.Data(data_name)
-p = ppp.Processor()
+d = Data(data_name)
+p = Processor()
 
 p.execute(d)
 

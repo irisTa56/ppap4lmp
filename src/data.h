@@ -27,9 +27,7 @@ class Data {
 
 static void setup_pybind_data(py::module &m)  {
 
-  py::module m_sub = m.def_submodule("data");
-
-  py::class_<Data>(m_sub, "Data")
+  py::class_<Data>(m, "Data")
     .def(py::init<const std::string &>())
     .def("set_name", &Data::set_name)
     .def("get_name", &Data::get_name);
