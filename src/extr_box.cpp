@@ -8,7 +8,7 @@ create: 2018/06/16 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-ExtrBox::ExtrBox() : Extractor() {
+void ExtrBox::create() {
 
   data = new DataBox();
 

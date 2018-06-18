@@ -12,8 +12,10 @@ create: 2018/06/12 by Takayuki Kobayashi
 
 class ExtrBox : public Extractor {
  public:
-  ExtrBox();
+  ExtrBox() = default;
   virtual ~ExtrBox() = default;
+ protected:
+  virtual void create() override;
 };
 
 /* ------------------------------------------------------------------ */

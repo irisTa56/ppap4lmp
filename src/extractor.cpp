@@ -30,6 +30,7 @@ bool Extractor::del_data() {
     return false;
   } else {
     delete data;
+    is_extracted = false;
     return true;
   }
 
@@ -40,6 +41,7 @@ bool Extractor::del_data() {
 Data *Extractor::get_data() {
 
   if (!is_extracted) {
+    create();
     extract();
     is_extracted = true;
   }
@@ -55,6 +57,7 @@ Data *Extractor::get_data() {
 const Data *Extractor::get_data_() {
 
   if (!is_extracted) {
+    create();
     extract();
     is_extracted = true;
   }

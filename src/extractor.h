@@ -23,6 +23,7 @@ class Extractor {
   Data *get_data();
   const Data *get_data_();  // for reference use from Python
  protected:
+  virtual void create() = 0;
   virtual void extract() = 0;
   bool is_extracted = false;
   int reservation_count = 0;
@@ -40,6 +41,9 @@ class PyExtractor : public EXTR {
  public:
   using EXTR::EXTR;
  protected:
+  void create() override {
+    PYBIND11_OVERLOAD_PURE(void, EXTR, create, );
+  }
   void extract() override {
     PYBIND11_OVERLOAD_PURE(void, EXTR, extract, );
   }

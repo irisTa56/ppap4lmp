@@ -16,6 +16,7 @@ PYBIND11_MODULE(_ppap4lmp, m) {
   pybind_processor(m);
   pybind_proc_data(m);
   pybind_invoker(m);
+  pybind_invo_omp(m);
 
 }
 

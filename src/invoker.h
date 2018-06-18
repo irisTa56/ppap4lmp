@@ -52,28 +52,3 @@ static void pybind_invoker(py::module &m)  {
 }
 
 #endif
-
-
-
-/*
-
-Invoker::Invoker() { }
-Invoker::~Invoker() {
-    std::list<Command*>::iterator it = commandQueue_.begin();
-    while (it != commandQueue_.end()) {
-        delete (*it);
-        ++it;
-    }
-}
-void Invoker::Store(Command* cmd) {
-    commandQueue_.push_back(cmd);
-}
-void Invoker::Execute() {
-    while (!commandQueue_.empty()) {
-        Command* command = commandQueue_.front();
-        commandQueue_.pop_front();
-        command->Execute();
-        delete command;
-    }
-}
-*/

@@ -11,7 +11,8 @@ create: 2018/06/16 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-ExtrBoxDump::ExtrBoxDump(const std::string &filepath_, int timestep_) {
+ExtrBoxDump::ExtrBoxDump(
+  const std::string &filepath_, int timestep_) : ExtrBox() {
 
   filepath = filepath_;
   timestep = timestep_;
@@ -28,7 +29,7 @@ void ExtrBoxDump::extract() {
   int n_skip = 0;
 
   if (!ifs.is_open()) {
-    runtime_error("No such a file " + filepath);
+    runtime_error("No such a file: " + filepath);
   }
 
   while (std::getline(ifs,line)) {

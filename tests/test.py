@@ -1,29 +1,12 @@
 from ppap4lmp import __version__, \
-  DataBox, ExtrBoxDump, ProcData
+  DataBox, ExtrBoxDump, ProcData, InvoOMP
 
 print("version: " + __version__)
 
-print("\n01: --------")
-
-data = DataBox()
-print(data.get_iv("periodicity"))
-print(data.get_edge())
-
-print("\n02: --------")
+print("\n01 ---\n")
 
 dump_prefix = "tests/dumps_bead/bead"
 dump_suffix = "dump"
-timestep = 3000000
-
-extr = ExtrBoxDump(
-  ".".join([dump_prefix, str(timestep), dump_suffix]), timestep)
-
-box_data = extr.get_data()
-
-print(box_data.get_periodicity())
-print(box_data.get_da("edge"))
-
-print("\n03: --------")
 
 extrs = [
   ExtrBoxDump(".".join([dump_prefix, str(n), dump_suffix]), n)
@@ -31,7 +14,10 @@ extrs = [
 
 proc = ProcData(extrs)
 
-print(proc.get_length())
-print(proc.get_results())
+invoker = InvoOMP(proc)
+invoker.execute()
+
+for d in proc.get_results():
+  print(d.get_periodicity())
 
 print("\nPass! (^o^)b")
