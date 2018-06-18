@@ -22,10 +22,6 @@ class Extractor {
   bool del_data();
   Data *get_data();
   const Data *get_data_();  // for reference use from Python
-  /*
-  template <typename DATA>
-  const DATA &get_data_();  // for reference use from Python
-  */
  protected:
   virtual void extract() = 0;
   bool is_extracted = false;

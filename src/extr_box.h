@@ -16,21 +16,6 @@ class ExtrBox : public Extractor {
   virtual ~ExtrBox() = default;
 };
 
-/*
-// implementation of get_data_()
-template class Extractor<DataBox>;
-template<> const DataBox &Extractor<DataBox>::get_data_() {
-
-  if (!is_extracted) {
-    extract();
-    is_extracted = true;
-  }
-
-  return *data;
-
-}
-*/
-
 /* ------------------------------------------------------------------ */
 // for pubind11
 

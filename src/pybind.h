@@ -4,6 +4,7 @@
 #include "headers_data.h"
 #include "headers_extractor.h"
 #include "headers_processor.h"
+#include "headers_invoker.h"
 
 PYBIND11_MODULE(_ppap4lmp, m) {
 
@@ -14,6 +15,7 @@ PYBIND11_MODULE(_ppap4lmp, m) {
   pybind_extr_box_dump(m);
   pybind_processor(m);
   pybind_proc_data(m);
+  pybind_invoker(m);
 
 }
 
