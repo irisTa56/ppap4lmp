@@ -15,28 +15,11 @@ DataBox::DataBox() : Data() {
 
 }
 
-
-/* ------------------------------------------------------------------ */
-
-void DataBox::set_periodicity(const Eigen::VectorXi &val) {
-
-  set_iv("periodicity", val);
-
-}
-
 /* ------------------------------------------------------------------ */
 
 const Eigen::VectorXi &DataBox::get_periodicity() {
 
   return get_iv("periodicity");
-
-}
-
-/* ------------------------------------------------------------------ */
-
-void DataBox::set_edge(const Eigen::ArrayXXd &val) {
-
-  set_da("edge", val);
 
 }
 

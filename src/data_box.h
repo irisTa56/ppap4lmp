@@ -13,9 +13,7 @@ class DataBox : public Data {
  public:
   DataBox();
   virtual ~DataBox() = default;
-  void set_periodicity(const Eigen::VectorXi &);
   const Eigen::VectorXi &get_periodicity();
-  void set_edge(const Eigen::ArrayXXd &);
   const Eigen::ArrayXXd &get_edge();
 };
 
@@ -25,7 +23,7 @@ class DataBox : public Data {
 namespace py = pybind11;
 
 static void pybind_data_box(py::module &m) {
-
+  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<DataBox, Data>(m, "DataBox")
     .def(py::init<>())
     .def(

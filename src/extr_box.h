@@ -10,12 +10,13 @@ create: 2018/06/12 by Takayuki Kobayashi
 #include "extractor.h"
 #include "data_box.h"
 
-class ExtrBox : public Extractor <class DataBox> {
+class ExtrBox : public Extractor {
  public:
   ExtrBox();
   virtual ~ExtrBox() = default;
 };
 
+/*
 // implementation of get_data_()
 template class Extractor<DataBox>;
 template<> const DataBox &Extractor<DataBox>::get_data_() {
@@ -28,30 +29,17 @@ template<> const DataBox &Extractor<DataBox>::get_data_() {
   return *data;
 
 }
+*/
 
 /* ------------------------------------------------------------------ */
 // for pubind11
 
 namespace py = pybind11;
 
-// trampoline class to bind Python
-template <class EXTR = ExtrBox>
-class PyExtrBox : public EXTR {
- public:
-  using EXTR::EXTR;
- protected:
-  void extract() override {
-    PYBIND11_OVERLOAD_PURE(void, EXTR, extract, );
-  }
-};
-
 static void pybind_extr_box(py::module &m) {
-
-  py::class_<ExtrBox, PyExtrBox<>>(m, "ExtrBox")
-    .def(py::init<>())
-    .def(
-      "get_data", &ExtrBox::get_data_,
-      py::return_value_policy::reference_internal);
+  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
+  py::class_<ExtrBox, PyExtractor<ExtrBox>, Extractor>(m, "ExtrBox")
+    .def(py::init<>());
 
 }
 

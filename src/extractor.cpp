@@ -8,8 +8,7 @@ create: 2018/06/16 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-template <typename DATA>
-void Extractor<DATA>::reserve() {
+void Extractor::reserve() {
 
   reservation_count += 1;
 
@@ -17,8 +16,7 @@ void Extractor<DATA>::reserve() {
 
 /* ------------------------------------------------------------------ */
 
-template <typename DATA>
-bool Extractor<DATA>::del_data() {
+bool Extractor::del_data() {
 
   if (0 < reservation_count) {
     return false;
@@ -31,8 +29,7 @@ bool Extractor<DATA>::del_data() {
 
 /* ------------------------------------------------------------------ */
 
-template <typename DATA>
-DATA *Extractor<DATA>::get_data() {
+Data *Extractor::get_data() {
 
   if (!is_extracted) {
     extract();
@@ -40,6 +37,19 @@ DATA *Extractor<DATA>::get_data() {
   }
 
   reservation_count -= 1;
+
+  return data;
+
+}
+
+/* ------------------------------------------------------------------ */
+
+const Data *Extractor::get_data_() {
+
+  if (!is_extracted) {
+    extract();
+    is_extracted = true;
+  }
 
   return data;
 

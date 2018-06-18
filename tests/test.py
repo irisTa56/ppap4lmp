@@ -1,24 +1,30 @@
 from ppap4lmp import __version__, \
-  DataBox, ExtrBoxDump
+  DataBox, ExtrBoxDump, ProcData
 
 print("version: " + __version__)
 
-box_data = DataBox()
-print(box_data.get_iv("periodicity"))
-print(box_data.get_edge())
+print("\n01: --------")
 
+data = DataBox()
+print(data.get_iv("periodicity"))
+print(data.get_edge())
+
+print("\n02: --------")
 
 dump_prefix = "tests/dumps_bead/bead"
 dump_suffix = "dump"
 timestep = 3000000
 
-box_reader = ExtrBoxDump(
+extr = ExtrBoxDump(
   ".".join([dump_prefix, str(timestep), dump_suffix]), timestep)
 
-box_data = box_reader.get_data()
+box_data = extr.get_data()
 
 print(box_data.get_periodicity())
 print(box_data.get_da("edge"))
 
+print("\n03: --------")
 
-print("Pass! (^o^)b")
+proc = ProcData(extr)
+
+print("\nPass! (^o^)b")

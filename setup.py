@@ -69,7 +69,7 @@ header_names = [os.path.basename(h)[:-2] for h in glob.glob('src/*.h')]
 
 pybind = []
 
-for affix in ['data', 'extractor']: #, 'processor']:
+for affix in ['data', 'extractor', 'processor']:
 
   with open('src/headers_{}.h'.format(affix), 'w') as f:
 
@@ -89,7 +89,7 @@ with open('src/pybind.h', 'w') as f:
 
 #include "headers_data.h"
 #include "headers_extractor.h"
-//#include "headers_processor.h"
+#include "headers_processor.h"
 
 PYBIND11_MODULE(_ppap4lmp, m) {{
 

@@ -59,7 +59,7 @@ void ExtrBoxDump::extract() {
 
       }
 
-      data->set_periodicity(periodicity);
+      data->set_iv("periodicity", periodicity);
 
       Eigen::ArrayXXd edge = Eigen::ArrayXXd::Zero(3, 2);
 
@@ -74,7 +74,7 @@ void ExtrBoxDump::extract() {
 
       }
 
-      data->set_edge(edge);
+      data->set_da("edge", edge);
 
       break;
 
