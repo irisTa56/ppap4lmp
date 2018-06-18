@@ -16,9 +16,9 @@ class ExtrBox : public Extractor <class DataBox> {
   virtual ~ExtrBox() = default;
 };
 
-// implementation of get_data_no_reservation()
+// implementation of get_data_()
 template class Extractor<DataBox>;
-template<> const DataBox &Extractor<DataBox>::get_data_no_reservation() {
+template<> const DataBox &Extractor<DataBox>::get_data_() {
 
   if (!is_extracted) {
     extract();
@@ -50,7 +50,7 @@ static void pybind_extr_box(py::module &m) {
   py::class_<ExtrBox, PyExtrBox<>>(m, "ExtrBox")
     .def(py::init<>())
     .def(
-      "get_data", &ExtrBox::get_data_no_reservation,
+      "get_data", &ExtrBox::get_data_,
       py::return_value_policy::reference_internal);
 
 }

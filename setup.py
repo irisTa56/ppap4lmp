@@ -74,6 +74,7 @@ for affix in ['data', 'extractor']: #, 'processor']:
   with open('src/headers_{}.h'.format(affix), 'w') as f:
 
     f.write('#include "{}.h"\n'.format(affix))
+    pybind.append('  pybind_{}(m);'.format(affix))
 
     names = sorted([n for n in header_names if n.startswith(affix[:4]+'_')])
 

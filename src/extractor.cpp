@@ -32,7 +32,7 @@ bool Extractor<DATA>::del_data() {
 /* ------------------------------------------------------------------ */
 
 template <typename DATA>
-const DATA &Extractor<DATA>::get_data() {
+DATA *Extractor<DATA>::get_data() {
 
   if (!is_extracted) {
     extract();
@@ -41,6 +41,6 @@ const DATA &Extractor<DATA>::get_data() {
 
   reservation_count -= 1;
 
-  return *data;
+  return data;
 
 }

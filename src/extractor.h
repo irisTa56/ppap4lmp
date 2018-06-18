@@ -20,8 +20,8 @@ class Extractor {
   virtual ~Extractor() = default;
   void reserve();
   bool del_data();
-  const DATA &get_data();
-  const DATA &get_data_no_reservation();
+  DATA *get_data();
+  const DATA &get_data_();  // for reference use from Python
  protected:
   virtual void extract() = 0;
   bool is_extracted = false;
