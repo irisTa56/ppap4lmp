@@ -8,32 +8,26 @@ create: 2018/06/15 by Takayuki Kobayashi
 #define PROCESSOR_H
 
 #include <pybind11/pybind11.h>
-#include <pybind11/stl.h>
-#include <string>
-
-#include "data.h"
-
-namespace py = pybind11;
 
 class Processor {
  public:
-  Processor();
-  void execute(const Data &);
-  const std::string &get_result() const;
- private:
-  std::string dataname;
+  Processor() = default;
+  virtual ~Processor() = default;
+  virtual void prepare() = 0;
+  virtual void prepare(int) = 0;
+  virtual void run() = 0;
+  virtual void run(int) = 0;
+  virtual void dry_run() = 0;
+  virtual void dry_run(int) = 0;
+ protected:
+  virtual void process() = 0;
 };
 
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-static void setup_pybind_processor(py::module &m)  {
+namespace py = pybind11;
 
-  py::class_<Processor>(m, "Processor")
-    .def(py::init<>())
-    .def("execute", &Processor::execute)
-    .def("get_result", &Processor::get_result);
-
-}
+static void pybind_processor(py::module &m)  {}
 
 #endif

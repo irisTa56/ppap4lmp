@@ -67,17 +67,19 @@ class CMakeBuild(build_ext):
 
 header_names = [os.path.basename(h)[:-2] for h in glob.glob('src/*.h')]
 
-setup_pybind = []
+pybind = []
 
-for affix in ['data', 'processor']:
+for affix in ['data', 'extractor']: #, 'processor']:
 
-  with open('src/header_{}.h'.format(affix), 'w') as f:
+  with open('src/headers_{}.h'.format(affix), 'w') as f:
 
-    names = [n for n in header_names if n.startswith(affix)]
+    f.write('#include "{}.h"\n'.format(affix))
+
+    names = sorted([n for n in header_names if n.startswith(affix[:4]+'_')])
 
     for name in names:
       f.write('#include "{}.h"\n'.format(name))
-      setup_pybind.append('  setup_pybind_{}(m);'.format(name))
+      pybind.append('  pybind_{}(m);'.format(name))
 
 with open('src/pybind.h', 'w') as f:
 
@@ -85,22 +87,17 @@ with open('src/pybind.h', 'w') as f:
 #define PYBIND_H
 
 #include "headers_data.h"
-#include "headers_processor.h"
+#include "headers_extractor.h"
+//#include "headers_processor.h"
 
 PYBIND11_MODULE(_ppap4lmp, m) {{
-  m.doc() = "PostProcess and Analysis Program for LAMMPS";
-#ifdef VERSION_INFO
-  m.attr("__version__") = VERSION_INFO;
-#else
-  m.attr("__version__") = "dev";
-#endif
 
-{setup_pybind}
+{pybind}
 
 }}
 
 #endif
-""".format(setup_pybind='\n'.join(setup_pybind)))
+""".format(pybind='\n'.join(pybind)))
 
 #-----------------------------------------------------------------------
 
@@ -112,7 +109,7 @@ for header in glob.glob('src/*.h'):
     for line in f:
       line_ = line.lstrip()
       if line_.startswith('py::class_<'):
-        class_names.append(line_.split('>')[0][11:])
+        class_names.append(re.split('[,<>]', line_[11:])[0])
 
 class_names.sort()
 
