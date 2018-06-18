@@ -18,6 +18,7 @@ class Extractor {
   Extractor() = default;
   virtual ~Extractor() = default;
   void reserve();
+  void cancel();
   bool del_data();
   Data *get_data();
   const Data *get_data_();  // for reference use from Python

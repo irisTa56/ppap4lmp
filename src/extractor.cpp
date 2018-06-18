@@ -16,6 +16,14 @@ void Extractor::reserve() {
 
 /* ------------------------------------------------------------------ */
 
+void Extractor::cancel() {
+
+  reservation_count -= 1;
+
+}
+
+/* ------------------------------------------------------------------ */
+
 bool Extractor::del_data() {
 
   if (0 < reservation_count) {

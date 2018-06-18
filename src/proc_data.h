@@ -14,11 +14,12 @@ class ProcData : public Processor {
   ProcData(Extractor *extr) : Processor(extr) {}
   ProcData(std::vector<Extractor *> extrs) : Processor(extrs) {}
   virtual ~ProcData() = default;
-  virtual void prepare() = 0;
-  virtual void run() = 0;
-  virtual void dry_run() = 0;
+  virtual void prepare() override;
+  virtual void run(int itr) override;
+  virtual void dry_run(int itr) override;
+  const std::vector<Data *> &get_results();
  protected:
-  virtual void process() = 0;
+  std::vector<Data *> results;
 };
 
 /* ------------------------------------------------------------------ */
@@ -28,9 +29,12 @@ namespace py = pybind11;
 
 static void pybind_proc_data(py::module &m) {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
-  py::class_<ProcData, PyProcessor<ProcData>>(m, "ProcData")
+  py::class_<ProcData, PyProcessor<ProcData>, Processor>(m, "ProcData")
     .def(py::init<Extractor *>())
-    .def(py::init<std::vector<Extractor *>>());
+    .def(py::init<std::vector<Extractor *>>())
+    .def(
+      "get_results", &ProcData::get_results,
+      py::return_value_policy::reference_internal);
 
 }
 

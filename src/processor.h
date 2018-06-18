@@ -20,11 +20,12 @@ class Processor {
   Processor(std::vector<Extractor *>);
   virtual ~Processor() = default;
   virtual void prepare() = 0;
-  virtual void run() = 0;
-  virtual void dry_run() = 0;
+  virtual void run(int itr) = 0;
+  virtual void dry_run(int itr) = 0;
+  int get_length();
  protected:
-  virtual void process() = 0;
   std::vector<Extractor *> extractors;
+  int length;
 };
 
 /* ------------------------------------------------------------------ */
@@ -40,15 +41,11 @@ class PyProcessor : public PROC {
   void prepare() override {
     PYBIND11_OVERLOAD_PURE(void, PROC, prepare, );
   }
-  void run() override {
-    PYBIND11_OVERLOAD_PURE(void, PROC, run, );
+  void run(int itr) override {
+    PYBIND11_OVERLOAD_PURE(void, PROC, run, itr);
   }
-  void dry_run() override {
-    PYBIND11_OVERLOAD_PURE(void, PROC, dry_run, );
-  }
- protected:
-  void process() override {
-    PYBIND11_OVERLOAD_PURE(void, PROC, process, );
+  void dry_run(int itr) override {
+    PYBIND11_OVERLOAD_PURE(void, PROC, dry_run, itr);
   }
 };
 
@@ -56,7 +53,10 @@ static void pybind_processor(py::module &m)  {
 
   py::class_<Processor, PyProcessor<>>(m, "Processor")
     .def(py::init<Extractor *>())
-    .def(py::init<std::vector<Extractor *>>());
+    .def(py::init<std::vector<Extractor *>>())
+    .def(
+      "get_length", &Processor::get_length,
+      py::return_value_policy::reference_internal);
 
 }
 

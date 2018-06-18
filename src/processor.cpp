@@ -11,6 +11,7 @@ create: 2018/06/18 by Takayuki Kobayashi
 Processor::Processor(Extractor *extr) {
 
   extractors.push_back(extr);
+  length = extractors.size();
 
 }
 
@@ -19,5 +20,14 @@ Processor::Processor(Extractor *extr) {
 Processor::Processor(std::vector<Extractor *> extrs) {
 
   extractors = extrs;
+  length = extractors.size();
+
+}
+
+/* ------------------------------------------------------------------ */
+
+int Processor::get_length() {
+
+  return length;
 
 }

@@ -25,6 +25,13 @@ print(box_data.get_da("edge"))
 
 print("\n03: --------")
 
-proc = ProcData(extr)
+extrs = [
+  ExtrBoxDump(".".join([dump_prefix, str(n), dump_suffix]), n)
+  for n in range(2990000, 3000000, 1000)]
+
+proc = ProcData(extrs)
+
+print(proc.get_length())
+print(proc.get_results())
 
 print("\nPass! (^o^)b")
