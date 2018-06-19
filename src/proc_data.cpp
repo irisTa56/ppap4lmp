@@ -24,6 +24,8 @@ void ProcData::run(int itr) {
 
   results[itr] = extractors[itr]->get_data();
 
+  //if (extractors[itr]->del_data()) { /* data will be used in Python */ }
+
 }
 
 /* ------------------------------------------------------------------ */

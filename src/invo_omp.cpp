@@ -23,4 +23,8 @@ void InvoOMP::execute() {
     }
   }
 
+  for(Processor *p : processors) {
+    p->finish();
+  }
+
 }

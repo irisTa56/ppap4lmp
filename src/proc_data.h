@@ -17,6 +17,7 @@ class ProcData : public Processor {
   virtual void prepare() override;
   virtual void run(int itr) override;
   virtual void dry_run(int itr) override;
+  virtual void finish() override {}
   const std::vector<Data *> &get_results();
  protected:
   std::vector<Data *> results;

@@ -22,6 +22,7 @@ class Processor {
   virtual void prepare() = 0;
   virtual void run(int itr) = 0;
   virtual void dry_run(int itr) = 0;
+  virtual void finish() = 0;
   int get_length();
  protected:
   std::vector<Extractor *> extractors;
@@ -46,6 +47,9 @@ class PyProcessor : public PROC {
   }
   void dry_run(int itr) override {
     PYBIND11_OVERLOAD_PURE(void, PROC, dry_run, itr);
+  }
+  void finish() override {
+    PYBIND11_OVERLOAD_PURE(void, PROC, finish, );
   }
 };
 

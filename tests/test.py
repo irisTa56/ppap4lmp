@@ -3,7 +3,7 @@ from ppap4lmp import __version__, \
 
 print("version: " + __version__)
 
-print("\n01 ---\n")
+print("\n01 >>\n")
 
 dump_prefix = "tests/dumps_bead/bead"
 dump_suffix = "dump"
@@ -14,8 +14,7 @@ extrs = [
 
 proc = ProcData(extrs)
 
-invoker = InvoOMP(proc)
-invoker.execute()
+InvoOMP(proc).execute()
 
 for d in proc.get_results():
   print(d.get_periodicity())
