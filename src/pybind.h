@@ -9,8 +9,10 @@
 PYBIND11_MODULE(_ppap4lmp, m) {
 
   pybind_data(m);
+  pybind_data_atoms(m);
   pybind_data_box(m);
   pybind_extractor(m);
+  pybind_extr_atoms(m);
   pybind_extr_box(m);
   pybind_extr_box_dump(m);
   pybind_processor(m);

@@ -32,6 +32,12 @@ class Data {
   void set_dv(const std::string &, const Eigen::VectorXd &);
   void set_ia(const std::string &, const Eigen::ArrayXXi &);
   void set_da(const std::string &, const Eigen::ArrayXXd &);
+  bool has_i(const std::string &);
+  bool has_d(const std::string &);
+  bool has_iv(const std::string &);
+  bool has_dv(const std::string &);
+  bool has_ia(const std::string &);
+  bool has_da(const std::string &);
  protected:
   std::map<std::string,int> prop_i;               // property name -> value (integer)
   std::map<std::string,double> prop_d;            // property name -> value (double)
@@ -49,25 +55,7 @@ namespace py = pybind11;
 static void pybind_data(py::module &m) {
 
   py::class_<Data>(m, "Data")
-    .def(py::init<>())
-    .def(
-      "get_i", &Data::get_i,
-      py::return_value_policy::reference_internal)
-    .def(
-      "get_d", &Data::get_d,
-      py::return_value_policy::reference_internal)
-    .def(
-      "get_iv", &Data::get_iv,
-      py::return_value_policy::reference_internal)
-    .def(
-      "get_dv", &Data::get_dv,
-      py::return_value_policy::reference_internal)
-    .def(
-      "get_ia", &Data::get_ia,
-      py::return_value_policy::reference_internal)
-    .def(
-      "get_da", &Data::get_da,
-      py::return_value_policy::reference_internal);
+    .def(py::init<>());
 
 }
 

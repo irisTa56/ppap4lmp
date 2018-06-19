@@ -101,3 +101,75 @@ void Data::set_da(const std::string &key, const Eigen::ArrayXXd &val) {
   prop_da[key] = val;
 
 }
+
+/* ------------------------------------------------------------------ */
+
+bool Data::has_i(const std::string &key) {
+
+  if (prop_i.count(key) > 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Data::has_d(const std::string &key) {
+
+  if (prop_d.count(key) > 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Data::has_iv(const std::string &key) {
+
+  if (prop_iv.count(key) > 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Data::has_dv(const std::string &key) {
+
+  if (prop_dv.count(key) > 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Data::has_ia(const std::string &key) {
+
+  if (prop_ia.count(key) > 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Data::has_da(const std::string &key) {
+
+  if (prop_da.count(key) > 0) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
