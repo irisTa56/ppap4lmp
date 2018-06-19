@@ -20,8 +20,10 @@ class Invoker {
   Invoker(std::vector<Processor *>);
   virtual ~Invoker() = default;
   virtual void execute() = 0;
+  int get_length();
  protected:
   std::vector<Processor *> processors;
+  int length;
   int n_iteration;
 };
 

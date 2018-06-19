@@ -12,6 +12,8 @@ create: 2018/06/18 by Takayuki Kobayashi
 Invoker::Invoker(Processor *proc) {
 
   processors.push_back(proc);
+  length = processors.size();
+
   n_iteration = proc->get_length();
 
 }
@@ -21,6 +23,8 @@ Invoker::Invoker(Processor *proc) {
 Invoker::Invoker(std::vector<Processor *> procs) {
 
   processors = procs;
+  length = processors.size();
+
   n_iteration = procs[0]->get_length();
 
   for(Processor *p : processors) {
@@ -28,5 +32,13 @@ Invoker::Invoker(std::vector<Processor *> procs) {
       runtime_error("Number of Data (Extractor) in the Processors should be equal");
     }
   }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+int Invoker::get_length() {
+
+  return length;
 
 }
