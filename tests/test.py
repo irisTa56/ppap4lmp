@@ -1,22 +1,22 @@
-from ppap4lmp import __version__, \
-  DataBox, ExtrBoxDump, ProcData, InvoOMP
+import unittest
+
+from test_GenBoxDump import TestGenBoxDump
+
+from ppap4lmp import __version__
 
 print("version: " + __version__)
+print("\ntest starts...\n")
 
-print("\n01 >>\n")
 
-dump_prefix = "tests/dumps_bead/bead"
-dump_suffix = "dump"
+def suite():
 
-extrs = [
-  ExtrBoxDump(".".join([dump_prefix, str(n), dump_suffix]), n)
-  for n in range(2990000, 3000000, 1000)]
+  suite = unittest.TestSuite()
+  suite.addTest(TestGenBoxDump("test_get_periodic"))
+  suite.addTest(TestGenBoxDump("test_get_edge"))
 
-proc = ProcData(extrs)
+  return suite
 
-InvoOMP(proc).execute()
 
-for d in proc.get_results():
-  print(d.get_periodicity())
-
-print("\nPass! (^o^)b")
+if __name__ == "__main__":
+  runner = unittest.TextTestRunner()
+  runner.run(suite())

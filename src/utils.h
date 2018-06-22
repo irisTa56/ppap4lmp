@@ -6,6 +6,9 @@
 #include <string>
 #include <vector>
 
+#include <nlohmann/json.hpp>
+#include <pybind11/pybind11.h>
+
 /*=== split ===*/
 
 static std::vector<std::string> split(
@@ -76,12 +79,26 @@ static std::vector<ELEM> slice(
 }
 */
 
-/*=== runtime error ===*/
+/*=== message ===*/
+
+static void message(const std::string &msg) {
+
+  std::cout << msg << std::endl;
+
+}
 
 static void runtime_error(const std::string &msg) {
 
   std::cout << msg << std::endl;
   exit(1);
+
+}
+
+/*=== convert JSON (in C++) to Python type ===*/
+
+static pybind11::object json2py(const nlohmann::json &j) {
+
+  return pybind11::module::import("json").attr("loads")(j.dump());
 
 }
 

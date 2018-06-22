@@ -1,32 +1,32 @@
 /* ---------------------------------------------------------------------
 This file is for Processor class.
 
-create: 2018/06/15 by Takayuki Kobayashi
+create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #ifndef PROCESSOR_H
 #define PROCESSOR_H
 
+#include <memory>
 #include <vector>
 
 #include <pybind11/pybind11.h>
 #include <pybind11/stl.h>
 
-#include "extractor.h"
+#include "generator.h"
 
 class Processor {
  public:
-  Processor(Extractor *);
-  Processor(std::vector<Extractor *>);
+  Processor(std::shared_ptr<Generator>);
+  Processor(std::vector<std::shared_ptr<Generator>>);
   virtual ~Processor() = default;
   virtual void prepare() = 0;
-  virtual void run(int itr) = 0;
-  virtual void dry_run(int itr) = 0;
+  virtual void run(int i_generator) = 0;
   virtual void finish() = 0;
-  int get_length();
+  const int get_n_generators();
  protected:
-  std::vector<Extractor *> extractors;
-  int length;
+  std::vector<std::shared_ptr<Generator>> generators;
+  int n_generators;
 };
 
 /* ------------------------------------------------------------------ */
@@ -42,11 +42,8 @@ class PyProcessor : public PROC {
   void prepare() override {
     PYBIND11_OVERLOAD_PURE(void, PROC, prepare, );
   }
-  void run(int itr) override {
-    PYBIND11_OVERLOAD_PURE(void, PROC, run, itr);
-  }
-  void dry_run(int itr) override {
-    PYBIND11_OVERLOAD_PURE(void, PROC, dry_run, itr);
+  void run(int i_generator) override {
+    PYBIND11_OVERLOAD_PURE(void, PROC, run, i_generator);
   }
   void finish() override {
     PYBIND11_OVERLOAD_PURE(void, PROC, finish, );
@@ -56,11 +53,9 @@ class PyProcessor : public PROC {
 static void pybind_processor(py::module &m)  {
 
   py::class_<Processor, PyProcessor<>>(m, "Processor")
-    .def(py::init<Extractor *>())
-    .def(py::init<std::vector<Extractor *>>())
-    .def(
-      "get_length", &Processor::get_length,
-      py::return_value_policy::reference_internal);
+    .def(py::init<std::shared_ptr<Generator>>())
+    .def(py::init<std::vector<std::shared_ptr<Generator>>>())
+    .def("get_n_generators", &Processor::get_n_generators);
 
 }
 

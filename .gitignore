@@ -8,10 +8,12 @@ _generate/
 
 .DS_Store
 mynotes/
+
 __pycache__/
 
 tests/dumps_*
 
-src/header_*.h
+src/headers_*.h
 src/pybind.h
+
 ppap4lmp/__init__.py

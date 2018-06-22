@@ -1,20 +1,20 @@
 /* ---------------------------------------------------------------------
-This file is for ExtrBoxDump class.
+This file is for GenBoxDump class.
 
-create: 2018/06/12 by Takayuki Kobayashi
+create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#ifndef EXTR_BOX_DUMP_H
-#define EXTR_BOX_DUMP_H
+#ifndef GEN_BOX_DUMP_H
+#define GEN_BOX_DUMP_H
 
-#include "extr_box.h"
+#include "gen_box.h"
 
-class ExtrBoxDump : public ExtrBox {
+class GenBoxDump : public GenBox {
  public:
-  ExtrBoxDump(const std::string &, int);
-  virtual ~ExtrBoxDump() = default;
+  GenBoxDump(const std::string &, int);
+  virtual ~GenBoxDump() = default;
  protected:
-  virtual void extract() override;
+  virtual void generate() override;
   std::string filepath;
   int timestep;
 };
@@ -24,9 +24,9 @@ class ExtrBoxDump : public ExtrBox {
 
 namespace py = pybind11;
 
-static void pybind_extr_box_dump(py::module &m) {
+static void pybind_gen_box_dump(py::module &m) {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
-  py::class_<ExtrBoxDump, PyExtractor<ExtrBoxDump>, ExtrBox, Extractor>(m, "ExtrBoxDump")
+  py::class_<GenBoxDump, PyGenerator<GenBoxDump>, GenBox, Generator>(m, "GenBoxDump")
     .def(py::init<const std::string &, int>());
 
 }

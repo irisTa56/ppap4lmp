@@ -1,33 +1,33 @@
 /* ---------------------------------------------------------------------
 This file is for Processor class.
 
-create: 2018/06/18 by Takayuki Kobayashi
+create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "processor.h"
 
 /* ------------------------------------------------------------------ */
 
-Processor::Processor(Extractor *extr) {
+Processor::Processor(std::shared_ptr<Generator> gen) {
 
-  extractors.push_back(extr);
-  length = extractors.size();
-
-}
-
-/* ------------------------------------------------------------------ */
-
-Processor::Processor(std::vector<Extractor *> extrs) {
-
-  extractors = extrs;
-  length = extractors.size();
+  generators.push_back(gen);
+  n_generators = generators.size();
 
 }
 
 /* ------------------------------------------------------------------ */
 
-int Processor::get_length() {
+Processor::Processor(std::vector<std::shared_ptr<Generator>> gens) {
 
-  return length;
+  generators = gens;
+  n_generators = generators.size();
+
+}
+
+/* ------------------------------------------------------------------ */
+
+const int Processor::get_n_generators() {
+
+  return n_generators;
 
 }

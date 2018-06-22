@@ -1,0 +1,40 @@
+/* ---------------------------------------------------------------------
+This file is for GenBox class.
+
+create: 2018/06/21 by Takayuki Kobayashi
+--------------------------------------------------------------------- */
+
+#ifndef GEN_BOX_H
+#define GEN_BOX_H
+
+#include <map>
+#include <vector>
+
+#include <pybind11/stl.h>
+
+#include "generator.h"
+
+class GenBox : public Generator {
+ public:
+  GenBox();
+  virtual ~GenBox() = default;
+  // Functions for reference use from Python
+  const std::vector<bool> get_periodic();
+  const std::vector<std::map<std::string,double>> get_edge();
+};
+
+/* ------------------------------------------------------------------ */
+// for pubind11
+
+namespace py = pybind11;
+
+static void pybind_gen_box(py::module &m) {
+  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
+  py::class_<GenBox, PyGenerator<GenBox>, Generator>(m, "GenBox")
+    .def(py::init<>())
+    .def("get_periodic", &GenBox::get_periodic)
+    .def("get_edge", &GenBox::get_edge);
+
+}
+
+#endif
