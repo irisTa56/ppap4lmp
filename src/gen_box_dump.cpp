@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-This file is for GenBoxDump class.
+GenBoxDump: stands for Generator of Box from lammps' Dump file.
 
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -12,7 +12,20 @@ create: 2018/06/21 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 GenBoxDump::GenBoxDump(
-  const std::string &filepath_, int timestep_) : GenBox() {
+  const std::string &filepath_,
+  int timestep_) : GenBox() {
+
+  filepath = filepath_;
+  timestep = timestep_;
+
+}
+
+/* ------------------------------------------------------------------ */
+
+GenBoxDump::GenBoxDump(
+  const std::string &filepath_,
+  int timestep_,
+  const std::string &suffix) : GenBox(suffix) {
 
   filepath = filepath_;
   timestep = timestep_;

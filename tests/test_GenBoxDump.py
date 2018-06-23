@@ -14,12 +14,16 @@ class TestGenBoxDump(unittest.TestCase):
 
   def test_get_periodic(self):
 
+    print("\n\nTestGenBoxDump.test_get_periodic:")
+
     expected_result = [True, True, False]
 
     for gen in [GenBoxDump(*args) for args in self.args_list]:
       self.assertEqual(gen.get_periodic(), expected_result)
 
   def test_get_edge(self):
+
+    print("\n\nTestGenBoxDump.test_get_edge:")
 
     expected_result = [
       {"min": 0.0, "max": 662.0},

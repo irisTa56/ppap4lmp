@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-This file is for Generator class.
+Generator: is an abstract class to generate data.
 
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -7,11 +7,13 @@ create: 2018/06/21 by Takayuki Kobayashi
 #ifndef GENERATOR_H
 #define GENERATOR_H
 
+#include <map>
 #include <string>
+#include <vector>
 
 #include <nlohmann/json.hpp>
 #include <pybind11/pybind11.h>
-#include <pybind11/cast.h>
+#include <pybind11/stl.h>
 
 class Generator {
  public:
@@ -20,17 +22,17 @@ class Generator {
   void appoint();
   void cancel();
   void goodbye();
-  nlohmann::json &get_data();
-  pybind11::object get_data_py();
+  void clockout();
+  const nlohmann::json &get_data();
+  // function for reference use from Python
+  const pybind11::object get_data_py();
  protected:
-  std::string dataname;
-  // functions & variables
-  virtual void generate() = 0;
-  virtual void filter() {};  // for array data
-  void check_data();
   bool data_exists = false;
   int n_appointment = 0;
+  std::string dataname;
   nlohmann::json data;
+  void check_data();
+  virtual void generate() = 0;
 };
 
 /* ------------------------------------------------------------------ */
@@ -47,14 +49,11 @@ class PyGenerator : public GEN {
   void generate() override {
     PYBIND11_OVERLOAD_PURE(void, GEN, generate, );
   }
-  void filter() override {
-    PYBIND11_OVERLOAD(void, GEN, filter, );
-  }
 };
 
 static void pybind_generator(py::module &m) {
 
-  py::class_<Generator, PyGenerator<>>(m, "Generator")
+  py::class_<Generator,PyGenerator<>,std::shared_ptr<Generator>>(m, "Generator")
     .def(py::init<>())
     .def("get_data", &Generator::get_data_py);
 

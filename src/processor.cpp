@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-This file is for Processor class.
+Processor: is an abstract class to process data.
 
 create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -21,6 +21,40 @@ Processor::Processor(std::vector<std::shared_ptr<Generator>> gens) {
 
   generators = gens;
   n_generators = generators.size();
+
+}
+
+/* ------------------------------------------------------------------ */
+
+void Processor::run(int i_generator) {
+
+  run_impl(i_generator);
+
+  generators[i_generator]->goodbye();
+
+}
+
+/* ------------------------------------------------------------------ */
+
+void Processor::prepare() {
+
+  prepare_impl();
+
+  for(auto g : generators) {
+    g->appoint();
+  }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+void Processor::finish() {
+
+  finish_impl();
+
+  for(auto g : generators) {
+    g->clockout();
+  }
 
 }
 

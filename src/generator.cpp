@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-This file is for Generator class.
+Generator: is an abstract class to generate data.
 
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -37,14 +37,24 @@ void Generator::goodbye() {
     data_exists = false;
 
   } else if (n_appointment < 0) {
-    runtime_error("Invalid data use is detected");
+    runtime_error(dataname + ": Invalid data use is detected");
   }
 
 }
 
 /* ------------------------------------------------------------------ */
 
-nlohmann::json &Generator::get_data() {
+void Generator::clockout() {
+
+  if (0 < n_appointment) {
+    message("Unused " + std::to_string(n_appointment) + " " + dataname);
+  }
+
+}
+
+/* ------------------------------------------------------------------ */
+
+const nlohmann::json &Generator::get_data() {
 
   check_data();
 
@@ -54,7 +64,7 @@ nlohmann::json &Generator::get_data() {
 
 /* ------------------------------------------------------------------ */
 
-pybind11::object Generator::get_data_py() {
+const pybind11::object Generator::get_data_py() {
 
   check_data();
 
@@ -69,10 +79,6 @@ void Generator::check_data() {
   if (!data_exists) {
     this->generate();
     data_exists = true;
-  }
-
-  if (data.is_array()) {
-    filter();
   }
 
 }

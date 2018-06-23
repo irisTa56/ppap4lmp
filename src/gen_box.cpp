@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-This file is for GenBox class.
+GenBox: stands for Generator of Box.
 
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -11,6 +11,14 @@ create: 2018/06/21 by Takayuki Kobayashi
 GenBox::GenBox() {
 
   dataname = "Box";
+
+}
+
+/* ------------------------------------------------------------------ */
+
+GenBox::GenBox(const std::string &suffix) {
+
+  dataname = "Box_" + suffix;
 
 }
 
