@@ -11,7 +11,7 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 class GenBox : public Generator {
  public:
- GenBox();
+  GenBox();
   GenBox(const std::string &);
   virtual ~GenBox() = default;
   // functions for reference use from Python

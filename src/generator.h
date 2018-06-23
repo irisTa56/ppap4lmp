@@ -32,6 +32,8 @@ class Generator {
   std::string dataname;
   nlohmann::json data;
   void check_data();
+  int count_keys(
+    const std::vector<std::string> &, bool check_only_front = true);
   virtual void generate() = 0;
 };
 

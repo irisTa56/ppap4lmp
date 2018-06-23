@@ -82,3 +82,62 @@ void Generator::check_data() {
   }
 
 }
+
+/* ------------------------------------------------------------------ */
+
+int Generator::count_keys(
+  const std::vector<std::string> &keys, bool check_only_front) {
+
+  int count_sum = 0;
+
+  for (auto k : keys) {
+
+    if (data.is_array()) {
+
+      if (check_only_front) {
+
+        auto d = data.front();
+        int count = d.count(k);
+
+        if (1 < count) {
+          message("Duplicate data key: " + k);
+        }
+
+        count_sum += count;
+
+      } else {
+
+        int count = 0;
+
+        for (auto d : data) {
+
+          int count_tmp = d.count(k);
+
+          if (1 < count_tmp) {
+            message("Duplicate data key: " + k);
+          }
+
+          count += count_tmp;
+
+        }
+
+        count_sum += count/data.size();
+
+      }
+
+    } else {
+
+      int count = data.count(k);
+
+      if (1 < count) {
+        message("Duplicate data key: " + k);
+      }
+
+      count_sum += count;
+
+    }
+  }
+
+  return count_sum;
+
+}
