@@ -32,6 +32,7 @@ void Generator::goodbye() {
   if (n_appointment == 0) {
 
     data.clear();
+    data = nullptr;
 
     message(dataname + " has been deleted");
     data_exists = false;
@@ -88,9 +89,11 @@ void Generator::check_data() {
 int Generator::count_keys(
   const std::vector<std::string> &keys, bool check_only_front) {
 
+  check_data();
+
   int count_sum = 0;
 
-  for (auto k : keys) {
+  for (const auto &k : keys) {
 
     if (data.is_array()) {
 
@@ -109,7 +112,7 @@ int Generator::count_keys(
 
         int count = 0;
 
-        for (auto d : data) {
+        for (const auto &d : data) {
 
           int count_tmp = d.count(k);
 

@@ -12,8 +12,7 @@ create: 2018/06/21 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 GenBoxDump::GenBoxDump(
-  const std::string &filepath_,
-  int timestep_) : GenBox() {
+  const std::string &filepath_, int timestep_) : GenBox() {
 
   filepath = filepath_;
   timestep = timestep_;
@@ -23,8 +22,7 @@ GenBoxDump::GenBoxDump(
 /* ------------------------------------------------------------------ */
 
 GenBoxDump::GenBoxDump(
-  const std::string &filepath_,
-  int timestep_,
+  const std::string &filepath_, int timestep_,
   const std::string &suffix) : GenBox(suffix) {
 
   filepath = filepath_;
@@ -64,7 +62,7 @@ void GenBoxDump::generate() {
     } else if (
       line.find("ITEM: BOX BOUNDS") == 0 && timestep_matches) {
 
-      std::vector<std::string> strs = split(line);
+      auto strs = split(line);
 
       data["periodic_x"] = strs[3] == "pp" ? true : false;
       data["periodic_y"] = strs[4] == "pp" ? true : false;
@@ -73,7 +71,7 @@ void GenBoxDump::generate() {
       for (std::string dim : {"x", "y", "z"}) {
 
         std::getline(ifs, line);
-        std::vector<std::string> strs = split(line);
+        auto strs = split(line);
 
         data["min_"+dim] = std::stod(strs[0]);
         data["max_"+dim] = std::stod(strs[1]);
@@ -87,9 +85,7 @@ void GenBoxDump::generate() {
       for (int i = 0; i < n_skip; ++i) {
         std::getline(ifs, line);
       }
-
     }
-
   }
 
 }

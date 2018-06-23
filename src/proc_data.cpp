@@ -33,13 +33,18 @@ void ProcData::run_impl(int i_generator) {
 
     if (d.is_array()) {
 
-      for (auto e : d) {
+      for (const auto &e : d) {
 
         nlohmann::json k;
 
-        for (auto s : selected_keys) {
-          if (d.count(s)) {
-            k[s] = d[s];
+        auto end = e.end();
+
+        for (const auto &s : selected_keys) {
+
+          auto val = e.find(s);
+
+          if (val != end) {
+            k[s] = *val;
           }
         }
 
@@ -54,7 +59,6 @@ void ProcData::run_impl(int i_generator) {
           j[s] = d[s];
         }
       }
-
     }
 
     results[i_generator] = json2py(j);
