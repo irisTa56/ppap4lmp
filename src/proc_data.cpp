@@ -25,7 +25,7 @@ void ProcData::run_impl(int i_generator) {
 
   if (selected_keys.size() == 0) {
 
-    results[i_generator] = json2py(d);
+    results[i_generator] = d;
 
   } else {
 
@@ -61,7 +61,7 @@ void ProcData::run_impl(int i_generator) {
       }
     }
 
-    results[i_generator] = json2py(j);
+    results[i_generator] = j;
 
   }
 
@@ -77,7 +77,7 @@ void ProcData::prepare_impl() {
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<pybind11::object> &ProcData::get_results() {
+const std::vector<nlohmann::json> &ProcData::get_results() {
 
   return results;
 

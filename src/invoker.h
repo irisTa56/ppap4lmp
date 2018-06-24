@@ -14,7 +14,7 @@ class Invoker {
   Invoker(std::shared_ptr<Processor>);
   Invoker(std::vector<std::shared_ptr<Processor>>);
   virtual ~Invoker() = default;
-  void execute();
+  virtual void execute();
   int get_n_processors();
  protected:
   int n_processors;
@@ -34,6 +34,9 @@ template <class INVO = Invoker>
 class PyInvoker : public INVO {
  public:
   using INVO::INVO;
+  void execute() override {
+    PYBIND11_OVERLOAD(void, INVO, execute, );
+  }
  protected:
   void execute_impl() override {
     PYBIND11_OVERLOAD_PURE(void, INVO, execute_impl, );

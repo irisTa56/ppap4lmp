@@ -14,9 +14,9 @@ class Processor {
   Processor(std::shared_ptr<Generator>);
   Processor(std::vector<std::shared_ptr<Generator>>);
   virtual ~Processor() = default;
-  void run(int i_generator);
-  void prepare();
-  void finish();
+  virtual void run(int i_generator);
+  virtual void prepare();
+  virtual void finish();
   const int get_n_generators();
  protected:
   int n_generators;
@@ -37,6 +37,15 @@ template <class PROC = Processor>
 class PyProcessor : public PROC {
  public:
   using PROC::PROC;
+  void run(int i_generator) override {
+    PYBIND11_OVERLOAD(void, PROC, run, i_generator);
+  }
+  void prepare() override {
+    PYBIND11_OVERLOAD(void, PROC, prepare, );
+  }
+  void finish() override {
+    PYBIND11_OVERLOAD(void, PROC, finish, );
+  }
  protected:
   void run_impl(int i_generator) override {
     PYBIND11_OVERLOAD_PURE(void, PROC, run_impl, i_generator);

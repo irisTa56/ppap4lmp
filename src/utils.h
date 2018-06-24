@@ -94,12 +94,4 @@ static void runtime_error(const std::string &msg) {
 
 }
 
-/*=== convert JSON (in C++) to Python type ===*/
-
-static pybind11::object json2py(const nlohmann::json &j) {
-
-  return pybind11::module::import("json").attr("loads")(j.dump());
-
-}
-
 #endif

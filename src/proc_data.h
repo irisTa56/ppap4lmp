@@ -17,10 +17,10 @@ class ProcData : public Processor {
     std::vector<std::shared_ptr<Generator>> gens) : Processor(gens) {}
   virtual ~ProcData() = default;
   void select(pybind11::args);
-  const std::vector<pybind11::object> &get_results();
+  const std::vector<nlohmann::json> &get_results();
  protected:
   std::vector<std::string> selected_keys;
-  std::vector<pybind11::object> results;
+  std::vector<nlohmann::json> results;
   virtual void run_impl(int i_generator) override;
   virtual void prepare_impl() override;
 };

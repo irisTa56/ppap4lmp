@@ -65,16 +65,6 @@ const nlohmann::json &Generator::get_data() {
 
 /* ------------------------------------------------------------------ */
 
-const pybind11::object Generator::get_data_py() {
-
-  check_data();
-
-  return json2py(data);
-
-}
-
-/* ------------------------------------------------------------------ */
-
 void Generator::check_data() {
 
   if (!data_exists) {
