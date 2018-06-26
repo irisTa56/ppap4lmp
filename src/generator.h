@@ -7,7 +7,7 @@ create: 2018/06/21 by Takayuki Kobayashi
 #ifndef GENERATOR_H
 #define GENERATOR_H
 
-#include "modifier.h"
+#include "adder.h"
 
 class Generator {
  public:
@@ -18,13 +18,13 @@ class Generator {
   virtual std::vector<int> count_keys(
     const std::vector<std::string> &keys,bool check_only_front = true);
   virtual const nlohmann::json &get_data();
-  void appned_modifier(std::shared_ptr<Modifier>);
+  void appned_adder(std::shared_ptr<Adder>);
  protected:
   bool data_exists = false;
   int n_appointment = 0;
   std::string dataname;
   nlohmann::json data;
-  std::vector<std::shared_ptr<Modifier>> modifiers;
+  std::vector<std::shared_ptr<Adder>> adders;
   virtual void generate() = 0;
   virtual void check_data();
  private:

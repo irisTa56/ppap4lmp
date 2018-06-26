@@ -9,17 +9,15 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Generator::appned_modifier(std::shared_ptr<Modifier> mod)
+void Generator::appned_adder(std::shared_ptr<Adder> add)
 {
-  //#pragma omp critical (this function won't be called in parallel)
-  modifiers.push_back(mod);
+  adders.push_back(add);
 }
 
 /* ------------------------------------------------------------------ */
 
 void Generator::appoint()
 {
-  //#pragma omp atomic (this function won't be called in parallel)
   n_appointment += 1;
 }
 
@@ -116,9 +114,9 @@ void Generator::check_data()
     {
       generate();
 
-      for (auto m : modifiers)
+      for (auto a : adders)
       {
-        m->modify(data);
+        a->compute(data);
       }
 
       data_exists = true;
