@@ -13,6 +13,11 @@ class AddMap : public Adder {
  public:
   AddMap(const std::string &, const std::string &, pybind11::dict);
   virtual void compute(nlohmann::json &) override;
+ private:
+  std::string key_ref;
+  std::string key_new;
+  std::map<nlohmann::json,nlohmann::json> mapping;
+  const nlohmann::json convert_py2json(const pybind11::handle &);
 };
 
 /* ------------------------------------------------------------------ */
@@ -20,11 +25,11 @@ class AddMap : public Adder {
 
 namespace py = pybind11;
 
-static void pybind_add_map(py::module &m) {
+static void pybind_add_map(py::module &m)
+{
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddMap,PyAdder<AddMap>,Adder,std::shared_ptr<AddMap>>(m, "AddMap")
     .def(py::init<const std::string &, const std::string &, pybind11::dict>());
-
 }
 
 #endif

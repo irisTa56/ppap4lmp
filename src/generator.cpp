@@ -9,7 +9,7 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Generator::appned_adder(std::shared_ptr<Adder> add)
+void Generator::append_adder(std::shared_ptr<Adder> add)
 {
   adders.push_back(add);
 }
@@ -129,15 +129,15 @@ void Generator::check_data()
 void Generator::count_keys_one(
   std::map<std::string,int> &counts, const nlohmann::json &data)
 {
-  for (auto & [k, v] : counts)
+  for (auto &item : counts)
   {
-    int count_tmp = data.count(k);
+    int count_tmp = data.count(item.first);
 
     if (1 < count_tmp)
     {
-      message("Duplicate data key: " + k);
+      message("Duplicate data key: " + item.first);
     }
 
-    v += count_tmp;
+    item.second += count_tmp;
   }
 }

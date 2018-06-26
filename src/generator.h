@@ -16,9 +16,9 @@ class Generator {
   virtual void appoint();
   virtual void goodbye();
   virtual std::vector<int> count_keys(
-    const std::vector<std::string> &keys,bool check_only_front = true);
+    const std::vector<std::string> &keys, bool check_only_front = true);
   virtual const nlohmann::json &get_data();
-  void appned_adder(std::shared_ptr<Adder>);
+  void append_adder(std::shared_ptr<Adder>);
  protected:
   bool data_exists = false;
   int n_appointment = 0;
@@ -76,7 +76,10 @@ static void pybind_generator(py::module &m)
 {
   py::class_<Generator,PyGenerator<>,std::shared_ptr<Generator>>(m, "Generator")
     .def(py::init<>())
-    .def("get_data", &Generator::get_data);
+    .def("count_keys", &Generator::count_keys,
+      py::arg("check_only_front") = true)
+    .def("get_data", &Generator::get_data)
+    .def("append_adder", &Generator::append_adder);;
 }
 
 #endif
