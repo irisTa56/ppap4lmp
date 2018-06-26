@@ -8,7 +8,11 @@ create: 2018/06/24 by Takayuki Kobayashi
 #ifndef MODIFIER_H
 #define MODIFIER_H
 
-#include "generator.h"
+#include <map>
+#include <memory>
+#include <vector>
+
+#include "json_caster.h"
 
 class Modifier {
  public:

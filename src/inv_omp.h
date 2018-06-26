@@ -25,12 +25,12 @@ class InvOMP : public Invoker {
 
 namespace py = pybind11;
 
-static void pybind_inv_omp(py::module &m)  {
+static void pybind_inv_omp(py::module &m)
+{
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<InvOMP,PyInvoker<InvOMP>,Invoker,std::shared_ptr<InvOMP>>(m, "InvOMP")
     .def(py::init<std::shared_ptr<Processor>>())
     .def(py::init<std::vector<std::shared_ptr<Processor>>>());
-
 }
 
 #endif

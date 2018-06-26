@@ -27,8 +27,8 @@ namespace pybind11 {
 
         try {
 
-          value.parse(py::cast<std::string>(
-            json_dumps(py::cast<py::object>(src))));
+          value = nlohmann::json::parse(
+            py::cast<std::string>(json_dumps(py::cast<py::object>(src))));
 
         } catch (...) {
           return false;

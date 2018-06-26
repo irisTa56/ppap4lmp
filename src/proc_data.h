@@ -19,10 +19,11 @@ class ProcData : public Processor {
   void select(pybind11::args);
   const std::vector<nlohmann::json> &get_results();
  protected:
-  std::vector<std::string> selected_keys;
-  std::vector<nlohmann::json> results;
   virtual void run_impl(int i_generator) override;
   virtual void prepare_impl() override;
+ private:
+  std::vector<std::string> selected_keys;
+  std::vector<nlohmann::json> results;
 };
 
 /* ------------------------------------------------------------------ */
@@ -30,7 +31,8 @@ class ProcData : public Processor {
 
 namespace py = pybind11;
 
-static void pybind_proc_data(py::module &m) {
+static void pybind_proc_data(py::module &m)
+{
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<ProcData,PyProcessor<ProcData>,Processor,std::shared_ptr<ProcData>>(m, "ProcData")
     .def(py::init<std::shared_ptr<Generator>>())
@@ -38,7 +40,6 @@ static void pybind_proc_data(py::module &m) {
     .def("select", &ProcData::select)
     .def("get_results", &ProcData::get_results,
       py::return_value_policy::reference_internal);
-
 }
 
 #endif

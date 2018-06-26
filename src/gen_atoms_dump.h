@@ -15,10 +15,11 @@ class GenAtomsDump : public GenAtoms {
   GenAtomsDump(const std::string &, int, const std::string &);
   virtual ~GenAtomsDump() = default;
  protected:
+  virtual void generate() override;
+ private:
   int timestep;
   std::string filepath;
   const std::vector<bool> get_is_int_vector(const std::string &);
-  virtual void generate() override;
 };
 
 /* ------------------------------------------------------------------ */
@@ -26,12 +27,12 @@ class GenAtomsDump : public GenAtoms {
 
 namespace py = pybind11;
 
-static void pybind_gen_atoms_dump(py::module &m) {
+static void pybind_gen_atoms_dump(py::module &m)
+{
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<GenAtomsDump,PyGenerator<GenAtomsDump>,GenAtoms,Generator,std::shared_ptr<GenAtomsDump>>(m, "GenAtomsDump")
     .def(py::init<const std::string &, int>())
     .def(py::init<const std::string &, int, const std::string &>());
-
 }
 
 #endif

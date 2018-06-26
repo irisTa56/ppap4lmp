@@ -14,7 +14,6 @@ class GenBox : public Generator {
   GenBox();
   GenBox(const std::string &);
   virtual ~GenBox() = default;
-  // functions for reference use from Python
   const std::vector<bool> get_periodic();
   const std::vector<std::map<std::string,double>> get_edge();
 };
@@ -24,14 +23,14 @@ class GenBox : public Generator {
 
 namespace py = pybind11;
 
-static void pybind_gen_box(py::module &m) {
+static void pybind_gen_box(py::module &m)
+{
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<GenBox,PyGenerator<GenBox>,Generator,std::shared_ptr<GenBox>>(m, "GenBox")
     .def(py::init<>())
     .def(py::init<const std::string &>())
     .def("get_periodic", &GenBox::get_periodic)
     .def("get_edge", &GenBox::get_edge);
-
 }
 
 #endif

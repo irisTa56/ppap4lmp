@@ -17,7 +17,6 @@ class GenAtoms : public Generator {
   GenAtoms();
   GenAtoms(const std::string &);
   virtual ~GenAtoms() = default;
-  // functions for reference use from Python
   const bool is_unscaled(bool check_only_front = true);
   const bool is_scaled(bool check_only_front = true);
   const bool is_unwrapped(bool check_only_front = true);
@@ -33,7 +32,8 @@ class GenAtoms : public Generator {
 
 namespace py = pybind11;
 
-static void pybind_gen_atoms(py::module &m) {
+static void pybind_gen_atoms(py::module &m)
+{
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<GenAtoms,PyGenerator<GenAtoms>,Generator,std::shared_ptr<GenAtoms>>(m, "GenAtoms")
     .def(py::init<>())
@@ -48,7 +48,6 @@ static void pybind_gen_atoms(py::module &m) {
       py::arg("check_only_front") = true)
     .def("get_positions", &GenAtoms::get_positions,
       py::return_value_policy::reference_internal);
-
 }
 
 #endif

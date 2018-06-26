@@ -50,11 +50,13 @@ class CMakeBuild(build_ext):
       RuntimeError("Windows is not supported")
     else:
       cmake_args += ["-DCMAKE_BUILD_TYPE=" + cfg]
+      cmake_args += ["-DCMAKE_CXX_FLAGS_RELEASE='-std=c++1z -fopenmp -O2 -fPIC'"]
       build_args += ["--", "-j2"]
 
     env = os.environ.copy()
     env["CXXFLAGS"] = "{} -DVERSION_INFO=\\\"{}\\\"".format(
       env.get("CXXFLAGS", ""), self.distribution.get_version())
+
     if not os.path.exists(self.build_temp):
       os.makedirs(self.build_temp)
 
@@ -92,10 +94,9 @@ with open("src/pybind.h", "w") as f:
 
 {headers}
 
-PYBIND11_MODULE(_ppap4lmp, m) {{
-
+PYBIND11_MODULE(_ppap4lmp, m)
+{{
 {pybind}
-
 }}
 
 #endif

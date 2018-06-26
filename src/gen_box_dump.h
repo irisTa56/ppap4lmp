@@ -15,9 +15,10 @@ class GenBoxDump : public GenBox {
   GenBoxDump(const std::string &, int, const std::string &);
   virtual ~GenBoxDump() = default;
  protected:
+  virtual void generate() override;
+ private:
   int timestep;
   std::string filepath;
-  virtual void generate() override;
 };
 
 /* ------------------------------------------------------------------ */
@@ -25,12 +26,12 @@ class GenBoxDump : public GenBox {
 
 namespace py = pybind11;
 
-static void pybind_gen_box_dump(py::module &m) {
+static void pybind_gen_box_dump(py::module &m)
+{
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<GenBoxDump,PyGenerator<GenBoxDump>,GenBox,Generator,std::shared_ptr<GenBoxDump>>(m, "GenBoxDump")
     .def(py::init<const std::string &, int>())
     .def(py::init<const std::string &, int, const std::string &>());
-
 }
 
 #endif

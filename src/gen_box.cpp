@@ -8,36 +8,33 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-GenBox::GenBox() {
-
+GenBox::GenBox()
+{
   dataname = "Box";
-
 }
 
 /* ------------------------------------------------------------------ */
 
-GenBox::GenBox(const std::string &suffix) {
-
+GenBox::GenBox(const std::string &suffix)
+{
   dataname = "Box_" + suffix;
-
 }
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<bool> GenBox::get_periodic() {
-
+const std::vector<bool> GenBox::get_periodic()
+{
   check_data();
 
   return {
     data["periodic_x"], data["periodic_y"], data["periodic_z"]
   };
-
 }
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<std::map<std::string,double>> GenBox::get_edge() {
-
+const std::vector<std::map<std::string,double>> GenBox::get_edge()
+{
   check_data();
 
   return {
@@ -45,5 +42,4 @@ const std::vector<std::map<std::string,double>> GenBox::get_edge() {
     {{"min", data["min_y"]}, {"max", data["max_y"]}},
     {{"min", data["min_z"]}, {"max", data["max_z"]}}
   };
-
 }

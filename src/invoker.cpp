@@ -9,53 +9,45 @@ create: 2018/06/23 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-Invoker::Invoker(std::shared_ptr<Processor> proc) {
-
+Invoker::Invoker(std::shared_ptr<Processor> proc)
+{
   processors.push_back(proc);
   n_processors = processors.size();
 
   n_generators = proc->get_n_generators();
-
 }
 
 /* ------------------------------------------------------------------ */
 
-Invoker::Invoker(std::vector<std::shared_ptr<Processor>> procs) {
-
+Invoker::Invoker(std::vector<std::shared_ptr<Processor>> procs)
+{
   processors = procs;
   n_processors = processors.size();
 
   n_generators = procs[0]->get_n_generators();
 
-  for(auto p : processors) {
-    if (n_generators != p->get_n_generators()) {
-      runtime_error(
-        "Numbers of Data (Generators) in the Processors are different");
+  for(auto p : processors)
+  {
+    if (n_generators != p->get_n_generators())
+    {
+      runtime_error("Number of Generators in each Processor is different");
     }
   }
-
 }
 
 /* ------------------------------------------------------------------ */
 
-void Invoker::execute() {
-
-  for(auto p : processors) {
+void Invoker::execute()
+{
+  for(auto p : processors)
+  {
     p->prepare();
   }
 
   execute_impl();
 
-  for(auto p : processors) {
+  for(auto p : processors)
+  {
     p->finish();
   }
-
-}
-
-/* ------------------------------------------------------------------ */
-
-int Invoker::get_n_processors() {
-
-  return n_processors;
-
 }
