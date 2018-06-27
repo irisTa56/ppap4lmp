@@ -45,8 +45,8 @@ void Generator::goodbye()
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<int> Generator::count_keys(
-  const std::vector<std::string> &keys, bool check_only_front)
+const std::vector<bool> Generator::check_keys(
+  const std::vector<std::string> &keys)
 {
   check_data();
 
@@ -60,23 +60,60 @@ const std::vector<int> Generator::count_keys(
 
   if (data.is_array())
   {
-    if (check_only_front)
+    for (const auto &d : data)
     {
-      count_keys_one(counts, data.front());
+      check_keys_one(counts, d);
     }
-    else
+
+    int data_size = data.size();
+
+    for (const auto &k : keys)
     {
-      for (const auto &d : data)
-      {
-        count_keys_one(counts, d);
-      }
+      counts[k] /= data_size;
+    }
+  }
+  else
+  {
+    check_keys_one(counts, data);
+  }
 
-      int data_size = data.size();
+  std::vector<bool> result;
 
-      for (const auto &k : keys)
-      {
-        counts[k] /= data_size;
-      }
+  for (const auto &k : keys)
+  {
+    result.push_back(counts[k]);
+  }
+
+  return result;
+}
+
+/* ------------------------------------------------------------------ */
+
+const std::vector<int> Generator::count_keys(
+  const std::vector<std::string> &keys)
+{
+  check_data();
+
+  int length = keys.size();
+  std::unordered_map<std::string,int> counts;
+
+  for (const auto &k : keys)
+  {
+    counts[k] = 0;
+  }
+
+  if (data.is_array())
+  {
+    for (const auto &d : data)
+    {
+      count_keys_one(counts, d);
+    }
+
+    int data_size = data.size();
+
+    for (const auto &k : keys)
+    {
+      counts[k] /= data_size;
     }
   }
   else
@@ -114,6 +151,22 @@ void Generator::check_data()
     for (auto a : adders)
     {
       a->compute(data, dataname);
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::check_keys_one(
+  std::unordered_map<std::string,int> &counts, const nlohmann::json &data)
+{
+  auto end = data.end();
+
+  for (auto &item : counts)
+  {
+    if (data.find(item.first) != end)
+    {
+      item.second++;
     }
   }
 }

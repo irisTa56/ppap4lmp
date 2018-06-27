@@ -21,10 +21,10 @@ class TestGenAtomsDump(unittest.TestCase):
     gen = GenAtomsDump(*self.args)
 
     self.assertEqual([
-      gen.is_unscaled(False),
-      gen.is_scaled(False),
-      gen.is_unwrapped(False),
-      gen.is_scaled_unwrapped(False)], expected_result)
+      gen.is_unscaled(),
+      gen.is_scaled(),
+      gen.is_unwrapped(),
+      gen.is_scaled_unwrapped()], expected_result)
 
   def test_get_positions(self):
 
@@ -52,6 +52,18 @@ class TestGenAtomsDump(unittest.TestCase):
       d = data[randrange(len(data))]
       self.assertEqual([d["type"], d["mass"]], expected_result)
 
+  def test_check_keys(self):
+
+    print("\n\nTestGenAtomsDump.test_check_keys:")
+
+    expected_result = [True, True, True, False, False, False]
+
+    gen = GenAtomsDump(*self.args)
+
+    self.assertEqual(
+      gen.check_keys(["fx", "fy", "fz", "gx", "gy", "gz"]),
+      expected_result)
+
   def test_count_keys(self):
 
     print("\n\nTestGenAtomsDump.test_count_keys:")
@@ -62,9 +74,4 @@ class TestGenAtomsDump(unittest.TestCase):
 
     self.assertEqual(
       gen.count_keys(["fx", "fy", "fz", "gx", "gy", "gz"]),
-      expected_result)
-
-    self.assertEqual(
-      gen.count_keys(["fx", "fy", "fz", "gx", "gy", "gz"],
-        check_only_front = False),
       expected_result)

@@ -77,15 +77,15 @@ const Eigen::ArrayXXd GenAtoms::get_positions(const std::string &type)
 
 /* ------------------------------------------------------------------ */
 
-const bool GenAtoms::is_unscaled(bool check_only_front)
+const bool GenAtoms::is_unscaled()
 {
-  auto count = count_keys({"x", "y", "z"}, check_only_front);
+  auto check = check_keys({"x", "y", "z"});
 
-  if (count == std::vector<int>({1, 1, 1}))
+  if (check == std::vector<bool>({true, true, true}))
   {
     return true;
   }
-  else if (count == std::vector<int>({0, 0, 0}))
+  else if (check == std::vector<bool>({false, false, false}))
   {
     return false;
   }
@@ -97,15 +97,15 @@ const bool GenAtoms::is_unscaled(bool check_only_front)
 
 /* ------------------------------------------------------------------ */
 
-const bool GenAtoms::is_scaled(bool check_only_front)
+const bool GenAtoms::is_scaled()
 {
-  auto count = count_keys({"xs", "ys", "zs"}, check_only_front);
+  auto check = check_keys({"xs", "ys", "zs"});
 
-  if (count == std::vector<int>({1, 1, 1}))
+  if (check == std::vector<bool>({true, true, true}))
   {
     return true;
   }
-  else if (count == std::vector<int>({0, 0, 0}))
+  else if (check == std::vector<bool>({false, false, false}))
   {
     return false;
   }
@@ -117,15 +117,15 @@ const bool GenAtoms::is_scaled(bool check_only_front)
 
 /* ------------------------------------------------------------------ */
 
-const bool GenAtoms::is_unwrapped(bool check_only_front)
+const bool GenAtoms::is_unwrapped()
 {
-  auto count = count_keys({"xu", "yu", "zu"}, check_only_front);
+  auto check = check_keys({"xu", "yu", "zu"});
 
-  if (count == std::vector<int>({1, 1, 1}))
+  if (check == std::vector<bool>({true, true, true}))
   {
     return true;
   }
-  else if (count == std::vector<int>({0, 0, 0}))
+  else if (check == std::vector<bool>({false, false, false}))
   {
     return false;
   }
@@ -137,15 +137,15 @@ const bool GenAtoms::is_unwrapped(bool check_only_front)
 
 /* ------------------------------------------------------------------ */
 
-const bool GenAtoms::is_scaled_unwrapped(bool check_only_front)
+const bool GenAtoms::is_scaled_unwrapped()
 {
-  auto count = count_keys({"xsu", "ysu", "zsu"}, check_only_front);
+  auto check = check_keys({"xsu", "ysu", "zsu"});
 
-  if (count == std::vector<int>({1, 1, 1}))
+  if (check == std::vector<bool>({true, true, true}))
   {
     return true;
   }
-  else if (count == std::vector<int>({0, 0, 0}))
+  else if (check == std::vector<bool>({false, false, false}))
   {
     return false;
   }

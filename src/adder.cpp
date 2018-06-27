@@ -10,9 +10,9 @@ create: 2018/06/24 by Takayuki Kobayashi
 
 void Adder::compute(nlohmann::json &data, const std::string &dataname)
 {
-  if (datanames_blacklist.find(dataname) == datanames_blacklist.end())
+  if (dataname_blacklist.find(dataname) == dataname_blacklist.end())
   {
-    datanames_blacklist.insert(dataname);
+    dataname_blacklist.insert(dataname);
     compute_impl(data);
   }
 }

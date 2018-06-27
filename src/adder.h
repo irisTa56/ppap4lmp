@@ -22,7 +22,7 @@ class Adder {
  protected:
   virtual void compute_impl(nlohmann::json &data) = 0;
  private:
-  std::unordered_set<std::string> datanames_blacklist;
+  std::unordered_set<std::string> dataname_blacklist;
 };
 
 /* ------------------------------------------------------------------ */

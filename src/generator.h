@@ -15,8 +15,10 @@ class Generator {
   virtual ~Generator() = default;
   virtual void appoint();
   virtual void goodbye();
+  virtual const std::vector<bool> check_keys(
+    const std::vector<std::string> &keys);
   virtual const std::vector<int> count_keys(
-    const std::vector<std::string> &keys, bool check_only_front = true);
+    const std::vector<std::string> &keys);
   virtual const nlohmann::json &get_data();
   void append_adder(std::shared_ptr<Adder>);
  protected:
@@ -27,6 +29,8 @@ class Generator {
   virtual void generate() = 0;
   virtual void check_data();
  private:
+  void check_keys_one(
+    std::unordered_map<std::string,int> &, const nlohmann::json &);
   void count_keys_one(
     std::unordered_map<std::string,int> &, const nlohmann::json &);
 };
@@ -49,12 +53,17 @@ class PyGenerator : public GEN {
   {
     PYBIND11_OVERLOAD(void, GEN, goodbye, );
   }
-  const std::vector<int> count_keys(
-    const std::vector<std::string> &keys,
-    bool check_only_front = true) override
+  const std::vector<bool> check_keys(
+    const std::vector<std::string> &keys) override
   {
     PYBIND11_OVERLOAD(
-      const std::vector<int>, GEN, count_keys, keys, check_only_front);
+      const std::vector<bool>, GEN, check_keys, keys);
+  }
+  const std::vector<int> count_keys(
+    const std::vector<std::string> &keys) override
+  {
+    PYBIND11_OVERLOAD(
+      const std::vector<int>, GEN, count_keys, keys);
   }
   const nlohmann::json &get_data() override
   {
@@ -75,8 +84,8 @@ static void pybind_generator(py::module &m)
 {
   py::class_<Generator,PyGenerator<>,std::shared_ptr<Generator>>(m, "Generator")
     .def(py::init<>())
-    .def("count_keys", &Generator::count_keys,
-      py::arg("keys"), py::arg("check_only_front") = true)
+    .def("check_keys", &Generator::check_keys)
+    .def("count_keys", &Generator::count_keys)
     .def("get_data", &Generator::get_data,
       py::return_value_policy::reference_internal)
     .def("append_adder", &Generator::append_adder);;
