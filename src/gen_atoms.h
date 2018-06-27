@@ -7,9 +7,6 @@ create: 2018/06/23 by Takayuki Kobayashi
 #ifndef GEN_ATOMS_H
 #define GEN_ATOMS_H
 
-#include <pybind11/eigen.h>
-#include <Eigen/LU>
-
 #include "generator.h"
 
 class GenAtoms : public Generator {

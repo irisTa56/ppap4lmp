@@ -9,13 +9,6 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Generator::append_adder(std::shared_ptr<Adder> add)
-{
-  adders.push_back(add);
-}
-
-/* ------------------------------------------------------------------ */
-
 void Generator::appoint()
 {
   n_appointment += 1;
@@ -41,6 +34,146 @@ void Generator::goodbye()
       runtime_error(dataname + ": Invalid data use is detected");
     }
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::append_adder(std::shared_ptr<Adder> add)
+{
+  adders.push_back(add);
+}
+
+/* ------------------------------------------------------------------ */
+
+const nlohmann::json &Generator::get_data()
+{
+  check_data();
+
+  return data;
+}
+
+/* ------------------------------------------------------------------ */
+
+const Eigen::VectorXi Generator::get_int_vector(
+  const std::string &key)
+{
+  check_data();
+
+  Eigen::VectorXi v(data.is_array() ? data.size() : 1);
+
+  if (data.is_array())
+  {
+    int length = data.size();
+
+    for (int i = 0; i < length; ++i)
+    {
+      v(i) = data[i][key];
+    }
+  }
+  else
+  {
+    v(0) = data[key];
+  }
+
+  return v;
+}
+
+/* ------------------------------------------------------------------ */
+
+const Eigen::VectorXd Generator::get_double_vector(
+  const std::string &key)
+{
+  check_data();
+
+  Eigen::VectorXd v(data.is_array() ? data.size() : 1);
+
+  if (data.is_array())
+  {
+    int length = data.size();
+
+    for (int i = 0; i < length; ++i)
+    {
+      v(i) = data[i][key];
+    }
+  }
+  else
+  {
+    v(0) = data[key];
+  }
+
+  return v;
+}
+
+/* ------------------------------------------------------------------ */
+
+const Eigen::ArrayXXi Generator::get_int_array(
+  const std::vector<std::string> &keys)
+{
+  check_data();
+
+  int n_keys = keys.size();
+
+  Eigen::ArrayXXi a(data.is_array() ? data.size() : 1, n_keys);
+
+  if (data.is_array())
+  {
+    int length = data.size();
+
+    for (int i = 0; i < length; ++i)
+    {
+      auto &d = data[i];
+
+      for (int j = 0; j < n_keys; ++j)
+      {
+        a(i, j) = d[keys[j]];
+      }
+    }
+  }
+  else
+  {
+    for (int j = 0; j < n_keys; ++j)
+    {
+      a(0, j) = data[keys[j]];
+    }
+  }
+
+  return a;
+}
+
+/* ------------------------------------------------------------------ */
+
+const Eigen::ArrayXXd Generator::get_double_array(
+  const std::vector<std::string> &keys)
+{
+  check_data();
+
+  int n_keys = keys.size();
+
+  Eigen::ArrayXXd a(data.is_array() ? data.size() : 1, n_keys);
+
+  if (data.is_array())
+  {
+    int length = data.size();
+
+    for (int i = 0; i < length; ++i)
+    {
+      auto &d = data[i];
+
+      for (int j = 0; j < n_keys; ++j)
+      {
+        a(i, j) = d[keys[j]];
+      }
+    }
+  }
+  else
+  {
+    for (int j = 0; j < n_keys; ++j)
+    {
+      a(0, j) = data[keys[j]];
+    }
+  }
+
+  return a;
 }
 
 /* ------------------------------------------------------------------ */
@@ -133,15 +266,6 @@ const std::vector<int> Generator::count_keys(
 
 /* ------------------------------------------------------------------ */
 
-const nlohmann::json &Generator::get_data()
-{
-  check_data();
-
-  return data;
-}
-
-/* ------------------------------------------------------------------ */
-
 void Generator::check_data()
 {
   #pragma omp critical
@@ -158,7 +282,8 @@ void Generator::check_data()
 /* ------------------------------------------------------------------ */
 
 void Generator::check_keys_one(
-  std::unordered_map<std::string,int> &counts, const nlohmann::json &data)
+  std::unordered_map<std::string,int> &counts,
+  const nlohmann::json &data)
 {
   auto end = data.end();
 
@@ -174,7 +299,8 @@ void Generator::check_keys_one(
 /* ------------------------------------------------------------------ */
 
 void Generator::count_keys_one(
-  std::unordered_map<std::string,int> &counts, const nlohmann::json &data)
+  std::unordered_map<std::string,int> &counts,
+  const nlohmann::json &data)
 {
   for (auto &item : counts)
   {

@@ -7,6 +7,9 @@ create: 2018/06/21 by Takayuki Kobayashi
 #ifndef GENERATOR_H
 #define GENERATOR_H
 
+#include <pybind11/eigen.h>
+#include <Eigen/LU>
+
 #include "adder.h"
 
 class Generator {
@@ -15,12 +18,20 @@ class Generator {
   virtual ~Generator() = default;
   virtual void appoint();
   virtual void goodbye();
+  virtual void append_adder(std::shared_ptr<Adder> add);
+  virtual const nlohmann::json &get_data();
+  virtual const Eigen::VectorXi get_int_vector(
+    const std::string &key);
+  virtual const Eigen::VectorXd get_double_vector(
+    const std::string &key);
+  virtual const Eigen::ArrayXXi get_int_array(
+    const std::vector<std::string> &keys);
+  virtual const Eigen::ArrayXXd get_double_array(
+    const std::vector<std::string> &keys);
   virtual const std::vector<bool> check_keys(
     const std::vector<std::string> &keys);
   virtual const std::vector<int> count_keys(
     const std::vector<std::string> &keys);
-  virtual const nlohmann::json &get_data();
-  void append_adder(std::shared_ptr<Adder>);
  protected:
   int n_appointment = 0;
   std::string dataname;
@@ -53,6 +64,38 @@ class PyGenerator : public GEN {
   {
     PYBIND11_OVERLOAD(void, GEN, goodbye, );
   }
+  void append_adder(std::shared_ptr<Adder> add) override
+  {
+    PYBIND11_OVERLOAD(void, GEN, append_adder, add);
+  }
+  const nlohmann::json &get_data() override
+  {
+    PYBIND11_OVERLOAD(const nlohmann::json &, GEN, get_data, );
+  }
+  const Eigen::VectorXi get_int_vector(
+    const std::string &key) override
+  {
+    PYBIND11_OVERLOAD(
+      const Eigen::VectorXi, GEN, get_int_vector, key);
+  }
+  const Eigen::VectorXd get_double_vector(
+    const std::string &key) override
+  {
+    PYBIND11_OVERLOAD(
+      const Eigen::VectorXd, GEN, get_double_vector, key);
+  }
+  const Eigen::ArrayXXi get_int_array(
+    const std::vector<std::string> &keys) override
+  {
+    PYBIND11_OVERLOAD(
+      const Eigen::ArrayXXi, GEN, get_int_array, keys);
+  }
+  const Eigen::ArrayXXd get_double_array(
+    const std::vector<std::string> &keys) override
+  {
+    PYBIND11_OVERLOAD(
+      const Eigen::ArrayXXd, GEN, get_double_array, keys);
+  }
   const std::vector<bool> check_keys(
     const std::vector<std::string> &keys) override
   {
@@ -64,10 +107,6 @@ class PyGenerator : public GEN {
   {
     PYBIND11_OVERLOAD(
       const std::vector<int>, GEN, count_keys, keys);
-  }
-  const nlohmann::json &get_data() override
-  {
-    PYBIND11_OVERLOAD(const nlohmann::json &, GEN, get_data, );
   }
  protected:
   void check_data() override
@@ -88,6 +127,10 @@ static void pybind_generator(py::module &m)
     .def("count_keys", &Generator::count_keys)
     .def("get_data", &Generator::get_data,
       py::return_value_policy::reference_internal)
+    .def("get_int_vector", &Generator::get_int_vector)
+    .def("get_double_vector", &Generator::get_double_vector)
+    .def("get_int_array", &Generator::get_int_array)
+    .def("get_double_array", &Generator::get_double_array)
     .def("append_adder", &Generator::append_adder);;
 }
 

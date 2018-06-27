@@ -1,5 +1,7 @@
 import unittest
 
+import numpy as np
+
 from random import randrange
 
 from ppap4lmp import GenAtomsDump, AddMap
@@ -75,3 +77,24 @@ class TestGenAtomsDump(unittest.TestCase):
     self.assertEqual(
       gen.count_keys(["fx", "fy", "fz", "gx", "gy", "gz"]),
       expected_result)
+
+  def test_getters(self):
+
+    print("\n\nTestGenAtomsDump.test_getters:")
+
+    gen = GenAtomsDump(*self.args)
+    gen.append_adder(AddMap("type", "mass", {1: 147.28}))
+
+    ps = gen.get_positions("unwrapped")
+    ps2 = gen.get_double_array(["xu", "yu", "zu"])
+
+    self.assertTrue(np.allclose(ps, ps2))
+
+    ids = gen.get_int_vector("id")
+
+    self.assertTrue(np.allclose(
+      np.sort(ids), np.arange(120001, len(ids)+120001)))
+
+    masses = gen.get_double_vector("mass")
+
+    self.assertTrue(np.all(masses == 147.28))

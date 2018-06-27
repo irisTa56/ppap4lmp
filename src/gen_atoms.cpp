@@ -33,38 +33,18 @@ const Eigen::ArrayXXd GenAtoms::get_positions(const std::string &type)
 
   if (type == "unscaled")
   {
-    if (!is_unscaled())
-    {
-      runtime_error("'unscaled' positions have not been set yet");
-    }
-
     assign_positions(r, {"x", "y", "z"});
   }
   else if (type == "scaled")
   {
-    if (!is_scaled())
-    {
-      runtime_error("'scaled' positions have not been set yet");
-    }
-
     assign_positions(r, {"xs", "ys", "zs"});
   }
   else if (type == "unwrapped")
   {
-    if (!is_unwrapped())
-    {
-      runtime_error("'unwrapped' positions have not been set yet");
-    }
-
     assign_positions(r, {"xu", "yu", "zu"});
   }
   else if (type == "scaled unwrapped")
   {
-    if (!is_scaled_unwrapped())
-    {
-      runtime_error("'scaled unwrapped' positions have not been set yet");
-    }
-
     assign_positions(r, {"xsu", "ysu", "zsu"});
   }
   else
