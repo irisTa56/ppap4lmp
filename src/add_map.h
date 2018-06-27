@@ -12,11 +12,12 @@ create: 2018/06/26 by Takayuki Kobayashi
 class AddMap : public Adder {
  public:
   AddMap(const std::string &, const std::string &, pybind11::dict);
-  virtual void compute(nlohmann::json &) override;
+ protected:
+  virtual void compute_impl(nlohmann::json &) override;
  private:
   std::string key_ref;
   std::string key_new;
-  std::map<nlohmann::json,nlohmann::json> mapping;
+  std::unordered_map<nlohmann::json,nlohmann::json> mapping;
   const nlohmann::json convert_py2json(const pybind11::handle &);
 };
 

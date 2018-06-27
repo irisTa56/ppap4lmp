@@ -24,7 +24,7 @@ AddMap::AddMap(
 
 /* ------------------------------------------------------------------ */
 
-void AddMap::compute(nlohmann::json &data)
+void AddMap::compute_impl(nlohmann::json &data)
 {
   if (data.is_array())
   {
@@ -35,7 +35,7 @@ void AddMap::compute(nlohmann::json &data)
   }
   else
   {
-    message("AddMap does not compute for non-array data");
+    data[key_new] = mapping[data[key_ref]];
   }
 }
 

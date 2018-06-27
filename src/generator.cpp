@@ -35,7 +35,6 @@ void Generator::goodbye()
       data = nullptr;
 
       message(dataname + " has been deleted");
-      data_exists = false;
     }
     else if (n_appointment < 0)
     {
@@ -46,13 +45,13 @@ void Generator::goodbye()
 
 /* ------------------------------------------------------------------ */
 
-std::vector<int> Generator::count_keys(
+const std::vector<int> Generator::count_keys(
   const std::vector<std::string> &keys, bool check_only_front)
 {
   check_data();
 
   int length = keys.size();
-  std::map<std::string,int> counts;
+  std::unordered_map<std::string,int> counts;
 
   for (const auto &k : keys)
   {
@@ -110,16 +109,11 @@ void Generator::check_data()
 {
   #pragma omp critical
   {
-    if (!data_exists)
+    generate();
+
+    for (auto a : adders)
     {
-      generate();
-
-      for (auto a : adders)
-      {
-        a->compute(data);
-      }
-
-      data_exists = true;
+      a->compute(data, dataname);
     }
   }
 }
@@ -127,7 +121,7 @@ void Generator::check_data()
 /* ------------------------------------------------------------------ */
 
 void Generator::count_keys_one(
-  std::map<std::string,int> &counts, const nlohmann::json &data)
+  std::unordered_map<std::string,int> &counts, const nlohmann::json &data)
 {
   for (auto &item : counts)
   {

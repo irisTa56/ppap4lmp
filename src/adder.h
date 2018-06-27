@@ -7,9 +7,10 @@ create: 2018/06/26 by Takayuki Kobayashi
 #ifndef ADDER_H
 #define ADDER_H
 
-#include <map>
 #include <memory>
 #include <vector>
+#include <unordered_map>
+#include <unordered_set>
 
 #include "json_caster.h"
 
@@ -17,7 +18,11 @@ class Adder {
  public:
   Adder() = default;
   virtual ~Adder() = default;
-  virtual void compute(nlohmann::json &data) = 0;
+  void compute(nlohmann::json &, const std::string &);
+ protected:
+  virtual void compute_impl(nlohmann::json &data) = 0;
+ private:
+  std::unordered_set<std::string> datanames_blacklist;
 };
 
 /* ------------------------------------------------------------------ */
@@ -30,9 +35,10 @@ template <class ADD = Adder>
 class PyAdder : public ADD {
  public:
   using ADD::ADD;
-  void compute(nlohmann::json &data) override
+ protected:
+  void compute_impl(nlohmann::json &data) override
   {
-    PYBIND11_OVERLOAD_PURE(void, ADD, compute, data);
+    PYBIND11_OVERLOAD_PURE(void, ADD, compute_impl, data);
   }
 };
 

@@ -15,7 +15,7 @@ class GenBox : public Generator {
   GenBox(const std::string &);
   virtual ~GenBox() = default;
   const std::vector<bool> get_periodic();
-  const std::vector<std::map<std::string,double>> get_edge();
+  const std::vector<std::unordered_map<std::string,double>> get_edge();
 };
 
 /* ------------------------------------------------------------------ */

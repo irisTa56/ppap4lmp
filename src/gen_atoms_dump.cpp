@@ -32,6 +32,8 @@ GenAtomsDump::GenAtomsDump(
 
 void GenAtomsDump::generate()
 {
+  if (data != nullptr) { return; }
+
   std::ifstream ifs(filepath);
   std::string line;
   bool timestep_matches = false;

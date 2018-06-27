@@ -4,13 +4,17 @@ GenBox: stands for Generator of Box.
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
+#include <sstream>
+
 #include "gen_box.h"
 
 /* ------------------------------------------------------------------ */
 
 GenBox::GenBox()
 {
-  dataname = "Box";
+  std::stringstream ss;
+  ss << this;
+  dataname = "Box_" + ss.str();
 }
 
 /* ------------------------------------------------------------------ */
@@ -33,7 +37,7 @@ const std::vector<bool> GenBox::get_periodic()
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<std::map<std::string,double>> GenBox::get_edge()
+const std::vector<std::unordered_map<std::string,double>> GenBox::get_edge()
 {
   check_data();
 

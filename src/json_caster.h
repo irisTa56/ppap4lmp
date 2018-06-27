@@ -15,36 +15,34 @@ static py::object json_dumps
 static py::object json_loads
   = py::module::import("json").attr("loads");
 
-namespace pybind11 {
-  namespace detail {
+namespace pybind11
+{
+  namespace detail
+  {
     template <>
     struct type_caster<nlohmann::json> {
      public:
 
       PYBIND11_TYPE_CASTER(nlohmann::json, _("nlohmann::json"));
 
-      bool load(handle src, bool) {
-
-        try {
-
+      bool load(handle src, bool)
+      {
+        try
+        {
           value = nlohmann::json::parse(
             py::cast<std::string>(json_dumps(py::cast<py::object>(src))));
-
-        } catch (...) {
+        } catch (...)
+        {
           return false;
         }
-
         return true;
-
       }
 
       static handle cast(
-        nlohmann::json src, return_value_policy, handle) {
-
+        nlohmann::json src, return_value_policy, handle)
+      {
         return json_loads(src.dump()).release();
-
       }
-
     };
   }
 } // namespace pybind11::detail

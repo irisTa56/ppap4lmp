@@ -1,6 +1,6 @@
 import unittest
 
-from ppap4lmp import GenBoxDump, GenAtomsDump, ProcData, InvOMP
+from ppap4lmp import GenBoxDump, GenAtomsDump, ProcData, InvOMP, AddMap
 
 class TestProcData(unittest.TestCase):
 
@@ -38,27 +38,32 @@ class TestProcData(unittest.TestCase):
 
     expected_results = [
       [{"xu": 3.77161, "yu": 3.01851, "type": 1},
-        {"xu": -43.7141, "yu": -0.108626, "type": 1}],
+        {"xu": -43.7141, "yu": -0.108626, "mass": 147.28}],
       [{"xu": 2.42064, "yu": 4.2208, "type": 1},
-        {"xu": 631.581, "yu": 220.847, "type": 1}],
+        {"xu": 631.581, "yu": 220.847, "mass": 147.28}],
       [{"xu": 3.56883, "yu": 3.48234, "type": 1},
-        {"xu": 613.709, "yu": 220.913, "type": 1}],
+        {"xu": 613.709, "yu": 220.913, "mass": 147.28}],
       [{"xu": 2.53184, "yu": 2.4027, "type": 1},
-        {"xu": 578.869, "yu": 313.452, "type": 1}],
+        {"xu": 578.869, "yu": 313.452, "mass": 147.28}],
       [{"xu": 2.61604, "yu": 1.55081, "type": 1},
-        {"xu": 622.83, "yu": 220.889, "type": 1}],
+        {"xu": 622.83, "yu": 220.889, "mass": 147.28}],
       [{"xu": 3.03762, "yu": 1.85909, "type": 1},
-        {"xu": 631.489, "yu": 220.766, "type": 1}],
+        {"xu": 631.489, "yu": 220.766, "mass": 147.28}],
       [{"xu": 1.52936, "yu": 2.8839, "type": 1},
-        {"xu": 661.185, "yu": 244.144, "type": 1}],
+        {"xu": 661.185, "yu": 244.144, "mass": 147.28}],
       [{"xu": 2.92311, "yu": 0.231183, "type": 1},
-        {"xu": 579.589, "yu": 258.126, "type": 1}],
+        {"xu": 579.589, "yu": 258.126, "mass": 147.28}],
       [{"xu": 663.113, "yu": 66.2965, "type": 1},
-        {"xu": 643.749, "yu": 220.777, "type": 1}],
+        {"xu": 643.749, "yu": 220.777, "mass": 147.28}],
       [{"xu": 6.57633, "yu": 2.11582, "type": 1},
-        {"xu": 591.039, "yu": 220.716, "type": 1}]]
+        {"xu": 591.039, "yu": 220.716, "mass": 147.28}]]
 
     gens = [GenAtomsDump(*args) for args in self.args_list]
+
+    adder = AddMap("type", "mass", {1: 147.28})
+
+    for gen in gens:
+      gen.append_adder(adder)
 
     proc1 = ProcData(gens)
 
@@ -72,6 +77,6 @@ class TestProcData(unittest.TestCase):
 
       head_tail = [r2[0], r2[-1]]
       head_tail[0]["type"] = r1[0]["type"]
-      head_tail[1]["type"] = r1[-1]["type"]
+      head_tail[1]["mass"] = r1[-1]["mass"]
 
       self.assertEqual(head_tail, exp)

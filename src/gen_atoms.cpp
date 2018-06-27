@@ -11,7 +11,9 @@ create: 2018/06/23 by Takayuki Kobayashi
 
 GenAtoms::GenAtoms()
 {
-  dataname = "Atoms";
+  std::stringstream ss;
+  ss << this;
+  dataname = "Atoms_" + ss.str();
 }
 
 /* ------------------------------------------------------------------ */
