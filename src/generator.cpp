@@ -38,6 +38,13 @@ void Generator::goodbye()
 
 /* ------------------------------------------------------------------ */
 
+const std::string &Generator::get_dataname()
+{
+  return dataname;
+}
+
+/* ------------------------------------------------------------------ */
+
 std::shared_ptr<Generator> Generator::get_generator()
 {
   return shared_from_this();

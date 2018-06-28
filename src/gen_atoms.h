@@ -12,7 +12,6 @@ create: 2018/06/23 by Takayuki Kobayashi
 class GenAtoms : public Generator {
  public:
   GenAtoms();
-  GenAtoms(const std::string &);
   virtual ~GenAtoms() = default;
   const bool is_unscaled();
   const bool is_scaled();
@@ -34,7 +33,6 @@ static void pybind_gen_atoms(py::module &m)
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<GenAtoms,PyGenerator<GenAtoms>,Generator,std::shared_ptr<GenAtoms>>(m, "GenAtoms")
     .def(py::init<>())
-    .def(py::init<const std::string &>())
     .def("is_unscaled", &GenAtoms::is_unscaled)
     .def("is_scaled", &GenAtoms::is_scaled)
     .def("is_unwrapped", &GenAtoms::is_unwrapped)

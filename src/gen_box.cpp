@@ -19,13 +19,6 @@ GenBox::GenBox()
 
 /* ------------------------------------------------------------------ */
 
-GenBox::GenBox(const std::string &suffix)
-{
-  dataname = "Box_" + suffix;
-}
-
-/* ------------------------------------------------------------------ */
-
 const std::vector<bool> GenBox::get_periodic()
 {
   check_data();

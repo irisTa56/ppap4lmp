@@ -20,16 +20,6 @@ GenBoxDump::GenBoxDump(
 
 /* ------------------------------------------------------------------ */
 
-GenBoxDump::GenBoxDump(
-  const std::string &filepath_, int timestep_,
-  const std::string &suffix) : GenBox(suffix)
-{
-  filepath = filepath_;
-  timestep = timestep_;
-}
-
-/* ------------------------------------------------------------------ */
-
 void GenBoxDump::generate()
 {
   if (data != nullptr) { return; }

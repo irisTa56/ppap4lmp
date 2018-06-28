@@ -12,7 +12,6 @@ create: 2018/06/23 by Takayuki Kobayashi
 class GenAtomsDump : public GenAtoms {
  public:
   GenAtomsDump(const std::string &, int);
-  GenAtomsDump(const std::string &, int, const std::string &);
   virtual ~GenAtomsDump() = default;
  protected:
   virtual void generate() override;
@@ -31,8 +30,7 @@ static void pybind_gen_atoms_dump(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<GenAtomsDump,PyGenerator<GenAtomsDump>,GenAtoms,Generator,std::shared_ptr<GenAtomsDump>>(m, "GenAtomsDump")
-    .def(py::init<const std::string &, int>())
-    .def(py::init<const std::string &, int, const std::string &>());
+    .def(py::init<const std::string &, int>());
 }
 
 #endif

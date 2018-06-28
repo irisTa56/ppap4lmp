@@ -18,13 +18,6 @@ GenAtoms::GenAtoms()
 
 /* ------------------------------------------------------------------ */
 
-GenAtoms::GenAtoms(const std::string &suffix)
-{
-  dataname = "Atoms_" + suffix;
-}
-
-/* ------------------------------------------------------------------ */
-
 const Eigen::ArrayXXd GenAtoms::get_positions(const std::string &type)
 {
   check_data();

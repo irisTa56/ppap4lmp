@@ -20,16 +20,6 @@ GenAtomsDump::GenAtomsDump(
 
 /* ------------------------------------------------------------------ */
 
-GenAtomsDump::GenAtomsDump(
-  const std::string &filepath_, int timestep_,
-  const std::string &suffix) : GenAtoms(suffix)
-{
-  filepath = filepath_;
-  timestep = timestep_;
-}
-
-/* ------------------------------------------------------------------ */
-
 void GenAtomsDump::generate()
 {
   if (data != nullptr) { return; }

@@ -12,7 +12,6 @@ create: 2018/06/21 by Takayuki Kobayashi
 class GenBoxDump : public GenBox {
  public:
   GenBoxDump(const std::string &, int);
-  GenBoxDump(const std::string &, int, const std::string &);
   virtual ~GenBoxDump() = default;
  protected:
   virtual void generate() override;
@@ -30,8 +29,7 @@ static void pybind_gen_box_dump(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<GenBoxDump,PyGenerator<GenBoxDump>,GenBox,Generator,std::shared_ptr<GenBoxDump>>(m, "GenBoxDump")
-    .def(py::init<const std::string &, int>())
-    .def(py::init<const std::string &, int, const std::string &>());
+    .def(py::init<const std::string &, int>());
 }
 
 #endif

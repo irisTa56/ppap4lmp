@@ -18,9 +18,15 @@ class Adder {
  public:
   Adder() = default;
   virtual ~Adder() = default;
+  virtual void prepare()
+  { /* NOTE: You need to appoint with Generator if you use it. */ }
   void compute(nlohmann::json &, const std::string &);
  protected:
   virtual void compute_impl(nlohmann::json &data) = 0;
+  /* NOTE:
+  You need to say goodbye to Generator (if you used) at the end of
+  compute_impl() concritized elsewhere.
+  */
  private:
   std::unordered_set<std::string> dataname_blacklist;
 };
@@ -35,6 +41,10 @@ template <class ADD = Adder>
 class PyAdder : public ADD {
  public:
   using ADD::ADD;
+  void prepare() override
+  {
+    PYBIND11_OVERLOAD(void, ADD, prepare, );
+  }
  protected:
   void compute_impl(nlohmann::json &data) override
   {

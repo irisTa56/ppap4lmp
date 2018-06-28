@@ -18,6 +18,7 @@ class Generator : public std::enable_shared_from_this<Generator> {
   virtual ~Generator() = default;
   virtual void appoint();
   virtual void goodbye();
+  const std::string &get_dataname();
   // functions for dict/list generators
   virtual std::shared_ptr<Generator> get_generator();
   // functions for leaf (normal) generators
