@@ -21,7 +21,6 @@ def suite():
   suite.addTest(TestGenAtomsDump("test_get_positions"))
   suite.addTest(TestGenAtomsDump("test_get_data"))
   suite.addTest(TestGenAtomsDump("test_check_keys"))
-  suite.addTest(TestGenAtomsDump("test_count_keys"))
   suite.addTest(TestGenAtomsDump("test_getters"))
 
   suite.addTest(TestProcData("test_with_2Boxes"))

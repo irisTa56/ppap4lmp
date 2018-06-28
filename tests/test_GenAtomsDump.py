@@ -66,17 +66,8 @@ class TestGenAtomsDump(unittest.TestCase):
       gen.check_keys(["fx", "fy", "fz", "gx", "gy", "gz"]),
       expected_result)
 
-  def test_count_keys(self):
-
-    print("\n\nTestGenAtomsDump.test_count_keys:")
-
-    expected_result = [1, 1, 1, 0, 0, 0]
-
-    gen = GenAtomsDump(*self.args)
-
-    self.assertEqual(
-      gen.count_keys(["fx", "fy", "fz", "gx", "gy", "gz"]),
-      expected_result)
+    self.assertTrue(gen.check_key("id"))
+    self.assertFalse(gen.check_key("index"))
 
   def test_getters(self):
 
