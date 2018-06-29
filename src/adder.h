@@ -7,12 +7,7 @@ create: 2018/06/26 by Takayuki Kobayashi
 #ifndef ADDER_H
 #define ADDER_H
 
-#include <memory>
-#include <vector>
-#include <unordered_map>
-#include <unordered_set>
-
-#include "json_caster.h"
+#include "generator.h"
 
 class Adder {
  public:

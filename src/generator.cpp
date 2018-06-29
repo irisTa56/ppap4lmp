@@ -38,6 +38,13 @@ void Generator::goodbye()
 
 /* ------------------------------------------------------------------ */
 
+const std::string &Generator::get_classname()
+{
+  return classname;
+}
+
+/* ------------------------------------------------------------------ */
+
 const std::string &Generator::get_dataname()
 {
   return dataname;
@@ -48,6 +55,13 @@ const std::string &Generator::get_dataname()
 std::shared_ptr<Generator> Generator::get_generator()
 {
   return shared_from_this();
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::set_parser(std::shared_ptr<Parser> par)
+{
+  parser = par;
 }
 
 /* ------------------------------------------------------------------ */
@@ -265,7 +279,7 @@ void Generator::check_data()
 {
   #pragma omp critical
   {
-    generate();
+    parser->compute(data);
 
     for (auto a : adders)
     {

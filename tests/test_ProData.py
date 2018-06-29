@@ -1,8 +1,10 @@
 import unittest
 
-from ppap4lmp import GenBoxDump, GenAtomsDump, ProcData, InvOMP, AddMap
+from ppap4lmp import \
+  GenBox, ParDumpBox, GenAtoms, ParDumpAtoms, \
+  ProData, InvOMP, AddMap
 
-class TestProcData(unittest.TestCase):
+class TestProData(unittest.TestCase):
 
   def __init__(self, *args, **kwargs):
 
@@ -14,15 +16,19 @@ class TestProcData(unittest.TestCase):
 
   def test_with_2Boxes(self):
 
-    print("\n\nTestProcData.test_with_2Boxes:")
+    print("\n\nTestProData.test_with_2Boxes:")
 
     expected_result = {"min_x": 0.0, "max_x": 662.0, "pbc_x": True}
 
-    gens = [GenBoxDump(*args) for args in self.args_list]
+    gens = [GenBox() for i in range(len(self.args_list))]
+    pars = [ParDumpBox(*args) for args in self.args_list]
 
-    proc1 = ProcData(gens)
+    for gen, par in zip(gens, pars):
+      gen.set_parser(par)
 
-    proc2 = ProcData(gens)
+    proc1 = ProData(gens)
+
+    proc2 = ProData(gens)
     proc2.select("min_x", "max_x")
 
     InvOMP([proc1, proc2]).execute()
@@ -34,7 +40,7 @@ class TestProcData(unittest.TestCase):
 
   def test_with_2Atomses(self):
 
-    print("\n\nTestProcData.test_with_2Atomses:")
+    print("\n\nTestProData.test_with_2Atomses:")
 
     expected_results = [
       [{"xu": 3.77161, "yu": 3.01851, "type": 1},
@@ -58,16 +64,20 @@ class TestProcData(unittest.TestCase):
       [{"xu": 6.57633, "yu": 2.11582, "type": 1},
         {"xu": 591.039, "yu": 220.716, "mass": 147.28}]]
 
-    gens = [GenAtomsDump(*args) for args in self.args_list]
+    gens = [GenAtoms() for i in range(len(self.args_list))]
+    pars = [ParDumpAtoms(*args) for args in self.args_list]
+
+    for gen, par in zip(gens, pars):
+      gen.set_parser(par)
 
     adder = AddMap("type", "mass", {1: 147.28})
 
     for gen in gens:
       gen.append_adder(adder)
 
-    proc1 = ProcData(gens)
+    proc1 = ProData(gens)
 
-    proc2 = ProcData(gens)
+    proc2 = ProData(gens)
     proc2.select("xu", "yu")
 
     InvOMP([proc1, proc2]).execute()

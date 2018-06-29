@@ -1,38 +1,35 @@
 /* ---------------------------------------------------------------------
-GenBoxDump: stands for Generator of Box from lammps' Dump file.
+ParDumpBox: stands for Parser to read lammps' Dump file and extract
+Box data (supposed to be used by GenBox).
 
-create: 2018/06/21 by Takayuki Kobayashi
+create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include <fstream>
 
-#include "gen_box_dump.h"
+#include "par_dump_box.h"
 #include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
-GenBoxDump::GenBoxDump(
-  const std::string &filepath_, int timestep_) : GenBox()
+void ParDumpBox::compute(nlohmann::json &data)
 {
-  filepath = filepath_;
-  timestep = timestep_;
-}
-
-/* ------------------------------------------------------------------ */
-
-void GenBoxDump::generate()
-{
-  if (data != nullptr) { return; }
+  /*== preparation ==*/
 
   std::ifstream ifs(filepath);
   std::string line;
   bool timestep_matches = false;
-  int n_skip = 0;
+  int n_atoms = 0;
 
   if (!ifs.is_open())
   {
     runtime_error("No such a file: " + filepath);
   }
+
+  /*== parsing ==*/
+
+  // `data` can be updated during preparation
+  if (data != nullptr) { return; }
 
   while (std::getline(ifs, line))
   {
@@ -48,7 +45,7 @@ void GenBoxDump::generate()
     else if (line.find("ITEM: NUMBER OF ATOMS") == 0 && !timestep_matches)
     {
       std::getline(ifs, line);
-      n_skip = std::stoi(line);
+      n_atoms = std::stoi(line);
     }
     else if (line.find("ITEM: BOX BOUNDS") == 0 && timestep_matches)
     {
@@ -71,7 +68,7 @@ void GenBoxDump::generate()
     }
     else if (line.find("ITEM: ATOMS") == 0)
     {
-      for (int i = 0; i < n_skip; ++i)
+      for (int i = 0; i < n_atoms; ++i)
       {
         std::getline(ifs, line);
       }

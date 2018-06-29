@@ -2,7 +2,7 @@ import unittest
 
 from test_GenBoxDump import TestGenBoxDump
 from test_GenAtomsDump import TestGenAtomsDump
-from test_ProcData import TestProcData
+from test_ProData import TestProData
 
 from ppap4lmp import __version__
 
@@ -23,8 +23,8 @@ def suite():
   suite.addTest(TestGenAtomsDump("test_check_keys"))
   suite.addTest(TestGenAtomsDump("test_getters"))
 
-  suite.addTest(TestProcData("test_with_2Boxes"))
-  suite.addTest(TestProcData("test_with_2Atomses"))
+  suite.addTest(TestProData("test_with_2Boxes"))
+  suite.addTest(TestProData("test_with_2Atomses"))
 
   return suite
 

@@ -6,8 +6,8 @@
 #include <string>
 #include <vector>
 
-#include <nlohmann/json.hpp>
-#include <pybind11/pybind11.h>
+#include <typeinfo>
+#include <cxxabi.h>
 
 /*=== split ===*/
 
@@ -63,6 +63,23 @@ static void runtime_error(const std::string &msg)
 {
   std::cout << msg << std::endl;
   exit(1);
+}
+
+/*=== classname/dataname ===*/
+
+template <class T>
+static std::string make_classname(T *ptr)
+{
+  return std::string(
+    abi::__cxa_demangle(typeid(*ptr).name(), 0, 0, new int()));
+}
+
+template <class T>
+static std::string make_dataname(const std::string &classname, T *ptr)
+{
+  std::stringstream ss;
+  ss << ptr;
+  return classname + "_" + ss.str();
 }
 
 #endif

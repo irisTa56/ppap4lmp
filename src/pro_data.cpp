@@ -1,15 +1,15 @@
 /* ---------------------------------------------------------------------
-ProcData: stands for Processor which returns Data itself.
+ProData: stands for Processor which returns Data itself.
 
 create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include "proc_data.h"
+#include "pro_data.h"
 #include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
-void ProcData::select(pybind11::args args)
+void ProData::select(pybind11::args args)
 {
   for (const auto &a : args)
   {
@@ -19,7 +19,7 @@ void ProcData::select(pybind11::args args)
 
 /* ------------------------------------------------------------------ */
 
-void ProcData::run_impl(int i_generator)
+void ProData::run_impl(int i_generator)
 {
   auto &d = generators[i_generator]->get_data();
 
@@ -73,14 +73,14 @@ void ProcData::run_impl(int i_generator)
 
 /* ------------------------------------------------------------------ */
 
-void ProcData::prepare_impl()
+void ProData::prepare_impl()
 {
   results.resize(n_generators);
 }
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<nlohmann::json> &ProcData::get_results()
+const std::vector<nlohmann::json> &ProData::get_results()
 {
   return results;
 }

@@ -4,8 +4,8 @@ Processor: is an abstract class to process data.
 create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#ifndef PROCESSOR_H
-#define PROCESSOR_H
+#ifndef PROESSOR_H
+#define PROESSOR_H
 
 #include "generator.h"
 
@@ -33,26 +33,26 @@ class Processor {
 namespace py = pybind11;
 
 // trampoline class to bind Python
-template <class PROC = Processor>
-class PyProcessor : public PROC {
+template <class PRO = Processor>
+class PyProcessor : public PRO {
  public:
-  using PROC::PROC;
+  using PRO::PRO;
   void run(int i_generator) override
   {
-    PYBIND11_OVERLOAD(void, PROC, run, i_generator);
+    PYBIND11_OVERLOAD(void, PRO, run, i_generator);
   }
  protected:
   void run_impl(int i_generator) override
   {
-    PYBIND11_OVERLOAD_PURE(void, PROC, run_impl, i_generator);
+    PYBIND11_OVERLOAD_PURE(void, PRO, run_impl, i_generator);
   }
   void prepare_impl() override
   {
-    PYBIND11_OVERLOAD(void, PROC, prepare_impl, );
+    PYBIND11_OVERLOAD(void, PRO, prepare_impl, );
   }
   void finish_impl() override
   {
-    PYBIND11_OVERLOAD(void, PROC, finish_impl, );
+    PYBIND11_OVERLOAD(void, PRO, finish_impl, );
   }
 };
 

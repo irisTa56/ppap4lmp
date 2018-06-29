@@ -4,17 +4,15 @@ GenBox: stands for Generator of Box.
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include <sstream>
-
 #include "gen_box.h"
+#include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
 GenBox::GenBox()
 {
-  std::stringstream ss;
-  ss << this;
-  dataname = "Box_" + ss.str();
+  classname = make_classname(this);
+  dataname = make_dataname(classname, this);
 }
 
 /* ------------------------------------------------------------------ */

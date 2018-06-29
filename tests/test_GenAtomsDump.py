@@ -4,7 +4,7 @@ import numpy as np
 
 from random import randrange
 
-from ppap4lmp import GenAtomsDump, AddMap
+from ppap4lmp import GenAtoms, ParDumpAtoms, AddMap
 
 class TestGenAtomsDump(unittest.TestCase):
 
@@ -20,7 +20,8 @@ class TestGenAtomsDump(unittest.TestCase):
 
     expected_result = [False, False, True, False]
 
-    gen = GenAtomsDump(*self.args)
+    gen = GenAtoms()
+    gen.set_parser(ParDumpAtoms(*self.args))
 
     self.assertEqual([
       gen.is_unscaled(),
@@ -34,7 +35,8 @@ class TestGenAtomsDump(unittest.TestCase):
 
     expected_result = [3.77161, 3.01851, 14.3644, -43.7141, -0.108626, 14.3606]
 
-    gen = GenAtomsDump(*self.args)
+    gen = GenAtoms()
+    gen.set_parser(ParDumpAtoms(*self.args))
     ps = gen.get_positions("unwrapped")
 
     self.assertEqual(list(ps[0])+list(ps[-1]), expected_result)
@@ -45,7 +47,8 @@ class TestGenAtomsDump(unittest.TestCase):
 
     expected_result = [1, 147.28]
 
-    gen = GenAtomsDump(*self.args)
+    gen = GenAtoms()
+    gen.set_parser(ParDumpAtoms(*self.args))
     gen.append_adder(AddMap("type", "mass", {1: 147.28}))
 
     data = gen.get_data()
@@ -60,7 +63,8 @@ class TestGenAtomsDump(unittest.TestCase):
 
     expected_result = [True, True, True, False, False, False]
 
-    gen = GenAtomsDump(*self.args)
+    gen = GenAtoms()
+    gen.set_parser(ParDumpAtoms(*self.args))
 
     self.assertEqual(
       gen.check_keys(["fx", "fy", "fz", "gx", "gy", "gz"]),
@@ -73,7 +77,8 @@ class TestGenAtomsDump(unittest.TestCase):
 
     print("\n\nTestGenAtomsDump.test_getters:")
 
-    gen = GenAtomsDump(*self.args)
+    gen = GenAtoms()
+    gen.set_parser(ParDumpAtoms(*self.args))
     gen.append_adder(AddMap("type", "mass", {1: 147.28}))
 
     ps = gen.get_positions("unwrapped")

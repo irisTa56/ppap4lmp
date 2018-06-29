@@ -1,28 +1,20 @@
 /* ---------------------------------------------------------------------
-GenAtomsDump: stands for Generator of Atoms from lammps' Dump file.
+ParDumpAtoms: stands for Parser to read lammps' Dump file and extract
+Atoms data (supposed to be used by GenAtoms).
 
-create: 2018/06/23 by Takayuki Kobayashi
+create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include <fstream>
 
-#include "gen_atoms_dump.h"
+#include "par_dump_atoms.h"
 #include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
-GenAtomsDump::GenAtomsDump(
-  const std::string &filepath_, int timestep_) : GenAtoms()
+void ParDumpAtoms::compute(nlohmann::json &data)
 {
-  filepath = filepath_;
-  timestep = timestep_;
-}
-
-/* ------------------------------------------------------------------ */
-
-void GenAtomsDump::generate()
-{
-  if (data != nullptr) { return; }
+  /*== preparation ==*/
 
   std::ifstream ifs(filepath);
   std::string line;
@@ -33,6 +25,11 @@ void GenAtomsDump::generate()
   {
     runtime_error("No such a file: " + filepath);
   }
+
+  /*== parsing ==*/
+
+  // `data` can be updated during preparation
+  if (data != nullptr) { return; }
 
   while (std::getline(ifs, line))
   {
@@ -97,7 +94,7 @@ void GenAtomsDump::generate()
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<bool> GenAtomsDump::get_is_int_vector(
+const std::vector<bool> ParDumpAtoms::get_is_int_vector(
   const std::string &line)
 {
   std::vector<bool> is_int;

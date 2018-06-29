@@ -7,10 +7,16 @@ create: 2018/06/21 by Takayuki Kobayashi
 #ifndef GENERATOR_H
 #define GENERATOR_H
 
-#include <pybind11/eigen.h>
-#include <Eigen/LU>
+#include <memory>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
 
-#include "adder.h"
+#include <Eigen/LU>
+#include <pybind11/eigen.h>
+#include <pybind11/stl.h>
+
+#include "json_caster.h"
 
 class Generator : public std::enable_shared_from_this<Generator> {
  public:
@@ -18,30 +24,36 @@ class Generator : public std::enable_shared_from_this<Generator> {
   virtual ~Generator() = default;
   virtual void appoint();
   virtual void goodbye();
+  const std::string &get_classname();
   const std::string &get_dataname();
-  // functions for dict/list generators
+  // function for dict/list generators
   virtual std::shared_ptr<Generator> get_generator();
-  // functions for leaf (normal) generators
-  void append_adder(std::shared_ptr<Adder> add);
+  // function for leaf (normal) generators
+  void set_parser(std::shared_ptr<class Parser>);
+  void append_adder(std::shared_ptr<class Adder>);
   const nlohmann::json &get_data();
   const bool check_key(const std::string &);
   const std::vector<bool> check_keys(const std::vector<std::string> &);
-  // functions for generators with array data
+  // function for generators with array data
   const Eigen::VectorXi get_int_vector(const std::string &);
   const Eigen::VectorXd get_double_vector(const std::string &);
   const Eigen::ArrayXXi get_int_array(const std::vector<std::string> &);
   const Eigen::ArrayXXd get_double_array(const std::vector<std::string> &);
  protected:
   int n_appointment = 0;
+  std::string classname;
   std::string dataname;
   nlohmann::json data = nullptr;
-  std::vector<std::shared_ptr<Adder>> adders;
-  virtual void generate() = 0;
+  std::shared_ptr<class Parser> parser;
+  std::vector<std::shared_ptr<class Adder>> adders;
   void check_data();
  private:
   void check_keys_one(
     std::unordered_map<std::string,int> &, const nlohmann::json &);
 };
+
+#include "parser.h"
+#include "adder.h"
 
 /* ------------------------------------------------------------------ */
 // for pubind11
@@ -65,17 +77,13 @@ class PyGenerator : public GEN {
   {
     PYBIND11_OVERLOAD(std::shared_ptr<Generator>, GEN, get_generator, );
   }
- protected:
-  void generate() override
-  {
-    PYBIND11_OVERLOAD_PURE(void, GEN, generate, );
-  }
 };
 
 static void pybind_generator(py::module &m)
 {
   py::class_<Generator,PyGenerator<>,std::shared_ptr<Generator>>(m, "Generator")
     .def(py::init<>())
+    .def("set_parser", &Generator::set_parser)
     .def("append_adder", &Generator::append_adder)
     .def("check_key", &Generator::check_key)
     .def("check_keys", &Generator::check_keys)
