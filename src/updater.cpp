@@ -1,15 +1,14 @@
 /* ---------------------------------------------------------------------
-ParDump: stands for Parser reading lammps' Dump file.
+Updater: is an abstract class to update data held by Generator.
 
 create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include "par_dump.h"
+#include "updater.h"
 
 /* ------------------------------------------------------------------ */
 
-ParDump::ParDump(const std::string &filepath_, int timestep_)
+void Updater::add_generator(std::shared_ptr<Generator> gen)
 {
-  filepath = filepath_;
-  timestep = timestep_;
+  generators[gen->get_classname()] = gen;
 }

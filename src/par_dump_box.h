@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-ParDumpBox: stands for Parser to read lammps' Dump file and extract
+ParDumpBox: stands for Parser reading lammps' Dump file and extracting
 Box data (supposed to be used by GenBox).
 
 create: 2018/06/29 by Takayuki Kobayashi
@@ -15,7 +15,7 @@ class ParDumpBox : public ParDump {
   using ParDump::ParDump;
   virtual ~ParDumpBox() = default;
  protected:
-  virtual void compute(nlohmann::json &) override;
+  virtual void compute_impl(nlohmann::json &) override;
 };
 
 /* ------------------------------------------------------------------ */
@@ -25,7 +25,7 @@ namespace py = pybind11;
 
 static void pybind_par_dump_box(py::module &m)
 {
-  py::class_<ParDumpBox,PyParser<ParDumpBox>,ParDump,Parser,std::shared_ptr<ParDumpBox>>(m, "ParDumpBox")
+  py::class_<ParDumpBox,PyUpdater<ParDumpBox>,ParDump,Parser,Updater,std::shared_ptr<ParDumpBox>>(m, "ParDumpBox")
     .def(py::init<const std::string &, int>());
 }
 

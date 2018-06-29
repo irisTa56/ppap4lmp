@@ -1,29 +1,21 @@
 /* ---------------------------------------------------------------------
 Adder: is an abstract class to add new properties to data in Generator.
 
-create: 2018/06/26 by Takayuki Kobayashi
+create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #ifndef ADDER_H
 #define ADDER_H
 
-#include "generator.h"
+#include "updater.h"
 
-class Adder {
+class Adder : public Updater {
  public:
   Adder() = default;
   virtual ~Adder() = default;
-  virtual void prepare()
-  { /* NOTE: You need to appoint with Generator if you use it. */ }
-  void compute(nlohmann::json &, const std::string &);
- protected:
-  virtual void compute_impl(nlohmann::json &data) = 0;
-  /* NOTE:
-  You need to say goodbye to Generator (if you used) at the end of
-  compute_impl() concritized elsewhere.
-  */
+  virtual void compute(nlohmann::json &) override;
  private:
-  std::unordered_set<std::string> dataname_blacklist;
+  bool is_called = false;
 };
 
 /* ------------------------------------------------------------------ */
@@ -31,25 +23,9 @@ class Adder {
 
 namespace py = pybind11;
 
-// trampoline class to bind Python
-template <class ADD = Adder>
-class PyAdder : public ADD {
- public:
-  using ADD::ADD;
-  void prepare() override
-  {
-    PYBIND11_OVERLOAD(void, ADD, prepare, );
-  }
- protected:
-  void compute_impl(nlohmann::json &data) override
-  {
-    PYBIND11_OVERLOAD_PURE(void, ADD, compute_impl, data);
-  }
-};
-
 static void pybind_adder(py::module &m)
 {
-  py::class_<Adder,PyAdder<>,std::shared_ptr<Adder>>(m, "Adder")
+  py::class_<Adder,PyUpdater<Adder>,Updater,std::shared_ptr<Adder>>(m, "Adder")
     .def(py::init<>());
 }
 

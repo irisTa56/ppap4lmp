@@ -29,8 +29,8 @@ class Generator : public std::enable_shared_from_this<Generator> {
   // function for dict/list generators
   virtual std::shared_ptr<Generator> get_generator();
   // function for leaf (normal) generators
-  void set_parser(std::shared_ptr<class Parser>);
-  void append_adder(std::shared_ptr<class Adder>);
+  void set_parser(std::shared_ptr<class Updater>);
+  void append_adder(std::shared_ptr<class Updater>);
   const nlohmann::json &get_data();
   const bool check_key(const std::string &);
   const std::vector<bool> check_keys(const std::vector<std::string> &);
@@ -40,20 +40,19 @@ class Generator : public std::enable_shared_from_this<Generator> {
   const Eigen::ArrayXXi get_int_array(const std::vector<std::string> &);
   const Eigen::ArrayXXd get_double_array(const std::vector<std::string> &);
  protected:
-  int n_appointment = 0;
   std::string classname;
   std::string dataname;
   nlohmann::json data = nullptr;
-  std::shared_ptr<class Parser> parser;
-  std::vector<std::shared_ptr<class Adder>> adders;
   void check_data();
  private:
+  int n_appointment = 0;
+  std::vector<std::shared_ptr<class Updater>> updaters;
+  std::vector<std::shared_ptr<Generator>> sub_generators;
   void check_keys_one(
     std::unordered_map<std::string,int> &, const nlohmann::json &);
 };
 
-#include "parser.h"
-#include "adder.h"
+#include "updater.h"
 
 /* ------------------------------------------------------------------ */
 // for pubind11

@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-ParDumpBox: stands for Parser to read lammps' Dump file and extract
+ParDumpBox: stands for Parser reading lammps' Dump file and extracting
 Box data (supposed to be used by GenBox).
 
 create: 2018/06/29 by Takayuki Kobayashi
@@ -12,7 +12,7 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void ParDumpBox::compute(nlohmann::json &data)
+void ParDumpBox::compute_impl(nlohmann::json &data)
 {
   /*== preparation ==*/
 

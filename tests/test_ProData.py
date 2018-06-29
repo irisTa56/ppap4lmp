@@ -70,10 +70,8 @@ class TestProData(unittest.TestCase):
     for gen, par in zip(gens, pars):
       gen.set_parser(par)
 
-    adder = AddMap("type", "mass", {1: 147.28})
-
     for gen in gens:
-      gen.append_adder(adder)
+      gen.append_adder(AddMap("type", "mass", {1: 147.28}))
 
     proc1 = ProData(gens)
 

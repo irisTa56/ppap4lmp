@@ -9,27 +9,10 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Parser::preprocess()
+void Parser::compute(nlohmann::json &data)
 {
-  for (const auto &item : dict_gen)
+  if (data == nullptr)
   {
-    item.second->appoint();
+    compute_impl(data);
   }
-}
-
-/* ------------------------------------------------------------------ */
-
-void Parser::postprocess()
-{
-  for (const auto &item : dict_gen)
-  {
-    item.second->goodbye();
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-void Parser::add_generators(std::shared_ptr<Generator> gen)
-{
-  dict_gen[gen->get_classname()] = gen;
 }

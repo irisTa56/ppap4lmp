@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-ParDump: stands for Parser to read lammps' Dump file.
+ParDump: stands for Parser reading lammps' Dump file.
 
 create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -25,7 +25,7 @@ namespace py = pybind11;
 
 static void pybind_par_dump(py::module &m)
 {
-  py::class_<ParDump,PyParser<ParDump>,Parser,std::shared_ptr<ParDump>>(m, "ParDump")
+  py::class_<ParDump,PyUpdater<ParDump>,Parser,Updater,std::shared_ptr<ParDump>>(m, "ParDump")
     .def(py::init<const std::string &, int>());
 }
 

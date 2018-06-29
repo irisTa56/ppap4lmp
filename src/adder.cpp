@@ -1,18 +1,18 @@
 /* ---------------------------------------------------------------------
 Adder: is an abstract class to add new properties to data in Generator.
 
-create: 2018/06/24 by Takayuki Kobayashi
+create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "adder.h"
 
 /* ------------------------------------------------------------------ */
 
-void Adder::compute(nlohmann::json &data, const std::string &dataname)
+void Adder::compute(nlohmann::json &data)
 {
-  if (dataname_blacklist.find(dataname) == dataname_blacklist.end())
+  if (data != nullptr && !is_called)
   {
-    dataname_blacklist.insert(dataname);
     compute_impl(data);
+    is_called = true;
   }
 }

@@ -29,7 +29,7 @@ namespace py = pybind11;
 static void pybind_add_map(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
-  py::class_<AddMap,PyAdder<AddMap>,Adder,std::shared_ptr<AddMap>>(m, "AddMap")
+  py::class_<AddMap,PyUpdater<AddMap>,Adder,Updater,std::shared_ptr<AddMap>>(m, "AddMap")
     .def(py::init<const std::string &, const std::string &, pybind11::dict>());
 }
 

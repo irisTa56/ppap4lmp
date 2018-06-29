@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------
-ParDumpAtoms: stands for Parser to read lammps' Dump file and extract
-Atoms data (supposed to be used by GenAtoms).
+ParDumpAtoms: stands for Parser reading lammps' Dump file and
+extracting Atoms data (supposed to be used by GenAtoms).
 
 create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -12,7 +12,7 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void ParDumpAtoms::compute(nlohmann::json &data)
+void ParDumpAtoms::compute_impl(nlohmann::json &data)
 {
   /*== preparation ==*/
 

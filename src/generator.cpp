@@ -59,16 +59,26 @@ std::shared_ptr<Generator> Generator::get_generator()
 
 /* ------------------------------------------------------------------ */
 
-void Generator::set_parser(std::shared_ptr<Parser> par)
+void Generator::set_parser(std::shared_ptr<Updater> upd)
 {
-  parser = par;
+  updaters.insert(updaters.begin(), upd);
+
+  /*auto gens = parser->get_generators();
+
+  for (auto gen : gens)
+  {
+    if (gen != shared_from_this())
+    {
+      sub_generators.push_back(gen);
+    }
+  }*/
 }
 
 /* ------------------------------------------------------------------ */
 
-void Generator::append_adder(std::shared_ptr<Adder> add)
+void Generator::append_adder(std::shared_ptr<Updater> upd)
 {
-  adders.push_back(add);
+  updaters.push_back(upd);
 }
 
 /* ------------------------------------------------------------------ */
@@ -279,11 +289,9 @@ void Generator::check_data()
 {
   #pragma omp critical
   {
-    parser->compute(data);
-
-    for (auto a : adders)
+    for (auto u : updaters)
     {
-      a->compute(data, dataname);
+      u->compute(data);
     }
   }
 }
