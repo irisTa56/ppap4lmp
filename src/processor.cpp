@@ -4,6 +4,8 @@ Processor: is an abstract class to process data.
 create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
+#include <omp.h>
+
 #include "processor.h"
 
 /* ------------------------------------------------------------------ */
@@ -24,37 +26,38 @@ Processor::Processor(std::vector<std::shared_ptr<Generator>> gens)
 
 /* ------------------------------------------------------------------ */
 
-void Processor::run(int i_generator)
+bool Processor::run()
 {
-  generators[i_generator]->hello();
+  int index;
 
-  run_impl(i_generator);
+  #pragma omp critical
+  {
+    index = i_generator;
+    i_generator++;
+  }
 
-  generators[i_generator]->goodbye();
+  if (index < n_generators)
+  {
+    generators[index]->hello();
+    run_impl(index);
+    generators[index]->goodbye();
+
+    return false;
+  }
+  else
+  {
+    return true;
+  }
 }
 
 /* ------------------------------------------------------------------ */
 
 void Processor::prepare()
 {
-  for(auto g : generators)
+  for (auto g : generators)
   {
     g->appoint();
   }
 
   prepare_impl();
-}
-
-/* ------------------------------------------------------------------ */
-
-void Processor::finish()
-{
-  finish_impl();
-}
-
-/* ------------------------------------------------------------------ */
-
-const int Processor::get_n_generators()
-{
-  return n_generators;
 }

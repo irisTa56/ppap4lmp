@@ -6,6 +6,8 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 #include <algorithm>
 
+#include <omp.h>
+
 #include "generator.h"
 #include "utils.h"
 
@@ -70,7 +72,7 @@ std::shared_ptr<Generator> Generator::set_parser(std::shared_ptr<Updater> upd)
 
   for (const auto gen : gens)
   {
-    merge_update_chain(tmp, gen->update_chain);
+    merge_update_chain(tmp, gen->get_update_chain());
   }
 
   tmp.push_back(UpdatePair(shared_from_this(), upd));
@@ -88,7 +90,7 @@ std::shared_ptr<Generator> Generator::append_adder(std::shared_ptr<Updater> upd)
 
   for (const auto gen : gens)
   {
-    merge_update_chain(update_chain, gen->update_chain);
+    merge_update_chain(update_chain, gen->get_update_chain());
   }
 
   update_chain.push_back(UpdatePair(shared_from_this(), upd));
@@ -413,6 +415,13 @@ void Generator::merge_update_chain(
       }
     }
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+const std::vector<UpdatePair> &Generator::get_update_chain()
+{
+  return update_chain;
 }
 
 /* ------------------------------------------------------------------ */

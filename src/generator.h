@@ -54,17 +54,18 @@ class Generator : public std::enable_shared_from_this<Generator> {
   const Eigen::ArrayXXd get_double_array(const std::vector<std::string> &);
   const Eigen::ArrayXXd get_double_array_py(const std::vector<std::string> &);
  protected:
-  int n_remain = 0;
   std::string classname;
   std::string dataname;
   nlohmann::json data = nullptr;
-  std::vector<UpdatePair> update_chain;
   void increment_remain();
   void decrement_remain();
   void update_data(std::shared_ptr<Updater>);
   void merge_update_chain(
     std::vector<UpdatePair> &, const std::vector<UpdatePair> &);
+  const std::vector<UpdatePair> &get_update_chain();
  private:
+  int n_remain = 0;
+  std::vector<UpdatePair> update_chain;
   void check_keys_one(
     std::unordered_map<std::string,int> &, const nlohmann::json &);
 };

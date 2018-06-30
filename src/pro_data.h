@@ -19,7 +19,7 @@ class ProData : public Processor {
   void select(pybind11::args);
   const std::vector<nlohmann::json> &get_results();
  protected:
-  virtual void run_impl(int i_generator) override;
+  virtual void run_impl(int) override;
   virtual void prepare_impl() override;
  private:
   std::vector<std::string> selected_keys;

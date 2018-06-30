@@ -17,9 +17,7 @@ class Invoker {
   void execute();
  protected:
   int n_processors;
-  int n_generators;
   std::vector<std::shared_ptr<Processor>> processors;
-  // implementations
   virtual void execute_impl() = 0;
 };
 

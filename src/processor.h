@@ -14,17 +14,16 @@ class Processor {
   Processor(std::shared_ptr<Generator>);
   Processor(std::vector<std::shared_ptr<Generator>>);
   virtual ~Processor() = default;
-  virtual void run(int i_generator);
+  virtual void finish() {}
+  virtual bool run();
   void prepare();
-  void finish();
-  const int get_n_generators();
  protected:
   int n_generators;
   std::vector<std::shared_ptr<Generator>> generators;
-  // implementations
-  virtual void run_impl(int i_generator) = 0;
   virtual void prepare_impl() {}
-  virtual void finish_impl() {}
+  virtual void run_impl(int) = 0;
+ private:
+  int i_generator = 0;
 };
 
 /* ------------------------------------------------------------------ */
@@ -35,22 +34,22 @@ template <class PRO = Processor>
 class PyProcessor : public PRO {
  public:
   using PRO::PRO;
-  void run(int i_generator) override
+  void finish() override
   {
-    PYBIND11_OVERLOAD(void, PRO, run, i_generator);
+    PYBIND11_OVERLOAD(void, PRO, finish, );
+  }
+  bool run() override
+  {
+    PYBIND11_OVERLOAD(bool, PRO, run, );
   }
  protected:
-  void run_impl(int i_generator) override
-  {
-    PYBIND11_OVERLOAD_PURE(void, PRO, run_impl, i_generator);
-  }
   void prepare_impl() override
   {
     PYBIND11_OVERLOAD(void, PRO, prepare_impl, );
   }
-  void finish_impl() override
+  void run_impl(int index) override
   {
-    PYBIND11_OVERLOAD(void, PRO, finish_impl, );
+    PYBIND11_OVERLOAD_PURE(void, PRO, run_impl, index);
   }
 };
 

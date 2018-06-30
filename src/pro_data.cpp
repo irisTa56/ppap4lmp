@@ -19,13 +19,13 @@ void ProData::select(pybind11::args args)
 
 /* ------------------------------------------------------------------ */
 
-void ProData::run_impl(int i_generator)
+void ProData::run_impl(int index)
 {
-  auto &d = generators[i_generator]->get_data();
+  auto &d = generators[index]->get_data();
 
   if (selected_keys.size() == 0)
   {
-    results[i_generator] = d;
+    results[index] = d;
   }
   else
   {
@@ -67,7 +67,7 @@ void ProData::run_impl(int i_generator)
       }
     }
 
-    results[i_generator] = j;
+    results[index] = j;
   }
 }
 

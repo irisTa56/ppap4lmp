@@ -16,12 +16,18 @@ void InvOMP::execute_impl()
   std::cout << "Max number of threads = " << omp_get_max_threads() << std::endl;
   #endif
 
-  #pragma omp parallel for schedule(dynamic)
-  for (int itr = 0; itr < n_generators; ++itr)
+  bool end = false;
+
+  #pragma omp parallel private(end)
   {
-    for(auto p : processors)
+    while (!end)
     {
-      p->run(itr);
+      end = true;
+
+      for (auto p : processors)
+      {
+        end = end && p->run();
+      }
     }
   }
 }
