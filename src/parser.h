@@ -20,8 +20,6 @@ class Parser : public Updater {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 static void pybind_parser(py::module &m)
 {
   py::class_<Parser,PyUpdater<Parser>,Updater,std::shared_ptr<Parser>>(m, "Parser")

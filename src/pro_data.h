@@ -29,8 +29,6 @@ class ProData : public Processor {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 static void pybind_pro_data(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing

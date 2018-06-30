@@ -19,8 +19,6 @@ GenBox::GenBox()
 
 const std::vector<bool> GenBox::get_periodic()
 {
-  check_data();
-
   return {
     data["periodic_x"], data["periodic_y"], data["periodic_z"]
   };
@@ -28,13 +26,27 @@ const std::vector<bool> GenBox::get_periodic()
 
 /* ------------------------------------------------------------------ */
 
+const std::vector<bool> GenBox::get_periodic_py()
+{
+  hello();
+  return get_periodic();
+}
+
+/* ------------------------------------------------------------------ */
+
 const std::vector<std::unordered_map<std::string,double>> GenBox::get_edge()
 {
-  check_data();
-
   return {
     {{"min", data["min_x"]}, {"max", data["max_x"]}},
     {{"min", data["min_y"]}, {"max", data["max_y"]}},
     {{"min", data["min_z"]}, {"max", data["max_z"]}}
   };
+}
+
+/* ------------------------------------------------------------------ */
+
+const std::vector<std::unordered_map<std::string,double>> GenBox::get_edge_py()
+{
+  hello();
+  return get_edge();
 }

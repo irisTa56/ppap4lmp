@@ -15,6 +15,7 @@ class Updater {
   virtual ~Updater() = default;
   virtual void compute(nlohmann::json &) = 0;
   void add_generator(std::shared_ptr<Generator>);
+  const std::vector<std::shared_ptr<Generator>> get_generators();
  protected:
   std::unordered_map<std::string,std::shared_ptr<Generator>> generators;
   virtual void compute_impl(nlohmann::json &) = 0;
@@ -22,8 +23,6 @@ class Updater {
 
 /* ------------------------------------------------------------------ */
 // for pubind11
-
-namespace py = pybind11;
 
 // trampoline class to bind Python
 template <class UPD = Updater>

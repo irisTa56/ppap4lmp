@@ -19,8 +19,6 @@ GenAtoms::GenAtoms()
 
 const Eigen::ArrayXXd GenAtoms::get_positions(const std::string &type)
 {
-  check_data();
-
   Eigen::ArrayXXd r(data.size(), 3);
 
   if (type == "unscaled")
@@ -49,6 +47,14 @@ const Eigen::ArrayXXd GenAtoms::get_positions(const std::string &type)
 
 /* ------------------------------------------------------------------ */
 
+const Eigen::ArrayXXd GenAtoms::get_positions_py(const std::string &type)
+{
+  hello();
+  return get_positions(type);
+}
+
+/* ------------------------------------------------------------------ */
+
 const bool GenAtoms::is_unscaled()
 {
   auto check = check_keys({"x", "y", "z"});
@@ -65,6 +71,14 @@ const bool GenAtoms::is_unscaled()
   {
     runtime_error("Invalid 'unscaled' positions");
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+const bool GenAtoms::is_unscaled_py()
+{
+  hello();
+  return is_unscaled();
 }
 
 /* ------------------------------------------------------------------ */
@@ -89,6 +103,14 @@ const bool GenAtoms::is_scaled()
 
 /* ------------------------------------------------------------------ */
 
+const bool GenAtoms::is_scaled_py()
+{
+  hello();
+  return is_scaled();
+}
+
+/* ------------------------------------------------------------------ */
+
 const bool GenAtoms::is_unwrapped()
 {
   auto check = check_keys({"xu", "yu", "zu"});
@@ -105,6 +127,14 @@ const bool GenAtoms::is_unwrapped()
   {
     runtime_error("Invalid 'unwrapped' positions");
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+const bool GenAtoms::is_unwrapped_py()
+{
+  hello();
+  return is_unwrapped();
 }
 
 /* ------------------------------------------------------------------ */
@@ -129,12 +159,20 @@ const bool GenAtoms::is_scaled_unwrapped()
 
 /* ------------------------------------------------------------------ */
 
+const bool GenAtoms::is_scaled_unwrapped_py()
+{
+  hello();
+  return is_scaled_unwrapped();
+}
+
+/* ------------------------------------------------------------------ */
+
 void GenAtoms::assign_positions(
   Eigen::ArrayXXd &array, const std::vector<std::string> &keys)
 {
   int length = data.size();
 
-  for (int i = 0; i < length; ++i)
+  for (int i = 0; i != length; ++i)
   {
     auto &d = data[i];
     array(i,0) = d[keys[0]];

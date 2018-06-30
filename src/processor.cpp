@@ -26,6 +26,8 @@ Processor::Processor(std::vector<std::shared_ptr<Generator>> gens)
 
 void Processor::run(int i_generator)
 {
+  generators[i_generator]->hello();
+
   run_impl(i_generator);
 
   generators[i_generator]->goodbye();
@@ -35,12 +37,12 @@ void Processor::run(int i_generator)
 
 void Processor::prepare()
 {
-  prepare_impl();
-
   for(auto g : generators)
   {
     g->appoint();
   }
+
+  prepare_impl();
 }
 
 /* ------------------------------------------------------------------ */

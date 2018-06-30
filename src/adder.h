@@ -21,8 +21,6 @@ class Adder : public Updater {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 static void pybind_adder(py::module &m)
 {
   py::class_<Adder,PyUpdater<Adder>,Updater,std::shared_ptr<Adder>>(m, "Adder")

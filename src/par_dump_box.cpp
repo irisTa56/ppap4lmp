@@ -14,8 +14,6 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 void ParDumpBox::compute_impl(nlohmann::json &data)
 {
-  /*== preparation ==*/
-
   std::ifstream ifs(filepath);
   std::string line;
   bool timestep_matches = false;
@@ -25,11 +23,6 @@ void ParDumpBox::compute_impl(nlohmann::json &data)
   {
     runtime_error("No such a file: " + filepath);
   }
-
-  /*== parsing ==*/
-
-  // `data` can be updated during preparation
-  if (data != nullptr) { return; }
 
   while (std::getline(ifs, line))
   {
@@ -68,7 +61,7 @@ void ParDumpBox::compute_impl(nlohmann::json &data)
     }
     else if (line.find("ITEM: ATOMS") == 0)
     {
-      for (int i = 0; i < n_atoms; ++i)
+      for (int i = 0; i != n_atoms; ++i)
       {
         std::getline(ifs, line);
       }

@@ -24,8 +24,6 @@ class AddMap : public Adder {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 static void pybind_add_map(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing

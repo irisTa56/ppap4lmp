@@ -21,8 +21,6 @@ class ParDumpBox : public ParDump {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 static void pybind_par_dump_box(py::module &m)
 {
   py::class_<ParDumpBox,PyUpdater<ParDumpBox>,ParDump,Parser,Updater,std::shared_ptr<ParDumpBox>>(m, "ParDumpBox")

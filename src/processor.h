@@ -30,8 +30,6 @@ class Processor {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 // trampoline class to bind Python
 template <class PRO = Processor>
 class PyProcessor : public PRO {

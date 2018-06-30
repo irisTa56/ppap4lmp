@@ -23,8 +23,6 @@ class InvOMP : public Invoker {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 static void pybind_inv_omp(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing

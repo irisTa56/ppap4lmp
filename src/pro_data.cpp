@@ -35,7 +35,7 @@ void ProData::run_impl(int i_generator)
     {
       for (const auto &e : d)
       {
-        nlohmann::json k;
+        nlohmann::json tmp;
 
         auto end = e.end();
 
@@ -45,11 +45,11 @@ void ProData::run_impl(int i_generator)
 
           if (val != end)
           {
-            k[s] = *val;
+            tmp[s] = *val;
           }
         }
 
-        j.push_back(k);
+        j.push_back(tmp);
       }
     }
     else

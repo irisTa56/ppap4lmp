@@ -4,6 +4,8 @@ Generator: is an abstract class to generate data.
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
+#include <algorithm>
+
 #include "generator.h"
 #include "utils.h"
 
@@ -11,28 +13,29 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 void Generator::appoint()
 {
-  n_appointment += 1;
+  for (const auto &item : update_chain)
+  {
+    item.first->increment_remain();
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::hello()
+{
+  for (const auto &item : update_chain)
+  {
+    item.first->update_data(item.second);
+  }
 }
 
 /* ------------------------------------------------------------------ */
 
 void Generator::goodbye()
 {
-  #pragma omp critical
+  for (const auto &item : update_chain)
   {
-    n_appointment -= 1;
-
-    if (n_appointment == 0)
-    {
-      data.clear();
-      data = nullptr;
-
-      message(dataname + " has been deleted");
-    }
-    else if (n_appointment < 0)
-    {
-      runtime_error(dataname + ": Invalid data use is detected");
-    }
+    item.first->decrement_remain();
   }
 }
 
@@ -59,43 +62,59 @@ std::shared_ptr<Generator> Generator::get_generator()
 
 /* ------------------------------------------------------------------ */
 
-void Generator::set_parser(std::shared_ptr<Updater> upd)
+std::shared_ptr<Generator> Generator::set_parser(std::shared_ptr<Updater> upd)
 {
-  updaters.insert(updaters.begin(), upd);
+  std::vector<UpdatePair> tmp;
 
-  /*auto gens = parser->get_generators();
+  auto gens = upd->get_generators();
 
-  for (auto gen : gens)
+  for (const auto gen : gens)
   {
-    if (gen != shared_from_this())
-    {
-      sub_generators.push_back(gen);
-    }
-  }*/
+    merge_update_chain(tmp, gen->update_chain);
+  }
+
+  tmp.push_back(UpdatePair(shared_from_this(), upd));
+
+  update_chain.insert(update_chain.begin(), tmp.begin(), tmp.end());
+
+  return shared_from_this();
 }
 
 /* ------------------------------------------------------------------ */
 
-void Generator::append_adder(std::shared_ptr<Updater> upd)
+std::shared_ptr<Generator> Generator::append_adder(std::shared_ptr<Updater> upd)
 {
-  updaters.push_back(upd);
+  auto gens = upd->get_generators();
+
+  for (const auto gen : gens)
+  {
+    merge_update_chain(update_chain, gen->update_chain);
+  }
+
+  update_chain.push_back(UpdatePair(shared_from_this(), upd));
+
+  return shared_from_this();
 }
 
 /* ------------------------------------------------------------------ */
 
 const nlohmann::json &Generator::get_data()
 {
-  check_data();
-
   return data;
+}
+
+/* ------------------------------------------------------------------ */
+
+const nlohmann::json &Generator::get_data_py()
+{
+  hello();
+  return get_data();
 }
 
 /* ------------------------------------------------------------------ */
 
 const bool Generator::check_key(const std::string &key)
 {
-  check_data();
-
   int count = 0;
 
   if (data.is_array())
@@ -123,11 +142,17 @@ const bool Generator::check_key(const std::string &key)
 
 /* ------------------------------------------------------------------ */
 
+const bool Generator::check_key_py(const std::string &key)
+{
+  hello();
+  return check_key(key);
+}
+
+/* ------------------------------------------------------------------ */
+
 const std::vector<bool> Generator::check_keys(
   const std::vector<std::string> &keys)
 {
-  check_data();
-
   int length = keys.size();
   std::unordered_map<std::string,int> counts;
 
@@ -159,7 +184,7 @@ const std::vector<bool> Generator::check_keys(
 
   for (const auto &k : keys)
   {
-    result.push_back(counts[k]);
+    result.push_back(counts[k]);  // convert <int> to <bool>
   }
 
   return result;
@@ -167,18 +192,25 @@ const std::vector<bool> Generator::check_keys(
 
 /* ------------------------------------------------------------------ */
 
+const std::vector<bool> Generator::check_keys_py(
+  const std::vector<std::string> &keys)
+{
+  hello();
+  return check_keys(keys);
+}
+
+/* ------------------------------------------------------------------ */
+
 const Eigen::VectorXi Generator::get_int_vector(
   const std::string &key)
 {
-  check_data();
-
   Eigen::VectorXi v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
     int length = data.size();
 
-    for (int i = 0; i < length; ++i)
+    for (int i = 0; i != length; ++i)
     {
       v(i) = data[i][key];
     }
@@ -193,18 +225,25 @@ const Eigen::VectorXi Generator::get_int_vector(
 
 /* ------------------------------------------------------------------ */
 
+const Eigen::VectorXi Generator::get_int_vector_py(
+  const std::string &key)
+{
+  hello();
+  return get_int_vector(key);
+}
+
+/* ------------------------------------------------------------------ */
+
 const Eigen::VectorXd Generator::get_double_vector(
   const std::string &key)
 {
-  check_data();
-
   Eigen::VectorXd v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
     int length = data.size();
 
-    for (int i = 0; i < length; ++i)
+    for (int i = 0; i != length; ++i)
     {
       v(i) = data[i][key];
     }
@@ -219,11 +258,18 @@ const Eigen::VectorXd Generator::get_double_vector(
 
 /* ------------------------------------------------------------------ */
 
+const Eigen::VectorXd Generator::get_double_vector_py(
+  const std::string &key)
+{
+  hello();
+  return get_double_vector(key);
+}
+
+/* ------------------------------------------------------------------ */
+
 const Eigen::ArrayXXi Generator::get_int_array(
   const std::vector<std::string> &keys)
 {
-  check_data();
-
   int n_keys = keys.size();
 
   Eigen::ArrayXXi a(data.is_array() ? data.size() : 1, n_keys);
@@ -232,7 +278,7 @@ const Eigen::ArrayXXi Generator::get_int_array(
   {
     int length = data.size();
 
-    for (int i = 0; i < length; ++i)
+    for (int i = 0; i != length; ++i)
     {
       auto &d = data[i];
 
@@ -252,11 +298,18 @@ const Eigen::ArrayXXi Generator::get_int_array(
 
 /* ------------------------------------------------------------------ */
 
+const Eigen::ArrayXXi Generator::get_int_array_py(
+  const std::vector<std::string> &keys)
+{
+  hello();
+  return get_int_array(keys);
+}
+
+/* ------------------------------------------------------------------ */
+
 const Eigen::ArrayXXd Generator::get_double_array(
   const std::vector<std::string> &keys)
 {
-  check_data();
-
   int n_keys = keys.size();
 
   Eigen::ArrayXXd a(data.is_array() ? data.size() : 1, n_keys);
@@ -265,7 +318,7 @@ const Eigen::ArrayXXd Generator::get_double_array(
   {
     int length = data.size();
 
-    for (int i = 0; i < length; ++i)
+    for (int i = 0; i != length; ++i)
     {
       auto &d = data[i];
 
@@ -285,13 +338,79 @@ const Eigen::ArrayXXd Generator::get_double_array(
 
 /* ------------------------------------------------------------------ */
 
-void Generator::check_data()
+const Eigen::ArrayXXd Generator::get_double_array_py(
+  const std::vector<std::string> &keys)
+{
+  hello();
+  return get_double_array(keys);
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::increment_remain()
+{
+  #pragma omp atomic
+  n_remain += 1;
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::decrement_remain()
 {
   #pragma omp critical
   {
-    for (auto u : updaters)
+    n_remain -= 1;
+
+    if (n_remain == 0)
     {
-      u->compute(data);
+      data.clear();
+      data = nullptr;
+
+      message(dataname + " has been deleted");
+    }
+    else if (n_remain < 0)
+    {
+      runtime_error(dataname + ": Invalid data use is detected");
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::update_data(std::shared_ptr<Updater> upd)
+{
+  #pragma omp critical
+  upd->compute(data);
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::merge_update_chain(
+  std::vector<UpdatePair> &u, const std::vector<UpdatePair> &v)
+{
+  for (auto itr = v.begin(); itr != v.end(); ++itr)
+  {
+    if (std::find(u.begin(), u.end(), *itr) == u.end())
+    {
+      for (auto jtr = u.begin(); jtr != u.end(); ++jtr)
+      {
+        bool match = false;
+
+        for (auto ktr = itr+1; ktr != v.end(); ++ktr)
+        {
+          if (*ktr == *jtr)
+          {
+            match = true;
+            break;
+          }
+        }
+
+        if (match)
+        {
+          u.insert(jtr, *itr);
+          break;
+        }
+      }
     }
   }
 }
@@ -299,14 +418,13 @@ void Generator::check_data()
 /* ------------------------------------------------------------------ */
 
 void Generator::check_keys_one(
-  std::unordered_map<std::string,int> &counts,
-  const nlohmann::json &data)
+  std::unordered_map<std::string,int> &counts, const nlohmann::json &d)
 {
-  auto end = data.end();
+  auto end = d.end();
 
   for (auto &item : counts)
   {
-    if (data.find(item.first) != end)
+    if (d.find(item.first) != end)
     {
       item.second++;
     }

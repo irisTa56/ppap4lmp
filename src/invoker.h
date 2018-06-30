@@ -26,8 +26,6 @@ class Invoker {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 // trampoline class to bind Python
 template <class INVO = Invoker>
 class PyInvoker : public INVO {

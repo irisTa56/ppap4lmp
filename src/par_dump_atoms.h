@@ -23,8 +23,6 @@ class ParDumpAtoms : public ParDump {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-namespace py = pybind11;
-
 static void pybind_par_dump_atoms(py::module &m)
 {
   py::class_<ParDumpAtoms,PyUpdater<ParDumpAtoms>,ParDump,Parser,Updater,std::shared_ptr<ParDumpAtoms>>(m, "ParDumpAtoms")
