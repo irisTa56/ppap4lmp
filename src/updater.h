@@ -15,8 +15,10 @@ class Updater {
   virtual ~Updater() = default;
   virtual void compute(nlohmann::json &) = 0;
   void add_generator(std::shared_ptr<Generator>);
+  const bool check_callability(const std::string &);
   const std::vector<std::shared_ptr<Generator>> get_generators();
  protected:
+  std::unordered_set<std::string> callable_classnames;
   std::unordered_map<std::string,std::shared_ptr<Generator>> generators;
   virtual void compute_impl(nlohmann::json &) = 0;
 };

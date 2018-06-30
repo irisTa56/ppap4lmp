@@ -64,8 +64,13 @@ std::shared_ptr<Generator> Generator::get_generator()
 
 /* ------------------------------------------------------------------ */
 
-std::shared_ptr<Generator> Generator::set_parser(std::shared_ptr<Updater> upd)
+std::shared_ptr<Generator> Generator::set_initial_updater(std::shared_ptr<Updater> upd)
 {
+  if (!(upd->check_callability(classname)))
+  {
+    runtime_error(classname + " cannot call Updater");
+  }
+
   std::vector<UpdatePair> tmp;
 
   auto gens = upd->get_generators();
@@ -84,8 +89,13 @@ std::shared_ptr<Generator> Generator::set_parser(std::shared_ptr<Updater> upd)
 
 /* ------------------------------------------------------------------ */
 
-std::shared_ptr<Generator> Generator::append_adder(std::shared_ptr<Updater> upd)
+std::shared_ptr<Generator> Generator::append_updater(std::shared_ptr<Updater> upd)
 {
+  if (!(upd->check_callability(classname)))
+  {
+    runtime_error(classname + " cannot call Updater");
+  }
+
   auto gens = upd->get_generators();
 
   for (const auto gen : gens)

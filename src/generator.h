@@ -36,8 +36,8 @@ class Generator : public std::enable_shared_from_this<Generator> {
   // function for dict/list generators
   virtual std::shared_ptr<Generator> get_generator();
   // function for leaf (normal) generators
-  std::shared_ptr<Generator> set_parser(std::shared_ptr<Updater>);
-  std::shared_ptr<Generator> append_adder(std::shared_ptr<Updater>);
+  std::shared_ptr<Generator> set_initial_updater(std::shared_ptr<Updater>);
+  std::shared_ptr<Generator> append_updater(std::shared_ptr<Updater>);
   const nlohmann::json &get_data();
   const nlohmann::json &get_data_py();
   const bool check_key(const std::string &);
@@ -99,10 +99,10 @@ static void pybind_generator(py::module &m)
 {
   py::class_<Generator,PyGenerator<>,std::shared_ptr<Generator>>(m, "Generator")
     .def(py::init<>())
-    .def("set_parser", &Generator::set_parser)
-    .def("set_initial_updater", &Generator::set_parser)
-    .def("append_adder", &Generator::append_adder)
-    .def("append_updater", &Generator::append_adder)
+    .def("set_parser", &Generator::set_initial_updater)
+    .def("set_initial_updater", &Generator::set_initial_updater)
+    .def("append_adder", &Generator::append_updater)
+    .def("append_updater", &Generator::append_updater)
     .def("get_data", &Generator::get_data_py,
       py::return_value_policy::reference_internal)
     .def("check_key", &Generator::check_key_py)
