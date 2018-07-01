@@ -8,7 +8,7 @@ create: 2018/06/21 by Takayuki Kobayashi
 #include "utils.h"
 
 /* ------------------------------------------------------------------ */
-
+// assumed to be not called from multithreads
 GenElement::GenElement()
 {
   datatype = "Element";
@@ -23,7 +23,7 @@ const nlohmann::json &GenElement::get_data()
 }
 
 /* ------------------------------------------------------------------ */
-
+// assumed to be not called from multithreads
 std::shared_ptr<Generator> GenElement::set_initial_updater(
   std::shared_ptr<Updater> upd)
 {
@@ -53,7 +53,7 @@ std::shared_ptr<Generator> GenElement::set_initial_updater(
 }
 
 /* ------------------------------------------------------------------ */
-
+// assumed to be not called from multithreads
 std::shared_ptr<Generator> GenElement::append_updater(
   std::shared_ptr<Updater> upd)
 {
@@ -66,7 +66,7 @@ std::shared_ptr<Generator> GenElement::append_updater(
 
   if (gen)
   {
-    merge_update_chain(update_chain, gen->get_update_chain());
+    merge_update_chain(gen->get_update_chain());
   }
 
   update_chain.push_back(UpdatePair(shared_from_this(), upd));
@@ -121,7 +121,15 @@ const std::vector<bool> GenElement::check_keys(
   {
     for (const auto &d : data)
     {
-      check_keys_one(counts, d);
+      auto end = d.end();
+
+      for (auto &item : counts)
+      {
+        if (d.find(item.first) != end)
+        {
+          item.second++;
+        }
+      }
     }
 
     int data_size = data.size();
@@ -133,7 +141,15 @@ const std::vector<bool> GenElement::check_keys(
   }
   else
   {
-    check_keys_one(counts, data);
+    auto end = data.end();
+
+    for (auto &item : counts)
+    {
+      if (data.find(item.first) != end)
+      {
+        item.second++;
+      }
+    }
   }
 
   std::vector<bool> result;
@@ -316,20 +332,4 @@ const Eigen::ArrayXXd GenElement::get_double_array_py(
 {
   hello();
   return get_double_array(keys);
-}
-
-/* ------------------------------------------------------------------ */
-
-void GenElement::check_keys_one(
-  std::unordered_map<std::string,int> &counts, const nlohmann::json &d)
-{
-  auto end = d.end();
-
-  for (auto &item : counts)
-  {
-    if (d.find(item.first) != end)
-    {
-      item.second++;
-    }
-  }
 }

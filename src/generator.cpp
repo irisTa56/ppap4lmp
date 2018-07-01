@@ -136,6 +136,13 @@ const std::string &Generator::get_dataname()
 
 /* ------------------------------------------------------------------ */
 
+const std::vector<UpdatePair> &Generator::get_update_chain()
+{
+  return update_chain;
+}
+
+/* ------------------------------------------------------------------ */
+
 void Generator::increment_remain()
 {
   #pragma omp atomic
@@ -174,39 +181,36 @@ void Generator::update_data(std::shared_ptr<Updater> upd)
 
 /* ------------------------------------------------------------------ */
 
-void Generator::merge_update_chain(
-  std::vector<UpdatePair> &u, const std::vector<UpdatePair> &v)
+void Generator::merge_update_chain(const std::vector<UpdatePair> &v)
 {
-  for (auto itr = v.begin(); itr != v.end(); ++itr)
+  #pragma omp critical
   {
-    if (std::find(u.begin(), u.end(), *itr) == u.end())
-    {
-      for (auto jtr = u.begin(); jtr != u.end(); ++jtr)
-      {
-        bool match = false;
+    auto &u = update_chain;
 
-        for (auto ktr = itr+1; ktr != v.end(); ++ktr)
+    for (auto itr = v.begin(); itr != v.end(); ++itr)
+    {
+      if (std::find(u.begin(), u.end(), *itr) == u.end())
+      {
+        for (auto jtr = u.begin(); jtr != u.end(); ++jtr)
         {
-          if (*ktr == *jtr)
+          bool match = false;
+
+          for (auto ktr = itr+1; ktr != v.end(); ++ktr)
           {
-            match = true;
+            if (*ktr == *jtr)
+            {
+              match = true;
+              break;
+            }
+          }
+
+          if (match)
+          {
+            u.insert(jtr, *itr);
             break;
           }
-        }
-
-        if (match)
-        {
-          u.insert(jtr, *itr);
-          break;
         }
       }
     }
   }
-}
-
-/* ------------------------------------------------------------------ */
-
-const std::vector<UpdatePair> &Generator::get_update_chain()
-{
-  return update_chain;
 }

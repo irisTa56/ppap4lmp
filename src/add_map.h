@@ -9,26 +9,27 @@ create: 2018/06/26 by Takayuki Kobayashi
 
 #include "adder.h"
 
+using JsonJson = std::unordered_map<nlohmann::json,nlohmann::json>;
+
 class AddMap : public Adder {
  public:
-  AddMap(const std::string &, const std::string &, pybind11::dict);
+  AddMap(const std::string &, const std::string &, JsonJson);
  protected:
   virtual void compute_impl(nlohmann::json &) override;
  private:
   std::string key_ref;
   std::string key_new;
-  std::unordered_map<nlohmann::json,nlohmann::json> mapping;
-  const nlohmann::json convert_py2json(const pybind11::handle &);
+  JsonJson mapping;
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 static void pybind_add_map(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddMap,PyUpdater<AddMap>,Adder,Updater,std::shared_ptr<AddMap>>(m, "AddMap")
-    .def(py::init<const std::string &, const std::string &, pybind11::dict>());
+    .def(py::init<const std::string &,const std::string &,JsonJson>());
 }
 
 #endif

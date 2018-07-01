@@ -17,7 +17,7 @@ class ProData : public Processor {
   ProData(
     std::vector<std::shared_ptr<Generator>> gens) : Processor(gens) {}*/
   virtual ~ProData() = default;
-  void select(pybind11::args);
+  void select(py::args);
   const std::vector<nlohmann::json> &get_results();
  protected:
   virtual void run_impl(int) override;
@@ -28,7 +28,7 @@ class ProData : public Processor {
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 static void pybind_pro_data(py::module &m)
 {

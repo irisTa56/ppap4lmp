@@ -25,8 +25,6 @@ const bool Starter::is_callable_as_initializer(std::string &datatype)
     datatype = datatype_to_be_initialized;
     return true;
   }
-  else
-  {
-    return false;
-  }
+
+  return false;
 }

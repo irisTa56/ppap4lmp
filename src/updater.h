@@ -23,7 +23,7 @@ class Updater {
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 // trampoline class to bind Python
 template <class UPD = Updater>

@@ -21,7 +21,7 @@ class StaDumpAtoms : public StaDump {
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 static void pybind_sta_dump_atoms(py::module &m)
 {

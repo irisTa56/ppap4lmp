@@ -18,7 +18,7 @@ class InvOMP : public Invoker {
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 static void pybind_inv_omp(py::module &m)
 {

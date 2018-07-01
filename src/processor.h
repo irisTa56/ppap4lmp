@@ -27,7 +27,7 @@ class Processor {
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 // trampoline class to bind Python
 template <class PRO = Processor>

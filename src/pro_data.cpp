@@ -9,7 +9,7 @@ create: 2018/06/22 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void ProData::select(pybind11::args args)
+void ProData::select(py::args args)
 {
   for (const auto &a : args)
   {

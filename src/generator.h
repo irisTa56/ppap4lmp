@@ -22,7 +22,7 @@ class Generator;
 class Updater;
 
 using UpdatePair
-  = std::pair<std::shared_ptr<Generator>, std::shared_ptr<Updater>>;
+  = std::pair<std::shared_ptr<Generator>,std::shared_ptr<Updater>>;
 
 class Generator : public std::enable_shared_from_this<Generator> {
  public:
@@ -60,8 +60,7 @@ class Generator : public std::enable_shared_from_this<Generator> {
   void increment_remain();
   void decrement_remain();
   void update_data(std::shared_ptr<Updater>);
-  void merge_update_chain(
-    std::vector<UpdatePair> &, const std::vector<UpdatePair> &);
+  void merge_update_chain(const std::vector<UpdatePair> &);
  private:
   int n_remain = 0;
 };
@@ -69,7 +68,7 @@ class Generator : public std::enable_shared_from_this<Generator> {
 #include "updater.h"
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 // trampoline class to bind Python
 template <class GEN = Generator>

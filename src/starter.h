@@ -20,7 +20,7 @@ class Starter : public Updater {
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 static void pybind_starter(py::module &m)
 {

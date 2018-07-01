@@ -44,13 +44,10 @@ class GenElement : public Generator {
     const std::vector<std::string> &);
   const Eigen::ArrayXXd get_double_array_py(
     const std::vector<std::string> &);
- private:
-  void check_keys_one(
-    std::unordered_map<std::string,int> &, const nlohmann::json &);
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 static void pybind_gen_element(py::module &m)
 {

@@ -22,7 +22,7 @@ class Adder : public Updater {
 };
 
 /* ------------------------------------------------------------------ */
-// for pubind11
+// for pybind11
 
 static void pybind_adder(py::module &m)
 {

@@ -19,11 +19,15 @@ void Adder::compute(nlohmann::json &data)
 
 /* ------------------------------------------------------------------ */
 
-const bool Adder::is_callable(const std::string &classname)
+const bool Adder::is_callable(const std::string &datatype)
 {
-  if (callable_datatypes.size())
+  if (datatype == "Element")
   {
-    if (callable_datatypes.find(classname) == callable_datatypes.end())
+    return false;
+  }
+  else if (callable_datatypes.size())
+  {
+    if (callable_datatypes.find(datatype) == callable_datatypes.end())
     {
       return false;
     }
