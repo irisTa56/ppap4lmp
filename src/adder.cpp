@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-Adder: is an abstract class to add new properties to data in Generator.
+Adder: is an abstract class to add new properties to data.
 
 create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -12,7 +12,22 @@ void Adder::compute(nlohmann::json &data)
 {
   if (data != nullptr && !is_called)
   {
-    compute_impl(data);
     is_called = true;
+    compute_impl(data);
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+const bool Adder::is_callable(const std::string &classname)
+{
+  if (callable_datatypes.size())
+  {
+    if (callable_datatypes.find(classname) == callable_datatypes.end())
+    {
+      return false;
+    }
+  }
+
+  return true;
 }

@@ -1,7 +1,6 @@
 import unittest
 
-from test_GenBoxDump import TestGenBoxDump
-from test_GenAtomsDump import TestGenAtomsDump
+from test_GenElement import TestGenElement
 from test_ProData import TestProData
 
 from ppap4lmp import __version__
@@ -14,14 +13,9 @@ def suite():
 
   suite = unittest.TestSuite()
 
-  suite.addTest(TestGenBoxDump("test_get_periodic"))
-  suite.addTest(TestGenBoxDump("test_get_edge"))
-
-  suite.addTest(TestGenAtomsDump("test_position_type"))
-  suite.addTest(TestGenAtomsDump("test_get_positions"))
-  suite.addTest(TestGenAtomsDump("test_get_data"))
-  suite.addTest(TestGenAtomsDump("test_check_keys"))
-  suite.addTest(TestGenAtomsDump("test_getters"))
+  suite.addTest(TestGenElement("test_get_data"))
+  suite.addTest(TestGenElement("test_check_keys"))
+  suite.addTest(TestGenElement("test_getters"))
 
   suite.addTest(TestProData("test_with_2Boxes"))
   suite.addTest(TestProData("test_with_2Atomses"))

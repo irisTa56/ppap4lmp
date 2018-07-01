@@ -65,21 +65,14 @@ static void runtime_error(const std::string &msg)
   exit(1);
 }
 
-/*=== classname/dataname ===*/
+/*=== dataname ===*/
 
 template <class T>
-static std::string make_classname(T *ptr)
-{
-  return std::string(
-    abi::__cxa_demangle(typeid(*ptr).name(), 0, 0, new int()));
-}
-
-template <class T>
-static std::string make_dataname(const std::string &classname, T *ptr)
+static std::string make_dataname(const std::string &datatype, T *ptr)
 {
   std::stringstream ss;
   ss << ptr;
-  return classname + "_" + ss.str();
+  return datatype + "_" + ss.str();
 }
 
 #endif

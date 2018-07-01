@@ -1,14 +1,14 @@
 /* ---------------------------------------------------------------------
-ParDump: stands for Parser reading lammps' Dump file.
+StaDump: stands for Starter reading lammps' Dump file.
 
 create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include "par_dump.h"
+#include "sta_dump.h"
 
 /* ------------------------------------------------------------------ */
 
-ParDump::ParDump(const std::string &filepath_, int timestep_)
+StaDump::StaDump(const std::string &filepath_, int timestep_)
 {
   filepath = filepath_;
   timestep = timestep_;

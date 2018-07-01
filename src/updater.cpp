@@ -8,36 +8,21 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Updater::add_generator(std::shared_ptr<Generator> gen)
+const bool Updater::is_callable(const std::string &classname)
 {
-  generators[gen->get_classname()] = gen;
+  return false;
 }
 
 /* ------------------------------------------------------------------ */
 
-const bool Updater::check_callability(const std::string &classname)
+const bool Updater::is_callable_as_initializer(std::string &classname)
 {
-  if (0 < callable_classnames.size())
-  {
-    if (callable_classnames.find(classname) == callable_classnames.end())
-    {
-      return false;
-    }
-  }
-
-  return true;
+  return false;
 }
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<std::shared_ptr<Generator>> Updater::get_generators()
+const std::shared_ptr<Generator> Updater::get_generator()
 {
-  std::vector<std::shared_ptr<Generator>> tmp;
-
-  for (const auto &item : generators)
-  {
-    tmp.push_back(item.second);
-  }
-
-  return tmp;
+  return reference_generator;
 }

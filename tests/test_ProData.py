@@ -1,7 +1,7 @@
 import unittest
 
 from ppap4lmp import \
-  GenBox, ParDumpBox, GenAtoms, ParDumpAtoms, \
+  GenElement, StaDumpBox, GenElement, StaDumpAtoms, \
   ProData, InvOMP, AddMap
 
 class TestProData(unittest.TestCase):
@@ -20,11 +20,11 @@ class TestProData(unittest.TestCase):
 
     expected_result = {"min_x": 0.0, "max_x": 662.0, "pbc_x": True}
 
-    gens = [GenBox() for i in range(len(self.args_list))]
-    pars = [ParDumpBox(*args) for args in self.args_list]
+    gens = [GenElement() for i in range(len(self.args_list))]
+    pars = [StaDumpBox(*args) for args in self.args_list]
 
     for gen, par in zip(gens, pars):
-      gen.set_parser(par)
+      gen.set_initializer(par)
 
     proc1 = ProData(gens)
 
@@ -64,14 +64,14 @@ class TestProData(unittest.TestCase):
       [{"xu": 6.57633, "yu": 2.11582, "type": 1},
         {"xu": 591.039, "yu": 220.716, "mass": 147.28}]]
 
-    gens = [GenAtoms() for i in range(len(self.args_list))]
-    pars = [ParDumpAtoms(*args) for args in self.args_list]
+    gens = [GenElement() for i in range(len(self.args_list))]
+    pars = [StaDumpAtoms(*args) for args in self.args_list]
 
     for gen, par in zip(gens, pars):
-      gen.set_parser(par)
+      gen.set_initializer(par)
 
     for gen in gens:
-      gen.append_adder(AddMap("type", "mass", {1: 147.28}))
+      gen.append_updater(AddMap("type", "mass", {1: 147.28}))
 
     proc1 = ProData(gens)
 

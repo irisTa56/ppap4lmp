@@ -14,12 +14,11 @@ class Updater {
   Updater() = default;
   virtual ~Updater() = default;
   virtual void compute(nlohmann::json &) = 0;
-  void add_generator(std::shared_ptr<Generator>);
-  const bool check_callability(const std::string &);
-  const std::vector<std::shared_ptr<Generator>> get_generators();
+  virtual const bool is_callable(const std::string &);
+  virtual const bool is_callable_as_initializer(std::string &);
+  const std::shared_ptr<Generator> get_generator();
  protected:
-  std::unordered_set<std::string> callable_classnames;
-  std::unordered_map<std::string,std::shared_ptr<Generator>> generators;
+  std::shared_ptr<Generator> reference_generator;
   virtual void compute_impl(nlohmann::json &) = 0;
 };
 
@@ -35,6 +34,14 @@ class PyUpdater : public UPD {
   {
     PYBIND11_OVERLOAD_PURE(void, UPD, compute, data);
   }
+  const bool is_callable(const std::string &datatype) override
+  {
+    PYBIND11_OVERLOAD(const bool, UPD, is_callable, datatype);
+  }
+  const bool is_callable_as_initializer(std::string &datatype) override
+  {
+    PYBIND11_OVERLOAD(const bool, UPD, is_callable_as_initializer, datatype);
+  }
  protected:
   void compute_impl(nlohmann::json &data) override
   {
@@ -45,8 +52,7 @@ class PyUpdater : public UPD {
 static void pybind_updater(py::module &m)
 {
   py::class_<Updater,PyUpdater<>,std::shared_ptr<Updater>>(m, "Updater")
-    .def(py::init<>())
-    .def("add_generator", &Updater::add_generator);
+    .def(py::init<>());
 }
 
 #endif

@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-ParDumpBox: stands for Parser reading lammps' Dump file and extracting
+StaDumpBox: stands for Starter reading lammps' Dump file and extracting
 Box data (supposed to be used by GenBox).
 
 create: 2018/06/29 by Takayuki Kobayashi
@@ -7,12 +7,20 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 #include <fstream>
 
-#include "par_dump_box.h"
+#include "sta_dump_box.h"
 #include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
-void ParDumpBox::compute_impl(nlohmann::json &data)
+StaDumpBox::StaDumpBox(
+  const std::string &filepath_, int timestep_) : StaDump(filepath_, timestep_)
+{
+  datatype_to_be_initialized = "Box";
+}
+
+/* ------------------------------------------------------------------ */
+
+void StaDumpBox::compute_impl(nlohmann::json &data)
 {
   std::ifstream ifs(filepath);
   std::string line;

@@ -1,18 +1,18 @@
 /* ---------------------------------------------------------------------
-ParDump: stands for Parser reading lammps' Dump file.
+StaDump: stands for Starter reading lammps' Dump file.
 
 create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#ifndef PAR_DUMP_H
-#define PAR_DUMP_H
+#ifndef STA_DUMP_H
+#define STA_DUMP_H
 
-#include "parser.h"
+#include "starter.h"
 
-class ParDump : public Parser {
+class StaDump : public Starter {
  public:
-  ParDump(const std::string &, int);
-  virtual ~ParDump() = default;
+  StaDump(const std::string &, int);
+  virtual ~StaDump() = default;
  protected:
   int timestep;
   std::string filepath;
@@ -21,9 +21,9 @@ class ParDump : public Parser {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-static void pybind_par_dump(py::module &m)
+static void pybind_sta_dump(py::module &m)
 {
-  py::class_<ParDump,PyUpdater<ParDump>,Parser,Updater,std::shared_ptr<ParDump>>(m, "ParDump")
+  py::class_<StaDump,PyUpdater<StaDump>,Starter,Updater,std::shared_ptr<StaDump>>(m, "StaDump")
     .def(py::init<const std::string &, int>());
 }
 

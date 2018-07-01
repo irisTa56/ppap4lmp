@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-ParDumpAtoms: stands for Parser reading lammps' Dump file and
+StaDumpAtoms: stands for Starter reading lammps' Dump file and
 extracting Atoms data (supposed to be used by GenAtoms).
 
 create: 2018/06/29 by Takayuki Kobayashi
@@ -7,12 +7,20 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 #include <fstream>
 
-#include "par_dump_atoms.h"
+#include "sta_dump_atoms.h"
 #include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
-void ParDumpAtoms::compute_impl(nlohmann::json &data)
+StaDumpAtoms::StaDumpAtoms(
+  const std::string &filepath_, int timestep_) : StaDump(filepath_, timestep_)
+{
+  datatype_to_be_initialized = "Atoms";
+}
+
+/* ------------------------------------------------------------------ */
+
+void StaDumpAtoms::compute_impl(nlohmann::json &data)
 {
   std::ifstream ifs(filepath);
   std::string line;
@@ -57,7 +65,7 @@ void ParDumpAtoms::compute_impl(nlohmann::json &data)
           auto &a = data[i];
           auto strs = split(line);
 
-          for (int j = 0; j < length; ++j)
+          for (int j = 0; j != length; ++j)
           {
             if (is_int[j])
             {
@@ -87,7 +95,7 @@ void ParDumpAtoms::compute_impl(nlohmann::json &data)
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<bool> ParDumpAtoms::get_is_int_vector(
+const std::vector<bool> StaDumpAtoms::get_is_int_vector(
   const std::string &line)
 {
   std::vector<bool> is_int;

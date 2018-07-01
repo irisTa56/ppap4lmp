@@ -11,10 +11,7 @@ create: 2018/06/23 by Takayuki Kobayashi
 
 class InvOMP : public Invoker {
  public:
-  InvOMP(
-    std::shared_ptr<Processor> proc) : Invoker(proc) {}
-  InvOMP(
-    std::vector<std::shared_ptr<Processor>> procs) : Invoker(procs) {}
+  using Invoker::Invoker;
   virtual ~InvOMP() = default;
  protected:
   virtual void execute_impl() override;

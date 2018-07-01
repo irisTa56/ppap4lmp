@@ -1,19 +1,19 @@
 /* ---------------------------------------------------------------------
-ParDumpAtoms: stands for Parser reading lammps' Dump file and
+StaDumpAtoms: stands for Starter reading lammps' Dump file and
 extracting Atoms data (supposed to be used by GenAtoms).
 
 create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#ifndef PAR_DUMP_ATOMS_H
-#define PAR_DUMP_ATOMS_H
+#ifndef STA_DUMP_ATOMS_H
+#define STA_DUMP_ATOMS_H
 
-#include "par_dump.h"
+#include "sta_dump.h"
 
-class ParDumpAtoms : public ParDump {
+class StaDumpAtoms : public StaDump {
  public:
-  using ParDump::ParDump;
-  virtual ~ParDumpAtoms() = default;
+  StaDumpAtoms(const std::string &, int);
+  virtual ~StaDumpAtoms() = default;
  protected:
   virtual void compute_impl(nlohmann::json &) override;
  private:
@@ -23,9 +23,9 @@ class ParDumpAtoms : public ParDump {
 /* ------------------------------------------------------------------ */
 // for pubind11
 
-static void pybind_par_dump_atoms(py::module &m)
+static void pybind_sta_dump_atoms(py::module &m)
 {
-  py::class_<ParDumpAtoms,PyUpdater<ParDumpAtoms>,ParDump,Parser,Updater,std::shared_ptr<ParDumpAtoms>>(m, "ParDumpAtoms")
+  py::class_<StaDumpAtoms,PyUpdater<StaDumpAtoms>,StaDump,Starter,Updater,std::shared_ptr<StaDumpAtoms>>(m, "StaDumpAtoms")
     .def(py::init<const std::string &, int>());
 }
 
