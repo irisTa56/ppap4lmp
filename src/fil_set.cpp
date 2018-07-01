@@ -27,17 +27,31 @@ FilSet::FilSet(
 
 void FilSet::compute_impl(nlohmann::json &data)
 {
-  for (auto it = data.begin(); it != data.end(); ++it)
+  nlohmann::json tmp;
+
+  int length = data.size();
+
+  for (int i = 0; i != length; ++i)
   {
+    auto d = data[i];
+    bool pass = true;
+
     for (const auto &item : value_sets)
     {
       auto set = item.second;
 
-      if (set.find((*it)[item.first]) == set.end())
+      if (set.find(d[item.first]) == set.end())
       {
-        data.erase(it);
-        it--;
+        pass = false;
+        break;
       }
     }
+
+    if (pass)
+    {
+      tmp.push_back(d);
+    }
   }
+
+  data.swap(tmp);
 }

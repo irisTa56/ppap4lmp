@@ -8,16 +8,16 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-const bool Updater::is_callable(const std::string &classname)
+const bool Updater::is_callable(const std::string &datatype)
 {
   return false;
 }
 
 /* ------------------------------------------------------------------ */
 
-const bool Updater::is_callable_as_initializer(std::string &classname)
+const bool Updater::is_callable_as_initializer(std::string &datatype)
 {
-  return false;
+  return false;  // if callable, datatype should be set
 }
 
 /* ------------------------------------------------------------------ */
