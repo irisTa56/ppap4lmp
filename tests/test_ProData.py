@@ -1,8 +1,10 @@
 import unittest
 
 from ppap4lmp import \
-  GenElement, StaDumpBox, GenElement, StaDumpAtoms, \
+  log_switch, GenElement, StaDumpBox, GenElement, StaDumpAtoms, \
   ProData, InvOMP, AddMap
+
+log_switch(False)
 
 class TestProData(unittest.TestCase):
 

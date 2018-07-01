@@ -162,7 +162,7 @@ void Generator::decrement_remain()
       data.clear();
       data = nullptr;
 
-      message(dataname + " has been deleted");
+      logging(dataname + " has been deleted");
     }
     else if (n_remain < 0)
     {

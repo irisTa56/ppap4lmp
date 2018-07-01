@@ -7,13 +7,15 @@ create: 2018/06/23 by Takayuki Kobayashi
 #include <omp.h>
 
 #include "inv_omp.h"
+#include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
 void InvOMP::execute_impl()
 {
   #ifdef _OPENMP
-  std::cout << "Max number of threads = " << omp_get_max_threads() << std::endl;
+  logging(
+    "Max number of threads = " + std::to_string(omp_get_max_threads()));
   #endif
 
   bool end = false;

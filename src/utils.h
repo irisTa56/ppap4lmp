@@ -6,9 +6,6 @@
 #include <string>
 #include <vector>
 
-#include <typeinfo>
-#include <cxxabi.h>
-
 /*=== split ===*/
 
 static std::vector<std::string> split(
@@ -53,6 +50,16 @@ static std::vector<std::string> split2(
 }
 
 /*=== message ===*/
+
+static bool ToF_LOGGING;
+
+static void logging(const std::string &msg)
+{
+  if (ToF_LOGGING)
+  {
+    std::cout << msg << std::endl;
+  }
+}
 
 static void message(const std::string &msg)
 {

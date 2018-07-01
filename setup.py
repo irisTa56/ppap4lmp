@@ -95,10 +95,12 @@ with open("src/pybind.h", "w") as f:
 #include <pybind11/pybind11.h>
 
 {headers}
+#include "utils_py.h"
 
 PYBIND11_MODULE(_ppap4lmp, m)
 {{
 {pybind}
+  pybind_utils(m);
 }}
 
 #endif
@@ -125,10 +127,11 @@ with open("ppap4lmp/__init__.py", "w") as f:
 
   f.write("""from ._version import version_info, __version__
 from ppap4lmp._ppap4lmp import \\
-  {}
+  {}, log_switch
 
 __all__ = [
   "{}",
+  "log_switch",
 ]
 """.format(", ".join(class_names), "\", \n  \"".join(class_names)))
 
