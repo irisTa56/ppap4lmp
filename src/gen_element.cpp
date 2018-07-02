@@ -12,7 +12,8 @@ create: 2018/06/21 by Takayuki Kobayashi
 GenElement::GenElement()
 {
   datatype = "Element";
-  dataname = make_dataname(datatype, this);
+  instance_count++;
+  dataname = datatype + "_" + std::to_string(instance_count);
 }
 
 /* ------------------------------------------------------------------ */
@@ -29,7 +30,7 @@ std::shared_ptr<Generator> GenElement::set_initial_updater(
 {
   if (upd->is_callable_as_initializer(datatype))
   {
-    dataname = make_dataname(datatype, this);
+    dataname = datatype + "_" + split(dataname, '_').back();
   }
   else
   {

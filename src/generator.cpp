@@ -11,6 +11,8 @@ create: 2018/06/21 by Takayuki Kobayashi
 #include "generator.h"
 #include "utils.h"
 
+int Generator::instance_count = 0;
+
 /* ------------------------------------------------------------------ */
 
 void Generator::appoint()

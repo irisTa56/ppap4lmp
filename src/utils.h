@@ -51,7 +51,7 @@ static std::vector<std::string> split2(
 
 /*=== message ===*/
 
-static bool ToF_LOGGING;
+static bool ToF_LOGGING = true;
 
 static void logging(const std::string &msg)
 {

@@ -53,6 +53,7 @@ class Generator : public std::enable_shared_from_this<Generator> {
   const std::string &get_dataname();
   const std::vector<UpdatePair> &get_update_chain();
  protected:
+  static int instance_count;
   std::string datatype;
   std::string dataname;
   nlohmann::json data = nullptr;
