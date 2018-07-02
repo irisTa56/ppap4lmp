@@ -16,6 +16,7 @@ def suite():
   suite.addTest(TestGenElement("test_get_data"))
   suite.addTest(TestGenElement("test_check_keys"))
   suite.addTest(TestGenElement("test_getters"))
+  suite.addTest(TestGenElement("test_filter"))
 
   suite.addTest(TestProData("test_with_2Boxes"))
   suite.addTest(TestProData("test_with_2Atomses"))

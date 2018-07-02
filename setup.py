@@ -95,11 +95,13 @@ with open("src/pybind.h", "w") as f:
 #include <pybind11/pybind11.h>
 
 {headers}
+
 #include "utils_py.h"
 
 PYBIND11_MODULE(_ppap4lmp, m)
 {{
 {pybind}
+
   pybind_utils(m);
 }}
 
