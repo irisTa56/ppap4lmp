@@ -7,6 +7,8 @@
 
 extern bool ToF_LOGGING;
 
+/* ------------------------------------------------------------------ */
+
 static void log_switch(bool input)
 {
   ToF_LOGGING = input;

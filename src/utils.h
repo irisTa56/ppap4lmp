@@ -6,7 +6,9 @@
 #include <string>
 #include <vector>
 
-/*=== split ===*/
+extern bool ToF_LOGGING;
+
+/* ------------------------------------------------------------------ */
 
 static std::vector<std::string> split(
   const std::string &s, char delim = ' ')
@@ -26,7 +28,8 @@ static std::vector<std::string> split(
   return elems;
 }
 
-// split by spaces and tabs
+/* ------------------------------------------------------------------ */
+
 static std::vector<std::string> split2(
   const std::string &s, char delim1 = ' ', char delim2 = '\t')
 {
@@ -49,9 +52,7 @@ static std::vector<std::string> split2(
   return elems;
 }
 
-/*=== message ===*/
-
-static bool ToF_LOGGING = true;
+/* ------------------------------------------------------------------ */
 
 static void logging(const std::string &msg)
 {
@@ -61,10 +62,14 @@ static void logging(const std::string &msg)
   }
 }
 
+/* ------------------------------------------------------------------ */
+
 static void message(const std::string &msg)
 {
   std::cout << msg << std::endl;
 }
+
+/* ------------------------------------------------------------------ */
 
 static void runtime_error(const std::string &msg)
 {
@@ -72,7 +77,7 @@ static void runtime_error(const std::string &msg)
   exit(1);
 }
 
-/*=== dataname ===*/
+/* ------------------------------------------------------------------ */
 
 template <class T>
 static std::string make_dataname(const std::string &datatype, T *ptr)
