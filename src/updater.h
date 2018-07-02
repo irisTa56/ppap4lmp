@@ -14,8 +14,8 @@ class Updater {
   Updater() = default;
   virtual ~Updater() = default;
   virtual void compute(nlohmann::json &) = 0;
+  virtual void initialize_datatype(std::string &);
   virtual const bool is_callable(const std::string &);
-  virtual const bool is_callable_as_initializer(std::string &);
   const std::shared_ptr<Generator> get_generator();
  protected:
   std::shared_ptr<Generator> reference_generator;
@@ -34,13 +34,13 @@ class PyUpdater : public UPD {
   {
     PYBIND11_OVERLOAD_PURE(void, UPD, compute, data);
   }
+  void initialize_datatype(std::string &datatype) override
+  {
+    PYBIND11_OVERLOAD(void, UPD, initialize_datatype, datatype);
+  }
   const bool is_callable(const std::string &datatype) override
   {
     PYBIND11_OVERLOAD(const bool, UPD, is_callable, datatype);
-  }
-  const bool is_callable_as_initializer(std::string &datatype) override
-  {
-    PYBIND11_OVERLOAD(const bool, UPD, is_callable_as_initializer, datatype);
   }
  protected:
   void compute_impl(nlohmann::json &data) override

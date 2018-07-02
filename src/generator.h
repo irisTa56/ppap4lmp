@@ -33,10 +33,6 @@ class Generator : public std::enable_shared_from_this<Generator> {
   virtual void hello();
   virtual void goodbye();
   virtual std::shared_ptr<Generator> get_generator();
-  virtual std::shared_ptr<Generator> set_initial_updater(
-    std::shared_ptr<Updater>);
-  virtual std::shared_ptr<Generator> append_updater(
-    std::shared_ptr<Updater>);
   virtual const bool check_key(
     const std::string &);
   virtual const std::vector<bool> check_keys(
@@ -96,18 +92,6 @@ class PyGenerator : public GEN {
   {
     PYBIND11_OVERLOAD(
       std::shared_ptr<Generator>, GEN, get_generator, );
-  }
-  std::shared_ptr<Generator> set_initial_updater(
-    std::shared_ptr<Updater> upd) override
-  {
-    PYBIND11_OVERLOAD(
-      std::shared_ptr<Generator>, GEN, set_initial_updater, upd);
-  }
-  std::shared_ptr<Generator> append_updater(
-    std::shared_ptr<Updater> upd) override
-  {
-    PYBIND11_OVERLOAD(
-      std::shared_ptr<Generator>, GEN, append_updater, upd);
   }
   const bool check_key(
     const std::string &key) override

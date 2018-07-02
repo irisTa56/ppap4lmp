@@ -1,7 +1,7 @@
 import unittest
 
 from ppap4lmp import \
-  log_switch, GenElement, StaDumpBox, GenElement, StaDumpAtoms, \
+  log_switch, Element, StaDumpBox, StaDumpAtoms, \
   ProData, InvOMP, AddMap
 
 log_switch(False)
@@ -22,11 +22,9 @@ class TestProData(unittest.TestCase):
 
     expected_result = {"min_x": 0.0, "max_x": 662.0, "pbc_x": True}
 
-    gens = [GenElement() for i in range(len(self.args_list))]
-    pars = [StaDumpBox(*args) for args in self.args_list]
-
-    for gen, par in zip(gens, pars):
-      gen.set_initializer(par)
+    gens = [
+      Element(initializer)
+      for initializer in [StaDumpBox(*args) for args in self.args_list]]
 
     proc1 = ProData(gens)
 
@@ -66,14 +64,10 @@ class TestProData(unittest.TestCase):
       [{"xu": 6.57633, "yu": 2.11582, "type": 1},
         {"xu": 591.039, "yu": 220.716, "mass": 147.28}]]
 
-    gens = [GenElement() for i in range(len(self.args_list))]
-    pars = [StaDumpAtoms(*args) for args in self.args_list]
-
-    for gen, par in zip(gens, pars):
-      gen.set_initializer(par)
-
-    for gen in gens:
-      gen.append_updater(AddMap("type", "mass", {1: 147.28}))
+    gens = [
+      Element(initializer).append_updater(
+        AddMap("type", "mass", {1: 147.28}))
+      for initializer in [StaDumpAtoms(*args) for args in self.args_list]]
 
     proc1 = ProData(gens)
 

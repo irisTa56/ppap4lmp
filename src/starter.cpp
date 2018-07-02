@@ -5,6 +5,7 @@ create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "starter.h"
+#include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
@@ -18,13 +19,14 @@ void Starter::compute(nlohmann::json &data)
 
 /* ------------------------------------------------------------------ */
 
-const bool Starter::is_callable_as_initializer(std::string &datatype)
+void Starter::initialize_datatype(std::string &datatype)
 {
-  if (datatype == "Element")
+  if (datatype.empty())
   {
     datatype = datatype_to_be_initialized;
-    return true;
   }
-
-  return false;
+  else
+  {
+    runtime_error("Generator's datatype is already set");
+  }
 }

@@ -11,9 +11,8 @@ create: 2018/06/21 by Takayuki Kobayashi
 // assumed to be not called from multithreads
 GenElement::GenElement()
 {
-  datatype = "Element";
   instance_count++;
-  dataname = datatype + "_" + std::to_string(instance_count);
+  dataname = "_" + std::to_string(instance_count);
 }
 
 /* ------------------------------------------------------------------ */
@@ -28,14 +27,8 @@ const nlohmann::json &GenElement::get_data()
 std::shared_ptr<Generator> GenElement::set_initial_updater(
   std::shared_ptr<Updater> upd)
 {
-  if (upd->is_callable_as_initializer(datatype))
-  {
-    dataname = datatype + "_" + split(dataname, '_').back();
-  }
-  else
-  {
-    runtime_error(dataname + " cannot call Updater");
-  }
+  upd->initialize_datatype(datatype);
+  dataname = datatype + dataname;
 
   update_chain.insert(
     update_chain.begin(), UpdatePair(shared_from_this(), upd));

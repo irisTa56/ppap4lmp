@@ -15,8 +15,8 @@ class Filter : public Updater {
   Filter(std::shared_ptr<Generator>);
   virtual ~Filter() = default;
   virtual void compute(nlohmann::json &) override;
+  virtual void initialize_datatype(std::string &) override;
   virtual const bool is_callable(const std::string &) override;
-  virtual const bool is_callable_as_initializer(std::string &) override;
  private:
   bool is_called = false;
 };

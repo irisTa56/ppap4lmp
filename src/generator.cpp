@@ -52,24 +52,6 @@ std::shared_ptr<Generator> Generator::get_generator()
 
 /* ------------------------------------------------------------------ */
 
-std::shared_ptr<Generator> Generator::set_initial_updater(
-  std::shared_ptr<Updater> upd)
-{
-  message("This function is for GenElement");
-  return shared_from_this();
-}
-
-/* ------------------------------------------------------------------ */
-
-std::shared_ptr<Generator> Generator::append_updater(
-  std::shared_ptr<Updater> upd)
-{
-  message("This function is for GenElement");
-  return shared_from_this();
-}
-
-/* ------------------------------------------------------------------ */
-
 const bool Generator::check_key(
   const std::string &key)
 {

@@ -14,10 +14,6 @@ class GenElement : public Generator {
   GenElement();
   virtual ~GenElement() = default;
   virtual const nlohmann::json &get_data() override;
-  virtual std::shared_ptr<Generator> set_initial_updater(
-    std::shared_ptr<Updater>) override;
-  virtual std::shared_ptr<Generator> append_updater(
-    std::shared_ptr<Updater>) override;
   virtual const bool check_key(
     const std::string &) override;
   virtual const std::vector<bool> check_keys(
@@ -30,6 +26,10 @@ class GenElement : public Generator {
     const std::vector<std::string> &) override;
   virtual const Eigen::ArrayXXd get_double_array(
     const std::vector<std::string> &) override;
+  std::shared_ptr<Generator> set_initial_updater(
+    std::shared_ptr<Updater>);
+  std::shared_ptr<Generator> append_updater(
+    std::shared_ptr<Updater>);
   // to use directly from Python
   const nlohmann::json &get_data_py();
   const bool check_key_py(
@@ -55,8 +55,6 @@ static void pybind_gen_element(py::module &m)
     .def(py::init<>())
     .def("get_data", &GenElement::get_data_py,
       py::return_value_policy::reference_internal)
-    .def("set_initial_updater", &GenElement::set_initial_updater)
-    .def("set_initializer", &GenElement::set_initial_updater)
     .def("append_updater", &GenElement::append_updater)
     .def("check_key", &GenElement::check_key_py)
     .def("check_keys", &GenElement::check_keys_py)
@@ -64,6 +62,14 @@ static void pybind_gen_element(py::module &m)
     .def("get_double_vector", &GenElement::get_double_vector_py)
     .def("get_int_array", &GenElement::get_int_array_py)
     .def("get_double_array", &GenElement::get_double_array_py);
+
+  m.def(
+    "Element",
+    [](std::shared_ptr<Updater> upd)
+    {
+      return std::shared_ptr<GenElement>(
+        new GenElement())->set_initial_updater(upd);
+    });
 }
 
 #endif

@@ -14,7 +14,7 @@ class Starter : public Updater {
   Starter() = default;
   virtual ~Starter() = default;
   virtual void compute(nlohmann::json &) override;
-  virtual const bool is_callable_as_initializer(std::string &) override;
+  virtual void initialize_datatype(std::string &) override;
  protected:
   std::string datatype_to_be_initialized;
 };

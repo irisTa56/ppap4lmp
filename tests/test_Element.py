@@ -5,9 +5,9 @@ import numpy as np
 from random import randrange
 
 from ppap4lmp import \
-  GenElement, StaDumpAtoms, AddMap, FilSet, FilComparison
+  Element, StaDumpAtoms, AddMap, FilSet, FilComparison
 
-class TestGenElement(unittest.TestCase):
+class TestElement(unittest.TestCase):
 
   def __init__(self, *args, **kwargs):
 
@@ -17,12 +17,11 @@ class TestGenElement(unittest.TestCase):
 
   def test_get_data(self):
 
-    print("\n\nTestGenElement.test_get_data:")
+    print("\n\nTestElement.test_get_data:")
 
-    data = GenElement(
-      ).set_initializer(StaDumpAtoms(*self.args)
-      ).append_updater(AddMap("type", "mass", {1: 147.28})
-      ).get_data()
+    data = Element(
+      StaDumpAtoms(*self.args)).append_updater(
+        AddMap("type", "mass", {1: 147.28})).get_data()
 
     for i in range(10):
       d = data[randrange(len(data))]
@@ -30,9 +29,9 @@ class TestGenElement(unittest.TestCase):
 
   def test_check_keys(self):
 
-    print("\n\nTestGenElement.test_check_keys:")
+    print("\n\nTestElement.test_check_keys:")
 
-    gen = GenElement().set_initializer(StaDumpAtoms(*self.args))
+    gen = Element(StaDumpAtoms(*self.args))
 
     self.assertEqual(
       gen.check_keys(["fx", "fy", "fz", "gx", "gy", "gz"]),
@@ -43,11 +42,11 @@ class TestGenElement(unittest.TestCase):
 
   def test_getters(self):
 
-    print("\n\nTestGenElement.test_getters:")
+    print("\n\nTestElement.test_getters:")
 
-    gen = GenElement(
-      ).set_initializer(StaDumpAtoms(*self.args)
-      ).append_updater(AddMap("type", "mass", {1: 147.28}))
+    gen = Element(
+      StaDumpAtoms(*self.args)).append_updater(
+        AddMap("type", "mass", {1: 147.28}))
 
     ps = gen.get_double_array(["xu", "yu", "zu"])
 
@@ -58,8 +57,7 @@ class TestGenElement(unittest.TestCase):
 
     self.assertTrue(np.all(masses == 147.28))
 
-    filtered_gen = GenElement(
-      ).set_initializer(FilSet(gen, {"mol": set(range(1, 11))}))
+    filtered_gen = Element(FilSet(gen, {"mol": set(range(1, 11))}))
 
     ids = filtered_gen.get_int_vector("id")
 
@@ -75,27 +73,25 @@ class TestGenElement(unittest.TestCase):
 
   def test_filter(self):
 
-    print("\n\nTestGenElement.test_filter:")
+    print("\n\nTestElement.test_filter:")
 
-    gen = GenElement().set_initializer(StaDumpAtoms(*self.args))
+    gen = Element(StaDumpAtoms(*self.args))
 
     length = len(gen.get_data())
 
-    gen_x = GenElement().set_initializer(
-      FilComparison(gen, {"xu": (">", 0.0)}))
+    gen_x = Element(FilComparison(gen, {"xu": (">", 0.0)}))
 
     xs = gen_x.get_double_vector("xu")
 
     self.assertTrue(np.all(xs > 0.0))
 
-    gen_y = GenElement().set_initializer(
-      FilComparison(gen, {"yu": (">", 0.0)}))
+    gen_y = Element(FilComparison(gen, {"yu": (">", 0.0)}))
 
     ys = gen_y.get_double_vector("yu")
 
     self.assertTrue(np.all(ys > 0.0))
 
-    gen_x_and_y = GenElement().set_initializer(
+    gen_x_and_y = Element(
       FilComparison(gen, {"xu": (">", 0.0), "yu": (">", 0.0)}))
 
     xs2 = gen_x_and_y.get_double_vector("xu")

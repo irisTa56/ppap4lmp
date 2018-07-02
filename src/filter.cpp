@@ -36,6 +36,26 @@ void Filter::compute(nlohmann::json &data)
 
 /* ------------------------------------------------------------------ */
 
+void Filter::initialize_datatype(std::string &datatype)
+{
+  if (!reference_generator)
+  {
+    runtime_error(
+      "Filter constructed without Generator cannot be initial updater");
+  }
+
+  if (datatype.empty())
+  {
+    datatype = reference_generator->get_datatype();
+  }
+  else
+  {
+    runtime_error("Generator's datatype is already set");
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
 const bool Filter::is_callable(const std::string &datatype)
 {
   if (reference_generator)
@@ -51,25 +71,4 @@ const bool Filter::is_callable(const std::string &datatype)
   }
 
   return true;
-}
-
-/* ------------------------------------------------------------------ */
-
-const bool Filter::is_callable_as_initializer(std::string &datatype)
-{
-  if (!reference_generator)
-  {
-    message(
-      "Filter constructed without Generator cannot be initial updater");
-
-    return false;
-  }
-
-  if (datatype == "Element")
-  {
-    datatype = reference_generator->get_datatype();
-    return true;
-  }
-
-  return false;
 }

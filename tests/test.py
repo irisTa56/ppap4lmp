@@ -1,6 +1,6 @@
 import unittest
 
-from test_GenElement import TestGenElement
+from test_Element import TestElement
 from test_ProData import TestProData
 
 from ppap4lmp import __version__
@@ -13,10 +13,10 @@ def suite():
 
   suite = unittest.TestSuite()
 
-  suite.addTest(TestGenElement("test_get_data"))
-  suite.addTest(TestGenElement("test_check_keys"))
-  suite.addTest(TestGenElement("test_getters"))
-  suite.addTest(TestGenElement("test_filter"))
+  suite.addTest(TestElement("test_get_data"))
+  suite.addTest(TestElement("test_check_keys"))
+  suite.addTest(TestElement("test_getters"))
+  suite.addTest(TestElement("test_filter"))
 
   suite.addTest(TestProData("test_with_2Boxes"))
   suite.addTest(TestProData("test_with_2Atomses"))
