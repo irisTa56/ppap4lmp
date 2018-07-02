@@ -174,7 +174,7 @@ const Eigen::VectorXi GenElement::get_int_vector(
   }
   else
   {
-    message("'get_int_vector()' is for array data");
+    message(dataname + " might be non-array or null (not int_vector)");
   }
 
   return v;
@@ -198,7 +198,7 @@ const Eigen::VectorXd GenElement::get_double_vector(
   }
   else
   {
-    message("'get_double_vector()' is for array data");
+    message(dataname + " might be non-array or null (not double_vector)");
   }
 
   return v;
@@ -229,7 +229,7 @@ const Eigen::ArrayXXi GenElement::get_int_array(
   }
   else
   {
-    message("'get_int_array()' is for array data");
+    message(dataname + " might be non-array or null (not int_array)");
   }
 
   return a;
@@ -260,7 +260,7 @@ const Eigen::ArrayXXd GenElement::get_double_array(
   }
   else
   {
-    message("'get_double_array()' is for array data");
+    message(dataname + " might be non-array or null (not double_array)");
   }
 
   return a;

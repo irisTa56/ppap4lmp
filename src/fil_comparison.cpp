@@ -9,22 +9,27 @@ create: 2018/07/02 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-FilComparison::FilComparison(DictOfComparison comps)
+FilComparison::FilComparison(std::vector<Comparison> comps)
 {
   for (const auto &item : comps)
   {
-    comp_functions[item.first] = make_lambda(item.second);
+    comp_functions.push_back(std::make_pair(
+      std::get<0>(item),
+      make_lambda(std::get<1>(item), std::get<2>(item))));
   }
 }
 
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
-  std::shared_ptr<Generator> gen, DictOfComparison comps) : Filter(gen)
+  std::shared_ptr<Generator> gen,
+  std::vector<Comparison> comps) : Filter(gen)
 {
   for (const auto &item : comps)
   {
-    comp_functions[item.first] = make_lambda(item.second);
+    comp_functions.push_back(std::make_pair(
+      std::get<0>(item),
+      make_lambda(std::get<1>(item), std::get<2>(item))));
   }
 }
 
@@ -61,41 +66,40 @@ void FilComparison::compute_impl(nlohmann::json &data)
 
 /* ------------------------------------------------------------------ */
 
-const CompFunction FilComparison::make_lambda(const Comparison &item)
+const CompFunction FilComparison::make_lambda(
+  const std::string &oper, const nlohmann::json &rval)
 {
-  auto rval = item.second;
-
-  if (item.first == "<")
+  if (oper == "<")
   {
     return [rval](const nlohmann::json &j) {
       return j < rval ? true : false;
     };
   }
-  else if (item.first == ">")
+  else if (oper == ">")
   {
     return [rval](const nlohmann::json &j) {
       return j > rval ? true : false;
     };
   }
-  else if (item.first == "<=")
+  else if (oper == "<=")
   {
     return [rval](const nlohmann::json &j) {
       return j <= rval ? true : false;
     };
   }
-  else if (item.first == ">=")
+  else if (oper == ">=")
   {
     return [rval](const nlohmann::json &j) {
       return j >= rval ? true : false;
     };
   }
-  else if (item.first == "==")
+  else if (oper == "==")
   {
     return [rval](const nlohmann::json &j) {
       return j == rval ? true : false;
     };
   }
-  else if (item.first == "!=")
+  else if (oper == "!=")
   {
     return [rval](const nlohmann::json &j) {
       return j != rval ? true : false;

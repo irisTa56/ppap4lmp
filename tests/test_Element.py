@@ -79,20 +79,20 @@ class TestElement(unittest.TestCase):
 
     length = len(gen.get_data())
 
-    gen_x = Element(FilComparison(gen, {"xu": (">", 0.0)}))
+    gen_x = Element(FilComparison(gen, [("xu", ">", 0.0)]))
 
     xs = gen_x.get_double_vector("xu")
 
     self.assertTrue(np.all(xs > 0.0))
 
-    gen_y = Element(FilComparison(gen, {"yu": (">", 0.0)}))
+    gen_y = Element(FilComparison(gen, [("yu", ">", 0.0)]))
 
     ys = gen_y.get_double_vector("yu")
 
     self.assertTrue(np.all(ys > 0.0))
 
     gen_x_and_y = Element(
-      FilComparison(gen, {"xu": (">", 0.0), "yu": (">", 0.0)}))
+      FilComparison(gen, [("xu", ">", 0.0), ("yu", ">", 0.0)]))
 
     xs2 = gen_x_and_y.get_double_vector("xu")
     ys2 = gen_x_and_y.get_double_vector("yu")
@@ -101,9 +101,16 @@ class TestElement(unittest.TestCase):
     self.assertTrue(np.all((xs2 * ys2) > 0.0))
 
     gen.append_updater(
-      FilComparison({"xu": ("<=", 0.0), "yu": ("<=", 0.0)}))
+      FilComparison([("xu", "<=", 0.0), ("yu", "<=", 0.0)]))
 
     filtered_lengtn = len(gen.get_data())
 
     self.assertEqual(
       filtered_lengtn + len(xs) + len(ys) - len(xs2), length)
+
+    gen_new = Element(StaDumpAtoms(*self.args)).append_updater(
+      FilComparison([("xu", ">", 100.0), ("xu", "<", 200.0)]))
+
+    xs3 = gen_new.get_double_vector("xu")
+
+    self.assertTrue(np.all(xs3 > 100.0) and np.all(xs3 < 200.0))
