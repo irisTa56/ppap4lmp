@@ -1,6 +1,6 @@
 package:
   name: ppap4lmp
-  version: 0.0.0a
+  version: 0.1.0a
 
 build:
   number: 0
@@ -14,10 +14,14 @@ requirements:
   host:
     - python
     - setuptools
-    #- pybind11
+    - pip
+    - pybind11
+    - nlohmann_json
+    - eigen
     - cmake
   run:
     - python
+    - numpy
 
 test:
   source_files:

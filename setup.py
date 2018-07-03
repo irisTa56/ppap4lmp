@@ -5,7 +5,7 @@ import glob
 import platform
 import subprocess
 
-from setuptools import setup, Extension
+from setuptools import setup, find_packages, Extension
 from setuptools.command.build_ext import build_ext
 from distutils.version import LooseVersion
 
@@ -128,7 +128,7 @@ class_names.sort()
 with open("ppap4lmp/__init__.py", "w") as f:
 
   f.write("""from ._version import version_info, __version__
-from ppap4lmp._ppap4lmp import \\
+from ._ppap4lmp import \\
   {}, Element, log_switch
 
 __all__ = [
@@ -153,14 +153,15 @@ setup(
   author="Takayuki Kobayashi",
   author_email="iris.takayuki@gmail.com",
   description="PostProcess and Analysis Program for LAMMPS",
+  license="MIT",
   long_description=long_description,
   long_description_content_type="text/markdown",
   url="https://github.com/irisTa56/ppap4lmp",
   ext_modules=[CMakeExtension("ppap4lmp._ppap4lmp")],
   cmdclass=dict(build_ext=CMakeBuild),
-  zip_safe=False,
   classifiers=(
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
   ),
+  packages=find_packages(),
 )
