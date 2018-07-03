@@ -26,8 +26,8 @@ using UpdatePair
   = std::pair<std::shared_ptr<Generator>,std::shared_ptr<Updater>>;
 
 class Generator : public std::enable_shared_from_this<Generator> {
- omp_lock_t omp_lock;
- int n_remain = 0;
+  omp_lock_t omp_lock;
+  int n_remain = 0;
  public:
   Generator() { omp_init_lock(&omp_lock); }
   virtual ~Generator() = default;
@@ -52,7 +52,6 @@ class Generator : public std::enable_shared_from_this<Generator> {
   const std::string &get_dataname();
   const std::vector<UpdatePair> &get_update_chain();
  protected:
-
   static int instance_count;
   std::string datatype;
   std::string dataname;
@@ -118,7 +117,9 @@ class PyGenerator : public GEN {
 static void pybind_generator(py::module &m)
 {
   py::class_<Generator,PyGenerator<>,std::shared_ptr<Generator>>(m, "Generator")
-    .def(py::init<>());
+    .def(py::init<>())
+    .def("get_datatype", &Generator::get_datatype)
+    .def("get_dataname", &Generator::get_dataname);
 }
 
 #endif

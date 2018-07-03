@@ -1,7 +1,7 @@
 /* ---------------------------------------------------------------------
-Generator: is an abstract class to generate data.
+GenElement: stands for Generator containing data 'element'.
 
-create: 2018/06/21 by Takayuki Kobayashi
+create: 2018/07/01 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "gen_element.h"

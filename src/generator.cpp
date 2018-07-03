@@ -13,36 +13,6 @@ int Generator::instance_count = 0;
 
 /* ------------------------------------------------------------------ */
 
-void Generator::appoint()
-{
-  for (const auto &item : update_chain)
-  {
-    item.first->increment_remain();
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-void Generator::hello()
-{
-  for (const auto &item : update_chain)
-  {
-    item.first->update_data(item.second);
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-void Generator::goodbye()
-{
-  for (const auto &item : update_chain)
-  {
-    item.first->decrement_remain();
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
 std::shared_ptr<Generator> Generator::get_generator()
 {
   return shared_from_this();
@@ -100,6 +70,36 @@ const Eigen::ArrayXXd Generator::get_double_array(
 {
   message("This function is for GenElement");
   return Eigen::ArrayXXd();
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::appoint()
+{
+  for (const auto &item : update_chain)
+  {
+    item.first->increment_remain();
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::hello()
+{
+  for (const auto &item : update_chain)
+  {
+    item.first->update_data(item.second);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
+void Generator::goodbye()
+{
+  for (const auto &item : update_chain)
+  {
+    item.first->decrement_remain();
+  }
 }
 
 /* ------------------------------------------------------------------ */

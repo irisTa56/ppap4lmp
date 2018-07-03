@@ -50,7 +50,7 @@ class CMakeBuild(build_ext):
       RuntimeError("Windows is not supported")
     else:
       cmake_args += ["-DCMAKE_BUILD_TYPE=" + cfg]
-      cmake_args += ["-DCMAKE_CXX_FLAGS_RELEASE='-fopenmp -O2 -fPIC'"]
+      cmake_args += ["-DCMAKE_CXX_FLAGS_RELEASE='-fopenmp -O3 -fPIC'"]
       build_args += ["--", "-j2"]
 
     env = os.environ.copy()
