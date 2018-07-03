@@ -65,9 +65,11 @@ class TestProData(unittest.TestCase):
         {"xu": 591.039, "yu": 220.716, "mass": 147.28}]]
 
     gens = [
-      Element(initializer).append_updater(
-        AddMap("type", "mass", {1: 147.28}))
+      Element(initializer)
       for initializer in [StaDumpAtoms(*args) for args in self.args_list]]
+
+    for gen in gens:
+      gen.append_updater(AddMap("type", "mass", {1: 147.28}))
 
     proc1 = ProData(gens)
 
@@ -121,6 +123,7 @@ class TestProData(unittest.TestCase):
       gen.append_updater(mass_map)
 
     proc = ProData(gens)
+    proc.select("xu", "yu", "type", "mass")
 
     InvOMP(proc).execute()
 

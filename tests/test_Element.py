@@ -19,9 +19,10 @@ class TestElement(unittest.TestCase):
 
     print("\n\nTestElement.test_get_data:")
 
-    data = Element(
-      StaDumpAtoms(*self.args)).append_updater(
-        AddMap("type", "mass", {1: 147.28})).get_data()
+    gen = Element(StaDumpAtoms(*self.args))
+    gen.append_updater(AddMap("type", "mass", {1: 147.28}))
+
+    data = gen.get_data()
 
     for i in range(10):
       d = data[randrange(len(data))]
@@ -44,9 +45,8 @@ class TestElement(unittest.TestCase):
 
     print("\n\nTestElement.test_getters:")
 
-    gen = Element(
-      StaDumpAtoms(*self.args)).append_updater(
-        AddMap("type", "mass", {1: 147.28}))
+    gen = Element(StaDumpAtoms(*self.args))
+    gen.append_updater(AddMap("type", "mass", {1: 147.28}))
 
     ps = gen.get_double_array(["xu", "yu", "zu"])
 
@@ -108,7 +108,8 @@ class TestElement(unittest.TestCase):
     self.assertEqual(
       filtered_lengtn + len(xs) + len(ys) - len(xs2), length)
 
-    gen_new = Element(StaDumpAtoms(*self.args)).append_updater(
+    gen_new = Element(StaDumpAtoms(*self.args))
+    gen_new.append_updater(
       FilComparison([("xu", ">", 100.0), ("xu", "<", 200.0)]))
 
     xs3 = gen_new.get_double_vector("xu")

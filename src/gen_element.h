@@ -26,9 +26,8 @@ class GenElement : public Generator {
     const std::vector<std::string> &) override;
   virtual const Eigen::ArrayXXd get_double_array(
     const std::vector<std::string> &) override;
+  void append_updater(std::shared_ptr<Updater>);
   std::shared_ptr<Generator> set_initial_updater(
-    std::shared_ptr<Updater>);
-  std::shared_ptr<Generator> append_updater(
     std::shared_ptr<Updater>);
 };
 

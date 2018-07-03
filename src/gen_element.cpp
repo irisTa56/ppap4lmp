@@ -25,6 +25,26 @@ const nlohmann::json &GenElement::get_data()
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
+void GenElement::append_updater(
+  std::shared_ptr<Updater> upd)
+{
+  if (!upd->is_callable(datatype))
+  {
+    runtime_error(dataname + " cannot call Updater");
+  }
+
+  auto gen = upd->get_generator();
+
+  if (gen)
+  {
+    merge_update_chain(gen->get_update_chain());
+  }
+
+  update_chain.push_back(UpdatePair(shared_from_this(), upd));
+}
+
+/* ------------------------------------------------------------------ */
+// assumed to be not called from multithreads
 std::shared_ptr<Generator> GenElement::set_initial_updater(
   std::shared_ptr<Updater> upd)
 {
@@ -43,28 +63,6 @@ std::shared_ptr<Generator> GenElement::set_initial_updater(
     update_chain.insert(
       update_chain.begin(), forward_chain.begin(), forward_chain.end());
   }
-
-  return shared_from_this();
-}
-
-/* ------------------------------------------------------------------ */
-// assumed to be not called from multithreads
-std::shared_ptr<Generator> GenElement::append_updater(
-  std::shared_ptr<Updater> upd)
-{
-  if (!upd->is_callable(datatype))
-  {
-    runtime_error(dataname + " cannot call Updater");
-  }
-
-  auto gen = upd->get_generator();
-
-  if (gen)
-  {
-    merge_update_chain(gen->get_update_chain());
-  }
-
-  update_chain.push_back(UpdatePair(shared_from_this(), upd));
 
   return shared_from_this();
 }
