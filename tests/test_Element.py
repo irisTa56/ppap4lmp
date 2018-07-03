@@ -13,7 +13,7 @@ class TestElement(unittest.TestCase):
 
     super().__init__(*args, **kwargs)
 
-    self.args = ("tests/dumps_bead/bead.2990000.dump", 2990000)
+    self.args = ("dumps_bead/bead.2990000.dump", 2990000)
 
   def test_get_data(self):
 

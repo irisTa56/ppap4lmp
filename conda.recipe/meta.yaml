@@ -26,8 +26,6 @@ requirements:
 test:
   source_files:
     - tests
-  commands:
-    - python tests/test.py
 
 about:
   summary: PostProcess and Analysis Program for LAMMPS

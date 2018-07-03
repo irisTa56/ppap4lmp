@@ -13,7 +13,7 @@ class TestProData(unittest.TestCase):
     super().__init__(*args, **kwargs)
 
     self.args_list = [
-      (".".join(["tests/dumps_bead/bead", str(n), "dump"]), n)
+      (".".join(["dumps_bead/bead", str(n), "dump"]), n)
       for n in range(2990000, 3000000, 1000)]
 
   def test_with_Boxes(self):
