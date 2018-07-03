@@ -19,6 +19,7 @@ GenElement::GenElement()
 
 const nlohmann::json &GenElement::get_data()
 {
+  hello();
   return data;
 }
 
@@ -73,6 +74,8 @@ std::shared_ptr<Generator> GenElement::append_updater(
 const bool GenElement::check_key(
   const std::string &key)
 {
+  hello();
+
   int count = 0;
 
   if (data.is_array())
@@ -103,6 +106,8 @@ const bool GenElement::check_key(
 const std::vector<bool> GenElement::check_keys(
   const std::vector<std::string> &keys)
 {
+  hello();
+
   int length = keys.size();
   std::unordered_map<std::string,int> counts;
 
@@ -161,6 +166,8 @@ const std::vector<bool> GenElement::check_keys(
 const Eigen::VectorXi GenElement::get_int_vector(
   const std::string &key)
 {
+  hello();
+
   Eigen::VectorXi v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
@@ -185,6 +192,8 @@ const Eigen::VectorXi GenElement::get_int_vector(
 const Eigen::VectorXd GenElement::get_double_vector(
   const std::string &key)
 {
+  hello();
+
   Eigen::VectorXd v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
@@ -209,6 +218,8 @@ const Eigen::VectorXd GenElement::get_double_vector(
 const Eigen::ArrayXXi GenElement::get_int_array(
   const std::vector<std::string> &keys)
 {
+  hello();
+
   int n_keys = keys.size();
 
   Eigen::ArrayXXi a(data.is_array() ? data.size() : 1, n_keys);
@@ -240,6 +251,8 @@ const Eigen::ArrayXXi GenElement::get_int_array(
 const Eigen::ArrayXXd GenElement::get_double_array(
   const std::vector<std::string> &keys)
 {
+  hello();
+
   int n_keys = keys.size();
 
   Eigen::ArrayXXd a(data.is_array() ? data.size() : 1, n_keys);
@@ -264,66 +277,4 @@ const Eigen::ArrayXXd GenElement::get_double_array(
   }
 
   return a;
-}
-
-/* ------------------------------------------------------------------ */
-
-const nlohmann::json &GenElement::get_data_py()
-{
-  hello();
-  return get_data();
-}
-
-/* ------------------------------------------------------------------ */
-
-const bool GenElement::check_key_py(
-  const std::string &key)
-{
-  hello();
-  return check_key(key);
-}
-
-/* ------------------------------------------------------------------ */
-
-const std::vector<bool> GenElement::check_keys_py(
-  const std::vector<std::string> &keys)
-{
-  hello();
-  return check_keys(keys);
-}
-
-/* ------------------------------------------------------------------ */
-
-const Eigen::VectorXi GenElement::get_int_vector_py(
-  const std::string &key)
-{
-  hello();
-  return get_int_vector(key);
-}
-
-/* ------------------------------------------------------------------ */
-
-const Eigen::VectorXd GenElement::get_double_vector_py(
-  const std::string &key)
-{
-  hello();
-  return get_double_vector(key);
-}
-
-/* ------------------------------------------------------------------ */
-
-const Eigen::ArrayXXi GenElement::get_int_array_py(
-  const std::vector<std::string> &keys)
-{
-  hello();
-  return get_int_array(keys);
-}
-
-/* ------------------------------------------------------------------ */
-
-const Eigen::ArrayXXd GenElement::get_double_array_py(
-  const std::vector<std::string> &keys)
-{
-  hello();
-  return get_double_array(keys);
 }

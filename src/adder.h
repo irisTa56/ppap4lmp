@@ -13,12 +13,10 @@ class Adder : public Updater {
  public:
   Adder() = default;
   virtual ~Adder() = default;
-  virtual void compute(nlohmann::json &) override;
+  virtual void compute(nlohmann::json &, const std::string &) override;
   virtual const bool is_callable(const std::string &) override;
  protected:
   std::unordered_set<std::string> callable_datatypes;
- private:
-  bool is_called = false;
 };
 
 /* ------------------------------------------------------------------ */

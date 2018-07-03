@@ -10,16 +10,20 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "generator.h"
 
 class Updater {
+  omp_lock_t omp_lock;
+  std::unordered_set<std::string> dataname_blacklist;
  public:
-  Updater() = default;
+  Updater() { omp_init_lock(&omp_lock); }
   virtual ~Updater() = default;
-  virtual void compute(nlohmann::json &) = 0;
+  virtual void compute(nlohmann::json &, const std::string &) = 0;
   virtual void initialize_datatype(std::string &);
   virtual const bool is_callable(const std::string &);
+  void remove_from_blacklist(const std::string &);
   const std::shared_ptr<Generator> get_generator();
  protected:
   std::shared_ptr<Generator> reference_generator;
   virtual void compute_impl(nlohmann::json &) = 0;
+  const bool check_blacklist(const std::string &);
 };
 
 /* ------------------------------------------------------------------ */
@@ -30,9 +34,9 @@ template <class UPD = Updater>
 class PyUpdater : public UPD {
  public:
   using UPD::UPD;
-  void compute(nlohmann::json &data) override
+  void compute(nlohmann::json &data, const std::string &dataname) override
   {
-    PYBIND11_OVERLOAD_PURE(void, UPD, compute, data);
+    PYBIND11_OVERLOAD_PURE(void, UPD, compute, data, dataname);
   }
   void initialize_datatype(std::string &datatype) override
   {

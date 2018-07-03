@@ -13,6 +13,7 @@ create: 2018/06/21 by Takayuki Kobayashi
 #include <unordered_set>
 
 #include <Eigen/LU>
+#include <omp.h>
 #include <pybind11/eigen.h>
 #include <pybind11/stl.h>
 
@@ -25,13 +26,12 @@ using UpdatePair
   = std::pair<std::shared_ptr<Generator>,std::shared_ptr<Updater>>;
 
 class Generator : public std::enable_shared_from_this<Generator> {
+ omp_lock_t omp_lock;
+ int n_remain = 0;
  public:
-  Generator() = default;
+  Generator() { omp_init_lock(&omp_lock); }
   virtual ~Generator() = default;
   virtual const nlohmann::json &get_data() = 0;
-  virtual void appoint();
-  virtual void hello();
-  virtual void goodbye();
   virtual std::shared_ptr<Generator> get_generator();
   virtual const bool check_key(
     const std::string &);
@@ -45,10 +45,14 @@ class Generator : public std::enable_shared_from_this<Generator> {
     const std::vector<std::string> &);
   virtual const Eigen::ArrayXXd get_double_array(
     const std::vector<std::string> &);
+  void appoint();
+  void hello();
+  void goodbye();
   const std::string &get_datatype();
   const std::string &get_dataname();
   const std::vector<UpdatePair> &get_update_chain();
  protected:
+
   static int instance_count;
   std::string datatype;
   std::string dataname;
@@ -58,8 +62,6 @@ class Generator : public std::enable_shared_from_this<Generator> {
   void decrement_remain();
   void update_data(std::shared_ptr<Updater>);
   void merge_update_chain(const std::vector<UpdatePair> &);
- private:
-  int n_remain = 0;
 };
 
 #include "updater.h"
@@ -75,18 +77,6 @@ class PyGenerator : public GEN {
   const nlohmann::json &get_data() override
   {
     PYBIND11_OVERLOAD_PURE(const nlohmann::json &, GEN, get_data, );
-  }
-  void appoint() override
-  {
-    PYBIND11_OVERLOAD(void, GEN, appoint, );
-  }
-  void hello() override
-  {
-    PYBIND11_OVERLOAD(void, GEN, hello, );
-  }
-  void goodbye() override
-  {
-    PYBIND11_OVERLOAD(void, GEN, goodbye, );
   }
   std::shared_ptr<Generator> get_generator() override
   {

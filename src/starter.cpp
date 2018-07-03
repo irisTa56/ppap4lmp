@@ -9,9 +9,9 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Starter::compute(nlohmann::json &data)
+void Starter::compute(nlohmann::json &data, const std::string &dataname)
 {
-  if (data == nullptr)
+  if (data == nullptr && !check_blacklist(dataname))
   {
     compute_impl(data);
   }

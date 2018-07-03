@@ -30,20 +30,6 @@ class GenElement : public Generator {
     std::shared_ptr<Updater>);
   std::shared_ptr<Generator> append_updater(
     std::shared_ptr<Updater>);
-  // to use directly from Python
-  const nlohmann::json &get_data_py();
-  const bool check_key_py(
-    const std::string &);
-  const std::vector<bool> check_keys_py(
-    const std::vector<std::string> &);
-  const Eigen::VectorXi get_int_vector_py(
-    const std::string &);
-  const Eigen::VectorXd get_double_vector_py(
-    const std::string &);
-  const Eigen::ArrayXXi get_int_array_py(
-    const std::vector<std::string> &);
-  const Eigen::ArrayXXd get_double_array_py(
-    const std::vector<std::string> &);
 };
 
 /* ------------------------------------------------------------------ */
@@ -53,16 +39,20 @@ static void pybind_gen_element(py::module &m)
 {
   py::class_<GenElement,PyGenerator<GenElement>,Generator,std::shared_ptr<GenElement>>(m, "GenElement")
     .def(py::init<>())
-    .def("get_data", &GenElement::get_data_py,
+    .def("get_data", &GenElement::get_data,
       py::return_value_policy::reference_internal)
     .def("append_updater", &GenElement::append_updater)
-    .def("check_key", &GenElement::check_key_py)
-    .def("check_keys", &GenElement::check_keys_py)
-    .def("get_int_vector", &GenElement::get_int_vector_py)
-    .def("get_double_vector", &GenElement::get_double_vector_py)
-    .def("get_int_array", &GenElement::get_int_array_py)
-    .def("get_double_array", &GenElement::get_double_array_py);
+    .def("check_key", &GenElement::check_key)
+    .def("check_keys", &GenElement::check_keys)
+    .def("get_int_vector", &GenElement::get_int_vector)
+    .def("get_double_vector", &GenElement::get_double_vector)
+    .def("get_int_array", &GenElement::get_int_array)
+    .def("get_double_array", &GenElement::get_double_array);
 
+  /* NOTE:
+    this fucntion is necessary because shared_from_this() cannot be
+    called in the constructor
+  */
   m.def(
     "Element",
     [](std::shared_ptr<Updater> upd)

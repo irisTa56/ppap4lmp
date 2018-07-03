@@ -4,8 +4,6 @@ Processor: is an abstract class to process data.
 create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include <omp.h>
-
 #include "processor.h"
 
 /* ------------------------------------------------------------------ */
@@ -30,7 +28,7 @@ bool Processor::run()
 {
   int index;
 
-  #pragma omp critical
+  #pragma omp critical (processor)
   {
     index = i_generator;
     i_generator++;
@@ -38,7 +36,6 @@ bool Processor::run()
 
   if (index < n_generators)
   {
-    generators[index]->hello();
     run_impl(index);
     generators[index]->goodbye();
 

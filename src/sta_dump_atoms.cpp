@@ -13,7 +13,8 @@ create: 2018/06/29 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 StaDumpAtoms::StaDumpAtoms(
-  const std::string &filepath_, int timestep_) : StaDump(filepath_, timestep_)
+  const std::string &filepath_,
+  int timestep_) : StaDump(filepath_, timestep_)
 {
   datatype_to_be_initialized = "Atoms";
 }

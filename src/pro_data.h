@@ -12,10 +12,6 @@ create: 2018/06/22 by Takayuki Kobayashi
 class ProData : public Processor {
  public:
   using Processor::Processor;
-  /*ProData(
-    std::shared_ptr<Generator> gen) : Processor(gen) {}
-  ProData(
-    std::vector<std::shared_ptr<Generator>> gens) : Processor(gens) {}*/
   virtual ~ProData() = default;
   void select(py::args);
   const std::vector<nlohmann::json> &get_results();

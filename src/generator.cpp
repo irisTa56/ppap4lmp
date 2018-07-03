@@ -6,8 +6,6 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 #include <algorithm>
 
-#include <omp.h>
-
 #include "generator.h"
 #include "utils.h"
 
@@ -130,69 +128,80 @@ const std::vector<UpdatePair> &Generator::get_update_chain()
 void Generator::increment_remain()
 {
   #pragma omp atomic
-  n_remain += 1;
+  n_remain++;
 }
 
 /* ------------------------------------------------------------------ */
 
 void Generator::decrement_remain()
 {
-  #pragma omp critical
+  omp_set_lock(&omp_lock);
+
+  n_remain--;
+
+  if (n_remain == 0)
   {
-    n_remain -= 1;
+    data.clear();
+    data = nullptr;
 
-    if (n_remain == 0)
-    {
-      data.clear();
-      data = nullptr;
+    auto shared_this = shared_from_this();
 
-      logging(dataname + " has been deleted");
-    }
-    else if (n_remain < 0)
+    for (const auto &item : update_chain)
     {
-      runtime_error(dataname + ": Invalid data use is detected");
+      if (item.first == shared_this)
+      {
+        item.second->remove_from_blacklist(dataname);
+      }
     }
+
+    logging(dataname + " has been deleted");
   }
+  else if (n_remain < 0)
+  {
+    runtime_error(dataname + ": Invalid data use is detected");
+  }
+
+  omp_unset_lock(&omp_lock);
 }
 
 /* ------------------------------------------------------------------ */
 
 void Generator::update_data(std::shared_ptr<Updater> upd)
 {
-  #pragma omp critical
-  upd->compute(data);
+  omp_set_lock(&omp_lock);
+
+  upd->compute(data, dataname);
+
+  omp_unset_lock(&omp_lock);
 }
 
 /* ------------------------------------------------------------------ */
-
+// assumed to be not called from multithreads
 void Generator::merge_update_chain(const std::vector<UpdatePair> &v)
 {
-  #pragma omp critical
+  auto &u = update_chain;
+
+  for (auto itr = v.begin(); itr != v.end(); ++itr)
   {
-    auto &u = update_chain;
-
-    for (auto itr = v.begin(); itr != v.end(); ++itr)
+    if (std::find(u.begin(), u.end(), *itr) == u.end())
     {
-      if (std::find(u.begin(), u.end(), *itr) == u.end())
+      for (auto jtr = u.begin(); jtr != u.end(); ++jtr)
       {
-        for (auto jtr = u.begin(); jtr != u.end(); ++jtr)
+        bool match = false;
+
+        for (auto ktr = itr+1; ktr != v.end(); ++ktr)
         {
-          bool match = false;
-
-          for (auto ktr = itr+1; ktr != v.end(); ++ktr)
+          if (*ktr == *jtr)
           {
-            if (*ktr == *jtr)
-            {
-              match = true;
-              break;
-            }
-          }
-
-          if (match)
-          {
-            u.insert(jtr, *itr);
+            match = true;
             break;
           }
+        }
+
+        if (match)
+        {
+          u.insert(jtr, *itr);
+          break;
         }
       }
     }

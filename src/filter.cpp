@@ -16,16 +16,15 @@ Filter::Filter(std::shared_ptr<Generator> gen)
 
 /* ------------------------------------------------------------------ */
 
-void Filter::compute(nlohmann::json &data)
+void Filter::compute(nlohmann::json &data, const std::string &dataname)
 {
   if (data == nullptr && reference_generator)
   {
     data = reference_generator->get_data();
   }
 
-  if (data.is_array() && !is_called)
+  if (data.is_array() && !check_blacklist(dataname))
   {
-    is_called = true;
     compute_impl(data);
   }
   else if (!data.is_array())
@@ -63,10 +62,6 @@ const bool Filter::is_callable(const std::string &datatype)
     message(
       "Filter constructed with Generator must be initial updater");
 
-    return false;
-  }
-  else if (datatype == "Element")
-  {
     return false;
   }
 

@@ -18,8 +18,9 @@ def suite():
   suite.addTest(TestElement("test_getters"))
   suite.addTest(TestElement("test_filter"))
 
-  suite.addTest(TestProData("test_with_2Boxes"))
-  suite.addTest(TestProData("test_with_2Atomses"))
+  suite.addTest(TestProData("test_with_Boxes"))
+  suite.addTest(TestProData("test_with_Atomses"))
+  suite.addTest(TestProData("test_with_Atomses_oneUpdater"))
 
   return suite
 

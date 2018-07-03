@@ -13,7 +13,8 @@ create: 2018/06/29 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 StaDumpBox::StaDumpBox(
-  const std::string &filepath_, int timestep_) : StaDump(filepath_, timestep_)
+  const std::string &filepath_,
+  int timestep_) : StaDump(filepath_, timestep_)
 {
   datatype_to_be_initialized = "Box";
 }
@@ -43,7 +44,8 @@ void StaDumpBox::compute_impl(nlohmann::json &data)
         timestep_matches = true;
       }
     }
-    else if (line.find("ITEM: NUMBER OF ATOMS") == 0 && !timestep_matches)
+    else if (
+      line.find("ITEM: NUMBER OF ATOMS") == 0 && !timestep_matches)
     {
       std::getline(ifs, line);
       n_atoms = std::stoi(line);

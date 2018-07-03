@@ -17,7 +17,8 @@ FilSet::FilSet(DictOfJsonSet value_sets_)
 /* ------------------------------------------------------------------ */
 
 FilSet::FilSet(
-  std::shared_ptr<Generator> gen, DictOfJsonSet value_sets_) : Filter(gen)
+  std::shared_ptr<Generator> gen,
+  DictOfJsonSet value_sets_) : Filter(gen)
 {
   value_sets = value_sets_;
 }

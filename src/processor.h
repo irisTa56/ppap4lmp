@@ -10,6 +10,7 @@ create: 2018/06/22 by Takayuki Kobayashi
 #include "generator.h"
 
 class Processor {
+  int i_generator = 0;
  public:
   Processor(std::shared_ptr<Generator>);
   Processor(std::vector<std::shared_ptr<Generator>>);
@@ -22,8 +23,6 @@ class Processor {
   std::vector<std::shared_ptr<Generator>> generators;
   virtual void prepare_impl() {}
   virtual void run_impl(int) = 0;
- private:
-  int i_generator = 0;
 };
 
 /* ------------------------------------------------------------------ */

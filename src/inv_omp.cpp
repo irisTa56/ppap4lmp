@@ -4,8 +4,6 @@ InvOMP: stands for Invoker using OpenMP.
 create: 2018/06/23 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include <omp.h>
-
 #include "inv_omp.h"
 #include "utils.h"
 

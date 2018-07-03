@@ -8,11 +8,10 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Adder::compute(nlohmann::json &data)
+void Adder::compute(nlohmann::json &data, const std::string &dataname)
 {
-  if (data != nullptr && !is_called)
+  if (data != nullptr && !check_blacklist(dataname))
   {
-    is_called = true;
     compute_impl(data);
   }
 }
@@ -21,11 +20,7 @@ void Adder::compute(nlohmann::json &data)
 
 const bool Adder::is_callable(const std::string &datatype)
 {
-  if (datatype == "Element")
-  {
-    return false;
-  }
-  else if (callable_datatypes.size())
+  if (callable_datatypes.size())
   {
     if (callable_datatypes.find(datatype) == callable_datatypes.end())
     {
