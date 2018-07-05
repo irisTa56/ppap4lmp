@@ -5,9 +5,23 @@ PostProcess and Analysis Program for LAMMPS
 
 ## Installation
 
+### via Conda
+
+```bash
+conda install -c irista56 ppap4lmp
+```
+
+### Development version
+
+Just clone this repository and pip install. Note that Eigen needs to be installed.
+
 ```bash
 git clone --recursive https://github.com/irisTa56/ppap4lmp.git
-pip install ./ppap4lmp
+cd ppap4lmp
+pip install .
+# (or) pip install -e .
+# (or) pip install --user .
+# (or) pip install --user -e .
 ```
 
 ## Acknowledgement
