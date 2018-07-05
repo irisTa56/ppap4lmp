@@ -23,7 +23,7 @@ void ProData::run_impl(int index)
 {
   auto &d = generators[index]->get_data();
 
-  if (selected_keys.size() == 0)
+  if (selected_keys.empty())
   {
     results[index] = d;
   }

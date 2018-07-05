@@ -13,16 +13,15 @@ using Comparison = std::tuple<std::string,std::string,nlohmann::json>;
 using CompFunction = std::function<bool(const nlohmann::json &)>;
 
 class FilComparison : public Filter {
+  std::vector<std::pair<std::string,CompFunction>> comp_functions;
+  const CompFunction make_lambda(
+    const std::string &, const nlohmann::json &);
+ protected:
+  virtual void compute_impl(nlohmann::json &) override;
  public:
   FilComparison(std::vector<Comparison>);
   FilComparison(std::shared_ptr<Generator>, std::vector<Comparison>);
   virtual ~FilComparison() = default;
- protected:
-  virtual void compute_impl(nlohmann::json &) override;
- private:
-  std::vector<std::pair<std::string,CompFunction>> comp_functions;
-  const CompFunction make_lambda(
-    const std::string &, const nlohmann::json &);
 };
 
 /* ------------------------------------------------------------------ */

@@ -20,7 +20,7 @@ void Adder::compute(nlohmann::json &data, const std::string &dataname)
 
 const bool Adder::is_callable(const std::string &datatype)
 {
-  if (callable_datatypes.size())
+  if (!callable_datatypes.empty())
   {
     if (callable_datatypes.find(datatype) == callable_datatypes.end())
     {

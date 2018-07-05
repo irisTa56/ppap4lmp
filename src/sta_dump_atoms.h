@@ -11,13 +11,12 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "sta_dump.h"
 
 class StaDumpAtoms : public StaDump {
+  const std::vector<bool> get_is_int_vector(const std::string &);
+ protected:
+  virtual void compute_impl(nlohmann::json &) override;
  public:
   StaDumpAtoms(const std::string &, int);
   virtual ~StaDumpAtoms() = default;
- protected:
-  virtual void compute_impl(nlohmann::json &) override;
- private:
-  const std::vector<bool> get_is_int_vector(const std::string &);
 };
 
 /* ------------------------------------------------------------------ */

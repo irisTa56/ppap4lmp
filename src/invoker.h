@@ -10,15 +10,15 @@ create: 2018/06/23 by Takayuki Kobayashi
 #include "processor.h"
 
 class Invoker {
+ protected:
+  int n_processors;
+  std::vector<std::shared_ptr<Processor>> processors;
+  virtual void execute_impl() = 0;
  public:
   Invoker(std::shared_ptr<Processor>);
   Invoker(std::vector<std::shared_ptr<Processor>>);
   virtual ~Invoker() = default;
   void execute();
- protected:
-  int n_processors;
-  std::vector<std::shared_ptr<Processor>> processors;
-  virtual void execute_impl() = 0;
 };
 
 /* ------------------------------------------------------------------ */

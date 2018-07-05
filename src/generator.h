@@ -24,10 +24,21 @@ class Updater;
 
 using UpdatePair
   = std::pair<std::shared_ptr<Generator>,std::shared_ptr<Updater>>;
+using Map2Index = std::unordered_map<nlohmann::json,int>;
 
 class Generator : public std::enable_shared_from_this<Generator> {
   omp_lock_t omp_lock;
   int n_remain = 0;
+ protected:
+  static int instance_count;
+  std::string datatype;
+  std::string dataname;
+  nlohmann::json data = nullptr;
+  std::vector<UpdatePair> update_chain;
+  void increment_remain();
+  void decrement_remain();
+  void update_data(std::shared_ptr<Updater>);
+  void merge_update_chain(const std::vector<UpdatePair> &);
  public:
   Generator() { omp_init_lock(&omp_lock); }
   virtual ~Generator() = default;
@@ -45,22 +56,13 @@ class Generator : public std::enable_shared_from_this<Generator> {
     const std::vector<std::string> &);
   virtual const Eigen::ArrayXXd get_double_array(
     const std::vector<std::string> &);
+  virtual const Map2Index &get_map_to_index(const nlohmann::json &);
   void appoint();
   void hello();
   void goodbye();
   const std::string &get_datatype();
   const std::string &get_dataname();
   const std::vector<UpdatePair> &get_update_chain();
- protected:
-  static int instance_count;
-  std::string datatype;
-  std::string dataname;
-  nlohmann::json data = nullptr;
-  std::vector<UpdatePair> update_chain;
-  void increment_remain();
-  void decrement_remain();
-  void update_data(std::shared_ptr<Updater>);
-  void merge_update_chain(const std::vector<UpdatePair> &);
 };
 
 #include "updater.h"
@@ -111,6 +113,10 @@ class PyGenerator : public GEN {
     const std::vector<std::string> &keys) override
   {
     PYBIND11_OVERLOAD(const Eigen::ArrayXXd, GEN, get_double_array, keys);
+  }
+  const Map2Index &get_map_to_index(const nlohmann::json &keys) override
+  {
+    PYBIND11_OVERLOAD(const Map2Index &, GEN, get_map_to_index, keys);
   }
 };
 

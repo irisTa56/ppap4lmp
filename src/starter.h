@@ -10,13 +10,13 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "updater.h"
 
 class Starter : public Updater {
+ protected:
+  std::string datatype_to_be_initialized;
  public:
   Starter() = default;
   virtual ~Starter() = default;
   virtual void compute(nlohmann::json &, const std::string &) override;
   virtual void initialize_datatype(std::string &) override;
- protected:
-  std::string datatype_to_be_initialized;
 };
 
 /* ------------------------------------------------------------------ */

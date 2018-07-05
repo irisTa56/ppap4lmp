@@ -13,14 +13,13 @@ using DictOfJsonSet
   = std::unordered_map<std::string,std::unordered_set<nlohmann::json>>;
 
 class FilSet : public Filter {
+  DictOfJsonSet value_sets;
+ protected:
+  virtual void compute_impl(nlohmann::json &) override;
  public:
   FilSet(DictOfJsonSet);
   FilSet(std::shared_ptr<Generator>, DictOfJsonSet);
   virtual ~FilSet() = default;
- protected:
-  virtual void compute_impl(nlohmann::json &) override;
- private:
-  DictOfJsonSet value_sets;
 };
 
 /* ------------------------------------------------------------------ */

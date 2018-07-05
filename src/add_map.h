@@ -12,14 +12,13 @@ create: 2018/06/26 by Takayuki Kobayashi
 using JsonJson = std::unordered_map<nlohmann::json,nlohmann::json>;
 
 class AddMap : public Adder {
- public:
-  AddMap(const std::string &, const std::string &, JsonJson);
- protected:
-  virtual void compute_impl(nlohmann::json &) override;
- private:
   std::string key_ref;
   std::string key_new;
   JsonJson mapping;
+ protected:
+  virtual void compute_impl(nlohmann::json &) override;
+ public:
+  AddMap(const std::string &, const std::string &, JsonJson);
 };
 
 /* ------------------------------------------------------------------ */

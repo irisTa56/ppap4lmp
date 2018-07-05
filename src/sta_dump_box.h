@@ -11,11 +11,11 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "sta_dump.h"
 
 class StaDumpBox : public StaDump {
+ protected:
+  virtual void compute_impl(nlohmann::json &) override;
  public:
   StaDumpBox(const std::string &, int);
   virtual ~StaDumpBox() = default;
- protected:
-  virtual void compute_impl(nlohmann::json &) override;
 };
 
 /* ------------------------------------------------------------------ */

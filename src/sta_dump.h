@@ -10,12 +10,12 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "starter.h"
 
 class StaDump : public Starter {
- public:
-  StaDump(const std::string &, int);
-  virtual ~StaDump() = default;
  protected:
   int timestep;
   std::string filepath;
+ public:
+  StaDump(const std::string &, int);
+  virtual ~StaDump() = default;
 };
 
 /* ------------------------------------------------------------------ */

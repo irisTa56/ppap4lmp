@@ -10,13 +10,13 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "updater.h"
 
 class Adder : public Updater {
+ protected:
+  std::unordered_set<std::string> callable_datatypes;
  public:
   Adder() = default;
   virtual ~Adder() = default;
   virtual void compute(nlohmann::json &, const std::string &) override;
   virtual const bool is_callable(const std::string &) override;
- protected:
-  std::unordered_set<std::string> callable_datatypes;
 };
 
 /* ------------------------------------------------------------------ */

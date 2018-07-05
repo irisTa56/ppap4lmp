@@ -179,6 +179,7 @@ const Eigen::VectorXi GenElement::get_int_vector(
   }
   else
   {
+    v(0) = data[key];
     message(dataname + " might be non-array or null (not int_vector)");
   }
 
@@ -205,6 +206,7 @@ const Eigen::VectorXd GenElement::get_double_vector(
   }
   else
   {
+    v(0) = data[key];
     message(dataname + " might be non-array or null (not double_vector)");
   }
 
@@ -238,6 +240,10 @@ const Eigen::ArrayXXi GenElement::get_int_array(
   }
   else
   {
+    for (int j = 0; j != n_keys; ++j)
+    {
+      a(0, j) = data[keys[j]];
+    }
     message(dataname + " might be non-array or null (not int_array)");
   }
 
@@ -271,8 +277,96 @@ const Eigen::ArrayXXd GenElement::get_double_array(
   }
   else
   {
+    for (int j = 0; j != n_keys; ++j)
+    {
+      a(0, j) = data[keys[j]];
+    }
     message(dataname + " might be non-array or null (not double_array)");
   }
 
   return a;
+}
+
+/* ------------------------------------------------------------------ */
+
+const Map2Index &GenElement::get_map_to_index(const nlohmann::json &keys)
+{
+  auto new_keys = get_keys_for_map(keys);
+
+  if (new_keys == keys_for_map)
+  {
+    return map_to_index;
+  }
+  else
+  {
+    keys_for_map = new_keys;
+
+    if (!map_to_index.empty())
+    {
+      map_to_index.clear();
+    }
+  }
+
+  hello();
+
+  bool key_is_multi = keys_for_map.size() > 1 ? true : false;
+
+  if (data.is_array())
+  {
+    int length = data.size();
+
+    for (int i = 0; i != length; ++i)
+    {
+      auto &d = data[i];
+
+      if (key_is_multi)
+      {
+        nlohmann::json tmp;
+
+        for (const auto &key : keys_for_map)
+        {
+          tmp.push_back(d[key]);
+        }
+
+        map_to_index[tmp] = i;
+      }
+      else
+      {
+        map_to_index[d[keys_for_map.front()]] = i;
+      }
+    }
+  }
+  else
+  {
+    message(dataname + " might be non-array or null");
+  }
+
+  if (map_to_index.size() != data.size())
+  {
+    runtime_error("Map to index is not bijection");
+  }
+
+  return map_to_index;
+}
+
+/* ------------------------------------------------------------------ */
+
+const std::vector<std::string> GenElement::get_keys_for_map(
+  const nlohmann::json &keys)
+{
+  std::vector<std::string> tmp;
+
+  if (keys.is_array())
+  {
+    for (const auto &key : keys)
+    {
+      tmp.push_back(key);
+    }
+  }
+  else
+  {
+    tmp.push_back(keys);
+  }
+
+  return tmp;
 }

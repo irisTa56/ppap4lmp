@@ -10,6 +10,10 @@ create: 2018/07/01 by Takayuki Kobayashi
 #include "generator.h"
 
 class GenElement : public Generator {
+  std::vector<std::string> keys_for_map;
+  Map2Index map_to_index;
+  const std::vector<std::string> get_keys_for_map(
+    const nlohmann::json &);
  public:
   GenElement();
   virtual ~GenElement() = default;
@@ -26,6 +30,8 @@ class GenElement : public Generator {
     const std::vector<std::string> &) override;
   virtual const Eigen::ArrayXXd get_double_array(
     const std::vector<std::string> &) override;
+  virtual const Map2Index &get_map_to_index(
+    const nlohmann::json &) override;
   void append_updater(std::shared_ptr<Updater>);
   std::shared_ptr<Generator> set_initial_updater(
     std::shared_ptr<Updater>);

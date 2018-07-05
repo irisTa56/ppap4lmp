@@ -12,6 +12,10 @@ create: 2018/06/29 by Takayuki Kobayashi
 class Updater {
   omp_lock_t omp_lock;
   std::unordered_set<std::string> dataname_blacklist;
+ protected:
+  std::shared_ptr<Generator> reference_generator;
+  virtual void compute_impl(nlohmann::json &) = 0;
+  const bool check_blacklist(const std::string &);
  public:
   Updater() { omp_init_lock(&omp_lock); }
   virtual ~Updater() = default;
@@ -20,10 +24,6 @@ class Updater {
   virtual const bool is_callable(const std::string &);
   void remove_from_blacklist(const std::string &);
   const std::shared_ptr<Generator> get_generator();
- protected:
-  std::shared_ptr<Generator> reference_generator;
-  virtual void compute_impl(nlohmann::json &) = 0;
-  const bool check_blacklist(const std::string &);
 };
 
 /* ------------------------------------------------------------------ */

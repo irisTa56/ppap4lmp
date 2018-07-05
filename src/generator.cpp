@@ -74,6 +74,14 @@ const Eigen::ArrayXXd Generator::get_double_array(
 
 /* ------------------------------------------------------------------ */
 
+const Map2Index &Generator::get_map_to_index(const nlohmann::json &keys)
+{
+  message("This function is for GenElement");
+  return Map2Index();
+}
+
+/* ------------------------------------------------------------------ */
+
 void Generator::appoint()
 {
   for (const auto &item : update_chain)

@@ -10,17 +10,16 @@ create: 2018/06/22 by Takayuki Kobayashi
 #include "processor.h"
 
 class ProData : public Processor {
+  std::vector<std::string> selected_keys;
+  std::vector<nlohmann::json> results;
+ protected:
+  virtual void run_impl(int) override;
+  virtual void prepare_impl() override;
  public:
   using Processor::Processor;
   virtual ~ProData() = default;
   void select(py::args);
   const std::vector<nlohmann::json> &get_results();
- protected:
-  virtual void run_impl(int) override;
-  virtual void prepare_impl() override;
- private:
-  std::vector<std::string> selected_keys;
-  std::vector<nlohmann::json> results;
 };
 
 /* ------------------------------------------------------------------ */

@@ -10,11 +10,11 @@ create: 2018/06/23 by Takayuki Kobayashi
 #include "invoker.h"
 
 class InvOMP : public Invoker {
+ protected:
+  virtual void execute_impl() override;
  public:
   using Invoker::Invoker;
   virtual ~InvOMP() = default;
- protected:
-  virtual void execute_impl() override;
 };
 
 /* ------------------------------------------------------------------ */
