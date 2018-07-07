@@ -18,6 +18,7 @@ def suite():
   suite.addTest(TestElement("test_check_keys"))
   suite.addTest(TestElement("test_getters"))
   suite.addTest(TestElement("test_filter"))
+  suite.addTest(TestElement("test_molecules"))
 
   suite.addTest(TestContainer("test_list"))
   suite.addTest(TestContainer("test_dict"))

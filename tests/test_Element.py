@@ -5,7 +5,8 @@ import numpy as np
 from random import randrange
 
 from ppap4lmp import \
-  Element, StaDumpAtoms, AddMap, FilSet, FilComparison
+  Element, StaDumpAtoms, AddMap, FilSet, FilComparison, \
+  StaMolecules
 
 class TestElement(unittest.TestCase):
 
@@ -115,3 +116,18 @@ class TestElement(unittest.TestCase):
     xs3 = gen_new.get_double_vector("xu")
 
     self.assertTrue(np.all(xs3 > 100.0) and np.all(xs3 < 200.0))
+
+  def test_molecules(self):
+
+    print("\n\nTestElement.test_molecules:")
+
+    atoms = Element(StaDumpAtoms(*self.args))
+    mols = Element(StaMolecules(atoms))
+
+    mol_data = mols.get_data()
+
+    for d in mol_data:
+
+      self.assertEqual(
+        sorted(d["atom-ids"]),
+        list(range(120001+27*(d["id"]-1), 120001+27*d["id"])))
