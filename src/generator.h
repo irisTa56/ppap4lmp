@@ -43,6 +43,8 @@ class Generator : public std::enable_shared_from_this<Generator> {
   virtual ~Generator() = default;
   virtual const json &get_data() = 0;
   virtual std::shared_ptr<Generator> get_generator();
+  virtual std::shared_ptr<Generator> get_generator(int);
+  virtual std::shared_ptr<Generator> get_generator(const std::string &);
   virtual Eigen::ArrayXi get_1d_int(
     const std::string &);
   virtual Eigen::ArrayXd get_1d_double(
@@ -77,6 +79,18 @@ class PyGenerator : public GEN {
   {
     PYBIND11_OVERLOAD(
       std::shared_ptr<Generator>, GEN, get_generator, );
+  }
+  std::shared_ptr<Generator> get_generator(
+    int index) override
+  {
+    PYBIND11_OVERLOAD(
+      std::shared_ptr<Generator>, GEN, get_generator, index);
+  }
+  std::shared_ptr<Generator> get_generator(
+    const std::string &key) override
+  {
+    PYBIND11_OVERLOAD(
+      std::shared_ptr<Generator>, GEN, get_generator, key);
   }
   Eigen::ArrayXi get_1d_int(
     const std::string &key) override

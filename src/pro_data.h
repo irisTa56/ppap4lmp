@@ -4,14 +4,14 @@ ProData: stands for Processor which returns Data itself.
 create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#ifndef PROC_DATA_H
-#define PROC_DATA_H
+#ifndef PRO_DATA_H
+#define PRO_DATA_H
 
 #include "processor.h"
 
 class ProData : public Processor {
   std::vector<std::string> selected_keys;
-  std::vector<nlohmann::json> results;
+  std::vector<json> results;
  protected:
   virtual void run_impl(int) override;
   virtual void prepare_impl() override;
@@ -19,7 +19,7 @@ class ProData : public Processor {
   using Processor::Processor;
   virtual ~ProData() = default;
   void select(py::args);
-  const std::vector<nlohmann::json> &get_results();
+  const std::vector<json> &get_results();
 };
 
 /* ------------------------------------------------------------------ */

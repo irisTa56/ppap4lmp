@@ -20,6 +20,24 @@ std::shared_ptr<Generator> Generator::get_generator()
 
 /* ------------------------------------------------------------------ */
 
+std::shared_ptr<Generator> Generator::get_generator(
+  int index)
+{
+  message("This function is for GenList");
+  return shared_from_this();
+}
+
+/* ------------------------------------------------------------------ */
+
+std::shared_ptr<Generator> Generator::get_generator(
+  const std::string &key)
+{
+  message("This function is for GenDict");
+  return shared_from_this();
+}
+
+/* ------------------------------------------------------------------ */
+
 Eigen::ArrayXi Generator::get_1d_int(
   const std::string &key)
 {
