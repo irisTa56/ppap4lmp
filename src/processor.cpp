@@ -36,6 +36,7 @@ bool Processor::run()
 
   if (index < n_generators)
   {
+    generators[index]->hello();
     run_impl(index);
     generators[index]->goodbye();
 

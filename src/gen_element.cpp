@@ -19,8 +19,15 @@ GenElement::GenElement()
 
 const nlohmann::json &GenElement::get_data()
 {
-  hello();
   return data;
+}
+
+/* ------------------------------------------------------------------ */
+
+const nlohmann::json &GenElement::get_data_py()
+{
+  hello();
+  return get_data();
 }
 
 /* ------------------------------------------------------------------ */
@@ -69,104 +76,10 @@ std::shared_ptr<Generator> GenElement::set_initial_updater(
 
 /* ------------------------------------------------------------------ */
 
-const bool GenElement::check_key(
+Eigen::ArrayXi GenElement::get_1d_int(
   const std::string &key)
 {
-  hello();
-
-  int count = 0;
-
-  if (data.is_array())
-  {
-    for (const auto &d : data)
-    {
-      if (d.find(key) != d.end())
-      {
-        count++;
-      }
-    }
-
-    count /= data.size();
-  }
-  else
-  {
-    if (data.find(key) != data.end())
-    {
-      count++;
-    }
-  }
-
-  return 0 < count ? true : false;
-}
-
-/* ------------------------------------------------------------------ */
-
-const std::vector<bool> GenElement::check_keys(
-  const std::vector<std::string> &keys)
-{
-  hello();
-
-  int length = keys.size();
-  std::unordered_map<std::string,int> counts;
-
-  for (const auto &k : keys)
-  {
-    counts[k] = 0;
-  }
-
-  if (data.is_array())
-  {
-    for (const auto &d : data)
-    {
-      auto end = d.end();
-
-      for (auto &item : counts)
-      {
-        if (d.find(item.first) != end)
-        {
-          item.second++;
-        }
-      }
-    }
-
-    int data_size = data.size();
-
-    for (const auto &k : keys)
-    {
-      counts[k] /= data_size;
-    }
-  }
-  else
-  {
-    auto end = data.end();
-
-    for (auto &item : counts)
-    {
-      if (data.find(item.first) != end)
-      {
-        item.second++;
-      }
-    }
-  }
-
-  std::vector<bool> result;
-
-  for (const auto &k : keys)
-  {
-    result.push_back(counts[k]);
-  }
-
-  return result;
-}
-
-/* ------------------------------------------------------------------ */
-
-const Eigen::VectorXi GenElement::get_int_vector(
-  const std::string &key)
-{
-  hello();
-
-  Eigen::VectorXi v(data.is_array() ? data.size() : 1);
+  Eigen::ArrayXi v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
@@ -188,12 +101,19 @@ const Eigen::VectorXi GenElement::get_int_vector(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::VectorXd GenElement::get_double_vector(
+const Eigen::ArrayXi GenElement::get_1d_int_py(
   const std::string &key)
 {
   hello();
+  return get_1d_int(key);
+}
 
-  Eigen::VectorXd v(data.is_array() ? data.size() : 1);
+/* ------------------------------------------------------------------ */
+
+Eigen::ArrayXd GenElement::get_1d_double(
+  const std::string &key)
+{
+  Eigen::ArrayXd v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
@@ -215,11 +135,18 @@ const Eigen::VectorXd GenElement::get_double_vector(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::ArrayXXi GenElement::get_int_array(
-  const std::vector<std::string> &keys)
+const Eigen::ArrayXd GenElement::get_1d_double_py(
+  const std::string &key)
 {
   hello();
+  return get_1d_double(key);
+}
 
+/* ------------------------------------------------------------------ */
+
+Eigen::ArrayXXi GenElement::get_2d_int(
+  const std::vector<std::string> &keys)
+{
   int n_keys = keys.size();
 
   Eigen::ArrayXXi a(data.is_array() ? data.size() : 1, n_keys);
@@ -252,11 +179,18 @@ const Eigen::ArrayXXi GenElement::get_int_array(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::ArrayXXd GenElement::get_double_array(
+const Eigen::ArrayXXi GenElement::get_2d_int_py(
   const std::vector<std::string> &keys)
 {
   hello();
+  return get_2d_int(keys);
+}
 
+/* ------------------------------------------------------------------ */
+
+Eigen::ArrayXXd GenElement::get_2d_double(
+  const std::vector<std::string> &keys)
+{
   int n_keys = keys.size();
 
   Eigen::ArrayXXd a(data.is_array() ? data.size() : 1, n_keys);
@@ -289,84 +223,9 @@ const Eigen::ArrayXXd GenElement::get_double_array(
 
 /* ------------------------------------------------------------------ */
 
-const Map2Index &GenElement::get_map_to_index(const nlohmann::json &keys)
+const Eigen::ArrayXXd GenElement::get_2d_double_py(
+  const std::vector<std::string> &keys)
 {
-  auto new_keys = get_keys_for_map(keys);
-
-  if (new_keys == keys_for_map)
-  {
-    return map_to_index;
-  }
-  else
-  {
-    keys_for_map = new_keys;
-
-    if (!map_to_index.empty())
-    {
-      map_to_index.clear();
-    }
-  }
-
   hello();
-
-  bool key_is_multi = keys_for_map.size() > 1 ? true : false;
-
-  if (data.is_array())
-  {
-    int length = data.size();
-
-    for (int i = 0; i != length; ++i)
-    {
-      auto &d = data[i];
-
-      if (key_is_multi)
-      {
-        nlohmann::json tmp;
-
-        for (const auto &key : keys_for_map)
-        {
-          tmp.push_back(d[key]);
-        }
-
-        map_to_index[tmp] = i;
-      }
-      else
-      {
-        map_to_index[d[keys_for_map.front()]] = i;
-      }
-    }
-  }
-  else
-  {
-    message(dataname + " might be non-array or null");
-  }
-
-  if (map_to_index.size() != data.size())
-  {
-    runtime_error("Map to index is not bijection");
-  }
-
-  return map_to_index;
-}
-
-/* ------------------------------------------------------------------ */
-
-const std::vector<std::string> GenElement::get_keys_for_map(
-  const nlohmann::json &keys)
-{
-  std::vector<std::string> tmp;
-
-  if (keys.is_array())
-  {
-    for (const auto &key : keys)
-    {
-      tmp.push_back(key);
-    }
-  }
-  else
-  {
-    tmp.push_back(keys);
-  }
-
-  return tmp;
+  return get_2d_double(keys);
 }

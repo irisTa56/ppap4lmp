@@ -32,8 +32,7 @@ static void pybind_pro_data(py::module &m)
     .def(py::init<std::shared_ptr<Generator>>())
     .def(py::init<std::vector<std::shared_ptr<Generator>>>())
     .def("select", &ProData::select)
-    .def("get_results", &ProData::get_results,
-      py::return_value_policy::reference_internal);
+    .def("get_results", &ProData::get_results);
 }
 
 #endif

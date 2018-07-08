@@ -20,43 +20,25 @@ std::shared_ptr<Generator> Generator::get_generator()
 
 /* ------------------------------------------------------------------ */
 
-const bool Generator::check_key(
+Eigen::ArrayXi Generator::get_1d_int(
   const std::string &key)
 {
   message("This function is for GenElement");
-  return false;
+  return Eigen::ArrayXi();
 }
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<bool> Generator::check_keys(
-  const std::vector<std::string> &keys)
-{
-  message("This function is for GenElement");
-  return std::vector<bool>();
-}
-
-/* ------------------------------------------------------------------ */
-
-const Eigen::VectorXi Generator::get_int_vector(
+Eigen::ArrayXd Generator::get_1d_double(
   const std::string &key)
 {
   message("This function is for GenElement");
-  return Eigen::VectorXi();
+  return Eigen::ArrayXd();
 }
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::VectorXd Generator::get_double_vector(
-  const std::string &key)
-{
-  message("This function is for GenElement");
-  return Eigen::VectorXd();
-}
-
-/* ------------------------------------------------------------------ */
-
-const Eigen::ArrayXXi Generator::get_int_array(
+Eigen::ArrayXXi Generator::get_2d_int(
   const std::vector<std::string> &keys)
 {
   message("This function is for GenElement");
@@ -65,19 +47,11 @@ const Eigen::ArrayXXi Generator::get_int_array(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::ArrayXXd Generator::get_double_array(
+Eigen::ArrayXXd Generator::get_2d_double(
   const std::vector<std::string> &keys)
 {
   message("This function is for GenElement");
   return Eigen::ArrayXXd();
-}
-
-/* ------------------------------------------------------------------ */
-
-const Map2Index &Generator::get_map_to_index(const nlohmann::json &keys)
-{
-  message("This function is for GenElement");
-  return Map2Index();
 }
 
 /* ------------------------------------------------------------------ */

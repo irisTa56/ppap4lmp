@@ -15,7 +15,6 @@ def suite():
   suite = unittest.TestSuite()
 
   suite.addTest(TestElement("test_get_data"))
-  suite.addTest(TestElement("test_check_keys"))
   suite.addTest(TestElement("test_getters"))
   suite.addTest(TestElement("test_filter"))
   suite.addTest(TestElement("test_molecules"))

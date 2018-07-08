@@ -10,28 +10,27 @@ create: 2018/07/01 by Takayuki Kobayashi
 #include "generator.h"
 
 class GenElement : public Generator {
-  std::vector<std::string> keys_for_map;
-  Map2Index map_to_index;
-  const std::vector<std::string> get_keys_for_map(
-    const nlohmann::json &);
  public:
   GenElement();
   virtual ~GenElement() = default;
   virtual const nlohmann::json &get_data() override;
-  virtual const bool check_key(
+  const nlohmann::json &get_data_py();
+  virtual Eigen::ArrayXi get_1d_int(
     const std::string &) override;
-  virtual const std::vector<bool> check_keys(
-    const std::vector<std::string> &) override;
-  virtual const Eigen::VectorXi get_int_vector(
+  const Eigen::ArrayXi get_1d_int_py(
+    const std::string &);
+  virtual Eigen::ArrayXd get_1d_double(
     const std::string &) override;
-  virtual const Eigen::VectorXd get_double_vector(
-    const std::string &) override;
-  virtual const Eigen::ArrayXXi get_int_array(
+  const Eigen::ArrayXd get_1d_double_py(
+    const std::string &);
+  virtual Eigen::ArrayXXi get_2d_int(
     const std::vector<std::string> &) override;
-  virtual const Eigen::ArrayXXd get_double_array(
+  const Eigen::ArrayXXi get_2d_int_py(
+    const std::vector<std::string> &);
+  virtual Eigen::ArrayXXd get_2d_double(
     const std::vector<std::string> &) override;
-  virtual const Map2Index &get_map_to_index(
-    const nlohmann::json &) override;
+  const Eigen::ArrayXXd get_2d_double_py(
+    const std::vector<std::string> &);
   void append_updater(std::shared_ptr<Updater>);
   std::shared_ptr<Generator> set_initial_updater(
     std::shared_ptr<Updater>);
@@ -44,15 +43,12 @@ static void pybind_gen_element(py::module &m)
 {
   py::class_<GenElement,PyGenerator<GenElement>,Generator,std::shared_ptr<GenElement>>(m, "GenElement")
     .def(py::init<>())
-    .def("get_data", &GenElement::get_data,
-      py::return_value_policy::reference_internal)
+    .def("get_data", &GenElement::get_data_py)
     .def("append_updater", &GenElement::append_updater)
-    .def("check_key", &GenElement::check_key)
-    .def("check_keys", &GenElement::check_keys)
-    .def("get_int_vector", &GenElement::get_int_vector)
-    .def("get_double_vector", &GenElement::get_double_vector)
-    .def("get_int_array", &GenElement::get_int_array)
-    .def("get_double_array", &GenElement::get_double_array);
+    .def("get_1d_int", &GenElement::get_1d_int_py)
+    .def("get_1d_double", &GenElement::get_1d_double_py)
+    .def("get_2d_int", &GenElement::get_2d_int_py)
+    .def("get_2d_double", &GenElement::get_2d_double_py);
 
   /* NOTE:
     this fucntion is necessary because shared_from_this() cannot be

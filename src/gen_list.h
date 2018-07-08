@@ -35,35 +35,25 @@ class PyGenList : public GenList {
     PYBIND11_OVERLOAD(
       std::shared_ptr<Generator>, GenList, get_generator, index);
   }
-  const bool check_key(
+  Eigen::ArrayXi get_1d_int(
     const std::string &key) override
   {
-    PYBIND11_OVERLOAD(const bool, GenList, check_key, key);
+    PYBIND11_OVERLOAD(Eigen::ArrayXi, GenList, get_1d_int, key);
   }
-  const std::vector<bool> check_keys(
-    const std::vector<std::string> &keys) override
-  {
-    PYBIND11_OVERLOAD(const std::vector<bool>, GenList, check_keys, keys);
-  }
-  const Eigen::VectorXi get_int_vector(
+  Eigen::ArrayXd get_1d_double(
     const std::string &key) override
   {
-    PYBIND11_OVERLOAD(const Eigen::VectorXi, GenList, get_int_vector, key);
+    PYBIND11_OVERLOAD(Eigen::ArrayXd, GenList, get_1d_double, key);
   }
-  const Eigen::VectorXd get_double_vector(
-    const std::string &key) override
-  {
-    PYBIND11_OVERLOAD(const Eigen::VectorXd, GenList, get_double_vector, key);
-  }
-  const Eigen::ArrayXXi get_int_array(
+  Eigen::ArrayXXi get_2d_int(
     const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(const Eigen::ArrayXXi, GenList, get_int_array, keys);
+    PYBIND11_OVERLOAD(Eigen::ArrayXXi, GenList, get_2d_int, keys);
   }
-  const Eigen::ArrayXXd get_double_array(
+  Eigen::ArrayXXd get_2d_double(
     const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(const Eigen::ArrayXXd, GenList, get_double_array, keys);
+    PYBIND11_OVERLOAD(Eigen::ArrayXXd, GenList, get_2d_double, keys);
   }
 };
 

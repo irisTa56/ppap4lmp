@@ -18,7 +18,7 @@ StaMolecules::StaMolecules(std::shared_ptr<Generator> gen)
   else
   {
     runtime_error(
-      "Molecules cannot be initiated with " + gen->get_dataname());
+      "StaMolecules cannot use " + gen->get_dataname());
   }
 
   datatype_to_be_initialized = "Molecules";
@@ -28,7 +28,7 @@ StaMolecules::StaMolecules(std::shared_ptr<Generator> gen)
 
 void StaMolecules::compute_impl(nlohmann::json &data)
 {
-  if (!reference_generator->check_key("mol"))
+  if (!check_key(reference_generator->get_data(), "mol"))
   {
     runtime_error(
       reference_generator->get_dataname() + " does not have 'mol'");

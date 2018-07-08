@@ -19,6 +19,7 @@ class AddMap : public Adder {
   virtual void compute_impl(nlohmann::json &) override;
  public:
   AddMap(const std::string &, const std::string &, JsonJson);
+  virtual ~AddMap() = default;
 };
 
 /* ------------------------------------------------------------------ */

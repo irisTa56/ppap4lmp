@@ -36,35 +36,25 @@ class PyGenDict : public GenDict {
     PYBIND11_OVERLOAD(
       std::shared_ptr<Generator>, GenDict, get_generator, key);
   }
-  const bool check_key(
+  Eigen::ArrayXi get_1d_int(
     const std::string &key) override
   {
-    PYBIND11_OVERLOAD(const bool, GenDict, check_key, key);
+    PYBIND11_OVERLOAD(Eigen::ArrayXi, GenDict, get_1d_int, key);
   }
-  const std::vector<bool> check_keys(
-    const std::vector<std::string> &keys) override
-  {
-    PYBIND11_OVERLOAD(const std::vector<bool>, GenDict, check_keys, keys);
-  }
-  const Eigen::VectorXi get_int_vector(
+  Eigen::ArrayXd get_1d_double(
     const std::string &key) override
   {
-    PYBIND11_OVERLOAD(const Eigen::VectorXi, GenDict, get_int_vector, key);
+    PYBIND11_OVERLOAD(Eigen::ArrayXd, GenDict, get_1d_double, key);
   }
-  const Eigen::VectorXd get_double_vector(
-    const std::string &key) override
-  {
-    PYBIND11_OVERLOAD(const Eigen::VectorXd, GenDict, get_double_vector, key);
-  }
-  const Eigen::ArrayXXi get_int_array(
+  Eigen::ArrayXXi get_2d_int(
     const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(const Eigen::ArrayXXi, GenDict, get_int_array, keys);
+    PYBIND11_OVERLOAD(Eigen::ArrayXXi, GenDict, get_2d_int, keys);
   }
-  const Eigen::ArrayXXd get_double_array(
+  Eigen::ArrayXXd get_2d_double(
     const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(const Eigen::ArrayXXd, GenDict, get_double_array, keys);
+    PYBIND11_OVERLOAD(Eigen::ArrayXXd, GenDict, get_2d_double, keys);
   }
 };
 

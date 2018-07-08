@@ -24,7 +24,6 @@ class Updater;
 
 using UpdatePair
   = std::pair<std::shared_ptr<Generator>,std::shared_ptr<Updater>>;
-using Map2Index = std::unordered_map<nlohmann::json,int>;
 
 class Generator : public std::enable_shared_from_this<Generator> {
   omp_lock_t omp_lock;
@@ -44,19 +43,14 @@ class Generator : public std::enable_shared_from_this<Generator> {
   virtual ~Generator() = default;
   virtual const nlohmann::json &get_data() = 0;
   virtual std::shared_ptr<Generator> get_generator();
-  virtual const bool check_key(
+  virtual Eigen::ArrayXi get_1d_int(
     const std::string &);
-  virtual const std::vector<bool> check_keys(
-    const std::vector<std::string> &);
-  virtual const Eigen::VectorXi get_int_vector(
+  virtual Eigen::ArrayXd get_1d_double(
     const std::string &);
-  virtual const Eigen::VectorXd get_double_vector(
-    const std::string &);
-  virtual const Eigen::ArrayXXi get_int_array(
+  virtual Eigen::ArrayXXi get_2d_int(
     const std::vector<std::string> &);
-  virtual const Eigen::ArrayXXd get_double_array(
+  virtual Eigen::ArrayXXd get_2d_double(
     const std::vector<std::string> &);
-  virtual const Map2Index &get_map_to_index(const nlohmann::json &);
   void appoint();
   void hello();
   void goodbye();
@@ -84,39 +78,25 @@ class PyGenerator : public GEN {
     PYBIND11_OVERLOAD(
       std::shared_ptr<Generator>, GEN, get_generator, );
   }
-  const bool check_key(
+  Eigen::ArrayXi get_1d_int(
     const std::string &key) override
   {
-    PYBIND11_OVERLOAD(const bool, GEN, check_key, key);
+    PYBIND11_OVERLOAD(Eigen::ArrayXi, GEN, get_1d_int, key);
   }
-  const std::vector<bool> check_keys(
-    const std::vector<std::string> &keys) override
-  {
-    PYBIND11_OVERLOAD(const std::vector<bool>, GEN, check_keys, keys);
-  }
-  const Eigen::VectorXi get_int_vector(
+  Eigen::ArrayXd get_1d_double(
     const std::string &key) override
   {
-    PYBIND11_OVERLOAD(const Eigen::VectorXi, GEN, get_int_vector, key);
+    PYBIND11_OVERLOAD(Eigen::ArrayXd, GEN, get_1d_double, key);
   }
-  const Eigen::VectorXd get_double_vector(
-    const std::string &key) override
-  {
-    PYBIND11_OVERLOAD(const Eigen::VectorXd, GEN, get_double_vector, key);
-  }
-  const Eigen::ArrayXXi get_int_array(
+  Eigen::ArrayXXi get_2d_int(
     const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(const Eigen::ArrayXXi, GEN, get_int_array, keys);
+    PYBIND11_OVERLOAD(Eigen::ArrayXXi, GEN, get_2d_int, keys);
   }
-  const Eigen::ArrayXXd get_double_array(
+  Eigen::ArrayXXd get_2d_double(
     const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(const Eigen::ArrayXXd, GEN, get_double_array, keys);
-  }
-  const Map2Index &get_map_to_index(const nlohmann::json &keys) override
-  {
-    PYBIND11_OVERLOAD(const Map2Index &, GEN, get_map_to_index, keys);
+    PYBIND11_OVERLOAD(Eigen::ArrayXXd, GEN, get_2d_double, keys);
   }
 };
 
