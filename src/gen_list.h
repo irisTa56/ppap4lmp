@@ -14,7 +14,7 @@ class GenList : public Generator {
  public:
   GenList(std::vector<std::shared_ptr<Generator>>);
   virtual ~GenList() = default;
-  virtual const nlohmann::json &get_data() override;
+  virtual const json &get_data() override;
   virtual std::shared_ptr<Generator> get_generator(int);
   const int get_length();
 };
@@ -26,9 +26,9 @@ class GenList : public Generator {
 class PyGenList : public GenList {
  public:
   using GenList::GenList;
-  const nlohmann::json &get_data() override
+  const json &get_data() override
   {
-    PYBIND11_OVERLOAD_PURE(const nlohmann::json &, GenList, get_data, );
+    PYBIND11_OVERLOAD_PURE(const json &, GenList, get_data, );
   }
   std::shared_ptr<Generator> get_generator(int index) override
   {

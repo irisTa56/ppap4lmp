@@ -32,7 +32,7 @@ class Generator : public std::enable_shared_from_this<Generator> {
   static int instance_count;
   std::string datatype;
   std::string dataname;
-  nlohmann::json data = nullptr;
+  json data = nullptr;
   std::vector<UpdatePair> update_chain;
   void increment_remain();
   void decrement_remain();
@@ -41,7 +41,7 @@ class Generator : public std::enable_shared_from_this<Generator> {
  public:
   Generator() { omp_init_lock(&omp_lock); }
   virtual ~Generator() = default;
-  virtual const nlohmann::json &get_data() = 0;
+  virtual const json &get_data() = 0;
   virtual std::shared_ptr<Generator> get_generator();
   virtual Eigen::ArrayXi get_1d_int(
     const std::string &);
@@ -69,9 +69,9 @@ template <class GEN = Generator>
 class PyGenerator : public GEN {
  public:
   using GEN::GEN;
-  const nlohmann::json &get_data() override
+  const json &get_data() override
   {
-    PYBIND11_OVERLOAD_PURE(const nlohmann::json &, GEN, get_data, );
+    PYBIND11_OVERLOAD_PURE(const json &, GEN, get_data, );
   }
   std::shared_ptr<Generator> get_generator() override
   {

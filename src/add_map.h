@@ -9,16 +9,16 @@ create: 2018/06/26 by Takayuki Kobayashi
 
 #include "adder.h"
 
-using JsonJson = std::unordered_map<nlohmann::json,nlohmann::json>;
-
 class AddMap : public Adder {
   std::string key_ref;
   std::string key_new;
-  JsonJson mapping;
+  std::unordered_map<json,json> mapping;
  protected:
-  virtual void compute_impl(nlohmann::json &) override;
+  virtual void compute_impl(json &) override;
  public:
-  AddMap(const std::string &, const std::string &, JsonJson);
+  AddMap(
+    const std::string &, const std::string &,
+    const std::unordered_map<json,json> &);
   virtual ~AddMap() = default;
 };
 
@@ -29,7 +29,8 @@ static void pybind_add_map(py::module &m)
 {
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddMap,PyUpdater<AddMap>,Adder,Updater,std::shared_ptr<AddMap>>(m, "AddMap")
-    .def(py::init<const std::string &,const std::string &,JsonJson>());
+    .def(
+      py::init<const std::string &,const std::string &,const std::unordered_map<json,json> &>());
 }
 
 #endif

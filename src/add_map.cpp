@@ -11,7 +11,7 @@ create: 2018/06/24 by Takayuki Kobayashi
 
 AddMap::AddMap(
   const std::string &key_ref_, const std::string &key_new_,
-  JsonJson mapping_)
+  const std::unordered_map<json,json> &mapping_)
 {
   key_ref = key_ref_;
   key_new = key_new_;
@@ -20,7 +20,7 @@ AddMap::AddMap(
 
 /* ------------------------------------------------------------------ */
 
-void AddMap::compute_impl(nlohmann::json &data)
+void AddMap::compute_impl(json &data)
 {
   if (data.is_array())
   {

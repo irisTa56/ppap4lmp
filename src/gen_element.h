@@ -13,8 +13,8 @@ class GenElement : public Generator {
  public:
   GenElement();
   virtual ~GenElement() = default;
-  virtual const nlohmann::json &get_data() override;
-  const nlohmann::json &get_data_py();
+  virtual const json &get_data() override;
+  const json &get_data_py();
   virtual Eigen::ArrayXi get_1d_int(
     const std::string &) override;
   const Eigen::ArrayXi get_1d_int_py(

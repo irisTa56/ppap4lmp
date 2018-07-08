@@ -167,6 +167,8 @@ void Generator::merge_update_chain(const std::vector<UpdatePair> &v)
   {
     if (std::find(u.begin(), u.end(), *itr) == u.end())
     {
+      bool inserted = false;
+
       for (auto jtr = u.begin(); jtr != u.end(); ++jtr)
       {
         bool match = false;
@@ -183,8 +185,14 @@ void Generator::merge_update_chain(const std::vector<UpdatePair> &v)
         if (match)
         {
           u.insert(jtr, *itr);
+          inserted = true;
           break;
         }
+      }
+
+      if (!inserted)
+      {
+        u.push_back(*itr);
       }
     }
   }

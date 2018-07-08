@@ -5,8 +5,8 @@ import numpy as np
 from random import randrange
 
 from ppap4lmp import \
-  Element, StaDumpAtoms, AddMap, FilSet, FilComparison, \
-  StaMolecules
+  Element, StaDumpAtoms, StaDumpBox, AddMap, FilSet, FilComparison, \
+  StaMolecules, AddWrappedPositions
 
 class TestElement(unittest.TestCase):
 
@@ -118,3 +118,23 @@ class TestElement(unittest.TestCase):
       self.assertEqual(
         sorted(d["atom-ids"]),
         list(range(120001+27*(d["id"]-1), 120001+27*d["id"])))
+
+  def test_wrapped(self):
+
+    print("\n\nTestElement.test_wrapped:")
+
+    atoms = Element(StaDumpAtoms(*self.args))
+    box = Element(StaDumpBox(*self.args))
+
+    atoms.append_updater(AddWrappedPositions(box))
+
+    wrapped = atoms.get_2d_double(["x", "y", "z"])
+    unwrapped = atoms.get_2d_double(["xu", "yu", "zu"])
+
+    diff = unwrapped - wrapped
+    diff_x = diff.T[0] / 662.0
+    diff_y = diff.T[1] / 331.0
+
+    self.assertTrue(np.all(diff_x.round() == diff_x))
+    self.assertTrue(np.all(diff_y.round() == diff_y))
+    self.assertTrue(np.allclose(wrapped.T[2], unwrapped.T[2]))

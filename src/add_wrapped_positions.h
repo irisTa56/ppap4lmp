@@ -12,7 +12,7 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 class AddWrappedPositions : public Adder {
  protected:
-  virtual void compute_impl(nlohmann::json &) override;
+  virtual void compute_impl(json &) override;
  public:
   AddWrappedPositions(std::shared_ptr<Generator>);
   virtual ~AddWrappedPositions() = default;

@@ -14,12 +14,12 @@ class Updater {
   std::unordered_set<std::string> dataname_blacklist;
  protected:
   std::shared_ptr<Generator> reference_generator;
-  virtual void compute_impl(nlohmann::json &) = 0;
+  virtual void compute_impl(json &) = 0;
   const bool check_blacklist(const std::string &);
  public:
   Updater() { omp_init_lock(&omp_lock); }
   virtual ~Updater() = default;
-  virtual void compute(nlohmann::json &, const std::string &) = 0;
+  virtual void compute(json &, const std::string &) = 0;
   virtual void initialize_datatype(std::string &);
   virtual const bool is_callable(const std::string &);
   void remove_from_blacklist(const std::string &);
@@ -34,7 +34,7 @@ template <class UPD = Updater>
 class PyUpdater : public UPD {
  public:
   using UPD::UPD;
-  void compute(nlohmann::json &data, const std::string &dataname) override
+  void compute(json &data, const std::string &dataname) override
   {
     PYBIND11_OVERLOAD_PURE(void, UPD, compute, data, dataname);
   }
@@ -47,7 +47,7 @@ class PyUpdater : public UPD {
     PYBIND11_OVERLOAD(const bool, UPD, is_callable, datatype);
   }
  protected:
-  void compute_impl(nlohmann::json &data) override
+  void compute_impl(json &data) override
   {
     PYBIND11_OVERLOAD_PURE(void, UPD, compute_impl, data);
   }

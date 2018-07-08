@@ -15,7 +15,7 @@ class Adder : public Updater {
  public:
   Adder() = default;
   virtual ~Adder() = default;
-  virtual void compute(nlohmann::json &, const std::string &) override;
+  virtual void compute(json &, const std::string &) override;
   virtual const bool is_callable(const std::string &) override;
 };
 

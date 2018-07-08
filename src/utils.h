@@ -8,6 +8,8 @@
 
 #include <nlohmann/json.hpp>
 
+using json = nlohmann::json;
+
 extern bool ToF_LOGGING;
 
 /* ------------------------------------------------------------------ */
@@ -91,10 +93,9 @@ static std::string make_dataname(const std::string &datatype, T *ptr)
 
 /* ------------------------------------------------------------------ */
 
-static const nlohmann::json check_key(
-  const nlohmann::json &data, const nlohmann::json &key)
+static const json check_key(const json &data, const json &key)
 {
-  auto key_list = key.is_array() ? key : nlohmann::json({key});
+  auto key_list = key.is_array() ? key : json({key});
 
   std::unordered_map<std::string,int> counts;
 
@@ -138,7 +139,7 @@ static const nlohmann::json check_key(
     }
   }
 
-  nlohmann::json tmp;
+  json tmp;
 
   if (key.is_array())
   {
@@ -157,10 +158,10 @@ static const nlohmann::json check_key(
 
 /* ------------------------------------------------------------------ */
 
-static const std::unordered_map<nlohmann::json,int> get_map_to_index(
-  const nlohmann::json &data, const nlohmann::json &key)
+static const std::unordered_map<json,int> get_map_to_index(
+  const json &data, const json &key)
 {
-  std::unordered_map<nlohmann::json,int> tmp;
+  std::unordered_map<json,int> tmp;
 
   if (data.is_array())
   {
@@ -174,7 +175,7 @@ static const std::unordered_map<nlohmann::json,int> get_map_to_index(
       {
         auto &d = data[i];
 
-        nlohmann::json arr;
+        json arr;
 
         for (const auto &k : keys_tmp)
         {

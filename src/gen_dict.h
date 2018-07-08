@@ -14,7 +14,7 @@ class GenDict : public Generator {
  public:
   GenDict(std::unordered_set<std::shared_ptr<Generator>>);
   virtual ~GenDict() = default;
-  virtual const nlohmann::json &get_data() override;
+  virtual const json &get_data() override;
   virtual std::shared_ptr<Generator> get_generator(const std::string &);
   const std::unordered_set<std::string> get_keys();
 };
@@ -26,9 +26,9 @@ class GenDict : public Generator {
 class PyGenDict : public GenDict {
  public:
   using GenDict::GenDict;
-  const nlohmann::json &get_data() override
+  const json &get_data() override
   {
-    PYBIND11_OVERLOAD_PURE(const nlohmann::json &, GenDict, get_data, );
+    PYBIND11_OVERLOAD_PURE(const json &, GenDict, get_data, );
   }
   std::shared_ptr<Generator> get_generator(
     const std::string &key) override

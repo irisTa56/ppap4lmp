@@ -26,7 +26,7 @@ StaMolecules::StaMolecules(std::shared_ptr<Generator> gen)
 
 /* ------------------------------------------------------------------ */
 
-void StaMolecules::compute_impl(nlohmann::json &data)
+void StaMolecules::compute_impl(json &data)
 {
   if (!check_key(reference_generator->get_data(), "mol"))
   {

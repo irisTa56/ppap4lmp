@@ -17,14 +17,14 @@ GenElement::GenElement()
 
 /* ------------------------------------------------------------------ */
 
-const nlohmann::json &GenElement::get_data()
+const json &GenElement::get_data()
 {
   return data;
 }
 
 /* ------------------------------------------------------------------ */
 
-const nlohmann::json &GenElement::get_data_py()
+const json &GenElement::get_data_py()
 {
   hello();
   return get_data();
