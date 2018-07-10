@@ -158,7 +158,40 @@ static const json check_key(const json &data, const json &key)
 
 /* ------------------------------------------------------------------ */
 
-static const std::unordered_map<json,int> get_map_to_index(
+static json get_partial_json(const json &data, const json &key)
+{
+  std::vector<std::string> key_list = key.is_array() ? key : json({key});
+
+  json tmp;
+
+  if (data.is_array())
+  {
+    for (const auto &d : data)
+    {
+      json elem;
+
+      for (const auto &k : key_list)
+      {
+        elem[k] = d[k];
+      }
+
+      tmp.push_back(elem);
+    }
+  }
+  else
+  {
+    for (const auto &k : key_list)
+    {
+      tmp[k] = data[k];
+    }
+  }
+
+  return tmp;
+}
+
+/* ------------------------------------------------------------------ */
+
+static std::unordered_map<json,int> get_map_to_index(
   const json &data, const json &key)
 {
   std::unordered_map<json,int> tmp;
