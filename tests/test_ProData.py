@@ -134,5 +134,4 @@ class TestProData(unittest.TestCase):
 
       self.assertEqual([
         {"xu": r1["xu"], "yu": r1["yu"], "type": r1["type"]},
-        {"xu": r2["xu"], "yu": r2["yu"], "mass": r2["mass"]}
-      ], exp)
+        {"xu": r2["xu"], "yu": r2["yu"], "mass": r2["mass"]}], exp)

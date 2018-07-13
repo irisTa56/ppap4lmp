@@ -6,7 +6,7 @@ from random import randrange
 
 from ppap4lmp import \
   Element, StaDumpAtoms, StaDumpBox, AddMap, FilSet, FilComparison, \
-  StaMolecules, AddWrappedPositions
+  StaMolecules, AddWrappedPositions, AddCoMPosition
 
 class TestElement(unittest.TestCase):
 
@@ -109,7 +109,10 @@ class TestElement(unittest.TestCase):
     print("\n\nTestElement.test_molecules:")
 
     atoms = Element(StaDumpAtoms(*self.args))
+    atoms.append_updater(AddMap("type", "mass", {1: 147.28}))
+
     mols = Element(StaMolecules(atoms))
+    mols.append_updater(AddCoMPosition(atoms))
 
     mol_data = mols.get_data()
 
@@ -118,6 +121,35 @@ class TestElement(unittest.TestCase):
       self.assertEqual(
         sorted(d["atom-ids"]),
         list(range(120001+27*(d["id"]-1), 120001+27*d["id"])))
+
+    d = mol_data[randrange(len(mol_data))]
+
+    atom_ids = set(d["atom-ids"])
+    atom_data = atoms.get_data()
+
+    tmpm = 0.0
+    tmpx = 0.0
+    tmpy = 0.0
+    tmpz = 0.0
+
+    for atom in atom_data:
+
+      if atom["id"] in atom_ids:
+
+        m = atom["mass"]
+
+        tmpm += m
+        tmpx += m * atom["xu"]
+        tmpy += m * atom["yu"]
+        tmpz += m * atom["zu"]
+
+    tmpx /= tmpm
+    tmpy /= tmpm
+    tmpz /= tmpm
+
+    self.assertEqual(d["xu"], tmpx)
+    self.assertEqual(d["yu"], tmpy)
+    self.assertEqual(d["zu"], tmpz)
 
   def test_wrapped(self):
 

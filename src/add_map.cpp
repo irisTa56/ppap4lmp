@@ -1,5 +1,6 @@
 /* ---------------------------------------------------------------------
-AddMap: stands for Adder Mapping an existing property to a new property.
+AddMap: stands for Adder for Mapping from existing properties to new
+properties.
 
 create: 2018/06/24 by Takayuki Kobayashi
 --------------------------------------------------------------------- */

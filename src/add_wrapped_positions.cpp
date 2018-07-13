@@ -1,6 +1,5 @@
 /* ---------------------------------------------------------------------
-AddWrappedPositions: stands for Adder for Wrapped Postisions ('x', 'y',
-'z').
+AddWrappedPositions: stands for Adder for Wrapped Postisions.
 
 create: 2018/07/07 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
