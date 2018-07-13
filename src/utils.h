@@ -241,4 +241,31 @@ static std::unordered_map<json,int> get_map_to_index(
   return tmp;
 }
 
+/* ------------------------------------------------------------------ */
+
+static bool json_all(const json &obj)
+{
+  bool tmp = true;
+
+  if (obj.is_array())
+  {
+    for (const auto &e : obj)
+    {
+      if (!e)
+      {
+        tmp = false;
+      }
+    }
+  }
+  else
+  {
+    if (!obj)
+    {
+      tmp = false;
+    }
+  }
+
+  return tmp;;
+}
+
 #endif

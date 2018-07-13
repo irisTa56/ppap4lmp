@@ -29,7 +29,7 @@ AddWrappedPositions::AddWrappedPositions(
 
 void AddWrappedPositions::compute_impl(json &data)
 {
-  if (check_key(data, {"xu", "yu", "zu"}) != json({true, true, true}))
+  if (!json_all(check_key(data, {"xu", "yu", "zu"})))
   {
     runtime_error("Unwrapped positions do not exist");
   }

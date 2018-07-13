@@ -29,16 +29,17 @@ AddCoMPosition::AddCoMPosition(
 
 void AddCoMPosition::compute_impl(json &data)
 {
-  if (!check_key(data, "atom-ids"))
+  auto &atoms = reference_generator->get_data();
+
+  if (!json_all(check_key(atoms, {"mass", "xu", "yu", "zu"})))
   {
-    runtime_error("Atoms-IDs do not exist");
+    runtime_error("AddCoMPosition needs mass and unwrapped position");
   }
 
   auto atom_ms = reference_generator->get_1d_double("mass");
   auto atom_rs = reference_generator->get_2d_double({"xu", "yu", "zu"});
 
-  auto atom_id2index = get_map_to_index(
-    reference_generator->get_data(), "id");
+  auto atom_id2index = get_map_to_index(atoms, "id");
 
   for (auto &d : data)
   {

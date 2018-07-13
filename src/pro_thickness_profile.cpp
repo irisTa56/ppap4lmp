@@ -76,10 +76,9 @@ void ProThicknessProfile::run_impl(int index)
   auto gen_atoms = generators[index]->get_generator("Atoms");
   auto &atoms = gen_atoms->get_data();
 
-  if (check_key(
-    atoms, {"x", "y", "z", "radius"}) != json({true, true, true, true}))
+  if (!json_all(check_key(atoms, {"x", "y", "z", "radius"})))
   {
-    runtime_error("ProThicknessProfile needs radii and wrapped positions");
+    runtime_error("ProThicknessProfile needs wrapped position and radius");
   }
 
   auto mini_atoms = get_partial_json(atoms, {"x", "y", "z", "radius"});
