@@ -48,7 +48,7 @@ void AddCoMPosition::compute_impl(json &data)
 
     for (int id : d["atom-ids"])
     {
-      auto index = atom_id2index[id];
+      int index = atom_id2index[id];
       auto mass = atom_ms(index);
 
       m_tmp += mass;
@@ -57,10 +57,10 @@ void AddCoMPosition::compute_impl(json &data)
 
     r_tmp /= m_tmp;
 
+    d["mass"] = m_tmp;
+
     d["xu"] = r_tmp(0);
     d["yu"] = r_tmp(1);
     d["zu"] = r_tmp(2);
-
-    d["mass"] = m_tmp;
   }
 }
