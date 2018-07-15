@@ -12,11 +12,11 @@ create: 2018/06/21 by Takayuki Kobayashi
 #include <unordered_map>
 #include <unordered_set>
 
-#include <Eigen/LU>
 #include <omp.h>
-#include <pybind11/eigen.h>
+
 #include <pybind11/stl.h>
 
+#include "eigen_aliases.h"
 #include "json_caster.h"
 
 class Generator;
@@ -45,14 +45,10 @@ class Generator : public std::enable_shared_from_this<Generator> {
   virtual std::shared_ptr<Generator> get_generator();
   virtual std::shared_ptr<Generator> get_generator(int);
   virtual std::shared_ptr<Generator> get_generator(const std::string &);
-  virtual Eigen::ArrayXi get_1d_int(
-    const std::string &);
-  virtual Eigen::ArrayXd get_1d_double(
-    const std::string &);
-  virtual Eigen::ArrayXXi get_2d_int(
-    const std::vector<std::string> &);
-  virtual Eigen::ArrayXXd get_2d_double(
-    const std::vector<std::string> &);
+  virtual ArrayXi get_1d_int(const std::string &);
+  virtual ArrayXd get_1d_double(const std::string &);
+  virtual ArrayXXi get_2d_int(const std::vector<std::string> &);
+  virtual ArrayXXd get_2d_double(const std::vector<std::string> &);
   void appoint();
   void hello();
   void goodbye();
@@ -92,25 +88,21 @@ class PyGenerator : public GEN {
     PYBIND11_OVERLOAD(
       std::shared_ptr<Generator>, GEN, get_generator, key);
   }
-  Eigen::ArrayXi get_1d_int(
-    const std::string &key) override
+  ArrayXi get_1d_int(const std::string &key) override
   {
-    PYBIND11_OVERLOAD(Eigen::ArrayXi, GEN, get_1d_int, key);
+    PYBIND11_OVERLOAD(ArrayXi, GEN, get_1d_int, key);
   }
-  Eigen::ArrayXd get_1d_double(
-    const std::string &key) override
+  ArrayXd get_1d_double(const std::string &key) override
   {
-    PYBIND11_OVERLOAD(Eigen::ArrayXd, GEN, get_1d_double, key);
+    PYBIND11_OVERLOAD(ArrayXd, GEN, get_1d_double, key);
   }
-  Eigen::ArrayXXi get_2d_int(
-    const std::vector<std::string> &keys) override
+  ArrayXXi get_2d_int(const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(Eigen::ArrayXXi, GEN, get_2d_int, keys);
+    PYBIND11_OVERLOAD(ArrayXXi, GEN, get_2d_int, keys);
   }
-  Eigen::ArrayXXd get_2d_double(
-    const std::vector<std::string> &keys) override
+  ArrayXXd get_2d_double(const std::vector<std::string> &keys) override
   {
-    PYBIND11_OVERLOAD(Eigen::ArrayXXd, GEN, get_2d_double, keys);
+    PYBIND11_OVERLOAD(ArrayXXd, GEN, get_2d_double, keys);
   }
 };
 

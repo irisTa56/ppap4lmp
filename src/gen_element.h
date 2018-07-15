@@ -15,21 +15,21 @@ class GenElement : public Generator {
   virtual ~GenElement() = default;
   virtual const json &get_data() override;
   const json &get_data_py();
-  virtual Eigen::ArrayXi get_1d_int(
+  virtual ArrayXi get_1d_int(
     const std::string &) override;
-  const Eigen::ArrayXi get_1d_int_py(
+  const ArrayXi get_1d_int_py(
     const std::string &);
-  virtual Eigen::ArrayXd get_1d_double(
+  virtual ArrayXd get_1d_double(
     const std::string &) override;
-  const Eigen::ArrayXd get_1d_double_py(
+  const ArrayXd get_1d_double_py(
     const std::string &);
-  virtual Eigen::ArrayXXi get_2d_int(
+  virtual ArrayXXi get_2d_int(
     const std::vector<std::string> &) override;
-  const Eigen::ArrayXXi get_2d_int_py(
+  const ArrayXXi get_2d_int_py(
     const std::vector<std::string> &);
-  virtual Eigen::ArrayXXd get_2d_double(
+  virtual ArrayXXd get_2d_double(
     const std::vector<std::string> &) override;
-  const Eigen::ArrayXXd get_2d_double_py(
+  const ArrayXXd get_2d_double_py(
     const std::vector<std::string> &);
   void append_updater(std::shared_ptr<Updater>);
   std::shared_ptr<Generator> set_initial_updater(

@@ -1,15 +1,15 @@
 /* ---------------------------------------------------------------------
-AddCoMPosition: stands for Adder for Center of Mass added as Position.
+AddInertiaMoment: stands for Adder for Inertia Moment (of molecules).
 
-create: 2018/07/13 by Takayuki Kobayashi
+create: 2018/07/15 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include "add_com_position.h"
+#include "add_inertia_moment.h"
 #include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
-AddCoMPosition::AddCoMPosition(
+AddInertiaMoment::AddInertiaMoment(
   std::shared_ptr<Generator> gen)
 {
   if (gen->get_datatype() == "Atoms")
@@ -19,7 +19,7 @@ AddCoMPosition::AddCoMPosition(
   else
   {
     runtime_error(
-      "AddCoMPosition cannot use " + gen->get_dataname());
+      "AddInertiaMoment cannot use " + gen->get_dataname());
   }
 
   callable_datatypes = {"Molecules"};
@@ -27,14 +27,14 @@ AddCoMPosition::AddCoMPosition(
 
 /* ------------------------------------------------------------------ */
 
-void AddCoMPosition::compute_impl(json &data)
+void AddInertiaMoment::compute_impl(json &data)
 {
   auto &atoms = reference_generator->get_data();
 
   if (!check_key(atoms, {"id", "mass", "xu", "yu", "zu"}))
   {
     runtime_error(
-      "AddCoMPosition needs IDs, masses and unwrapped "
+      "AddInertiaMoment needs IDs, masses and unwrapped "
       "positions of Atoms");
   }
 
@@ -43,26 +43,35 @@ void AddCoMPosition::compute_impl(json &data)
   auto atom_ms = reference_generator->get_1d_double("mass");
   auto atom_rs = reference_generator->get_2d_double({"xu", "yu", "zu"});
 
+  if (!check_key(data, {"xu", "yu", "zu"}))
+  {
+    runtime_error("AddInertiaMoment needs the unwrapped positions");
+  }
+
   for (auto &d : data)
   {
-    double m_tmp = 0.0;
-    RowArrayXd r_tmp = RowArrayXd::Zero(3);
+    RowArrayXd r_mol(3);
+    r_mol << d["xu"], d["yu"], d["zu"];
+
+    MatrixXd sum = MatrixXd::Zero(3, 3);
 
     for (int id : d["atom-ids"])
     {
       int index = atom_id2index[id];
       auto mass = atom_ms(index);
 
-      m_tmp += mass;
-      r_tmp += mass * atom_rs.row(index);
+      auto dr = (atom_rs.row(index) - r_mol).matrix();
+
+      sum += mass * dr.transpose() * dr;
     }
 
-    r_tmp /= m_tmp;
+    auto tr = sum.trace();
 
-    d["mass"] = m_tmp;
-
-    d["xu"] = r_tmp(0);
-    d["yu"] = r_tmp(1);
-    d["zu"] = r_tmp(2);
+    d["I_xx"] = tr - sum(0, 0);
+    d["I_yy"] = tr - sum(1, 1);
+    d["I_zz"] = tr - sum(2, 2);
+    d["I_xy"] = -sum(0, 1);
+    d["I_yz"] = -sum(1, 2);
+    d["I_zx"] = -sum(2, 0);
   }
 }

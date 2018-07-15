@@ -76,10 +76,9 @@ std::shared_ptr<Generator> GenElement::set_initial_updater(
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXi GenElement::get_1d_int(
-  const std::string &key)
+ArrayXi GenElement::get_1d_int(const std::string &key)
 {
-  Eigen::ArrayXi v(data.is_array() ? data.size() : 1);
+  ArrayXi v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
@@ -101,8 +100,7 @@ Eigen::ArrayXi GenElement::get_1d_int(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::ArrayXi GenElement::get_1d_int_py(
-  const std::string &key)
+const ArrayXi GenElement::get_1d_int_py(const std::string &key)
 {
   hello();
   return get_1d_int(key);
@@ -110,10 +108,9 @@ const Eigen::ArrayXi GenElement::get_1d_int_py(
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXd GenElement::get_1d_double(
-  const std::string &key)
+ArrayXd GenElement::get_1d_double(const std::string &key)
 {
-  Eigen::ArrayXd v(data.is_array() ? data.size() : 1);
+  ArrayXd v(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
@@ -135,8 +132,7 @@ Eigen::ArrayXd GenElement::get_1d_double(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::ArrayXd GenElement::get_1d_double_py(
-  const std::string &key)
+const ArrayXd GenElement::get_1d_double_py(const std::string &key)
 {
   hello();
   return get_1d_double(key);
@@ -144,12 +140,11 @@ const Eigen::ArrayXd GenElement::get_1d_double_py(
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXXi GenElement::get_2d_int(
-  const std::vector<std::string> &keys)
+ArrayXXi GenElement::get_2d_int(const std::vector<std::string> &keys)
 {
   int n_keys = keys.size();
 
-  Eigen::ArrayXXi a(data.is_array() ? data.size() : 1, n_keys);
+  ArrayXXi a(data.is_array() ? data.size() : 1, n_keys);
 
   if (data.is_array())
   {
@@ -179,7 +174,7 @@ Eigen::ArrayXXi GenElement::get_2d_int(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::ArrayXXi GenElement::get_2d_int_py(
+const ArrayXXi GenElement::get_2d_int_py(
   const std::vector<std::string> &keys)
 {
   hello();
@@ -188,12 +183,11 @@ const Eigen::ArrayXXi GenElement::get_2d_int_py(
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXXd GenElement::get_2d_double(
-  const std::vector<std::string> &keys)
+ArrayXXd GenElement::get_2d_double(const std::vector<std::string> &keys)
 {
   int n_keys = keys.size();
 
-  Eigen::ArrayXXd a(data.is_array() ? data.size() : 1, n_keys);
+  ArrayXXd a(data.is_array() ? data.size() : 1, n_keys);
 
   if (data.is_array())
   {
@@ -223,7 +217,7 @@ Eigen::ArrayXXd GenElement::get_2d_double(
 
 /* ------------------------------------------------------------------ */
 
-const Eigen::ArrayXXd GenElement::get_2d_double_py(
+const ArrayXXd GenElement::get_2d_double_py(
   const std::vector<std::string> &keys)
 {
   hello();

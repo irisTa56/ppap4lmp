@@ -64,7 +64,7 @@ const std::vector<json> &ProThicknessProfile::get_conditions()
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<Eigen::ArrayXXd> &ProThicknessProfile::get_profiles()
+const std::vector<ArrayXXd> &ProThicknessProfile::get_profiles()
 {
   return profiles;
 }
@@ -76,7 +76,7 @@ void ProThicknessProfile::run_impl(int index)
   auto gen_atoms = generators[index]->get_generator("Atoms");
   auto &atoms = gen_atoms->get_data();
 
-  if (!json_all(check_key(atoms, {"x", "y", "z", "radius"})))
+  if (!check_key(atoms, {"x", "y", "z", "radius"}))
   {
     runtime_error("ProThicknessProfile needs wrapped position and radius");
   }
@@ -105,7 +105,7 @@ void ProThicknessProfile::run_impl(int index)
       return a["z"] > b["z"];
     });
 
-  Eigen::ArrayXXd tmp = Eigen::ArrayXXd::Zero(nx, ny);
+  ArrayXXd tmp = ArrayXXd::Zero(nx, ny);
 
   double reciprocal_nx = 1.0 / double(nx);
   double reciprocal_ny = 1.0 / double(ny);

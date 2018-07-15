@@ -93,7 +93,7 @@ static std::string make_dataname(const std::string &datatype, T *ptr)
 
 /* ------------------------------------------------------------------ */
 
-static const json check_key(const json &data, const json &key)
+static bool check_key(const json &data, const json &key)
 {
   auto key_list = key.is_array() ? key : json({key});
 
@@ -139,18 +139,15 @@ static const json check_key(const json &data, const json &key)
     }
   }
 
-  json tmp;
+  bool tmp = true;
 
-  if (key.is_array())
+  for (const std::string &k : key_list)
   {
-    for (const auto &k : key)
+    if (!bool(counts[k]))
     {
-      tmp.push_back(bool(counts[k]));
+      tmp = false;
+      break;
     }
-  }
-  else
-  {
-    tmp = bool(counts[key]);
   }
 
   return tmp;
@@ -239,33 +236,6 @@ static std::unordered_map<json,int> get_map_to_index(
   }
 
   return tmp;
-}
-
-/* ------------------------------------------------------------------ */
-
-static bool json_all(const json &obj)
-{
-  bool tmp = true;
-
-  if (obj.is_array())
-  {
-    for (const auto &e : obj)
-    {
-      if (!e)
-      {
-        tmp = false;
-      }
-    }
-  }
-  else
-  {
-    if (!obj)
-    {
-      tmp = false;
-    }
-  }
-
-  return tmp;;
 }
 
 #endif

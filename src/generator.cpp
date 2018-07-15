@@ -38,38 +38,34 @@ std::shared_ptr<Generator> Generator::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXi Generator::get_1d_int(
-  const std::string &key)
+ArrayXi Generator::get_1d_int(const std::string &key)
 {
   message("This function is for GenElement");
-  return Eigen::ArrayXi();
+  return ArrayXi();
 }
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXd Generator::get_1d_double(
-  const std::string &key)
+ArrayXd Generator::get_1d_double(const std::string &key)
 {
   message("This function is for GenElement");
-  return Eigen::ArrayXd();
+  return ArrayXd();
 }
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXXi Generator::get_2d_int(
-  const std::vector<std::string> &keys)
+ArrayXXi Generator::get_2d_int(const std::vector<std::string> &keys)
 {
   message("This function is for GenElement");
-  return Eigen::ArrayXXi();
+  return ArrayXXi();
 }
 
 /* ------------------------------------------------------------------ */
 
-Eigen::ArrayXXd Generator::get_2d_double(
-  const std::vector<std::string> &keys)
+ArrayXXd Generator::get_2d_double(const std::vector<std::string> &keys)
 {
   message("This function is for GenElement");
-  return Eigen::ArrayXXd();
+  return ArrayXXd();
 }
 
 /* ------------------------------------------------------------------ */

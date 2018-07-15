@@ -29,26 +29,23 @@ AddWrappedPositions::AddWrappedPositions(
 
 void AddWrappedPositions::compute_impl(json &data)
 {
-  if (!json_all(check_key(data, {"xu", "yu", "zu"})))
+  if (!check_key(data, {"xu", "yu", "zu"}))
   {
-    runtime_error("Unwrapped positions do not exist");
+    runtime_error("AddWrappedPositions needs the unwrapped positions");
   }
 
   auto &box = reference_generator->get_data();
 
-  Eigen::Array3d offset;
-  offset << double(box["min_x"]),
-            double(box["min_y"]),
-            double(box["min_z"]);
+  ArrayXd offset(3);
+  offset << box["min_x"], box["min_y"], box["min_z"];
 
-  Eigen::Array3d length;
-  length << double(box["max_x"]) - double(box["min_x"]),
-            double(box["max_y"]) - double(box["min_y"]),
-            double(box["max_z"]) - double(box["min_z"]);
+  ArrayXd length(3);
+  length << box["max_x"], box["max_y"], box["max_z"];
+  length -= offset;
 
   for (auto &d : data)
   {
-    Eigen::Array3d unwrapped;
+    ArrayXd unwrapped(3);
     unwrapped << d["xu"], d["yu"], d["zu"];
 
     auto tmp = unwrapped;

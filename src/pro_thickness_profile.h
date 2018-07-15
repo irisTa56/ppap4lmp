@@ -15,7 +15,7 @@ class ProThicknessProfile : public Processor {
   int ny;
   double offset = 0.0;
   std::vector<json> conditions;
-  std::vector<Eigen::ArrayXXd> profiles;
+  std::vector<ArrayXXd> profiles;
  protected:
   virtual void run_impl(int) override;
   virtual void prepare_impl() override;
@@ -26,7 +26,7 @@ class ProThicknessProfile : public Processor {
   void set_grid(int, int);
   void set_offset(double);
   const std::vector<json> &get_conditions();
-  const std::vector<Eigen::ArrayXXd> &get_profiles();
+  const std::vector<ArrayXXd> &get_profiles();
 };
 
 /* ------------------------------------------------------------------ */
