@@ -21,27 +21,27 @@ void ProData::select(py::args args)
 
 void ProData::run_impl(int index)
 {
-  auto &d = generators[index]->get_data();
+  auto &data = generators[index]->get_data();
 
   if (selected_keys.empty())
   {
-    results[index] = d;
+    results[index] = data;
   }
   else
   {
     nlohmann::json j;
 
-    if (d.is_array())
+    if (data.is_array())
     {
-      for (const auto &e : d)
+      for (const auto &d : data)
       {
         nlohmann::json tmp;
 
-        auto end = e.end();
+        auto end = d.end();
 
         for (const auto &s : selected_keys)
         {
-          auto val = e.find(s);
+          auto val = d.find(s);
 
           if (val != end)
           {
@@ -54,11 +54,11 @@ void ProData::run_impl(int index)
     }
     else
     {
-      auto end = d.end();
+      auto end = data.end();
 
       for (const auto &s : selected_keys)
       {
-        auto val = d.find(s);
+        auto val = data.find(s);
 
         if (val != end)
         {

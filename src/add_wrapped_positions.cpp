@@ -48,7 +48,7 @@ void AddWrappedPositions::compute_impl(json &data)
     ArrayXd unwrapped(3);
     unwrapped << d["xu"], d["yu"], d["zu"];
 
-    auto tmp = unwrapped;
+    ArrayXd tmp = unwrapped;
 
     tmp -= offset;
     tmp /= length;
@@ -57,10 +57,10 @@ void AddWrappedPositions::compute_impl(json &data)
 
     tmp *= length;
 
-    auto wrapped = unwrapped + tmp;
+    tmp += unwrapped;
 
-    d["x"] = wrapped(0);
-    d["y"] = wrapped(1);
-    d["z"] = wrapped(2);
+    d["x"] = tmp(0);
+    d["y"] = tmp(1);
+    d["z"] = tmp(2);
   }
 }

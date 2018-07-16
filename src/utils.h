@@ -95,7 +95,7 @@ static std::string make_dataname(const std::string &datatype, T *ptr)
 
 static bool check_key(const json &data, const json &key)
 {
-  auto key_list = key.is_array() ? key : json({key});
+  std::vector<std::string> key_list = key.is_array() ? key : json({key});
 
   std::unordered_map<std::string,int> counts;
 
@@ -141,7 +141,7 @@ static bool check_key(const json &data, const json &key)
 
   bool tmp = true;
 
-  for (const std::string &k : key_list)
+  for (const auto &k : key_list)
   {
     if (!bool(counts[k]))
     {

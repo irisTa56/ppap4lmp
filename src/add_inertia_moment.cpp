@@ -58,14 +58,14 @@ void AddInertiaMoment::compute_impl(json &data)
     for (int id : d["atom-ids"])
     {
       int index = atom_id2index[id];
-      auto mass = atom_ms(index);
+      double mass = atom_ms(index);
 
-      auto dr = (atom_rs.row(index) - r_mol).matrix();
+      RowVectorXd dr = atom_rs.row(index) - r_mol;
 
       sum += mass * dr.transpose() * dr;
     }
 
-    auto tr = sum.trace();
+    double tr = sum.trace();
 
     d["I_xx"] = tr - sum(0, 0);
     d["I_yy"] = tr - sum(1, 1);

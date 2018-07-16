@@ -136,12 +136,12 @@ void ProThicknessProfile::run_impl(int index)
     {
       for (int iy = grid_index_min_y; iy != grid_index_max_y; ++iy)
       {
-        auto grid_x = origin_x + ix*delta_x;
-        auto grid_y = origin_y + iy*delta_y;
+        double grid_x = origin_x + ix*delta_x;
+        double grid_y = origin_y + iy*delta_y;
 
-        auto dx = atom_x - grid_x;
-        auto dy = atom_y - grid_y;
-        auto dr2 = dx*dx + dy*dy;
+        double dx = atom_x - grid_x;
+        double dy = atom_y - grid_y;
+        double dr2 = dx*dx + dy*dy;
 
         if (radius2 < dr2)
         {
@@ -151,9 +151,9 @@ void ProThicknessProfile::run_impl(int index)
         int ix_in_box = ix - floor(ix*reciprocal_nx)*nx;
         int iy_in_box = iy - floor(iy*reciprocal_ny)*ny;
 
-        auto dz2 = radius2 - dr2;
+        double dz2 = radius2 - dr2;
 
-        auto d = atom_z - tmp(ix_in_box, iy_in_box);
+        double d = atom_z - tmp(ix_in_box, iy_in_box);
 
         if (d < 0.0 && dz2 < d*d)
         {
