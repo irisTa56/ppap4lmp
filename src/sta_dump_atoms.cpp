@@ -59,14 +59,14 @@ void StaDumpAtoms::compute_impl(nlohmann::json &data)
         std::getline(ifs, line);
 
         auto is_int_vector = get_is_int_vector(line);
-        int length = is_int_vector.size();
+        int size = is_int_vector.size();
 
         for (int i = 0; i != n_atoms; ++i)
         {
           auto &a = data[i];
           auto strs = split(line);
 
-          for (int j = 0; j != length; ++j)
+          for (int j = 0; j != size; ++j)
           {
             if (is_int_vector[j])
             {

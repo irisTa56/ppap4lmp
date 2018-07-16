@@ -40,12 +40,12 @@ void AddMolecularOrientation::compute_impl(json &data)
     ArrayXd evals = solver.eigenvalues().real();
     ArrayXXd evecs = solver.eigenvectors().real().transpose();
 
-    d["I_123"]["values"] = {evals(0), evals(1), evals(2)};
+    d["I_values"] = {evals(0), evals(1), evals(2)};
 
-    for (int i = 0; i != evecs.rows(); ++i)
+    for (int i = 0; i != 3; ++i)
     {
       RowArrayXd evec = evecs.row(i);
-      d["I_123"]["vectors"].push_back({evec(0), evec(1), evec(2)});
+      d["I_vectors"].push_back({evec(0), evec(1), evec(2)});
     }
 
     // compute molecular orientation
@@ -53,10 +53,11 @@ void AddMolecularOrientation::compute_impl(json &data)
     int index;
     evals.minCoeff(&index);
 
-    RowArrayXd orientation = evecs.row(index).square().unaryExpr([](double x)
-    {
-      return 0.5 * (3.0*x - 1.0);
-    });
+    RowArrayXd orientation = evecs.row(index).square().unaryExpr(
+      [](double x)
+      {
+        return 0.5 * (3.0*x - 1.0);
+      });
 
     d["S_x"] = orientation(0);
     d["S_y"] = orientation(1);

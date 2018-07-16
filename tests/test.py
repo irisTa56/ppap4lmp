@@ -3,6 +3,7 @@ import unittest
 from test_Element import TestElement
 from test_Container import TestContainer
 from test_ProData import TestProData
+from test_ProValueArray import TestProValueArray
 
 from ppap4lmp import __version__
 
@@ -25,7 +26,9 @@ def suite():
 
   suite.addTest(TestProData("test_with_Boxes"))
   suite.addTest(TestProData("test_with_Atomses"))
-  suite.addTest(TestProData("test_with_Atomses_oneUpdater"))
+
+  suite.addTest(TestProValueArray("test_with_Atomses"))
+
 
   return suite
 

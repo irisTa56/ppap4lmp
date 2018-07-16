@@ -39,11 +39,8 @@ void FilComparison::compute_impl(nlohmann::json &data)
 {
   nlohmann::json tmp;
 
-  int length = data.size();
-
-  for (int i = 0; i != length; ++i)
+  for (auto &d : data)
   {
-    auto d = data[i];
     bool pass = true;
 
     for (const auto &item : comp_functions)

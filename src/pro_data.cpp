@@ -29,6 +29,11 @@ void ProData::run_impl(int index)
   }
   else
   {
+    if (!check_key(data, json(selected_keys)))
+    {
+      runtime_error("ProData: Selected key(s) does not exist");
+    }
+
     nlohmann::json j;
 
     if (data.is_array())
@@ -37,16 +42,9 @@ void ProData::run_impl(int index)
       {
         nlohmann::json tmp;
 
-        auto end = d.end();
-
-        for (const auto &s : selected_keys)
+        for (const auto &k : selected_keys)
         {
-          auto val = d.find(s);
-
-          if (val != end)
-          {
-            tmp[s] = *val;
-          }
+          tmp[k] = d[k];
         }
 
         j.push_back(tmp);
@@ -54,16 +52,9 @@ void ProData::run_impl(int index)
     }
     else
     {
-      auto end = data.end();
-
-      for (const auto &s : selected_keys)
+      for (const auto &k : selected_keys)
       {
-        auto val = data.find(s);
-
-        if (val != end)
-        {
-          j[s] = *val;
-        }
+        j[k] = data[k];
       }
     }
 
