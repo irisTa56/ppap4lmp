@@ -25,9 +25,9 @@ FilSet::FilSet(
 
 /* ------------------------------------------------------------------ */
 
-void FilSet::compute_impl(nlohmann::json &data)
+void FilSet::compute_impl(json &data)
 {
-  nlohmann::json tmp;
+  json tmp;
 
   for (auto &d : data)
   {

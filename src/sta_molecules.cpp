@@ -11,16 +11,7 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 StaMolecules::StaMolecules(std::shared_ptr<Generator> gen)
 {
-  if (gen->get_datatype() == "Atoms")
-  {
-    reference_generator = gen;
-  }
-  else
-  {
-    runtime_error(
-      "StaMolecules cannot use " + gen->get_dataname());
-  }
-
+  check_reference_generator(gen, "Atoms");
   datatype_to_be_initialized = "Molecules";
 }
 

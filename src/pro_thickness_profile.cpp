@@ -78,7 +78,8 @@ void ProThicknessProfile::run_impl(int index)
 
   if (!check_key(atoms, {"x", "y", "z", "radius"}))
   {
-    runtime_error("ProThicknessProfile needs wrapped position and radius");
+    runtime_error(
+      "ProThicknessProfile needs wrapped position and radius");
   }
 
   auto mini_atoms = get_partial_json(atoms, {"x", "y", "z", "radius"});

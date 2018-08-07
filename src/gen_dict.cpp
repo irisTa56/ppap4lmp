@@ -49,7 +49,7 @@ GenDict::GenDict(
 
 /* ------------------------------------------------------------------ */
 
-const nlohmann::json &GenDict::get_data()
+const json &GenDict::get_data()
 {
   message("You got data from GenDict, " + dataname);
   return data;
@@ -57,7 +57,8 @@ const nlohmann::json &GenDict::get_data()
 
 /* ------------------------------------------------------------------ */
 
-std::shared_ptr<Generator> GenDict::get_generator(const std::string &key)
+std::shared_ptr<Generator> GenDict::get_generator(
+  const std::string &key)
 {
   return generator_dict[key];
 }

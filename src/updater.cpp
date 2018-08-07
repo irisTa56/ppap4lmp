@@ -44,6 +44,22 @@ const std::shared_ptr<Generator> Updater::get_generator()
 
 /* ------------------------------------------------------------------ */
 
+void Updater::check_reference_generator(
+  std::shared_ptr<Generator> gen,
+  const std::string &acceptable_datatype)
+{
+  if (gen->get_datatype() == acceptable_datatype)
+  {
+    reference_generator = gen;
+  }
+  else
+  {
+    runtime_error("Cannot accept " + gen->get_dataname());
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
 const bool Updater::check_blacklist(const std::string &dataname)
 {
   bool is_called = true;

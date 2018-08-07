@@ -16,7 +16,7 @@ Filter::Filter(std::shared_ptr<Generator> gen)
 
 /* ------------------------------------------------------------------ */
 
-void Filter::compute(nlohmann::json &data, const std::string &dataname)
+void Filter::compute(json &data, const std::string &dataname)
 {
   if (data == nullptr && reference_generator)
   {

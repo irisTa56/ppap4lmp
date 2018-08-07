@@ -1,11 +1,17 @@
 cmake_minimum_required(VERSION 3.11.0)
 project(ppap4lmp)
 
-add_subdirectory(json)
-include_directories(json/include)
+find_package(nlohmann_json)
+IF(NOT nlohmann_json_FOUND)
+  add_subdirectory(json)
+  include_directories(json/include)
+ENDIF()
 
-add_subdirectory(pybind11)
-include_directories(pybind11/include)
+find_package(pybind11)
+IF(NOT pybind11_FOUND)
+  add_subdirectory(pybind11)
+  include_directories(pybind11/include)
+ENDIF()
 
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})

@@ -35,9 +35,9 @@ FilComparison::FilComparison(
 
 /* ------------------------------------------------------------------ */
 
-void FilComparison::compute_impl(nlohmann::json &data)
+void FilComparison::compute_impl(json &data)
 {
-  nlohmann::json tmp;
+  json tmp;
 
   for (auto &d : data)
   {
@@ -64,41 +64,41 @@ void FilComparison::compute_impl(nlohmann::json &data)
 /* ------------------------------------------------------------------ */
 
 const CompFunction FilComparison::make_lambda(
-  const std::string &oper, const nlohmann::json &rval)
+  const std::string &oper, const json &rval)
 {
   if (oper == "<")
   {
-    return [rval](const nlohmann::json &j) {
+    return [rval](const json &j) {
       return j < rval ? true : false;
     };
   }
   else if (oper == ">")
   {
-    return [rval](const nlohmann::json &j) {
+    return [rval](const json &j) {
       return j > rval ? true : false;
     };
   }
   else if (oper == "<=")
   {
-    return [rval](const nlohmann::json &j) {
+    return [rval](const json &j) {
       return j <= rval ? true : false;
     };
   }
   else if (oper == ">=")
   {
-    return [rval](const nlohmann::json &j) {
+    return [rval](const json &j) {
       return j >= rval ? true : false;
     };
   }
   else if (oper == "==")
   {
-    return [rval](const nlohmann::json &j) {
+    return [rval](const json &j) {
       return j == rval ? true : false;
     };
   }
   else if (oper == "!=")
   {
-    return [rval](const nlohmann::json &j) {
+    return [rval](const json &j) {
       return j != rval ? true : false;
     };
   }

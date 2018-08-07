@@ -15,6 +15,8 @@ class Updater {
  protected:
   std::shared_ptr<Generator> reference_generator;
   virtual void compute_impl(json &) = 0;
+  void check_reference_generator(
+    std::shared_ptr<Generator>, const std::string &);
   const bool check_blacklist(const std::string &);
  public:
   Updater() { omp_init_lock(&omp_lock); }

@@ -9,19 +9,9 @@ create: 2018/07/15 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-AddInertiaMoment::AddInertiaMoment(
-  std::shared_ptr<Generator> gen)
+AddInertiaMoment::AddInertiaMoment(std::shared_ptr<Generator> gen)
 {
-  if (gen->get_datatype() == "Atoms")
-  {
-    reference_generator = gen;
-  }
-  else
-  {
-    runtime_error(
-      "AddInertiaMoment cannot use " + gen->get_dataname());
-  }
-
+  check_reference_generator(gen, "Atoms");
   callable_datatypes = {"Molecules"};
 }
 

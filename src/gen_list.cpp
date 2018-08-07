@@ -36,7 +36,7 @@ GenList::GenList(std::vector<std::shared_ptr<Generator>> generator_list_)
 
 /* ------------------------------------------------------------------ */
 
-const nlohmann::json &GenList::get_data()
+const json &GenList::get_data()
 {
   message("You got data from GenList, " + dataname);
   return data;

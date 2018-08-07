@@ -124,7 +124,8 @@ ArrayXd GenElement::get_1d_double(const std::string &key)
   else
   {
     v(0) = data[key];
-    message(dataname + " might be non-array or null (not double_vector)");
+    message(
+      dataname + " might be non-array or null (not double_vector)");
   }
 
   return v;
@@ -209,7 +210,8 @@ ArrayXXd GenElement::get_2d_double(const std::vector<std::string> &keys)
     {
       a(0, j) = data[keys[j]];
     }
-    message(dataname + " might be non-array or null (not double_array)");
+    message(
+      dataname + " might be non-array or null (not double_array)");
   }
 
   return a;

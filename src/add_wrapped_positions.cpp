@@ -9,19 +9,9 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-AddWrappedPositions::AddWrappedPositions(
-  std::shared_ptr<Generator> gen)
+AddWrappedPositions::AddWrappedPositions(std::shared_ptr<Generator> gen)
 {
-  if (gen->get_datatype() == "Box")
-  {
-    reference_generator = gen;
-  }
-  else
-  {
-    runtime_error(
-      "AddWrappedPositions cannot use " + gen->get_dataname());
-  }
-
+  check_reference_generator(gen, "Box");
   callable_datatypes = {"Atoms", "Molecules", "Beads"};
 }
 

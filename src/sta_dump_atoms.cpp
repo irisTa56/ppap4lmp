@@ -21,7 +21,7 @@ StaDumpAtoms::StaDumpAtoms(
 
 /* ------------------------------------------------------------------ */
 
-void StaDumpAtoms::compute_impl(nlohmann::json &data)
+void StaDumpAtoms::compute_impl(json &data)
 {
   std::ifstream ifs(filepath);
   std::string line;

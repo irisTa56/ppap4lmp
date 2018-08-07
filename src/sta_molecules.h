@@ -11,7 +11,7 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 class StaMolecules : public Starter {
  protected:
-  virtual void compute_impl(nlohmann::json &) override;
+  virtual void compute_impl(json &) override;
  public:
   StaMolecules(std::shared_ptr<Generator>);
   virtual ~StaMolecules() = default;

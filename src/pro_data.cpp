@@ -34,13 +34,13 @@ void ProData::run_impl(int index)
       runtime_error("ProData: Selected key(s) does not exist");
     }
 
-    nlohmann::json j;
+    json j;
 
     if (data.is_array())
     {
       for (const auto &d : data)
       {
-        nlohmann::json tmp;
+        json tmp;
 
         for (const auto &k : selected_keys)
         {
@@ -71,7 +71,7 @@ void ProData::prepare_impl()
 
 /* ------------------------------------------------------------------ */
 
-const std::vector<nlohmann::json> &ProData::get_results()
+const std::vector<json> &ProData::get_results()
 {
   return results;
 }

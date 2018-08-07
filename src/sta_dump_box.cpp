@@ -21,7 +21,7 @@ StaDumpBox::StaDumpBox(
 
 /* ------------------------------------------------------------------ */
 
-void StaDumpBox::compute_impl(nlohmann::json &data)
+void StaDumpBox::compute_impl(json &data)
 {
   std::ifstream ifs(filepath);
   std::string line;

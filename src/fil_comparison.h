@@ -9,15 +9,15 @@ create: 2018/07/02 by Takayuki Kobayashi
 
 #include "filter.h"
 
-using Comparison = std::tuple<std::string,std::string,nlohmann::json>;
-using CompFunction = std::function<bool(const nlohmann::json &)>;
+using Comparison = std::tuple<std::string,std::string,json>;
+using CompFunction = std::function<bool(const json &)>;
 
 class FilComparison : public Filter {
   std::vector<std::pair<std::string,CompFunction>> comp_functions;
   const CompFunction make_lambda(
-    const std::string &, const nlohmann::json &);
+    const std::string &, const json &);
  protected:
-  virtual void compute_impl(nlohmann::json &) override;
+  virtual void compute_impl(json &) override;
  public:
   FilComparison(std::vector<Comparison>);
   FilComparison(std::shared_ptr<Generator>, std::vector<Comparison>);

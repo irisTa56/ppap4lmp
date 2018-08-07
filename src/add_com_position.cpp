@@ -9,19 +9,9 @@ create: 2018/07/13 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-AddCoMPosition::AddCoMPosition(
-  std::shared_ptr<Generator> gen)
+AddCoMPosition::AddCoMPosition(std::shared_ptr<Generator> gen)
 {
-  if (gen->get_datatype() == "Atoms")
-  {
-    reference_generator = gen;
-  }
-  else
-  {
-    runtime_error(
-      "AddCoMPosition cannot use " + gen->get_dataname());
-  }
-
+  check_reference_generator(gen, "Atoms");
   callable_datatypes = {"Molecules"};
 }
 
