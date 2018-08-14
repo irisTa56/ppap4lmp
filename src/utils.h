@@ -78,10 +78,63 @@ static void runtime_error(const Str &msg)
 
 /* ------------------------------------------------------------------ */
 
-static Json get_partial_Json(const Json &data, const Json &key)
+template <typename T>
+static bool check_containment(const Set<T> &set, const T &el)
 {
-  List<Str> key_list = key.is_array() ? key : Json({key});
+  if (set.find(el) == set.end())
+  {
+    return false;
+  }
+  else
+  {
+    return true;
+  }
+}
 
+/* ------------------------------------------------------------------ */
+
+template <typename T>
+static bool check_containment(const Set<T> &set, const Set<T> &els)
+{
+  bool tmp = true;
+
+  for (const auto &el : els)
+  {
+    if (set.find(el) == set.end())
+    {
+      tmp = false;
+      break;
+    }
+  }
+
+  return tmp;
+}
+
+/* ------------------------------------------------------------------ */
+
+static Json get_partial_Json(const Json &data, const Str &key)
+{
+  Json tmp;
+
+  if (data.is_array())
+  {
+    for (const auto &d : data)
+    {
+      tmp.push_back({key, d[key]});
+    }
+  }
+  else
+  {
+    tmp[key] = data[key];
+  }
+
+  return tmp;
+}
+
+/* ------------------------------------------------------------------ */
+
+static Json get_partial_Json(const Json &data, const Set<Str> &keys)
+{
   Json tmp;
 
   if (data.is_array())
@@ -90,7 +143,7 @@ static Json get_partial_Json(const Json &data, const Json &key)
     {
       Json elem;
 
-      for (const auto &k : key_list)
+      for (const auto &k : keys)
       {
         elem[k] = d[k];
       }
@@ -100,7 +153,7 @@ static Json get_partial_Json(const Json &data, const Json &key)
   }
   else
   {
-    for (const auto &k : key_list)
+    for (const auto &k : keys)
     {
       tmp[k] = data[k];
     }
@@ -112,7 +165,7 @@ static Json get_partial_Json(const Json &data, const Json &key)
 /* ------------------------------------------------------------------ */
 
 static Dict<Json,int> get_map_to_index(
-  const Json &data, const Json &key)
+  const Json &data, const Str &key)
 {
   Dict<Json,int> tmp;
 
@@ -120,32 +173,43 @@ static Dict<Json,int> get_map_to_index(
   {
     int length = data.size();
 
-    if (key.is_array())
+    for (int i = 0; i != length; ++i)
     {
-      for (int i = 0; i != length; ++i)
-      {
-        auto &d = data[i];
-        Json arr;
-
-        for (const Str &k : key)
-        {
-          arr.push_back(d[k]);
-        }
-
-        tmp[arr] = i;
-      }
-    }
-    else
-    {
-      for (int i = 0; i != length; ++i)
-      {
-        tmp[data[i][key.get<Str>()]] = i;
-      }
+      tmp[data[i][key]] = i;
     }
   }
-  else
+
+  if (tmp.size() != data.size())
   {
-    message("Map to index cannot be created for non-array/null data");
+    runtime_error("Map to index is not bijection");
+  }
+
+  return tmp;
+}
+
+/* ------------------------------------------------------------------ */
+
+static Dict<Json,int> get_map_to_index(
+  const Json &data, const List<Str> &keys)
+{
+  Dict<Json,int> tmp;
+
+  if (data.is_array())
+  {
+    int length = data.size();
+
+    for (int i = 0; i != length; ++i)
+    {
+      auto &d = data[i];
+      Json arr;
+
+      for (const Str &key : keys)
+      {
+        arr.push_back(d[key]);
+      }
+
+      tmp[arr] = i;
+    }
   }
 
   if (tmp.size() != data.size())
