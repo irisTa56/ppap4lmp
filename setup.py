@@ -67,25 +67,38 @@ class CMakeBuild(build_ext):
 
 #-----------------------------------------------------------------------
 
-affixes = [
-  "generator", "processor", "invoker",
-  "updater", "starter", "adder", "filter"]
+affixes = ["generator", "updater"]
+  #"generator", "processor", "invoker",
+  #"updater", "starter", "adder", "filter"]
 
-all_header_names = [os.path.basename(h)[:-2] for h in glob.glob("src/*.h")]
+all_header_names = [
+  os.path.basename(h)[:-2] for h in glob.glob("src/*.h")]
 
-pybind = []
+pybinds = []
+classnames = []
 
 for affix in affixes:
 
-  with open("src/headers_{}.h".format(affix), "w") as f:
+  with open("src/headers_{}.h".format(affix), "w") as headers:
 
     names = sorted(
       [n for n in all_header_names if n.startswith(affix[:3])],
       key=lambda x: x.replace("_", "~"))
 
     for name in names:
-      f.write("#include \"{}.h\"\n".format(name))
-      pybind.append("  pybind_{}(m);".format(name))
+      headers.write("#include \"{}.h\"\n".format(name))
+
+      with open("src/{}.h".format(name), "r") as header:
+        for line in header:
+          line_ = line.lstrip()
+          if line_.startswith("static void pybind_"):
+            pybinds.append("  pybind_{}(m);".format(name))
+          elif line_.startswith("py::class_<"):
+            classnames.append(re.split("[,<>]", line_[11:])[0])
+
+classnames.sort()
+
+#-----------------------------------------------------------------------
 
 with open("src/pybind.h", "w") as f:
 
@@ -109,21 +122,9 @@ PYBIND11_MODULE(_ppap4lmp, m)
 """.format(
   headers="\n".join([
     "#include \"headers_{}.h\"".format(affix) for affix in affixes]),
-  pybind="\n".join(pybind)))
+  pybind="\n".join(pybinds)))
 
 #-----------------------------------------------------------------------
-
-class_names = []
-
-for header in glob.glob("src/*.h"):
-
-  with open(header, "r") as f:
-    for line in f:
-      line_ = line.lstrip()
-      if line_.startswith("py::class_<"):
-        class_names.append(re.split("[,<>]", line_[11:])[0])
-
-class_names.sort()
 
 with open("ppap4lmp/__init__.py", "w") as f:
 
@@ -136,7 +137,7 @@ __all__ = [
   "Element",
   "log_switch",
 ]
-""".format(", ".join(class_names), "\", \n  \"".join(class_names)))
+""".format(", ".join(classnames), "\", \n  \"".join(classnames)))
 
 #-----------------------------------------------------------------------
 

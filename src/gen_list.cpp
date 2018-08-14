@@ -9,24 +9,9 @@ create: 2018/07/03 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
-GenList::GenList(std::vector<std::shared_ptr<Generator>> generator_list_)
+GenList::GenList(const List<ShPtr<Generator>> &generator_list_)
 {
   generator_list = generator_list_;
-
-  auto subtype = generator_list.front()->get_datatype();
-
-  for (auto gen : generator_list)
-  {
-    if (subtype != gen->get_datatype())
-    {
-      runtime_error("GenList must contain the same type elements");
-    }
-  }
-
-  datatype = "List(" + subtype + ")";
-
-  instance_count++;
-  dataname = datatype + "_" + std::to_string(instance_count);
 
   for (auto gen : generator_list)
   {
@@ -36,17 +21,27 @@ GenList::GenList(std::vector<std::shared_ptr<Generator>> generator_list_)
 
 /* ------------------------------------------------------------------ */
 
-const json &GenList::get_data()
+ShPtr<GenElement> GenList::get_element(Json name)
 {
-  message("You got data from GenList, " + dataname);
-  return data;
+  if (!name.is_number_integer())
+  {
+    runtime_error("GenList::get_element accepts an integer only");
+  }
+
+  return std::dynamic_pointer_cast<GenElement>(
+    generator_list[name.get<int>()]);
 }
 
 /* ------------------------------------------------------------------ */
 
-std::shared_ptr<Generator> GenList::get_generator(int index)
+ShPtr<Generator> GenList::get_generator(Json name)
 {
-  return generator_list[index];
+  if (!name.is_number_integer())
+  {
+    runtime_error("GenList::get_generator accepts an integer only");
+  }
+
+  return generator_list[name.get<int>()];
 }
 
 /* ------------------------------------------------------------------ */

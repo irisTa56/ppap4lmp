@@ -10,24 +10,13 @@ create: 2018/07/03 by Takayuki Kobayashi
 #include "generator.h"
 
 class GenList : public Generator {
-  std::vector<std::shared_ptr<Generator>> generator_list;
+  List<ShPtr<Generator>> generator_list;
  public:
-  GenList(std::vector<std::shared_ptr<Generator>>);
+  GenList(const List<ShPtr<Generator>> &);
   virtual ~GenList() = default;
-  virtual const json &get_data() override;
-  virtual std::shared_ptr<Generator> get_generator(int) override;
-  using Generator::get_generator;
+  virtual ShPtr<GenElement> get_element(Json name = nullptr) override;
+  virtual ShPtr<Generator> get_generator(Json name = nullptr) override;
   const int get_length();
 };
-
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_gen_list(py::module &m)
-{
-  py::class_<GenList,PyGenerator<GenList>,Generator,std::shared_ptr<GenList>>(m, "GenList")
-    .def(py::init<std::vector<std::shared_ptr<Generator>>>())
-    .def("get_length", &GenList::get_length);
-}
 
 #endif

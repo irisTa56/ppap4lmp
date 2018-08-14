@@ -9,42 +9,64 @@ create: 2018/07/01 by Takayuki Kobayashi
 
 #include "generator.h"
 
-class GenElement : public Generator {
+class GenElement : public Generator, public EnableShElem {
+  static int instance_count;
+  int ID;
+  int n_remain = 0;
+  Json data = nullptr;
+  Set<Str> datakeys;
+  omp_lock_t omp_lock;
  public:
   GenElement();
   virtual ~GenElement() = default;
-  virtual const json &get_data() override;
-  const json &get_data_py();
-  virtual ArrayXi get_1d_int(
-    const std::string &) override;
-  const ArrayXi get_1d_int_py(
-    const std::string &);
-  virtual ArrayXd get_1d_double(
-    const std::string &) override;
-  const ArrayXd get_1d_double_py(
-    const std::string &);
-  virtual ArrayXXi get_2d_int(
-    const std::vector<std::string> &) override;
-  const ArrayXXi get_2d_int_py(
-    const std::vector<std::string> &);
-  virtual ArrayXXd get_2d_double(
-    const std::vector<std::string> &) override;
-  const ArrayXXd get_2d_double_py(
-    const std::vector<std::string> &);
-  void append_updater(std::shared_ptr<Updater>);
-  std::shared_ptr<Generator> set_initial_updater(
-    std::shared_ptr<Updater>);
+  virtual ShPtr<GenElement> get_element(Json name = nullptr) override;
+  virtual ShPtr<Generator> get_generator(Json name = nullptr) override;
+  void increment_remain();
+  void decrement_remain();
+  void update_data(ShPtr<Updater>);
+  ShPtr<GenElement> append_updater(ShPtr<Updater>);
+  const Json &get_data();
+  const Set<Str> &get_keys();
+  ArrayXi get_1d_int(const Str &);
+  ArrayXd get_1d_double(const Str &);
+  ArrayXXi get_2d_int(const List<Str> &);
+  ArrayXXd get_2d_double(const List<Str> &);
+  const Json &get_data_py();
+  const Set<Str> &get_keys_py();
+  const ArrayXi get_1d_int_py(const Str &);
+  const ArrayXd get_1d_double_py(const Str &);
+  const ArrayXXi get_2d_int_py(const List<Str> &);
+  const ArrayXXd get_2d_double_py(const List<Str> &);
 };
 
 /* ------------------------------------------------------------------ */
 // for pybind11
 
+// trampoline class to bind Python
+
+class PyGenElement : public GenElement {
+ public:
+  using GenElement::GenElement;
+  ShPtr<GenElement> get_element(Json name) override
+  {
+    PYBIND11_OVERLOAD(
+      ShPtr<GenElement>, GenElement, get_element, name);
+  }
+  ShPtr<Generator> get_generator(Json name) override
+  {
+    PYBIND11_OVERLOAD(
+      ShPtr<Generator> , GenElement, get_generator, name);
+  }
+};
+
+
 static void pybind_gen_element(py::module &m)
 {
-  py::class_<GenElement,PyGenerator<GenElement>,Generator,std::shared_ptr<GenElement>>(m, "GenElement")
+  py::class_<GenElement,PyGenElement,ShPtr<GenElement>>(m, "GenElement")
     .def(py::init<>())
-    .def("get_data", &GenElement::get_data_py)
     .def("append_updater", &GenElement::append_updater)
+    .def("get_data", &GenElement::get_data_py)
+    .def("get_keys", &GenElement::get_keys_py)
     .def("get_1d_int", &GenElement::get_1d_int_py)
     .def("get_1d_double", &GenElement::get_1d_double_py)
     .def("get_2d_int", &GenElement::get_2d_int_py)
@@ -56,10 +78,10 @@ static void pybind_gen_element(py::module &m)
   */
   m.def(
     "Element",
-    [](std::shared_ptr<Updater> upd)
+    [](ShPtr<Updater> upd)
     {
-      return std::shared_ptr<GenElement>(
-        new GenElement())->set_initial_updater(upd);
+      return ShPtr<GenElement>(
+        new GenElement())->append_updater(upd);
     });
 }
 

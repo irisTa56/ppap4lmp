@@ -11,35 +11,9 @@ create: 2018/07/03 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
-GenDict::GenDict(
-  std::unordered_set<std::shared_ptr<Generator>> generator_set)
+GenDict::GenDict(const Dict<Str,ShPtr<Generator>> &generator_dict_)
 {
-  std::vector<std::string> key_list;
-
-  for (auto gen : generator_set)
-  {
-    key_list.push_back(gen->get_datatype());
-    generator_dict[key_list.back()] = gen;
-  }
-
-  std::sort(key_list.begin(), key_list.end());
-
-  datatype = "Dict(";
-
-  for (const auto &key : key_list)
-  {
-    datatype += key;
-
-    if (key != key_list.back())
-    {
-      datatype += ",";
-    }
-  }
-
-  datatype += ")";
-
-  instance_count++;
-  dataname = datatype + "_" + std::to_string(instance_count);
+  generator_dict = generator_dict_;
 
   for (const auto &item : generator_dict)
   {
@@ -49,25 +23,34 @@ GenDict::GenDict(
 
 /* ------------------------------------------------------------------ */
 
-const json &GenDict::get_data()
+ShPtr<GenElement> GenDict::get_element(Json name)
 {
-  message("You got data from GenDict, " + dataname);
-  return data;
+  if (!name.is_string())
+  {
+    runtime_error("GenDict::get_element accepts a string only");
+  }
+
+  return std::dynamic_pointer_cast<GenElement>(
+    generator_dict[name.get<Str>()]);
 }
 
 /* ------------------------------------------------------------------ */
 
-std::shared_ptr<Generator> GenDict::get_generator(
-  const std::string &key)
+ShPtr<Generator> GenDict::get_generator(Json name)
 {
-  return generator_dict[key];
+  if (!name.is_string())
+  {
+    runtime_error("GenDict::get_generator accepts a string only");
+  }
+
+  return generator_dict[name.get<Str>()];
 }
 
 /* ------------------------------------------------------------------ */
 
-const std::unordered_set<std::string> GenDict::get_keys()
+const Set<Str> GenDict::get_keys()
 {
-  std::unordered_set<std::string> tmp;
+  Set<Str> tmp;
 
   for (const auto &item : generator_dict)
   {

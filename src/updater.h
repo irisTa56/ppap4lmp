@@ -10,22 +10,18 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "generator.h"
 
 class Updater {
+  Set<int> dataid_blacklist;
   omp_lock_t omp_lock;
-  std::unordered_set<std::string> dataname_blacklist;
  protected:
-  std::shared_ptr<Generator> reference_generator;
-  virtual void compute_impl(json &) = 0;
-  void check_reference_generator(
-    std::shared_ptr<Generator>, const std::string &);
-  const bool check_blacklist(const std::string &);
+  ShPtr<Generator> ext_generator;
+  virtual void compute_impl(Json &, Set<Str> &) = 0;
+  const bool check_blacklist(int);
  public:
   Updater() { omp_init_lock(&omp_lock); }
   virtual ~Updater() = default;
-  virtual void compute(json &, const std::string &) = 0;
-  virtual void initialize_datatype(std::string &);
-  virtual const bool is_callable(const std::string &);
-  void remove_from_blacklist(const std::string &);
-  const std::shared_ptr<Generator> get_generator();
+  virtual void compute(Json &, Set<Str> &, int) = 0;
+  void remove_from_blacklist(int);
+  ShPtr<Generator> get_ext_generator();
 };
 
 /* ------------------------------------------------------------------ */
@@ -34,31 +30,17 @@ class Updater {
 // trampoline class to bind Python
 template <class UPD = Updater>
 class PyUpdater : public UPD {
- public:
-  using UPD::UPD;
-  void compute(json &data, const std::string &dataname) override
-  {
-    PYBIND11_OVERLOAD_PURE(void, UPD, compute, data, dataname);
-  }
-  void initialize_datatype(std::string &datatype) override
-  {
-    PYBIND11_OVERLOAD(void, UPD, initialize_datatype, datatype);
-  }
-  const bool is_callable(const std::string &datatype) override
-  {
-    PYBIND11_OVERLOAD(const bool, UPD, is_callable, datatype);
-  }
  protected:
-  void compute_impl(json &data) override
+  void compute_impl(Json &data) override
   {
     PYBIND11_OVERLOAD_PURE(void, UPD, compute_impl, data);
   }
+ public:
+  using UPD::UPD;
+  void compute(Json &data, int dataid) override
+  {
+    PYBIND11_OVERLOAD_PURE(void, UPD, compute, data, dataid);
+  }
 };
-
-static void pybind_updater(py::module &m)
-{
-  py::class_<Updater,PyUpdater<>,std::shared_ptr<Updater>>(m, "Updater")
-    .def(py::init<>());
-}
 
 #endif
