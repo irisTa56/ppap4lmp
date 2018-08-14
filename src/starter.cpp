@@ -11,13 +11,15 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 void Starter::compute(Json &data, Set<Str> &datakeys, int dataid)
 {
-  if (data != nullptr)
+  if (check_blacklist(dataid))
   {
-    runtime_error("Starter accepts empty data only");
-  }
-
-  if (!check_blacklist(dataid))
-  {
-    compute_impl(data, datakeys);
+    if (data == nullptr)
+    {
+      compute_impl(data, datakeys);
+    }
+    else
+    {
+      runtime_error("Starter accepts empty data only");
+    }
   }
 }

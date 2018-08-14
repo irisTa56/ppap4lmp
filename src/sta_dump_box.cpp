@@ -49,6 +49,8 @@ void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
       data["periodic_y"] = strs[4] == "pp" ? true : false;
       data["periodic_z"] = strs[5] == "pp" ? true : false;
 
+      datakeys.insert({"periodic_x", "periodic_y", "periodic_z"});
+
       for (Str dim : {"x", "y", "z"})
       {
         std::getline(ifs, line);
@@ -56,6 +58,8 @@ void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
 
         data["lo_"+dim] = std::stod(strs[0]);
         data["hi_"+dim] = std::stod(strs[1]);
+
+        datakeys.insert({"lo_"+dim, "hi_"+dim});
       }
 
       break;
@@ -68,8 +72,4 @@ void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
       }
     }
   }
-
-  datakeys.insert({
-    "periodic_x", "periodic_y", "periodic_z",
-    "lo_x", "hi_x", "lo_y", "hi_y", "lo_z", "hi_z"});
 }
