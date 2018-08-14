@@ -129,7 +129,7 @@ const Set<Str> &GenElement::get_keys()
 
 ArrayXi GenElement::get_1d_int(const Str &key)
 {
-  ArrayXi v(data.is_array() ? data.size() : 1);
+  ArrayXi tmp(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
@@ -137,22 +137,22 @@ ArrayXi GenElement::get_1d_int(const Str &key)
 
     for (int i = 0; i != length; ++i)
     {
-      v(i) = data[i][key];
+      tmp(i) = data[i][key];
     }
   }
   else
   {
-    v(0) = data[key];
+    tmp(0) = data[key];
   }
 
-  return v;
+  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
 
 ArrayXd GenElement::get_1d_double(const Str &key)
 {
-  ArrayXd v(data.is_array() ? data.size() : 1);
+  ArrayXd tmp(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
@@ -160,15 +160,15 @@ ArrayXd GenElement::get_1d_double(const Str &key)
 
     for (int i = 0; i != length; ++i)
     {
-      v(i) = data[i][key];
+      tmp(i) = data[i][key];
     }
   }
   else
   {
-    v(0) = data[key];
+    tmp(0) = data[key];
   }
 
-  return v;
+  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
@@ -177,7 +177,7 @@ ArrayXXi GenElement::get_2d_int(const List<Str> &keys)
 {
   int n_keys = keys.size();
 
-  ArrayXXi a(data.is_array() ? data.size() : 1, n_keys);
+  ArrayXXi tmp(data.is_array() ? data.size() : 1, n_keys);
 
   if (data.is_array())
   {
@@ -189,7 +189,7 @@ ArrayXXi GenElement::get_2d_int(const List<Str> &keys)
 
       for (int j = 0; j != n_keys; ++j)
       {
-        a(i, j) = d[keys[j]];
+        tmp(i, j) = d[keys[j]];
       }
     }
   }
@@ -197,11 +197,11 @@ ArrayXXi GenElement::get_2d_int(const List<Str> &keys)
   {
     for (int j = 0; j != n_keys; ++j)
     {
-      a(0, j) = data[keys[j]];
+      tmp(0, j) = data[keys[j]];
     }
   }
 
-  return a;
+  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
@@ -210,7 +210,7 @@ ArrayXXd GenElement::get_2d_double(const List<Str> &keys)
 {
   int n_keys = keys.size();
 
-  ArrayXXd a(data.is_array() ? data.size() : 1, n_keys);
+  ArrayXXd tmp(data.is_array() ? data.size() : 1, n_keys);
 
   if (data.is_array())
   {
@@ -222,7 +222,7 @@ ArrayXXd GenElement::get_2d_double(const List<Str> &keys)
 
       for (int j = 0; j != n_keys; ++j)
       {
-        a(i, j) = d[keys[j]];
+        tmp(i, j) = d[keys[j]];
       }
     }
   }
@@ -230,11 +230,11 @@ ArrayXXd GenElement::get_2d_double(const List<Str> &keys)
   {
     for (int j = 0; j != n_keys; ++j)
     {
-      a(0, j) = data[keys[j]];
+      tmp(0, j) = data[keys[j]];
     }
   }
 
-  return a;
+  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
