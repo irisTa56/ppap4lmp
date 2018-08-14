@@ -72,7 +72,7 @@ static void message(const Str &msg)
 
 static void runtime_error(const Str &msg)
 {
-  std::cout << msg << std::endl;
+  logging(msg);
   PyErr_SetString(PyExc_RuntimeError, msg.c_str());
 }
 

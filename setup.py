@@ -67,7 +67,7 @@ class CMakeBuild(build_ext):
 
 #-----------------------------------------------------------------------
 
-affixes = ["generator", "updater"]
+affixes = ["generator", "updater", "starter"]
   #"generator", "processor", "invoker",
   #"updater", "starter", "adder", "filter"]
 
@@ -93,7 +93,7 @@ for affix in affixes:
           line_ = line.lstrip()
           if line_.startswith("static void pybind_"):
             pybinds.append("  pybind_{}(m);".format(name))
-          elif line_.startswith("py::class_<"):
+          elif line_.startswith("py::class_<") and 12 < len(line_):
             classnames.append(re.split("[,<>]", line_[11:])[0])
 
 classnames.sort()

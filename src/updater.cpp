@@ -15,7 +15,7 @@ const bool Updater::check_blacklist(int dataid)
 
   omp_set_lock(&omp_lock);
 
-  if (check_containment(dataid_blacklist, dataid))
+  if (!check_containment(dataid_blacklist, dataid))
   {
     dataid_blacklist.insert(dataid);
     is_called = false;

@@ -15,6 +15,7 @@ GenElement::GenElement()
 {
   instance_count++;
   ID = instance_count;
+  omp_init_lock(&omp_lock);
 }
 
 /* ------------------------------------------------------------------ */

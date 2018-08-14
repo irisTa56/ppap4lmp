@@ -59,10 +59,10 @@ class PyGenElement : public GenElement {
   }
 };
 
-
 static void pybind_gen_element(py::module &m)
 {
-  py::class_<GenElement,PyGenElement,ShPtr<GenElement>>(m, "GenElement")
+  py::class_<
+    GenElement,PyGenElement,ShPtr<GenElement>>(m, "GenElement")
     .def(py::init<>())
     .def("append_updater", &GenElement::append_updater)
     .def("get_data", &GenElement::get_data_py)

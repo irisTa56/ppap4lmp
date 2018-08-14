@@ -2,4 +2,4 @@
 
 /* -- variables used in utils.h/utils_py.h -- */
 
-bool ToF_LOGGING = true;
+bool ToF_LOGGING = false;
