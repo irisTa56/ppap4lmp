@@ -1,11 +1,22 @@
 import unittest
 import traceback
 
-from ppap4lmp import Element, StaDumpAtoms, StaMolecules
+from ppap4lmp import Element, StaDumpBox, StaDumpAtoms, StaMolecules
 
 class TestStaMolecules(unittest.TestCase):
 
-  #def test_error(self):
+  def test_error(self):
+
+    molecules = Element(StaMolecules(
+      Element(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))))
+
+    try:
+      molecules.get_data()
+    except SystemError:
+      msg = traceback.format_exc()
+      self.assertEqual(
+        msg.split("\n")[0],
+        "RuntimeError: StaMolecules needs 'mol' externally")
 
   def test_get_data(self):
 

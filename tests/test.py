@@ -25,7 +25,7 @@ def suite():
   suite.addTest(TestStaDumpAtoms("test_get_2d_int"))
   suite.addTest(TestStaDumpAtoms("test_get_2d_double"))
 
-  #suite.addTest(TestStaDumpAtoms("test_error"))
+  suite.addTest(TestStaDumpAtoms("test_error"))
   suite.addTest(TestStaMolecules("test_get_data"))
   suite.addTest(TestStaMolecules("test_get_keys"))
 

@@ -27,6 +27,11 @@ void StaMolecules::compute_impl(Json &data, Set<Str> &datakeys)
 
   auto &atoms = gen_atoms->get_data();
 
+  if (!atoms.is_array())
+  {
+    runtime_error("StaMolecules needs external 'array'");
+  }
+
   Dict<int,int> id_to_index;
 
   int max_index = 0;
