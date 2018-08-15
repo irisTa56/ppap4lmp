@@ -46,7 +46,6 @@ void StaDumpAtoms::compute_impl(Json &data, Set<Str> &datakeys)
       {
         auto keys = split(line);
         keys.erase(keys.begin(), keys.begin()+2);
-        datakeys.insert(keys.begin(), keys.end());
 
         std::getline(ifs, line);
 
@@ -72,6 +71,8 @@ void StaDumpAtoms::compute_impl(Json &data, Set<Str> &datakeys)
 
           std::getline(ifs, line);
         }
+
+        datakeys.insert(keys.begin(), keys.end());
 
         break;
       }

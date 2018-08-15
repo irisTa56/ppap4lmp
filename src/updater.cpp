@@ -11,19 +11,19 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 const bool Updater::check_blacklist(int dataid)
 {
-  bool is_called = false;
+  bool pass = false;
 
   omp_set_lock(&omp_lock);
 
-  if (!check_containment(dataid_blacklist, dataid))
+  if (!check_containment<int>(dataid_blacklist, dataid))
   {
     dataid_blacklist.insert(dataid);
-    is_called = true;
+    pass = true;
   }
 
   omp_unset_lock(&omp_lock);
 
-  return is_called;
+  return pass;
 }
 
 /* ------------------------------------------------------------------ */

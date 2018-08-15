@@ -2,6 +2,7 @@ import unittest
 
 from test_StaDumpBox import TestStaDumpBox
 from test_StaDumpAtoms import TestStaDumpAtoms
+from test_StaMolecules import TestStaMolecules
 
 from ppap4lmp import __version__
 
@@ -23,6 +24,10 @@ def suite():
   suite.addTest(TestStaDumpAtoms("test_get_1d_double"))
   suite.addTest(TestStaDumpAtoms("test_get_2d_int"))
   suite.addTest(TestStaDumpAtoms("test_get_2d_double"))
+
+  #suite.addTest(TestStaDumpAtoms("test_error"))
+  suite.addTest(TestStaMolecules("test_get_data"))
+  suite.addTest(TestStaMolecules("test_get_keys"))
 
   return suite
 

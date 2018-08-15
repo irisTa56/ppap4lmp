@@ -1,8 +1,6 @@
 import unittest
 import traceback
 
-import numpy as np
-
 from ppap4lmp import Element, StaDumpBox
 
 class TestStaDumpBox(unittest.TestCase):
