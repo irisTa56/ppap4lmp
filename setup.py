@@ -67,7 +67,7 @@ class CMakeBuild(build_ext):
 
 #-----------------------------------------------------------------------
 
-affixes = ["generator", "updater", "starter"]
+affixes = ["generator", "updater", "starter", "filter"]
   #"generator", "processor", "invoker",
   #"updater", "starter", "adder", "filter"]
 

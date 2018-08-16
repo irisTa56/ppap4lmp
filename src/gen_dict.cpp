@@ -28,6 +28,7 @@ ShPtr<GenElement> GenDict::get_element(Json name)
   if (!name.is_string())
   {
     runtime_error("GenDict::get_element accepts a string only");
+    return ShPtr<GenElement>();
   }
 
   return std::dynamic_pointer_cast<GenElement>(
@@ -41,6 +42,7 @@ ShPtr<Generator> GenDict::get_generator(Json name)
   if (!name.is_string())
   {
     runtime_error("GenDict::get_generator accepts a string only");
+    return ShPtr<Generator>();
   }
 
   return generator_dict[name.get<Str>()];

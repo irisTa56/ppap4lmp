@@ -25,6 +25,7 @@ ShPtr<GenElement> GenElement::get_element(Json name)
   if (name != nullptr)
   {
     runtime_error("GenElement::get_element accepts no argument");
+    return ShPtr<GenElement>();
   }
 
   return shared_from_this();
@@ -37,6 +38,7 @@ ShPtr<Generator> GenElement::get_generator(Json name)
   if (name != nullptr)
   {
     runtime_error("GenElement::get_generator accepts no argument");
+    return ShPtr<Generator>();
   }
 
   return shared_from_this();
@@ -80,6 +82,7 @@ void GenElement::decrement_remain()
   {
     runtime_error(
       "Data-" + std::to_string(ID) + ": Invalid data use is detected");
+    return;
   }
 
   omp_unset_lock(&omp_lock);

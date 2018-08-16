@@ -182,6 +182,7 @@ static Dict<Json,int> get_map_to_index(
   if (tmp.size() != data.size())
   {
     runtime_error("Map to index is not bijection");
+    return Dict<Json,int>();
   }
 
   return tmp;
@@ -215,6 +216,7 @@ static Dict<Json,int> get_map_to_index(
   if (tmp.size() != data.size())
   {
     runtime_error("Map to index is not bijection");
+    return Dict<Json,int>();
   }
 
   return tmp;

@@ -3,6 +3,8 @@ import unittest
 from test_StaDumpBox import TestStaDumpBox
 from test_StaDumpAtoms import TestStaDumpAtoms
 from test_StaMolecules import TestStaMolecules
+from test_FilSet import TestFilSet
+from test_FilComparison import TestFilComparison
 
 from ppap4lmp import __version__
 
@@ -28,6 +30,15 @@ def suite():
   suite.addTest(TestStaDumpAtoms("test_error"))
   suite.addTest(TestStaMolecules("test_get_data"))
   suite.addTest(TestStaMolecules("test_get_keys"))
+
+  suite.addTest(TestFilSet("test_error"))
+  suite.addTest(TestFilSet("test_equivalent_filter"))
+  suite.addTest(TestFilSet("test_remaining_number"))
+
+  suite.addTest(TestFilComparison("test_error"))
+  suite.addTest(TestFilComparison("test_equivalent_filter"))
+  suite.addTest(TestFilComparison("test_remaining_number"))
+  suite.addTest(TestFilComparison("test_de_morgan"))
 
   return suite
 

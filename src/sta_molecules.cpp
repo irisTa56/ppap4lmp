@@ -23,6 +23,7 @@ void StaMolecules::compute_impl(Json &data, Set<Str> &datakeys)
   if (!check_containment<Str>(gen_atoms->get_keys(), "mol"))
   {
     runtime_error("StaMolecules needs 'mol' externally");
+    return;
   }
 
   auto &atoms = gen_atoms->get_data();
@@ -30,6 +31,7 @@ void StaMolecules::compute_impl(Json &data, Set<Str> &datakeys)
   if (!atoms.is_array())
   {
     runtime_error("StaMolecules needs external 'array'");
+    return;
   }
 
   Dict<int,int> id_to_index;

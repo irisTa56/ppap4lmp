@@ -22,6 +22,7 @@ void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
   if (!ifs.is_open())
   {
     runtime_error("No such a file: " + filepath);
+    return;
   }
 
   while (std::getline(ifs, line))

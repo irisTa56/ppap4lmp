@@ -26,6 +26,7 @@ ShPtr<GenElement> GenList::get_element(Json name)
   if (!name.is_number_integer())
   {
     runtime_error("GenList::get_element accepts an integer only");
+    return ShPtr<GenElement>();
   }
 
   return std::dynamic_pointer_cast<GenElement>(
@@ -39,6 +40,7 @@ ShPtr<Generator> GenList::get_generator(Json name)
   if (!name.is_number_integer())
   {
     runtime_error("GenList::get_generator accepts an integer only");
+    return ShPtr<Generator>();
   }
 
   return generator_list[name.get<int>()];

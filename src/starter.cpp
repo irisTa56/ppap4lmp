@@ -20,6 +20,7 @@ void Starter::compute(Json &data, Set<Str> &datakeys, int dataid)
     else
     {
       runtime_error("Starter accepts empty data only");
+      return;
     }
   }
 }
