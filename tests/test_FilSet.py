@@ -7,7 +7,8 @@ class TestFilSet(unittest.TestCase):
 
   def test_error(self):
 
-    atoms = Element(StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
+    atoms = Element(
+      StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilSet({"dummy": {1, 2, 3}}))
 
     try:

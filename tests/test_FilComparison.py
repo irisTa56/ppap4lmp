@@ -9,7 +9,8 @@ class TestFilComparison(unittest.TestCase):
 
   def test_error(self):
 
-    atoms = Element(StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
+    atoms = Element(
+      StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilComparison([("dummy", "<", 0)]))
 
     try:
@@ -18,9 +19,11 @@ class TestFilComparison(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: FilComparison cannot use nonexistent property: dummy")
+        "RuntimeError: FilComparison cannot use nonexistent "
+        + "property: dummy")
 
-    atoms = Element(StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
+    atoms = Element(
+      StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
 
     try:
       atoms.append_updater(FilComparison([("mol", "dummy", 10)]))

@@ -11,8 +11,8 @@ create: 2018/06/30 by Takayuki Kobayashi
 
 class Filter : public Updater {
  public:
-  Filter() = default;
   Filter(ShPtr<GenElement>);
+  using Updater::Updater;
   virtual ~Filter() = default;
   virtual void compute(Json &, Set<Str> &, int) override;
 };

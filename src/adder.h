@@ -11,7 +11,7 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 class Adder : public Updater {
  public:
-  Adder() = default;
+  using Updater::Updater;
   virtual ~Adder() = default;
   virtual void compute(Json &, Set<Str> &, int) override;
 };

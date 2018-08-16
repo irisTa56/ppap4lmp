@@ -11,7 +11,7 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 class Starter : public Updater {
  public:
-  Starter() = default;
+  using Updater::Updater;
   virtual ~Starter() = default;
   virtual void compute(Json &, Set<Str> &, int) override;
 };

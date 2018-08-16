@@ -7,7 +7,13 @@ from test_StaDumpAtoms import TestStaDumpAtoms
 from test_StaMolecules import TestStaMolecules
 from test_FilSet import TestFilSet
 from test_FilComparison import TestFilComparison
+
 from test_AddMap import TestAddMap
+from test_AddWrappedPositions import TestAddWrappedPositions
+from test_AddCoMPositions import TestAddCoMPositions
+from test_AddInertiaMoment import TestAddInertiaMoment
+from test_AddGyrationRadius import TestAddGyrationRadius
+from test_AddMolecularOrientation import TestAddMolecularOrientation
 
 from ppap4lmp import __version__
 
@@ -59,6 +65,22 @@ def suite_adder():
   suite.addTest(TestAddMap("test_error"))
   suite.addTest(TestAddMap("test_nonarray"))
   suite.addTest(TestAddMap("test_array"))
+
+  suite.addTest(TestAddWrappedPositions("test_error"))
+  suite.addTest(TestAddWrappedPositions("test_wrapping"))
+
+  suite.addTest(TestAddCoMPositions("test_error"))
+  suite.addTest(TestAddCoMPositions("test_positions"))
+
+  suite.addTest(TestAddInertiaMoment("test_error"))
+  suite.addTest(TestAddInertiaMoment("test_isotropic"))
+
+  suite.addTest(TestAddGyrationRadius("test_error"))
+  suite.addTest(TestAddGyrationRadius("test_isotropic"))
+
+  suite.addTest(TestAddMolecularOrientation("test_error"))
+  suite.addTest(TestAddMolecularOrientation("test_isotropic"))
+  suite.addTest(TestAddMolecularOrientation("test_x_oriented"))
 
   return suite
 
