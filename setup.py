@@ -67,9 +67,8 @@ class CMakeBuild(build_ext):
 
 #-----------------------------------------------------------------------
 
-affixes = ["generator", "updater", "starter", "filter"]
+affixes = ["generator", "updater", "starter", "filter", "adder"]
   #"generator", "processor", "invoker",
-  #"updater", "starter", "adder", "filter"]
 
 all_header_names = [
   os.path.basename(h)[:-2] for h in glob.glob("src/*.h")]

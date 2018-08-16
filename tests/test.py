@@ -1,3 +1,4 @@
+import sys
 import unittest
 
 from test_StaCustom import TestStaCustom
@@ -6,13 +7,15 @@ from test_StaDumpAtoms import TestStaDumpAtoms
 from test_StaMolecules import TestStaMolecules
 from test_FilSet import TestFilSet
 from test_FilComparison import TestFilComparison
+from test_AddMap import TestAddMap
 
 from ppap4lmp import __version__
 
 print("version: " + __version__)
-print("\ntest starts...")
 
-def suite():
+def suite_basic():
+
+  print("\n[basic]")
 
   suite = unittest.TestSuite()
 
@@ -47,6 +50,33 @@ def suite():
 
   return suite
 
+def suite_adder():
+
+  print("\n[adder]")
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddMap("test_error"))
+  suite.addTest(TestAddMap("test_nonarray"))
+  suite.addTest(TestAddMap("test_array"))
+
+  return suite
+
+tests = {
+  "basic": suite_basic,
+  "adder": suite_adder,
+}
+
 if __name__ == "__main__":
+
+  args = sys.argv
   runner = unittest.TextTestRunner()
-  runner.run(suite())
+  targets = []
+
+  if len(args) == 1 or args[1] == "all":
+    targets.extend(list(tests.keys()))
+  else:
+    targets.extend([arg for arg in args[1:] if arg in tests.keys()])
+
+  for t in targets:
+    runner.run(tests[t]())
