@@ -1,5 +1,6 @@
 import unittest
 
+from test_StaCustom import TestStaCustom
 from test_StaDumpBox import TestStaDumpBox
 from test_StaDumpAtoms import TestStaDumpAtoms
 from test_StaMolecules import TestStaMolecules
@@ -14,6 +15,10 @@ print("\ntest starts...")
 def suite():
 
   suite = unittest.TestSuite()
+
+  suite.addTest(TestStaCustom("test_error"))
+  suite.addTest(TestStaCustom("test_get_data"))
+  suite.addTest(TestStaCustom("test_get_keys"))
 
   suite.addTest(TestStaDumpBox("test_error"))
   suite.addTest(TestStaDumpBox("test_get_data"))
