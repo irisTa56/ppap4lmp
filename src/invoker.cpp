@@ -27,12 +27,28 @@ Invoker::Invoker(std::vector<ShPtr<Processor>> procs)
 
 void Invoker::execute()
 {
+  if (ERROR_OCCURED)
+  {
+    ERROR_OCCURED = false;
+    logging("'ERROR_OCCURED' was reset to false");
+  }
+
   for (auto p : processors)
   {
     p->prepare();
   }
 
+  if (ERROR_OCCURED)
+  {
+    return;
+  }
+
   execute_impl();
+
+  if (ERROR_OCCURED)
+  {
+    return;
+  }
 
   for (auto p : processors)
   {

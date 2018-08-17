@@ -16,6 +16,9 @@ from test_AddInertiaMoment import TestAddInertiaMoment
 from test_AddGyrationRadius import TestAddGyrationRadius
 from test_AddMolecularOrientation import TestAddMolecularOrientation
 
+from test_ProData import TestProData
+from test_ProValueArray import TestProValueArray
+
 from ppap4lmp import __version__
 
 print("version: " + __version__)
@@ -89,9 +92,26 @@ def suite_adder():
 
   return suite
 
+def suite_procs():
+
+  print("\n[procs]")
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProData("test_error"))
+  suite.addTest(TestProData("test_without_select"))
+  suite.addTest(TestProData("test_with_select"))
+
+  suite.addTest(TestProValueArray("test_error"))
+  suite.addTest(TestProValueArray("test_select_one"))
+  suite.addTest(TestProValueArray("test_select_two"))
+
+  return suite
+
 tests = {
   "basic": suite_basic,
   "adder": suite_adder,
+  "procs": suite_procs
 }
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@
 
 #include "aliases.h"
 
+extern bool ERROR_OCCURED;
 extern bool ToF_LOGGING;
 
 /* ------------------------------------------------------------------ */
@@ -57,7 +58,10 @@ static void logging(const Str &msg)
 {
   if (ToF_LOGGING)
   {
-    std::cout << msg << std::endl;
+    #pragma omp critical (io)
+    {
+      std::cout << msg << std::endl;
+    }
   }
 }
 
@@ -65,7 +69,10 @@ static void logging(const Str &msg)
 
 static void message(const Str &msg)
 {
-  std::cout << msg << std::endl;
+  #pragma omp critical (io)
+  {
+    std::cout << msg << std::endl;
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -73,7 +80,11 @@ static void message(const Str &msg)
 static void runtime_error(const Str &msg)
 {
   logging(msg);
-  PyErr_SetString(PyExc_RuntimeError, msg.c_str());
+  #pragma omp critical (runtime_error)
+  {
+    PyErr_SetString(PyExc_RuntimeError, msg.c_str());
+  }
+  ERROR_OCCURED = true;
 }
 
 /* ------------------------------------------------------------------ */

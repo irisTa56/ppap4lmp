@@ -15,7 +15,10 @@ class Processor {
   int n_generators;
   List<ShPtr<Generator>> generators;
   virtual void run_impl(int) = 0;
-  void register_generators(const List<ShPtr<Generator>> &);
+  template <class GEN>
+  void register_generators(ShPtr<GEN>);
+  template <class GEN>
+  void register_generators(const List<ShPtr<GEN>> &);
  public:
   Processor() = default;
   virtual ~Processor() = default;
