@@ -18,6 +18,17 @@ class TestAddMap(unittest.TestCase):
         msg.split("\n")[0],
         "RuntimeError: AddMap needs 'dummy'")
 
+    elem = Element(StaCustom({"foo": 0, "var": 1}))
+    elem.append_updater(AddMap("foo", "var", {0: 1}))
+
+    try:
+      elem.get_data()
+    except SystemError:
+      msg = traceback.format_exc()
+      self.assertEqual(
+        msg.split("\n")[0],
+        "RuntimeError: AddMap cannot overwrite 'var'")
+
   def test_nonarray(self):
 
     data_old = {"A": 1, "B": 2}

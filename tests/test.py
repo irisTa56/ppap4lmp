@@ -9,6 +9,7 @@ from test_FilSet import TestFilSet
 from test_FilComparison import TestFilComparison
 
 from test_AddMap import TestAddMap
+from test_AddRename import TestAddRename
 from test_AddWrappedPositions import TestAddWrappedPositions
 from test_AddCoMPositions import TestAddCoMPositions
 from test_AddInertiaMoment import TestAddInertiaMoment
@@ -65,6 +66,10 @@ def suite_adder():
   suite.addTest(TestAddMap("test_error"))
   suite.addTest(TestAddMap("test_nonarray"))
   suite.addTest(TestAddMap("test_array"))
+
+  suite.addTest(TestAddRename("test_error"))
+  suite.addTest(TestAddRename("test_nonarray"))
+  suite.addTest(TestAddRename("test_array"))
 
   suite.addTest(TestAddWrappedPositions("test_error"))
   suite.addTest(TestAddWrappedPositions("test_wrapping"))
