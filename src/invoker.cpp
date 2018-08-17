@@ -38,17 +38,11 @@ void Invoker::execute()
     p->prepare();
   }
 
-  if (ERROR_OCCURED)
-  {
-    return;
-  }
+  if (ERROR_OCCURED) return;
 
   execute_impl();
 
-  if (ERROR_OCCURED)
-  {
-    return;
-  }
+  if (ERROR_OCCURED) return;
 
   for (auto p : processors)
   {

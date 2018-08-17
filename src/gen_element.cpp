@@ -245,6 +245,12 @@ ArrayXXd GenElement::get_2d_double(const List<Str> &keys)
 
 const Json &GenElement::get_data_py()
 {
+  if (ERROR_OCCURED)
+  {
+    ERROR_OCCURED = false;
+    logging("'ERROR_OCCURED' was reset to false");
+  }
+
   hello();
   return get_data();
 }
@@ -253,7 +259,14 @@ const Json &GenElement::get_data_py()
 
 const Set<Str> &GenElement::get_keys_py()
 {
+  if (ERROR_OCCURED)
+  {
+    ERROR_OCCURED = false;
+    logging("'ERROR_OCCURED' was reset to false");
+  }
+
   hello();
+
   return get_keys();
 }
 
@@ -261,7 +274,14 @@ const Set<Str> &GenElement::get_keys_py()
 
 const ArrayXi GenElement::get_1d_int_py(const Str &key)
 {
+  if (ERROR_OCCURED)
+  {
+    ERROR_OCCURED = false;
+    logging("'ERROR_OCCURED' was reset to false");
+  }
+
   hello();
+
   return get_1d_int(key);
 }
 
@@ -269,24 +289,43 @@ const ArrayXi GenElement::get_1d_int_py(const Str &key)
 
 const ArrayXd GenElement::get_1d_double_py(const Str &key)
 {
+  if (ERROR_OCCURED)
+  {
+    ERROR_OCCURED = false;
+    logging("'ERROR_OCCURED' was reset to false");
+  }
+
   hello();
+
   return get_1d_double(key);
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXXi GenElement::get_2d_int_py(
-  const List<Str> &keys)
+const ArrayXXi GenElement::get_2d_int_py(const List<Str> &keys)
 {
+  if (ERROR_OCCURED)
+  {
+    ERROR_OCCURED = false;
+    logging("'ERROR_OCCURED' was reset to false");
+  }
+
   hello();
+
   return get_2d_int(keys);
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXXd GenElement::get_2d_double_py(
-  const List<Str> &keys)
+const ArrayXXd GenElement::get_2d_double_py(const List<Str> &keys)
 {
+  if (ERROR_OCCURED)
+  {
+    ERROR_OCCURED = false;
+    logging("'ERROR_OCCURED' was reset to false");
+  }
+
   hello();
+
   return get_2d_double(keys);
 }

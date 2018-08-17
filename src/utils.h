@@ -80,11 +80,12 @@ static void message(const Str &msg)
 static void runtime_error(const Str &msg)
 {
   logging(msg);
-  #pragma omp critical (runtime_error)
+
+  #pragma omp critical
   {
     PyErr_SetString(PyExc_RuntimeError, msg.c_str());
+    ERROR_OCCURED = true;
   }
-  ERROR_OCCURED = true;
 }
 
 /* ------------------------------------------------------------------ */

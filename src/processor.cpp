@@ -5,6 +5,7 @@ create: 2018/06/22 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "processor.h"
+#include "utils.h"
 
 /* ------------------------------------------------------------------ */
 
@@ -68,7 +69,13 @@ bool Processor::run()
   if (index < n_generators)
   {
     generators[index]->hello();
+
+    if (ERROR_OCCURED) return true;
+
     run_impl(index);
+
+    if (ERROR_OCCURED) return true;
+
     generators[index]->goodbye();
 
     return false;

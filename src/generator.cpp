@@ -66,7 +66,10 @@ void Generator::hello()
 {
   for (const auto &item : update_chain)
   {
-    item.first->update_data(item.second);
+    if (!ERROR_OCCURED)
+    {
+      item.first->update_data(item.second);
+    }
   }
 }
 
