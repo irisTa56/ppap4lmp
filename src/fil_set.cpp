@@ -29,7 +29,7 @@ void FilSet::compute_impl(Json &data, Set<Str> &datakeys)
 {
   for (const auto &item : value_sets)
   {
-    if (!check_containment(datakeys, item.first))
+    if (!check_containment<Str>(datakeys, item.first))
     {
       runtime_error(
         "FilSet cannot use nonexistent property: " + item.first);

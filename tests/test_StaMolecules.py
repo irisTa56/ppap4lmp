@@ -33,8 +33,8 @@ class TestStaMolecules(unittest.TestCase):
     molecules = Element(StaMolecules(Element(StaDumpAtoms(*arguments))))
     data = molecules.get_data()
 
-    self.assertEqual(data[0]["id"], expected_id)
-    self.assertEqual(set(data[0]["atom-ids"]), expected_atoms)
+    self.assertEqual(data[expected_id-1]["id"], expected_id)
+    self.assertEqual(set(data[expected_id-1]["atom-ids"]), expected_atoms)
 
   def test_get_keys(self):
 

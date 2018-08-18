@@ -20,7 +20,7 @@ void AddInertiaMoment::compute_impl(Json &data, Set<Str> &datakeys)
 {
   auto gen_atoms = ext_generator->get_element();
 
-  if (!check_containment(
+  if (!check_containment<Str>(
     gen_atoms->get_keys(), {"id", "mass", "xu", "yu", "zu"}))
   {
     runtime_error(

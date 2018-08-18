@@ -114,7 +114,7 @@ void FilComparison::compute_impl(Json &data, Set<Str> &datakeys)
 {
   for (const auto &item : compare_funcs)
   {
-    if (!check_containment(datakeys, item.first))
+    if (!check_containment<Str>(datakeys, item.first))
     {
       runtime_error(
         "FilComparison cannot use nonexistent property: " + item.first);

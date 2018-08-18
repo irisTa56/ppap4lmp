@@ -25,7 +25,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
     self._test_get_data(
       ("dumps_bead/bead.2990000.dump", 2990000),
-      (0, 1),
+      (147, 148),
       [
         {
           "id": 120148, "mol": 6, "type": 1,
@@ -43,7 +43,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
     self._test_get_data(
       ("dumps_dodecane_10000atm/atom.0.dump", 0),
-      (0, -1),
+      (171, 1346),
       [
         {
           "id": 172, "mol": 5, "type": 2, "mass": 1.008,

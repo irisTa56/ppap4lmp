@@ -86,6 +86,11 @@ void StaDumpAtoms::compute_impl(Json &data, Set<Str> &datakeys)
       }
     }
   }
+
+  if (check_containment<Str>(datakeys, "id"))
+  {
+    ascending_sort_by("id", data);
+  }
 }
 
 /* ------------------------------------------------------------------ */

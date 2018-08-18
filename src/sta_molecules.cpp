@@ -48,4 +48,6 @@ void StaMolecules::compute_impl(Json &data, Set<Str> &datakeys)
   }
 
   datakeys.insert({"id", "atom-ids"});
+
+  ascending_sort_by("id", data);
 }

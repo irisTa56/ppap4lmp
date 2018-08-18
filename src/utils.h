@@ -1,6 +1,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#include <algorithm>
 #include <iostream>
 #include <sstream>
 
@@ -232,6 +233,30 @@ static Dict<Json,int> get_map_to_index(
   }
 
   return tmp;
+}
+
+/* ------------------------------------------------------------------ */
+
+static void ascending_sort_by(const Str &key, Json &data)
+{
+  std::sort(
+    data.begin(), data.end(),
+    [key](auto &a, auto &b)
+    {
+      return a[key] < b[key];
+    });
+}
+
+/* ------------------------------------------------------------------ */
+
+static void descending_sort_by(const Str &key, Json &data)
+{
+  std::sort(
+    data.begin(), data.end(),
+    [key](auto &a, auto &b)
+    {
+      return a[key] > b[key];
+    });
 }
 
 #endif

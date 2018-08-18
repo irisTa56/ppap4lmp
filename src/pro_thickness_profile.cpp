@@ -5,8 +5,6 @@ Profile from positions of 'Atoms'.
 create: 2018/07/08 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include <algorithm>
-
 #include "pro_thickness_profile.h"
 #include "utils.h"
 
@@ -80,12 +78,7 @@ void ProThicknessProfile::run_impl(int index)
 
   // computation body
 
-  std::sort(
-    mini_atoms.begin(), mini_atoms.end(),
-    [](auto &a, auto &b)
-    {
-      return a["z"] > b["z"];
-    });  // to improve speed
+  descending_sort_by("z", mini_atoms);  // to improve speed
 
   ArrayXXd tmp = ArrayXXd::Zero(nx, ny);
 
