@@ -124,7 +124,7 @@ static bool check_containment(const Set<T> &set, const Set<T> &els)
 
 /* ------------------------------------------------------------------ */
 
-static Json get_partial_Json(const Json &data, const Str &key)
+static Json get_partial_json(const Json &data, const Str &key)
 {
   Json tmp;
 
@@ -145,7 +145,7 @@ static Json get_partial_Json(const Json &data, const Str &key)
 
 /* ------------------------------------------------------------------ */
 
-static Json get_partial_Json(const Json &data, const Set<Str> &keys)
+static Json get_partial_json(const Json &data, const Set<Str> &keys)
 {
   Json tmp;
 

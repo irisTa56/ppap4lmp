@@ -22,7 +22,7 @@ class TestAddInertiaMoment(unittest.TestCase):
     molecules.append_updater(AddCoMPositions(atoms))
 
     molecules.append_updater(
-      AddInertiaMoment(Element(StaCustom({"foo": 0, "var": 1}))))
+      AddInertiaMoment(Element(StaCustom({"foo": 0, "bar": 1}))))
 
     try:
       molecules.get_data()

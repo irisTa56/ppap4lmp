@@ -20,11 +20,11 @@ void AddGyrationRadius::compute_impl(Json &data, Set<Str> &datakeys)
 
   for (auto &d : data)
   {
-    auto reciprocal_mass = 1.0 / double(d["mass"]);
+    auto reciprocal_mass = 1.0 / d["mass"].get<double>();
 
-    auto ixx_per_mass = double(d["I_xx"]) * reciprocal_mass;
-    auto iyy_per_mass = double(d["I_yy"]) * reciprocal_mass;
-    auto izz_per_mass = double(d["I_zz"]) * reciprocal_mass;
+    auto ixx_per_mass = d["I_xx"].get<double>() * reciprocal_mass;
+    auto iyy_per_mass = d["I_yy"].get<double>() * reciprocal_mass;
+    auto izz_per_mass = d["I_zz"].get<double>() * reciprocal_mass;
 
     auto tr_per_mass = 0.5 * (ixx_per_mass+iyy_per_mass+izz_per_mass);
 

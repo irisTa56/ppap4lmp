@@ -7,7 +7,7 @@ class TestAddMap(unittest.TestCase):
 
   def test_error(self):
 
-    elem = Element(StaCustom({"foo": 0, "var": 1}))
+    elem = Element(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("dummy", "new", {1: 0}))
 
     try:
@@ -18,8 +18,8 @@ class TestAddMap(unittest.TestCase):
         msg.split("\n")[0],
         "RuntimeError: AddMap needs 'dummy'")
 
-    elem = Element(StaCustom({"foo": 0, "var": 1}))
-    elem.append_updater(AddMap("foo", "var", {0: 1}))
+    elem = Element(StaCustom({"foo": 0, "bar": 1}))
+    elem.append_updater(AddMap("foo", "bar", {0: 1}))
 
     try:
       elem.get_data()
@@ -27,7 +27,7 @@ class TestAddMap(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddMap cannot overwrite 'var'")
+        "RuntimeError: AddMap cannot overwrite 'bar'")
 
   def test_nonarray(self):
 

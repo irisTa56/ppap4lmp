@@ -249,6 +249,26 @@ class ProValueArray {
 
 Processor <|-- ProValueArray
 
+class ProThicknessProfile {
+  +ProThicknessProfile(GenElement*, GenElement*)
+  +ProThicknessProfile(List<pair<GenElement*,GenElement*>>)
+  -int nx
+  -int ny
+  -bool shift_half_delta
+  -double offset
+  -List<Json> conditions
+  -List<ArrayXXd> profiles
+  #void run_impl(int)
+  ~void prepare()
+  +void set_grid(int, int)
+  +void set_offset(double)
+  +void set_shift_half_delta(bool)
+  +List<Json> get_conditions()
+  +List<ArrayXXd> get_profiles()
+}
+
+Processor <|-- ProThicknessProfile
+
 abstract class Invoker {
   #int n_processors
   #List<Processor*> processors

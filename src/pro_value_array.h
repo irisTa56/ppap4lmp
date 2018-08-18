@@ -36,7 +36,9 @@ static void pybind_pro_value_array(py::module &m)
     .def(py::init<ShPtr<GenElement>>())
     .def(py::init<List<ShPtr<GenElement>>>())
     .def("select", &ProValueArray::select)
-    .def("get_results", &ProValueArray::get_results);
+    .def(
+      "get_results", &ProValueArray::get_results,
+      py::return_value_policy::reference_internal);
 }
 
 #endif

@@ -5,6 +5,7 @@ from test_StaCustom import TestStaCustom
 from test_StaDumpBox import TestStaDumpBox
 from test_StaDumpAtoms import TestStaDumpAtoms
 from test_StaMolecules import TestStaMolecules
+
 from test_FilSet import TestFilSet
 from test_FilComparison import TestFilComparison
 
@@ -18,14 +19,15 @@ from test_AddMolecularOrientation import TestAddMolecularOrientation
 
 from test_ProData import TestProData
 from test_ProValueArray import TestProValueArray
+from test_ProThicknessProfile import TestProThicknessProfile
 
 from ppap4lmp import __version__
 
 print("version: " + __version__)
 
-def suite_basic():
+def suite_starter():
 
-  print("\n[basic]")
+  print("\n[starter]")
 
   suite = unittest.TestSuite()
 
@@ -48,6 +50,14 @@ def suite_basic():
   suite.addTest(TestStaDumpAtoms("test_error"))
   suite.addTest(TestStaMolecules("test_get_data"))
   suite.addTest(TestStaMolecules("test_get_keys"))
+
+  return suite
+
+def suite_filter():
+
+  print("\n[filter]")
+
+  suite = unittest.TestSuite()
 
   suite.addTest(TestFilSet("test_error"))
   suite.addTest(TestFilSet("test_equivalent_filter"))
@@ -106,10 +116,16 @@ def suite_procs():
   suite.addTest(TestProValueArray("test_select_one"))
   suite.addTest(TestProValueArray("test_select_two"))
 
+  suite.addTest(TestProThicknessProfile("test_error"))
+  suite.addTest(TestProThicknessProfile("test_20x30"))
+  suite.addTest(TestProThicknessProfile("test_20x30_with_offset"))
+  suite.addTest(TestProThicknessProfile("test_20x30_with_shift"))
+
   return suite
 
 tests = {
-  "basic": suite_basic,
+  "starter": suite_starter,
+  "filter": suite_filter,
   "adder": suite_adder,
   "procs": suite_procs
 }

@@ -10,7 +10,7 @@ class TestAddWrappedPositions(unittest.TestCase):
 
   def test_error(self):
 
-    box = Element(StaCustom({"foo": 0, "var": 1}))
+    box = Element(StaCustom({"foo": 0, "bar": 1}))
     atoms = Element(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(AddWrappedPositions(box))

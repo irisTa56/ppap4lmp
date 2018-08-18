@@ -8,7 +8,7 @@ class TestStaCustom(unittest.TestCase):
   def test_error(self):
 
     try:
-      elem = Element(StaCustom([{"foo": 1}, {"var": 2}]))
+      elem = Element(StaCustom([{"foo": 1}, {"bar": 2}]))
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -19,7 +19,7 @@ class TestStaCustom(unittest.TestCase):
 
     self._test_get_data({"prop1": 1, "prop2": 0.1})
     self._test_get_data(
-      [{"foo": i, "var": 0.1*i} for i in range(1000)])
+      [{"foo": i, "bar": 0.1*i} for i in range(1000)])
 
   def _test_get_data(self, data):
 

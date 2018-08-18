@@ -9,7 +9,7 @@ class TestAddRename(unittest.TestCase):
 
   def test_error(self):
 
-    elem = Element(StaCustom({"foo": 0, "var": 1}))
+    elem = Element(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("dummy", "new"))
 
     try:
@@ -20,8 +20,8 @@ class TestAddRename(unittest.TestCase):
         msg.split("\n")[0],
         "RuntimeError: AddRename needs 'dummy'")
 
-    elem = Element(StaCustom({"foo": 0, "var": 1}))
-    elem.append_updater(AddRename("foo", "var"))
+    elem = Element(StaCustom({"foo": 0, "bar": 1}))
+    elem.append_updater(AddRename("foo", "bar"))
 
     try:
       elem.get_data()
@@ -29,7 +29,7 @@ class TestAddRename(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddRename cannot overwrite 'var'")
+        "RuntimeError: AddRename cannot overwrite 'bar'")
 
   def test_nonarray(self):
 

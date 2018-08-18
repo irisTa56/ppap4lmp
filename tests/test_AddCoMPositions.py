@@ -15,7 +15,7 @@ class TestAddCoMPositions(unittest.TestCase):
     molecules = Element(StaMolecules(atoms))
 
     molecules.append_updater(
-      AddCoMPositions(Element(StaCustom({"foo": 0, "var": 1}))))
+      AddCoMPositions(Element(StaCustom({"foo": 0, "bar": 1}))))
 
     try:
       molecules.get_data()
