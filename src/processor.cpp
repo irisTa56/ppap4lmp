@@ -78,6 +78,8 @@ bool Processor::run()
 
     generators[index]->goodbye();
 
+    if (ERROR_OCCURED) return true;
+
     return false;
   }
   else
