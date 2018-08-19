@@ -18,6 +18,7 @@ from test_AddInertiaMoment import TestAddInertiaMoment
 from test_AddGyrationRadius import TestAddGyrationRadius
 from test_AddMolecularOrientation import TestAddMolecularOrientation
 from test_AddChildIDs import TestAddChildIDs
+from test_AddSpecialBonds import TestAddSpecialBonds
 
 from test_ProData import TestProData
 from test_ProValueArray import TestProValueArray
@@ -108,6 +109,9 @@ def suite_adder():
 
   suite.addTest(TestAddChildIDs("test_error"))
   suite.addTest(TestAddChildIDs("test_2way_molecules"))
+
+  suite.addTest(TestAddSpecialBonds("test_error"))
+  suite.addTest(TestAddSpecialBonds("test_exclude_angle"))
 
   return suite
 

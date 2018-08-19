@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------
 ProThicknessProfile: stands for Processor which computes Thickness
-Profile from positions of 'Atoms'.
+Profile from positions.
 
 create: 2018/07/08 by Takayuki Kobayashi
 --------------------------------------------------------------------- */

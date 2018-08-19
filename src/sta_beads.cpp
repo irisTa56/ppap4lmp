@@ -122,6 +122,7 @@ void StaBeads::compute_impl(Json &data, Set<Str> &datakeys)
 
   for (const auto &mol : mols)
   {
+    auto atom_ids = mol["atom-ids"];
     auto abst_beads = mol_type_to_abst_beads[mol.value("type", 1)];
 
     for (const auto &abst_bead : abst_beads)
@@ -130,7 +131,7 @@ void StaBeads::compute_impl(Json &data, Set<Str> &datakeys)
 
       for (int index : abst_bead["indices-in-mol"])
       {
-        tmp["atom-ids"].push_back(mol["atom-ids"][index]);
+        tmp["atom-ids"].push_back(atom_ids.at(index));
       }
 
       if (with_type)

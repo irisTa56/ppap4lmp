@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------
 ProThicknessProfile: stands for Processor which computes Thickness
-Profile from positions of 'Atoms'.
+Profile from positions.
 
 create: 2018/07/08 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -121,10 +121,7 @@ void ProThicknessProfile::run_impl(int index)
         auto dy = atom_y - grid_y;
         auto dr2 = dx*dx + dy*dy;
 
-        if (radius2 < dr2)
-        {
-          continue;
-        }
+        if (radius2 < dr2) continue;
 
         int ix_in_box = ix - floor(ix*reciprocal_nx)*nx;
         int iy_in_box = iy - floor(iy*reciprocal_ny)*ny;
@@ -133,10 +130,7 @@ void ProThicknessProfile::run_impl(int index)
 
         auto d = atom_z - tmp(ix_in_box, iy_in_box);
 
-        if (d < 0.0 && dz2 < d*d)
-        {
-          continue;
-        }
+        if (d < 0.0 && dz2 < d*d) continue;
 
         tmp(ix_in_box, iy_in_box) = atom_z + sqrt(dz2);
       }
