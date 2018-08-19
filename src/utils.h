@@ -237,26 +237,27 @@ static Dict<Json,int> get_map_to_index(
 
 /* ------------------------------------------------------------------ */
 
-static void ascending_sort_by(const Str &key, Json &data)
+static void sort_by_id(Json &data)
 {
-  std::sort(
-    data.begin(), data.end(),
-    [key](auto &a, auto &b)
-    {
-      return a[key] < b[key];
-    });
-}
+  auto dict = get_map_to_index(data, "id");
+  auto list = List<std::pair<int,int>>(dict.begin(), dict.end());
 
-/* ------------------------------------------------------------------ */
-
-static void descending_sort_by(const Str &key, Json &data)
-{
   std::sort(
-    data.begin(), data.end(),
-    [key](auto &a, auto &b)
+    list.begin(), list.end(),
+    [](auto &a, auto &b)
     {
-      return a[key] > b[key];
+      return a.first < b.first;
     });
+
+  auto tmp = Json::array();
+  tmp.get_ref<Json::array_t&>().reserve(list.size());
+
+  for (const auto &pair : list)
+  {
+    tmp.push_back(data[pair.second]);
+  }
+
+  data.swap(tmp);
 }
 
 #endif

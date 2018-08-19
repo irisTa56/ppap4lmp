@@ -1,10 +1,13 @@
 import unittest
 import traceback
 
+import numpy as np
+
 from random import randrange
 
 from ppap4lmp import \
-  Element, StaCustom, StaDumpAtoms, StaMolecules, AddMap, AddCoMPositions
+  Element, StaCustom, StaDumpAtoms, StaMolecules, StaBeads, \
+  AddMap, AddCoMPositions
 
 class TestAddCoMPositions(unittest.TestCase):
 
@@ -74,3 +77,50 @@ class TestAddCoMPositions(unittest.TestCase):
     self.assertEqual(target["xu"], tmpx)
     self.assertEqual(target["yu"], tmpy)
     self.assertEqual(target["zu"], tmpz)
+
+  def test_beads(self):
+
+    abst_atoms = []
+    atom_id = 0
+
+    for imol in range(10):
+      for iatom in range(20):
+
+        atom_id += 1
+
+        abst_atoms.append({
+          "id": atom_id,
+          "mol": imol+1,
+          "mass": 1.0,
+          "xu": float(iatom//4)})
+
+        if iatom%4 == 0:
+          abst_atoms[-1]["yu"] = 1.0
+          abst_atoms[-1]["zu"] = float(imol) * 10
+        elif iatom%4 == 1:
+          abst_atoms[-1]["yu"] = 0.0
+          abst_atoms[-1]["zu"] = -1.0 + float(imol) * 10
+        elif iatom%4 == 2:
+          abst_atoms[-1]["yu"] = -1.0
+          abst_atoms[-1]["zu"] = float(imol) * 10
+        elif iatom%4 == 3:
+          abst_atoms[-1]["yu"] = 0.0
+          abst_atoms[-1]["zu"] = 1.0 + float(imol) * 10
+
+    atoms = Element(StaCustom(abst_atoms))
+    moles = Element(StaMolecules(atoms))
+    beads = Element(StaBeads(moles, [
+      {"indices-in-mol": list(range(4*i, 4*(i+1)))} for i in range(5)]))
+
+    beads.append_updater(AddCoMPositions(atoms))
+
+    rs = beads.get_2d_double(["xu", "yu", "zu"])
+
+    expected_rs = []
+
+    for imol in range(10):
+      for ibead in range(5):
+
+        expected_rs.append([float(ibead), 0.0, 10.0*imol])
+
+    self.assertTrue(np.array_equal(rs, np.array(expected_rs)))

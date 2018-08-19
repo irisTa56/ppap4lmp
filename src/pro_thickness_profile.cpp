@@ -78,7 +78,12 @@ void ProThicknessProfile::run_impl(int index)
 
   // computation body
 
-  descending_sort_by("z", mini_atoms);  // to improve speed
+  std::sort(
+    mini_atoms.begin(), mini_atoms.end(),
+    [](auto &a, auto &b)
+    {
+      return a["z"] > b["z"];
+    });  // to improve speed
 
   ArrayXXd tmp = ArrayXXd::Zero(nx, ny);
 

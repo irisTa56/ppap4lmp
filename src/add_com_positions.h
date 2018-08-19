@@ -10,6 +10,8 @@ create: 2018/07/13 by Takayuki Kobayashi
 #include "adder.h"
 
 class AddCoMPositions : public Adder {
+  void compute_with_weights(Json &data, ShPtr<GenElement>);
+  void compute_without_weights(Json &data, ShPtr<GenElement>);
  protected:
   virtual void compute_impl(Json &, Set<Str> &) override;
  public:

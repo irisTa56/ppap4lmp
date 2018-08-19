@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-StaMolecules: stands for Starter to generate Molecules from Atoms.
+StaMolecules: stands for Starter to generate Molecules from atoms.
 
 create: 2018/07/07 by Takayuki Kobayashi
 --------------------------------------------------------------------- */

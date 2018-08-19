@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------------------
-StaMolecules: stands for Starter to generate Molecules from Atoms.
+StaMolecules: stands for Starter to generate Molecules from atoms.
 
 create: 2018/07/07 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
@@ -49,5 +49,5 @@ void StaMolecules::compute_impl(Json &data, Set<Str> &datakeys)
 
   datakeys.insert({"id", "atom-ids"});
 
-  ascending_sort_by("id", data);
+  sort_by_id(data);
 }

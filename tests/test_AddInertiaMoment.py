@@ -43,7 +43,7 @@ class TestAddInertiaMoment(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddInertiaMoment needs '*u' (x/y/z)")
+        "RuntimeError: AddInertiaMoment needs 'atom-ids' and '*u' (x/y/z)")
 
   def test_isotropic(self):
 

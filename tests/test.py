@@ -5,6 +5,7 @@ from test_StaCustom import TestStaCustom
 from test_StaDumpBox import TestStaDumpBox
 from test_StaDumpAtoms import TestStaDumpAtoms
 from test_StaMolecules import TestStaMolecules
+from test_StaBeads import TestStaBeads
 
 from test_FilSet import TestFilSet
 from test_FilComparison import TestFilComparison
@@ -51,6 +52,9 @@ def suite_starter():
   suite.addTest(TestStaMolecules("test_get_data"))
   suite.addTest(TestStaMolecules("test_get_keys"))
 
+  suite.addTest(TestStaBeads("test_error"))
+  suite.addTest(TestStaBeads("test_atom_id"))
+
   return suite
 
 def suite_filter():
@@ -89,6 +93,7 @@ def suite_adder():
 
   suite.addTest(TestAddCoMPositions("test_error"))
   suite.addTest(TestAddCoMPositions("test_positions"))
+  suite.addTest(TestAddCoMPositions("test_beads"))
 
   suite.addTest(TestAddInertiaMoment("test_error"))
   suite.addTest(TestAddInertiaMoment("test_isotropic"))

@@ -107,6 +107,8 @@ Adder <|---- AddWrappedPositions
 
 class AddCoMPositions {
   +AddCoMPositions(GenElement*)
+  -compute_with_weights(Json, GenElement*)
+  -compute_without_weights(Json, GenElement*)
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -114,6 +116,8 @@ Adder <|---- AddCoMPositions
 
 class AddInertiaMoment {
   +AddInertiaMoment(GenElement*)
+  -compute_with_weights(Json, GenElement*)
+  -compute_without_weights(Json, GenElement*)
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -176,6 +180,18 @@ class StaMolecules {
 }
 
 Starter <|-- StaMolecules
+
+class StaBeads {
+  +StaBeads(GenElement*, List<Json>)
+  +StaBeads(GenElement*, Dict<int,List<Json>>)
+  -bool with_type
+  -bool with_weights
+  -Dict<int,List<Json>> mol_type_to_abst_beads
+  -void check_mol_type_to_abst_beads()
+  #void compute_impl(Json, Set<Str>)
+}
+
+Starter <|-- StaBeads
 
 abstract class Filter {
   ~void compute(Json, Set<Str>, int)
