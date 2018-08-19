@@ -17,6 +17,7 @@ from test_AddCoMPositions import TestAddCoMPositions
 from test_AddInertiaMoment import TestAddInertiaMoment
 from test_AddGyrationRadius import TestAddGyrationRadius
 from test_AddMolecularOrientation import TestAddMolecularOrientation
+from test_AddChildIDs import TestAddChildIDs
 
 from test_ProData import TestProData
 from test_ProValueArray import TestProValueArray
@@ -104,6 +105,9 @@ def suite_adder():
   suite.addTest(TestAddMolecularOrientation("test_error"))
   suite.addTest(TestAddMolecularOrientation("test_isotropic"))
   suite.addTest(TestAddMolecularOrientation("test_x_oriented"))
+
+  suite.addTest(TestAddChildIDs("test_error"))
+  suite.addTest(TestAddChildIDs("test_2way_molecules"))
 
   return suite
 

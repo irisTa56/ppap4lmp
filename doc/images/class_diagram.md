@@ -137,6 +137,15 @@ class AddMolecularOrientation {
 
 Adder <|---- AddMolecularOrientation
 
+class AddChildIDs {
+  +AddChildIDs(GenElement*, Str, Str)
+  -Str child_name
+  -Str key_for_parent_id
+  #void compute_impl(Json, Set<Str>)
+}
+
+Adder <|---- AddChildIDs
+
 abstract class Starter {
   ~void compute(Json, Set<Str>, int)
 }
