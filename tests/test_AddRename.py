@@ -53,3 +53,14 @@ class TestAddRename(unittest.TestCase):
 
     self.assertTrue(np.allclose(vec_old, vec_new))
     self.assertEqual({"B", "C"}, elem.get_keys())
+
+  def test_overwrite(self):
+
+    data_old = [{"A": i, "B": i*i, "C": i%3} for i in range(1000)]
+    data_new = [{"A": i, "B": i%3} for i in range(1000)]
+
+    elem = Element(StaCustom(data_old))
+    elem.append_updater(AddRename("C", "B").overwrite())
+
+    self.assertEqual(data_new, elem.get_data())
+    self.assertEqual({"A", "B"}, elem.get_keys())

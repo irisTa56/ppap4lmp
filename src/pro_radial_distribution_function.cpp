@@ -74,7 +74,7 @@ void ProRadialDistributionFunction::run_impl(int index)
 
   auto half_length = 0.5 * length;
 
-  double r_max = bin_from_r_to_r_plus_dr ?
+  double r_max = bin_from_r ?
     n_bins * bin_width : (n_bins-0.5) * bin_width;
 
   auto r2_max = r_max*r_max;
@@ -142,7 +142,7 @@ void ProRadialDistributionFunction::run_impl(int index)
 
             auto r = sqrt(r2);
 
-            int index = bin_from_r_to_r_plus_dr ?
+            int index = bin_from_r ?
               floor(r*reciprocal_width) : round(r*reciprocal_width);
 
             counts(index) += 2;  // i -> j & j -> i
@@ -176,9 +176,9 @@ void ProRadialDistributionFunction::finish()
 
   for (int i = 0; i != n_bins; ++i)
   {
-    double r_inner = bin_from_r_to_r_plus_dr ?
+    double r_inner = bin_from_r ?
       i * bin_width : std::max(0.0, (i-0.5) * bin_width);
-    double r_outer = bin_from_r_to_r_plus_dr ?
+    double r_outer = bin_from_r ?
       (i+1) * bin_width : (i+0.5) * bin_width;
 
     shell_volume(i) = ball_coeff * (pow(r_outer, 3) - pow(r_inner, 3));
@@ -215,10 +215,10 @@ void ProRadialDistributionFunction::set_bin(
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::set_bin_from_r_to_r_plus_dr(
-  bool bin_from_r_to_r_plus_dr_)
+void ProRadialDistributionFunction::bin_from_r_to_r_plus_dr(
+  bool bin_from_r_)
 {
-  bin_from_r_to_r_plus_dr = bin_from_r_to_r_plus_dr_;
+  bin_from_r = bin_from_r_;
 }
 
 /* ------------------------------------------------------------------ */

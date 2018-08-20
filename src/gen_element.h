@@ -9,7 +9,7 @@ create: 2018/07/01 by Takayuki Kobayashi
 
 #include "generator.h"
 
-class GenElement : public Generator, public EnableShElem {
+class GenElement : public Generator, public EnableShThis<GenElement> {
   static int instance_count;
   int ID;
   int n_remain = 0;

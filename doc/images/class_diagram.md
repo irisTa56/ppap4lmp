@@ -77,23 +77,23 @@ UpdatePair.Updater <|-- Adder
 
 class AddMap {
   +AddMap(Str, Str, Dict<Json,Json>)
-  +AddMap(Str, Str, Dict<Json,Json>, bool)
   -bool overwrite
   -Str key_ref
   -Str key_new
   -Dict<Json,Json> mapping
   #void compute_impl(Json, Set<Str>)
+  +AddMap* overwrite(bool)
 }
 
 Adder <|-- AddMap
 
 class AddRename {
   +AddRename(Str, Str)
-  +AddRename(Str, Str, bool)
   -bool overwrite
   -Str key_old
   -Str key_new
   #void compute_impl(Json, Set<Str>)
+  +AddRename* overwrite(bool)
 }
 
 Adder <|-- AddRename
@@ -271,13 +271,17 @@ Processor <|-- ProData
 class ProValueArray {
   +ProValueArray(GenElement*)
   +ProValueArray(List<GenElement*>)
+  -bool do_sort
   -Set<Str> selected_keys
   -Dict<Str,ArrayXXd> results
   -Dict<Str,List<RowArrayXd>> results_tmp
+  -run_sort(int, Json)
+  -run_no_sort(int, Json)
   #void run_impl(int)
   ~void prepare()
   ~void finish()
   +void select(py::args)
+  +force_sort(bool)
   +Dict<Str,ArrayXXd> get_results()
 }
 
@@ -288,7 +292,7 @@ class ProThicknessProfile {
   +ProThicknessProfile(List<pair<GenElement*,GenElement*>>)
   -int nx
   -int ny
-  -bool shift_half_delta
+  -bool shift_half
   -double offset
   -List<Json> conditions
   -List<ArrayXXd> profiles
@@ -296,7 +300,7 @@ class ProThicknessProfile {
   ~void prepare()
   +void set_grid(int, int)
   +void set_offset(double)
-  +void set_shift_half_delta(bool)
+  +void shift_half_delta(bool)
   +List<Json> get_conditions()
   +List<ArrayXXd> get_profiles()
 }
@@ -308,7 +312,7 @@ class ProRadialDistributionFunction {
   +ProRadialDistributionFunction(List<pair<GenElement*,GenElement*>>)
   -int n_bins
   -double bin_width
-  -bool bin_from_r_to_r_plus_dr
+  -bool bin_from_r
   -ArrayXd rdf
   -List<ArrayXd> rdf_traj
   -List<double> density_traj
@@ -316,8 +320,8 @@ class ProRadialDistributionFunction {
   #void run_impl(int)
   ~void prepare()
   ~void finish()
-  +void set_bin(int, int)
-  +void set_bin_from_r_to_r_plus_dr(double)
+  +void set_bin(double, int)
+  +void bin_from_r_to_r_plus_dr(bool)
   +ArrayXd get_r_axis()
   +ArrayXd get_rdf()
   +List<ArrayXd> get_rdf_traj()

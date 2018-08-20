@@ -86,10 +86,12 @@ def suite_adder():
   suite.addTest(TestAddMap("test_error"))
   suite.addTest(TestAddMap("test_nonarray"))
   suite.addTest(TestAddMap("test_array"))
+  suite.addTest(TestAddMap("test_overwrite"))
 
   suite.addTest(TestAddRename("test_error"))
   suite.addTest(TestAddRename("test_nonarray"))
   suite.addTest(TestAddRename("test_array"))
+  suite.addTest(TestAddRename("test_overwrite"))
 
   suite.addTest(TestAddWrappedPositions("test_error"))
   suite.addTest(TestAddWrappedPositions("test_wrapping"))

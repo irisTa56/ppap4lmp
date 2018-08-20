@@ -52,3 +52,16 @@ class TestAddMap(unittest.TestCase):
 
     self.assertEqual(data_new, elem.get_data())
     self.assertEqual({"A", "B", "C"}, elem.get_keys())
+
+  def test_overwrite(self):
+
+    data_old = [{"A": i, "B": i*i} for i in range(1000)]
+    data_new = [{"A": i, "B": i%3} for i in range(1000)]
+
+    mapping = {i: i%3 for i in range(1000)}
+
+    elem = Element(StaCustom(data_old))
+    elem.append_updater(AddMap("A", "B", mapping).overwrite())
+
+    self.assertEqual(data_new, elem.get_data())
+    self.assertEqual({"A", "B"}, elem.get_keys())

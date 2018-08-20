@@ -24,27 +24,8 @@ ProValueArray::ProValueArray(List<ShPtr<GenElement>> elems)
 
 /* ------------------------------------------------------------------ */
 
-void ProValueArray::run_impl(int index)
+void ProValueArray::run_sort(int index, const Json &data)
 {
-  if (selected_keys.empty())
-  {
-    runtime_error("ProValueArray: No selected values");
-    return;
-  }
-
-  auto elem = generators[index]->get_element();
-  auto &data = elem->get_data();
-
-  auto required_keys = selected_keys;
-  required_keys.insert("id");
-
-  if (!check_containment<Str>(elem->get_keys(), required_keys))
-  {
-    runtime_error(
-      "ProValueArray: Selected key(s) and 'id' do not exist");
-    return;
-  }
-
   List<std::pair<int,Dict<Str,double>>> numbered_values;
 
   for (const auto &d : data.is_array() ? data : Json({data}))
@@ -99,6 +80,87 @@ void ProValueArray::run_impl(int index)
 
 /* ------------------------------------------------------------------ */
 
+void ProValueArray::run_no_sort(int index, const Json &data)
+{
+  List<Dict<Str,double>> values;
+
+  for (const auto &d : data.is_array() ? data : Json({data}))
+  {
+    Dict<Str,double> tmp;
+
+    for (const auto &k : selected_keys)
+    {
+      auto &val = d[k];
+
+      if (val.is_number())
+      {
+        if (!val.is_number_float())
+        {
+          message("ProValueArray: Converting an integer to float");
+        }
+
+        tmp[k] = val;
+      }
+      else
+      {
+        runtime_error("ProValueArray: Value is not number");
+        return;
+      }
+    }
+
+    values.push_back(tmp);
+  }
+
+  int size = values.size();
+
+  for (const auto &k : selected_keys)
+  {
+    RowArrayXd row(size);
+
+    for (int i = 0; i != size; ++i)
+    {
+      row(i) = values[i][k];
+    }
+
+    results_tmp[k][index] = row;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
+void ProValueArray::run_impl(int index)
+{
+  if (selected_keys.empty())
+  {
+    runtime_error("ProValueArray: No selected values");
+    return;
+  }
+
+  auto elem = generators[index]->get_element();
+  auto &data = elem->get_data();
+
+  auto required_keys = selected_keys;
+  required_keys.insert("id");
+
+  if (!check_containment<Str>(elem->get_keys(), required_keys))
+  {
+    runtime_error(
+      "ProValueArray: Selected key(s) and 'id' do not exist");
+    return;
+  }
+
+  if (do_sort)
+  {
+    run_sort(index, data);
+  }
+  else
+  {
+    run_no_sort(index, data);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
 void ProValueArray::prepare()
 {
   for (const auto &k : selected_keys)
@@ -145,6 +207,13 @@ void ProValueArray::select(py::args args)
   {
     selected_keys.insert(a.cast<Str>());
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+void ProValueArray::force_sort(bool do_sort_)
+{
+  do_sort = do_sort_;
 }
 
 /* ------------------------------------------------------------------ */

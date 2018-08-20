@@ -64,12 +64,9 @@ class TestProValueArray(unittest.TestCase):
 
   def test_select_one(self):
 
-    ids = list(range(1000))
-    shuffle(ids)
-
     data = [[
       {"id": j, "A": float(i+j), "B": float(i*j)}
-      for j in ids]
+      for j in range(1000)]
       for i in range(100)]
     elems = [Element(StaCustom(d)) for d in data]
     pro = ProValueArray(elems)
@@ -96,8 +93,10 @@ class TestProValueArray(unittest.TestCase):
       for j in ids]
       for i in range(100)]
     elems = [Element(StaCustom(d)) for d in data]
+
     pro = ProValueArray(elems)
     pro.select("A", "B")
+    pro.force_sort()
 
     InvOMP(pro).execute()
 

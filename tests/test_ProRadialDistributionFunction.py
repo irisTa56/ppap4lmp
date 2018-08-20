@@ -125,7 +125,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro.set_bin(bin_width, num_bins)
 
-    pro.set_bin_from_r_to_r_plus_dr(True)
+    pro.bin_from_r_to_r_plus_dr()
 
     InvOMP(pro).execute()
 

@@ -15,7 +15,6 @@ class GenElement;
 class Updater;
 
 using UpdatePair = std::pair<ShPtr<GenElement>,ShPtr<Updater>>;
-using EnableShElem = std::enable_shared_from_this<GenElement>;
 
 class Generator {
  protected:

@@ -118,7 +118,7 @@ class TestProThicknessProfile(unittest.TestCase):
 
     pro = ProThicknessProfile(list(zip(atoms, box)))
     pro.set_grid(20, 30)
-    pro.set_shift_half_delta(True)
+    pro.shift_half_delta()
 
     InvOMP(pro).execute()
 

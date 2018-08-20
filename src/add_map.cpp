@@ -17,19 +17,6 @@ AddMap::AddMap(
   key_ref = key_ref_;
   key_new = key_new_;
   mapping = mapping_;
-  overwrite = false;
-}
-
-/* ------------------------------------------------------------------ */
-
-AddMap::AddMap(
-  const Str &key_ref_, const Str &key_new_,
-  const Dict<Json,Json> &mapping_, bool overwrite_)
-{
-  key_ref = key_ref_;
-  key_new = key_new_;
-  mapping = mapping_;
-  overwrite = overwrite_;
 }
 
 /* ------------------------------------------------------------------ */
@@ -42,7 +29,7 @@ void AddMap::compute_impl(Json &data, Set<Str> &datakeys)
     return;
   }
 
-  if (check_containment<Str>(datakeys, key_new) && !overwrite)
+  if (check_containment<Str>(datakeys, key_new) && !do_overwrite)
   {
     runtime_error("AddMap cannot overwrite '" + key_new + "'");
     return;
@@ -61,4 +48,13 @@ void AddMap::compute_impl(Json &data, Set<Str> &datakeys)
   }
 
   datakeys.insert(key_new);
+}
+
+/* ------------------------------------------------------------------ */
+
+ShPtr<AddMap> AddMap::overwrite(bool do_overwrite_)
+{
+  do_overwrite = do_overwrite_;
+
+  return shared_from_this();
 }

@@ -10,16 +10,16 @@ create: 2018/08/17 by Takayuki Kobayashi
 
 #include "adder.h"
 
-class AddRename : public Adder {
-  bool overwrite;
+class AddRename : public Adder, public EnableShThis<AddRename> {
+  bool do_overwrite = false;
   Str key_old;
   Str key_new;
  protected:
   virtual void compute_impl(Json &, Set<Str> &) override;
  public:
   AddRename(const Str &, const Str &);
-  AddRename(const Str &, const Str &, bool);
   virtual ~AddRename() = default;
+  ShPtr<AddRename> overwrite(bool do_overwrite_ = true);
 };
 
 /* ------------------------------------------------------------------ */
@@ -30,7 +30,9 @@ static void pybind_add_rename(py::module &m)
   // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddRename,PyUpdater<AddRename>,Adder,Updater,ShPtr<AddRename>>(m, "AddRename")
     .def(py::init<const Str &,const Str &>())
-    .def(py::init<const Str &,const Str &,bool>());
+    .def(
+      "overwrite", &AddRename::overwrite,
+      py::arg("do_overwrite_") = true);
 }
 
 #endif

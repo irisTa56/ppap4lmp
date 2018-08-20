@@ -13,7 +13,7 @@ create: 2018/08/19 by Takayuki Kobayashi
 class ProRadialDistributionFunction : public Processor {
   int n_bins = 1;
   double bin_width = 1.0;
-  bool bin_from_r_to_r_plus_dr = false;
+  bool bin_from_r = false;
   ArrayXd rdf;
   List<ArrayXd> rdf_traj;
   List<double> density_traj;
@@ -28,7 +28,7 @@ class ProRadialDistributionFunction : public Processor {
   virtual void prepare() override;
   virtual void finish() override;
   void set_bin(double, int);
-  void set_bin_from_r_to_r_plus_dr(bool);
+  void bin_from_r_to_r_plus_dr(bool bin_from_r_ = true);
   const ArrayXd get_r_axis();
   const ArrayXd &get_rdf();
   const List<ArrayXd> &get_rdf_traj();
@@ -44,7 +44,10 @@ static void pybind_pro_radial_distribution_function(py::module &m)
     .def(py::init<ShPtr<GenElement>,ShPtr<GenElement>>())
     .def(py::init<List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>>>())
     .def("set_bin", &ProRadialDistributionFunction::set_bin)
-    .def("set_bin_from_r_to_r_plus_dr", &ProRadialDistributionFunction::set_bin_from_r_to_r_plus_dr)
+    .def(
+      "bin_from_r_to_r_plus_dr",
+      &ProRadialDistributionFunction::bin_from_r_to_r_plus_dr,
+      py::arg("bin_from_r") = true)
     .def("get_r_axis", &ProRadialDistributionFunction::get_r_axis)
     .def(
       "get_rdf", &ProRadialDistributionFunction::get_rdf,

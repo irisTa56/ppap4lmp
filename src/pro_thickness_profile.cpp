@@ -65,7 +65,7 @@ void ProThicknessProfile::run_impl(int index)
   auto delta_x = (box["hi_x"].get<double>() - origin_x) / double(nx);
   auto delta_y = (box["hi_y"].get<double>() - origin_y) / double(ny);
 
-  if (shift_half_delta)
+  if (shift_half)
   {
     origin_x += 0.5 * delta_x;
     origin_y += 0.5 * delta_y;
@@ -165,9 +165,9 @@ void ProThicknessProfile::set_offset(double offset_)
 
 /* ------------------------------------------------------------------ */
 
-void ProThicknessProfile::set_shift_half_delta(bool shift_half_delta_)
+void ProThicknessProfile::shift_half_delta(bool shift_half_)
 {
-  shift_half_delta = shift_half_delta_;
+  shift_half = shift_half_;
 }
 
 /* ------------------------------------------------------------------ */
