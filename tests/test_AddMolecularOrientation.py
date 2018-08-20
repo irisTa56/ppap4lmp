@@ -50,7 +50,7 @@ class TestAddMolecularOrientation(unittest.TestCase):
     self.assertEqual(evals[0], evals[2])
 
     evecs = data["I_vectors"]
-    self.assertTrue(np.array_equal(np.array(evecs), np.identity(3)))
+    self.assertTrue(np.allclose(np.array(evecs), np.identity(3)))
 
   def test_x_oriented(self):
 

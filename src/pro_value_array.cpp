@@ -5,8 +5,6 @@ contained in Arrays.
 create: 2018/07/16 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include <algorithm>
-
 #include "pro_value_array.h"
 #include "utils.h"
 

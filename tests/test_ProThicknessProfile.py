@@ -70,7 +70,7 @@ class TestProThicknessProfile(unittest.TestCase):
 
     for i, p in enumerate(profiles):
 
-      self.assertTrue(np.array_equal(p, np.full((20, 30), float(i+1))))
+      self.assertTrue(np.allclose(p, np.full((20, 30), float(i+1))))
 
   def test_20x30_with_offset(self):
 
@@ -102,7 +102,7 @@ class TestProThicknessProfile(unittest.TestCase):
 
     for i, p in enumerate(profiles):
 
-      self.assertTrue(np.array_equal(p, np.full((20, 30), float(i+1))))
+      self.assertTrue(np.allclose(p, np.full((20, 30), float(i+1))))
 
   def test_20x30_with_shift(self):
 
@@ -136,5 +136,5 @@ class TestProThicknessProfile(unittest.TestCase):
 
     for i, p in enumerate(profiles):
 
-      self.assertTrue(np.array_equal(
+      self.assertTrue(np.allclose(
         p, np.full((20, 30), float(i) + addition)))

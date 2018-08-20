@@ -39,6 +39,7 @@ void AddMolecularOrientation::compute_impl(
     ArrayXXd evecs = solver.eigenvectors().real().transpose();
 
     d["I_values"] = {evals(0), evals(1), evals(2)};
+    d["I_vectors"].clear();
 
     for (int i = 0; i != 3; ++i)
     {

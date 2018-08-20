@@ -146,6 +146,15 @@ class AddChildIDs {
 
 Adder <|---- AddChildIDs
 
+class AddSpecialBonds {
+  +AddSpecialBonds(GenElement*, List<List<int>>)
+  +AddSpecialBonds(GenElement*, Dict<int,List<List<int>>>)
+  -Dict<int,List<List<int>>> mol_type_to_sbonds_list_in_mol
+  #void compute_impl(Json, Set<Str>)
+}
+
+Adder <|---- AddSpecialBonds
+
 abstract class Starter {
   ~void compute(Json, Set<Str>, int)
 }
@@ -293,6 +302,28 @@ class ProThicknessProfile {
 }
 
 Processor <|-- ProThicknessProfile
+
+class ProRadialDistributionFunction {
+  +ProRadialDistributionFunction(GenElement*, GenElement*)
+  +ProRadialDistributionFunction(List<pair<GenElement*,GenElement*>>)
+  -int n_bins
+  -double bin_width
+  -bool bin_from_r_to_r_plus_dr
+  -ArrayXd rdf
+  -List<ArrayXd> rdf_traj
+  -List<double> density_traj
+  -List<ArrayXd> number_distribution_traj
+  #void run_impl(int)
+  ~void prepare()
+  ~void finish()
+  +void set_bin(int, int)
+  +void set_bin_from_r_to_r_plus_dr(double)
+  +ArrayXd get_r_axis()
+  +ArrayXd get_rdf()
+  +List<ArrayXd> get_rdf_traj()
+}
+
+Processor <|-- ProRadialDistributionFunction
 
 abstract class Invoker {
   #int n_processors

@@ -123,4 +123,4 @@ class TestAddCoMPositions(unittest.TestCase):
 
         expected_rs.append([float(ibead), 0.0, 10.0*imol])
 
-    self.assertTrue(np.array_equal(rs, np.array(expected_rs)))
+    self.assertTrue(np.allclose(rs, np.array(expected_rs)))

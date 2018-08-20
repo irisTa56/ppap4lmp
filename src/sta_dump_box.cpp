@@ -46,13 +46,14 @@ void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
     {
       auto strs = split(line);
 
-      data["periodic_x"] = strs[3] == "pp" ? true : false;
-      data["periodic_y"] = strs[4] == "pp" ? true : false;
-      data["periodic_z"] = strs[5] == "pp" ? true : false;
+      for (const auto &item : ENUM_XYZ)
+      {
+        data["periodic_"+item.second]
+          = strs[3+item.first] == "pp" ? true : false;
+        datakeys.insert("periodic_"+item.second);
+      }
 
-      datakeys.insert({"periodic_x", "periodic_y", "periodic_z"});
-
-      for (Str dim : {"x", "y", "z"})
+      for (const Str &dim : {"x", "y", "z"})
       {
         std::getline(ifs, line);
         auto strs = split(line);

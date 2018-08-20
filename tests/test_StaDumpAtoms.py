@@ -146,7 +146,7 @@ class TestStaDumpAtoms(unittest.TestCase):
     for i in range(10):
       idx = randrange(len(data))
       d = data[idx]
-      self.assertTrue(np.array_equal(
+      self.assertTrue(np.allclose(
         np.array([d[k] for k in keys]), arr[idx]))
 
   def test_get_2d_double(self):
@@ -167,5 +167,5 @@ class TestStaDumpAtoms(unittest.TestCase):
     for i in range(10):
       idx = randrange(len(data))
       d = data[idx]
-      self.assertTrue(np.array_equal(
+      self.assertTrue(np.allclose(
         np.array([d[k] for k in keys]), arr[idx]))

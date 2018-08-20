@@ -38,6 +38,12 @@ void AddSpecialBonds::compute_impl(Json &data, Set<Str> &datakeys)
     return;
   }
 
+  if (check_containment<Str>(datakeys, "special-bonds"))
+  {
+    runtime_error("AddSpecialBonds cannot overwrite 'special-bonds'");
+    return;
+  }
+
   auto &mols = gen_mols->get_data();
 
   auto id2index = get_map_to_index(data, "id");

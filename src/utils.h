@@ -9,6 +9,7 @@
 
 extern bool ERROR_OCCURED;
 extern bool ToF_LOGGING;
+extern List<std::pair<int,Str>> ENUM_XYZ;
 
 /* ------------------------------------------------------------------ */
 

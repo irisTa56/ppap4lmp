@@ -23,6 +23,7 @@ from test_AddSpecialBonds import TestAddSpecialBonds
 from test_ProData import TestProData
 from test_ProValueArray import TestProValueArray
 from test_ProThicknessProfile import TestProThicknessProfile
+from test_ProRadialDistributionFunction import TestProRadialDistributionFunction
 
 from ppap4lmp import __version__
 
@@ -133,6 +134,11 @@ def suite_procs():
   suite.addTest(TestProThicknessProfile("test_20x30"))
   suite.addTest(TestProThicknessProfile("test_20x30_with_offset"))
   suite.addTest(TestProThicknessProfile("test_20x30_with_shift"))
+
+  suite.addTest(TestProRadialDistributionFunction("test_error"))
+  suite.addTest(TestProRadialDistributionFunction("test_cubic"))
+  suite.addTest(TestProRadialDistributionFunction("test_cubic_bin_from_r_to_r_plus_dr"))
+  suite.addTest(TestProRadialDistributionFunction("test_traj"))
 
   return suite
 

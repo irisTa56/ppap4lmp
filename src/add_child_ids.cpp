@@ -39,9 +39,16 @@ void AddChildIDs::compute_impl(Json &data, Set<Str> &datakeys)
     return;
   }
 
-  auto id2index = get_map_to_index(data, "id");
-
   Str key_for_child_ids = child_name + "-ids";
+
+  if (check_containment<Str>(datakeys, key_for_child_ids))
+  {
+    runtime_error(
+      "AddChildIDs cannot overwrite '" + key_for_child_ids + "'");
+    return;
+  }
+
+  auto id2index = get_map_to_index(data, "id");
 
   for (const auto &child : gen_children->get_data())
   {

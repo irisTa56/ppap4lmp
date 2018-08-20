@@ -51,5 +51,5 @@ class TestAddRename(unittest.TestCase):
     elem.append_updater(AddRename("A", "B"))
     vec_new = elem.get_1d_int("B")
 
-    self.assertTrue(np.array_equal(vec_old, vec_new))
+    self.assertTrue(np.allclose(vec_old, vec_new))
     self.assertEqual({"B", "C"}, elem.get_keys())

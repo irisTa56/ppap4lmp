@@ -4,8 +4,6 @@ GenDict: stands for Generator Dictionary containing elements.
 create: 2018/07/03 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include <algorithm>
-
 #include "gen_dict.h"
 #include "utils.h"
 

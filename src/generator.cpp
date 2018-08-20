@@ -4,8 +4,6 @@ Generator: is an abstract class to generate (and manage) data.
 create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include <algorithm>
-
 #include "generator.h"
 #include "utils.h"
 
