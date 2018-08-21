@@ -9,18 +9,18 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Adder::compute(Json &data, Set<Str> &datakeys, int dataid)
+void Adder::compute(
+  Json &data,
+  Set<Str> &datakeys,
+  int dataid)
 {
   if (check_blacklist(dataid))
   {
-    if (data != nullptr)
-    {
-      compute_impl(data, datakeys);
-    }
-    else
+    if (data == nullptr)
     {
       runtime_error("Adder accepts nonempty data only");
-      return;
     }
+
+    compute_impl(data, datakeys);
   }
 }

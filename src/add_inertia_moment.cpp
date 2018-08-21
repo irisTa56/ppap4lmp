@@ -9,7 +9,8 @@ create: 2018/07/15 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-AddInertiaMoment::AddInertiaMoment(ShPtr<GenElement> elem)
+AddInertiaMoment::AddInertiaMoment(
+  ShPtr<GenElement> elem)
 {
   ext_generator = elem;
 }
@@ -17,7 +18,8 @@ AddInertiaMoment::AddInertiaMoment(ShPtr<GenElement> elem)
 /* ------------------------------------------------------------------ */
 
 void AddInertiaMoment::compute_with_weights(
-  Json &data, ShPtr<GenElement> gen_atoms)
+  Json &data,
+  ShPtr<GenElement> gen_atoms)
 {
   auto id2index_atom = get_map_to_index(gen_atoms->get_data(), "id");
 
@@ -31,22 +33,22 @@ void AddInertiaMoment::compute_with_weights(
 
     MatrixXd sum = MatrixXd::Zero(3, 3);
 
-    int n_atoms = d["atom-ids"].size();
+    auto n_atoms = d["atom-ids"].size();
 
     for (int i = 0; i != n_atoms; ++i)
     {
       int id = d["atom-ids"][i];
       double weight = d["atom-weights"][i];
 
-      int index = id2index_atom[id];
-      double mass = ms_atom(index) * weight;
+      auto index = id2index_atom[id];
+      auto mass = ms_atom(index) * weight;
 
       RowVectorXd dr = rs_atom.row(index) - r_mol;
 
       sum += mass * dr.transpose() * dr;
     }
 
-    double tr = sum.trace();
+    auto tr = sum.trace();
 
     d["I_xx"] = tr - sum(0, 0);
     d["I_yy"] = tr - sum(1, 1);
@@ -60,7 +62,8 @@ void AddInertiaMoment::compute_with_weights(
 /* ------------------------------------------------------------------ */
 
 void AddInertiaMoment::compute_without_weights(
-  Json &data, ShPtr<GenElement> gen_atoms)
+  Json &data,
+  ShPtr<GenElement> gen_atoms)
 {
   auto id2index_atom = get_map_to_index(gen_atoms->get_data(), "id");
 
@@ -76,15 +79,15 @@ void AddInertiaMoment::compute_without_weights(
 
     for (int id : d["atom-ids"])
     {
-      int index = id2index_atom[id];
-      double mass = ms_atom(index);
+      auto index = id2index_atom[id];
+      auto mass = ms_atom(index);
 
       RowVectorXd dr = rs_atom.row(index) - r_mol;
 
       sum += mass * dr.transpose() * dr;
     }
 
-    double tr = sum.trace();
+    auto tr = sum.trace();
 
     d["I_xx"] = tr - sum(0, 0);
     d["I_yy"] = tr - sum(1, 1);
@@ -97,23 +100,14 @@ void AddInertiaMoment::compute_without_weights(
 
 /* ------------------------------------------------------------------ */
 
-void AddInertiaMoment::compute_impl(Json &data, Set<Str> &datakeys)
+void AddInertiaMoment::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   auto gen_atoms = ext_generator->get_element();
 
-  if (!check_containment<Str>(
-    gen_atoms->get_keys(), {"id", "mass", "xu", "yu", "zu"}))
-  {
-    runtime_error(
-      "AddInertiaMoment needs 'id', 'mass' and '*u' (x/y/z) externally");
-    return;
-  }
-
-  if (!check_containment<Str>(datakeys, {"atom-ids", "xu", "yu", "zu"}))
-  {
-    runtime_error("AddInertiaMoment needs 'atom-ids' and '*u' (x/y/z)");
-    return;
-  }
+  check_keys(gen_atoms, {"id", "mass", "xu", "yu", "zu"});
+  check_keys(datakeys, {"atom-ids", "xu", "yu", "zu"});
 
   if (check_containment<Str>(datakeys, "atom-weights"))
   {

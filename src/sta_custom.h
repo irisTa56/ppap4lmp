@@ -13,9 +13,12 @@ class StaCustom : public Starter {
   Json json;
   Set<Str> jsonkeys;
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  StaCustom(const Json &);
+  StaCustom(
+    const Json &json_);
   virtual ~StaCustom() = default;
 };
 

@@ -10,25 +10,29 @@ create: 2018/07/16 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-ProValueArray::ProValueArray(ShPtr<GenElement> elem)
+ProValueArray::ProValueArray(
+  ShPtr<GenElement> elem)
 {
   register_generators(elem);
 }
 
 /* ------------------------------------------------------------------ */
 
-ProValueArray::ProValueArray(List<ShPtr<GenElement>> elems)
+ProValueArray::ProValueArray(
+  List<ShPtr<GenElement>> elems)
 {
   register_generators(elems);
 }
 
 /* ------------------------------------------------------------------ */
 
-void ProValueArray::run_sort(int index, const Json &data)
+void ProValueArray::run_sort(
+  int index,
+  const Json &data)
 {
   List<std::pair<int,Dict<Str,double>>> numbered_values;
 
-  for (const auto &d : data.is_array() ? data : Json({data}))
+  for (const auto &d : data.is_array() ? data : Json::array({data}))
   {
     Dict<Str,double> tmp;
 
@@ -43,11 +47,11 @@ void ProValueArray::run_sort(int index, const Json &data)
       else if (val.is_number())
       {
         message("ProValueArray: Converting an integer to float");
+        tmp[k] = val;
       }
       else
       {
         runtime_error("ProValueArray: Value is not number");
-        return;
       }
     }
 
@@ -63,7 +67,7 @@ void ProValueArray::run_sort(int index, const Json &data)
       return a.first < b.first;
     });
 
-  int size = numbered_values.size();
+  auto size = numbered_values.size();
 
   for (const auto &k : selected_keys)
   {
@@ -80,11 +84,13 @@ void ProValueArray::run_sort(int index, const Json &data)
 
 /* ------------------------------------------------------------------ */
 
-void ProValueArray::run_no_sort(int index, const Json &data)
+void ProValueArray::run_no_sort(
+  int index,
+  const Json &data)
 {
   List<Dict<Str,double>> values;
 
-  for (const auto &d : data.is_array() ? data : Json({data}))
+  for (const auto &d : data.is_array() ? data : Json::array({data}))
   {
     Dict<Str,double> tmp;
 
@@ -92,26 +98,25 @@ void ProValueArray::run_no_sort(int index, const Json &data)
     {
       auto &val = d[k];
 
-      if (val.is_number())
+      if (val.is_number_float())
       {
-        if (!val.is_number_float())
-        {
-          message("ProValueArray: Converting an integer to float");
-        }
-
+        tmp[k] = val;
+      }
+      else if (val.is_number())
+      {
+        message("ProValueArray: Converting an integer to float");
         tmp[k] = val;
       }
       else
       {
         runtime_error("ProValueArray: Value is not number");
-        return;
       }
     }
 
     values.push_back(tmp);
   }
 
-  int size = values.size();
+  auto size = values.size();
 
   for (const auto &k : selected_keys)
   {
@@ -128,26 +133,21 @@ void ProValueArray::run_no_sort(int index, const Json &data)
 
 /* ------------------------------------------------------------------ */
 
-void ProValueArray::run_impl(int index)
+void ProValueArray::run_impl(
+  int index)
 {
   if (selected_keys.empty())
   {
     runtime_error("ProValueArray: No selected values");
-    return;
   }
 
   auto elem = generators[index]->get_element();
   auto &data = elem->get_data();
 
   auto required_keys = selected_keys;
-  required_keys.insert("id");
+  required_keys.push_back("id");
 
-  if (!check_containment<Str>(elem->get_keys(), required_keys))
-  {
-    runtime_error(
-      "ProValueArray: Selected key(s) and 'id' do not exist");
-    return;
-  }
+  check_keys(elem, required_keys);
 
   if (do_sort)
   {
@@ -173,16 +173,15 @@ void ProValueArray::prepare()
 
 void ProValueArray::finish()
 {
-  auto &vec_of_row = results_tmp[*(selected_keys.begin())];
+  auto &list_of_row = results_tmp[selected_keys.front()];
 
-  int size = vec_of_row.front().size();
+  auto size = list_of_row.front().size();
 
-  for (const auto &row : vec_of_row)
+  for (const auto &row : list_of_row)
   {
     if (size != row.size())
     {
       runtime_error("ProValueArray: Data sizes must be the same");
-      return;
     }
   }
 
@@ -201,17 +200,19 @@ void ProValueArray::finish()
 
 /* ------------------------------------------------------------------ */
 
-void ProValueArray::select(py::args args)
+void ProValueArray::select(
+  py::args args)
 {
   for (const auto &a : args)
   {
-    selected_keys.insert(a.cast<Str>());
+    selected_keys.push_back(a.cast<Str>());
   }
 }
 
 /* ------------------------------------------------------------------ */
 
-void ProValueArray::force_sort(bool do_sort_)
+void ProValueArray::force_sort(
+  bool do_sort_)
 {
   do_sort = do_sort_;
 }

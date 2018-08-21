@@ -8,7 +8,9 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-StaDump::StaDump(const Str &filepath_, int timestep_)
+StaDump::StaDump(
+  const Str &filepath_,
+  int timestep_)
 {
   filepath = filepath_;
   timestep = timestep_;

@@ -19,16 +19,22 @@ class ProRadialDistributionFunction : public Processor {
   List<double> density_traj;
   List<ArrayXd> number_distribution_traj;
  protected:
-  virtual void run_impl(int) override;
+  virtual void run_impl(
+    int index) override;
  public:
-  ProRadialDistributionFunction(ShPtr<GenElement>, ShPtr<GenElement>);
   ProRadialDistributionFunction(
-    List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>>);
+    ShPtr<GenElement> atoms,
+    ShPtr<GenElement> box);
+  ProRadialDistributionFunction(
+    List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>> pairs);
   virtual ~ProRadialDistributionFunction() = default;
   virtual void prepare() override;
   virtual void finish() override;
-  void set_bin(double, int);
-  void bin_from_r_to_r_plus_dr(bool bin_from_r_ = true);
+  void set_bin(
+    double bin_width_,
+    int n_bins_);
+  void bin_from_r_to_r_plus_dr(
+    bool bin_from_r_ = true);
   const ArrayXd get_r_axis();
   const ArrayXd &get_rdf();
   const List<ArrayXd> &get_rdf_traj();
@@ -39,14 +45,12 @@ class ProRadialDistributionFunction : public Processor {
 
 static void pybind_pro_radial_distribution_function(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<ProRadialDistributionFunction,PyProcessor<ProRadialDistributionFunction>,Processor,ShPtr<ProRadialDistributionFunction>>(m, "ProRadialDistributionFunction")
     .def(py::init<ShPtr<GenElement>,ShPtr<GenElement>>())
     .def(py::init<List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>>>())
     .def("set_bin", &ProRadialDistributionFunction::set_bin)
     .def(
-      "bin_from_r_to_r_plus_dr",
-      &ProRadialDistributionFunction::bin_from_r_to_r_plus_dr,
+      "bin_from_r_to_r_plus_dr", &ProRadialDistributionFunction::bin_from_r_to_r_plus_dr,
       py::arg("bin_from_r") = true)
     .def("get_r_axis", &ProRadialDistributionFunction::get_r_axis)
     .def(

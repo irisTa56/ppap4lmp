@@ -10,8 +10,11 @@ create: 2018/06/22 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 template <class GEN>
-void Processor::register_generators(ShPtr<GEN> gen)
+void Processor::register_generators(
+  ShPtr<GEN> gen)
 {
+  generators.clear();
+
   generators.push_back(gen);
 
   n_generators = generators.size();
@@ -32,8 +35,11 @@ template void Processor::register_generators(
 /* ------------------------------------------------------------------ */
 
 template <class GEN>
-void Processor::register_generators(const List<ShPtr<GEN>> &gens)
+void Processor::register_generators(
+  const List<ShPtr<GEN>> &gens)
 {
+  generators.clear();
+
   for (auto gen : gens)
   {
     generators.push_back(gen);
@@ -62,23 +68,16 @@ bool Processor::run()
 
   #pragma omp critical (processor)
   {
-    index = i_generator;
-    i_generator++;
+    index = i_generator++;
   }
 
   if (index < n_generators)
   {
     generators[index]->hello();
 
-    if (ERROR_OCCURED) return true;
-
     run_impl(index);
 
-    if (ERROR_OCCURED) return true;
-
     generators[index]->goodbye();
-
-    if (ERROR_OCCURED) return true;
 
     return false;
   }

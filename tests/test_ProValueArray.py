@@ -7,10 +7,11 @@ from ppap4lmp import Element, StaCustom, ProValueArray, InvOMP
 
 class TestProValueArray(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     elems = [
       Element(StaCustom({"id": i, "A": i*i})) for i in range(1000)]
+
     pro = ProValueArray(elems)
 
     try:
@@ -21,6 +22,11 @@ class TestProValueArray(unittest.TestCase):
         msg.split("\n")[0],
         "RuntimeError: ProValueArray: No selected values")
 
+  def test_error02(self):
+
+    elems = [
+      Element(StaCustom({"id": i, "A": i*i})) for i in range(1000)]
+
     pro = ProValueArray(elems)
     pro.select("B")
 
@@ -30,8 +36,9 @@ class TestProValueArray(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: ProValueArray: Selected key(s) and 'id' do not "
-        + "exist")
+        "RuntimeError: ProValueArray needs 'B' externally")
+
+  def test_error03(self):
 
     elems = [
       Element(StaCustom(
@@ -46,6 +53,8 @@ class TestProValueArray(unittest.TestCase):
       self.assertEqual(
         msg.split("\n")[0],
         "RuntimeError: ProValueArray: Value is not number")
+
+  def test_error04(self):
 
     data = [
       [{"id": j, "A": float(i*j)} for j in range(10*i+1)]

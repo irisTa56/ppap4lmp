@@ -9,7 +9,8 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-const bool Updater::check_blacklist(int dataid)
+const bool Updater::check_blacklist(
+  int dataid)
 {
   bool pass = false;
 
@@ -28,7 +29,8 @@ const bool Updater::check_blacklist(int dataid)
 
 /* ------------------------------------------------------------------ */
 
-void Updater::remove_from_blacklist(int dataid)
+void Updater::remove_from_blacklist(
+  int dataid)
 {
   omp_set_lock(&omp_lock);
 

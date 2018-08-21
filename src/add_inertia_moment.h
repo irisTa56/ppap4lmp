@@ -10,12 +10,19 @@ create: 2018/07/15 by Takayuki Kobayashi
 #include "adder.h"
 
 class AddInertiaMoment : public Adder {
-  void compute_with_weights(Json &data, ShPtr<GenElement>);
-  void compute_without_weights(Json &data, ShPtr<GenElement>);
+  void compute_with_weights(
+    Json &data,
+    ShPtr<GenElement> gen_atoms);
+  void compute_without_weights(
+    Json &data,
+    ShPtr<GenElement> gen_atoms);
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  AddInertiaMoment(ShPtr<GenElement>);
+  AddInertiaMoment(
+    ShPtr<GenElement> elem);
   virtual ~AddInertiaMoment() = default;
 };
 
@@ -24,7 +31,6 @@ class AddInertiaMoment : public Adder {
 
 static void pybind_add_inertia_moment(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddInertiaMoment,PyUpdater<AddInertiaMoment>,Adder,Updater,ShPtr<AddInertiaMoment>>(m, "AddInertiaMoment")
     .def(py::init<ShPtr<GenElement>>());
 }

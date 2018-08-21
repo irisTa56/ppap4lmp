@@ -9,7 +9,8 @@ create: 2018/07/01 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-FilSet::FilSet(const Dict<Str,Set<Json>> &value_sets_)
+FilSet::FilSet(
+  const Dict<Str,Set<Json>> &value_sets_)
 {
   value_sets = value_sets_;
 }
@@ -25,16 +26,13 @@ FilSet::FilSet(
 
 /* ------------------------------------------------------------------ */
 
-void FilSet::compute_impl(Json &data, Set<Str> &datakeys)
+void FilSet::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   for (const auto &item : value_sets)
   {
-    if (!check_containment<Str>(datakeys, item.first))
-    {
-      runtime_error(
-        "FilSet cannot use nonexistent property: " + item.first);
-      return;
-    }
+    check_key(datakeys, item.first);
   }
 
   Json tmp;

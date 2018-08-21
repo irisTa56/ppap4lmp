@@ -19,12 +19,15 @@ using UpdatePair = std::pair<ShPtr<GenElement>,ShPtr<Updater>>;
 class Generator {
  protected:
   List<UpdatePair> update_chain;
-  void merge_update_chain(const List<UpdatePair> &);
+  void merge_update_chain(
+    const List<UpdatePair> &new_chain);
  public:
   Generator() = default;
   virtual ~Generator() = default;
-  virtual ShPtr<GenElement> get_element(Json name = nullptr) = 0;
-  virtual ShPtr<Generator> get_generator(Json name = nullptr) = 0;
+  virtual ShPtr<GenElement> get_element(
+    Json name = nullptr) = 0;
+  virtual ShPtr<Generator> get_generator(
+    Json name = nullptr) = 0;
   void appoint();
   void hello();
   void goodbye();

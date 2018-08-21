@@ -9,7 +9,8 @@ create: 2018/06/23 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-Invoker::Invoker(ShPtr<Processor> proc)
+Invoker::Invoker(
+  ShPtr<Processor> proc)
 {
   processors = {proc};
   n_processors = processors.size();
@@ -17,7 +18,8 @@ Invoker::Invoker(ShPtr<Processor> proc)
 
 /* ------------------------------------------------------------------ */
 
-Invoker::Invoker(std::vector<ShPtr<Processor>> procs)
+Invoker::Invoker(
+  std::vector<ShPtr<Processor>> procs)
 {
   processors = procs;
   n_processors = processors.size();
@@ -27,25 +29,23 @@ Invoker::Invoker(std::vector<ShPtr<Processor>> procs)
 
 void Invoker::execute()
 {
-  if (ERROR_OCCURED)
+  try
   {
-    ERROR_OCCURED = false;
-    logging("'ERROR_OCCURED' was reset to false");
+    for (auto p : processors)
+    {
+      p->prepare();
+    }
+
+    execute_impl();
+
+    for (auto p : processors)
+    {
+      p->finish();
+    }
   }
-
-  for (auto p : processors)
+  catch (std::runtime_error &e)
   {
-    p->prepare();
-  }
-
-  if (ERROR_OCCURED) return;
-
-  execute_impl();
-
-  if (ERROR_OCCURED) return;
-
-  for (auto p : processors)
-  {
-    p->finish();
+    logging(e.what());
+    return;
   }
 }

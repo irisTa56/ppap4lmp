@@ -15,8 +15,10 @@ class Invoker {
   List<ShPtr<Processor>> processors;
   virtual void execute_impl() = 0;
  public:
-  Invoker(ShPtr<Processor>);
-  Invoker(std::vector<ShPtr<Processor>>);
+  Invoker(
+    ShPtr<Processor> proc);
+  Invoker(
+    std::vector<ShPtr<Processor>> procs);
   virtual ~Invoker() = default;
   void execute();
 };
@@ -30,7 +32,8 @@ class PyInvoker : public INVO {
  protected:
   void execute_impl() override
   {
-    PYBIND11_OVERLOAD_PURE(void, INVO, execute_impl, );
+    PYBIND11_OVERLOAD_PURE(
+      void, INVO, execute_impl, );
   }
  public:
   using INVO::INVO;

@@ -11,7 +11,8 @@ create: 2018/07/08 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProThicknessProfile::ProThicknessProfile(
-  ShPtr<GenElement> atoms, ShPtr<GenElement> box)
+  ShPtr<GenElement> atoms,
+  ShPtr<GenElement> box)
 {
   register_generators(ShPtr<GenDict>(
     new GenDict({{"Atoms", atoms}, {"Box", box}})));
@@ -35,30 +36,20 @@ ProThicknessProfile::ProThicknessProfile(
 
 /* ------------------------------------------------------------------ */
 
-void ProThicknessProfile::run_impl(int index)
+void ProThicknessProfile::run_impl(
+  int index)
 {
   auto gen_atoms = generators[index]->get_element("Atoms");
   auto &atoms = gen_atoms->get_data();
 
-  if (!check_containment<Str>(
-    gen_atoms->get_keys(), {"x", "y", "z", "radius"}))
-  {
-    runtime_error(
-      "ProThicknessProfile needs 'x', 'y', 'z' and 'radius'");
-    return;
-  }
+  check_keys(gen_atoms, {"x", "y", "z", "radius"});
 
   auto mini_atoms = get_partial_json(atoms, {"x", "y", "z", "radius"});
 
   auto gen_box = generators[index]->get_element("Box");
   auto &box = gen_box->get_data();
 
-  if (!check_containment<Str>(
-    gen_box->get_keys(), {"lo_x", "lo_y", "hi_x", "hi_y"}))
-  {
-    runtime_error("ProThicknessProfile needs 'lo_*' and 'hi_*' (x/y)");
-    return;
-  }
+  check_keys(gen_box, {"lo_x", "lo_y", "hi_x", "hi_y"});
 
   auto origin_x = box["lo_x"].get<double>();
   auto origin_y = box["lo_y"].get<double>();
@@ -92,7 +83,7 @@ void ProThicknessProfile::run_impl(int index)
   auto reciprocal_delta_x = 1.0 / delta_x;
   auto reciprocal_delta_y = 1.0 / delta_y;
 
-  int n_atoms = atoms.size();
+  auto n_atoms = atoms.size();
 
   for (int i = 0; i != n_atoms; ++i)
   {
@@ -105,10 +96,10 @@ void ProThicknessProfile::run_impl(int index)
     auto radius = atom["radius"].get<double>();
     auto radius2 = radius*radius;
 
-    int grid_index_min_x = ceil((atom_x-radius)*reciprocal_delta_x);
-    int grid_index_min_y = ceil((atom_y-radius)*reciprocal_delta_y);
-    int grid_index_max_x = ceil((atom_x+radius)*reciprocal_delta_x);
-    int grid_index_max_y = ceil((atom_y+radius)*reciprocal_delta_y);
+    auto grid_index_min_x = ceil((atom_x-radius)*reciprocal_delta_x);
+    auto grid_index_min_y = ceil((atom_y-radius)*reciprocal_delta_y);
+    auto grid_index_max_x = ceil((atom_x+radius)*reciprocal_delta_x);
+    auto grid_index_max_y = ceil((atom_y+radius)*reciprocal_delta_y);
 
     for (int ix = grid_index_min_x; ix != grid_index_max_x; ++ix)
     {
@@ -123,8 +114,8 @@ void ProThicknessProfile::run_impl(int index)
 
         if (radius2 < dr2) continue;
 
-        int ix_in_box = ix - floor(ix*reciprocal_nx)*nx;
-        int iy_in_box = iy - floor(iy*reciprocal_ny)*ny;
+        auto ix_in_box = ix - floor(ix*reciprocal_nx)*nx;
+        auto iy_in_box = iy - floor(iy*reciprocal_ny)*ny;
 
         auto dz2 = radius2 - dr2;
 
@@ -150,7 +141,9 @@ void ProThicknessProfile::prepare()
 
 /* ------------------------------------------------------------------ */
 
-void ProThicknessProfile::set_grid(int nx_, int ny_)
+void ProThicknessProfile::set_grid(
+  int nx_,
+  int ny_)
 {
   nx = nx_;
   ny = ny_;
@@ -158,14 +151,16 @@ void ProThicknessProfile::set_grid(int nx_, int ny_)
 
 /* ------------------------------------------------------------------ */
 
-void ProThicknessProfile::set_offset(double offset_)
+void ProThicknessProfile::set_offset(
+  double offset_)
 {
   offset = offset_;
 }
 
 /* ------------------------------------------------------------------ */
 
-void ProThicknessProfile::shift_half_delta(bool shift_half_)
+void ProThicknessProfile::shift_half_delta(
+  bool shift_half_)
 {
   shift_half = shift_half_;
 }

@@ -9,7 +9,7 @@ from ppap4lmp import Element, StaDumpAtoms
 
 class TestStaDumpAtoms(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaDumpAtoms("dummy.file", 0))
 

@@ -8,17 +8,20 @@ create: 2018/06/22 by Takayuki Kobayashi
 #define PROESSOR_H
 
 #include "generator.h"
+#include "key_checker.h"
 
-class Processor {
+class Processor : public KeyChecker {
   int i_generator = 0;
  protected:
   int n_generators;
   List<ShPtr<Generator>> generators;
   virtual void run_impl(int) = 0;
   template <class GEN>
-  void register_generators(ShPtr<GEN>);
+  void register_generators(
+    ShPtr<GEN> gen);
   template <class GEN>
-  void register_generators(const List<ShPtr<GEN>> &);
+  void register_generators(
+    const List<ShPtr<GEN>> &gens);
  public:
   Processor() = default;
   virtual ~Processor() = default;
@@ -34,23 +37,28 @@ class Processor {
 template <class PRO = Processor>
 class PyProcessor : public PRO {
  protected:
-  void run_impl(int index) override
+  void run_impl(
+    int index) override
   {
-    PYBIND11_OVERLOAD_PURE(void, PRO, run_impl, index);
+    PYBIND11_OVERLOAD_PURE(
+      void, PRO, run_impl, index);
   }
  public:
   using PRO::PRO;
   void prepare() override
   {
-    PYBIND11_OVERLOAD(void, PRO, prepare, );
+    PYBIND11_OVERLOAD(
+      void, PRO, prepare, );
   }
   void finish() override
   {
-    PYBIND11_OVERLOAD(void, PRO, finish, );
+    PYBIND11_OVERLOAD(
+      void, PRO, finish, );
   }
   bool run() override
   {
-    PYBIND11_OVERLOAD(bool, PRO, run, );
+    PYBIND11_OVERLOAD(
+      bool, PRO, run, );
   }
 };
 

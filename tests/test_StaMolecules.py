@@ -5,7 +5,7 @@ from ppap4lmp import Element, StaDumpBox, StaDumpAtoms, StaMolecules
 
 class TestStaMolecules(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     molecules = Element(StaMolecules(
       Element(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))))

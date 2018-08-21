@@ -5,15 +5,17 @@ from ppap4lmp import Element, StaCustom
 
 class TestStaCustom(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
+
+    elem = Element(StaCustom([{"foo": 1}, {"bar": 2}]))
 
     try:
-      elem = Element(StaCustom([{"foo": 1}, {"bar": 2}]))
+      elem.get_data()
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: Invalid keys in array data")
+        "RuntimeError: Invalid key(s) in array data")
 
   def test_get_data(self):
 

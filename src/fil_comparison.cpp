@@ -10,41 +10,42 @@ create: 2018/07/02 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
-  const std::tuple<Str,Str,Json> &comp)
+  const std::tuple<Str,Str,Json> &comparison_)
 {
-  compare_funcs = convert_to_funcs({comp});
+  comparisons = {comparison_};
 }
 
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
-  const List<std::tuple<Str,Str,Json>> &comps)
+  const List<std::tuple<Str,Str,Json>> &comparisons_)
 {
-  compare_funcs = convert_to_funcs(comps);
-}
-
-/* ------------------------------------------------------------------ */
-
-FilComparison::FilComparison(
-  ShPtr<GenElement> elem,
-  const std::tuple<Str,Str,Json> &comp) : Filter(elem)
-{
-  compare_funcs = convert_to_funcs({comp});
+  comparisons = comparisons_;
 }
 
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
   ShPtr<GenElement> elem,
-  const List<std::tuple<Str,Str,Json>> &comps) : Filter(elem)
+  const std::tuple<Str,Str,Json> &comparison_) : Filter(elem)
 {
-  compare_funcs = convert_to_funcs(comps);
+  comparisons = {comparison_};
+}
+
+/* ------------------------------------------------------------------ */
+
+FilComparison::FilComparison(
+  ShPtr<GenElement> elem,
+  const List<std::tuple<Str,Str,Json>> &comparisons_) : Filter(elem)
+{
+  comparisons = comparisons_;
 }
 
 /* ------------------------------------------------------------------ */
 
 const CompareFunc FilComparison::make_lambda(
-  const Str &oper, const Json &rval)
+  const Str &oper,
+  const Json &rval)
 {
   if (oper == "<")
   {
@@ -87,7 +88,6 @@ const CompareFunc FilComparison::make_lambda(
     runtime_error(
       "FilComparison supports six operators: "
       "'<', '>', '<=', '>=', '==' and '!='");
-    return CompareFunc();
   }
 }
 
@@ -110,16 +110,15 @@ const List<std::pair<Str,CompareFunc>> FilComparison::convert_to_funcs(
 
 /* ------------------------------------------------------------------ */
 
-void FilComparison::compute_impl(Json &data, Set<Str> &datakeys)
+void FilComparison::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
+  auto compare_funcs = convert_to_funcs(comparisons);
+
   for (const auto &item : compare_funcs)
   {
-    if (!check_containment<Str>(datakeys, item.first))
-    {
-      runtime_error(
-        "FilComparison cannot use nonexistent property: " + item.first);
-      return;
-    }
+    check_key(datakeys, item.first);
   }
 
   Json tmp;

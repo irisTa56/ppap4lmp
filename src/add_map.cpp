@@ -11,7 +11,8 @@ create: 2018/06/24 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 AddMap::AddMap(
-  const Str &key_ref_, const Str &key_new_,
+  const Str &key_ref_,
+  const Str &key_new_,
   const Dict<Json,Json> &mapping_)
 {
   key_ref = key_ref_;
@@ -21,18 +22,15 @@ AddMap::AddMap(
 
 /* ------------------------------------------------------------------ */
 
-void AddMap::compute_impl(Json &data, Set<Str> &datakeys)
+void AddMap::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
-  if (!check_containment<Str>(datakeys, key_ref))
-  {
-    runtime_error("AddMap needs '" + key_ref + "'");
-    return;
-  }
+  check_key(datakeys, key_ref);
 
   if (check_containment<Str>(datakeys, key_new) && !do_overwrite)
   {
     runtime_error("AddMap cannot overwrite '" + key_new + "'");
-    return;
   }
 
   if (data.is_array())
@@ -52,7 +50,8 @@ void AddMap::compute_impl(Json &data, Set<Str> &datakeys)
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<AddMap> AddMap::overwrite(bool do_overwrite_)
+ShPtr<AddMap> AddMap::overwrite(
+  bool do_overwrite_)
 {
   do_overwrite = do_overwrite_;
 

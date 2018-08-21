@@ -12,7 +12,9 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
+void StaDumpBox::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   std::ifstream ifs(filepath);
   Str line;
@@ -22,7 +24,6 @@ void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
   if (!ifs.is_open())
   {
     runtime_error("No such a file: " + filepath);
-    return;
   }
 
   while (std::getline(ifs, line))
@@ -46,11 +47,12 @@ void StaDumpBox::compute_impl(Json &data, Set<Str> &datakeys)
     {
       auto strs = split(line);
 
-      for (const auto &item : ENUM_XYZ)
+      for (const auto &dim : get_indexed_list<Str>({"x", "y", "z"}))
       {
-        data["periodic_"+item.second]
-          = strs[3+item.first] == "pp" ? true : false;
-        datakeys.insert("periodic_"+item.second);
+        auto key = "periodic_"+dim.second;
+
+        data[key] = strs[3+dim.first] == "pp" ? true : false;
+        datakeys.insert(key);
       }
 
       for (const Str &dim : {"x", "y", "z"})

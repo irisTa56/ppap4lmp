@@ -9,23 +9,24 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
-void Generator::merge_update_chain(const List<UpdatePair> &new_chain)
+void Generator::merge_update_chain(
+  const List<UpdatePair> &new_chain)
 {
   auto &chain = update_chain;
 
-  for (auto itr = new_chain.begin(); itr != new_chain.end(); ++itr)
+  for (auto it = new_chain.begin(); it != new_chain.end(); ++it)
   {
-    if (std::find(chain.begin(), chain.end(), *itr) == chain.end())
+    if (std::find(chain.begin(), chain.end(), *it) == chain.end())
     {
       bool inserted = false;
 
-      for (auto jtr = chain.begin(); jtr != chain.end(); ++jtr)
+      for (auto jt = chain.begin(); jt != chain.end(); ++jt)
       {
         bool match = false;
 
-        for (auto ktr = itr+1; ktr != new_chain.end(); ++ktr)
+        for (auto kt = it+1; kt != new_chain.end(); ++kt)
         {
-          if (*ktr == *jtr)
+          if (*kt == *jt)
           {
             match = true;
             break;
@@ -34,7 +35,7 @@ void Generator::merge_update_chain(const List<UpdatePair> &new_chain)
 
         if (match)
         {
-          chain.insert(jtr, *itr);
+          chain.insert(jt, *it);
           inserted = true;
           break;
         }
@@ -42,7 +43,7 @@ void Generator::merge_update_chain(const List<UpdatePair> &new_chain)
 
       if (!inserted)
       {
-        chain.push_back(*itr);
+        chain.push_back(*it);
       }
     }
   }
@@ -64,10 +65,7 @@ void Generator::hello()
 {
   for (const auto &item : update_chain)
   {
-    if (!ERROR_OCCURED)
-    {
-      item.first->update_data(item.second);
-    }
+    item.first->update_data(item.second);
   }
 }
 

@@ -15,7 +15,7 @@ class TestAddInertiaMoment(unittest.TestCase):
     {"id": 6, "mol": 1, "mass": 1.0, "xu": 0.0, "yu": 0.0, "zu": -1.0},
   ]
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaCustom(self.custom_data))
     molecules = Element(StaMolecules(atoms))
@@ -30,8 +30,10 @@ class TestAddInertiaMoment(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddInertiaMoment needs 'id', 'mass' and '*u' "
-        + "(x/y/z) externally")
+        "RuntimeError: AddInertiaMoment needs 'id', 'mass', 'xu', "
+        + "'yu', 'zu' externally")
+
+  def test_error02(self):
 
     atoms = Element(StaCustom(self.custom_data))
     molecules = Element(StaMolecules(atoms))
@@ -43,7 +45,7 @@ class TestAddInertiaMoment(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddInertiaMoment needs 'atom-ids' and '*u' (x/y/z)")
+        "RuntimeError: AddInertiaMoment needs 'xu', 'yu', 'zu'")
 
   def test_isotropic(self):
 

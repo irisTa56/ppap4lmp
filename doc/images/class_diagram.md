@@ -231,7 +231,7 @@ class FilComparison {
   +FilComparison(List<tuple<Str,Str,Json>>)
   +FilComparison(GenElement*, tuple<Str,Str,Json>)
   +FilComparison(GenElement*, List<tuple<Str,Str,Json>>)
-  -List<pair<Str,function>> compare_funcs
+  -List<tuple<Str,Str,Json>> comparisons
   -function make_lambda(Str, Json)
   -List<pair<Str,function>> convert_to_funcs(List<tuple<Str,Str,Json>>)
   #void compute_impl(Json, Set<Str>)
@@ -258,7 +258,7 @@ abstract class Processor {
 class ProData {
   +ProData(GenElement*)
   +ProData(List<GenElement*>)
-  -Set<Str> selected_keys
+  -List<Str> selected_keys
   -List<Json> results
   #void run_impl(int)
   ~void prepare()
@@ -272,7 +272,7 @@ class ProValueArray {
   +ProValueArray(GenElement*)
   +ProValueArray(List<GenElement*>)
   -bool do_sort
-  -Set<Str> selected_keys
+  -List<Str> selected_keys
   -Dict<Str,ArrayXXd> results
   -Dict<Str,List<RowArrayXd>> results_tmp
   -run_sort(int, Json)
@@ -343,6 +343,18 @@ class InvoOMP {
 }
 
 Invoker <|-- InvoOMP
+
+class KeyChecker {
+  ~KeyChecker()
+  #bool check_key(Set<Str>, Str, Str)
+  #bool check_key(Set<Str>, List<Str>, Str)
+  #bool check_key(GenElement*, Str)
+  #bool check_key(GenElement*, List<Str>)
+  #Str get_my_class_name()
+}
+
+KeyChecker <|---- UpdatePair.Updater
+KeyChecker <|---- Processor
 
 Generator "*" o---- "*" UpdatePair
 

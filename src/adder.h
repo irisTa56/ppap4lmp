@@ -13,7 +13,10 @@ class Adder : public Updater {
  public:
   using Updater::Updater;
   virtual ~Adder() = default;
-  virtual void compute(Json &, Set<Str> &, int) override;
+  virtual void compute(
+    Json &data,
+    Set<Str> &datakeys,
+    int dataid) override;
 };
 
 /* ------------------------------------------------------------------ */

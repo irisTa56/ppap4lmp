@@ -9,7 +9,8 @@ create: 2018/07/03 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
-GenDict::GenDict(const Dict<Str,ShPtr<Generator>> &generator_dict_)
+GenDict::GenDict(
+  const Dict<Str,ShPtr<Generator>> &generator_dict_)
 {
   generator_dict = generator_dict_;
 
@@ -21,12 +22,12 @@ GenDict::GenDict(const Dict<Str,ShPtr<Generator>> &generator_dict_)
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<GenElement> GenDict::get_element(Json name)
+ShPtr<GenElement> GenDict::get_element(
+  Json name)
 {
   if (!name.is_string())
   {
     runtime_error("GenDict::get_element accepts a string only");
-    return ShPtr<GenElement>();
   }
 
   return std::dynamic_pointer_cast<GenElement>(
@@ -35,12 +36,12 @@ ShPtr<GenElement> GenDict::get_element(Json name)
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<Generator> GenDict::get_generator(Json name)
+ShPtr<Generator> GenDict::get_generator(
+  Json name)
 {
   if (!name.is_string())
   {
     runtime_error("GenDict::get_generator accepts a string only");
-    return ShPtr<Generator>();
   }
 
   return generator_dict[name.get<Str>()];

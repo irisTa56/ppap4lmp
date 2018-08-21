@@ -9,21 +9,24 @@ create: 2018/06/22 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-ProData::ProData(ShPtr<GenElement> elem)
+ProData::ProData(
+  ShPtr<GenElement> elem)
 {
   register_generators(elem);
 }
 
 /* ------------------------------------------------------------------ */
 
-ProData::ProData(List<ShPtr<GenElement>> elems)
+ProData::ProData(
+  List<ShPtr<GenElement>> elems)
 {
   register_generators(elems);
 }
 
 /* ------------------------------------------------------------------ */
 
-void ProData::run_impl(int index)
+void ProData::run_impl(
+  int index)
 {
   auto elem = generators[index]->get_element();
   auto &data = elem->get_data();
@@ -34,11 +37,7 @@ void ProData::run_impl(int index)
   }
   else
   {
-    if (!check_containment<Str>(elem->get_keys(), selected_keys))
-    {
-      runtime_error("ProData: Selected key(s) does not exist");
-      return;
-    }
+    check_keys(elem, selected_keys);
 
     Json json;
 
@@ -77,11 +76,12 @@ void ProData::prepare()
 
 /* ------------------------------------------------------------------ */
 
-void ProData::select(py::args args)
+void ProData::select(
+  py::args args)
 {
   for (const auto &arg : args)
   {
-    selected_keys.insert(arg.cast<Str>());
+    selected_keys.push_back(arg.cast<Str>());
   }
 }
 

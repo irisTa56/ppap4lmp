@@ -11,7 +11,8 @@ create: 2018/08/19 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  ShPtr<GenElement> gen_mols, const List<List<int>> &scheme)
+  ShPtr<GenElement> gen_mols,
+  const List<List<int>> &scheme)
 {
   ext_generator = gen_mols;
   mol_type_to_sbonds_list_in_mol[1] = scheme;
@@ -20,7 +21,8 @@ AddSpecialBonds::AddSpecialBonds(
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  ShPtr<GenElement> gen_mols, const Dict<int,List<List<int>>> &schemes)
+  ShPtr<GenElement> gen_mols,
+  const Dict<int,List<List<int>>> &schemes)
 {
   ext_generator = gen_mols;
   mol_type_to_sbonds_list_in_mol = schemes;
@@ -28,20 +30,17 @@ AddSpecialBonds::AddSpecialBonds(
 
 /* ------------------------------------------------------------------ */
 
-void AddSpecialBonds::compute_impl(Json &data, Set<Str> &datakeys)
+void AddSpecialBonds::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   auto gen_mols = ext_generator->get_element();
 
-  if (!check_containment<Str>(gen_mols->get_keys(), "atom-ids"))
-  {
-    runtime_error("AddSpecialBonds needs 'atom-ids' externally");
-    return;
-  }
+  check_key(gen_mols, "atom-ids");
 
   if (check_containment<Str>(datakeys, "special-bonds"))
   {
     runtime_error("AddSpecialBonds cannot overwrite 'special-bonds'");
-    return;
   }
 
   auto &mols = gen_mols->get_data();
@@ -54,13 +53,12 @@ void AddSpecialBonds::compute_impl(Json &data, Set<Str> &datakeys)
     auto sbonds_list_in_mol
       = mol_type_to_sbonds_list_in_mol[mol.value("type", 1)];
 
-    int n_atoms_in_mol = atom_ids.size();
+    auto n_atoms_in_mol = atom_ids.size();
 
     if (sbonds_list_in_mol.size() != n_atoms_in_mol)
     {
       runtime_error(
         "The numbers of atoms in a molecule are inconsistent");
-      return;
     }
 
     for (int i = 0; i != n_atoms_in_mol; ++i)

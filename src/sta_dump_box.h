@@ -12,7 +12,9 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 class StaDumpBox : public StaDump {
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
   using StaDump::StaDump;
   virtual ~StaDumpBox() = default;

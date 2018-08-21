@@ -12,16 +12,11 @@ create: 2018/07/16 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 void AddMolecularOrientation::compute_impl(
-  Json &data, Set<Str> &datakeys)
+  Json &data,
+  Set<Str> &datakeys)
 {
-  if (!check_containment<Str>(
-    datakeys, {"I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx"}))
-  {
-    runtime_error(
-      "AddMolecularOrientation needs 'I_**' "
-      "(xx/yy/zz/xy/yz/zx)");
-    return;
-  }
+  check_keys(
+    datakeys, {"I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx"});
 
   for (auto &d : data)
   {

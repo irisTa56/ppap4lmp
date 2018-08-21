@@ -4,7 +4,7 @@ project(ppap4lmp)
 find_package(nlohmann_json)
 IF(NOT nlohmann_json_FOUND)
   add_subdirectory(json)
-  include_directories(json/include)
+  include_directories(json/single_include)
 ENDIF()
 
 find_package(pybind11)

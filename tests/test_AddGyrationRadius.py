@@ -18,7 +18,7 @@ class TestAddGyrationRadius(unittest.TestCase):
     {"id": 6, "mol": 1, "mass": 1.0, "xu": 1.0, "yu": 1.0, "zu": 0.0},
   ]
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaCustom(self.custom_data))
     molecules = Element(StaMolecules(atoms))
@@ -30,7 +30,8 @@ class TestAddGyrationRadius(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddGyrationRadius needs 'mass' and 'I_**' (x/y/z)")
+        "RuntimeError: AddGyrationRadius needs 'mass', 'I_xx', "
+        + "'I_yy', 'I_zz'")
 
   def test_isotropic(self):
 

@@ -15,11 +15,16 @@ class AddRename : public Adder, public EnableShThis<AddRename> {
   Str key_old;
   Str key_new;
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  AddRename(const Str &, const Str &);
+  AddRename(
+    const Str &key_old_,
+    const Str &key_new_);
   virtual ~AddRename() = default;
-  ShPtr<AddRename> overwrite(bool do_overwrite_ = true);
+  ShPtr<AddRename> overwrite(
+    bool do_overwrite_ = true);
 };
 
 /* ------------------------------------------------------------------ */
@@ -27,7 +32,6 @@ class AddRename : public Adder, public EnableShThis<AddRename> {
 
 static void pybind_add_rename(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddRename,PyUpdater<AddRename>,Adder,Updater,ShPtr<AddRename>>(m, "AddRename")
     .def(py::init<const Str &,const Str &>())
     .def(

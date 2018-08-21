@@ -11,7 +11,7 @@ from ppap4lmp import \
 
 class TestProRadialDistributionFunction(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaCustom([
       {"x": 1.0*i, "y": 1.0*i, "z": 1.0*i}
@@ -26,8 +26,10 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: ProRadialDistributionFunction needs "
-        + "'x', 'y', 'z' and 'id'")
+        "RuntimeError: ProRadialDistributionFunction needs 'id' "
+        + "externally")
+
+  def test_error02(self):
 
     atoms = Element(StaCustom([
       {"id": i+1, "x": 1.0*i, "y": 1.0*i, "z": 1.0*i}
@@ -42,8 +44,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: ProRadialDistributionFunction needs 'lo_*' and "
-        + "'hi_*' (x/y/z)")
+        "RuntimeError: ProRadialDistributionFunction needs 'lo_x', "
+        + "'lo_y', 'lo_z', 'hi_x', 'hi_y', 'hi_z' externally")
 
   def test_cubic(self):
 

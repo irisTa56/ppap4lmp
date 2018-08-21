@@ -20,7 +20,7 @@ class TestAddMolecularOrientation(unittest.TestCase):
     {"id": 6, "mol": 1, "mass": 1.0, "xu": 1.0, "yu": 1.0, "zu": 0.0},
   ]
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaCustom(self.custom_data))
     molecules = Element(StaMolecules(atoms))
@@ -32,8 +32,8 @@ class TestAddMolecularOrientation(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddMolecularOrientation needs 'I_**' "
-        + "(xx/yy/zz/xy/yz/zx)")
+        "RuntimeError: AddMolecularOrientation needs 'I_xx', 'I_yy', "
+        + "'I_zz', 'I_xy', 'I_yz', 'I_zx'")
 
   def test_isotropic(self):
 

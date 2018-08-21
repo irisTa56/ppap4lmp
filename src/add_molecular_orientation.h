@@ -11,7 +11,9 @@ create: 2018/07/16 by Takayuki Kobayashi
 
 class AddMolecularOrientation : public Adder {
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
   using Adder::Adder;
   virtual ~AddMolecularOrientation() = default;
@@ -22,7 +24,6 @@ class AddMolecularOrientation : public Adder {
 
 static void pybind_add_molecular_orientation(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddMolecularOrientation,PyUpdater<AddMolecularOrientation>,Adder,Updater,ShPtr<AddMolecularOrientation>>(m, "AddMolecularOrientation")
     .def(py::init<>());
 }

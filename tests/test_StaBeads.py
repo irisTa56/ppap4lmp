@@ -6,7 +6,7 @@ from ppap4lmp import \
 
 class TestStaBeads(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(
       StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
@@ -21,6 +21,12 @@ class TestStaBeads(unittest.TestCase):
         "RuntimeError: Mapping to Beads must be specified by "
         + "'indices-in-mol'")
 
+  def test_error02(self):
+
+    atoms = Element(
+      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+    moles = Element(StaMolecules(atoms))
+
     try:
       beads = Element(StaBeads(moles, [
         {"indices-in-mol": [1, 2, 3, 4], "weights": [1.0, 1.0, 1.0]}]))
@@ -31,6 +37,12 @@ class TestStaBeads(unittest.TestCase):
         "RuntimeError: The numbers of elements in 'indices-in-mol' "
         + "and 'weights' are inconsistent")
 
+  def test_error03(self):
+
+    atoms = Element(
+      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+    moles = Element(StaMolecules(atoms))
+
     try:
       beads = Element(StaBeads(moles, [
         {"indices-in-mol": [1, 2], "weights": [1.0, 1.0]},
@@ -40,6 +52,12 @@ class TestStaBeads(unittest.TestCase):
       self.assertEqual(
         msg.split("\n")[0],
         "RuntimeError: The number of 'type' is invalid")
+
+  def test_error04(self):
+
+    atoms = Element(
+      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+    moles = Element(StaMolecules(atoms))
 
     try:
       beads = Element(StaBeads(moles, {

@@ -11,9 +11,12 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 class StaMolecules : public Starter {
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  StaMolecules(ShPtr<GenElement>);
+  StaMolecules(
+    ShPtr<GenElement> gen_atoms);
   virtual ~StaMolecules() = default;
 };
 

@@ -7,7 +7,7 @@ from ppap4lmp import Element, StaDumpAtoms, FilSet, FilComparison
 
 class TestFilComparison(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
@@ -19,14 +19,16 @@ class TestFilComparison(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: FilComparison cannot use nonexistent "
-        + "property: dummy")
+        "RuntimeError: FilComparison needs 'dummy'")
+
+  def test_error02(self):
 
     atoms = Element(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
+    atoms.append_updater(FilComparison([("mol", "dummy", 10)]))
 
     try:
-      atoms.append_updater(FilComparison([("mol", "dummy", 10)]))
+      atoms.get_data()
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(

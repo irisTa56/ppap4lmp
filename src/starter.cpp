@@ -9,7 +9,10 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void Starter::compute(Json &data, Set<Str> &datakeys, int dataid)
+void Starter::compute(
+  Json &data,
+  Set<Str> &datakeys,
+  int dataid)
 {
   if (check_blacklist(dataid))
   {
@@ -20,7 +23,6 @@ void Starter::compute(Json &data, Set<Str> &datakeys, int dataid)
     else
     {
       runtime_error("Starter accepts empty data only");
-      return;
     }
   }
 }

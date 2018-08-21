@@ -11,10 +11,14 @@ create: 2018/06/30 by Takayuki Kobayashi
 
 class Filter : public Updater {
  public:
-  Filter(ShPtr<GenElement>);
+  Filter(
+    ShPtr<GenElement> elem);
   using Updater::Updater;
   virtual ~Filter() = default;
-  virtual void compute(Json &, Set<Str> &, int) override;
+  virtual void compute(
+    Json &data,
+    Set<Str> &datakeys,
+    int dataid) override;
 };
 
 /* ------------------------------------------------------------------ */

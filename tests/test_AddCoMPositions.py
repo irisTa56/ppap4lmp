@@ -11,7 +11,7 @@ from ppap4lmp import \
 
 class TestAddCoMPositions(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
@@ -26,8 +26,8 @@ class TestAddCoMPositions(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddCoMPositions needs 'id', 'mass' and '*u' "
-        + "(x/y/z) externally")
+        "RuntimeError: AddCoMPositions needs 'id', 'mass', 'xu', "
+        + "'yu', 'zu' externally")
 
   def test_positions(self):
 
@@ -110,7 +110,8 @@ class TestAddCoMPositions(unittest.TestCase):
     atoms = Element(StaCustom(abst_atoms))
     moles = Element(StaMolecules(atoms))
     beads = Element(StaBeads(moles, [
-      {"indices-in-mol": list(range(4*i, 4*(i+1)))} for i in range(5)]))
+      {"indices-in-mol": list(range(4*i, 4*(i+1)))}
+      for i in range(5)]))
 
     beads.append_updater(AddCoMPositions(atoms))
 

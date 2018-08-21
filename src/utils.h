@@ -4,16 +4,17 @@
 #include <algorithm>
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 
 #include "aliases.h"
 
-extern bool ERROR_OCCURED;
 extern bool ToF_LOGGING;
-extern List<std::pair<int,Str>> ENUM_XYZ;
 
 /* ------------------------------------------------------------------ */
 
-static List<Str> split(const Str &s, char delim = ' ')
+static List<Str> split(
+  const Str &s,
+  char delim = ' ')
 {
   List<Str> elems;
   std::stringstream ss(s);
@@ -33,7 +34,9 @@ static List<Str> split(const Str &s, char delim = ' ')
 /* ------------------------------------------------------------------ */
 
 static List<Str> split2(
-  const Str &s, char delim1 = ' ', char delim2 = '\t')
+  const Str &s,
+  char delim1 = ' ',
+  char delim2 = '\t')
 {
   List<Str> elems;
   std::stringstream ss(s);
@@ -56,20 +59,8 @@ static List<Str> split2(
 
 /* ------------------------------------------------------------------ */
 
-static void logging(const Str &msg)
-{
-  if (ToF_LOGGING)
-  {
-    #pragma omp critical (io)
-    {
-      std::cout << msg << std::endl;
-    }
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-static void message(const Str &msg)
+static void message(
+  const Str &msg)
 {
   #pragma omp critical (io)
   {
@@ -79,75 +70,88 @@ static void message(const Str &msg)
 
 /* ------------------------------------------------------------------ */
 
-static void runtime_error(const Str &msg)
+static void logging(
+  const Str &msg)
 {
-  logging(msg);
+  if (ToF_LOGGING)
+  {
+    message(msg);
+  }
+}
 
-  #pragma omp critical
+/* ------------------------------------------------------------------ */
+
+static void runtime_error(
+  const Str &msg)
+{
+  #pragma omp critical (py_runtime_error)
   {
     PyErr_SetString(PyExc_RuntimeError, msg.c_str());
-    ERROR_OCCURED = true;
   }
+
+  throw std::runtime_error(msg);
 }
 
 /* ------------------------------------------------------------------ */
 
 template <typename T>
-static bool check_containment(const Set<T> &set, const T &el)
+static List<std::pair<int,T>> get_indexed_list(
+  const List<T> &list)
 {
-  if (set.find(el) == set.end())
+  List<std::pair<int,T>> tmp;
+
+  auto length = list.size();
+
+  for (int i = 0; i != length; ++i)
   {
-    return false;
+    tmp.push_back(std::make_pair(i, list[i]));
   }
-  else
-  {
-    return true;
-  }
+
+  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
 
 template <typename T>
-static bool check_containment(const Set<T> &set, const Set<T> &els)
+static bool check_containment(
+  const Set<T> &set,
+  const T &el)
 {
-  bool tmp = true;
+  return set.find(el) == set.end() ? false : true;
+}
 
+/* ------------------------------------------------------------------ */
+
+template <typename T>
+static bool check_containment(
+  const Set<T> &set,
+  const Set<T> &els)
+{
   for (const auto &el : els)
   {
     if (set.find(el) == set.end())
     {
-      tmp = false;
-      break;
+      return false;
     }
   }
 
-  return tmp;
+  return true;
 }
 
 /* ------------------------------------------------------------------ */
 
-static Json get_partial_json(const Json &data, const Str &key)
+static Json get_partial_json(
+  const Json &data,
+  const Str &key)
 {
-  Json tmp;
-
-  if (data.is_array())
-  {
-    for (const auto &d : data)
-    {
-      tmp.push_back({key, d[key]});
-    }
-  }
-  else
-  {
-    tmp[key] = data[key];
-  }
-
-  return tmp;
+  return get_partial_json(data, {key});
 }
 
 /* ------------------------------------------------------------------ */
 
-static Json get_partial_json(const Json &data, const Set<Str> &keys)
+static Json get_partial_json(
+  const Json &data,
+  const Set<Str> &keys)
 {
   Json tmp;
 
@@ -179,13 +183,14 @@ static Json get_partial_json(const Json &data, const Set<Str> &keys)
 /* ------------------------------------------------------------------ */
 
 static Dict<Json,int> get_map_to_index(
-  const Json &data, const Str &key)
+  const Json &data,
+  const Str &key)
 {
   Dict<Json,int> tmp;
 
   if (data.is_array())
   {
-    int length = data.size();
+    auto length = data.size();
 
     for (int i = 0; i != length; ++i)
     {
@@ -196,7 +201,6 @@ static Dict<Json,int> get_map_to_index(
   if (tmp.size() != data.size())
   {
     runtime_error("Map to index is not bijection");
-    return Dict<Json,int>();
   }
 
   return tmp;
@@ -205,17 +209,19 @@ static Dict<Json,int> get_map_to_index(
 /* ------------------------------------------------------------------ */
 
 static Dict<Json,int> get_map_to_index(
-  const Json &data, const List<Str> &keys)
+  const Json &data,
+  const List<Str> &keys)
 {
   Dict<Json,int> tmp;
 
   if (data.is_array())
   {
-    int length = data.size();
+    auto length = data.size();
 
     for (int i = 0; i != length; ++i)
     {
       auto &d = data[i];
+
       Json arr;
 
       for (const Str &key : keys)
@@ -230,7 +236,6 @@ static Dict<Json,int> get_map_to_index(
   if (tmp.size() != data.size())
   {
     runtime_error("Map to index is not bijection");
-    return Dict<Json,int>();
   }
 
   return tmp;
@@ -238,7 +243,8 @@ static Dict<Json,int> get_map_to_index(
 
 /* ------------------------------------------------------------------ */
 
-static void sort_by_id(Json &data)
+static void sort_by_id(
+  Json &data)
 {
   auto dict = get_map_to_index(data, "id");
   auto list = List<std::pair<int,int>>(dict.begin(), dict.end());

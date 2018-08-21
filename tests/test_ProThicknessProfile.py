@@ -9,7 +9,7 @@ from ppap4lmp import Element, StaCustom, ProThicknessProfile, InvOMP
 
 class TestProThicknessProfile(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaCustom([
       {"x": 1.0*i, "y": 1.0*i, "z": 1.0*i}
@@ -24,7 +24,9 @@ class TestProThicknessProfile(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: ProThicknessProfile needs 'x', 'y', 'z' and 'radius'")
+        "RuntimeError: ProThicknessProfile needs 'radius' externally")
+
+  def test_error02(self):
 
     atoms = Element(StaCustom([
       {"x": 1.0*i, "y": 1.0*i, "z": 1.0*i, "radius": 1.0}
@@ -39,7 +41,8 @@ class TestProThicknessProfile(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: ProThicknessProfile needs 'lo_*' and 'hi_*' (x/y)")
+        "RuntimeError: ProThicknessProfile needs 'lo_x', 'lo_y', "
+        + "'hi_x', 'hi_y' externally")
 
   def test_20x30(self):
 

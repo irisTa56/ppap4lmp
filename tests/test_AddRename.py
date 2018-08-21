@@ -7,7 +7,7 @@ from ppap4lmp import Element, StaCustom, AddRename
 
 class TestAddRename(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     elem = Element(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("dummy", "new"))
@@ -19,6 +19,8 @@ class TestAddRename(unittest.TestCase):
       self.assertEqual(
         msg.split("\n")[0],
         "RuntimeError: AddRename needs 'dummy'")
+
+  def test_error02(self):
 
     elem = Element(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("foo", "bar"))

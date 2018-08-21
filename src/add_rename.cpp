@@ -10,7 +10,9 @@ create: 2018/08/17 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-AddRename::AddRename(const Str &key_old_, const Str &key_new_)
+AddRename::AddRename(
+  const Str &key_old_,
+  const Str &key_new_)
 {
   key_old = key_old_;
   key_new = key_new_;
@@ -18,34 +20,31 @@ AddRename::AddRename(const Str &key_old_, const Str &key_new_)
 
 /* ------------------------------------------------------------------ */
 
-void AddRename::compute_impl(Json &data, Set<Str> &datakeys)
+void AddRename::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
-  if (!check_containment<Str>(datakeys, key_old))
-  {
-    runtime_error("AddRename needs '" + key_old + "'");
-    return;
-  }
+  check_key(datakeys, key_old);
 
   if (check_containment<Str>(datakeys, key_new) && !do_overwrite)
   {
     runtime_error("AddRename cannot overwrite '" + key_new + "'");
-    return;
   }
 
   if (data.is_array())
   {
     for (auto &d : data)
     {
-      auto itr = d.find(key_old);
-      d[key_new] = *itr;
-      d.erase(itr);
+      auto it = d.find(key_old);
+      d[key_new] = *it;
+      d.erase(it);
     }
   }
   else
   {
-    auto itr = data.find(key_old);
-    data[key_new] = *itr;
-    data.erase(itr);
+    auto it = data.find(key_old);
+    data[key_new] = *it;
+    data.erase(it);
   }
 
   datakeys.erase(key_old);
@@ -54,7 +53,8 @@ void AddRename::compute_impl(Json &data, Set<Str> &datakeys)
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<AddRename> AddRename::overwrite(bool do_overwrite_)
+ShPtr<AddRename> AddRename::overwrite(
+  bool do_overwrite_)
 {
   do_overwrite = do_overwrite_;
 

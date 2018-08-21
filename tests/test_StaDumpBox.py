@@ -5,7 +5,7 @@ from ppap4lmp import Element, StaDumpBox
 
 class TestStaDumpBox(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     box = Element(StaDumpBox("dummy.file", 0))
 

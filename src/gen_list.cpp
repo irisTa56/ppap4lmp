@@ -9,7 +9,8 @@ create: 2018/07/03 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
-GenList::GenList(const List<ShPtr<Generator>> &generator_list_)
+GenList::GenList(
+  const List<ShPtr<Generator>> &generator_list_)
 {
   generator_list = generator_list_;
 
@@ -21,12 +22,12 @@ GenList::GenList(const List<ShPtr<Generator>> &generator_list_)
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<GenElement> GenList::get_element(Json name)
+ShPtr<GenElement> GenList::get_element(
+  Json name)
 {
   if (!name.is_number_integer())
   {
     runtime_error("GenList::get_element accepts an integer only");
-    return ShPtr<GenElement>();
   }
 
   return std::dynamic_pointer_cast<GenElement>(
@@ -35,12 +36,12 @@ ShPtr<GenElement> GenList::get_element(Json name)
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<Generator> GenList::get_generator(Json name)
+ShPtr<Generator> GenList::get_generator(
+  Json name)
 {
   if (!name.is_number_integer())
   {
     runtime_error("GenList::get_generator accepts an integer only");
-    return ShPtr<Generator>();
   }
 
   return generator_list[name.get<int>()];

@@ -11,9 +11,12 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 class AddWrappedPositions : public Adder {
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  AddWrappedPositions(ShPtr<GenElement>);
+  AddWrappedPositions(
+    ShPtr<GenElement> elem);
   virtual ~AddWrappedPositions() = default;
 };
 
@@ -22,7 +25,6 @@ class AddWrappedPositions : public Adder {
 
 static void pybind_add_wrapped_positions(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddWrappedPositions,PyUpdater<AddWrappedPositions>,Adder,Updater,ShPtr<AddWrappedPositions>>(m, "AddWrappedPositions")
     .def(py::init<ShPtr<GenElement>>());
 }

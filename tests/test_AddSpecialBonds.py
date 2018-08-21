@@ -5,7 +5,7 @@ from ppap4lmp import Element, StaCustom, StaMolecules, AddSpecialBonds
 
 class TestAddSpecialBonds(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))
@@ -24,6 +24,8 @@ class TestAddSpecialBonds(unittest.TestCase):
       self.assertEqual(
         msg.split("\n")[0],
         "RuntimeError: AddSpecialBonds needs 'atom-ids' externally")
+
+  def test_error02(self):
 
     atoms = Element(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))

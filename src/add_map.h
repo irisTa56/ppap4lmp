@@ -16,11 +16,17 @@ class AddMap : public Adder, public EnableShThis<AddMap> {
   Str key_new;
   Dict<Json,Json> mapping;
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  AddMap(const Str &, const Str &, const Dict<Json,Json> &);
+  AddMap(
+    const Str &key_ref_,
+    const Str &key_new_,
+    const Dict<Json,Json> &mapping_);
   virtual ~AddMap() = default;
-  ShPtr<AddMap> overwrite(bool do_overwrite_ = true);
+  ShPtr<AddMap> overwrite(
+    bool do_overwrite_ = true);
 };
 
 /* ------------------------------------------------------------------ */
@@ -28,7 +34,6 @@ class AddMap : public Adder, public EnableShThis<AddMap> {
 
 static void pybind_add_map(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddMap,PyUpdater<AddMap>,Adder,Updater,ShPtr<AddMap>>(m, "AddMap")
     .def(py::init<const Str &,const Str &,const Dict<Json,Json> &>())
     .def(

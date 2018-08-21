@@ -14,7 +14,9 @@ class StaDump : public Starter {
   int timestep;
   Str filepath;
  public:
-  StaDump(const Str &, int);
+  StaDump(
+    const Str &filepath_,
+    int timestep_);
   virtual ~StaDump() = default;
 };
 

@@ -15,10 +15,16 @@ class StaBeads : public Starter {
   Dict<int,List<Json>> mol_type_to_abst_beads;
   void check_mol_type_to_abst_beads();
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  StaBeads(ShPtr<GenElement>, const List<Json> &);
-  StaBeads(ShPtr<GenElement>, const Dict<int,List<Json>> &);
+  StaBeads(
+    ShPtr<GenElement> gen_mols,
+    const List<Json> &scheme);
+  StaBeads(
+    ShPtr<GenElement> gen_mols,
+    const Dict<int,List<Json>> &schemes);
   virtual ~StaBeads() = default;
 };
 

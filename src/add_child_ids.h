@@ -14,9 +14,14 @@ class AddChildIDs : public Adder {
   Str child_name;
   Str key_for_parent_id;
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  AddChildIDs(ShPtr<GenElement>, const Str &, const Str &);
+  AddChildIDs(
+    ShPtr<GenElement> elem,
+    const Str &child_name_,
+    const Str &key_for_parent_id_);
   virtual ~AddChildIDs() = default;
 };
 
@@ -25,7 +30,6 @@ class AddChildIDs : public Adder {
 
 static void pybind_add_child_ids(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddChildIDs,PyUpdater<AddChildIDs>,Adder,Updater,ShPtr<AddChildIDs>>(m, "AddChildIDs")
     .def(py::init<ShPtr<GenElement>,const Str &,const Str &>());
 }

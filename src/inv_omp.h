@@ -22,7 +22,6 @@ class InvOMP : public Invoker {
 
 static void pybind_inv_omp(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<InvOMP,PyInvoker<InvOMP>,Invoker,ShPtr<InvOMP>>(m, "InvOMP")
     .def(py::init<ShPtr<Processor>>())
     .def(py::init<List<ShPtr<Processor>>>());

@@ -9,33 +9,25 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-AddWrappedPositions::AddWrappedPositions(ShPtr<GenElement> elem)
+AddWrappedPositions::AddWrappedPositions(
+  ShPtr<GenElement> elem)
 {
   ext_generator = elem;
 }
 
 /* ------------------------------------------------------------------ */
 
-void AddWrappedPositions::compute_impl(Json &data, Set<Str> &datakeys)
+void AddWrappedPositions::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   auto gen_box = ext_generator->get_element();
 
-  if (!check_containment<Str>(
-    gen_box->get_keys(),
-    {"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"}))
-  {
-    runtime_error(
-      "AddWrappedPositions needs 'lo_*' and 'hi_*' (x/y/z) externally");
-    return;
-  }
+  check_keys(
+    gen_box, {"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
+  check_keys(datakeys, {"xu", "yu", "zu"});
 
   auto &box = gen_box->get_data();
-
-  if (!check_containment<Str>(datakeys, {"xu", "yu", "zu"}))
-  {
-    runtime_error("AddWrappedPositions needs 'xu', 'yu' and 'zu'");
-    return;
-  }
 
   ArrayXd offset(3);
   offset << box["lo_x"], box["lo_y"], box["lo_z"];

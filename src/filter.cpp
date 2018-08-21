@@ -9,14 +9,18 @@ create: 2018/06/30 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-Filter::Filter(ShPtr<GenElement> elem)
+Filter::Filter(
+  ShPtr<GenElement> elem)
 {
   ext_generator = elem;
 }
 
 /* ------------------------------------------------------------------ */
 
-void Filter::compute(Json &data, Set<Str> &datakeys, int dataid)
+void Filter::compute(
+  Json &data,
+  Set<Str> &datakeys,
+  int dataid)
 {
   if (check_blacklist(dataid))
   {

@@ -9,7 +9,8 @@ create: 2018/07/13 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-AddCoMPositions::AddCoMPositions(ShPtr<GenElement> elem)
+AddCoMPositions::AddCoMPositions(
+  ShPtr<GenElement> elem)
 {
   ext_generator = elem;
 }
@@ -17,7 +18,8 @@ AddCoMPositions::AddCoMPositions(ShPtr<GenElement> elem)
 /* ------------------------------------------------------------------ */
 
 void AddCoMPositions::compute_with_weights(
-  Json &data, ShPtr<GenElement> gen_atoms)
+  Json &data,
+  ShPtr<GenElement> gen_atoms)
 {
   auto id2index_atom = get_map_to_index(gen_atoms->get_data(), "id");
 
@@ -29,15 +31,15 @@ void AddCoMPositions::compute_with_weights(
     double m_tmp = 0.0;
     RowArrayXd r_tmp = RowArrayXd::Zero(3);
 
-    int n_atoms = d["atom-ids"].size();
+    auto n_atoms = d["atom-ids"].size();
 
     for (int i = 0; i != n_atoms; ++i)
     {
       int id = d["atom-ids"][i];
       double weight = d["atom-weights"][i];
 
-      int index = id2index_atom[id];
-      double mass = ms_atom(index) * weight;
+      auto index = id2index_atom[id];
+      auto mass = ms_atom(index) * weight;
 
       m_tmp += mass;
       r_tmp += mass * rs_atom.row(index);
@@ -56,7 +58,8 @@ void AddCoMPositions::compute_with_weights(
 /* ------------------------------------------------------------------ */
 
 void AddCoMPositions::compute_without_weights(
-  Json &data, ShPtr<GenElement> gen_atoms)
+  Json &data,
+  ShPtr<GenElement> gen_atoms)
 {
   auto id2index_atom = get_map_to_index(gen_atoms->get_data(), "id");
 
@@ -70,8 +73,8 @@ void AddCoMPositions::compute_without_weights(
 
     for (int id : d["atom-ids"])
     {
-      int index = id2index_atom[id];
-      double mass = ms_atom(index);
+      auto index = id2index_atom[id];
+      auto mass = ms_atom(index);
 
       m_tmp += mass;
       r_tmp += mass * rs_atom.row(index);
@@ -89,23 +92,14 @@ void AddCoMPositions::compute_without_weights(
 
 /* ------------------------------------------------------------------ */
 
-void AddCoMPositions::compute_impl(Json &data, Set<Str> &datakeys)
+void AddCoMPositions::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   auto gen_atoms = ext_generator->get_element();
 
-  if (!check_containment<Str>(
-    gen_atoms->get_keys(), {"id", "mass", "xu", "yu", "zu"}))
-  {
-    runtime_error(
-      "AddCoMPositions needs 'id', 'mass' and '*u' (x/y/z) externally");
-    return;
-  }
-
-  if (!check_containment<Str>(datakeys, "atom-ids"))
-  {
-    runtime_error("AddCoMPositions needs 'atom-ids'");
-    return;
-  }
+  check_keys(gen_atoms, {"id", "mass", "xu", "yu", "zu"});
+  check_key(datakeys, "atom-ids");
 
   if (check_containment<Str>(datakeys, "atom-weights"))
   {

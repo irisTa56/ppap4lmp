@@ -10,12 +10,19 @@ create: 2018/07/13 by Takayuki Kobayashi
 #include "adder.h"
 
 class AddCoMPositions : public Adder {
-  void compute_with_weights(Json &data, ShPtr<GenElement>);
-  void compute_without_weights(Json &data, ShPtr<GenElement>);
+  void compute_with_weights(
+    Json &data,
+    ShPtr<GenElement> gen_atoms);
+  void compute_without_weights(
+    Json &data,
+    ShPtr<GenElement> gen_atoms);
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
-  AddCoMPositions(ShPtr<GenElement>);
+  AddCoMPositions(
+    ShPtr<GenElement> elem);
   virtual ~AddCoMPositions() = default;
 };
 
@@ -24,7 +31,6 @@ class AddCoMPositions : public Adder {
 
 static void pybind_add_com_positions(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddCoMPositions,PyUpdater<AddCoMPositions>,Adder,Updater,ShPtr<AddCoMPositions>>(m, "AddCoMPositions")
     .def(py::init<ShPtr<GenElement>>());
 }

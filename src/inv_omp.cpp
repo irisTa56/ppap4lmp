@@ -18,16 +18,31 @@ void InvOMP::execute_impl()
 
   bool end = false;
 
+  Str error_msg;
+
   #pragma omp parallel private(end)
   {
     while (!end)
     {
       end = true;
 
-      for (auto p : processors)
+      try  // Exception must be catched in OpenMP scope
       {
-        end = end && p->run();
+        for (auto p : processors)
+        {
+          end = end && p->run();
+        }
+      }
+      catch (std::runtime_error &e)
+      {
+        error_msg = e.what();
+        break;
       }
     }
+  }
+
+  if (!error_msg.empty())
+  {
+    throw std::runtime_error(error_msg);
   }
 }

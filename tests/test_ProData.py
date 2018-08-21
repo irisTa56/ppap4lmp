@@ -5,7 +5,7 @@ from ppap4lmp import Element, StaCustom, ProData, InvOMP
 
 class TestProData(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     elems = [
       Element(StaCustom({"A": i, "B": i*i})) for i in range(1000)]
@@ -18,7 +18,7 @@ class TestProData(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: ProData: Selected key(s) does not exist")
+        "RuntimeError: ProData needs 'C' externally")
 
   def test_without_select(self):
 

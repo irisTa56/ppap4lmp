@@ -1,8 +1,10 @@
 #ifndef JSON_CASTER_H
 #define JSON_CASTER_H
 
-static py::object json_dumps = py::module::import("json").attr("dumps");
-static py::object json_loads = py::module::import("json").attr("loads");
+static py::object json_dumps
+  = py::module::import("json").attr("dumps");
+static py::object json_loads
+  = py::module::import("json").attr("loads");
 
 namespace pybind11
 {
@@ -19,16 +21,17 @@ namespace pybind11
         try
         {
           value = Json::parse(
-            py::cast<Str>(json_dumps(py::cast<py::object>(src))));
-        } catch (...)
+            py::cast<Str>(json_dumps(py::cast<object>(src))));
+        }
+        catch (...)
         {
           return false;
         }
+
         return true;
       }
 
-      static handle cast(
-        Json src, return_value_policy, handle)
+      static handle cast(Json src, return_value_policy, handle)
       {
         return json_loads(src.dump()).release();
       }

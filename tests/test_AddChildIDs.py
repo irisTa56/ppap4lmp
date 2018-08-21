@@ -6,12 +6,12 @@ from ppap4lmp import \
 
 class TestAddChildIDs(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))
-    moles = Element(StaCustom([{"id": i} for i in range(10)]))
 
+    moles = Element(StaCustom([{"id": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "molecule-id"))
 
     try:
@@ -20,12 +20,14 @@ class TestAddChildIDs(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddChildIDs needs 'id', 'molecule-id' externally")
+        "RuntimeError: AddChildIDs needs 'molecule-id' externally")
+
+  def test_error02(self):
 
     atoms = Element(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))
-    moles = Element(StaCustom([{"index": i} for i in range(10)]))
 
+    moles = Element(StaCustom([{"index": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "mol"))
 
     try:

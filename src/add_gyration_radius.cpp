@@ -9,14 +9,11 @@ create: 2018/07/15 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void AddGyrationRadius::compute_impl(Json &data, Set<Str> &datakeys)
+void AddGyrationRadius::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
-  if (!check_containment<Str>(
-    datakeys, {"mass", "I_xx", "I_yy", "I_zz"}))
-  {
-    runtime_error("AddGyrationRadius needs 'mass' and 'I_**' (x/y/z)");
-    return;
-  }
+  check_keys(datakeys, {"mass", "I_xx", "I_yy", "I_zz"});
 
   for (auto &d : data)
   {

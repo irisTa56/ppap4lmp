@@ -11,9 +11,12 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "sta_dump.h"
 
 class StaDumpAtoms : public StaDump {
-  const List<bool> get_is_int_vector(const Str &);
+  const List<bool> get_is_int_vector(
+    const Str &line);
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
   using StaDump::StaDump;
   virtual ~StaDumpAtoms() = default;

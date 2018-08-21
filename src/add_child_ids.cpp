@@ -12,7 +12,8 @@ create: 2018/08/19 by Takayuki Kobayashi
 
 AddChildIDs::AddChildIDs(
   ShPtr<GenElement> elem,
-  const Str &child_name_, const Str &key_for_parent_id_)
+  const Str &child_name_,
+  const Str &key_for_parent_id_)
 {
   ext_generator = elem;
   child_name = child_name_;
@@ -21,39 +22,29 @@ AddChildIDs::AddChildIDs(
 
 /* ------------------------------------------------------------------ */
 
-void AddChildIDs::compute_impl(Json &data, Set<Str> &datakeys)
+void AddChildIDs::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   auto gen_children = ext_generator->get_element();
 
-  if (!check_containment<Str>(
-    gen_children->get_keys(), {"id", key_for_parent_id}))
-  {
-    runtime_error(
-      "AddChildIDs needs 'id', '" + key_for_parent_id + "' externally");
-    return;
-  }
+  check_keys(gen_children, {"id", key_for_parent_id});
+  check_key(datakeys, "id");
 
-  if (!check_containment<Str>(datakeys, "id"))
-  {
-    runtime_error("AddChildIDs needs 'id'");
-    return;
-  }
-
-  Str key_for_child_ids = child_name + "-ids";
+  auto key_for_child_ids = child_name + "-ids";
 
   if (check_containment<Str>(datakeys, key_for_child_ids))
   {
     runtime_error(
       "AddChildIDs cannot overwrite '" + key_for_child_ids + "'");
-    return;
   }
 
   auto id2index = get_map_to_index(data, "id");
 
   for (const auto &child : gen_children->get_data())
   {
-    data[id2index[child[key_for_parent_id]]][key_for_child_ids]
-      .push_back(child["id"]);
+    auto mol_index = id2index[child[key_for_parent_id]];
+    data[mol_index][key_for_child_ids].push_back(child["id"]);
   }
 
   datakeys.insert(key_for_child_ids);

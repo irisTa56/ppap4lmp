@@ -19,24 +19,36 @@ class GenElement : public Generator, public EnableShThis<GenElement> {
  public:
   GenElement();
   virtual ~GenElement() = default;
-  virtual ShPtr<GenElement> get_element(Json name = nullptr) override;
-  virtual ShPtr<Generator> get_generator(Json name = nullptr) override;
+  virtual ShPtr<GenElement> get_element(
+    Json name = nullptr) override;
+  virtual ShPtr<Generator> get_generator(
+    Json name = nullptr) override;
   void increment_remain();
   void decrement_remain();
-  void update_data(ShPtr<Updater>);
-  ShPtr<GenElement> append_updater(ShPtr<Updater>);
+  void update_data(
+    ShPtr<Updater> upd);
+  ShPtr<GenElement> append_updater(
+    ShPtr<Updater> upd);
   const Json &get_data();
   const Set<Str> &get_keys();
-  ArrayXi get_1d_int(const Str &);
-  ArrayXd get_1d_double(const Str &);
-  ArrayXXi get_2d_int(const List<Str> &);
-  ArrayXXd get_2d_double(const List<Str> &);
+  ArrayXi get_1d_int(
+    const Str &key);
+  ArrayXd get_1d_double(
+    const Str &key);
+  ArrayXXi get_2d_int(
+    const List<Str> &keys);
+  ArrayXXd get_2d_double(
+    const List<Str> &keys);
   const Json &get_data_py();
   const Set<Str> &get_keys_py();
-  const ArrayXi get_1d_int_py(const Str &);
-  const ArrayXd get_1d_double_py(const Str &);
-  const ArrayXXi get_2d_int_py(const List<Str> &);
-  const ArrayXXd get_2d_double_py(const List<Str> &);
+  const ArrayXi get_1d_int_py(
+    const Str &key);
+  const ArrayXd get_1d_double_py(
+    const Str &key);
+  const ArrayXXi get_2d_int_py(
+    const List<Str> &keys);
+  const ArrayXXd get_2d_double_py(
+    const List<Str> &keys);
 };
 
 /* ------------------------------------------------------------------ */
@@ -47,12 +59,14 @@ class GenElement : public Generator, public EnableShThis<GenElement> {
 class PyGenElement : public GenElement {
  public:
   using GenElement::GenElement;
-  ShPtr<GenElement> get_element(Json name) override
+  ShPtr<GenElement> get_element(
+    Json name) override
   {
     PYBIND11_OVERLOAD(
       ShPtr<GenElement>, GenElement, get_element, name);
   }
-  ShPtr<Generator> get_generator(Json name) override
+  ShPtr<Generator> get_generator(
+    Json name) override
   {
     PYBIND11_OVERLOAD(
       ShPtr<Generator> , GenElement, get_generator, name);

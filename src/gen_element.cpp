@@ -20,12 +20,12 @@ GenElement::GenElement()
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<GenElement> GenElement::get_element(Json name)
+ShPtr<GenElement> GenElement::get_element(
+  Json name)
 {
   if (name != nullptr)
   {
     runtime_error("GenElement::get_element accepts no argument");
-    return ShPtr<GenElement>();
   }
 
   return shared_from_this();
@@ -33,12 +33,12 @@ ShPtr<GenElement> GenElement::get_element(Json name)
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<Generator> GenElement::get_generator(Json name)
+ShPtr<Generator> GenElement::get_generator(
+  Json name)
 {
   if (name != nullptr)
   {
     runtime_error("GenElement::get_generator accepts no argument");
-    return ShPtr<Generator>();
   }
 
   return shared_from_this();
@@ -82,7 +82,6 @@ void GenElement::decrement_remain()
   {
     runtime_error(
       "Data-" + std::to_string(ID) + ": Invalid data use is detected");
-    return;
   }
 
   omp_unset_lock(&omp_lock);
@@ -131,13 +130,14 @@ const Set<Str> &GenElement::get_keys()
 
 /* ------------------------------------------------------------------ */
 
-ArrayXi GenElement::get_1d_int(const Str &key)
+ArrayXi GenElement::get_1d_int(
+  const Str &key)
 {
   ArrayXi tmp(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
-    int length = data.size();
+    auto length = data.size();
 
     for (int i = 0; i != length; ++i)
     {
@@ -154,13 +154,14 @@ ArrayXi GenElement::get_1d_int(const Str &key)
 
 /* ------------------------------------------------------------------ */
 
-ArrayXd GenElement::get_1d_double(const Str &key)
+ArrayXd GenElement::get_1d_double(
+  const Str &key)
 {
   ArrayXd tmp(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
-    int length = data.size();
+    auto length = data.size();
 
     for (int i = 0; i != length; ++i)
     {
@@ -177,15 +178,16 @@ ArrayXd GenElement::get_1d_double(const Str &key)
 
 /* ------------------------------------------------------------------ */
 
-ArrayXXi GenElement::get_2d_int(const List<Str> &keys)
+ArrayXXi GenElement::get_2d_int(
+  const List<Str> &keys)
 {
-  int n_keys = keys.size();
+  auto n_keys = keys.size();
 
   ArrayXXi tmp(data.is_array() ? data.size() : 1, n_keys);
 
   if (data.is_array())
   {
-    int length = data.size();
+    auto length = data.size();
 
     for (int i = 0; i != length; ++i)
     {
@@ -210,15 +212,16 @@ ArrayXXi GenElement::get_2d_int(const List<Str> &keys)
 
 /* ------------------------------------------------------------------ */
 
-ArrayXXd GenElement::get_2d_double(const List<Str> &keys)
+ArrayXXd GenElement::get_2d_double(
+  const List<Str> &keys)
 {
-  int n_keys = keys.size();
+  auto n_keys = keys.size();
 
   ArrayXXd tmp(data.is_array() ? data.size() : 1, n_keys);
 
   if (data.is_array())
   {
-    int length = data.size();
+    auto length = data.size();
 
     for (int i = 0; i != length; ++i)
     {
@@ -245,13 +248,15 @@ ArrayXXd GenElement::get_2d_double(const List<Str> &keys)
 
 const Json &GenElement::get_data_py()
 {
-  if (ERROR_OCCURED)
+  try
   {
-    ERROR_OCCURED = false;
-    logging("'ERROR_OCCURED' was reset to false");
+    hello();
+  }
+  catch (std::runtime_error &e)
+  {
+    logging(e.what());
   }
 
-  hello();
   return get_data();
 }
 
@@ -259,73 +264,88 @@ const Json &GenElement::get_data_py()
 
 const Set<Str> &GenElement::get_keys_py()
 {
-  if (ERROR_OCCURED)
+  try
   {
-    ERROR_OCCURED = false;
-    logging("'ERROR_OCCURED' was reset to false");
+    hello();
   }
-
-  hello();
+  catch (std::runtime_error &e)
+  {
+    logging(e.what());
+  }
 
   return get_keys();
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXi GenElement::get_1d_int_py(const Str &key)
+const ArrayXi GenElement::get_1d_int_py(
+  const Str &key)
 {
-  if (ERROR_OCCURED)
+  try
   {
-    ERROR_OCCURED = false;
-    logging("'ERROR_OCCURED' was reset to false");
+    hello();
+  }
+  catch (std::runtime_error &e)
+  {
+    logging(e.what());
   }
 
-  hello();
-
-  return get_1d_int(key);
+  return check_containment<Str>(datakeys, key)
+    ? get_1d_int(key) : ArrayXi();
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXd GenElement::get_1d_double_py(const Str &key)
+const ArrayXd GenElement::get_1d_double_py(
+  const Str &key)
 {
-  if (ERROR_OCCURED)
+  try
   {
-    ERROR_OCCURED = false;
-    logging("'ERROR_OCCURED' was reset to false");
+    hello();
+  }
+  catch (std::runtime_error &e)
+  {
+    logging(e.what());
   }
 
-  hello();
-
-  return get_1d_double(key);
+  return check_containment<Str>(datakeys, key)
+    ? get_1d_double(key) : ArrayXd();
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXXi GenElement::get_2d_int_py(const List<Str> &keys)
+const ArrayXXi GenElement::get_2d_int_py(
+  const List<Str> &keys)
 {
-  if (ERROR_OCCURED)
+  try
   {
-    ERROR_OCCURED = false;
-    logging("'ERROR_OCCURED' was reset to false");
+    hello();
+  }
+  catch (std::runtime_error &e)
+  {
+    logging(e.what());
   }
 
-  hello();
-
-  return get_2d_int(keys);
+  return check_containment<Str>(
+    datakeys, Set<Str>(keys.begin(), keys.end()))
+    ? get_2d_int(keys) : ArrayXXi();
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXXd GenElement::get_2d_double_py(const List<Str> &keys)
+const ArrayXXd GenElement::get_2d_double_py(
+  const List<Str> &keys)
 {
-  if (ERROR_OCCURED)
+  try
   {
-    ERROR_OCCURED = false;
-    logging("'ERROR_OCCURED' was reset to false");
+    hello();
+  }
+  catch (std::runtime_error &e)
+  {
+    logging(e.what());
   }
 
-  hello();
-
-  return get_2d_double(keys);
+  return check_containment<Str>(
+    datakeys, Set<Str>(keys.begin(), keys.end()))
+    ? get_2d_double(keys) : ArrayXXd();
 }

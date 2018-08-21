@@ -11,7 +11,9 @@ create: 2018/07/15 by Takayuki Kobayashi
 
 class AddGyrationRadius : public Adder {
  protected:
-  virtual void compute_impl(Json &, Set<Str> &) override;
+  virtual void compute_impl(
+    Json &data,
+    Set<Str> &datakeys) override;
  public:
   using Adder::Adder;
   virtual ~AddGyrationRadius() = default;
@@ -22,7 +24,6 @@ class AddGyrationRadius : public Adder {
 
 static void pybind_add_gyration_radius(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<AddGyrationRadius,PyUpdater<AddGyrationRadius>,Adder,Updater,ShPtr<AddGyrationRadius>>(m, "AddGyrationRadius")
     .def(py::init<>());
 }

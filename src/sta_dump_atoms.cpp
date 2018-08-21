@@ -12,7 +12,9 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-void StaDumpAtoms::compute_impl(Json &data, Set<Str> &datakeys)
+void StaDumpAtoms::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   std::ifstream ifs(filepath);
   Str line;
@@ -22,7 +24,6 @@ void StaDumpAtoms::compute_impl(Json &data, Set<Str> &datakeys)
   if (!ifs.is_open())
   {
     runtime_error("No such a file: " + filepath);
-    return;
   }
 
   while (std::getline(ifs, line))
@@ -51,7 +52,7 @@ void StaDumpAtoms::compute_impl(Json &data, Set<Str> &datakeys)
         std::getline(ifs, line);
 
         auto is_int_vector = get_is_int_vector(line);
-        int size = is_int_vector.size();
+        auto size = is_int_vector.size();
 
         for (int i = 0; i != n_atoms; ++i)
         {
@@ -95,7 +96,8 @@ void StaDumpAtoms::compute_impl(Json &data, Set<Str> &datakeys)
 
 /* ------------------------------------------------------------------ */
 
-const List<bool> StaDumpAtoms::get_is_int_vector(const Str &line)
+const List<bool> StaDumpAtoms::get_is_int_vector(
+  const Str &line)
 {
   List<bool> is_int;
 

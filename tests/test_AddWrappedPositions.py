@@ -8,7 +8,7 @@ from ppap4lmp import \
 
 class TestAddWrappedPositions(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     box = Element(StaCustom({"foo": 0, "bar": 1}))
     atoms = Element(
@@ -21,8 +21,10 @@ class TestAddWrappedPositions(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddWrappedPositions needs 'lo_*' and 'hi_*' "
-        + "(x/y/z) externally")
+        "RuntimeError: AddWrappedPositions needs 'lo_x', 'lo_y', "
+        +"'lo_z', 'hi_x', 'hi_y', 'hi_z' externally")
+
+  def test_error02(self):
 
     box = Element(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))
     atoms = Element(
@@ -35,7 +37,7 @@ class TestAddWrappedPositions(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: AddWrappedPositions needs 'xu', 'yu' and 'zu'")
+        "RuntimeError: AddWrappedPositions needs 'xu', 'yu', 'zu'")
 
   def test_wrapping(self):
 

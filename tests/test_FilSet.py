@@ -5,7 +5,7 @@ from ppap4lmp import Element, StaDumpAtoms, FilSet
 
 class TestFilSet(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     atoms = Element(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
@@ -17,7 +17,7 @@ class TestFilSet(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: FilSet cannot use nonexistent property: dummy")
+        "RuntimeError: FilSet needs 'dummy'")
 
   def test_equivalent_filter(self):
 

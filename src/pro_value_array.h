@@ -12,21 +12,30 @@ create: 2018/07/16 by Takayuki Kobayashi
 
 class ProValueArray : public Processor {
   bool do_sort = false;
-  Set<Str> selected_keys;
+  List<Str> selected_keys;
   Dict<Str,ArrayXXd> results;
   Dict<Str,List<RowArrayXd>> results_tmp;
-  void run_sort(int, const Json &);
-  void run_no_sort(int, const Json &);
+  void run_sort(
+    int index,
+    const Json &data);
+  void run_no_sort(
+    int index,
+    const Json &data);
  protected:
-  virtual void run_impl(int) override;
+  virtual void run_impl(
+    int index) override;
  public:
-  ProValueArray(ShPtr<GenElement>);
-  ProValueArray(List<ShPtr<GenElement>>);
+  ProValueArray(
+    ShPtr<GenElement> elem);
+  ProValueArray(
+    List<ShPtr<GenElement>> elems);
   virtual ~ProValueArray() = default;
   virtual void prepare() override;
   virtual void finish() override;
-  void select(py::args);
-  void force_sort(bool do_sort_ = true);
+  void select(
+    py::args args);
+  void force_sort(
+    bool do_sort_ = true);
   const Dict<Str,ArrayXXd> &get_results();
 };
 
@@ -35,7 +44,6 @@ class ProValueArray : public Processor {
 
 static void pybind_pro_value_array(py::module &m)
 {
-  // DO NOT BREAK LINE until `.def()` for setup.py's parsing
   py::class_<ProValueArray,PyProcessor<ProValueArray>,Processor,ShPtr<ProValueArray>>(m, "ProValueArray")
     .def(py::init<ShPtr<GenElement>>())
     .def(py::init<List<ShPtr<GenElement>>>())

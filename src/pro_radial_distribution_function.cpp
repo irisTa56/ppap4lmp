@@ -15,7 +15,8 @@ create: 2018/08/19 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProRadialDistributionFunction::ProRadialDistributionFunction(
-  ShPtr<GenElement> atoms, ShPtr<GenElement> box)
+  ShPtr<GenElement> atoms,
+  ShPtr<GenElement> box)
 {
   register_generators(ShPtr<GenDict>(
     new GenDict({{"Atoms", atoms}, {"Box", box}})));
@@ -39,18 +40,13 @@ ProRadialDistributionFunction::ProRadialDistributionFunction(
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::run_impl(int index)
+void ProRadialDistributionFunction::run_impl(
+  int index)
 {
   auto gen_atoms = generators[index]->get_element("Atoms");
   auto &atoms = gen_atoms->get_data();
 
-  if (!check_containment<Str>(
-    gen_atoms->get_keys(), {"x", "y", "z", "id"}))
-  {
-    runtime_error(
-      "ProRadialDistributionFunction needs 'x', 'y', 'z' and 'id'");
-    return;
-  }
+  check_keys(gen_atoms, {"x", "y", "z", "id"});
 
   bool special_bonds_exist = check_containment<Str>(
     gen_atoms->get_keys(), "special-bonds") ? true : false;
@@ -58,32 +54,25 @@ void ProRadialDistributionFunction::run_impl(int index)
   auto gen_box = generators[index]->get_element("Box");
   auto &box = gen_box->get_data();
 
-  if (!check_containment<Str>(
-    gen_box->get_keys(),
-    {"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"}))
-  {
-    runtime_error(
-      "ProRadialDistributionFunction needs 'lo_*' and 'hi_*' (x/y/z)");
-    return;
-  }
+  check_keys(
+    gen_box, {"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
 
   ArrayXd length(3);
   length << box["hi_x"].get<double>() - box["lo_x"].get<double>(),
             box["hi_y"].get<double>() - box["lo_y"].get<double>(),
             box["hi_z"].get<double>() - box["lo_z"].get<double>();
 
-  auto half_length = 0.5 * length;
+  ArrayXd half_length = 0.5 * length;
 
-  double r_max = bin_from_r ?
+  auto r_max = bin_from_r ?
     n_bins * bin_width : (n_bins-0.5) * bin_width;
-
   auto r2_max = r_max*r_max;
 
-  for (const auto &item : ENUM_XYZ)
+  for (const auto &dim : get_indexed_list<Str>({"x", "y", "z"}))
   {
-    if (half_length(item.first) < r_max)
+    if (half_length(dim.first) < r_max)
     {
-      message("WARNING! Box length is too short in " + item.second);
+      message("WARNING! Box length is too short in " + dim.second);
     }
   }
 
@@ -96,7 +85,7 @@ void ProRadialDistributionFunction::run_impl(int index)
 
   ArrayXi counts = ArrayXi::Zero(n_bins);
 
-  double reciprocal_width = 1.0 / bin_width;
+  auto reciprocal_width = 1.0 / bin_width;
 
   for (const auto &atom_i : atoms)
   {
@@ -142,7 +131,7 @@ void ProRadialDistributionFunction::run_impl(int index)
 
             auto r = sqrt(r2);
 
-            int index = bin_from_r ?
+            auto index = bin_from_r ?
               floor(r*reciprocal_width) : round(r*reciprocal_width);
 
             counts(index) += 2;  // i -> j & j -> i
@@ -176,9 +165,9 @@ void ProRadialDistributionFunction::finish()
 
   for (int i = 0; i != n_bins; ++i)
   {
-    double r_inner = bin_from_r ?
+    auto r_inner = bin_from_r ?
       i * bin_width : std::max(0.0, (i-0.5) * bin_width);
-    double r_outer = bin_from_r ?
+    auto r_outer = bin_from_r ?
       (i+1) * bin_width : (i+0.5) * bin_width;
 
     shell_volume(i) = ball_coeff * (pow(r_outer, 3) - pow(r_inner, 3));
@@ -207,7 +196,8 @@ void ProRadialDistributionFunction::finish()
 /* ------------------------------------------------------------------ */
 
 void ProRadialDistributionFunction::set_bin(
-  double bin_width_, int n_bins_)
+  double bin_width_,
+  int n_bins_)
 {
   n_bins = n_bins_;
   bin_width = bin_width_;

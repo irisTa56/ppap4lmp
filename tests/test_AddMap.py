@@ -5,7 +5,7 @@ from ppap4lmp import Element, StaCustom, AddMap
 
 class TestAddMap(unittest.TestCase):
 
-  def test_error(self):
+  def test_error01(self):
 
     elem = Element(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("dummy", "new", {1: 0}))
@@ -17,6 +17,8 @@ class TestAddMap(unittest.TestCase):
       self.assertEqual(
         msg.split("\n")[0],
         "RuntimeError: AddMap needs 'dummy'")
+
+  def test_error02(self):
 
     elem = Element(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("foo", "bar", {0: 1}))

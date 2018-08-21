@@ -9,22 +9,21 @@ create: 2018/07/07 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
-StaMolecules::StaMolecules(ShPtr<GenElement> gen_atoms)
+StaMolecules::StaMolecules(
+  ShPtr<GenElement> gen_atoms)
 {
   ext_generator = gen_atoms;
 }
 
 /* ------------------------------------------------------------------ */
 
-void StaMolecules::compute_impl(Json &data, Set<Str> &datakeys)
+void StaMolecules::compute_impl(
+  Json &data,
+  Set<Str> &datakeys)
 {
   auto gen_atoms = ext_generator->get_element();
 
-  if (!check_containment<Str>(gen_atoms->get_keys(), "mol"))
-  {
-    runtime_error("StaMolecules needs 'mol' externally");
-    return;
-  }
+  check_key(gen_atoms, "mol");
 
   auto &atoms = gen_atoms->get_data();
 
@@ -39,9 +38,7 @@ void StaMolecules::compute_impl(Json &data, Set<Str> &datakeys)
     if (id_to_index.find(molid) == id_to_index.end())
     {
       data[max_index]["id"] = molid;
-      id_to_index[molid] = max_index;
-
-      max_index++;
+      id_to_index[molid] = max_index++;
     }
 
     data[id_to_index[molid]]["atom-ids"].push_back(atom["id"]);
