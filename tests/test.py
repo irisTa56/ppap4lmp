@@ -112,7 +112,8 @@ def suite_adder():
   suite.addTest(TestAddInertiaMoment("test_isotropic"))
 
   suite.addTest(TestAddGyrationRadius("test_error01"))
-  suite.addTest(TestAddGyrationRadius("test_isotropic"))
+  suite.addTest(TestAddGyrationRadius("test_sqrted"))
+  suite.addTest(TestAddGyrationRadius("test_squared"))
 
   suite.addTest(TestAddMolecularOrientation("test_error01"))
   suite.addTest(TestAddMolecularOrientation("test_isotropic"))

@@ -1,6 +1,7 @@
 import unittest
 import traceback
 
+from copy import deepcopy
 from math import sqrt
 
 from ppap4lmp import \
@@ -33,7 +34,7 @@ class TestAddGyrationRadius(unittest.TestCase):
         "RuntimeError: AddGyrationRadius needs 'mass', 'I_xx', "
         + "'I_yy', 'I_zz'")
 
-  def test_isotropic(self):
+  def test_sqrted(self):
 
     atoms = Element(StaCustom(self.custom_data))
     molecules = Element(StaMolecules(atoms))
@@ -43,8 +44,52 @@ class TestAddGyrationRadius(unittest.TestCase):
 
     data = molecules.get_data()[0]
 
-    self.assertEqual(data["Rg_x"], data["Rg_y"])
-    self.assertEqual(data["Rg_x"], data["Rg_z"])
+    self.assertAlmostEqual(data["Rg"], 1.0)
+    self.assertAlmostEqual(data["Rg(x+y)"], sqrt(2/3))
+    self.assertAlmostEqual(data["Rg(x)"], sqrt(1/3))
+
+    self.assertEqual(data["Rg(x+y)"], data["Rg(y+z)"])
+    self.assertEqual(data["Rg(x+y)"], data["Rg(z+x)"])
+
+    self.assertEqual(data["Rg(x)"], data["Rg(y)"])
+    self.assertEqual(data["Rg(x)"], data["Rg(z)"])
+
     self.assertEqual(
-      data["Rg"],
-      sqrt(0.5 * (data["Rg_x"]**2 + data["Rg_y"]**2 + data["Rg_z"]**2)))
+      molecules.get_keys(), {
+        "id", "atom-ids", "mass", "xu", "yu", "zu",
+        "I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx",
+        "Rg", "Rg(y+z)", "Rg(z+x)", "Rg(x+y)",
+        "Rg(x)", "Rg(y)", "Rg(z)"})
+
+  def test_squared(self):
+
+    custom_data = deepcopy(self.custom_data)
+
+    custom_data[0]["xu"] = 3.0
+    custom_data[1]["xu"] = -1.0
+
+    print(self.custom_data)
+
+    atoms = Element(StaCustom(custom_data))
+    molecules = Element(StaMolecules(atoms))
+    molecules.append_updater(AddCoMPositions(atoms))
+    molecules.append_updater(AddInertiaMoment(atoms))
+    molecules.append_updater(
+      AddGyrationRadius().with_squared().without_sqrted())
+
+    data = molecules.get_data()[0]
+
+    self.assertAlmostEqual(data["Rg^2"], 2.0)
+    self.assertAlmostEqual(data["Rg^2(x+y)"], 5/3)
+    self.assertAlmostEqual(data["Rg^2(y+z)"], 2/3)
+    self.assertAlmostEqual(data["Rg^2(z+x)"], 5/3)
+    self.assertAlmostEqual(data["Rg^2(x)"], 4/3)
+    self.assertAlmostEqual(data["Rg^2(y)"], 1/3)
+    self.assertAlmostEqual(data["Rg^2(z)"], 1/3)
+
+    self.assertEqual(
+      molecules.get_keys(), {
+        "id", "atom-ids", "mass", "xu", "yu", "zu",
+        "I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx",
+        "Rg^2", "Rg^2(y+z)", "Rg^2(z+x)", "Rg^2(x+y)",
+        "Rg^2(x)", "Rg^2(y)", "Rg^2(z)"})

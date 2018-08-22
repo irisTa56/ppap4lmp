@@ -10,7 +10,7 @@ create: 2018/08/17 by Takayuki Kobayashi
 
 #include "adder.h"
 
-class AddRename : public Adder, public EnableShThis<AddRename> {
+class AddRename : public Adder, public EnShThis<AddRename> {
   bool do_overwrite = false;
   Str key_old;
   Str key_new;

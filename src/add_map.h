@@ -10,7 +10,7 @@ create: 2018/06/26 by Takayuki Kobayashi
 
 #include "adder.h"
 
-class AddMap : public Adder, public EnableShThis<AddMap> {
+class AddMap : public Adder, public EnShThis<AddMap> {
   bool do_overwrite = false;
   Str key_ref;
   Str key_new;

@@ -125,7 +125,11 @@ Adder <|---- AddInertiaMoment
 
 class AddGyrationRadius {
   +AddGyrationRadius()
+  -bool add_squared
+  -bool add_sqrted
   #void compute_impl(Json, Set<Str>)
+  +AddGyrationRadius* with_squared(bool)
+  +AddGyrationRadius* without_sqrted(bool)
 }
 
 Adder <|---- AddGyrationRadius

@@ -64,6 +64,6 @@ namespace py = pybind11;
 #include "json_caster.h"
 
 template <typename T>
-using EnableShThis = std::enable_shared_from_this<T>;
+using EnShThis = std::enable_shared_from_this<T>;
 
 #endif
