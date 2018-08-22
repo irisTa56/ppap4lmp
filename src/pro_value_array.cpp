@@ -88,24 +88,31 @@ void ProValueArray::run_no_sort(
   int index,
   const Json &data)
 {
-  List<Dict<Str,double>> values;
+  auto size = data.is_array() ? data.size() : 1;
+
+  Dict<Str,RowArrayXd> rows;
+
+  for (const auto &k : selected_keys)
+  {
+    rows[k] = RowArrayXd(size);
+  }
+
+  int irow = 0;
 
   for (const auto &d : data.is_array() ? data : Json::array({data}))
   {
-    Dict<Str,double> tmp;
-
     for (const auto &k : selected_keys)
     {
       auto &val = d[k];
 
       if (val.is_number_float())
       {
-        tmp[k] = val;
+        rows[k](irow) = val;
       }
       else if (val.is_number())
       {
         message("ProValueArray: Converting an integer to float");
-        tmp[k] = val;
+        rows[k](irow) = val;
       }
       else
       {
@@ -113,21 +120,12 @@ void ProValueArray::run_no_sort(
       }
     }
 
-    values.push_back(tmp);
+    irow++;
   }
-
-  auto size = values.size();
 
   for (const auto &k : selected_keys)
   {
-    RowArrayXd row(size);
-
-    for (int i = 0; i != size; ++i)
-    {
-      row(i) = values[i][k];
-    }
-
-    results_tmp[k][index] = row;
+    results_tmp[k][index] = rows[k];
   }
 }
 
