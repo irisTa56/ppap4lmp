@@ -60,7 +60,6 @@ brew install python; pip install numpy
 ```bash
 git clone --recursive https://github.com/irisTa56/ppap4lmp.git
 cd ppap4lmp
-export CC=gcc-8
 export CXX=g++-8
 pip install .
 # (or) pip install -e .

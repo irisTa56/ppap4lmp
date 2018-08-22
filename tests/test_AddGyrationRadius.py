@@ -68,8 +68,6 @@ class TestAddGyrationRadius(unittest.TestCase):
     custom_data[0]["xu"] = 3.0
     custom_data[1]["xu"] = -1.0
 
-    print(self.custom_data)
-
     atoms = Element(StaCustom(custom_data))
     molecules = Element(StaMolecules(atoms))
     molecules.append_updater(AddCoMPositions(atoms))
