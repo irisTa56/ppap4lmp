@@ -313,6 +313,7 @@ class ProRadialDistributionFunction {
   -int n_bins
   -double bin_width
   -bool bin_from_r
+  -bool beyond_half
   -ArrayXd rdf
   -List<ArrayXd> rdf_traj
   -List<double> density_traj
@@ -322,6 +323,7 @@ class ProRadialDistributionFunction {
   ~void finish()
   +void set_bin(double, int)
   +void bin_from_r_to_r_plus_dr(bool)
+  +void beyond_half_box_length(bool)
   +ArrayXd get_r_axis()
   +ArrayXd get_rdf()
   +List<ArrayXd> get_rdf_traj()

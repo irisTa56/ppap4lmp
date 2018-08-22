@@ -62,7 +62,7 @@ void ProRadialDistributionFunction::run_impl(
             box["hi_y"].get<double>() - box["lo_y"].get<double>(),
             box["hi_z"].get<double>() - box["lo_z"].get<double>();
 
-  ArrayXd half_length = 0.5 * length;
+  ArrayXd limits = beyond_half ? length : 0.5 * length;
 
   auto r_max = bin_from_r ?
     n_bins * bin_width : (n_bins-0.5) * bin_width;
@@ -70,7 +70,7 @@ void ProRadialDistributionFunction::run_impl(
 
   for (const auto &dim : get_indexed_list<Str>({"x", "y", "z"}))
   {
-    if (half_length(dim.first) < r_max)
+    if (limits(dim.first) < r_max)
     {
       message("WARNING! Box length is too short in " + dim.second);
     }
@@ -111,19 +111,19 @@ void ProRadialDistributionFunction::run_impl(
       {
         auto dx = dx_original + ix*length(0);
 
-        if (half_length(0) < abs(dx)) continue;
+        if (limits(0) < abs(dx)) continue;
 
         for (int iy = shift_y.first; iy <= shift_y.second; ++iy)
         {
           auto dy = dy_original + iy*length(1);
 
-          if (half_length(1) < abs(dy)) continue;
+          if (limits(1) < abs(dy)) continue;
 
           for (int iz = shift_z.first; iz <= shift_x.second; ++iz)
           {
             auto dz = dz_original + iz*length(2);
 
-            if (half_length(2) < abs(dz)) continue;
+            if (limits(2) < abs(dz)) continue;
 
             auto r2 = dx*dx + dy*dy + dz*dz;
 
@@ -185,12 +185,16 @@ void ProRadialDistributionFunction::finish()
       number_distribution_traj[i] / (density_traj[i]*shell_volume));
   }
 
+  /* The following lines can be reduced
   auto reciprocal_num = 1.0 / double(n_generators);
 
   auto density = density_sum * reciprocal_num;
   auto number_distribution = number_distribution_sum * reciprocal_num;
 
   rdf = number_distribution / (density*shell_volume);
+  */
+
+  rdf = number_distribution_sum / (density_sum*shell_volume);
 }
 
 /* ------------------------------------------------------------------ */
@@ -209,6 +213,14 @@ void ProRadialDistributionFunction::bin_from_r_to_r_plus_dr(
   bool bin_from_r_)
 {
   bin_from_r = bin_from_r_;
+}
+
+/* ------------------------------------------------------------------ */
+
+void ProRadialDistributionFunction::beyond_half_box_length(
+  bool beyond_half_)
+{
+  beyond_half = beyond_half_;
 }
 
 /* ------------------------------------------------------------------ */

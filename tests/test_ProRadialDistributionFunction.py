@@ -153,6 +153,60 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     self.assertTrue(np.allclose(pro.get_rdf(), expected_rdf))
 
+  def test_cubic_beyond_half_box_length(self):
+
+    abst_atoms = []
+    atom_id = 0
+
+    for ix in range(3):
+      for iy in range(3):
+        for iz in range(3):
+
+          atom_id += 1
+
+          abst_atoms.append({
+            "id": atom_id, "x": 1.0*ix, "y": 1.0*iy, "z": 1.0*iz})
+
+    atoms = Element(StaCustom(abst_atoms))
+
+    box = Element(StaCustom({
+      "lo_x": 0.0, "hi_x": 3.0, "periodic_x": True,
+      "lo_y": 0.0, "hi_y": 3.0, "periodic_y": True,
+      "lo_z": 0.0, "hi_z": 3.0, "periodic_z": True}))
+
+    pro = ProRadialDistributionFunction(atoms, box)
+
+    num_bins = 20
+    bin_width = 0.1
+
+    pro.set_bin(bin_width, num_bins)
+
+    pro.beyond_half_box_length()
+
+    InvOMP(pro).execute()
+
+    self.assertTrue(np.allclose(
+      pro.get_r_axis(), np.arange(0.0, num_bins*bin_width, bin_width)))
+
+    expected_rdf = np.zeros(num_bins)
+
+    data = [
+      {"index": 10, "num": 6},
+      {"index": 14, "num": 12},
+      {"index": 17, "num": 8}]
+
+    for d in data:
+
+      r_inner = (d["index"]-0.5) * bin_width
+      r_outer = (d["index"]+0.5) * bin_width
+
+      dV = (4.0*math.pi/3.0) * (
+        math.pow(r_outer, 3) - math.pow(r_inner, 3))
+
+      expected_rdf[d["index"]] = (d["num"]/dV)/1.0
+
+    self.assertTrue(np.allclose(pro.get_rdf(), expected_rdf))
+
   def test_traj(self):
 
     atoms_traj = []
