@@ -348,7 +348,7 @@ class ProDistanceInMolecule {
   #void run_impl(int)
   ~void prepare()
   ~void finish()
-  +void set_points(int, int)
+  +void set_indices(int, int)
   +void set_moltype(int)
   +void compute_sqrt(bool)
   +ArrayXXd get_distance_array()

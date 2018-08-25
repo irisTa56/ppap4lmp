@@ -99,7 +99,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
       Element(StaMolecules(a)) for a in atomses]
 
     pro = ProDistanceInMolecule(list(zip(molses, atomses)))
-    pro.set_points(0, 5)
+    pro.set_indices(0, 5)
 
     InvOMP(pro).execute()
 
@@ -150,7 +150,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
       Element(StaMolecules(a)) for a in atomses]
 
     pro = ProDistanceInMolecule(list(zip(molses, atomses)))
-    pro.set_points(1, 5)
+    pro.set_indices(1, 5)
     pro.compute_sqrt()
 
     InvOMP(pro).execute()

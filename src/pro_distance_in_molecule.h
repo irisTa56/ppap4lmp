@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------------------
 ProDistanceInMolecule: stands for Processor which computes
-point to point Distance In each Molecule (also computes squared
+atom to atom Distance In each Molecule (also computes squared
 distance).
 
 create: 2018/08/25 by Takayuki Kobayashi
@@ -31,7 +31,7 @@ class ProDistanceInMolecule : public Processor {
   virtual ~ProDistanceInMolecule() = default;
   virtual void prepare() override;
   virtual void finish() override;
-  void set_points(
+  void set_indices(
     int index1_in_mol_,
     int index2_in_mol_);
   void set_moltype(
@@ -50,7 +50,7 @@ static void pybind_pro_distance_in_molecule(py::module &m)
   py::class_<ProDistanceInMolecule,PyProcessor<ProDistanceInMolecule>,Processor,ShPtr<ProDistanceInMolecule>>(m, "ProDistanceInMolecule")
     .def(py::init<ShPtr<GenElement>,ShPtr<GenElement>>())
     .def(py::init<List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>>>())
-    .def("set_points", &ProDistanceInMolecule::set_points)
+    .def("set_indices", &ProDistanceInMolecule::set_indices)
     .def("set_moltype", &ProDistanceInMolecule::set_moltype)
     .def(
       "compute_sqrt", &ProDistanceInMolecule::compute_sqrt,

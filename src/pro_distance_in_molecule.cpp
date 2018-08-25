@@ -115,7 +115,7 @@ void ProDistanceInMolecule::finish()
 
 /* ------------------------------------------------------------------ */
 
-void ProDistanceInMolecule::set_points(
+void ProDistanceInMolecule::set_indices(
   int index1_in_mol_,
   int index2_in_mol_)
 {
