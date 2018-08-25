@@ -23,7 +23,7 @@ void StaMolecules::compute_impl(
 {
   auto gen_atoms = ext_generator->get_element();
 
-  check_key(gen_atoms, "mol");
+  check_keys(gen_atoms, {"mol", "id"});
 
   auto &atoms = gen_atoms->get_data();
 

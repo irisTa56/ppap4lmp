@@ -153,7 +153,7 @@ Adder <|---- AddChildIDs
 class AddSpecialBonds {
   +AddSpecialBonds(GenElement*, List<List<int>>)
   +AddSpecialBonds(GenElement*, Dict<int,List<List<int>>>)
-  -Dict<int,List<List<int>>> mol_type_to_sbonds_list_in_mol
+  -Dict<int,List<List<int>>> mol_type_to_sbondses_in_mol
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -248,9 +248,9 @@ abstract class Processor {
   #int n_generators
   #List<Generators*> generators
   #{abstract} void run_impl(int)
-  #void register_generators(GenElement*)
-  #void register_generators(GenList*)
-  #void register_generators(GenDict*)
+  #void register_generator(GenElement*)
+  #void register_generator(GenList*)
+  #void register_generator(GenDict*)
   #void register_generators(List<GenElement*>)
   #void register_generators(List<GenList*>)
   #void register_generators(List<GenDict*>)
@@ -334,6 +334,28 @@ class ProRadialDistributionFunction {
 }
 
 Processor <|-- ProRadialDistributionFunction
+
+class ProDistanceInMolecule {
+  +ProDistanceInMolecule(GenElement*, GenElement*)
+  +ProDistanceInMolecule(List<pair<GenElement*,GenElement*>>)
+  -int index1_in_mol
+  -int index2_in_mol
+  -int target_moltype
+  -bool do_sqrt
+  -List<RowArrayXd> distance2_traj
+  -ArrayXXd distance_array
+  -ArrayXXd distance2_array
+  #void run_impl(int)
+  ~void prepare()
+  ~void finish()
+  +void set_points(int, int)
+  +void set_moltype(int)
+  +void compute_sqrt(bool)
+  +ArrayXXd get_distance_array()
+  +ArrayXXd get_distance2_array()
+}
+
+Processor <|-- ProDistanceInMolecule
 
 abstract class Invoker {
   #int n_processors

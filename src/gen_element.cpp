@@ -62,8 +62,18 @@ void GenElement::decrement_remain()
 
   if (n_remain == 0)
   {
-    data.clear();
-    data = nullptr;
+    if (data.is_array())
+    {
+      data.get_ref<Json::array_t&>().clear();
+      data.get_ref<Json::array_t&>().shrink_to_fit();
+      data = nullptr;
+    }
+    else
+    {
+      data.clear();
+      data = nullptr;
+    }
+
     datakeys.clear();
 
     auto shared_this = shared_from_this();

@@ -12,7 +12,7 @@ create: 2018/06/22 by Takayuki Kobayashi
 ProData::ProData(
   ShPtr<GenElement> elem)
 {
-  register_generators(elem);
+  register_generator(elem);
 }
 
 /* ------------------------------------------------------------------ */

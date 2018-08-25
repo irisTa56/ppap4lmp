@@ -15,7 +15,8 @@ AddSpecialBonds::AddSpecialBonds(
   const List<List<int>> &scheme)
 {
   ext_generator = gen_mols;
-  mol_type_to_sbonds_list_in_mol[1] = scheme;
+  // Special bonds list without moltype is used as that for moltype 1
+  mol_type_to_sbondses_in_mol[1] = scheme;
 }
 
 /* ------------------------------------------------------------------ */
@@ -25,7 +26,7 @@ AddSpecialBonds::AddSpecialBonds(
   const Dict<int,List<List<int>>> &schemes)
 {
   ext_generator = gen_mols;
-  mol_type_to_sbonds_list_in_mol = schemes;
+  mol_type_to_sbondses_in_mol = schemes;
 }
 
 /* ------------------------------------------------------------------ */
@@ -49,13 +50,14 @@ void AddSpecialBonds::compute_impl(
 
   for (const auto &mol : mols)
   {
-    auto atom_ids = mol["atom-ids"];
-    auto sbonds_list_in_mol
-      = mol_type_to_sbonds_list_in_mol[mol.value("type", 1)];
+    auto &atom_ids = mol["atom-ids"];
+    // If moltype is not set, default value (1) is used
+    auto sbondses_in_mol
+      = mol_type_to_sbondses_in_mol[mol.value("type", 1)];
 
     auto n_atoms_in_mol = atom_ids.size();
 
-    if (sbonds_list_in_mol.size() != n_atoms_in_mol)
+    if (sbondses_in_mol.size() != n_atoms_in_mol)
     {
       runtime_error(
         "The numbers of atoms in a molecule are inconsistent");
@@ -65,7 +67,7 @@ void AddSpecialBonds::compute_impl(
     {
       auto &atom = data[id2index[atom_ids[i]]];
 
-      for (int index: sbonds_list_in_mol[i])
+      for (int index: sbondses_in_mol[i])
       {
         atom["special-bonds"].push_back(atom_ids.at(index));
       }

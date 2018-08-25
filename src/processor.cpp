@@ -10,7 +10,7 @@ create: 2018/06/22 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 template <class GEN>
-void Processor::register_generators(
+void Processor::register_generator(
   ShPtr<GEN> gen)
 {
   generators.clear();
@@ -25,11 +25,11 @@ void Processor::register_generators(
   }
 }
 
-template void Processor::register_generators(
+template void Processor::register_generator(
   ShPtr<GenElement> gen);
-template void Processor::register_generators(
+template void Processor::register_generator(
   ShPtr<GenDict> gen);
-template void Processor::register_generators(
+template void Processor::register_generator(
   ShPtr<GenList> gen);
 
 /* ------------------------------------------------------------------ */

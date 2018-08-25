@@ -17,7 +17,7 @@ class Processor : public KeyChecker {
   List<ShPtr<Generator>> generators;
   virtual void run_impl(int) = 0;
   template <class GEN>
-  void register_generators(
+  void register_generator(
     ShPtr<GEN> gen);
   template <class GEN>
   void register_generators(

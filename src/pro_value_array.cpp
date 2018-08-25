@@ -13,7 +13,7 @@ create: 2018/07/16 by Takayuki Kobayashi
 ProValueArray::ProValueArray(
   ShPtr<GenElement> elem)
 {
-  register_generators(elem);
+  register_generator(elem);
 }
 
 /* ------------------------------------------------------------------ */
@@ -78,7 +78,7 @@ void ProValueArray::run_sort(
       row(i) = numbered_values[i].second[k];
     }
 
-    results_tmp[k][index] = row;
+    results_trajs[k][index] = row;
   }
 }
 
@@ -125,7 +125,7 @@ void ProValueArray::run_no_sort(
 
   for (const auto &k : selected_keys)
   {
-    results_tmp[k][index] = rows[k];
+    results_trajs[k][index] = rows[k];
   }
 }
 
@@ -163,7 +163,7 @@ void ProValueArray::prepare()
 {
   for (const auto &k : selected_keys)
   {
-    results_tmp[k].resize(n_generators);
+    results_trajs[k].resize(n_generators);
   }
 }
 
@@ -171,7 +171,7 @@ void ProValueArray::prepare()
 
 void ProValueArray::finish()
 {
-  auto &list_of_row = results_tmp[selected_keys.front()];
+  auto &list_of_row = results_trajs[selected_keys.front()];
 
   auto size = list_of_row.front().size();
 
@@ -183,7 +183,7 @@ void ProValueArray::finish()
     }
   }
 
-  for (const auto &item : results_tmp)
+  for (const auto &item : results_trajs)
   {
     ArrayXXd arr(n_generators, size);
 
@@ -194,6 +194,8 @@ void ProValueArray::finish()
 
     results[item.first] = arr;
   }
+
+  results_trajs.clear();
 }
 
 /* ------------------------------------------------------------------ */

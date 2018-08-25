@@ -11,7 +11,7 @@ create: 2018/08/19 by Takayuki Kobayashi
 #include "adder.h"
 
 class AddSpecialBonds : public Adder {
-  Dict<int,List<List<int>>> mol_type_to_sbonds_list_in_mol;
+  Dict<int,List<List<int>>> mol_type_to_sbondses_in_mol;
  protected:
   virtual void compute_impl(
     Json &data,

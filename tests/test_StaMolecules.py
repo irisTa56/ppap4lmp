@@ -16,7 +16,7 @@ class TestStaMolecules(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: StaMolecules needs 'mol' externally")
+        "RuntimeError: StaMolecules needs 'mol', 'id' externally")
 
   def test_get_data(self):
 

@@ -18,7 +18,7 @@ ProRadialDistributionFunction::ProRadialDistributionFunction(
   ShPtr<GenElement> atoms,
   ShPtr<GenElement> box)
 {
-  register_generators(ShPtr<GenDict>(
+  register_generator(ShPtr<GenDict>(
     new GenDict({{"Atoms", atoms}, {"Box", box}})));
 }
 
@@ -195,6 +195,12 @@ void ProRadialDistributionFunction::finish()
   */
 
   rdf = number_distribution_sum / (density_sum*shell_volume);
+
+  density_traj.clear();
+  density_traj.shrink_to_fit();
+
+  number_distribution_traj.clear();
+  number_distribution_traj.shrink_to_fit();
 }
 
 /* ------------------------------------------------------------------ */

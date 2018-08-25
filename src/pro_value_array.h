@@ -14,7 +14,7 @@ class ProValueArray : public Processor {
   bool do_sort = false;
   List<Str> selected_keys;
   Dict<Str,ArrayXXd> results;
-  Dict<Str,List<RowArrayXd>> results_tmp;
+  Dict<Str,List<RowArrayXd>> results_trajs;
   void run_sort(
     int index,
     const Json &data);

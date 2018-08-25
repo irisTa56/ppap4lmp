@@ -14,7 +14,7 @@ ProThicknessProfile::ProThicknessProfile(
   ShPtr<GenElement> atoms,
   ShPtr<GenElement> box)
 {
-  register_generators(ShPtr<GenDict>(
+  register_generator(ShPtr<GenDict>(
     new GenDict({{"Atoms", atoms}, {"Box", box}})));
 }
 
@@ -76,7 +76,7 @@ void ProThicknessProfile::run_impl(
       return a["z"] > b["z"];
     });  // to improve speed
 
-  ArrayXXd tmp = ArrayXXd::Zero(nx, ny);
+  ArrayXXd profile_tmp = ArrayXXd::Zero(nx, ny);
 
   auto reciprocal_nx = 1.0 / double(nx);
   auto reciprocal_ny = 1.0 / double(ny);
@@ -119,16 +119,16 @@ void ProThicknessProfile::run_impl(
 
         auto dz2 = radius2 - dr2;
 
-        auto d = atom_z - tmp(ix_in_box, iy_in_box);
+        auto d = atom_z - profile_tmp(ix_in_box, iy_in_box);
 
         if (d < 0.0 && dz2 < d*d) continue;
 
-        tmp(ix_in_box, iy_in_box) = atom_z + sqrt(dz2);
+        profile_tmp(ix_in_box, iy_in_box) = atom_z + sqrt(dz2);
       }
     }
   }
 
-  profiles[index] = tmp;
+  profiles[index] = profile_tmp;
 }
 
 /* ------------------------------------------------------------------ */
