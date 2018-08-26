@@ -57,8 +57,6 @@ void ProRadialDistributionFunction::run_impl(
   check_keys(
     gen_box, {"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
 
-  auto id2index_atom = get_map_to_index(atoms, "id");
-
   auto rs = gen_atoms->get_2d_double({"x", "y", "z"});
 
   ArrayXd length(3);
@@ -91,24 +89,25 @@ void ProRadialDistributionFunction::run_impl(
 
   auto reciprocal_width = 1.0 / bin_width;
 
-  for (const auto &atom_i : atoms)
+  auto n_atoms = atoms.size();
+
+  for (int i = 0; i != n_atoms; ++i)
   {
+    auto &atom_i = atoms[i];
+
     auto id_i = atom_i["id"].get<int>();
-
-    auto r_i = rs.row(id2index_atom[id_i]);
-
-    auto sbonds = special_bonds_exist ?
+    auto sbs_i = special_bonds_exist ?
       atom_i["special-bonds"].get<Set<int>>() : Set<int>({});
 
-    for (const auto &atom_j : atoms)
+    auto r_i = rs.row(i);
+
+    for (int j = i+1; j != n_atoms; ++j)
     {
-      auto id_j = atom_j["id"].get<int>();
+      if (
+        !sbs_i.empty() &&
+        sbs_i.find(atoms[j]["id"].get<int>()) != sbs_i.end()) continue;
 
-      if (!(id_i < id_j)) continue;
-
-      if (sbonds.find(id_j) != sbonds.end()) continue;
-
-      auto dr_original = rs.row(id2index_atom[id_j]) - r_i;
+      auto dr_original = rs.row(j) - r_i;
 
       for (int ix = shift_x.first; ix <= shift_x.second; ++ix)
       {
@@ -144,10 +143,9 @@ void ProRadialDistributionFunction::run_impl(
     }
   }
 
-  double n_atoms = atoms.size();
-
   density_traj[index] = n_atoms / length.prod();
-  number_distribution_traj[index] = counts.cast<double>() / n_atoms;
+  number_distribution_traj[index]
+    = counts.cast<double>() / double(n_atoms);
 }
 
 /* ------------------------------------------------------------------ */
