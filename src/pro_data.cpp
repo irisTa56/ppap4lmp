@@ -43,6 +43,9 @@ void ProData::run_impl(
 
     if (data.is_array())
     {
+      json = Json::array({});
+      json.get_ref<Json::array_t&>().reserve(data.size());
+
       for (const auto &d : data)
       {
         Json tmp;

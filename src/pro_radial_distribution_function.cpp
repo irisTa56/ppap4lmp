@@ -48,14 +48,18 @@ void ProRadialDistributionFunction::run_impl(
 
   check_keys(gen_atoms, {"x", "y", "z", "id"});
 
-  bool special_bonds_exist = check_containment<Str>(
-    gen_atoms->get_keys(), "special-bonds") ? true : false;
+  bool special_bonds_exist
+    = check_containment<Str>(gen_atoms->get_keys(), "special-bonds");
 
   auto gen_box = generators[index]->get_element("Box");
   auto &box = gen_box->get_data();
 
   check_keys(
     gen_box, {"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
+
+  auto id2index_atom = get_map_to_index(atoms, "id");
+
+  auto rs = gen_atoms->get_2d_double({"x", "y", "z"});
 
   ArrayXd length(3);
   length << box["hi_x"].get<double>() - box["lo_x"].get<double>(),
@@ -89,39 +93,38 @@ void ProRadialDistributionFunction::run_impl(
 
   for (const auto &atom_i : atoms)
   {
+    auto id_i = atom_i["id"].get<int>();
+
+    auto r_i = rs.row(id2index_atom[id_i]);
+
+    auto sbonds = special_bonds_exist ?
+      atom_i["special-bonds"].get<Set<int>>() : Set<int>({});
+
     for (const auto &atom_j : atoms)
     {
-      if (!(atom_i["id"] < atom_j["id"])) continue;
+      auto id_j = atom_j["id"].get<int>();
 
-      if (special_bonds_exist)
-      {
-        Set<int> sbonds = atom_i["special-bonds"];
+      if (!(id_i < id_j)) continue;
 
-        if (sbonds.find(atom_j["id"]) != sbonds.end()) continue;
-      }
+      if (sbonds.find(id_j) != sbonds.end()) continue;
 
-      auto dx_original
-        = atom_j["x"].get<double>() - atom_i["x"].get<double>();
-      auto dy_original
-        = atom_j["y"].get<double>() - atom_i["y"].get<double>();
-      auto dz_original
-        = atom_j["z"].get<double>() - atom_i["z"].get<double>();
+      auto dr_original = rs.row(id2index_atom[id_j]) - r_i;
 
       for (int ix = shift_x.first; ix <= shift_x.second; ++ix)
       {
-        auto dx = dx_original + ix*length(0);
+        auto dx = dr_original(0) + ix*length(0);
 
         if (limits(0) < abs(dx)) continue;
 
         for (int iy = shift_y.first; iy <= shift_y.second; ++iy)
         {
-          auto dy = dy_original + iy*length(1);
+          auto dy = dr_original(1) + iy*length(1);
 
           if (limits(1) < abs(dy)) continue;
 
           for (int iz = shift_z.first; iz <= shift_x.second; ++iz)
           {
-            auto dz = dz_original + iz*length(2);
+            auto dz = dr_original(2) + iz*length(2);
 
             if (limits(2) < abs(dz)) continue;
 

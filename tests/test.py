@@ -143,7 +143,6 @@ def suite_proc():
   suite.addTest(TestProValueArray("test_error01"))
   suite.addTest(TestProValueArray("test_error02"))
   suite.addTest(TestProValueArray("test_error03"))
-  suite.addTest(TestProValueArray("test_error04"))
   suite.addTest(TestProValueArray("test_select_one"))
   suite.addTest(TestProValueArray("test_select_two"))
 

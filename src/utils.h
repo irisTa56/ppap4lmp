@@ -117,7 +117,7 @@ static bool check_containment(
   const Set<T> &set,
   const T &el)
 {
-  return set.find(el) == set.end() ? false : true;
+  return set.find(el) != set.end();
 }
 
 /* ------------------------------------------------------------------ */
@@ -157,6 +157,9 @@ static Json get_partial_json(
 
   if (data.is_array())
   {
+    tmp = Json::array({});
+    tmp.get_ref<Json::array_t&>().reserve(data.size());
+
     for (const auto &d : data)
     {
       Json elem;
@@ -192,6 +195,8 @@ static Dict<Json,int> get_map_to_index(
   {
     auto length = data.size();
 
+    tmp.reserve(length);
+
     for (int i = 0; i != length; ++i)
     {
       tmp[data[i][key]] = i;
@@ -217,6 +222,8 @@ static Dict<Json,int> get_map_to_index(
   if (data.is_array())
   {
     auto length = data.size();
+
+    tmp.reserve(length);
 
     for (int i = 0; i != length; ++i)
     {

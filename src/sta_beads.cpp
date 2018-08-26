@@ -30,7 +30,7 @@ StaBeads::StaBeads(
 
 /* ------------------------------------------------------------------ */
 
-void StaBeads::check_mol_type_to_abst_beads()
+std::pair<bool,bool> StaBeads::check_mol_type_to_abst_beads()
 {
   int counter = 0;
   int type_counter = 0;
@@ -72,31 +72,27 @@ void StaBeads::check_mol_type_to_abst_beads()
     }
   }
 
-  if (type_counter == 0)
+  std::pair<bool,bool> tmp = std::make_pair(false, false);;
+
+  if (type_counter == counter)
   {
-    with_type = false;
+    tmp.first = true;
   }
-  else if (type_counter == counter)
-  {
-    with_type = true;
-  }
-  else
+  else if (type_counter != 0)
   {
     runtime_error("The number of 'type' is invalid");
   }
 
-  if (weights_counter == 0)
+  if (weights_counter == counter)
   {
-    with_weights = false;
+    tmp.second = true;
   }
-  else if (weights_counter == counter)
-  {
-    with_weights = true;
-  }
-  else
+  else if (weights_counter != 0)
   {
     runtime_error("The number of 'weights' is invalid");
   }
+
+  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
@@ -105,7 +101,7 @@ void StaBeads::compute_impl(
   Json &data,
   Set<Str> &datakeys)
 {
-  check_mol_type_to_abst_beads();
+  auto with_additional = check_mol_type_to_abst_beads();
 
   auto gen_mols = ext_generator->get_element();
 
@@ -125,22 +121,30 @@ void StaBeads::compute_impl(
     {
       Json tmp = {{"id", ++bead_id}, {"mol", mol["id"]}};
 
+      Json ids_tmp;
+
       for (int index : abst_bead["indices-in-mol"])
       {
-        tmp["atom-ids"].push_back(atom_ids.at(index));
+        ids_tmp.push_back(atom_ids.at(index));
       }
 
-      if (with_type)
+      tmp["atom-ids"].swap(ids_tmp);
+
+      if (with_additional.first)
       {
         tmp["type"] = abst_bead["type"];
       }
 
-      if (with_weights)
+      if (with_additional.second)
       {
+        Json weights_tmp;
+
         for (double w : abst_bead["weights"])
         {
-          tmp["atom-weights"].push_back(w);
+          weights_tmp.push_back(w);
         }
+
+        tmp["atom-weights"].swap(weights_tmp);
       }
 
       data.push_back(tmp);
@@ -149,12 +153,12 @@ void StaBeads::compute_impl(
 
   datakeys.insert({"id", "mol", "atom-ids"});
 
-  if (with_type)
+  if (with_additional.first)
   {
     datakeys.insert("type");
   }
 
-  if (with_weights)
+  if (with_additional.second)
   {
     datakeys.insert("atom-weights");
   }

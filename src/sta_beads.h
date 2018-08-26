@@ -10,10 +10,8 @@ create: 2018/08/18 by Takayuki Kobayashi
 #include "starter.h"
 
 class StaBeads : public Starter {
-  bool with_type;
-  bool with_weights;
   Dict<int,List<Json>> mol_type_to_abst_beads;
-  void check_mol_type_to_abst_beads();
+  std::pair<bool,bool> check_mol_type_to_abst_beads();
  protected:
   virtual void compute_impl(
     Json &data,

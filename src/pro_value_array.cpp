@@ -38,21 +38,7 @@ void ProValueArray::run_sort(
 
     for (const auto &k : selected_keys)
     {
-      auto &val = d[k];
-
-      if (val.is_number_float())
-      {
-        tmp[k] = val;
-      }
-      else if (val.is_number())
-      {
-        message("ProValueArray: Converting an integer to float");
-        tmp[k] = val;
-      }
-      else
-      {
-        runtime_error("ProValueArray: Value is not number");
-      }
+      tmp[k] = d[k].get<double>();
     }
 
     // value(s) is numbered by 'id'
@@ -103,24 +89,8 @@ void ProValueArray::run_no_sort(
   {
     for (const auto &k : selected_keys)
     {
-      auto &val = d[k];
-
-      if (val.is_number_float())
-      {
-        rows[k](irow) = val;
-      }
-      else if (val.is_number())
-      {
-        message("ProValueArray: Converting an integer to float");
-        rows[k](irow) = val;
-      }
-      else
-      {
-        runtime_error("ProValueArray: Value is not number");
-      }
+      rows[k](irow++) = d[k].get<double>();
     }
-
-    irow++;
   }
 
   for (const auto &k : selected_keys)
@@ -143,7 +113,11 @@ void ProValueArray::run_impl(
   auto &data = elem->get_data();
 
   auto required_keys = selected_keys;
-  required_keys.push_back("id");
+
+  if (do_sort)
+  {
+    required_keys.push_back("id");
+  }
 
   check_keys(elem, required_keys);
 

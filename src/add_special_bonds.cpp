@@ -67,10 +67,14 @@ void AddSpecialBonds::compute_impl(
     {
       auto &atom = data[id2index[atom_ids[i]]];
 
+      Json tmp;
+
       for (int index: sbondses_in_mol[i])
       {
-        atom["special-bonds"].push_back(atom_ids.at(index));
+        tmp.push_back(atom_ids.at(index));
       }
+
+      data[id2index[atom_ids[i]]]["special-bonds"].swap(tmp);
     }
   }
 

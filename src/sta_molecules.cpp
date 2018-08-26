@@ -27,7 +27,7 @@ void StaMolecules::compute_impl(
 
   auto &atoms = gen_atoms->get_data();
 
-  Dict<int,int> id_to_index;
+  Dict<int,int> id2index;
 
   int max_index = 0;
 
@@ -35,13 +35,13 @@ void StaMolecules::compute_impl(
   {
     int molid = atom["mol"];
 
-    if (id_to_index.find(molid) == id_to_index.end())
+    if (id2index.find(molid) == id2index.end())
     {
       data[max_index]["id"] = molid;
-      id_to_index[molid] = max_index++;
+      id2index[molid] = max_index++;
     }
 
-    data[id_to_index[molid]]["atom-ids"].push_back(atom["id"]);
+    data[id2index[molid]]["atom-ids"].push_back(atom["id"]);
   }
 
   datakeys.insert({"id", "atom-ids"});

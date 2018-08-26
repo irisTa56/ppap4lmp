@@ -41,6 +41,12 @@ void StaDumpAtoms::compute_impl(
     {
       std::getline(ifs, line);
       n_atoms = std::stoi(line);
+
+      if (timestep_matches)
+      {
+        data = Json::array({});
+        data.get_ref<Json::array_t&>().reserve(n_atoms);
+      }
     }
     else if (line.find("ITEM: ATOMS") == 0)
     {
@@ -103,7 +109,7 @@ const List<bool> StaDumpAtoms::get_is_int_vector(
 
   for (const auto &s : split(line))
   {
-    is_int.push_back(s.find(".") == Str::npos ? true : false);
+    is_int.push_back(s.find(".") == Str::npos);
   }
 
   return is_int;

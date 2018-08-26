@@ -50,37 +50,37 @@ const CompareFunc FilComparison::make_lambda(
   if (oper == "<")
   {
     return [rval](const Json &j) {
-      return j < rval ? true : false;
+      return j < rval;
     };
   }
   else if (oper == ">")
   {
     return [rval](const Json &j) {
-      return j > rval ? true : false;
+      return j > rval;
     };
   }
   else if (oper == "<=")
   {
     return [rval](const Json &j) {
-      return j <= rval ? true : false;
+      return j <= rval;
     };
   }
   else if (oper == ">=")
   {
     return [rval](const Json &j) {
-      return j >= rval ? true : false;
+      return j >= rval;
     };
   }
   else if (oper == "==")
   {
     return [rval](const Json &j) {
-      return j == rval ? true : false;
+      return j == rval;
     };
   }
   else if (oper == "!=")
   {
     return [rval](const Json &j) {
-      return j != rval ? true : false;
+      return j != rval;
     };
   }
   else

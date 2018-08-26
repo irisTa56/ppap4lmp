@@ -31,12 +31,15 @@ void AddCoMPositions::compute_with_weights(
     double m_tmp = 0.0;
     RowArrayXd r_tmp = RowArrayXd::Zero(3);
 
-    auto n_atoms = d["atom-ids"].size();
+    auto &atom_ids = d["atom-ids"];
+    auto &atom_weights = d["atom-weights"];
+
+    auto n_atoms = atom_ids.size();
 
     for (int i = 0; i != n_atoms; ++i)
     {
-      int id = d["atom-ids"][i];
-      double weight = d["atom-weights"][i];
+      auto id = atom_ids[i].get<int>();
+      auto weight = atom_weights[i].get<double>();
 
       auto index = id2index_atom[id];
       auto mass = ms_atom(index) * weight;

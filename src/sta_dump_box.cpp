@@ -51,7 +51,7 @@ void StaDumpBox::compute_impl(
       {
         auto key = "periodic_"+dim.second;
 
-        data[key] = strs[3+dim.first] == "pp" ? true : false;
+        data[key] = strs[3+dim.first] == "pp";
         datakeys.insert(key);
       }
 

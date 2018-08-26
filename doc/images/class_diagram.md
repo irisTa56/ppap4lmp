@@ -206,10 +206,8 @@ Starter <|-- StaMolecules
 class StaBeads {
   +StaBeads(GenElement*, List<Json>)
   +StaBeads(GenElement*, Dict<int,List<Json>>)
-  -bool with_type
-  -bool with_weights
   -Dict<int,List<Json>> mol_type_to_abst_beads
-  -void check_mol_type_to_abst_beads()
+  -std::pair<bool,bool> check_mol_type_to_abst_beads()
   #void compute_impl(Json, Set<Str>)
 }
 

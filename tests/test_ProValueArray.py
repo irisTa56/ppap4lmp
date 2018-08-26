@@ -40,22 +40,6 @@ class TestProValueArray(unittest.TestCase):
 
   def test_error03(self):
 
-    elems = [
-      Element(StaCustom(
-        {"id": i, "A": "str-{}".format(i)})) for i in range(1000)]
-    pro = ProValueArray(elems)
-    pro.select("A")
-
-    try:
-      InvOMP(pro).execute()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: ProValueArray: Value is not number")
-
-  def test_error04(self):
-
     data = [
       [{"id": j, "A": float(i*j)} for j in range(10*i+1)]
       for i in range(100)]

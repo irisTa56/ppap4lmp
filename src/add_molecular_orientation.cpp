@@ -34,13 +34,16 @@ void AddMolecularOrientation::compute_impl(
     ArrayXXd evecs = solver.eigenvectors().real().transpose();
 
     d["I_values"] = {evals(0), evals(1), evals(2)};
-    d["I_vectors"].clear();
+
+    Json tmp;
 
     for (int i = 0; i != 3; ++i)
     {
       RowArrayXd evec = evecs.row(i);
-      d["I_vectors"].push_back({evec(0), evec(1), evec(2)});
+      tmp.push_back({evec(0), evec(1), evec(2)});
     }
+
+    d["I_vectors"].swap(tmp);
 
     // compute molecular orientation
 
