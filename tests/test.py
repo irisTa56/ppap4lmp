@@ -45,9 +45,30 @@ def suite_starter():
 
   return suite
 
+def suite_filter():
+
+  from test_FilSet import TestFilSet
+  from test_FilComparison import TestFilComparison
+
+  print("\n[filter]")
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestFilSet("test_error01"))
+  suite.addTest(TestFilSet("test_equivalent_filter"))
+  suite.addTest(TestFilSet("test_remaining_number"))
+
+  suite.addTest(TestFilComparison("test_error01"))
+  suite.addTest(TestFilComparison("test_error02"))
+  suite.addTest(TestFilComparison("test_equivalent_filter"))
+  suite.addTest(TestFilComparison("test_remaining_number"))
+  suite.addTest(TestFilComparison("test_de_morgan"))
+
+  return suite
+
 tests = {
   "starter": suite_starter,
-  #"filter": suite_filter,
+  "filter": suite_filter,
   #"adder": suite_adder,
   #"proc": suite_proc
 }
