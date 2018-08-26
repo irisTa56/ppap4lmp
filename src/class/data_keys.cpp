@@ -8,16 +8,17 @@ namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
 
-const Set<Str> &DataKeys::get()
+void DataKeys::clear()
 {
-  return _keys;
+  _keys.clear();
 }
 
 /* ------------------------------------------------------------------ */
 
-void DataKeys::clear()
+void DataKeys::set(
+  const Set<Str> &keys)
 {
-  _keys.clear();
+  _keys = keys;
 }
 
 /* ------------------------------------------------------------------ */
@@ -115,6 +116,13 @@ bool DataKeys::optional(
   }
 
   return true;
+}
+
+/* ------------------------------------------------------------------ */
+
+const Set<Str> &DataKeys::get()
+{
+  return _keys;
 }
 
 /* ------------------------------------------------------------------ */

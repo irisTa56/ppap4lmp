@@ -8,8 +8,9 @@ class DataKeys {
  public:
   DataKeys() = default;
   virtual ~DataKeys() = default;
-  const Set<Str> &get();
   void clear();
+  void set(
+    const Set<Str> &keys);
   void add(
     const Str &key);
   void add(
@@ -26,6 +27,7 @@ class DataKeys {
     const Str &key);
   bool optional(
     const Set<Str> &keys);
+  const Set<Str> &get();
 };
 
 #endif
