@@ -42,6 +42,14 @@ void DataKeys::add(
 
 /* ------------------------------------------------------------------ */
 
+void DataKeys::add(
+  const std::initializer_list<Str> &keys)
+{
+  add(Set<Str>(keys));
+}
+
+/* ------------------------------------------------------------------ */
+
 void DataKeys::remove(
   const Str &key)
 {
@@ -57,6 +65,14 @@ void DataKeys::remove(
   {
     _keys.erase(key);
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+void DataKeys::remove(
+  const std::initializer_list<Str> &keys)
+{
+  remove(Set<Str>(keys));
 }
 
 /* ------------------------------------------------------------------ */
@@ -96,6 +112,14 @@ void DataKeys::required(
 
 /* ------------------------------------------------------------------ */
 
+void DataKeys::required(
+  const std::initializer_list<Str> &keys)
+{
+  required(Set<Str>(keys));
+}
+
+/* ------------------------------------------------------------------ */
+
 bool DataKeys::optional(
   const Str &key)
 {
@@ -116,6 +140,14 @@ bool DataKeys::optional(
   }
 
   return true;
+}
+
+/* ------------------------------------------------------------------ */
+
+bool DataKeys::optional(
+  const std::initializer_list<Str> &keys)
+{
+  return optional(Set<Str>(keys));
 }
 
 /* ------------------------------------------------------------------ */

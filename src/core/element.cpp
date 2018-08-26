@@ -188,17 +188,17 @@ void Element::array2d(
   if (data.is_array())
   {
     int irow = 0;
-    int icol;
 
     for (const auto &d : data)
     {
-      irow++;
-      icol = 0;
+      int icol = 0;
 
       for (const auto &key : keys)
       {
         array(irow, icol++) = d[key];
       }
+
+      irow++;
     }
   }
   else
@@ -230,6 +230,14 @@ void Element::required(
 
 /* ------------------------------------------------------------------ */
 
+void Element::required(
+  const std::initializer_list<Str> &keys)
+{
+  datakeys.required(keys);
+}
+
+/* ------------------------------------------------------------------ */
+
 bool Element::optional(
   const Str &key)
 {
@@ -240,6 +248,14 @@ bool Element::optional(
 
 bool Element::optional(
   const Set<Str> &keys)
+{
+  return datakeys.optional(keys);
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Element::optional(
+  const std::initializer_list<Str> &keys)
 {
   return datakeys.optional(keys);
 }

@@ -54,10 +54,14 @@ class Element : public Generator, public EnShThis<Element> {
     const Str &key);
   void required(
     const Set<Str> &keys);
+  void required(
+    const std::initializer_list<Str> &keys);
   bool optional(
     const Str &key);
   bool optional(
     const Set<Str> &keys);
+  bool optional(
+    const std::initializer_list<Str> &keys);
 // functions for Python
   const Json &get_data_py();
   const Set<Str> &get_keys_py();

@@ -2,20 +2,20 @@
 skinparam packageStyle rectangle
 
 abstract class Generator {
-  #List<UpdatePair> update_chain
-  #void merge_update_chain(List<UpdatePair>)
+  #Vec<UpdatePair> update_chain
+  #void merge_update_chain(Vec<UpdatePair>)
   ~{abstract} Element* get_element(Json)
   ~{abstract} Generator* get_generator(Json)
   ~void appoint()
   ~void hello()
   ~void goodbye()
-  ~List<UodatePair> get_update_chain()
+  ~Vec<UodatePair> get_update_chain()
 }
 
 class UpdatePair.Element {
   ~Element()
   -{static} int instance_count
-  -int ID
+  -int dataid
   -int n_remain
   -Json data
   -Set<Str> datakeys
@@ -30,8 +30,8 @@ class UpdatePair.Element {
   +Set<Str> get_keys()
   +ArrayXi get_1d_int(Str)
   +ArrayXd get_1d_double(Str)
-  +ArrayXXi get_2d_int(List<Str>)
-  +ArrayXXd get_2d_double(List<Str>)
+  +ArrayXXi get_2d_int(Vec<Str>)
+  +ArrayXXd get_2d_double(Vec<Str>)
 
   +Element* create(Updater*)
 }
@@ -39,8 +39,8 @@ class UpdatePair.Element {
 Generator <|-- UpdatePair.Element
 
 class GenList {
-  ~GenList(List<Generator*>)
-  -List<Generator*> generator_list
+  ~GenList(Vec<Generator*>)
+  -Vec<Generator*> generator_list
   ~Element* get_element(Json)
   ~Generator* get_generator(Json)
   ~int get_length()
@@ -49,8 +49,8 @@ class GenList {
 Generator <|-- GenList
 
 class GenDict {
-  ~GenDict(Dict<Str,Generator*>)
-  -Dict<Str,Generator*> generator_dict
+  ~GenDict(Map<Str,Generator*>)
+  -Map<Str,Generator*> generator_dict
   ~Element* get_element(Json)
   ~Generator* get_generator(Json)
   ~Set<Str> get_keys()
@@ -76,11 +76,11 @@ abstract class Adder {
 UpdatePair.Updater <|-- Adder
 
 class AddMap {
-  +AddMap(Str, Str, Dict<Json,Json>)
+  +AddMap(Str, Str, Map<Json,Json>)
   -bool overwrite
   -Str key_ref
   -Str key_new
-  -Dict<Json,Json> mapping
+  -Map<Json,Json> mapping
   #void compute_impl(Json, Set<Str>)
   +AddMap* overwrite(bool)
 }
@@ -151,9 +151,9 @@ class AddChildIDs {
 Adder <|---- AddChildIDs
 
 class AddSpecialBonds {
-  +AddSpecialBonds(Element*, List<List<int>>)
-  +AddSpecialBonds(Element*, Dict<int,List<List<int>>>)
-  -Dict<int,List<List<int>>> mol_type_to_sbondses_in_mol
+  +AddSpecialBonds(Element*, Vec<Vec<int>>)
+  +AddSpecialBonds(Element*, Map<int,Vec<Vec<int>>>)
+  -Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -184,7 +184,7 @@ Starter <|-- StaDump
 
 class StaDumpAtoms {
   +StaDumpAtoms(Str, int)
-  -List<bool> get_is_int_vector(Str)
+  -Vec<bool> make_is_int_vector(Str)
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -205,9 +205,9 @@ class StaMolecules {
 Starter <|-- StaMolecules
 
 class StaBeads {
-  +StaBeads(Element*, List<Json>)
-  +StaBeads(Element*, Dict<int,List<Json>>)
-  -Dict<int,List<Json>> mol_type_to_abst_beads
+  +StaBeads(Element*, Vec<Json>)
+  +StaBeads(Element*, Map<int,Vec<Json>>)
+  -Map<int,Vec<Json>> mol_type_to_abst_beads
   -std::pair<bool,bool> check_mol_type_to_abst_beads()
   #void compute_impl(Json, Set<Str>)
 }
@@ -221,9 +221,9 @@ abstract class Filter {
 UpdatePair.Updater <|-- Filter
 
 class FilSet {
-  +FilSet(Dict<Str,Set<Json>>)
-  +FilSet(Element*, Dict<Str,Set<Json>>)
-  -Dict<Str,Set<Json>> value_sets
+  +FilSet(Map<Str,Set<Json>>)
+  +FilSet(Element*, Map<Str,Set<Json>>)
+  -Map<Str,Set<Json>> value_sets
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -231,12 +231,12 @@ Filter <|-- FilSet
 
 class FilComparison {
   +FilComparison(tuple<Str,Str,Json>)
-  +FilComparison(List<tuple<Str,Str,Json>>)
+  +FilComparison(Vec<tuple<Str,Str,Json>>)
   +FilComparison(Element*, tuple<Str,Str,Json>)
-  +FilComparison(Element*, List<tuple<Str,Str,Json>>)
-  -List<tuple<Str,Str,Json>> comparisons
+  +FilComparison(Element*, Vec<tuple<Str,Str,Json>>)
+  -Vec<tuple<Str,Str,Json>> comparisons
   -function make_lambda(Str, Json)
-  -List<pair<Str,function>> convert_to_funcs(List<tuple<Str,Str,Json>>)
+  -Vec<pair<Str,function>> convert_to_funcs(Vec<tuple<Str,Str,Json>>)
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -245,14 +245,14 @@ Filter <|-- FilComparison
 abstract class Processor {
   -int i_generator
   #int n_generators
-  #List<Generators*> generators
+  #Vec<Generators*> generators
   #{abstract} void run_impl(int)
   #void register_generator(Element*)
   #void register_generator(GenList*)
   #void register_generator(GenDict*)
-  #void register_generators(List<Element*>)
-  #void register_generators(List<GenList*>)
-  #void register_generators(List<GenDict*>)
+  #void register_generators(Vec<Element*>)
+  #void register_generators(Vec<GenList*>)
+  #void register_generators(Vec<GenDict*>)
   ~void prepare()
   ~void finish()
   ~bool run()
@@ -260,63 +260,63 @@ abstract class Processor {
 
 class ProData {
   +ProData(Element*)
-  +ProData(List<Element*>)
-  -List<Str> selected_keys
-  -List<Json> results
+  +ProData(Vec<Element*>)
+  -Vec<Str> selected_keys
+  -Vec<Json> results
   #void run_impl(int)
   ~void prepare()
   +void select(py::args)
-  +List<Json> get_results()
+  +Vec<Json> get_results()
 }
 
 Processor <|-- ProData
 
 class ProValueArray {
   +ProValueArray(Element*)
-  +ProValueArray(List<Element*>)
-  -List<Str> selected_keys
-  -Dict<Str,ArrayXXd> results
-  -Dict<Str,List<RowArrayXd>> results_tmp
+  +ProValueArray(Vec<Element*>)
+  -Vec<Str> selected_keys
+  -Map<Str,ArrayXXd> results
+  -Map<Str,Vec<RowArrayXd>> results_tmp
   #void run_impl(int)
   ~void prepare()
   ~void finish()
   +void select(py::args)
-  +Dict<Str,ArrayXXd> get_results()
+  +Map<Str,ArrayXXd> get_results()
 }
 
 Processor <|-- ProValueArray
 
 class ProThicknessProfile {
   +ProThicknessProfile(Element*, Element*)
-  +ProThicknessProfile(List<pair<Element*,Element*>>)
+  +ProThicknessProfile(Vec<pair<Element*,Element*>>)
   -int nx
   -int ny
   -bool shift_half
   -double offset
-  -List<Json> conditions
-  -List<ArrayXXd> profiles
+  -Vec<Json> conditions
+  -Vec<ArrayXXd> profiles
   #void run_impl(int)
   ~void prepare()
   +void set_grid(int, int)
   +void set_offset(double)
   +void shift_half_delta(bool)
-  +List<Json> get_conditions()
-  +List<ArrayXXd> get_profiles()
+  +Vec<Json> get_conditions()
+  +Vec<ArrayXXd> get_profiles()
 }
 
 Processor <|-- ProThicknessProfile
 
 class ProRadialDistributionFunction {
   +ProRadialDistributionFunction(Element*, Element*)
-  +ProRadialDistributionFunction(List<pair<Element*,Element*>>)
+  +ProRadialDistributionFunction(Vec<pair<Element*,Element*>>)
   -int n_bins
   -double bin_width
   -bool bin_from_r
   -bool beyond_half
   -ArrayXd rdf
-  -List<ArrayXd> rdf_traj
-  -List<double> density_traj
-  -List<ArrayXd> number_distribution_traj
+  -Vec<ArrayXd> rdf_traj
+  -Vec<double> density_traj
+  -Vec<ArrayXd> number_distribution_traj
   #void run_impl(int)
   ~void prepare()
   ~void finish()
@@ -325,19 +325,19 @@ class ProRadialDistributionFunction {
   +void beyond_half_box_length(bool)
   +ArrayXd get_r_axis()
   +ArrayXd get_rdf()
-  +List<ArrayXd> get_rdf_traj()
+  +Vec<ArrayXd> get_rdf_traj()
 }
 
 Processor <|-- ProRadialDistributionFunction
 
 class ProDistanceInMolecule {
   +ProDistanceInMolecule(Element*, Element*)
-  +ProDistanceInMolecule(List<pair<Element*,Element*>>)
+  +ProDistanceInMolecule(Vec<pair<Element*,Element*>>)
   -int index1_in_mol
   -int index2_in_mol
   -int target_moltype
   -bool do_sqrt
-  -List<RowArrayXd> distance2_traj
+  -Vec<RowArrayXd> distance2_traj
   -ArrayXXd distance_array
   -ArrayXXd distance2_array
   #void run_impl(int)
@@ -353,11 +353,11 @@ class ProDistanceInMolecule {
 Processor <|-- ProDistanceInMolecule
 
 class ProMeanSquareDisplacement {
-  +ProMeanSquareDisplacement(List<Element*>)
+  +ProMeanSquareDisplacement(Vec<Element*>)
   -bool drift_correction
-  -List<bool> dimension
+  -Vec<bool> dimension
   -ArrayXXd initial_rs
-  -List<RowArrayXd> displacement2_traj
+  -Vec<RowArrayXd> displacement2_traj
   -ArrayXXd displacement2_array
   -ArrayXd mean_square_displacement
   #void run_impl(int)
@@ -373,14 +373,14 @@ Processor <|-- ProMeanSquareDisplacement
 
 abstract class Invoker {
   #int n_processors
-  #List<Processor*> processors
+  #Vec<Processor*> processors
   #{abstract} void execute_impl()
   +void execute()
 }
 
 class InvoOMP {
   +InvOMP(Processor*)
-  +InvOMP(List<Processor*>)
+  +InvOMP(Vec<Processor*>)
   #void execute_impl()
 }
 
@@ -389,9 +389,9 @@ Invoker <|-- InvoOMP
 class KeyChecker {
   ~KeyChecker()
   #bool check_key(Set<Str>, Str, Str)
-  #bool check_key(Set<Str>, List<Str>, Str)
+  #bool check_key(Set<Str>, Vec<Str>, Str)
   #bool check_key(Element*, Str)
-  #bool check_key(Element*, List<Str>)
+  #bool check_key(Element*, Vec<Str>)
   #Str get_my_class_name()
 }
 

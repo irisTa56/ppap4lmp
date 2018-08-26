@@ -51,3 +51,5 @@ const ShPtr<Generator> &Updater::get_ext_generator()
 {
   return ext_generator;
 }
+
+/* ------------------------------------------------------------------ */

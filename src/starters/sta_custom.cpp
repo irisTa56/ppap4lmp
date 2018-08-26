@@ -51,3 +51,5 @@ void StaCustom::compute_impl(
   data = json;
   datakeys.set(jsonkeys);
 }
+
+/* ------------------------------------------------------------------ */
