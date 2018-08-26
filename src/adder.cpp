@@ -21,6 +21,13 @@ void Adder::compute(
       runtime_error("Adder accepts nonempty data only");
     }
 
+    auto id_exists = check_containment<Str>(datakeys, "id");
+
     compute_impl(data, datakeys);
+
+    if (id_exists != check_containment<Str>(datakeys, "id"))
+    {
+      runtime_error("Adder cannot add 'id'");
+    }
   }
 }

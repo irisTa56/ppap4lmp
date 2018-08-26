@@ -160,6 +160,7 @@ class AddSpecialBonds {
 Adder <|---- AddSpecialBonds
 
 abstract class Starter {
+  -void sort_by_id(Json)
   ~void compute(Json, Set<Str>, int)
 }
 
@@ -273,17 +274,13 @@ Processor <|-- ProData
 class ProValueArray {
   +ProValueArray(GenElement*)
   +ProValueArray(List<GenElement*>)
-  -bool do_sort
   -List<Str> selected_keys
   -Dict<Str,ArrayXXd> results
   -Dict<Str,List<RowArrayXd>> results_tmp
-  -run_sort(int, Json)
-  -run_no_sort(int, Json)
   #void run_impl(int)
   ~void prepare()
   ~void finish()
   +void select(py::args)
-  +force_sort(bool)
   +Dict<Str,ArrayXXd> get_results()
 }
 
@@ -354,6 +351,25 @@ class ProDistanceInMolecule {
 }
 
 Processor <|-- ProDistanceInMolecule
+
+class ProMeanSquareDisplacement {
+  +ProMeanSquareDisplacement(List<GenElement*>)
+  -bool drift_correction
+  -List<bool> dimension
+  -ArrayXXd initial_rs
+  -List<RowArrayXd> displacement2_traj
+  -ArrayXXd displacement2_array
+  -ArrayXd mean_square_displacement
+  #void run_impl(int)
+  ~void prepare()
+  ~void finish()
+  +void set_dimension(bool, bool, bool)
+  +void without_drift_correction(bool)
+  +ArrayXXd get_displacement2_array()
+  +ArrayXd get_mean_square_displacement()
+}
+
+Processor <|-- ProMeanSquareDisplacement
 
 abstract class Invoker {
   #int n_processors

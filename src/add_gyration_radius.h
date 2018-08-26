@@ -22,7 +22,7 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
   ShPtr<AddGyrationRadius> with_squared(
     bool add_squared_ = true);
   ShPtr<AddGyrationRadius> without_sqrted(
-    bool add_sqrted_ = false);
+    bool without_sqrted_ = true);
 };
 
 /* ------------------------------------------------------------------ */
@@ -37,7 +37,7 @@ static void pybind_add_gyration_radius(py::module &m)
       py::arg("add_squared_") = true)
     .def(
       "without_sqrted", &AddGyrationRadius::without_sqrted,
-      py::arg("without_sqrted_") = false);
+      py::arg("without_sqrted_") = true);
 }
 
 #endif

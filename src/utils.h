@@ -248,30 +248,4 @@ static Dict<Json,int> get_map_to_index(
   return tmp;
 }
 
-/* ------------------------------------------------------------------ */
-
-static void sort_by_id(
-  Json &data)
-{
-  auto dict = get_map_to_index(data, "id");
-  auto list = List<std::pair<int,int>>(dict.begin(), dict.end());
-
-  std::sort(
-    list.begin(), list.end(),
-    [](auto &a, auto &b)
-    {
-      return a.first < b.first;
-    });
-
-  auto tmp = Json::array();
-  tmp.get_ref<Json::array_t&>().reserve(list.size());
-
-  for (const auto &pair : list)
-  {
-    tmp.push_back(data[pair.second]);
-  }
-
-  data.swap(tmp);
-}
-
 #endif

@@ -89,7 +89,6 @@ class TestProValueArray(unittest.TestCase):
 
     pro = ProValueArray(elems)
     pro.select("A", "B")
-    pro.force_sort()
 
     InvOMP(pro).execute()
 

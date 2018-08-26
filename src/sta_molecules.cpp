@@ -45,6 +45,4 @@ void StaMolecules::compute_impl(
   }
 
   datakeys.insert({"id", "atom-ids"});
-
-  sort_by_id(data);
 }

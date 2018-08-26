@@ -33,6 +33,19 @@ class TestAddRename(unittest.TestCase):
         msg.split("\n")[0],
         "RuntimeError: AddRename cannot overwrite 'bar'")
 
+  def test_error03(self):
+
+    elem = Element(StaCustom({"foo": 0, "bar": 1}))
+    elem.append_updater(AddRename("foo", "id"))
+
+    try:
+      elem.get_data()
+    except SystemError:
+      msg = traceback.format_exc()
+      self.assertEqual(
+        msg.split("\n")[0],
+        "RuntimeError: Adder cannot add 'id'")
+
   def test_nonarray(self):
 
     data_old = {"A": 1, "B": 2}

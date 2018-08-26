@@ -9,6 +9,27 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 /* ------------------------------------------------------------------ */
 
+void Starter::sort_by_id(
+  Json &data)
+{
+  auto dict = get_map_to_index(data, "id");
+  auto list = List<std::pair<int,int>>(dict.begin(), dict.end());
+
+  std::sort(list.begin(), list.end());
+
+  auto tmp = Json::array();
+  tmp.get_ref<Json::array_t&>().reserve(list.size());
+
+  for (const auto &pair : list)
+  {
+    tmp.push_back(data[pair.second]);
+  }
+
+  data.swap(tmp);
+}
+
+/* ------------------------------------------------------------------ */
+
 void Starter::compute(
   Json &data,
   Set<Str> &datakeys,
@@ -19,6 +40,11 @@ void Starter::compute(
     if (data == nullptr)
     {
       compute_impl(data, datakeys);
+
+      if (data.is_array() && check_containment<Str>(datakeys, "id"))
+      {
+        sort_by_id(data);
+      }
     }
     else
     {

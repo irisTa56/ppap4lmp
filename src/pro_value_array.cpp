@@ -26,54 +26,20 @@ ProValueArray::ProValueArray(
 
 /* ------------------------------------------------------------------ */
 
-void ProValueArray::run_sort(
-  int index,
-  const Json &data)
+void ProValueArray::run_impl(
+  int index)
 {
-  List<std::pair<int,Dict<Str,double>>> numbered_values;
-
-  for (const auto &d : data.is_array() ? data : Json::array({data}))
+  if (selected_keys.empty())
   {
-    Dict<Str,double> tmp;
-
-    for (const auto &k : selected_keys)
-    {
-      tmp[k] = d[k].get<double>();
-    }
-
-    // value(s) is numbered by 'id'
-    numbered_values.push_back(
-      std::pair<int,Dict<Str,double>>(d["id"], tmp));
+    runtime_error("ProValueArray: No selected values");
   }
 
-  std::sort(
-    numbered_values.begin(), numbered_values.end(),
-    [](auto &a, auto &b)
-    {
-      return a.first < b.first;
-    });
+  auto elem = generators[index]->get_element();
+  auto &data = elem->get_data();
 
-  auto size = numbered_values.size();
+  check_key(elem, "id");
+  check_keys(elem, selected_keys);
 
-  for (const auto &k : selected_keys)
-  {
-    RowArrayXd row(size);
-
-    for (int i = 0; i != size; ++i)
-    {
-      row(i) = numbered_values[i].second[k];
-    }
-
-    results_trajs[k][index] = row;
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-void ProValueArray::run_no_sort(
-  int index,
-  const Json &data)
-{
   auto size = data.is_array() ? data.size() : 1;
 
   Dict<Str,RowArrayXd> rows;
@@ -89,45 +55,15 @@ void ProValueArray::run_no_sort(
   {
     for (const auto &k : selected_keys)
     {
-      rows[k](irow++) = d[k].get<double>();
+      rows[k](irow) = d[k].get<double>();
     }
+
+    irow++;
   }
 
   for (const auto &k : selected_keys)
   {
     results_trajs[k][index] = rows[k];
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-void ProValueArray::run_impl(
-  int index)
-{
-  if (selected_keys.empty())
-  {
-    runtime_error("ProValueArray: No selected values");
-  }
-
-  auto elem = generators[index]->get_element();
-  auto &data = elem->get_data();
-
-  auto required_keys = selected_keys;
-
-  if (do_sort)
-  {
-    required_keys.push_back("id");
-  }
-
-  check_keys(elem, required_keys);
-
-  if (do_sort)
-  {
-    run_sort(index, data);
-  }
-  else
-  {
-    run_no_sort(index, data);
   }
 }
 
@@ -145,13 +81,13 @@ void ProValueArray::prepare()
 
 void ProValueArray::finish()
 {
-  auto &list_of_row = results_trajs[selected_keys.front()];
+  auto &traj = results_trajs[selected_keys.front()];
 
-  auto size = list_of_row.front().size();
+  auto size = traj.front().size();
 
-  for (const auto &row : list_of_row)
+  for (const auto &tmp : traj)
   {
-    if (size != row.size())
+    if (size != tmp.size())
     {
       runtime_error("ProValueArray: Data sizes must be the same");
     }
@@ -181,14 +117,6 @@ void ProValueArray::select(
   {
     selected_keys.push_back(a.cast<Str>());
   }
-}
-
-/* ------------------------------------------------------------------ */
-
-void ProValueArray::force_sort(
-  bool do_sort_)
-{
-  do_sort = do_sort_;
 }
 
 /* ------------------------------------------------------------------ */

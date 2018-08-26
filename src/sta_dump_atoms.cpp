@@ -93,11 +93,6 @@ void StaDumpAtoms::compute_impl(
       }
     }
   }
-
-  if (check_containment<Str>(datakeys, "id"))
-  {
-    sort_by_id(data);
-  }
 }
 
 /* ------------------------------------------------------------------ */

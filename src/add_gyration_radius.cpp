@@ -76,9 +76,9 @@ ShPtr<AddGyrationRadius> AddGyrationRadius::with_squared(
 /* ------------------------------------------------------------------ */
 
 ShPtr<AddGyrationRadius> AddGyrationRadius::without_sqrted(
-  bool add_sqrted_)
+  bool without_sqrted_)
 {
-  add_sqrted = add_sqrted_;
+  add_sqrted = !without_sqrted_;
 
   return shared_from_this();
 }

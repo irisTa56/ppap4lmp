@@ -25,6 +25,7 @@ from test_ProValueArray import TestProValueArray
 from test_ProThicknessProfile import TestProThicknessProfile
 from test_ProRadialDistributionFunction import TestProRadialDistributionFunction
 from test_ProDistanceInMolecule import TestProDistanceInMolecule
+from test_ProMeanSquareDisplacement import TestProMeanSquareDisplacement
 
 from ppap4lmp import __version__
 
@@ -96,6 +97,7 @@ def suite_adder():
 
   suite.addTest(TestAddRename("test_error01"))
   suite.addTest(TestAddRename("test_error02"))
+  suite.addTest(TestAddRename("test_error03"))
   suite.addTest(TestAddRename("test_nonarray"))
   suite.addTest(TestAddRename("test_array"))
   suite.addTest(TestAddRename("test_overwrite"))
@@ -163,6 +165,10 @@ def suite_proc():
   suite.addTest(TestProDistanceInMolecule("test_error02"))
   suite.addTest(TestProDistanceInMolecule("test_only_squared_distance"))
   suite.addTest(TestProDistanceInMolecule("test_compute_sqrt"))
+
+  suite.addTest(TestProMeanSquareDisplacement("test_error01"))
+  suite.addTest(TestProMeanSquareDisplacement("test_dimension_3d"))
+  suite.addTest(TestProMeanSquareDisplacement("test_dimension_2d"))
 
   return suite
 

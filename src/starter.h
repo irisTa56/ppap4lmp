@@ -10,6 +10,8 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include "updater.h"
 
 class Starter : public Updater {
+  void sort_by_id(
+    Json &data);
  public:
   using Updater::Updater;
   virtual ~Starter() = default;
