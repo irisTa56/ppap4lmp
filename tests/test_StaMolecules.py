@@ -25,7 +25,7 @@ class TestStaMolecules(unittest.TestCase):
       6, set(range(120136, 120163)))
 
     self._test_get_data(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       5, set(range(153, 191)))
 
   def _test_get_data(self, arguments, expected_id, expected_atoms):
@@ -42,7 +42,7 @@ class TestStaMolecules(unittest.TestCase):
       ("dumps_bead/bead.2990000.dump", 2990000), {"id", "atom-ids"})
 
     self._test_get_keys(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0), {"id", "atom-ids"})
+      ("dumps_atom/atom.0.dump", 0), {"id", "atom-ids"})
 
   def _test_get_keys(self, arguments, expectation):
 

@@ -42,7 +42,7 @@ class TestAddWrappedPositions(unittest.TestCase):
   def test_wrapping(self):
 
     self._test_wrapping(("dumps_bead/bead.2990000.dump", 2990000))
-    self._test_wrapping(("dumps_dodecane_10000atm/atom.0.dump", 0))
+    self._test_wrapping(("dumps_atom/atom.0.dump", 0))
 
   def _test_wrapping(self, arguments):
 

@@ -9,7 +9,7 @@ class TestStaBeads(unittest.TestCase):
   def test_error01(self):
 
     atoms = Element(
-      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+      StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = Element(StaMolecules(atoms))
 
     try:
@@ -24,7 +24,7 @@ class TestStaBeads(unittest.TestCase):
   def test_error02(self):
 
     atoms = Element(
-      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+      StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = Element(StaMolecules(atoms))
 
     try:
@@ -40,7 +40,7 @@ class TestStaBeads(unittest.TestCase):
   def test_error03(self):
 
     atoms = Element(
-      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+      StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = Element(StaMolecules(atoms))
 
     try:
@@ -56,7 +56,7 @@ class TestStaBeads(unittest.TestCase):
   def test_error04(self):
 
     atoms = Element(
-      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+      StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = Element(StaMolecules(atoms))
 
     try:
@@ -76,7 +76,7 @@ class TestStaBeads(unittest.TestCase):
   def test_atom_id(self):
 
     atoms = Element(
-      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+      StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = Element(StaMolecules(atoms))
 
     mappings = [

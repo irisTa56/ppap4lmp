@@ -27,6 +27,6 @@ class KeyChecker {
   virtual ~KeyChecker() = default;
 };
 
-#include "gen_element.h"
+#include <generators/gen_element.h>
 
 #endif

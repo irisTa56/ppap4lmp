@@ -45,7 +45,7 @@ class TestAddChildIDs(unittest.TestCase):
       list(range(1, 1001)))
 
     self._test_2way_molecules(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       list(range(1, 181)))
 
   def _test_2way_molecules(self, arguments, mol_ids):

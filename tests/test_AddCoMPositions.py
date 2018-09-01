@@ -38,7 +38,7 @@ class TestAddCoMPositions(unittest.TestCase):
     self._test_positions(atoms)
 
     atoms = Element(
-      StaDumpAtoms("dumps_dodecane_10000atm/atom.0.dump", 0))
+      StaDumpAtoms("dumps_atom/atom.0.dump", 0))
 
     self._test_positions(atoms)
 

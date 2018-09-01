@@ -31,7 +31,7 @@ class TestStaDumpBox(unittest.TestCase):
       })
 
     self._test_get_data(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       {
         "periodic_x": True,
         "periodic_y": True,
@@ -57,7 +57,7 @@ class TestStaDumpBox(unittest.TestCase):
       })
 
     self._test_get_keys(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       {
         "periodic_x", "periodic_y", "periodic_z",
         "lo_x", "hi_x", "lo_y", "hi_y", "lo_z", "hi_z"

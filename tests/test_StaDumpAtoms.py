@@ -42,7 +42,7 @@ class TestStaDumpAtoms(unittest.TestCase):
       ])
 
     self._test_get_data(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       (171, 1346),
       [
         {
@@ -74,7 +74,7 @@ class TestStaDumpAtoms(unittest.TestCase):
       })
 
     self._test_get_keys(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       {
         "id", "mol", "type", "mass",
         "xu", "yu", "zu", "vx", "vy", "vz"
@@ -92,7 +92,7 @@ class TestStaDumpAtoms(unittest.TestCase):
       ("dumps_bead/bead.2990000.dump", 2990000), "id")
 
     self._test_get_1d_int(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0), "mol")
+      ("dumps_atom/atom.0.dump", 0), "mol")
 
   def _test_get_1d_int(self, arguments, key):
 
@@ -113,7 +113,7 @@ class TestStaDumpAtoms(unittest.TestCase):
       ("dumps_bead/bead.2990000.dump", 2990000), "fx")
 
     self._test_get_1d_double(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0), "vx")
+      ("dumps_atom/atom.0.dump", 0), "vx")
 
   def _test_get_1d_double(self, arguments, key):
 
@@ -134,7 +134,7 @@ class TestStaDumpAtoms(unittest.TestCase):
       ("dumps_bead/bead.2990000.dump", 2990000), ["id", "mol"])
 
     self._test_get_2d_int(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0), ["id", "mol", "type"])
+      ("dumps_atom/atom.0.dump", 0), ["id", "mol", "type"])
 
   def _test_get_2d_int(self, arguments, keys):
 
@@ -155,7 +155,7 @@ class TestStaDumpAtoms(unittest.TestCase):
       ("dumps_bead/bead.2990000.dump", 2990000), ["vx", "fx"])
 
     self._test_get_2d_double(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0), ["xu", "yu", "zu"])
+      ("dumps_atom/atom.0.dump", 0), ["xu", "yu", "zu"])
 
   def _test_get_2d_double(self, arguments, keys):
 

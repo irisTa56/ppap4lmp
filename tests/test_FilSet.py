@@ -26,7 +26,7 @@ class TestFilSet(unittest.TestCase):
       {"mol": {1, 2, 3}}, {"id": set(range(120001, 120082))})
 
     self._test_equivalent_filter(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       {"mol": {4, 5}}, {"id": set(range(115, 191))})
 
   def _test_equivalent_filter(self, arguments, filter1, filter2):
@@ -47,7 +47,7 @@ class TestFilSet(unittest.TestCase):
       {"mol": {1, 2, 3}}, 81)
 
     self._test_remaining_number(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       {"mol": {4, 5}, "type": {1}}, 24)
 
   def _test_remaining_number(self, arguments, filterset, num):

@@ -72,7 +72,7 @@ affixes = [
   "updater", "starter", "filter", "adder"]
 
 all_header_names = [
-  os.path.basename(h)[:-2] for h in glob.glob("src/*.h")]
+  os.path.basename(h)[:-2] for h in glob.glob("src/*.h") + glob.glob("src/*/*.h")]
 
 pybinds = []
 classnames = []
@@ -86,9 +86,9 @@ for affix in affixes:
       key=lambda x: x.replace("_", "~"))
 
     for name in names:
-      headers.write("#include \"{}.h\"\n".format(name))
+      headers.write("#include \"{}s/{}.h\"\n".format(affix, name))
 
-      with open("src/{}.h".format(name), "r") as header:
+      with open("src/{}s/{}.h".format(affix, name), "r") as header:
         for line in header:
           line_ = line.lstrip()
           if line_.startswith("static void pybind_"):

@@ -16,5 +16,8 @@ ENDIF()
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 
-FILE(GLOB CPPFILES src/*.cpp)
+include_directories(src)
+
+FILE(GLOB CPPFILES src/*.cpp src/*/*.cpp)
+
 pybind11_add_module(_ppap4lmp ${CPPFILES})

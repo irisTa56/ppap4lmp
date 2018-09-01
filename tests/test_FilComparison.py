@@ -43,7 +43,7 @@ class TestFilComparison(unittest.TestCase):
       {"mol": {7, 8, 9}}, [("mol", ">", 6), ("mol", "<", 10)])
 
     self._test_equivalent_filter(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       {"mol": {10, 11, 12, 13, 14, 15, 16, 17, 18, 19}},
        [("mol", ">=", 10), ("mol", "<", 20)])
 
@@ -64,11 +64,11 @@ class TestFilComparison(unittest.TestCase):
       ("dumps_bead/bead.2990000.dump", 2990000), ("mol", "<=", 3), 81)
 
     self._test_remaining_number(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       [("mol", "<=", 3), ("type", "==", 1)], 36)
 
     self._test_remaining_number(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       [("mol", "<=", 2), ("type", "!=", 2)], 24)
 
   def _test_remaining_number(self, arguments, filtercom, num):
@@ -85,7 +85,7 @@ class TestFilComparison(unittest.TestCase):
       "xu", 0.0, "yu", 0.0)
 
     self._test_de_morgan(
-      ("dumps_dodecane_10000atm/atom.0.dump", 0),
+      ("dumps_atom/atom.0.dump", 0),
       "xu", 10.0, "zu", 10.0)
 
   def _test_de_morgan(self, arguments, key1, lim1, key2, lim2):
