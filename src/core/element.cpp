@@ -6,43 +6,25 @@ create: 2018/07/01 by Takayuki Kobayashi
 
 #include "element.h"
 #include "updater.h"
-#include "../utils.h"
+#include "../utils/disorder.h"
+#include "../utils/message.h"
+#include "../utils/pyargs_to_vec.h"
+#include "../utils/runtime_error.h"
+
+namespace ut = utils;
 
 int Element::instance_count = 0;
 
 /* ------------------------------------------------------------------ */
-// assumed to be not called from multithreads
+/* NOTE:
+  The following constructor is thread-unsafe. It is assumed to be not
+  called from multithreads.
+*/
 Element::Element()
 {
   instance_count++;
-  ID = instance_count;
+  dataid = instance_count;
   omp_init_lock(&omp_lock);
-}
-
-/* ------------------------------------------------------------------ */
-
-ShPtr<Element> Element::get_element(
-  Json name)
-{
-  if (name != nullptr)
-  {
-    runtime_error("Element::get_element accepts no argument");
-  }
-
-  return shared_from_this();
-}
-
-/* ------------------------------------------------------------------ */
-
-ShPtr<Generator> Element::get_generator(
-  Json name)
-{
-  if (name != nullptr)
-  {
-    runtime_error("Element::get_generator accepts no argument");
-  }
-
-  return shared_from_this();
 }
 
 /* ------------------------------------------------------------------ */
@@ -83,16 +65,16 @@ void Element::decrement_remain()
     {
       if (item.first == shared_this)
       {
-        item.second->remove_from_blacklist(ID);
+        item.second->remove_from_blacklist(dataid);
       }
     }
 
-    logging("Data-" + std::to_string(ID) + " has been deleted");
+    ut::log("Data-" + std::to_string(dataid) + " has been deleted");
   }
   else if (n_remain < 0)
   {
-    runtime_error(
-      "Data-" + std::to_string(ID) + ": Invalid data use is detected");
+    ut::runtime_error(
+      "Data-" + std::to_string(dataid) + " was used illegally");
   }
 
   omp_unset_lock(&omp_lock);
@@ -100,18 +82,49 @@ void Element::decrement_remain()
 
 /* ------------------------------------------------------------------ */
 
-void Element::update_data(ShPtr<Updater> upd)
+void Element::update_data(
+  const ShPtr<Updater> &upd)
 {
   omp_set_lock(&omp_lock);
 
-  upd->compute(data, datakeys, ID);
+  upd->compute(data, datakeys, dataid);
 
   omp_unset_lock(&omp_lock);
 }
 
 /* ------------------------------------------------------------------ */
-// assumed to be not called from multithreads
-ShPtr<Element> Element::append_updater(ShPtr<Updater> upd)
+
+ShPtr<Element> Element::get_element(
+  const Json &name)
+{
+  if (name != nullptr)
+  {
+    ut::runtime_error("Rejection of non-null Json");
+  }
+
+  return shared_from_this();
+}
+
+/* ------------------------------------------------------------------ */
+
+ShPtr<Generator> Element::get_generator(
+  const Json &name)
+{
+  if (name != nullptr)
+  {
+    ut::runtime_error("Rejection of non-null Json");
+  }
+
+  return shared_from_this();
+}
+
+/* ------------------------------------------------------------------ */
+/* NOTE:
+  The following method is thread-unsafe. It is assumed to be not called
+  from multithreads.
+*/
+ShPtr<Element> Element::append_updater(
+  const ShPtr<Updater> &upd)
 {
   auto gen = upd->get_ext_generator();
 
@@ -134,199 +147,190 @@ const Json &Element::get_data()
 
 /* ------------------------------------------------------------------ */
 
-const Set<Str> &Element::get_keys()
+const DataKeys &Element::get_keys()
 {
   return datakeys;
 }
 
 /* ------------------------------------------------------------------ */
 
-ArrayXi Element::get_1d_int(
+template <typename T>
+void Element::array1d(
+  T &array,
   const Str &key)
 {
-  ArrayXi tmp(data.is_array() ? data.size() : 1);
+  array.resize(data.is_array() ? data.size() : 1);
 
   if (data.is_array())
   {
-    auto length = data.size();
+    int index = 0;
 
-    for (int i = 0; i != length; ++i)
+    for (const auto &d : data)
     {
-      tmp(i) = data[i][key];
+      array(index++) = d[key];
     }
   }
   else
   {
-    tmp(0) = data[key];
+    array(0) = data[key];
   }
-
-  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
 
-ArrayXd Element::get_1d_double(
-  const Str &key)
+template <typename T>
+void Element::array2d(
+  T &array,
+  const Vec<Str> &keys)
 {
-  ArrayXd tmp(data.is_array() ? data.size() : 1);
+  array.resize(data.is_array() ? data.size() : 1, keys.size());
 
   if (data.is_array())
   {
-    auto length = data.size();
+    int irow = 0;
+    int icol;
 
-    for (int i = 0; i != length; ++i)
+    for (const auto &d : data)
     {
-      tmp(i) = data[i][key];
-    }
-  }
-  else
-  {
-    tmp(0) = data[key];
-  }
+      irow++;
+      icol = 0;
 
-  return tmp;
-}
-
-/* ------------------------------------------------------------------ */
-
-ArrayXXi Element::get_2d_int(
-  const List<Str> &keys)
-{
-  auto n_keys = keys.size();
-
-  ArrayXXi tmp(data.is_array() ? data.size() : 1, n_keys);
-
-  if (data.is_array())
-  {
-    auto length = data.size();
-
-    for (int i = 0; i != length; ++i)
-    {
-      auto &d = data[i];
-
-      for (int j = 0; j != n_keys; ++j)
+      for (const auto &key : keys)
       {
-        tmp(i, j) = d[keys[j]];
+        array(irow, icol++) = d[key];
       }
     }
   }
   else
   {
-    for (int j = 0; j != n_keys; ++j)
+    int icol = 0;
+
+    for (const auto &key : keys)
     {
-      tmp(0, j) = data[keys[j]];
+      array(0, icol++) = data[key];
     }
   }
-
-  return tmp;
 }
 
-/* ------------------------------------------------------------------ */
+/* wrappers for DataKeys' methods ----------------------------------- */
 
-ArrayXXd Element::get_2d_double(
-  const List<Str> &keys)
+void Element::required(
+  const Str &key)
 {
-  auto n_keys = keys.size();
-
-  ArrayXXd tmp(data.is_array() ? data.size() : 1, n_keys);
-
-  if (data.is_array())
-  {
-    auto length = data.size();
-
-    for (int i = 0; i != length; ++i)
-    {
-      auto &d = data[i];
-
-      for (int j = 0; j != n_keys; ++j)
-      {
-        tmp(i, j) = d[keys[j]];
-      }
-    }
-  }
-  else
-  {
-    for (int j = 0; j != n_keys; ++j)
-    {
-      tmp(0, j) = data[keys[j]];
-    }
-  }
-
-  return tmp;
+  datakeys.required(key);
 }
 
 /* ------------------------------------------------------------------ */
+
+void Element::required(
+  const Set<Str> &keys)
+{
+  datakeys.required(keys);
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Element::optional(
+  const Str &key)
+{
+  return datakeys.optional(key);
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Element::optional(
+  const Set<Str> &keys)
+{
+  return datakeys.optional(keys);
+}
+
+/* functions for Python --------------------------------------------- */
 
 const Json &Element::get_data_py()
 {
-  try
-  {
-    hello();
-  }
-  catch (std::runtime_error &e)
-  {
-    logging(e.what());
-  }
+  init_for_python();
 
-  return get_data();
+  return data;
 }
 
 /* ------------------------------------------------------------------ */
 
 const Set<Str> &Element::get_keys_py()
 {
-  try
-  {
-    hello();
-  }
-  catch (std::runtime_error &e)
-  {
-    logging(e.what());
-  }
+  init_for_python();
 
-  return get_keys();
+  return datakeys.get();
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXi Element::get_1d_int_py(
+ArrayXi Element::get_1d_int_py(
   const Str &key)
 {
-  try
-  {
-    hello();
-  }
-  catch (std::runtime_error &e)
-  {
-    logging(e.what());
-  }
+  init_for_python();
 
-  return check_containment<Str>(datakeys, key)
-    ? get_1d_int(key) : ArrayXi();
+  required(key);
+
+  ArrayXi array;
+  array1d(array, key);
+
+  return array;
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXd Element::get_1d_double_py(
+ArrayXd Element::get_1d_float_py(
   const Str &key)
 {
-  try
-  {
-    hello();
-  }
-  catch (std::runtime_error &e)
-  {
-    logging(e.what());
-  }
+  init_for_python();
 
-  return check_containment<Str>(datakeys, key)
-    ? get_1d_double(key) : ArrayXd();
+  required(key);
+
+  ArrayXd array;
+  array1d(array, key);
+
+  return array;
 }
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXXi Element::get_2d_int_py(
-  const List<Str> &keys)
+ArrayXXi Element::get_2d_int_py(
+  const py::args &args)
+{
+  init_for_python();
+
+  Vec<Str> keys;
+  ut::pyargs_to_vec(args, keys);
+
+  required(ut::disorder(keys));
+
+  ArrayXXi array;
+  array2d(array, keys);
+
+  return array;
+}
+
+/* ------------------------------------------------------------------ */
+
+ArrayXXd Element::get_2d_float_py(
+  const py::args &args)
+{
+  init_for_python();
+
+  Vec<Str> keys;
+  ut::pyargs_to_vec(args, keys);
+
+  required(ut::disorder(keys));
+
+  ArrayXXd array;
+  array2d(array, keys);
+
+  return array;
+}
+
+/* ------------------------------------------------------------------ */
+
+void Element::init_for_python()
 {
   try
   {
@@ -334,29 +338,8 @@ const ArrayXXi Element::get_2d_int_py(
   }
   catch (std::runtime_error &e)
   {
-    logging(e.what());
+    ut::log("ERROR - " + Str(e.what()));
   }
-
-  return check_containment<Str>(
-    datakeys, Set<Str>(keys.begin(), keys.end()))
-    ? get_2d_int(keys) : ArrayXXi();
 }
 
 /* ------------------------------------------------------------------ */
-
-const ArrayXXd Element::get_2d_double_py(
-  const List<Str> &keys)
-{
-  try
-  {
-    hello();
-  }
-  catch (std::runtime_error &e)
-  {
-    logging(e.what());
-  }
-
-  return check_containment<Str>(
-    datakeys, Set<Str>(keys.begin(), keys.end()))
-    ? get_2d_double(keys) : ArrayXXd();
-}

@@ -9,48 +9,68 @@ create: 2018/07/01 by Takayuki Kobayashi
 
 #include <omp.h>
 
+#include <alias/eigen.h>
+#include <alias/pybind.h>
 #include <generators/generator.h>
+#include <class/data_keys.h>
 
 class Element : public Generator, public EnShThis<Element> {
   static int instance_count;
-  int ID;
   int n_remain = 0;
-  Json data = nullptr;
-  Set<Str> datakeys;
+  int dataid;
+  Json data;
+  DataKeys datakeys;
   omp_lock_t omp_lock;
+  void increment_remain();
+  void decrement_remain();
+  void update_data(
+    const ShPtr<Updater> &upd);
+  /* NOTE:
+    To use methods (increment_remain, decrement_remain, update_data),
+    Generator needs to be a friend class.
+  */
+  friend class Generator;
  public:
   Element();
   virtual ~Element() = default;
   virtual ShPtr<Element> get_element(
-    Json name = nullptr) override;
+    const Json &name = nullptr) override;
   virtual ShPtr<Generator> get_generator(
-    Json name = nullptr) override;
-  void increment_remain();
-  void decrement_remain();
-  void update_data(
-    ShPtr<Updater> upd);
+    const Json &name = nullptr) override;
   ShPtr<Element> append_updater(
-    ShPtr<Updater> upd);
+    const ShPtr<Updater> &upd);
   const Json &get_data();
-  const Set<Str> &get_keys();
-  ArrayXi get_1d_int(
+  const DataKeys &get_keys();
+  template <typename T>
+  void array1d(
+    T &array,
     const Str &key);
-  ArrayXd get_1d_double(
+  template <typename T>
+  void array2d(
+    T &array,
+    const Vec<Str> &keys);
+// wrappers for DataKeys' methods
+  void required(
     const Str &key);
-  ArrayXXi get_2d_int(
-    const List<Str> &keys);
-  ArrayXXd get_2d_double(
-    const List<Str> &keys);
+  void required(
+    const Set<Str> &keys);
+  bool optional(
+    const Str &key);
+  bool optional(
+    const Set<Str> &keys);
+// functions for Python
   const Json &get_data_py();
   const Set<Str> &get_keys_py();
-  const ArrayXi get_1d_int_py(
+  ArrayXi get_1d_int_py(
     const Str &key);
-  const ArrayXd get_1d_double_py(
+  ArrayXd get_1d_float_py(  // float in Python, double in C++
     const Str &key);
-  const ArrayXXi get_2d_int_py(
-    const List<Str> &keys);
-  const ArrayXXd get_2d_double_py(
-    const List<Str> &keys);
+  ArrayXXi get_2d_int_py(
+    const py::args &args);
+  ArrayXXd get_2d_float_py(  // float in Python, double in C++
+    const py::args &args);
+ private:
+  void init_for_python();
 };
 
 #endif

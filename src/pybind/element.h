@@ -1,6 +1,7 @@
 #ifndef PYBIND_ELEMENT_H
 #define PYBIND_ELEMENT_H
 
+#include <alias/pybind.h>
 #include <core/element.h>
 
 // trampoline class to bind Python
@@ -8,13 +9,13 @@ class PyElement : public Element {
  public:
   using Element::Element;
   ShPtr<Element> get_element(
-    Json name) override
+    const Json &name) override
   {
     PYBIND11_OVERLOAD(
       ShPtr<Element>, Element, get_element, name);
   }
   ShPtr<Generator> get_generator(
-    Json name) override
+    const Json &name) override
   {
     PYBIND11_OVERLOAD(
       ShPtr<Generator> , Element, get_generator, name);
@@ -30,9 +31,9 @@ static void pybind_element(py::module &m)
     .def("get_data", &Element::get_data_py)
     .def("get_keys", &Element::get_keys_py)
     .def("get_1d_int", &Element::get_1d_int_py)
-    .def("get_1d_double", &Element::get_1d_double_py)
+    .def("get_1d_float", &Element::get_1d_float_py)
     .def("get_2d_int", &Element::get_2d_int_py)
-    .def("get_2d_double", &Element::get_2d_double_py);
+    .def("get_2d_float", &Element::get_2d_float_py);
 
   /* NOTE:
     this fucntion is necessary because shared_from_this() cannot be

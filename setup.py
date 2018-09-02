@@ -67,7 +67,8 @@ class CMakeBuild(build_ext):
 
 #-----------------------------------------------------------------------
 
-headers = sorted(glob.glob("src/pybind/*.h"))
+headers = sorted(
+  glob.glob("src/pybind/*.h") + glob.glob("src/pybind/*/*.h"))
 
 pybinds = []
 classes = []
@@ -121,6 +122,7 @@ PYBIND11_MODULE(_ppap4lmp, m)
 {{
 {}
 }}
+
 #endif
 """.format(
   "\n".join(["#include \"{}\"".format(h[4:]) for h in headers]),

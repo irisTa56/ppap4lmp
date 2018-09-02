@@ -5,16 +5,21 @@ create: 2018/07/03 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "gen_list.h"
-#include "../utils.h"
+#include "../utils/runtime_error.h"
+
+namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
-// assumed to be not called from multithreads
+/* NOTE:
+  The following constructor is thread-unsafe. It is assumed to be not
+  called from multithreads.
+*/
 GenList::GenList(
-  const List<ShPtr<Generator>> &generator_list_)
+  const Vec<ShPtr<Generator>> &generator_list_)
 {
   generator_list = generator_list_;
 
-  for (auto gen : generator_list)
+  for (const auto &gen : generator_list)
   {
     merge_update_chain(gen->get_update_chain());
   }
@@ -23,11 +28,11 @@ GenList::GenList(
 /* ------------------------------------------------------------------ */
 
 ShPtr<Element> GenList::get_element(
-  Json name)
+  const Json &name)
 {
   if (!name.is_number_integer())
   {
-    runtime_error("GenList::get_element accepts an integer only");
+    ut::runtime_error("Rejection of non-integer Json");
   }
 
   return std::dynamic_pointer_cast<Element>(
@@ -37,11 +42,11 @@ ShPtr<Element> GenList::get_element(
 /* ------------------------------------------------------------------ */
 
 ShPtr<Generator> GenList::get_generator(
-  Json name)
+  const Json &name)
 {
   if (!name.is_number_integer())
   {
-    runtime_error("GenList::get_generator accepts an integer only");
+    ut::runtime_error("Rejection of non-integer Json");
   }
 
   return generator_list[name.get<int>()];
@@ -49,7 +54,7 @@ ShPtr<Generator> GenList::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-const int GenList::get_length()
+int GenList::get_length()
 {
   return generator_list.size();
 }

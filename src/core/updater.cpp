@@ -5,19 +5,24 @@ create: 2018/06/29 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "updater.h"
-#include "generators.h"
-#include "../utils.h"
 
 /* ------------------------------------------------------------------ */
 
-const bool Updater::check_blacklist(
-  int dataid)
+Updater::Updater()
+{
+  omp_init_lock(&omp_lock);
+}
+
+/* ------------------------------------------------------------------ */
+
+bool Updater::check_blacklist(
+  const int dataid)
 {
   bool pass = false;
 
   omp_set_lock(&omp_lock);
 
-  if (!check_containment<int>(dataid_blacklist, dataid))
+  if (dataid_blacklist.find(dataid) == dataid_blacklist.end())
   {
     dataid_blacklist.insert(dataid);
     pass = true;
@@ -31,7 +36,7 @@ const bool Updater::check_blacklist(
 /* ------------------------------------------------------------------ */
 
 void Updater::remove_from_blacklist(
-  int dataid)
+  const int dataid)
 {
   omp_set_lock(&omp_lock);
 
@@ -41,8 +46,8 @@ void Updater::remove_from_blacklist(
 }
 
 /* ------------------------------------------------------------------ */
-// assumed to be called by only Element::append_updater
-ShPtr<Generator> Updater::get_ext_generator()
+
+const ShPtr<Generator> &Updater::get_ext_generator()
 {
   return ext_generator;
 }

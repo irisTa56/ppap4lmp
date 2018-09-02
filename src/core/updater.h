@@ -9,24 +9,23 @@ create: 2018/06/29 by Takayuki Kobayashi
 
 #include <omp.h>
 
-#include <generators/generator.h>
-#include <key_checker.h>
+#include <core/generators.h>
 
-class Updater : public KeyChecker {
+class Updater {
   Set<int> dataid_blacklist;
   omp_lock_t omp_lock;
  protected:
   ShPtr<Generator> ext_generator;
-  virtual void compute_impl(Json &, Set<Str> &) = 0;
-  const bool check_blacklist(
-    int dataid);
+  virtual void compute_impl(Json &, DataKeys &) = 0;
+  bool check_blacklist(
+    const int dataid);
  public:
-  Updater() { omp_init_lock(&omp_lock); }
+  Updater();
   virtual ~Updater() = default;
-  virtual void compute(Json &, Set<Str> &, int) = 0;
+  virtual void compute(Json &, DataKeys &, const int) = 0;
   void remove_from_blacklist(
-    int dataid);
-  ShPtr<Generator> get_ext_generator();
+    const int dataid);
+  const ShPtr<Generator> &get_ext_generator();
 };
 
 #endif

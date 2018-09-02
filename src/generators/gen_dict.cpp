@@ -5,12 +5,17 @@ create: 2018/07/03 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "gen_dict.h"
-#include "../utils.h"
+#include "../utils/runtime_error.h"
+
+namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
-// assumed to be not called from multithreads
+/* NOTE:
+  The following constructor is thread-unsafe. It is assumed to be not
+  called from multithreads.
+*/
 GenDict::GenDict(
-  const Dict<Str,ShPtr<Generator>> &generator_dict_)
+  const Map<Str,ShPtr<Generator>> &generator_dict_)
 {
   generator_dict = generator_dict_;
 
@@ -23,11 +28,11 @@ GenDict::GenDict(
 /* ------------------------------------------------------------------ */
 
 ShPtr<Element> GenDict::get_element(
-  Json name)
+  const Json &name)
 {
   if (!name.is_string())
   {
-    runtime_error("GenDict::get_element accepts a string only");
+    ut::runtime_error("Rejection of non-string Json");
   }
 
   return std::dynamic_pointer_cast<Element>(
@@ -37,11 +42,11 @@ ShPtr<Element> GenDict::get_element(
 /* ------------------------------------------------------------------ */
 
 ShPtr<Generator> GenDict::get_generator(
-  Json name)
+  const Json &name)
 {
   if (!name.is_string())
   {
-    runtime_error("GenDict::get_generator accepts a string only");
+    ut::runtime_error("Rejection of non-string Json");
   }
 
   return generator_dict[name.get<Str>()];
@@ -49,7 +54,7 @@ ShPtr<Generator> GenDict::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-const Set<Str> GenDict::get_keys()
+Set<Str> GenDict::get_keys()
 {
   Set<Str> tmp;
 

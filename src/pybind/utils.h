@@ -1,23 +1,12 @@
-#ifndef UTILS_PY_H
-#define UTILS_PY_H
+#ifndef PYBIND_UTILS_H
+#define PYBIND_UTILS_H
 
-#include <utils.h>
-
-extern bool ToF_LOGGING;
-
-/* ------------------------------------------------------------------ */
-
-static void log_switch(bool input)
-{
-  ToF_LOGGING = input;
-}
-
-/* ------------------------------------------------------------------ */
-// for pybind11
+#include <alias/pybind.h>
+#include <utils/message.h>
 
 static void pybind_utils(py::module &m)
 {
-  m.def("log_switch", &log_switch);
+  m.def("log_switch", &utils::log_switch);
 }
 
 #endif

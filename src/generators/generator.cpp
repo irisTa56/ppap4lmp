@@ -7,12 +7,11 @@ create: 2018/06/21 by Takayuki Kobayashi
 #include "generator.h"
 #include "../core/element.h"
 #include "../core/updater.h"
-#include "../utils.h"
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
 void Generator::merge_update_chain(
-  const List<UpdatePair> &new_chain)
+  const Vec<UpdatePair> &new_chain)
 {
   auto &chain = update_chain;
 
@@ -83,7 +82,7 @@ void Generator::goodbye()
 
 /* ------------------------------------------------------------------ */
 
-const List<UpdatePair> &Generator::get_update_chain()
+const Vec<UpdatePair> &Generator::get_update_chain()
 {
   return update_chain;
 }
