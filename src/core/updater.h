@@ -7,6 +7,8 @@ create: 2018/06/29 by Takayuki Kobayashi
 #ifndef UPDATER_H
 #define UPDATER_H
 
+#include <omp.h>
+
 #include <generators/generator.h>
 #include <key_checker.h>
 

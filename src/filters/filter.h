@@ -7,7 +7,7 @@ create: 2018/06/30 by Takayuki Kobayashi
 #ifndef FILTER_H
 #define FILTER_H
 
-#include <updaters/updater.h>
+#include <core/updater.h>
 
 class Filter : public Updater {
  public:

@@ -7,7 +7,7 @@ create: 2018/06/29 by Takayuki Kobayashi
 #ifndef ADDER_H
 #define ADDER_H
 
-#include <updaters/updater.h>
+#include <core/updater.h>
 
 class Adder : public Updater {
  public:

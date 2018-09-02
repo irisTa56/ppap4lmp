@@ -7,7 +7,7 @@ create: 2018/07/03 by Takayuki Kobayashi
 #ifndef GEN_DICT_H
 #define GEN_DICT_H
 
-#include <generators/generator.h>
+#include <core/element.h>
 
 class GenDict : public Generator {
   Dict<Str,ShPtr<Generator>> generator_dict;

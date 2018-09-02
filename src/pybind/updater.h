@@ -1,7 +1,7 @@
 #ifndef PYBIND_UPDATER_H
 #define PYBIND_UPDATER_H
 
-#include <updaters/updater.h>
+#include <core/updater.h>
 
 // trampoline class to bind Python
 template <class UPD = Updater>

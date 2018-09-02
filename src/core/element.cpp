@@ -5,6 +5,7 @@ create: 2018/07/01 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "element.h"
+#include "updater.h"
 #include "../utils.h"
 
 int Element::instance_count = 0;

@@ -7,7 +7,7 @@ create: 2018/06/22 by Takayuki Kobayashi
 #ifndef PROESSOR_H
 #define PROESSOR_H
 
-#include <generators/generator.h>
+#include <core/generators.h>
 #include <key_checker.h>
 
 class Processor : public KeyChecker {

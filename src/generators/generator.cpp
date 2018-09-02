@@ -5,6 +5,8 @@ create: 2018/06/21 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #include "generator.h"
+#include "../core/element.h"
+#include "../core/updater.h"
 #include "../utils.h"
 
 /* ------------------------------------------------------------------ */

@@ -7,7 +7,7 @@ create: 2018/07/03 by Takayuki Kobayashi
 #ifndef GEN_LIST_H
 #define GEN_LIST_H
 
-#include <generators/generator.h>
+#include <core/element.h>
 
 class GenList : public Generator {
   List<ShPtr<Generator>> generator_list;

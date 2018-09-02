@@ -7,8 +7,6 @@ create: 2018/06/21 by Takayuki Kobayashi
 #ifndef GENERATOR_H
 #define GENERATOR_H
 
-#include <omp.h>
-
 #include <aliases.h>
 
 class Element;
@@ -33,10 +31,5 @@ class Generator {
   void goodbye();
   const List<UpdatePair> &get_update_chain();
 };
-
-#include <generators/element.h>
-#include <generators/gen_dict.h>
-#include <generators/gen_list.h>
-#include <updaters/updater.h>
 
 #endif

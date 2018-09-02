@@ -7,6 +7,8 @@ create: 2018/07/01 by Takayuki Kobayashi
 #ifndef ELEMENT_H
 #define ELEMENT_H
 
+#include <omp.h>
+
 #include <generators/generator.h>
 
 class Element : public Generator, public EnShThis<Element> {

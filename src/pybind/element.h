@@ -1,7 +1,7 @@
 #ifndef PYBIND_ELEMENT_H
 #define PYBIND_ELEMENT_H
 
-#include <generators/element.h>
+#include <core/element.h>
 
 // trampoline class to bind Python
 class PyElement : public Element {

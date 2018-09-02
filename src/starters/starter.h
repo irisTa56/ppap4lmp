@@ -7,7 +7,7 @@ create: 2018/06/29 by Takayuki Kobayashi
 #ifndef STARTER_H
 #define STARTER_H
 
-#include <updaters/updater.h>
+#include <core/updater.h>
 
 class Starter : public Updater {
   void sort_by_id(
