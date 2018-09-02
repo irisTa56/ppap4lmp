@@ -19,7 +19,7 @@ class FilSet : public Filter {
   FilSet(
     const Dict<Str,Set<Json>> &value_sets_);
   FilSet(
-    ShPtr<GenElement> elem,
+    ShPtr<Element> elem,
     const Dict<Str,Set<Json>> &value_sets_);
   virtual ~FilSet() = default;
 };

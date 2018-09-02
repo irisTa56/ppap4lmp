@@ -7,7 +7,7 @@
 static void pybind_add_wrapped_positions(py::module &m)
 {
   py::class_<AddWrappedPositions,PyUpdater<AddWrappedPositions>,Adder,Updater,ShPtr<AddWrappedPositions>>(m, "AddWrappedPositions")
-    .def(py::init<ShPtr<GenElement>>());
+    .def(py::init<ShPtr<Element>>());
 }
 
 #endif

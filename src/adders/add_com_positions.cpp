@@ -10,7 +10,7 @@ create: 2018/07/13 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 AddCoMPositions::AddCoMPositions(
-  ShPtr<GenElement> elem)
+  ShPtr<Element> elem)
 {
   ext_generator = elem;
 }
@@ -19,7 +19,7 @@ AddCoMPositions::AddCoMPositions(
 
 void AddCoMPositions::compute_with_weights(
   Json &data,
-  ShPtr<GenElement> gen_atoms)
+  ShPtr<Element> gen_atoms)
 {
   auto id2index_atom = get_map_to_index(gen_atoms->get_data(), "id");
 
@@ -62,7 +62,7 @@ void AddCoMPositions::compute_with_weights(
 
 void AddCoMPositions::compute_without_weights(
   Json &data,
-  ShPtr<GenElement> gen_atoms)
+  ShPtr<Element> gen_atoms)
 {
   auto id2index_atom = get_map_to_index(gen_atoms->get_data(), "id");
 

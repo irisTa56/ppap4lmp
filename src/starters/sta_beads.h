@@ -18,10 +18,10 @@ class StaBeads : public Starter {
     Set<Str> &datakeys) override;
  public:
   StaBeads(
-    ShPtr<GenElement> gen_mols,
+    ShPtr<Element> gen_mols,
     const List<Json> &scheme);
   StaBeads(
-    ShPtr<GenElement> gen_mols,
+    ShPtr<Element> gen_mols,
     const Dict<int,List<Json>> &schemes);
   virtual ~StaBeads() = default;
 };

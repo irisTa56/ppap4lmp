@@ -1,15 +1,15 @@
 import unittest
 import traceback
 
-from ppap4lmp import Element, StaCustom, StaMolecules, AddSpecialBonds
+from ppap4lmp import create, StaCustom, StaMolecules, AddSpecialBonds
 
 class TestAddSpecialBonds(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(StaCustom(
+    atoms = create(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))
-    moles = Element(StaCustom([{"id": i} for i in range(10)]))
+    moles = create(StaCustom([{"id": i} for i in range(10)]))
 
     abst_special_bonds = [
       [j for j in range(10) if abs(i-j) < 3 and i != j]
@@ -27,9 +27,9 @@ class TestAddSpecialBonds(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(StaCustom(
+    atoms = create(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))
-    moles = Element(StaMolecules(atoms))
+    moles = create(StaMolecules(atoms))
 
     abst_special_bonds = [
       [j for j in range(10) if abs(i-j) < 3 and i != j]
@@ -48,9 +48,9 @@ class TestAddSpecialBonds(unittest.TestCase):
 
   def test_exclude_angle(self):
 
-    atoms = Element(StaCustom(
+    atoms = create(StaCustom(
       [{"id": i+1, "mol": i//10 + 1} for i in range(100)]))
-    moles = Element(StaMolecules(atoms))
+    moles = create(StaMolecules(atoms))
 
     abst_special_bonds = [
       [j for j in range(10) if abs(i-j) < 3 and i != j]

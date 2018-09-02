@@ -4,7 +4,7 @@ skinparam packageStyle rectangle
 abstract class Generator {
   #List<UpdatePair> update_chain
   #void merge_update_chain(List<UpdatePair>)
-  ~{abstract} GenElement* get_element(Json)
+  ~{abstract} Element* get_element(Json)
   ~{abstract} Generator* get_generator(Json)
   ~void appoint()
   ~void hello()
@@ -12,20 +12,20 @@ abstract class Generator {
   ~List<UodatePair> get_update_chain()
 }
 
-class UpdatePair.GenElement {
-  ~GenElement()
+class UpdatePair.Element {
+  ~Element()
   -{static} int instance_count
   -int ID
   -int n_remain
   -Json data
   -Set<Str> datakeys
   -omp_lock_t omp_lock
-  ~GenElement* get_element(Json)
+  ~Element* get_element(Json)
   ~Generator* get_generator(Json)
   ~void increment_remain()
   ~void decrement_remain()
   ~void update_data(Updater*)
-  +GenElement* append_updater(Updater*)
+  +Element* append_updater(Updater*)
   +Json get_data()
   +Set<Str> get_keys()
   +ArrayXi get_1d_int(Str)
@@ -33,15 +33,15 @@ class UpdatePair.GenElement {
   +ArrayXXi get_2d_int(List<Str>)
   +ArrayXXd get_2d_double(List<Str>)
 
-  +GenElement* Element(Updater*)
+  +Element* create(Updater*)
 }
 
-Generator <|-- UpdatePair.GenElement
+Generator <|-- UpdatePair.Element
 
 class GenList {
   ~GenList(List<Generator*>)
   -List<Generator*> generator_list
-  ~GenElement* get_element(Json)
+  ~Element* get_element(Json)
   ~Generator* get_generator(Json)
   ~int get_length()
 }
@@ -51,7 +51,7 @@ Generator <|-- GenList
 class GenDict {
   ~GenDict(Dict<Str,Generator*>)
   -Dict<Str,Generator*> generator_dict
-  ~GenElement* get_element(Json)
+  ~Element* get_element(Json)
   ~Generator* get_generator(Json)
   ~Set<Str> get_keys()
 }
@@ -99,25 +99,25 @@ class AddRename {
 Adder <|-- AddRename
 
 class AddWrappedPositions {
-  +AddWrappedPositions(GenElement*)
+  +AddWrappedPositions(Element*)
   #void compute_impl(Json, Set<Str>)
 }
 
 Adder <|---- AddWrappedPositions
 
 class AddCoMPositions {
-  +AddCoMPositions(GenElement*)
-  -compute_with_weights(Json, GenElement*)
-  -compute_without_weights(Json, GenElement*)
+  +AddCoMPositions(Element*)
+  -compute_with_weights(Json, Element*)
+  -compute_without_weights(Json, Element*)
   #void compute_impl(Json, Set<Str>)
 }
 
 Adder <|---- AddCoMPositions
 
 class AddInertiaMoment {
-  +AddInertiaMoment(GenElement*)
-  -compute_with_weights(Json, GenElement*)
-  -compute_without_weights(Json, GenElement*)
+  +AddInertiaMoment(Element*)
+  -compute_with_weights(Json, Element*)
+  -compute_without_weights(Json, Element*)
   #void compute_impl(Json, Set<Str>)
 }
 
@@ -142,7 +142,7 @@ class AddMolecularOrientation {
 Adder <|---- AddMolecularOrientation
 
 class AddChildIDs {
-  +AddChildIDs(GenElement*, Str, Str)
+  +AddChildIDs(Element*, Str, Str)
   -Str child_name
   -Str key_for_parent_id
   #void compute_impl(Json, Set<Str>)
@@ -151,8 +151,8 @@ class AddChildIDs {
 Adder <|---- AddChildIDs
 
 class AddSpecialBonds {
-  +AddSpecialBonds(GenElement*, List<List<int>>)
-  +AddSpecialBonds(GenElement*, Dict<int,List<List<int>>>)
+  +AddSpecialBonds(Element*, List<List<int>>)
+  +AddSpecialBonds(Element*, Dict<int,List<List<int>>>)
   -Dict<int,List<List<int>>> mol_type_to_sbondses_in_mol
   #void compute_impl(Json, Set<Str>)
 }
@@ -198,15 +198,15 @@ class StaDumpBox {
 StaDump <|-- StaDumpBox
 
 class StaMolecules {
-  +StaMolecules(GenElement*)
+  +StaMolecules(Element*)
   #void compute_impl(Json, Set<Str>)
 }
 
 Starter <|-- StaMolecules
 
 class StaBeads {
-  +StaBeads(GenElement*, List<Json>)
-  +StaBeads(GenElement*, Dict<int,List<Json>>)
+  +StaBeads(Element*, List<Json>)
+  +StaBeads(Element*, Dict<int,List<Json>>)
   -Dict<int,List<Json>> mol_type_to_abst_beads
   -std::pair<bool,bool> check_mol_type_to_abst_beads()
   #void compute_impl(Json, Set<Str>)
@@ -222,7 +222,7 @@ UpdatePair.Updater <|-- Filter
 
 class FilSet {
   +FilSet(Dict<Str,Set<Json>>)
-  +FilSet(GenElement*, Dict<Str,Set<Json>>)
+  +FilSet(Element*, Dict<Str,Set<Json>>)
   -Dict<Str,Set<Json>> value_sets
   #void compute_impl(Json, Set<Str>)
 }
@@ -232,8 +232,8 @@ Filter <|-- FilSet
 class FilComparison {
   +FilComparison(tuple<Str,Str,Json>)
   +FilComparison(List<tuple<Str,Str,Json>>)
-  +FilComparison(GenElement*, tuple<Str,Str,Json>)
-  +FilComparison(GenElement*, List<tuple<Str,Str,Json>>)
+  +FilComparison(Element*, tuple<Str,Str,Json>)
+  +FilComparison(Element*, List<tuple<Str,Str,Json>>)
   -List<tuple<Str,Str,Json>> comparisons
   -function make_lambda(Str, Json)
   -List<pair<Str,function>> convert_to_funcs(List<tuple<Str,Str,Json>>)
@@ -247,10 +247,10 @@ abstract class Processor {
   #int n_generators
   #List<Generators*> generators
   #{abstract} void run_impl(int)
-  #void register_generator(GenElement*)
+  #void register_generator(Element*)
   #void register_generator(GenList*)
   #void register_generator(GenDict*)
-  #void register_generators(List<GenElement*>)
+  #void register_generators(List<Element*>)
   #void register_generators(List<GenList*>)
   #void register_generators(List<GenDict*>)
   ~void prepare()
@@ -259,8 +259,8 @@ abstract class Processor {
 }
 
 class ProData {
-  +ProData(GenElement*)
-  +ProData(List<GenElement*>)
+  +ProData(Element*)
+  +ProData(List<Element*>)
   -List<Str> selected_keys
   -List<Json> results
   #void run_impl(int)
@@ -272,8 +272,8 @@ class ProData {
 Processor <|-- ProData
 
 class ProValueArray {
-  +ProValueArray(GenElement*)
-  +ProValueArray(List<GenElement*>)
+  +ProValueArray(Element*)
+  +ProValueArray(List<Element*>)
   -List<Str> selected_keys
   -Dict<Str,ArrayXXd> results
   -Dict<Str,List<RowArrayXd>> results_tmp
@@ -287,8 +287,8 @@ class ProValueArray {
 Processor <|-- ProValueArray
 
 class ProThicknessProfile {
-  +ProThicknessProfile(GenElement*, GenElement*)
-  +ProThicknessProfile(List<pair<GenElement*,GenElement*>>)
+  +ProThicknessProfile(Element*, Element*)
+  +ProThicknessProfile(List<pair<Element*,Element*>>)
   -int nx
   -int ny
   -bool shift_half
@@ -307,8 +307,8 @@ class ProThicknessProfile {
 Processor <|-- ProThicknessProfile
 
 class ProRadialDistributionFunction {
-  +ProRadialDistributionFunction(GenElement*, GenElement*)
-  +ProRadialDistributionFunction(List<pair<GenElement*,GenElement*>>)
+  +ProRadialDistributionFunction(Element*, Element*)
+  +ProRadialDistributionFunction(List<pair<Element*,Element*>>)
   -int n_bins
   -double bin_width
   -bool bin_from_r
@@ -331,8 +331,8 @@ class ProRadialDistributionFunction {
 Processor <|-- ProRadialDistributionFunction
 
 class ProDistanceInMolecule {
-  +ProDistanceInMolecule(GenElement*, GenElement*)
-  +ProDistanceInMolecule(List<pair<GenElement*,GenElement*>>)
+  +ProDistanceInMolecule(Element*, Element*)
+  +ProDistanceInMolecule(List<pair<Element*,Element*>>)
   -int index1_in_mol
   -int index2_in_mol
   -int target_moltype
@@ -353,7 +353,7 @@ class ProDistanceInMolecule {
 Processor <|-- ProDistanceInMolecule
 
 class ProMeanSquareDisplacement {
-  +ProMeanSquareDisplacement(List<GenElement*>)
+  +ProMeanSquareDisplacement(List<Element*>)
   -bool drift_correction
   -List<bool> dimension
   -ArrayXXd initial_rs
@@ -390,8 +390,8 @@ class KeyChecker {
   ~KeyChecker()
   #bool check_key(Set<Str>, Str, Str)
   #bool check_key(Set<Str>, List<Str>, Str)
-  #bool check_key(GenElement*, Str)
-  #bool check_key(GenElement*, List<Str>)
+  #bool check_key(Element*, Str)
+  #bool check_key(Element*, List<Str>)
   #Str get_my_class_name()
 }
 
@@ -403,5 +403,5 @@ Generator "*" o---- "*" UpdatePair
 Processor "*" o---- "*" Generator
 Invoker "*" o---- "*" Processor
 
-UpdatePair.GenElement .left> UpdatePair.Updater : use
+UpdatePair.Element .left> UpdatePair.Updater : use
 ```

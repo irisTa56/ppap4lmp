@@ -22,10 +22,10 @@ class ProThicknessProfile : public Processor {
     int index) override;
  public:
   ProThicknessProfile(
-    ShPtr<GenElement> atoms,
-    ShPtr<GenElement> box);
+    ShPtr<Element> atoms,
+    ShPtr<Element> box);
   ProThicknessProfile(
-    List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>> pairs);
+    List<std::pair<ShPtr<Element>,ShPtr<Element>>> pairs);
   virtual ~ProThicknessProfile() = default;
   virtual void prepare() override;
   void set_grid(

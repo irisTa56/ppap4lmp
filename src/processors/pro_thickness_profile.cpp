@@ -11,8 +11,8 @@ create: 2018/07/08 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProThicknessProfile::ProThicknessProfile(
-  ShPtr<GenElement> atoms,
-  ShPtr<GenElement> box)
+  ShPtr<Element> atoms,
+  ShPtr<Element> box)
 {
   register_generator(ShPtr<GenDict>(
     new GenDict({{"Atoms", atoms}, {"Box", box}})));
@@ -21,7 +21,7 @@ ProThicknessProfile::ProThicknessProfile(
 /* ------------------------------------------------------------------ */
 
 ProThicknessProfile::ProThicknessProfile(
-  List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>> pairs)
+  List<std::pair<ShPtr<Element>,ShPtr<Element>>> pairs)
 {
   List<ShPtr<GenDict>> gens;
 

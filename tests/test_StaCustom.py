@@ -1,13 +1,13 @@
 import unittest
 import traceback
 
-from ppap4lmp import Element, StaCustom
+from ppap4lmp import create, StaCustom
 
 class TestStaCustom(unittest.TestCase):
 
   def test_error01(self):
 
-    elem = Element(StaCustom([{"foo": 1}, {"bar": 2}]))
+    elem = create(StaCustom([{"foo": 1}, {"bar": 2}]))
 
     try:
       elem.get_data()
@@ -25,7 +25,7 @@ class TestStaCustom(unittest.TestCase):
 
   def _test_get_data(self, data):
 
-    elem = Element(StaCustom(data))
+    elem = create(StaCustom(data))
     self.assertEqual(data, elem.get_data())
 
   def test_get_keys(self):
@@ -36,5 +36,5 @@ class TestStaCustom(unittest.TestCase):
 
   def _test_get_keys(self, data, keys):
 
-    elem = Element(StaCustom(data))
+    elem = create(StaCustom(data))
     self.assertEqual(keys, elem.get_keys())

@@ -63,7 +63,7 @@ const bool KeyChecker::check_keys(
 /* ------------------------------------------------------------------ */
 
 const bool KeyChecker::check_key(
-  ShPtr<GenElement> elem,
+  ShPtr<Element> elem,
   const Str &needkey)
 {
   return check_keys(elem->get_keys(), {needkey}, "externally");
@@ -72,7 +72,7 @@ const bool KeyChecker::check_key(
 /* ------------------------------------------------------------------ */
 
 const bool KeyChecker::check_keys(
-  ShPtr<GenElement> elem,
+  ShPtr<Element> elem,
   const List<Str> &needkeys)
 {
   return check_keys(elem->get_keys(), needkeys, "externally");

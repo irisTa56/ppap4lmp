@@ -11,7 +11,7 @@ create: 2018/08/19 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 AddChildIDs::AddChildIDs(
-  ShPtr<GenElement> elem,
+  ShPtr<Element> elem,
   const Str &child_name_,
   const Str &key_for_parent_id_)
 {

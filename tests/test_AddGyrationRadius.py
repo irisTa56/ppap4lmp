@@ -5,7 +5,7 @@ from copy import deepcopy
 from math import sqrt
 
 from ppap4lmp import \
-  Element, StaCustom, StaMolecules, \
+  create, StaCustom, StaMolecules, \
   AddCoMPositions, AddInertiaMoment, AddGyrationRadius
 
 class TestAddGyrationRadius(unittest.TestCase):
@@ -21,8 +21,8 @@ class TestAddGyrationRadius(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(StaCustom(self.custom_data))
-    molecules = Element(StaMolecules(atoms))
+    atoms = create(StaCustom(self.custom_data))
+    molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddGyrationRadius())
 
     try:
@@ -36,8 +36,8 @@ class TestAddGyrationRadius(unittest.TestCase):
 
   def test_sqrted(self):
 
-    atoms = Element(StaCustom(self.custom_data))
-    molecules = Element(StaMolecules(atoms))
+    atoms = create(StaCustom(self.custom_data))
+    molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddCoMPositions(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(AddGyrationRadius())
@@ -68,8 +68,8 @@ class TestAddGyrationRadius(unittest.TestCase):
     custom_data[0]["xu"] = 3.0
     custom_data[1]["xu"] = -1.0
 
-    atoms = Element(StaCustom(custom_data))
-    molecules = Element(StaMolecules(atoms))
+    atoms = create(StaCustom(custom_data))
+    molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddCoMPositions(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(

@@ -40,7 +40,7 @@ void Updater::remove_from_blacklist(
 }
 
 /* ------------------------------------------------------------------ */
-// assumed to be called by only GenElement::append_updater
+// assumed to be called by only Element::append_updater
 ShPtr<Generator> Updater::get_ext_generator()
 {
   return ext_generator;

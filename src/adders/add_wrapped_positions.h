@@ -16,7 +16,7 @@ class AddWrappedPositions : public Adder {
     Set<Str> &datakeys) override;
  public:
   AddWrappedPositions(
-    ShPtr<GenElement> elem);
+    ShPtr<Element> elem);
   virtual ~AddWrappedPositions() = default;
 };
 

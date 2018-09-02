@@ -18,10 +18,10 @@ class AddSpecialBonds : public Adder {
     Set<Str> &datakeys) override;
  public:
   AddSpecialBonds(
-    ShPtr<GenElement> gen_mols,
+    ShPtr<Element> gen_mols,
     const List<List<int>> &scheme);
   AddSpecialBonds(
-    ShPtr<GenElement> gen_mols,
+    ShPtr<Element> gen_mols,
     const Dict<int,List<List<int>>> &schemes);
   virtual ~AddSpecialBonds() = default;
 };

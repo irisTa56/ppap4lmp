@@ -2,16 +2,16 @@ import unittest
 import traceback
 
 from ppap4lmp import \
-  Element, StaCustom, StaDumpAtoms, StaMolecules, AddChildIDs
+  create, StaCustom, StaDumpAtoms, StaMolecules, AddChildIDs
 
 class TestAddChildIDs(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(StaCustom(
+    atoms = create(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))
 
-    moles = Element(StaCustom([{"id": i} for i in range(10)]))
+    moles = create(StaCustom([{"id": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "molecule-id"))
 
     try:
@@ -24,10 +24,10 @@ class TestAddChildIDs(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(StaCustom(
+    atoms = create(StaCustom(
       [{"id": i, "mol": i//10} for i in range(100)]))
 
-    moles = Element(StaCustom([{"index": i} for i in range(10)]))
+    moles = create(StaCustom([{"index": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "mol"))
 
     try:
@@ -50,11 +50,11 @@ class TestAddChildIDs(unittest.TestCase):
 
   def _test_2way_molecules(self, arguments, mol_ids):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
 
-    mols1 = Element(StaMolecules(atoms))
+    mols1 = create(StaMolecules(atoms))
 
-    mols2 = Element(StaCustom([{"id": i} for i in mol_ids]))
+    mols2 = create(StaCustom([{"id": i} for i in mol_ids]))
     mols2.append_updater(AddChildIDs(atoms, "atom", "mol"))
 
     self.assertEqual(mols1.get_data(), mols2.get_data())

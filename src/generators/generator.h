@@ -11,10 +11,10 @@ create: 2018/06/21 by Takayuki Kobayashi
 
 #include <aliases.h>
 
-class GenElement;
+class Element;
 class Updater;
 
-using UpdatePair = std::pair<ShPtr<GenElement>,ShPtr<Updater>>;
+using UpdatePair = std::pair<ShPtr<Element>,ShPtr<Updater>>;
 
 class Generator {
  protected:
@@ -24,7 +24,7 @@ class Generator {
  public:
   Generator() = default;
   virtual ~Generator() = default;
-  virtual ShPtr<GenElement> get_element(
+  virtual ShPtr<Element> get_element(
     Json name = nullptr) = 0;
   virtual ShPtr<Generator> get_generator(
     Json name = nullptr) = 0;
@@ -34,7 +34,7 @@ class Generator {
   const List<UpdatePair> &get_update_chain();
 };
 
-#include <generators/gen_element.h>
+#include <generators/element.h>
 #include <generators/gen_dict.h>
 #include <generators/gen_list.h>
 #include <updaters/updater.h>

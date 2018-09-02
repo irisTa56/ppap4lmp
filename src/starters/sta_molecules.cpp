@@ -10,7 +10,7 @@ create: 2018/07/07 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 StaMolecules::StaMolecules(
-  ShPtr<GenElement> gen_atoms)
+  ShPtr<Element> gen_atoms)
 {
   ext_generator = gen_atoms;
 }

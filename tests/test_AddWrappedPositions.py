@@ -4,14 +4,14 @@ import traceback
 import numpy as np
 
 from ppap4lmp import \
-  Element, StaCustom, StaDumpAtoms, StaDumpBox, AddWrappedPositions
+  create, StaCustom, StaDumpAtoms, StaDumpBox, AddWrappedPositions
 
 class TestAddWrappedPositions(unittest.TestCase):
 
   def test_error01(self):
 
-    box = Element(StaCustom({"foo": 0, "bar": 1}))
-    atoms = Element(
+    box = create(StaCustom({"foo": 0, "bar": 1}))
+    atoms = create(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(AddWrappedPositions(box))
 
@@ -26,8 +26,8 @@ class TestAddWrappedPositions(unittest.TestCase):
 
   def test_error02(self):
 
-    box = Element(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))
-    atoms = Element(
+    box = create(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))
+    atoms = create(
       StaCustom([{"A": i, "B": i*i} for i in range(1000)]))
     atoms.append_updater(AddWrappedPositions(box))
 
@@ -46,8 +46,8 @@ class TestAddWrappedPositions(unittest.TestCase):
 
   def _test_wrapping(self, arguments):
 
-    box = Element(StaDumpBox(*arguments))
-    atoms = Element(StaDumpAtoms(*arguments))
+    box = create(StaDumpBox(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
     atoms.append_updater(AddWrappedPositions(box))
 
     wrapped = atoms.get_2d_double(["x", "y", "z"])

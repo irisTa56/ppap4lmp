@@ -11,7 +11,7 @@ create: 2018/08/26 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProMeanSquareDisplacement::ProMeanSquareDisplacement(
-  List<ShPtr<GenElement>> elems)
+  List<ShPtr<Element>> elems)
 {
   register_generators(elems);
 }

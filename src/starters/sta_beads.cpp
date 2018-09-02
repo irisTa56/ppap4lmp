@@ -10,7 +10,7 @@ create: 2018/08/18 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 StaBeads::StaBeads(
-  ShPtr<GenElement> gen_mols,
+  ShPtr<Element> gen_mols,
   const List<Json> &scheme)
 {
   ext_generator = gen_mols;
@@ -21,7 +21,7 @@ StaBeads::StaBeads(
 /* ------------------------------------------------------------------ */
 
 StaBeads::StaBeads(
-  ShPtr<GenElement> gen_mols,
+  ShPtr<Element> gen_mols,
   const Dict<int,List<Json>> &schemes)
 {
   ext_generator = gen_mols;

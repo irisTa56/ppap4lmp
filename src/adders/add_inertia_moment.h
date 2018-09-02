@@ -12,17 +12,17 @@ create: 2018/07/15 by Takayuki Kobayashi
 class AddInertiaMoment : public Adder {
   void compute_with_weights(
     Json &data,
-    ShPtr<GenElement> gen_atoms);
+    ShPtr<Element> gen_atoms);
   void compute_without_weights(
     Json &data,
-    ShPtr<GenElement> gen_atoms);
+    ShPtr<Element> gen_atoms);
  protected:
   virtual void compute_impl(
     Json &data,
     Set<Str> &datakeys) override;
  public:
   AddInertiaMoment(
-    ShPtr<GenElement> elem);
+    ShPtr<Element> elem);
   virtual ~AddInertiaMoment() = default;
 };
 

@@ -1,14 +1,14 @@
 import unittest
 import traceback
 
-from ppap4lmp import Element, StaDumpBox, StaDumpAtoms, StaMolecules
+from ppap4lmp import create, StaDumpBox, StaDumpAtoms, StaMolecules
 
 class TestStaMolecules(unittest.TestCase):
 
   def test_error01(self):
 
-    molecules = Element(StaMolecules(
-      Element(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))))
+    molecules = create(StaMolecules(
+      create(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))))
 
     try:
       molecules.get_data()
@@ -30,7 +30,7 @@ class TestStaMolecules(unittest.TestCase):
 
   def _test_get_data(self, arguments, expected_id, expected_atoms):
 
-    molecules = Element(StaMolecules(Element(StaDumpAtoms(*arguments))))
+    molecules = create(StaMolecules(create(StaDumpAtoms(*arguments))))
     data = molecules.get_data()
 
     self.assertEqual(data[expected_id-1]["id"], expected_id)
@@ -46,6 +46,6 @@ class TestStaMolecules(unittest.TestCase):
 
   def _test_get_keys(self, arguments, expectation):
 
-    molecules = Element(StaMolecules(Element(StaDumpAtoms(*arguments))))
+    molecules = create(StaMolecules(create(StaDumpAtoms(*arguments))))
 
     self.assertEqual(molecules.get_keys(), expectation)

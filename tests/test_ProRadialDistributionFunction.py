@@ -7,16 +7,16 @@ import numpy as np
 from random import uniform
 
 from ppap4lmp import \
-  Element, StaCustom, ProRadialDistributionFunction, InvOMP
+  create, StaCustom, ProRadialDistributionFunction, InvOMP
 
 class TestProRadialDistributionFunction(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(StaCustom([
+    atoms = create(StaCustom([
       {"x": 1.0*i, "y": 1.0*i, "z": 1.0*i}
       for i in range(100)]))
-    box = Element(StaCustom({"foo": 0.0, "bar": 1.0}))
+    box = create(StaCustom({"foo": 0.0, "bar": 1.0}))
 
     pro = ProRadialDistributionFunction(atoms, box)
 
@@ -31,10 +31,10 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(StaCustom([
+    atoms = create(StaCustom([
       {"id": i+1, "x": 1.0*i, "y": 1.0*i, "z": 1.0*i}
       for i in range(100)]))
-    box = Element(StaCustom({"foo": 0.0, "bar": 1.0}))
+    box = create(StaCustom({"foo": 0.0, "bar": 1.0}))
 
     pro = ProRadialDistributionFunction(atoms, box)
 
@@ -61,9 +61,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
           abst_atoms.append({
             "id": atom_id, "x": 1.0*ix, "y": 1.0*iy, "z": 1.0*iz})
 
-    atoms = Element(StaCustom(abst_atoms))
+    atoms = create(StaCustom(abst_atoms))
 
-    box = Element(StaCustom({
+    box = create(StaCustom({
       "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
       "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
       "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True}))
@@ -113,9 +113,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
           abst_atoms.append({
             "id": atom_id, "x": 1.0*ix, "y": 1.0*iy, "z": 1.0*iz})
 
-    atoms = Element(StaCustom(abst_atoms))
+    atoms = create(StaCustom(abst_atoms))
 
-    box = Element(StaCustom({
+    box = create(StaCustom({
       "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
       "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
       "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True}))
@@ -167,9 +167,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
           abst_atoms.append({
             "id": atom_id, "x": 1.0*ix, "y": 1.0*iy, "z": 1.0*iz})
 
-    atoms = Element(StaCustom(abst_atoms))
+    atoms = create(StaCustom(abst_atoms))
 
-    box = Element(StaCustom({
+    box = create(StaCustom({
       "lo_x": 0.0, "hi_x": 3.0, "periodic_x": True,
       "lo_y": 0.0, "hi_y": 3.0, "periodic_y": True,
       "lo_z": 0.0, "hi_z": 3.0, "periodic_z": True}))
@@ -229,9 +229,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
               "y": 1.0*(iy+0.5) + uniform(-0.005, 0.005),
               "z": 1.0*(iz+0.5) + uniform(-0.005, 0.005)})
 
-      atoms_traj.append(Element(StaCustom(abst_atoms)))
+      atoms_traj.append(create(StaCustom(abst_atoms)))
 
-      box_traj.append(Element(StaCustom({
+      box_traj.append(create(StaCustom({
         "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
         "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
         "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True})))

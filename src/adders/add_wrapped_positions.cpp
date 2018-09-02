@@ -10,7 +10,7 @@ create: 2018/07/07 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 AddWrappedPositions::AddWrappedPositions(
-  ShPtr<GenElement> elem)
+  ShPtr<Element> elem)
 {
   ext_generator = elem;
 }

@@ -1,17 +1,17 @@
 /* ---------------------------------------------------------------------
-GenElement: stands for Generator containing data 'element'.
+Element: stands for Generator containing data 'element'.
 
 create: 2018/07/01 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#include "gen_element.h"
+#include "element.h"
 #include "../utils.h"
 
-int GenElement::instance_count = 0;
+int Element::instance_count = 0;
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
-GenElement::GenElement()
+Element::Element()
 {
   instance_count++;
   ID = instance_count;
@@ -20,12 +20,12 @@ GenElement::GenElement()
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<GenElement> GenElement::get_element(
+ShPtr<Element> Element::get_element(
   Json name)
 {
   if (name != nullptr)
   {
-    runtime_error("GenElement::get_element accepts no argument");
+    runtime_error("Element::get_element accepts no argument");
   }
 
   return shared_from_this();
@@ -33,12 +33,12 @@ ShPtr<GenElement> GenElement::get_element(
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<Generator> GenElement::get_generator(
+ShPtr<Generator> Element::get_generator(
   Json name)
 {
   if (name != nullptr)
   {
-    runtime_error("GenElement::get_generator accepts no argument");
+    runtime_error("Element::get_generator accepts no argument");
   }
 
   return shared_from_this();
@@ -46,7 +46,7 @@ ShPtr<Generator> GenElement::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-void GenElement::increment_remain()
+void Element::increment_remain()
 {
   #pragma omp atomic
   n_remain++;
@@ -54,7 +54,7 @@ void GenElement::increment_remain()
 
 /* ------------------------------------------------------------------ */
 
-void GenElement::decrement_remain()
+void Element::decrement_remain()
 {
   omp_set_lock(&omp_lock);
 
@@ -99,7 +99,7 @@ void GenElement::decrement_remain()
 
 /* ------------------------------------------------------------------ */
 
-void GenElement::update_data(ShPtr<Updater> upd)
+void Element::update_data(ShPtr<Updater> upd)
 {
   omp_set_lock(&omp_lock);
 
@@ -110,7 +110,7 @@ void GenElement::update_data(ShPtr<Updater> upd)
 
 /* ------------------------------------------------------------------ */
 // assumed to be not called from multithreads
-ShPtr<GenElement> GenElement::append_updater(ShPtr<Updater> upd)
+ShPtr<Element> Element::append_updater(ShPtr<Updater> upd)
 {
   auto gen = upd->get_ext_generator();
 
@@ -126,21 +126,21 @@ ShPtr<GenElement> GenElement::append_updater(ShPtr<Updater> upd)
 
 /* ------------------------------------------------------------------ */
 
-const Json &GenElement::get_data()
+const Json &Element::get_data()
 {
   return data;
 }
 
 /* ------------------------------------------------------------------ */
 
-const Set<Str> &GenElement::get_keys()
+const Set<Str> &Element::get_keys()
 {
   return datakeys;
 }
 
 /* ------------------------------------------------------------------ */
 
-ArrayXi GenElement::get_1d_int(
+ArrayXi Element::get_1d_int(
   const Str &key)
 {
   ArrayXi tmp(data.is_array() ? data.size() : 1);
@@ -164,7 +164,7 @@ ArrayXi GenElement::get_1d_int(
 
 /* ------------------------------------------------------------------ */
 
-ArrayXd GenElement::get_1d_double(
+ArrayXd Element::get_1d_double(
   const Str &key)
 {
   ArrayXd tmp(data.is_array() ? data.size() : 1);
@@ -188,7 +188,7 @@ ArrayXd GenElement::get_1d_double(
 
 /* ------------------------------------------------------------------ */
 
-ArrayXXi GenElement::get_2d_int(
+ArrayXXi Element::get_2d_int(
   const List<Str> &keys)
 {
   auto n_keys = keys.size();
@@ -222,7 +222,7 @@ ArrayXXi GenElement::get_2d_int(
 
 /* ------------------------------------------------------------------ */
 
-ArrayXXd GenElement::get_2d_double(
+ArrayXXd Element::get_2d_double(
   const List<Str> &keys)
 {
   auto n_keys = keys.size();
@@ -256,7 +256,7 @@ ArrayXXd GenElement::get_2d_double(
 
 /* ------------------------------------------------------------------ */
 
-const Json &GenElement::get_data_py()
+const Json &Element::get_data_py()
 {
   try
   {
@@ -272,7 +272,7 @@ const Json &GenElement::get_data_py()
 
 /* ------------------------------------------------------------------ */
 
-const Set<Str> &GenElement::get_keys_py()
+const Set<Str> &Element::get_keys_py()
 {
   try
   {
@@ -288,7 +288,7 @@ const Set<Str> &GenElement::get_keys_py()
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXi GenElement::get_1d_int_py(
+const ArrayXi Element::get_1d_int_py(
   const Str &key)
 {
   try
@@ -306,7 +306,7 @@ const ArrayXi GenElement::get_1d_int_py(
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXd GenElement::get_1d_double_py(
+const ArrayXd Element::get_1d_double_py(
   const Str &key)
 {
   try
@@ -324,7 +324,7 @@ const ArrayXd GenElement::get_1d_double_py(
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXXi GenElement::get_2d_int_py(
+const ArrayXXi Element::get_2d_int_py(
   const List<Str> &keys)
 {
   try
@@ -343,7 +343,7 @@ const ArrayXXi GenElement::get_2d_int_py(
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXXd GenElement::get_2d_double_py(
+const ArrayXXd Element::get_2d_double_py(
   const List<Str> &keys)
 {
   try

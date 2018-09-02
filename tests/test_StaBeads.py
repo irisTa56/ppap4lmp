@@ -2,18 +2,18 @@ import unittest
 import traceback
 
 from ppap4lmp import \
-  Element, StaCustom, StaDumpAtoms, StaMolecules, StaBeads
+  create, StaCustom, StaDumpAtoms, StaMolecules, StaBeads
 
 class TestStaBeads(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
-    moles = Element(StaMolecules(atoms))
+    moles = create(StaMolecules(atoms))
 
     try:
-      beads = Element(StaBeads(moles, [{"foo": [1, 2, 3]}]))
+      beads = create(StaBeads(moles, [{"foo": [1, 2, 3]}]))
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -23,12 +23,12 @@ class TestStaBeads(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
-    moles = Element(StaMolecules(atoms))
+    moles = create(StaMolecules(atoms))
 
     try:
-      beads = Element(StaBeads(moles, [
+      beads = create(StaBeads(moles, [
         {"indices-in-mol": [1, 2, 3, 4], "weights": [1.0, 1.0, 1.0]}]))
     except SystemError:
       msg = traceback.format_exc()
@@ -39,12 +39,12 @@ class TestStaBeads(unittest.TestCase):
 
   def test_error03(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
-    moles = Element(StaMolecules(atoms))
+    moles = create(StaMolecules(atoms))
 
     try:
-      beads = Element(StaBeads(moles, [
+      beads = create(StaBeads(moles, [
         {"indices-in-mol": [1, 2], "weights": [1.0, 1.0]},
         {"indices-in-mol": [3, 4], "type": 1, "weights": [1.0, 1.0]}]))
     except SystemError:
@@ -55,12 +55,12 @@ class TestStaBeads(unittest.TestCase):
 
   def test_error04(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
-    moles = Element(StaMolecules(atoms))
+    moles = create(StaMolecules(atoms))
 
     try:
-      beads = Element(StaBeads(moles, {
+      beads = create(StaBeads(moles, {
         1: [
           {"indices-in-mol": [1, 2]},
           {"indices-in-mol": [3, 4, 5]}],
@@ -75,9 +75,9 @@ class TestStaBeads(unittest.TestCase):
 
   def test_atom_id(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
-    moles = Element(StaMolecules(atoms))
+    moles = create(StaMolecules(atoms))
 
     mappings = [
       [0, 1, 2, 12, 13, 14, 15, 16, 17, 18],
@@ -91,7 +91,7 @@ class TestStaBeads(unittest.TestCase):
       "weights": [1.0] * len(mapping)
     } for mapping in mappings]
 
-    beads = Element(StaBeads(moles, abst_beads))
+    beads = create(StaBeads(moles, abst_beads))
 
     self.assertEqual(
       beads.get_keys(),

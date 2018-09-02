@@ -5,16 +5,16 @@ import numpy as np
 
 from math import sqrt
 
-from ppap4lmp import Element, StaCustom, ProThicknessProfile, InvOMP
+from ppap4lmp import create, StaCustom, ProThicknessProfile, InvOMP
 
 class TestProThicknessProfile(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(StaCustom([
+    atoms = create(StaCustom([
       {"x": 1.0*i, "y": 1.0*i, "z": 1.0*i}
       for i in range(100)]))
-    box = Element(StaCustom({"foo": 0.0, "bar": 1.0}))
+    box = create(StaCustom({"foo": 0.0, "bar": 1.0}))
 
     pro = ProThicknessProfile(atoms, box)
 
@@ -28,10 +28,10 @@ class TestProThicknessProfile(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(StaCustom([
+    atoms = create(StaCustom([
       {"x": 1.0*i, "y": 1.0*i, "z": 1.0*i, "radius": 1.0}
       for i in range(100)]))
-    box = Element(StaCustom({"foo": 0.0, "bar": 1.0}))
+    box = create(StaCustom({"foo": 0.0, "bar": 1.0}))
 
     pro = ProThicknessProfile(atoms, box)
 
@@ -47,12 +47,12 @@ class TestProThicknessProfile(unittest.TestCase):
   def test_20x30(self):
 
     atoms = [
-      Element(StaCustom([
+      create(StaCustom([
         {"x": 1.0*ix, "y": 1.0*iy, "z": 1.0*i, "radius": 1.0}
         for ix in range(20) for iy in range(30)]))
       for i in range(10)]
     box = [
-      Element(StaCustom({
+      create(StaCustom({
         "lo_x": 0.0, "hi_x": 20.0, "lo_y": 0.0, "hi_y": 30.0}))
       for i in range(10)]
 
@@ -78,12 +78,12 @@ class TestProThicknessProfile(unittest.TestCase):
   def test_20x30_with_offset(self):
 
     atoms = [
-      Element(StaCustom([
+      create(StaCustom([
         {"x": 1.0*ix-10.0, "y": 1.0*iy, "z": 1.0*i+20.0, "radius": 1.0}
         for ix in range(20) for iy in range(30)]))
       for i in range(10)]
     box = [
-      Element(StaCustom({
+      create(StaCustom({
         "lo_x": -10.0, "hi_x": 10.0, "lo_y": 0.0, "hi_y": 30.0}))
       for i in range(10)]
 
@@ -110,12 +110,12 @@ class TestProThicknessProfile(unittest.TestCase):
   def test_20x30_with_shift(self):
 
     atoms = [
-      Element(StaCustom([
+      create(StaCustom([
         {"x": 1.0*ix, "y": 1.0*iy-10.0, "z": 1.0*i, "radius": 1.0}
         for ix in range(20) for iy in range(30)]))
       for i in range(10)]
     box = [
-      Element(StaCustom({
+      create(StaCustom({
         "lo_x": 0.0, "hi_x": 20.0, "lo_y": -10.0, "hi_y": 20.0}))
       for i in range(10)]
 

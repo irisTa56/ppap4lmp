@@ -26,7 +26,7 @@ void Processor::register_generator(
 }
 
 template void Processor::register_generator(
-  ShPtr<GenElement> gen);
+  ShPtr<Element> gen);
 template void Processor::register_generator(
   ShPtr<GenDict> gen);
 template void Processor::register_generator(
@@ -54,7 +54,7 @@ void Processor::register_generators(
 }
 
 template void Processor::register_generators(
-  const List<ShPtr<GenElement>> &gens);
+  const List<ShPtr<Element>> &gens);
 template void Processor::register_generators(
   const List<ShPtr<GenDict>> &gens);
 template void Processor::register_generators(

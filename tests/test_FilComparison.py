@@ -3,13 +3,13 @@ import traceback
 
 import numpy as np
 
-from ppap4lmp import Element, StaDumpAtoms, FilSet, FilComparison
+from ppap4lmp import create, StaDumpAtoms, FilSet, FilComparison
 
 class TestFilComparison(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilComparison([("dummy", "<", 0)]))
 
@@ -23,7 +23,7 @@ class TestFilComparison(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilComparison([("mol", "dummy", 10)]))
 
@@ -49,9 +49,9 @@ class TestFilComparison(unittest.TestCase):
 
   def _test_equivalent_filter(self, arguments, filterset, filtercom):
 
-    atoms = Element(StaDumpAtoms(*arguments))
-    filtered_atoms1 = Element(FilSet(atoms, filterset))
-    filtered_atoms2 = Element(FilComparison(atoms, filtercom))
+    atoms = create(StaDumpAtoms(*arguments))
+    filtered_atoms1 = create(FilSet(atoms, filterset))
+    filtered_atoms2 = create(FilComparison(atoms, filtercom))
 
     self.assertEqual(
       filtered_atoms1.get_data(), filtered_atoms2.get_data())
@@ -73,7 +73,7 @@ class TestFilComparison(unittest.TestCase):
 
   def _test_remaining_number(self, arguments, filtercom, num):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
     atoms.append_updater(FilComparison(filtercom))
 
     self.assertEqual(len(atoms.get_data()), num)
@@ -90,20 +90,20 @@ class TestFilComparison(unittest.TestCase):
 
   def _test_de_morgan(self, arguments, key1, lim1, key2, lim2):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
     num_total = len(atoms.get_data())
 
-    filtered_atoms1 = Element(FilComparison(atoms, (key1, "<", lim1)))
+    filtered_atoms1 = create(FilComparison(atoms, (key1, "<", lim1)))
     vec1 = filtered_atoms1.get_1d_double(key1)
     num1 = len(vec1)
     self.assertTrue(np.all(vec1 < lim1))
 
-    filtered_atoms2 = Element(FilComparison(atoms, (key2, "<", lim2)))
+    filtered_atoms2 = create(FilComparison(atoms, (key2, "<", lim2)))
     vec2 = filtered_atoms2.get_1d_double(key2)
     num2 = len(vec2)
     self.assertTrue(np.all(vec2 < lim2))
 
-    filtered_atoms = Element(FilComparison(
+    filtered_atoms = create(FilComparison(
       atoms, [(key1, "<", lim1), (key2, "<", lim2)]))
     arr = filtered_atoms.get_2d_double([key1, key2])
     num = arr.shape[0]

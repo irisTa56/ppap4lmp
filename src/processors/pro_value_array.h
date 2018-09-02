@@ -19,9 +19,9 @@ class ProValueArray : public Processor {
     int index) override;
  public:
   ProValueArray(
-    ShPtr<GenElement> elem);
+    ShPtr<Element> elem);
   ProValueArray(
-    List<ShPtr<GenElement>> elems);
+    List<ShPtr<Element>> elems);
   virtual ~ProValueArray() = default;
   virtual void prepare() override;
   virtual void finish() override;

@@ -1,13 +1,13 @@
 import unittest
 import traceback
 
-from ppap4lmp import Element, StaDumpAtoms, FilSet
+from ppap4lmp import create, StaDumpAtoms, FilSet
 
 class TestFilSet(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilSet({"dummy": {1, 2, 3}}))
 
@@ -31,9 +31,9 @@ class TestFilSet(unittest.TestCase):
 
   def _test_equivalent_filter(self, arguments, filter1, filter2):
 
-    atoms = Element(StaDumpAtoms(*arguments))
-    filtered_atoms1 = Element(FilSet(atoms, filter1))
-    filtered_atoms2 = Element(FilSet(atoms, filter2))
+    atoms = create(StaDumpAtoms(*arguments))
+    filtered_atoms1 = create(FilSet(atoms, filter1))
+    filtered_atoms2 = create(FilSet(atoms, filter2))
 
     self.assertEqual(
       filtered_atoms1.get_data(), filtered_atoms2.get_data())
@@ -52,7 +52,7 @@ class TestFilSet(unittest.TestCase):
 
   def _test_remaining_number(self, arguments, filterset, num):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
     atoms.append_updater(FilSet(filterset))
 
     self.assertEqual(len(atoms.get_data()), num)

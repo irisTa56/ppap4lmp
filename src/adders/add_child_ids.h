@@ -19,7 +19,7 @@ class AddChildIDs : public Adder {
     Set<Str> &datakeys) override;
  public:
   AddChildIDs(
-    ShPtr<GenElement> elem,
+    ShPtr<Element> elem,
     const Str &child_name_,
     const Str &key_for_parent_id_);
   virtual ~AddChildIDs() = default;

@@ -8,7 +8,7 @@ from random import uniform
 import numpy as np
 
 from ppap4lmp import \
-  Element, StaCustom, StaMolecules, ProDistanceInMolecule, InvOMP
+  create, StaCustom, StaMolecules, ProDistanceInMolecule, InvOMP
 
 class TestProDistanceInMolecule(unittest.TestCase):
 
@@ -28,8 +28,8 @@ class TestProDistanceInMolecule(unittest.TestCase):
     for i in range(len(dummy_data)):
       del dummy_data[i]["xu"]
 
-    atoms = Element(StaCustom(dummy_data))
-    mols = Element(StaMolecules(atoms))
+    atoms = create(StaCustom(dummy_data))
+    mols = create(StaMolecules(atoms))
 
     pro = ProDistanceInMolecule(mols, atoms)
 
@@ -43,8 +43,8 @@ class TestProDistanceInMolecule(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(StaCustom(self.base_data))
-    mols = Element(StaCustom([{"id": 1, "foo": "var"}]))
+    atoms = create(StaCustom(self.base_data))
+    mols = create(StaCustom([{"id": 1, "foo": "var"}]))
 
     pro = ProDistanceInMolecule(mols, atoms)
 
@@ -94,9 +94,9 @@ class TestProDistanceInMolecule(unittest.TestCase):
       abst_atoms_traj.append(tmp)
 
     atomses = [
-      Element(StaCustom(a)) for a in abst_atoms_traj]
+      create(StaCustom(a)) for a in abst_atoms_traj]
     molses = [
-      Element(StaMolecules(a)) for a in atomses]
+      create(StaMolecules(a)) for a in atomses]
 
     pro = ProDistanceInMolecule(list(zip(molses, atomses)))
     pro.set_indices(0, 5)
@@ -145,9 +145,9 @@ class TestProDistanceInMolecule(unittest.TestCase):
       abst_atoms_traj.append(tmp)
 
     atomses = [
-      Element(StaCustom(a)) for a in abst_atoms_traj]
+      create(StaCustom(a)) for a in abst_atoms_traj]
     molses = [
-      Element(StaMolecules(a)) for a in atomses]
+      create(StaMolecules(a)) for a in atomses]
 
     pro = ProDistanceInMolecule(list(zip(molses, atomses)))
     pro.set_indices(1, 5)

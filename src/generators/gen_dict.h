@@ -15,7 +15,7 @@ class GenDict : public Generator {
   GenDict(
     const Dict<Str,ShPtr<Generator>> &generator_dict_);
   virtual ~GenDict() = default;
-  virtual ShPtr<GenElement> get_element(
+  virtual ShPtr<Element> get_element(
     Json name = nullptr) override;
   virtual ShPtr<Generator> get_generator(
     Json name = nullptr) override;

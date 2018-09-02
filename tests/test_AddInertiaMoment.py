@@ -2,7 +2,7 @@ import unittest
 import traceback
 
 from ppap4lmp import \
-  Element, StaCustom, StaMolecules, AddCoMPositions, AddInertiaMoment
+  create, StaCustom, StaMolecules, AddCoMPositions, AddInertiaMoment
 
 class TestAddInertiaMoment(unittest.TestCase):
 
@@ -17,12 +17,12 @@ class TestAddInertiaMoment(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(StaCustom(self.custom_data))
-    molecules = Element(StaMolecules(atoms))
+    atoms = create(StaCustom(self.custom_data))
+    molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddCoMPositions(atoms))
 
     molecules.append_updater(
-      AddInertiaMoment(Element(StaCustom({"foo": 0, "bar": 1}))))
+      AddInertiaMoment(create(StaCustom({"foo": 0, "bar": 1}))))
 
     try:
       molecules.get_data()
@@ -35,8 +35,8 @@ class TestAddInertiaMoment(unittest.TestCase):
 
   def test_error02(self):
 
-    atoms = Element(StaCustom(self.custom_data))
-    molecules = Element(StaMolecules(atoms))
+    atoms = create(StaCustom(self.custom_data))
+    molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
 
     try:
@@ -49,8 +49,8 @@ class TestAddInertiaMoment(unittest.TestCase):
 
   def test_isotropic(self):
 
-    atoms = Element(StaCustom(self.custom_data))
-    molecules = Element(StaMolecules(atoms))
+    atoms = create(StaCustom(self.custom_data))
+    molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddCoMPositions(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
 

@@ -12,7 +12,7 @@ create: 2018/06/30 by Takayuki Kobayashi
 class Filter : public Updater {
  public:
   Filter(
-    ShPtr<GenElement> elem);
+    ShPtr<Element> elem);
   using Updater::Updater;
   virtual ~Filter() = default;
   virtual void compute(

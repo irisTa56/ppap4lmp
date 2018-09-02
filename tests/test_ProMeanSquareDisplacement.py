@@ -7,7 +7,7 @@ from random import uniform
 import numpy as np
 
 from ppap4lmp import \
-  Element, StaCustom, ProMeanSquareDisplacement, InvOMP
+  create, StaCustom, ProMeanSquareDisplacement, InvOMP
 
 class TestProMeanSquareDisplacement(unittest.TestCase):
 
@@ -31,7 +31,7 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
     for i in range(len(dummy_data)):
       del dummy_data[i]["mass"]
 
-    atoms = Element(StaCustom(dummy_data))
+    atoms = create(StaCustom(dummy_data))
 
     pro = ProMeanSquareDisplacement([atoms])
 
@@ -69,7 +69,7 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
       abst_atoms_traj.append(tmp)
 
     atomses = [
-      Element(StaCustom(a)) for a in abst_atoms_traj]
+      create(StaCustom(a)) for a in abst_atoms_traj]
 
     pro = ProMeanSquareDisplacement(atomses)
 
@@ -122,7 +122,7 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
       abst_atoms_traj.append(tmp)
 
     atomses = [
-      Element(StaCustom(a)) for a in abst_atoms_traj]
+      create(StaCustom(a)) for a in abst_atoms_traj]
 
     pro_xyz = ProMeanSquareDisplacement(atomses)
 

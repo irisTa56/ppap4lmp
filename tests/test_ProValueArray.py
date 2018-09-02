@@ -3,14 +3,14 @@ import traceback
 
 from random import shuffle
 
-from ppap4lmp import Element, StaCustom, ProValueArray, InvOMP
+from ppap4lmp import create, StaCustom, ProValueArray, InvOMP
 
 class TestProValueArray(unittest.TestCase):
 
   def test_error01(self):
 
     elems = [
-      Element(StaCustom({"id": i, "A": i*i})) for i in range(1000)]
+      create(StaCustom({"id": i, "A": i*i})) for i in range(1000)]
 
     pro = ProValueArray(elems)
 
@@ -25,7 +25,7 @@ class TestProValueArray(unittest.TestCase):
   def test_error02(self):
 
     elems = [
-      Element(StaCustom({"id": i, "A": i*i})) for i in range(1000)]
+      create(StaCustom({"id": i, "A": i*i})) for i in range(1000)]
 
     pro = ProValueArray(elems)
     pro.select("B")
@@ -43,7 +43,7 @@ class TestProValueArray(unittest.TestCase):
     data = [
       [{"id": j, "A": float(i*j)} for j in range(10*i+1)]
       for i in range(100)]
-    elems = [Element(StaCustom(d)) for d in data]
+    elems = [create(StaCustom(d)) for d in data]
     pro = ProValueArray(elems)
     pro.select("A")
 
@@ -61,7 +61,7 @@ class TestProValueArray(unittest.TestCase):
       {"id": j, "A": float(i+j), "B": float(i*j)}
       for j in range(1000)]
       for i in range(100)]
-    elems = [Element(StaCustom(d)) for d in data]
+    elems = [create(StaCustom(d)) for d in data]
     pro = ProValueArray(elems)
     pro.select("A")
 
@@ -85,7 +85,7 @@ class TestProValueArray(unittest.TestCase):
       {"id": j, "A": float(i+j), "B": float(i*j)}
       for j in ids]
       for i in range(100)]
-    elems = [Element(StaCustom(d)) for d in data]
+    elems = [create(StaCustom(d)) for d in data]
 
     pro = ProValueArray(elems)
     pro.select("A", "B")

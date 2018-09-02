@@ -11,7 +11,7 @@ create: 2018/07/16 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProValueArray::ProValueArray(
-  ShPtr<GenElement> elem)
+  ShPtr<Element> elem)
 {
   register_generator(elem);
 }
@@ -19,7 +19,7 @@ ProValueArray::ProValueArray(
 /* ------------------------------------------------------------------ */
 
 ProValueArray::ProValueArray(
-  List<ShPtr<GenElement>> elems)
+  List<ShPtr<Element>> elems)
 {
   register_generators(elems);
 }

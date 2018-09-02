@@ -17,9 +17,9 @@ class ProData : public Processor {
     int index) override;
  public:
   ProData(
-    ShPtr<GenElement> elem);
+    ShPtr<Element> elem);
   ProData(
-    List<ShPtr<GenElement>> elems);
+    List<ShPtr<Element>> elems);
   virtual ~ProData() = default;
   virtual void prepare() override;
   void select(

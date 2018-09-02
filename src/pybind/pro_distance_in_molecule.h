@@ -7,8 +7,8 @@
 static void pybind_pro_distance_in_molecule(py::module &m)
 {
   py::class_<ProDistanceInMolecule,PyProcessor<ProDistanceInMolecule>,Processor,ShPtr<ProDistanceInMolecule>>(m, "ProDistanceInMolecule")
-    .def(py::init<ShPtr<GenElement>,ShPtr<GenElement>>())
-    .def(py::init<List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>>>())
+    .def(py::init<ShPtr<Element>,ShPtr<Element>>())
+    .def(py::init<List<std::pair<ShPtr<Element>,ShPtr<Element>>>>())
     .def("set_indices", &ProDistanceInMolecule::set_indices)
     .def("set_moltype", &ProDistanceInMolecule::set_moltype)
     .def(

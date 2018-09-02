@@ -5,13 +5,13 @@ import numpy as np
 
 from random import randrange
 
-from ppap4lmp import Element, StaDumpAtoms
+from ppap4lmp import create, StaDumpAtoms
 
 class TestStaDumpAtoms(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(StaDumpAtoms("dummy.file", 0))
+    atoms = create(StaDumpAtoms("dummy.file", 0))
 
     try:
       atoms.get_data()
@@ -59,7 +59,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
   def _test_get_data(self, arguments, indices, expectation):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
     data = atoms.get_data()
 
     self.assertEqual([data[i] for i in indices], expectation)
@@ -82,7 +82,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
   def _test_get_keys(self, arguments, expectation):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
 
     self.assertEqual(atoms.get_keys(), expectation)
 
@@ -96,7 +96,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
   def _test_get_1d_int(self, arguments, key):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
 
     data = atoms.get_data()
     vec = atoms.get_1d_int(key)
@@ -117,7 +117,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
   def _test_get_1d_double(self, arguments, key):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
 
     data = atoms.get_data()
     vec = atoms.get_1d_double(key)
@@ -138,7 +138,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
   def _test_get_2d_int(self, arguments, keys):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
 
     data = atoms.get_data()
     arr = atoms.get_2d_int(keys)
@@ -159,7 +159,7 @@ class TestStaDumpAtoms(unittest.TestCase):
 
   def _test_get_2d_double(self, arguments, keys):
 
-    atoms = Element(StaDumpAtoms(*arguments))
+    atoms = create(StaDumpAtoms(*arguments))
 
     data = atoms.get_data()
     arr = atoms.get_2d_double(keys)

@@ -6,19 +6,19 @@ import numpy as np
 from random import randrange
 
 from ppap4lmp import \
-  Element, StaCustom, StaDumpAtoms, StaMolecules, StaBeads, \
+  create, StaCustom, StaDumpAtoms, StaMolecules, StaBeads, \
   AddMap, AddCoMPositions
 
 class TestAddCoMPositions(unittest.TestCase):
 
   def test_error01(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
-    molecules = Element(StaMolecules(atoms))
+    molecules = create(StaMolecules(atoms))
 
     molecules.append_updater(
-      AddCoMPositions(Element(StaCustom({"foo": 0, "bar": 1}))))
+      AddCoMPositions(create(StaCustom({"foo": 0, "bar": 1}))))
 
     try:
       molecules.get_data()
@@ -31,20 +31,20 @@ class TestAddCoMPositions(unittest.TestCase):
 
   def test_positions(self):
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(AddMap("type", "mass", {1: 147.28}))
 
     self._test_positions(atoms)
 
-    atoms = Element(
+    atoms = create(
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
 
     self._test_positions(atoms)
 
   def _test_positions(self, atoms):
 
-    mols = Element(StaMolecules(atoms))
+    mols = create(StaMolecules(atoms))
     mols.append_updater(AddCoMPositions(atoms))
 
     mol_data = mols.get_data()
@@ -107,9 +107,9 @@ class TestAddCoMPositions(unittest.TestCase):
           abst_atoms[-1]["yu"] = 0.0
           abst_atoms[-1]["zu"] = 1.0 + float(imol) * 10
 
-    atoms = Element(StaCustom(abst_atoms))
-    moles = Element(StaMolecules(atoms))
-    beads = Element(StaBeads(moles, [
+    atoms = create(StaCustom(abst_atoms))
+    moles = create(StaMolecules(atoms))
+    beads = create(StaBeads(moles, [
       {"indices-in-mol": list(range(4*i, 4*(i+1)))}
       for i in range(5)]))
 

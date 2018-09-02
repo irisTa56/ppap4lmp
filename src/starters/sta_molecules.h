@@ -16,7 +16,7 @@ class StaMolecules : public Starter {
     Set<Str> &datakeys) override;
  public:
   StaMolecules(
-    ShPtr<GenElement> gen_atoms);
+    ShPtr<Element> gen_atoms);
   virtual ~StaMolecules() = default;
 };
 

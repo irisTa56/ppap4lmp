@@ -1,15 +1,15 @@
 /* ---------------------------------------------------------------------
-GenElement: stands for Generator containing data 'element'.
+Element: stands for Generator containing data 'element'.
 
 create: 2018/07/01 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#ifndef GEN_ELEMENT_H
-#define GEN_ELEMENT_H
+#ifndef ELEMENT_H
+#define ELEMENT_H
 
 #include <generators/generator.h>
 
-class GenElement : public Generator, public EnShThis<GenElement> {
+class Element : public Generator, public EnShThis<Element> {
   static int instance_count;
   int ID;
   int n_remain = 0;
@@ -17,9 +17,9 @@ class GenElement : public Generator, public EnShThis<GenElement> {
   Set<Str> datakeys;
   omp_lock_t omp_lock;
  public:
-  GenElement();
-  virtual ~GenElement() = default;
-  virtual ShPtr<GenElement> get_element(
+  Element();
+  virtual ~Element() = default;
+  virtual ShPtr<Element> get_element(
     Json name = nullptr) override;
   virtual ShPtr<Generator> get_generator(
     Json name = nullptr) override;
@@ -27,7 +27,7 @@ class GenElement : public Generator, public EnShThis<GenElement> {
   void decrement_remain();
   void update_data(
     ShPtr<Updater> upd);
-  ShPtr<GenElement> append_updater(
+  ShPtr<Element> append_updater(
     ShPtr<Updater> upd);
   const Json &get_data();
   const Set<Str> &get_keys();

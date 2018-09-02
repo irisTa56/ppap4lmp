@@ -7,8 +7,8 @@
 static void pybind_pro_thickness_profile(py::module &m)
 {
   py::class_<ProThicknessProfile,PyProcessor<ProThicknessProfile>,Processor,ShPtr<ProThicknessProfile>>(m, "ProThicknessProfile")
-    .def(py::init<ShPtr<GenElement>,ShPtr<GenElement>>())
-    .def(py::init<List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>>>())
+    .def(py::init<ShPtr<Element>,ShPtr<Element>>())
+    .def(py::init<List<std::pair<ShPtr<Element>,ShPtr<Element>>>>())
     .def("set_grid", &ProThicknessProfile::set_grid)
     .def("set_offset", &ProThicknessProfile::set_offset)
     .def(

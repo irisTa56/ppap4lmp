@@ -10,7 +10,7 @@ create: 2018/06/30 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 Filter::Filter(
-  ShPtr<GenElement> elem)
+  ShPtr<Element> elem)
 {
   ext_generator = elem;
 }

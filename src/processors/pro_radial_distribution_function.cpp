@@ -15,8 +15,8 @@ create: 2018/08/19 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProRadialDistributionFunction::ProRadialDistributionFunction(
-  ShPtr<GenElement> atoms,
-  ShPtr<GenElement> box)
+  ShPtr<Element> atoms,
+  ShPtr<Element> box)
 {
   register_generator(ShPtr<GenDict>(
     new GenDict({{"Atoms", atoms}, {"Box", box}})));
@@ -25,7 +25,7 @@ ProRadialDistributionFunction::ProRadialDistributionFunction(
 /* ------------------------------------------------------------------ */
 
 ProRadialDistributionFunction::ProRadialDistributionFunction(
-  List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>> pairs)
+  List<std::pair<ShPtr<Element>,ShPtr<Element>>> pairs)
 {
   List<ShPtr<GenDict>> gens;
 

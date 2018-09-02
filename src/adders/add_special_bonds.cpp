@@ -11,7 +11,7 @@ create: 2018/08/19 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  ShPtr<GenElement> gen_mols,
+  ShPtr<Element> gen_mols,
   const List<List<int>> &scheme)
 {
   ext_generator = gen_mols;
@@ -22,7 +22,7 @@ AddSpecialBonds::AddSpecialBonds(
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  ShPtr<GenElement> gen_mols,
+  ShPtr<Element> gen_mols,
   const Dict<int,List<List<int>>> &schemes)
 {
   ext_generator = gen_mols;

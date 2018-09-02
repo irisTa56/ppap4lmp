@@ -1,13 +1,13 @@
 import unittest
 import traceback
 
-from ppap4lmp import Element, StaCustom, AddMap
+from ppap4lmp import create, StaCustom, AddMap
 
 class TestAddMap(unittest.TestCase):
 
   def test_error01(self):
 
-    elem = Element(StaCustom({"foo": 0, "bar": 1}))
+    elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("dummy", "new", {1: 0}))
 
     try:
@@ -20,7 +20,7 @@ class TestAddMap(unittest.TestCase):
 
   def test_error02(self):
 
-    elem = Element(StaCustom({"foo": 0, "bar": 1}))
+    elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("foo", "bar", {0: 1}))
 
     try:
@@ -36,7 +36,7 @@ class TestAddMap(unittest.TestCase):
     data_old = {"A": 1, "B": 2}
     data_new = {"A": 1, "B": 2, "C": 3}
 
-    elem = Element(StaCustom(data_old))
+    elem = create(StaCustom(data_old))
     elem.append_updater(AddMap("A", "C", {1: 3, 2: 2, 3: 1}))
 
     self.assertEqual(data_new, elem.get_data())
@@ -49,7 +49,7 @@ class TestAddMap(unittest.TestCase):
 
     mapping = {i: i%3 for i in range(1000)}
 
-    elem = Element(StaCustom(data_old))
+    elem = create(StaCustom(data_old))
     elem.append_updater(AddMap("A", "C", mapping))
 
     self.assertEqual(data_new, elem.get_data())
@@ -62,7 +62,7 @@ class TestAddMap(unittest.TestCase):
 
     mapping = {i: i%3 for i in range(1000)}
 
-    elem = Element(StaCustom(data_old))
+    elem = create(StaCustom(data_old))
     elem.append_updater(AddMap("A", "B", mapping).overwrite())
 
     self.assertEqual(data_new, elem.get_data())

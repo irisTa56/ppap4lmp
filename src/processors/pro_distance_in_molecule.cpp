@@ -12,8 +12,8 @@ create: 2018/08/25 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProDistanceInMolecule::ProDistanceInMolecule(
-  ShPtr<GenElement> mols,
-  ShPtr<GenElement> atoms)
+  ShPtr<Element> mols,
+  ShPtr<Element> atoms)
 {
   register_generator(ShPtr<GenDict>(
     new GenDict({{"Mols", mols}, {"Atoms", atoms}})));
@@ -22,7 +22,7 @@ ProDistanceInMolecule::ProDistanceInMolecule(
 /* ------------------------------------------------------------------ */
 
 ProDistanceInMolecule::ProDistanceInMolecule(
-  List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>> pairs)
+  List<std::pair<ShPtr<Element>,ShPtr<Element>>> pairs)
 {
   List<ShPtr<GenDict>> gens;
 

@@ -1,13 +1,13 @@
 import unittest
 import traceback
 
-from ppap4lmp import Element, StaDumpBox
+from ppap4lmp import create, StaDumpBox
 
 class TestStaDumpBox(unittest.TestCase):
 
   def test_error01(self):
 
-    box = Element(StaDumpBox("dummy.file", 0))
+    box = create(StaDumpBox("dummy.file", 0))
 
     try:
       box.get_data()
@@ -43,7 +43,7 @@ class TestStaDumpBox(unittest.TestCase):
 
   def _test_get_data(self, arguments, expectation):
 
-    box = Element(StaDumpBox(*arguments))
+    box = create(StaDumpBox(*arguments))
 
     self.assertEqual(box.get_data(), expectation)
 
@@ -65,6 +65,6 @@ class TestStaDumpBox(unittest.TestCase):
 
   def _test_get_keys(self, arguments, expectation):
 
-    box = Element(StaDumpBox(*arguments))
+    box = create(StaDumpBox(*arguments))
 
     self.assertEqual(box.get_keys(), expectation)

@@ -22,7 +22,7 @@ class ProMeanSquareDisplacement : public Processor {
     int index) override;
  public:
   ProMeanSquareDisplacement(
-    List<ShPtr<GenElement>> elems);
+    List<ShPtr<Element>> elems);
   virtual ~ProMeanSquareDisplacement() = default;
   virtual void prepare() override;
   virtual void finish() override;

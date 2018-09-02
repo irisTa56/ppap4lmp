@@ -7,7 +7,7 @@
 static void pybind_add_child_ids(py::module &m)
 {
   py::class_<AddChildIDs,PyUpdater<AddChildIDs>,Adder,Updater,ShPtr<AddChildIDs>>(m, "AddChildIDs")
-    .def(py::init<ShPtr<GenElement>,const Str &,const Str &>());
+    .def(py::init<ShPtr<Element>,const Str &,const Str &>());
 }
 
 #endif

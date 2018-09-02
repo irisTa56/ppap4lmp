@@ -3,7 +3,7 @@
 
 #include "aliases.h"
 
-class GenElement;
+class Element;
 
 class KeyChecker {
  protected:
@@ -16,10 +16,10 @@ class KeyChecker {
     const List<Str> &needkeys,
     Str suffix = "");
   virtual const bool check_key(
-    ShPtr<GenElement> elem,
+    ShPtr<Element> elem,
     const Str &needkey);
   virtual const bool check_keys(
-    ShPtr<GenElement> elem,
+    ShPtr<Element> elem,
     const List<Str> &needkeys);
   virtual const Str get_my_class_name();
  public:
@@ -27,6 +27,6 @@ class KeyChecker {
   virtual ~KeyChecker() = default;
 };
 
-#include <generators/gen_element.h>
+#include <generators/element.h>
 
 #endif

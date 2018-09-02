@@ -24,10 +24,10 @@ class ProDistanceInMolecule : public Processor {
     int index) override;
  public:
   ProDistanceInMolecule(
-    ShPtr<GenElement> mols,
-    ShPtr<GenElement> atoms);
+    ShPtr<Element> mols,
+    ShPtr<Element> atoms);
   ProDistanceInMolecule(
-    List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>> pairs);
+    List<std::pair<ShPtr<Element>,ShPtr<Element>>> pairs);
   virtual ~ProDistanceInMolecule() = default;
   virtual void prepare() override;
   virtual void finish() override;

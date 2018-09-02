@@ -7,8 +7,8 @@
 static void pybind_pro_radial_distribution_function(py::module &m)
 {
   py::class_<ProRadialDistributionFunction,PyProcessor<ProRadialDistributionFunction>,Processor,ShPtr<ProRadialDistributionFunction>>(m, "ProRadialDistributionFunction")
-    .def(py::init<ShPtr<GenElement>,ShPtr<GenElement>>())
-    .def(py::init<List<std::pair<ShPtr<GenElement>,ShPtr<GenElement>>>>())
+    .def(py::init<ShPtr<Element>,ShPtr<Element>>())
+    .def(py::init<List<std::pair<ShPtr<Element>,ShPtr<Element>>>>())
     .def("set_bin", &ProRadialDistributionFunction::set_bin)
     .def(
       "bin_from_r_to_r_plus_dr", &ProRadialDistributionFunction::bin_from_r_to_r_plus_dr,
