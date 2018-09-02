@@ -20,13 +20,4 @@ class StaMolecules : public Starter {
   virtual ~StaMolecules() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_sta_molecules(py::module &m)
-{
-  py::class_<StaMolecules,PyUpdater<StaMolecules>,Starter,Updater,ShPtr<StaMolecules>>(m, "StaMolecules")
-    .def(py::init<ShPtr<GenElement>>());
-}
-
 #endif

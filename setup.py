@@ -67,36 +67,44 @@ class CMakeBuild(build_ext):
 
 #-----------------------------------------------------------------------
 
-affixes = [
-  "generator", "processor", "invoker",
-  "updater", "starter", "filter", "adder"]
-
-all_header_names = [
-  os.path.basename(h)[:-2] for h in glob.glob("src/*.h") + glob.glob("src/*/*.h")]
+headers = sorted(glob.glob("src/pybind/*.h"))
 
 pybinds = []
-classnames = []
+classes = []
+functions = []
 
-for affix in affixes:
+for header in headers:
 
-  with open("src/headers_{}.h".format(affix), "w") as headers:
+  with open(header, "r") as f:
 
-    names = sorted(
-      [n for n in all_header_names if n.startswith(affix[:3])],
-      key=lambda x: x.replace("_", "~"))
+    lines = f.readlines()
 
-    for name in names:
-      headers.write("#include \"{}s/{}.h\"\n".format(affix, name))
+    for i, line in enumerate(lines):
 
-      with open("src/{}s/{}.h".format(affix, name), "r") as header:
-        for line in header:
-          line_ = line.lstrip()
-          if line_.startswith("static void pybind_"):
-            pybinds.append("  pybind_{}(m);".format(name))
-          elif line_.startswith("py::class_<") and 12 < len(line_):
-            classnames.append(re.split("[,<>]", line_[11:])[0])
+      line_ = line.lstrip()
 
-classnames.sort()
+      if line_.startswith("static void pybind_"):
+        pybinds.append("  {}(m);".format(line_[12:].split("(")[0]))
+      elif line_.startswith("py::class_<") and 12 < len(line_):
+        classes.append(re.split("[,<>]", line_[11:])[0])
+      elif line_.startswith("m.def("):
+        if 7 < len(line_):
+          functions.append(line_[6:].split("\"")[1])
+        else:
+          functions.append(lines[i+1].lstrip().split("\"")[1])
+
+def priority(x):
+  if x.count("element"):
+    return 1
+  elif x.count("updater"):
+    return 2
+  else:
+    return 3 + x.count("_")
+
+headers.sort(key=priority)
+pybinds.sort(key=priority)
+classes.sort()
+functions.sort()
 
 #-----------------------------------------------------------------------
 
@@ -107,22 +115,16 @@ with open("src/pybind.h", "w") as f:
 
 #include <pybind11/pybind11.h>
 
-{headers}
-
-#include "utils_py.h"
+{}
 
 PYBIND11_MODULE(_ppap4lmp, m)
 {{
-{pybind}
-
-  pybind_utils(m);
+{}
 }}
-
 #endif
 """.format(
-  headers="\n".join([
-    "#include \"headers_{}.h\"".format(affix) for affix in affixes]),
-  pybind="\n".join(pybinds)))
+  "\n".join(["#include \"{}\"".format(h[4:]) for h in headers]),
+  "\n".join(pybinds)))
 
 #-----------------------------------------------------------------------
 
@@ -130,14 +132,13 @@ with open("ppap4lmp/__init__.py", "w") as f:
 
   f.write("""from ._version import version_info, __version__
 from ._ppap4lmp import \\
-  {}, Element, log_switch
-
+  {}
 __all__ = [
-  "{}",
-  "Element",
-  "log_switch",
+  "{}"
 ]
-""".format(", ".join(classnames), "\", \n  \"".join(classnames)))
+""".format(
+  ", ".join(classes + functions),
+  "\", \n  \"".join(classes + functions)))
 
 #-----------------------------------------------------------------------
 

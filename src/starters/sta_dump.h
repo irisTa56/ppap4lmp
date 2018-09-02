@@ -20,14 +20,4 @@ class StaDump : public Starter {
   virtual ~StaDump() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_sta_dump(py::module &m)
-{
-  py::class_<
-    StaDump,PyUpdater<StaDump>,Starter,Updater,ShPtr<StaDump>>(m, "StaDump")
-    .def(py::init<const Str &, int>());
-}
-
 #endif

@@ -27,16 +27,4 @@ class AddRename : public Adder, public EnShThis<AddRename> {
     bool do_overwrite_ = true);
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_add_rename(py::module &m)
-{
-  py::class_<AddRename,PyUpdater<AddRename>,Adder,Updater,ShPtr<AddRename>>(m, "AddRename")
-    .def(py::init<const Str &,const Str &>())
-    .def(
-      "overwrite", &AddRename::overwrite,
-      py::arg("do_overwrite_") = true);
-}
-
 #endif

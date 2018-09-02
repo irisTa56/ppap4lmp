@@ -19,14 +19,4 @@ class Adder : public Updater {
     int dataid) override;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_adder(py::module &m)
-{
-  py::class_<
-    Adder,PyUpdater<Adder>,Updater,ShPtr<Adder>>(m, "Adder")
-    .def(py::init<>());
-}
-
 #endif

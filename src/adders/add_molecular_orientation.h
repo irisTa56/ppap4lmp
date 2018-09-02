@@ -19,13 +19,4 @@ class AddMolecularOrientation : public Adder {
   virtual ~AddMolecularOrientation() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_add_molecular_orientation(py::module &m)
-{
-  py::class_<AddMolecularOrientation,PyUpdater<AddMolecularOrientation>,Adder,Updater,ShPtr<AddMolecularOrientation>>(m, "AddMolecularOrientation")
-    .def(py::init<>());
-}
-
 #endif

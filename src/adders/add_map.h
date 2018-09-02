@@ -29,16 +29,4 @@ class AddMap : public Adder, public EnShThis<AddMap> {
     bool do_overwrite_ = true);
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_add_map(py::module &m)
-{
-  py::class_<AddMap,PyUpdater<AddMap>,Adder,Updater,ShPtr<AddMap>>(m, "AddMap")
-    .def(py::init<const Str &,const Str &,const Dict<Json,Json> &>())
-    .def(
-      "overwrite", &AddMap::overwrite,
-      py::arg("do_overwrite_") = true);
-}
-
 #endif

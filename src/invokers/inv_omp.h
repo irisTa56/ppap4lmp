@@ -17,14 +17,4 @@ class InvOMP : public Invoker {
   virtual ~InvOMP() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_inv_omp(py::module &m)
-{
-  py::class_<InvOMP,PyInvoker<InvOMP>,Invoker,ShPtr<InvOMP>>(m, "InvOMP")
-    .def(py::init<ShPtr<Processor>>())
-    .def(py::init<List<ShPtr<Processor>>>());
-}
-
 #endif

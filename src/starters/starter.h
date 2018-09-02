@@ -21,14 +21,4 @@ class Starter : public Updater {
     int dataid) override;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_starter(py::module &m)
-{
-  py::class_<
-    Starter,PyUpdater<Starter>,Updater,ShPtr<Starter>>(m, "Starter")
-    .def(py::init<>());
-}
-
 #endif

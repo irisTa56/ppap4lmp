@@ -25,13 +25,4 @@ class AddChildIDs : public Adder {
   virtual ~AddChildIDs() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_add_child_ids(py::module &m)
-{
-  py::class_<AddChildIDs,PyUpdater<AddChildIDs>,Adder,Updater,ShPtr<AddChildIDs>>(m, "AddChildIDs")
-    .def(py::init<ShPtr<GenElement>,const Str &,const Str &>());
-}
-
 #endif

@@ -26,13 +26,4 @@ class AddCoMPositions : public Adder {
   virtual ~AddCoMPositions() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_add_com_positions(py::module &m)
-{
-  py::class_<AddCoMPositions,PyUpdater<AddCoMPositions>,Adder,Updater,ShPtr<AddCoMPositions>>(m, "AddCoMPositions")
-    .def(py::init<ShPtr<GenElement>>());
-}
-
 #endif

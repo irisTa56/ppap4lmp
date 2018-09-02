@@ -26,14 +26,4 @@ class StaBeads : public Starter {
   virtual ~StaBeads() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_sta_beads(py::module &m)
-{
-  py::class_<StaBeads,PyUpdater<StaBeads>,Starter,Updater,ShPtr<StaBeads>>(m, "StaBeads")
-    .def(py::init<ShPtr<GenElement>,const List<Json> &>())
-    .def(py::init<ShPtr<GenElement>,const Dict<int,List<Json>> &>());
-}
-
 #endif

@@ -22,13 +22,4 @@ class StaDumpAtoms : public StaDump {
   virtual ~StaDumpAtoms() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_sta_dump_atoms(py::module &m)
-{
-  py::class_<StaDumpAtoms,PyUpdater<StaDumpAtoms>,StaDump,Starter,Updater,ShPtr<StaDumpAtoms>>(m, "StaDumpAtoms")
-    .def(py::init<const Str &, int>());
-}
-
 #endif

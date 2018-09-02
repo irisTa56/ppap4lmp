@@ -24,14 +24,4 @@ class FilSet : public Filter {
   virtual ~FilSet() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_fil_set(py::module &m)
-{
-  py::class_<FilSet,PyUpdater<FilSet>,Filter,Updater,ShPtr<FilSet>>(m, "FilSet")
-    .def(py::init<const Dict<Str,Set<Json>> &>())
-    .def(py::init<ShPtr<GenElement>,const Dict<Str,Set<Json>> &>());
-}
-
 #endif

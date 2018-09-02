@@ -22,13 +22,4 @@ class StaCustom : public Starter {
   virtual ~StaCustom() = default;
 };
 
-/* ------------------------------------------------------------------ */
-// for pybind11
-
-static void pybind_sta_custom(py::module &m)
-{
-  py::class_<StaCustom,PyUpdater<StaCustom>,Starter,Updater,ShPtr<StaCustom>>(m, "StaCustom")
-    .def(py::init<const Json &>());
-}
-
 #endif
