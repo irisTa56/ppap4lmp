@@ -1,5 +1,6 @@
 #!/bin/bash
 
-tar xzvf tests/archive.dumps_bead.tar.gz
-tar xzvf tests/archive.dumps_atom.tar.gz
-python tests/test.py
+cd tests
+tar xzvf archive.dumps_bead.tar.gz
+tar xzvf archive.dumps_atom.tar.gz
+python test.py

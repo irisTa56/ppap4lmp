@@ -12,26 +12,36 @@ abstract class Generator {
   ~Vec<UodatePair> get_update_chain()
 }
 
+
 class UpdatePair.Element {
   ~Element()
   -{static} int instance_count
-  -int dataid
   -int n_remain
+  -int dataid
   -Json data
-  -Set<Str> datakeys
+  -DataKeys datakeys
   -omp_lock_t omp_lock
+  -void increment_remain()
+  -void decrement_remain()
+  -void update_data(Updater*)
   ~Element* get_element(Json)
   ~Generator* get_generator(Json)
-  ~void increment_remain()
-  ~void decrement_remain()
-  ~void update_data(Updater*)
   +Element* append_updater(Updater*)
+  ~Json get_data()
+  ~Json get_data(Json)
+  ~DataKeys get_keys()
+  ~void array1d(&ArrayX?, Str)
+  ~void array2d(&ArrayXX?, Vec<Str>)
+
+  ~void required(Json)
+  ~bool optional(Json)
+
   +Json get_data()
   +Set<Str> get_keys()
   +ArrayXi get_1d_int(Str)
-  +ArrayXd get_1d_double(Str)
-  +ArrayXXi get_2d_int(Vec<Str>)
-  +ArrayXXd get_2d_double(Vec<Str>)
+  +ArrayXd get_1d_float(Str)
+  +ArrayXXi get_2d_int(py::args)
+  +ArrayXXd get_2d_float(py::args)
 
   +Element* create(Updater*)
 }
@@ -58,19 +68,21 @@ class GenDict {
 
 Generator <|-- GenDict
 
+
 abstract class UpdatePair.Updater {
   -Set<int> dataid_blacklist
   -omp_lock_t omp_lock
   #Generator* ext_generator
-  #{abstract} void compute_impl(Json, Set<Str>)
+  #{abstract} void compute_impl(&Json, &DataKeys)
   #bool check_blacklist(int)
-  ~{abstract} void compute(Json, Set<Str>, int)
+  ~{abstract} void compute(&Json, &DataKeys, int)
   ~void remove_from_blacklist(int)
   ~Generator* get_ext_generator()
 }
 
+
 abstract class Adder {
-  ~void compute(Json, Set<Str>, int)
+  ~void compute(&Json, &DataKeys, int)
 }
 
 UpdatePair.Updater <|-- Adder
@@ -81,7 +93,7 @@ class AddMap {
   -Str key_ref
   -Str key_new
   -Map<Json,Json> mapping
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
   +AddMap* overwrite(bool)
 }
 
@@ -92,7 +104,7 @@ class AddRename {
   -bool overwrite
   -Str key_old
   -Str key_new
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
   +AddRename* overwrite(bool)
 }
 
@@ -100,7 +112,7 @@ Adder <|-- AddRename
 
 class AddWrappedPositions {
   +AddWrappedPositions(Element*)
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Adder <|---- AddWrappedPositions
@@ -109,7 +121,7 @@ class AddCoMPositions {
   +AddCoMPositions(Element*)
   -compute_with_weights(Json, Element*)
   -compute_without_weights(Json, Element*)
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Adder <|---- AddCoMPositions
@@ -118,7 +130,7 @@ class AddInertiaMoment {
   +AddInertiaMoment(Element*)
   -compute_with_weights(Json, Element*)
   -compute_without_weights(Json, Element*)
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Adder <|---- AddInertiaMoment
@@ -127,7 +139,7 @@ class AddGyrationRadius {
   +AddGyrationRadius()
   -bool add_squared
   -bool add_sqrted
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
   +AddGyrationRadius* with_squared(bool)
   +AddGyrationRadius* without_sqrted(bool)
 }
@@ -136,7 +148,7 @@ Adder <|---- AddGyrationRadius
 
 class AddMolecularOrientation {
   +AddMolecularOrientation()
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Adder <|---- AddMolecularOrientation
@@ -145,7 +157,7 @@ class AddChildIDs {
   +AddChildIDs(Element*, Str, Str)
   -Str child_name
   -Str key_for_parent_id
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Adder <|---- AddChildIDs
@@ -154,14 +166,14 @@ class AddSpecialBonds {
   +AddSpecialBonds(Element*, Vec<Vec<int>>)
   +AddSpecialBonds(Element*, Map<int,Vec<Vec<int>>>)
   -Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Adder <|---- AddSpecialBonds
 
 abstract class Starter {
   -void sort_by_id(Json)
-  ~void compute(Json, Set<Str>, int)
+  ~void compute(&Json, &DataKeys, int)
 }
 
 UpdatePair.Updater <|-- Starter
@@ -170,7 +182,7 @@ class StaCustom {
   +StaCustom(Json)
   -Json json
   -Set<Str> jsonkeys
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Starter <|-- StaCustom
@@ -185,21 +197,21 @@ Starter <|-- StaDump
 class StaDumpAtoms {
   +StaDumpAtoms(Str, int)
   -Vec<bool> make_is_int_vector(Str)
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 StaDump <|-- StaDumpAtoms
 
 class StaDumpBox {
   +StaDumpBox(Str, int)
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 StaDump <|-- StaDumpBox
 
 class StaMolecules {
   +StaMolecules(Element*)
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Starter <|-- StaMolecules
@@ -209,13 +221,13 @@ class StaBeads {
   +StaBeads(Element*, Map<int,Vec<Json>>)
   -Map<int,Vec<Json>> mol_type_to_abst_beads
   -std::pair<bool,bool> check_mol_type_to_abst_beads()
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Starter <|-- StaBeads
 
 abstract class Filter {
-  ~void compute(Json, Set<Str>, int)
+  ~void compute(&Json, &DataKeys, int)
 }
 
 UpdatePair.Updater <|-- Filter
@@ -224,7 +236,7 @@ class FilSet {
   +FilSet(Map<Str,Set<Json>>)
   +FilSet(Element*, Map<Str,Set<Json>>)
   -Map<Str,Set<Json>> value_sets
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Filter <|-- FilSet
@@ -237,10 +249,11 @@ class FilComparison {
   -Vec<tuple<Str,Str,Json>> comparisons
   -function make_lambda(Str, Json)
   -Vec<pair<Str,function>> convert_to_funcs(Vec<tuple<Str,Str,Json>>)
-  #void compute_impl(Json, Set<Str>)
+  #void compute_impl(&Json, &DataKeys)
 }
 
 Filter <|-- FilComparison
+
 
 abstract class Processor {
   -int i_generator
@@ -257,6 +270,7 @@ abstract class Processor {
   ~void finish()
   ~bool run()
 }
+
 
 class ProData {
   +ProData(Element*)
@@ -371,6 +385,7 @@ class ProMeanSquareDisplacement {
 
 Processor <|-- ProMeanSquareDisplacement
 
+
 abstract class Invoker {
   #int n_processors
   #Vec<Processor*> processors
@@ -378,25 +393,14 @@ abstract class Invoker {
   +void execute()
 }
 
-class InvoOMP {
+
+class InvOMP {
   +InvOMP(Processor*)
   +InvOMP(Vec<Processor*>)
   #void execute_impl()
 }
 
-Invoker <|-- InvoOMP
-
-class KeyChecker {
-  ~KeyChecker()
-  #bool check_key(Set<Str>, Str, Str)
-  #bool check_key(Set<Str>, Vec<Str>, Str)
-  #bool check_key(Element*, Str)
-  #bool check_key(Element*, Vec<Str>)
-  #Str get_my_class_name()
-}
-
-KeyChecker <|---- UpdatePair.Updater
-KeyChecker <|---- Processor
+Invoker <|-- InvOMP
 
 Generator "*" o---- "*" UpdatePair
 
