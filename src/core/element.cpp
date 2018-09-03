@@ -93,7 +93,7 @@ void Element::update_data(
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<Element> Element::get_element(
+ElPtr Element::get_element(
   const Json &name)
 {
   if (name != nullptr)
@@ -122,7 +122,7 @@ ShPtr<Generator> Element::get_generator(
   The following method is thread-unsafe. It is assumed to be not called
   from multithreads.
 */
-ShPtr<Element> Element::append_updater(
+ElPtr Element::append_updater(
   const ShPtr<Updater> &upd)
 {
   auto gen = upd->get_ext_generator();

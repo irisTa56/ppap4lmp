@@ -7,7 +7,7 @@
 static void pybind_pro_mean_square_displacement(py::module &m)
 {
   py::class_<ProMeanSquareDisplacement,PyProcessor<ProMeanSquareDisplacement>,Processor,ShPtr<ProMeanSquareDisplacement>>(m, "ProMeanSquareDisplacement")
-    .def(py::init<const Vec<ShPtr<Element>> &>())
+    .def(py::init<const Vec<ElPtr> &>())
     .def("set_dimension", &ProMeanSquareDisplacement::set_dimension)
     .def(
       "without_drift_correction", &ProMeanSquareDisplacement::without_drift_correction,

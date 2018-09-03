@@ -22,7 +22,7 @@ class ProMeanSquareDisplacement : public Processor {
     const int index) override;
  public:
   ProMeanSquareDisplacement(
-    const Vec<ShPtr<Element>> &elems);
+    const Vec<ElPtr> &elems);
   virtual ~ProMeanSquareDisplacement() = default;
   virtual void prepare() override;
   virtual void finish() override;

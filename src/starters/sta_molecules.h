@@ -16,7 +16,7 @@ class StaMolecules : public Starter {
     DataKeys &datakeys) override;
  public:
   StaMolecules(
-    const ShPtr<Element> &el_atoms);
+    const ElPtr &el_atoms);
   virtual ~StaMolecules() = default;
 };
 

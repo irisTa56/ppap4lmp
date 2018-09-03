@@ -12,7 +12,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 AddCoMPositions::AddCoMPositions(
-  const ShPtr<Element> &elem)
+  const ElPtr &elem)
 {
   ext_generator = elem;
 }
@@ -21,7 +21,7 @@ AddCoMPositions::AddCoMPositions(
 
 void AddCoMPositions::compute_with_weights(
   Json &data,
-  const ShPtr<Element> &el_atoms)
+  const ElPtr &el_atoms)
 {
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
@@ -67,7 +67,7 @@ void AddCoMPositions::compute_with_weights(
 
 void AddCoMPositions::compute_without_weights(
   Json &data,
-  const ShPtr<Element> &el_atoms)
+  const ElPtr &el_atoms)
 {
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 

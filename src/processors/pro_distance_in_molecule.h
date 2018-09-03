@@ -24,10 +24,10 @@ class ProDistanceInMolecule : public Processor {
     const int index) override;
  public:
   ProDistanceInMolecule(
-    const ShPtr<Element> &mols,
-    const ShPtr<Element> &atoms);
+    const ElPtr &mols,
+    const ElPtr &atoms);
   ProDistanceInMolecule(
-    const Vec<std::pair<ShPtr<Element>,ShPtr<Element>>> &pairs);
+    const Vec<std::pair<ElPtr,ElPtr>> &pairs);
   virtual ~ProDistanceInMolecule() = default;
   virtual void prepare() override;
   virtual void finish() override;

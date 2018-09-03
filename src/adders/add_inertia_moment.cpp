@@ -12,7 +12,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 AddInertiaMoment::AddInertiaMoment(
-  const ShPtr<Element> &elem)
+  const ElPtr &elem)
 {
   ext_generator = elem;
 }
@@ -21,7 +21,7 @@ AddInertiaMoment::AddInertiaMoment(
 
 void AddInertiaMoment::compute_with_weights(
   Json &data,
-  const ShPtr<Element> &el_atoms)
+  const ElPtr &el_atoms)
 {
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
@@ -71,7 +71,7 @@ void AddInertiaMoment::compute_with_weights(
 
 void AddInertiaMoment::compute_without_weights(
   Json &data,
-  const ShPtr<Element> &el_atoms)
+  const ElPtr &el_atoms)
 {
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 

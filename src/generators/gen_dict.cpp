@@ -27,7 +27,7 @@ GenDict::GenDict(
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<Element> GenDict::get_element(
+ElPtr GenDict::get_element(
   const Json &name)
 {
   if (!name.is_string())

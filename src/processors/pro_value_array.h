@@ -19,9 +19,9 @@ class ProValueArray : public Processor {
     const int index) override;
  public:
   ProValueArray(
-    const ShPtr<Element> &elem);
+    const ElPtr &elem);
   ProValueArray(
-    const Vec<ShPtr<Element>> &elems);
+    const Vec<ElPtr> &elems);
   virtual ~ProValueArray() = default;
   virtual void prepare() override;
   virtual void finish() override;

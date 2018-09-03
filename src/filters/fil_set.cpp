@@ -17,7 +17,7 @@ FilSet::FilSet(
 /* ------------------------------------------------------------------ */
 
 FilSet::FilSet(
-  const ShPtr<Element> &elem,
+  const ElPtr &elem,
   const Map<Str,Set<Json>> &value_sets_) : Filter(elem)
 {
   value_sets = value_sets_;

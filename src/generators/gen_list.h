@@ -15,7 +15,7 @@ class GenList : public Generator {
   GenList(
     const Vec<ShPtr<Generator>> &generator_list_);
   virtual ~GenList() = default;
-  virtual ShPtr<Element> get_element(
+  virtual ElPtr get_element(
     const Json &name = nullptr) override;
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;

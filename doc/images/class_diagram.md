@@ -408,4 +408,7 @@ Processor "*" o---- "*" Generator
 Invoker "*" o---- "*" Processor
 
 UpdatePair.Element .left> UpdatePair.Updater : use
+
+
+Generator .. UpdatePair.Element : friend >
 ```

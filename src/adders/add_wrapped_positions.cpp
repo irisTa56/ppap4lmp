@@ -9,7 +9,7 @@ create: 2018/07/07 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 AddWrappedPositions::AddWrappedPositions(
-  const ShPtr<Element> &elem)
+  const ElPtr &elem)
 {
   ext_generator = elem;
 }

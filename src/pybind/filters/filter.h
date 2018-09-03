@@ -9,7 +9,7 @@ static void pybind_filter(py::module &m)
   py::class_<
     Filter,PyUpdater<Filter>,Updater,ShPtr<Filter>>(m, "Filter")
     .def(py::init<>())
-    .def(py::init<const ShPtr<Element> &>());
+    .def(py::init<const ElPtr &>());
 }
 
 #endif

@@ -7,8 +7,8 @@
 static void pybind_sta_beads(py::module &m)
 {
   py::class_<StaBeads,PyUpdater<StaBeads>,Starter,Updater,ShPtr<StaBeads>>(m, "StaBeads")
-    .def(py::init<const ShPtr<Element> &,const Vec<Json> &>())
-    .def(py::init<const ShPtr<Element> &,const Map<int,Vec<Json>> &>());
+    .def(py::init<const ElPtr &,const Vec<Json> &>())
+    .def(py::init<const ElPtr &,const Map<int,Vec<Json>> &>());
 }
 
 #endif

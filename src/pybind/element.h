@@ -8,11 +8,11 @@
 class PyElement : public Element {
  public:
   using Element::Element;
-  ShPtr<Element> get_element(
+  ElPtr get_element(
     const Json &name) override
   {
     PYBIND11_OVERLOAD(
-      ShPtr<Element>, Element, get_element, name);
+      ElPtr, Element, get_element, name);
   }
   ShPtr<Generator> get_generator(
     const Json &name) override
@@ -25,7 +25,7 @@ class PyElement : public Element {
 static void pybind_element(py::module &m)
 {
   py::class_<
-    Element,PyElement,ShPtr<Element>>(m, "Element")
+    Element,PyElement,ElPtr>(m, "Element")
     .def(py::init<>())
     .def("append_updater", &Element::append_updater)
     .def("get_data", &Element::get_data_py)
@@ -43,7 +43,7 @@ static void pybind_element(py::module &m)
     "create",
     [](ShPtr<Updater> upd)
     {
-      return ShPtr<Element>(
+      return ElPtr(
         new Element())->append_updater(upd);
     });
 }

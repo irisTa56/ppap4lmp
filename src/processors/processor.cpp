@@ -25,7 +25,7 @@ void Processor::register_generator(
 }
 
 template void Processor::register_generator(
-  const ShPtr<Element> &gen);
+  const ElPtr &gen);
 template void Processor::register_generator(
   const ShPtr<GenDict> &gen);
 template void Processor::register_generator(
@@ -53,7 +53,7 @@ void Processor::register_generators(
 }
 
 template void Processor::register_generators(
-  const Vec<ShPtr<Element>> &gens);
+  const Vec<ElPtr> &gens);
 template void Processor::register_generators(
   const Vec<ShPtr<GenDict>> &gens);
 template void Processor::register_generators(

@@ -28,10 +28,10 @@ class FilComparison : public Filter {
   FilComparison(
     const Vec<std::tuple<Str,Str,Json>> &comparisons_);
   FilComparison(
-    const ShPtr<Element> &elem,
+    const ElPtr &elem,
     const std::tuple<Str,Str,Json> &comparison_);
   FilComparison(
-    const ShPtr<Element> &elem,
+    const ElPtr &elem,
     const Vec<std::tuple<Str,Str,Json>> &comparisons_);
   virtual ~FilComparison() = default;
 };

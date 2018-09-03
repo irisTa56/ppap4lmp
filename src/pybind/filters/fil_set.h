@@ -8,7 +8,7 @@ static void pybind_fil_set(py::module &m)
 {
   py::class_<FilSet,PyUpdater<FilSet>,Filter,Updater,ShPtr<FilSet>>(m, "FilSet")
     .def(py::init<const Map<Str,Set<Json>> &>())
-    .def(py::init<const ShPtr<Element> &,const Map<Str,Set<Json>> &>());
+    .def(py::init<const ElPtr &,const Map<Str,Set<Json>> &>());
 }
 
 #endif

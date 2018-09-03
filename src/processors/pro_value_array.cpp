@@ -16,7 +16,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 ProValueArray::ProValueArray(
-  const ShPtr<Element> &elem)
+  const ElPtr &elem)
 {
   register_generator(elem);
 }
@@ -24,7 +24,7 @@ ProValueArray::ProValueArray(
 /* ------------------------------------------------------------------ */
 
 ProValueArray::ProValueArray(
-  const Vec<ShPtr<Element>> &elems)
+  const Vec<ElPtr> &elems)
 {
   register_generators(elems);
 }

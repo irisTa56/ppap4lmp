@@ -74,4 +74,6 @@ class Element : public Generator, public EnShThis<Element> {
   void init_for_python();
 };
 
+using ElPtr = ShPtr<Element>;
+
 #endif

@@ -17,9 +17,9 @@ class ProData : public Processor {
     const int index) override;
  public:
   ProData(
-    const ShPtr<Element> &elem);
+    const ElPtr &elem);
   ProData(
-    const Vec<ShPtr<Element>> &elems);
+    const Vec<ElPtr> &elems);
   virtual ~ProData() = default;
   virtual void prepare() override;
   void select(

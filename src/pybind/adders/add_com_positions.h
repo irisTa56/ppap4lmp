@@ -7,7 +7,7 @@
 static void pybind_add_com_positions(py::module &m)
 {
   py::class_<AddCoMPositions,PyUpdater<AddCoMPositions>,Adder,Updater,ShPtr<AddCoMPositions>>(m, "AddCoMPositions")
-    .def(py::init<const ShPtr<Element> &>());
+    .def(py::init<const ElPtr &>());
 }
 
 #endif

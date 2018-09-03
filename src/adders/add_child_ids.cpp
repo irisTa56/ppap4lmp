@@ -14,7 +14,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 AddChildIDs::AddChildIDs(
-  const ShPtr<Element> &elem,
+  const ElPtr &elem,
   const Str &child_name_,
   const Str &key_for_parent_id_)
 {

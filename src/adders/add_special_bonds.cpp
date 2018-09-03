@@ -14,7 +14,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  const ShPtr<Element> &el_mols,
+  const ElPtr &el_mols,
   const Vec<Vec<int>> &scheme)
 {
   ext_generator = el_mols;
@@ -25,7 +25,7 @@ AddSpecialBonds::AddSpecialBonds(
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  const ShPtr<Element> &el_mols,
+  const ElPtr &el_mols,
   const Map<int,Vec<Vec<int>>> &schemes)
 {
   ext_generator = el_mols;

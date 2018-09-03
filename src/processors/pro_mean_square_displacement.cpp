@@ -13,7 +13,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 ProMeanSquareDisplacement::ProMeanSquareDisplacement(
-  const Vec<ShPtr<Element>> &elems)
+  const Vec<ElPtr> &elems)
 {
   register_generators(elems);
 }

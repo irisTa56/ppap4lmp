@@ -14,7 +14,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 ProData::ProData(
-  const ShPtr<Element> &elem)
+  const ElPtr &elem)
 {
   register_generator(elem);
 }
@@ -22,7 +22,7 @@ ProData::ProData(
 /* ------------------------------------------------------------------ */
 
 ProData::ProData(
-  const Vec<ShPtr<Element>> &elems)
+  const Vec<ElPtr> &elems)
 {
   register_generators(elems);
 }

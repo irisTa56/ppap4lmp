@@ -24,10 +24,10 @@ class ProRadialDistributionFunction : public Processor {
     const int index) override;
  public:
   ProRadialDistributionFunction(
-    const ShPtr<Element> &atoms,
-    const ShPtr<Element> &box);
+    const ElPtr &atoms,
+    const ElPtr &box);
   ProRadialDistributionFunction(
-    const Vec<std::pair<ShPtr<Element>,ShPtr<Element>>> &pairs);
+    const Vec<std::pair<ElPtr,ElPtr>> &pairs);
   virtual ~ProRadialDistributionFunction() = default;
   virtual void prepare() override;
   virtual void finish() override;

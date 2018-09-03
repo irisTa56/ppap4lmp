@@ -15,8 +15,8 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 ProDistanceInMolecule::ProDistanceInMolecule(
-  const ShPtr<Element> &mols,
-  const ShPtr<Element> &atoms)
+  const ElPtr &mols,
+  const ElPtr &atoms)
 {
   register_generator(ShPtr<GenDict>(
     new GenDict({{"Mols", mols}, {"Atoms", atoms}})));
@@ -25,7 +25,7 @@ ProDistanceInMolecule::ProDistanceInMolecule(
 /* ------------------------------------------------------------------ */
 
 ProDistanceInMolecule::ProDistanceInMolecule(
-  const Vec<std::pair<ShPtr<Element>,ShPtr<Element>>> &pairs)
+  const Vec<std::pair<ElPtr,ElPtr>> &pairs)
 {
   Vec<ShPtr<GenDict>> gens;
 

@@ -12,7 +12,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 Filter::Filter(
-  const ShPtr<Element> &elem)
+  const ElPtr &elem)
 {
   ext_generator = elem;
 }

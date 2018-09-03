@@ -9,7 +9,7 @@ create: 2018/07/07 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 StaMolecules::StaMolecules(
-  const ShPtr<Element> &el_atoms)
+  const ElPtr &el_atoms)
 {
   ext_generator = el_atoms;
 }

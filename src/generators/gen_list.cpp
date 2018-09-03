@@ -27,7 +27,7 @@ GenList::GenList(
 
 /* ------------------------------------------------------------------ */
 
-ShPtr<Element> GenList::get_element(
+ElPtr GenList::get_element(
   const Json &name)
 {
   if (!name.is_number_integer())

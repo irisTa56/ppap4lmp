@@ -28,7 +28,7 @@ FilComparison::FilComparison(
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
-  const ShPtr<Element> &elem,
+  const ElPtr &elem,
   const std::tuple<Str,Str,Json> &comparison_) : Filter(elem)
 {
   comparisons = {comparison_};
@@ -37,7 +37,7 @@ FilComparison::FilComparison(
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
-  const ShPtr<Element> &elem,
+  const ElPtr &elem,
   const Vec<std::tuple<Str,Str,Json>> &comparisons_) : Filter(elem)
 {
   comparisons = comparisons_;

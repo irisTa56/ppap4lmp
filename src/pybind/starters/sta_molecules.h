@@ -7,7 +7,7 @@
 static void pybind_sta_molecules(py::module &m)
 {
   py::class_<StaMolecules,PyUpdater<StaMolecules>,Starter,Updater,ShPtr<StaMolecules>>(m, "StaMolecules")
-    .def(py::init<const ShPtr<Element> &>());
+    .def(py::init<const ElPtr &>());
 }
 
 #endif

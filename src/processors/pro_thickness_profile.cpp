@@ -10,8 +10,8 @@ create: 2018/07/08 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 ProThicknessProfile::ProThicknessProfile(
-  const ShPtr<Element> &atoms,
-  const ShPtr<Element> &box)
+  const ElPtr &atoms,
+  const ElPtr &box)
 {
   register_generator(ShPtr<GenDict>(
     new GenDict({{"Atoms", atoms}, {"Box", box}})));
@@ -20,7 +20,7 @@ ProThicknessProfile::ProThicknessProfile(
 /* ------------------------------------------------------------------ */
 
 ProThicknessProfile::ProThicknessProfile(
-  const Vec<std::pair<ShPtr<Element>,ShPtr<Element>>> &pairs)
+  const Vec<std::pair<ElPtr,ElPtr>> &pairs)
 {
   Vec<ShPtr<GenDict>> gens;
 

@@ -16,7 +16,7 @@ class AddWrappedPositions : public Adder {
     DataKeys &datakeys) override;
  public:
   AddWrappedPositions(
-    const ShPtr<Element> &elem);
+    const ElPtr &elem);
   virtual ~AddWrappedPositions() = default;
 };
 

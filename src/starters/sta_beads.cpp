@@ -12,7 +12,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 StaBeads::StaBeads(
-  const ShPtr<Element> &el_mols,
+  const ElPtr &el_mols,
   const Vec<Json> &scheme)
 {
   ext_generator = el_mols;
@@ -23,7 +23,7 @@ StaBeads::StaBeads(
 /* ------------------------------------------------------------------ */
 
 StaBeads::StaBeads(
-  const ShPtr<Element> &el_mols,
+  const ElPtr &el_mols,
   const Map<int,Vec<Json>> &schemes)
 {
   ext_generator = el_mols;
