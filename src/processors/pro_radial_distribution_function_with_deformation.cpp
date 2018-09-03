@@ -1,36 +1,34 @@
 /* ---------------------------------------------------------------------
-ProRadialDistributionFunction: stands for Processor which computes
-Radial Distribution Function (RDF) from wrapped positions.
+ProRadialDistributionFunctionWithDeformation: stands for Processor
+which computes Radial Distribution Function (RDF) taking Deformation
+into consideration; Deformation is guessed using gyration radius around
+perpendicular and parallel directions of the point-to-point vector.
 
-create: 2018/08/19 by Takayuki Kobayashi
+create: 2018/09/03 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
 #define _USE_MATH_DEFINES
 
 #include <cmath>
 
-#include "pro_radial_distribution_function.h"
+#include "pro_radial_distribution_function_with_deformation.h"
 #include "../utils/message.h"
 
 namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
 
-ProRadialDistributionFunction::ProRadialDistributionFunction(
-  const ElPtr &atoms,
+ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunctionWithDeformation(
+  const ElPtr &beads,
   const ElPtr &box)
 {
-  /* NOTE:
-    Although 'Atoms' is used as key, you can compute RDF of beads and
-    molecules.
-  */
   register_generator(ShPtr<GenDict>(
-    new GenDict({{"Atoms", atoms}, {"Box", box}})));
+    new GenDict({{"Beads", beads}, {"Box", box}})));
 }
 
 /* ------------------------------------------------------------------ */
 
-ProRadialDistributionFunction::ProRadialDistributionFunction(
+ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunctionWithDeformation(
   const Vec<std::pair<ElPtr,ElPtr>> &pairs)
 {
   Vec<ShPtr<GenDict>> gens;
@@ -38,7 +36,7 @@ ProRadialDistributionFunction::ProRadialDistributionFunction(
   for (const auto &pair : pairs)
   {
     gens.push_back(ShPtr<GenDict>(
-      new GenDict({{"Atoms", pair.first}, {"Box", pair.second}})));
+      new GenDict({{"Beads", pair.first}, {"Box", pair.second}})));
   }
 
   register_generators(gens);
@@ -46,16 +44,18 @@ ProRadialDistributionFunction::ProRadialDistributionFunction(
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::run_impl(
+void ProRDFWD::run_impl(
   const int index)
 {
-  auto el_atoms = generators[index]->get_element("Atoms");
+  auto el_beads = generators[index]->get_element("Beads");
 
-  el_atoms->required({"x", "y", "z", "id"});
+  el_beads->required({
+    "I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx", "mass",
+    "x", "y", "z", "id"});
 
-  auto &atoms = el_atoms->get_data();
+  auto &beads = el_beads->get_data();
 
-  bool special_bonds_exist = el_atoms->optional("special-bonds");
+  bool special_bonds_exist = el_beads->optional("special-bonds");
 
   auto el_box = generators[index]->get_element("Box");
 
@@ -63,8 +63,23 @@ void ProRadialDistributionFunction::run_impl(
 
   auto &box = el_box->get_data();
 
-  ArrayXXd rs;
-  el_atoms->array2d(rs, {"x", "y", "z"});
+  // preparation
+
+  auto n_beads = beads.size();
+
+  Vec<std::pair<VectorXd,MatrixXd>> rs_and_Is_per_mass;
+  rs_and_Is_per_mass.reserve(n_beads);
+
+  for (const auto &bead : beads)
+  {
+    rs_and_Is_per_mass.push_back(std::make_pair(
+      (Eigen::Vector3d() << bead["x"], bead["y"], bead["z"])
+      .finished(),
+      (Eigen::Matrix3d() << bead["I_xx"], bead["I_xy"], bead["I_zx"],
+                            bead["I_xy"], bead["I_yy"], bead["I_yz"],
+                            bead["I_zx"], bead["I_yz"], bead["I_zz"])
+      .finished() / bead["mass"].get<double>()));
+  }
 
   ArrayXd length(3);
   length << box["hi_x"].get<double>() - box["lo_x"].get<double>(),
@@ -75,11 +90,13 @@ void ProRadialDistributionFunction::run_impl(
 
   auto r_max = bin_from_r ?
     n_bins * bin_width : (n_bins-0.5) * bin_width;
-  auto r2_max = r_max*r_max;
+  auto r_margined = r_max + margin;
+  auto r2_max = r_max * r_max;
+  auto r2_margined = r_margined * r_margined;
 
   for (int i = 0; i != 3; ++i)
   {
-    if (limits(i) < r_max)
+    if (limits(i) < r_margined)
     {
       ut::warning(
         "Box length is too short in " + Str("xyz").substr(i, 1));
@@ -95,27 +112,52 @@ void ProRadialDistributionFunction::run_impl(
 
   auto reciprocal_width = 1.0 / bin_width;
 
-  auto n_atoms = atoms.size();
+  /* NOTE:
+    If `gyration_radius` is equal to zero, temporary gyration radius
+    will be computed. However, it is preferable to use gyration radius
+    determined by averaging over all the samples (such as steps in a
+    trajectory).
+  */
+  if (gyration_radius == 0.0)
+  {
+    ut::warning("Temporary gyration radius will be used");
 
-  number_traj[index] = n_atoms;
+    double Rg2_sum = 0.0;
+
+    for (const auto &item : rs_and_Is_per_mass)
+    {
+      Rg2_sum += 0.5 * item.second.trace();
+    }
+
+    gyration_radius = sqrt(Rg2_sum/double(n_beads));
+  }
+
+  // computation body
+
+  number_traj[index] = n_beads;
   volume_traj[index] = length.prod();
   counts_traj[index] = ArrayXi::Zero(n_bins);
 
   auto &counts = counts_traj[index];
 
-  for (int i = 0; i != n_atoms; ++i)
+  for (int i = 0; i != n_beads; ++i)
   {
     auto sbs_i = special_bonds_exist ?
-      atoms[i]["special-bonds"].get<Set<int>>() : Set<int>();
+      beads[i]["special-bonds"].get<Set<int>>() : Set<int>();
 
-    auto r_i = rs.row(i);
+    auto &tmp_i = rs_and_Is_per_mass[i];
+    auto &r_i = tmp_i.first;
+    auto &I_i = tmp_i.second;
 
-    for (int j = i+1; j != n_atoms; ++j)
+    for (int j = i+1; j != n_beads; ++j)
     {
       if (!sbs_i.empty() && sbs_i.find(
-        atoms[j]["id"].get<int>()) != sbs_i.end()) continue;
+        beads[j]["id"].get<int>()) != sbs_i.end()) continue;
 
-      auto dr_original = rs.row(j) - r_i;
+      auto &tmp_j = rs_and_Is_per_mass[j];
+      auto &I_j = tmp_j.second;
+
+      auto dr_original = tmp_j.first - r_i;
 
       for (int ix = shift_x.first; ix <= shift_x.second; ++ix)
       {
@@ -137,12 +179,41 @@ void ProRadialDistributionFunction::run_impl(
 
             auto r2 = dx*dx + dy*dy + dz*dz;
 
-            if (r2_max <= r2) continue;
+            if (r2_margined <= r2) continue;
 
-            auto r = sqrt(r2);
+            auto e_ij = Eigen::Vector3d(dx, dy, dz);
+            e_ij.normalize();
+
+            auto quad_i = e_ij.transpose() * I_i * e_ij;
+            auto quad_j = e_ij.transpose() * I_j * e_ij;
+
+            // perpendicular (not used for now)
+            //auto R2_perp_i = 1.5 * quad_i;
+            //auto R2_perp_j = 1.5 * quad_j;
+
+            // parallel
+            auto R2_para_i = 3.0 * (0.5*I_i.trace() - quad_i);
+            auto R2_para_j = 3.0 * (0.5*I_j.trace() - quad_j);
+
+            auto r_modified = sqrt(r2) + (
+              2.0*gyration_radius - sqrt(R2_para_i) - sqrt(R2_para_j));
+
+            /* NOTE:
+              The below lines check if the mergin is efficiently large;
+              no distance becomes out of range by modification. This
+              somewhat ensure that every modified distance smaller than
+              `r_max` is counted (I made an assumption: if no distance
+              goes from [0,r_max) to [r_margined,+inf), no distance
+              goes from [r_margined,+inf) to [0,r_max).
+            */
+            if (r2 < r2_max && r_margined <= r_modified)
+            {
+              ut::warning("Margin is too small");
+            }
 
             auto index = bin_from_r ?
-              floor(r*reciprocal_width) : round(r*reciprocal_width);
+              floor(r_modified*reciprocal_width) :
+              round(r_modified*reciprocal_width);
 
             counts(index) += 2;  // i -> j & j -> i
           }
@@ -154,7 +225,7 @@ void ProRadialDistributionFunction::run_impl(
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::prepare()
+void ProRDFWD::prepare()
 {
   number_traj.resize(n_generators);
   volume_traj.resize(n_generators);
@@ -163,7 +234,7 @@ void ProRadialDistributionFunction::prepare()
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::finish()
+void ProRDFWD::finish()
 {
   ArrayXd shell_volume(n_bins);
 
@@ -219,7 +290,7 @@ void ProRadialDistributionFunction::finish()
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::set_bin(
+void ProRDFWD::set_bin(
   double bin_width_,
   int n_bins_)
 {
@@ -229,7 +300,23 @@ void ProRadialDistributionFunction::set_bin(
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::bin_from_r_to_r_plus_dr(
+void ProRDFWD::set_margin(
+  double margin_)
+{
+  margin = margin_;
+}
+
+/* ------------------------------------------------------------------ */
+
+void ProRDFWD::set_gyration_radius(
+  double gyration_radius_)
+{
+  gyration_radius = gyration_radius_;
+}
+
+/* ------------------------------------------------------------------ */
+
+void ProRDFWD::bin_from_r_to_r_plus_dr(
   bool bin_from_r_)
 {
   bin_from_r = bin_from_r_;
@@ -237,7 +324,7 @@ void ProRadialDistributionFunction::bin_from_r_to_r_plus_dr(
 
 /* ------------------------------------------------------------------ */
 
-void ProRadialDistributionFunction::beyond_half_box_length(
+void ProRDFWD::beyond_half_box_length(
   bool beyond_half_)
 {
   beyond_half = beyond_half_;
@@ -245,7 +332,7 @@ void ProRadialDistributionFunction::beyond_half_box_length(
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXd ProRadialDistributionFunction::get_r_axis()
+const ArrayXd ProRDFWD::get_r_axis()
 {
   ArrayXd rs(n_bins);
 
@@ -259,14 +346,14 @@ const ArrayXd ProRadialDistributionFunction::get_r_axis()
 
 /* ------------------------------------------------------------------ */
 
-const ArrayXd &ProRadialDistributionFunction::get_rdf()
+const ArrayXd &ProRDFWD::get_rdf()
 {
   return rdf;
 }
 
 /* ------------------------------------------------------------------ */
 
-const Vec<ArrayXd> &ProRadialDistributionFunction::get_rdf_traj()
+const Vec<ArrayXd> &ProRDFWD::get_rdf_traj()
 {
   return rdf_traj;
 }

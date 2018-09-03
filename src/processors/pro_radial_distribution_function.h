@@ -17,8 +17,9 @@ class ProRadialDistributionFunction : public Processor {
   bool beyond_half = false;
   ArrayXd rdf;
   Vec<ArrayXd> rdf_traj;
-  Vec<double> density_traj;
-  Vec<ArrayXd> number_distribution_traj;
+  Vec<int> number_traj;
+  Vec<double> volume_traj;
+  Vec<ArrayXi> counts_traj;
  protected:
   virtual void run_impl(
     const int index) override;
