@@ -8,6 +8,7 @@ from test_AddInertiaMoment import TestAddInertiaMoment
 from test_AddGyrationRadius import TestAddGyrationRadius
 from test_AddMolecularOrientation import TestAddMolecularOrientation
 from test_AddChildIDs import TestAddChildIDs
+from test_AddChildPositions import TestAddChildPositions
 from test_AddSpecialBonds import TestAddSpecialBonds
 
 suite = unittest.TestSuite()
@@ -48,6 +49,10 @@ suite.addTest(TestAddMolecularOrientation("test_x_oriented"))
 suite.addTest(TestAddChildIDs("test_error01"))
 suite.addTest(TestAddChildIDs("test_error02"))
 suite.addTest(TestAddChildIDs("test_2way_molecules"))
+
+suite.addTest(TestAddChildPositions("test_error01"))
+suite.addTest(TestAddChildPositions("test_random"))
+suite.addTest(TestAddChildPositions("test_gyration_radius"))
 
 suite.addTest(TestAddSpecialBonds("test_error01"))
 suite.addTest(TestAddSpecialBonds("test_error02"))

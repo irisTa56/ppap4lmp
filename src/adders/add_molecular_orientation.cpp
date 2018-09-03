@@ -33,13 +33,15 @@ void AddMolecularOrientation::compute_impl(
 
     d["I_values"] = {evals(0), evals(1), evals(2)};
 
-    Json &vectors = d["I_vectors"];
+    auto tmp = Json::array();
 
     for (int i = 0; i != 3; ++i)
     {
       RowArrayXd evec = evecs.row(i);
-      vectors.push_back({evec(0), evec(1), evec(2)});
+      tmp.push_back({evec(0), evec(1), evec(2)});
     }
+
+    d["I_vectors"].swap(tmp);
 
     // compute molecular orientation
 
