@@ -23,7 +23,7 @@ class TestAddSpecialBonds(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: Missing key 'atom-ids'")
+        "RuntimeError: Missing key(s) 'atom-ids'")
 
   def test_error02(self):
 

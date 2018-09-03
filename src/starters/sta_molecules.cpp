@@ -9,9 +9,9 @@ create: 2018/07/07 by Takayuki Kobayashi
 /* ------------------------------------------------------------------ */
 
 StaMolecules::StaMolecules(
-  const ShPtr<Element> &gen_atoms)
+  const ShPtr<Element> &el_atoms)
 {
-  ext_generator = gen_atoms;
+  ext_generator = el_atoms;
 }
 
 /* ------------------------------------------------------------------ */
@@ -20,11 +20,11 @@ void StaMolecules::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  auto gen_atoms = ext_generator->get_element();
+  auto el_atoms = ext_generator->get_element();
 
-  gen_atoms->required({"mol", "id"});
+  el_atoms->required({"mol", "id"});
 
-  auto &atoms = gen_atoms->get_data();
+  auto &atoms = el_atoms->get_data();
 
   Map<int,int> id2index;
 

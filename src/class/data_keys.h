@@ -2,6 +2,7 @@
 #define DATA_KEYS_H
 
 #include <alias/std.h>
+#include <alias/json.h>
 
 class DataKeys {
   Set<Str> _keys;
@@ -12,29 +13,13 @@ class DataKeys {
   void set(
     const Set<Str> &keys);
   void add(
-    const Str &key);
-  void add(
-    const Set<Str> &keys);
-  void add(
-    const std::initializer_list<Str> &keys);
+    const Json &key_);
   void remove(
-    const Str &key);
-  void remove(
-    const Set<Str> &keys);
-  void remove(
-    const std::initializer_list<Str> &keys);
+    const Json &key_);
   void required(
-    const Str &key);
-  void required(
-    const Set<Str> &keys);
-  void required(
-    const std::initializer_list<Str> &keys);
+    const Json &key_);
   bool optional(
-    const Str &key);
-  bool optional(
-    const Set<Str> &keys);
-  bool optional(
-    const std::initializer_list<Str> &keys);
+    const Json &key_);
   const Set<Str> &get();
 };
 

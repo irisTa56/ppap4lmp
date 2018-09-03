@@ -12,10 +12,10 @@ create: 2018/07/15 by Takayuki Kobayashi
 class AddInertiaMoment : public Adder {
   void compute_with_weights(
     Json &data,
-    const ShPtr<Element> &gen_atoms);
+    const ShPtr<Element> &el_atoms);
   void compute_without_weights(
     Json &data,
-    const ShPtr<Element> &gen_atoms);
+    const ShPtr<Element> &el_atoms);
  protected:
   virtual void compute_impl(
     Json &data,

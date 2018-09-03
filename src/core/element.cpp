@@ -6,7 +6,6 @@ create: 2018/07/01 by Takayuki Kobayashi
 
 #include "element.h"
 #include "updater.h"
-#include "../utils/disorder.h"
 #include "../utils/message.h"
 #include "../utils/pyargs_to_vec.h"
 #include "../utils/runtime_error.h"
@@ -140,6 +139,41 @@ ShPtr<Element> Element::append_updater(
 
 /* ------------------------------------------------------------------ */
 
+Json Element::get_data(const Json &key_)
+{
+  Vec<Str> keys = key_.is_array() ? key_ : Json::array({key_});
+
+  Json tmp;
+
+  if (data.is_array())
+  {
+    tmp = Json::array();
+    tmp.get_ref<Json::array_t&>().reserve(data.size());
+
+    for (const auto &d : data)
+    {
+      tmp.push_back({});
+      Json &elem = tmp.back();
+
+      for (const auto &key : keys)
+      {
+        elem[key] = d[key];
+      }
+    }
+  }
+  else
+  {
+    for (const auto &key : keys)
+    {
+      tmp[key] = data[key];
+    }
+  }
+
+  return tmp;
+}
+
+/* ------------------------------------------------------------------ */
+
 const Json &Element::get_data()
 {
   return data;
@@ -215,49 +249,17 @@ void Element::array2d(
 /* wrappers for DataKeys' methods ----------------------------------- */
 
 void Element::required(
-  const Str &key)
+  const Json &key_)
 {
-  datakeys.required(key);
-}
-
-/* ------------------------------------------------------------------ */
-
-void Element::required(
-  const Set<Str> &keys)
-{
-  datakeys.required(keys);
-}
-
-/* ------------------------------------------------------------------ */
-
-void Element::required(
-  const std::initializer_list<Str> &keys)
-{
-  datakeys.required(keys);
+  datakeys.required(key_);
 }
 
 /* ------------------------------------------------------------------ */
 
 bool Element::optional(
-  const Str &key)
+  const Json &key_)
 {
-  return datakeys.optional(key);
-}
-
-/* ------------------------------------------------------------------ */
-
-bool Element::optional(
-  const Set<Str> &keys)
-{
-  return datakeys.optional(keys);
-}
-
-/* ------------------------------------------------------------------ */
-
-bool Element::optional(
-  const std::initializer_list<Str> &keys)
-{
-  return datakeys.optional(keys);
+  return datakeys.optional(key_);
 }
 
 /* functions for Python --------------------------------------------- */
@@ -318,7 +320,7 @@ ArrayXXi Element::get_2d_int_py(
   Vec<Str> keys;
   ut::pyargs_to_vec(args, keys);
 
-  required(ut::disorder(keys));
+  required(keys);
 
   ArrayXXi array;
   array2d(array, keys);
@@ -336,7 +338,7 @@ ArrayXXd Element::get_2d_float_py(
   Vec<Str> keys;
   ut::pyargs_to_vec(args, keys);
 
-  required(ut::disorder(keys));
+  required(keys);
 
   ArrayXXd array;
   array2d(array, keys);

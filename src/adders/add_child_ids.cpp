@@ -31,9 +31,9 @@ void AddChildIDs::compute_impl(
 {
   datakeys.required("id");
 
-  auto gen_children = ext_generator->get_element();
+  auto el_children = ext_generator->get_element();
 
-  gen_children->required({"id", key_for_parent_id});
+  el_children->required({"id", key_for_parent_id});
 
   auto key_for_child_ids = child_name + "-ids";
 
@@ -44,7 +44,7 @@ void AddChildIDs::compute_impl(
 
   auto id2index = ut::map_to_index(data, "id");
 
-  for (const auto &child : gen_children->get_data())
+  for (const auto &child : el_children->get_data())
   {
     auto mol_index = id2index[child[key_for_parent_id]];
     data[mol_index][key_for_child_ids].push_back(child["id"]);

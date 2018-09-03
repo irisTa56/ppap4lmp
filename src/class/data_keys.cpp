@@ -24,17 +24,9 @@ void DataKeys::set(
 /* ------------------------------------------------------------------ */
 
 void DataKeys::add(
-  const Str &key)
+  const Json &key_)
 {
-  _keys.insert(key);
-}
-
-/* ------------------------------------------------------------------ */
-
-void DataKeys::add(
-  const Set<Str> &keys)
-{
-  for (const auto &key : keys)
+  for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
     _keys.insert(key);
   }
@@ -42,26 +34,10 @@ void DataKeys::add(
 
 /* ------------------------------------------------------------------ */
 
-void DataKeys::add(
-  const std::initializer_list<Str> &keys)
-{
-  add(Set<Str>(keys));
-}
-
-/* ------------------------------------------------------------------ */
-
 void DataKeys::remove(
-  const Str &key)
+  const Json &key_)
 {
-  _keys.erase(key);
-}
-
-/* ------------------------------------------------------------------ */
-
-void DataKeys::remove(
-  const Set<Str> &keys)
-{
-  for (const auto &key : keys)
+  for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
     _keys.erase(key);
   }
@@ -69,31 +45,12 @@ void DataKeys::remove(
 
 /* ------------------------------------------------------------------ */
 
-void DataKeys::remove(
-  const std::initializer_list<Str> &keys)
-{
-  remove(Set<Str>(keys));
-}
-
-/* ------------------------------------------------------------------ */
-
 void DataKeys::required(
-  const Str &key)
-{
-  if (_keys.find(key) == _keys.end())
-  {
-    ut::runtime_error("Missing key '" + key + "'");
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-void DataKeys::required(
-  const Set<Str> &keys)
+  const Json &key_)
 {
   Vec<Str> missings;
 
-  for (const auto &key : keys)
+  for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
     if (_keys.find(key) == _keys.end())
     {
@@ -112,26 +69,10 @@ void DataKeys::required(
 
 /* ------------------------------------------------------------------ */
 
-void DataKeys::required(
-  const std::initializer_list<Str> &keys)
-{
-  required(Set<Str>(keys));
-}
-
-/* ------------------------------------------------------------------ */
-
 bool DataKeys::optional(
-  const Str &key)
+  const Json &key_)
 {
-  return _keys.find(key) != _keys.end();
-}
-
-/* ------------------------------------------------------------------ */
-
-bool DataKeys::optional(
-  const Set<Str> &keys)
-{
-  for (const auto &key : keys)
+  for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
     if (_keys.find(key) == _keys.end())
     {
@@ -140,14 +81,6 @@ bool DataKeys::optional(
   }
 
   return true;
-}
-
-/* ------------------------------------------------------------------ */
-
-bool DataKeys::optional(
-  const std::initializer_list<Str> &keys)
-{
-  return optional(Set<Str>(keys));
 }
 
 /* ------------------------------------------------------------------ */

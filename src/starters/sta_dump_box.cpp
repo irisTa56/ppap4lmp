@@ -48,19 +48,17 @@ void StaDumpBox::compute_impl(
     }
     else if (line.find("ITEM: BOX BOUNDS") == 0 && timestep_matches)
     {
-      Vec<Str> xyz = {"x", "y", "z"};
-
       auto strs = ut::split(line);
 
       for (int i = 0; i != 3; ++i)
       {
-        auto key = "periodic_" + xyz[i];
+        auto key = "periodic_" + Str("xyz").substr(i, 1);
 
         data[key] = strs[3+i] == "pp";
         datakeys.add(key);
       }
 
-      for (const auto &dim : xyz)
+      for (const Str &dim : {"x", "y", "z"})
       {
         std::getline(ifs, line);
         auto strs = ut::split(line);

@@ -22,11 +22,11 @@ void AddWrappedPositions::compute_impl(
 {
   datakeys.required({"xu", "yu", "zu"});
 
-  auto gen_box = ext_generator->get_element();
+  auto el_box = ext_generator->get_element();
 
-  gen_box->required({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
+  el_box->required({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
 
-  auto &box = gen_box->get_data();
+  auto &box = el_box->get_data();
 
   ArrayXd offset(3);
   offset << box["lo_x"], box["lo_y"], box["lo_z"];

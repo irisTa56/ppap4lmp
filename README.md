@@ -37,7 +37,7 @@ python test.py
 Tests can be conducted seperately.
 
 ```bash
-python test.py starter # filter, adder, proc
+python test.py starter # filter, adder, processor
 ```
 
 #### for Mac

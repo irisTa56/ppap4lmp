@@ -40,6 +40,11 @@ class Element : public Generator, public EnShThis<Element> {
   ShPtr<Element> append_updater(
     const ShPtr<Updater> &upd);
   const Json &get_data();
+  /* NOTE:
+    If get_data() takes an argument, it does not return a reference.
+  */
+  Json get_data(
+    const Json &key_);
   const DataKeys &get_keys();
   template <typename T>
   void array1d(
@@ -51,17 +56,9 @@ class Element : public Generator, public EnShThis<Element> {
     const Vec<Str> &keys);
 // wrappers for DataKeys' methods
   void required(
-    const Str &key);
-  void required(
-    const Set<Str> &keys);
-  void required(
-    const std::initializer_list<Str> &keys);
+    const Json &key_);
   bool optional(
-    const Str &key);
-  bool optional(
-    const Set<Str> &keys);
-  bool optional(
-    const std::initializer_list<Str> &keys);
+    const Json &key_);
 // functions for Python
   const Json &get_data_py();
   const Set<Str> &get_keys_py();

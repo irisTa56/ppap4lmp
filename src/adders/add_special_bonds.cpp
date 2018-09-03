@@ -14,10 +14,10 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  const ShPtr<Element> &gen_mols,
+  const ShPtr<Element> &el_mols,
   const Vec<Vec<int>> &scheme)
 {
-  ext_generator = gen_mols;
+  ext_generator = el_mols;
   // Special bonds list without moltype is used as that for moltype 1
   mol_type_to_sbondses_in_mol[1] = scheme;
 }
@@ -25,10 +25,10 @@ AddSpecialBonds::AddSpecialBonds(
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
-  const ShPtr<Element> &gen_mols,
+  const ShPtr<Element> &el_mols,
   const Map<int,Vec<Vec<int>>> &schemes)
 {
-  ext_generator = gen_mols;
+  ext_generator = el_mols;
   mol_type_to_sbondses_in_mol = schemes;
 }
 
@@ -43,11 +43,11 @@ void AddSpecialBonds::compute_impl(
     ut::runtime_error("Key 'special-bonds' already exists");
   }
 
-  auto gen_mols = ext_generator->get_element();
+  auto el_mols = ext_generator->get_element();
 
-  gen_mols->required("atom-ids");
+  el_mols->required("atom-ids");
 
-  auto &mols = gen_mols->get_data();
+  auto &mols = el_mols->get_data();
 
   auto id2index = ut::map_to_index(data, "id");
 

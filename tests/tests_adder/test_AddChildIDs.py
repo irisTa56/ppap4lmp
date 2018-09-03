@@ -36,7 +36,7 @@ class TestAddChildIDs(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: Missing key 'id'")
+        "RuntimeError: Missing key(s) 'id'")
 
   def test_2way_molecules(self):
 

@@ -21,15 +21,15 @@ AddCoMPositions::AddCoMPositions(
 
 void AddCoMPositions::compute_with_weights(
   Json &data,
-  const ShPtr<Element> &gen_atoms)
+  const ShPtr<Element> &el_atoms)
 {
-  auto id2index_atom = ut::map_to_index(gen_atoms->get_data(), "id");
+  auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
   ArrayXd ms_atom;
-  gen_atoms->array1d(ms_atom, "mass");
+  el_atoms->array1d(ms_atom, "mass");
 
   ArrayXXd rs_atom;
-  gen_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
+  el_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
 
   for (auto &d : data)
   {
@@ -67,15 +67,15 @@ void AddCoMPositions::compute_with_weights(
 
 void AddCoMPositions::compute_without_weights(
   Json &data,
-  const ShPtr<Element> &gen_atoms)
+  const ShPtr<Element> &el_atoms)
 {
-  auto id2index_atom = ut::map_to_index(gen_atoms->get_data(), "id");
+  auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
   ArrayXd ms_atom;
-  gen_atoms->array1d(ms_atom, "mass");
+  el_atoms->array1d(ms_atom, "mass");
 
   ArrayXXd rs_atom;
-  gen_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
+  el_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
 
   for (auto &d : data)
   {
@@ -109,17 +109,17 @@ void AddCoMPositions::compute_impl(
 {
   datakeys.required("atom-ids");
 
-  auto gen_atoms = ext_generator->get_element();
+  auto el_atoms = ext_generator->get_element();
 
-  gen_atoms->required({"id", "mass", "xu", "yu", "zu"});
+  el_atoms->required({"id", "mass", "xu", "yu", "zu"});
 
   if (datakeys.optional("atom-weights"))
   {
-    compute_with_weights(data, gen_atoms);
+    compute_with_weights(data, el_atoms);
   }
   else
   {
-    compute_without_weights(data, gen_atoms);
+    compute_without_weights(data, el_atoms);
   }
 
   datakeys.add({"mass", "xu", "yu", "zu"});

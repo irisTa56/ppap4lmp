@@ -17,7 +17,7 @@ class TestFilSet(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: Missing key 'dummy'")
+        "RuntimeError: Missing key(s) 'dummy'")
 
   def test_equivalent_filter(self):
 

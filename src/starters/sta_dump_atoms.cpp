@@ -8,7 +8,6 @@ create: 2018/06/29 by Takayuki Kobayashi
 #include <fstream>
 
 #include "sta_dump_atoms.h"
-#include "../utils/disorder.h"
 #include "../utils/runtime_error.h"
 #include "../utils/split.h"
 
@@ -83,7 +82,7 @@ void StaDumpAtoms::compute_impl(
           std::getline(ifs, line);
         }
 
-        datakeys.add(ut::disorder(keys));
+        datakeys.add(keys);
 
         break;
       }
