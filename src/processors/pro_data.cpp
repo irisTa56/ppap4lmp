@@ -43,7 +43,7 @@ void ProData::run_impl(
   {
     elem->required(selected_keys);
 
-    Json json;
+    auto &json = results[index];
 
     if (data.is_array())
     {
@@ -68,8 +68,6 @@ void ProData::run_impl(
         json[k] = data[k];
       }
     }
-
-    results[index] = json;
   }
 }
 

@@ -11,7 +11,8 @@ from random import uniform
 from ppap4lmp import create, StaCustom, StaMolecules, \
   AddCoMPosition, AddWrappedPosition, AddInertiaMoment, InvOMP, \
   ProRadialDistributionFunctionWithDeformation, \
-  ProRadialDistributionFunction
+  ProRadialDistributionFunction, \
+  StaDumpAtoms, StaDumpBox, StaBeads
 
 ProRDFWD = ProRadialDistributionFunctionWithDeformation
 ProRDF = ProRadialDistributionFunction

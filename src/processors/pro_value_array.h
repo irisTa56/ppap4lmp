@@ -13,7 +13,7 @@ create: 2018/07/16 by Takayuki Kobayashi
 class ProValueArray : public Processor {
   Vec<Str> selected_keys;
   Map<Str,ArrayXXd> results;
-  Map<Str,Vec<RowArrayXd>> results_trajs;
+  Vec<Map<Str,RowArrayXd>> results_trajs;
  protected:
   virtual void run_impl(
     const int index) override;

@@ -5,6 +5,7 @@ contained in Arrays.
 create: 2018/07/16 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
+#include <functional>
 #include <alias/pybind.h>
 
 #include "pro_value_array.h"
@@ -45,9 +46,9 @@ void ProValueArray::run_impl(
   elem->required("id");  // ensure data is sorted
   elem->required(selected_keys);
 
-  auto size = data.is_array() ? data.size() : 1;
+  auto &rows = results_trajs[index];
 
-  Map<Str,RowArrayXd> rows;
+  auto size = data.is_array() ? data.size() : 1;
 
   for (const auto &key : selected_keys)
   {
@@ -65,53 +66,46 @@ void ProValueArray::run_impl(
 
     irow++;
   }
-
-  for (const auto &key : selected_keys)
-  {
-    results_trajs[key][index] = rows[key];
-  }
 }
 
 /* ------------------------------------------------------------------ */
 
 void ProValueArray::prepare()
 {
-  for (const auto &key : selected_keys)
-  {
-    results_trajs[key].resize(n_generators);
-  }
+  results_trajs.resize(n_generators);
 }
 
 /* ------------------------------------------------------------------ */
 
 void ProValueArray::finish()
 {
-  auto &traj = results_trajs[selected_keys.front()];
+  auto front_key = selected_keys.front();
 
-  auto size = traj.front().size();
+  auto size = results_trajs.front()[front_key].size();
 
-  for (const auto &tmp : traj)
+  for (const auto &tmp : results_trajs)
   {
-    if (size != tmp.size())
+    if (size != tmp.at(front_key).size())
     {
       ut::runtime_error("Data sizes must be the same");
     }
   }
 
-  for (const auto &item : results_trajs)
+  for (const auto &key : selected_keys)
   {
-    auto &array = results[item.first];
+    auto &array = results[key];
     array.resize(n_generators, size);
 
     int irow = 0;
 
-    for (const auto &row : item.second)
+    for (const auto &tmp : results_trajs)
     {
-      array.row(irow++) = row;
+      array.row(irow++) = tmp.at(key);
     }
   }
 
   results_trajs.clear();
+  results_trajs.shrink_to_fit();
 }
 
 /* ------------------------------------------------------------------ */

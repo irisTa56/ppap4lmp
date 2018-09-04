@@ -75,7 +75,8 @@ void ProThicknessProfile::run_impl(
       return a["z"] > b["z"];
     });  // to improve speed
 
-  ArrayXXd profile_tmp = ArrayXXd::Zero(nx, ny);
+  profiles[index] = ArrayXXd::Zero(nx, ny);
+  auto &profile_tmp = profiles[index];
 
   auto reciprocal_nx = 1.0 / double(nx);
   auto reciprocal_ny = 1.0 / double(ny);
@@ -126,8 +127,6 @@ void ProThicknessProfile::run_impl(
       }
     }
   }
-
-  profiles[index] = profile_tmp;
 }
 
 /* ------------------------------------------------------------------ */
