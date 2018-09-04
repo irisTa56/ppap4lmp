@@ -11,6 +11,7 @@ create: 2018/08/19 by Takayuki Kobayashi
 #include <processors/processor.h>
 
 class ProRadialDistributionFunction : public Processor {
+ protected:
   int n_bins = 1;
   double bin_width = 1.0;
   bool bin_from_r = false;
@@ -20,7 +21,6 @@ class ProRadialDistributionFunction : public Processor {
   Vec<int> number_traj;
   Vec<double> volume_traj;
   Vec<ArrayXi> counts_traj;
- protected:
   virtual void run_impl(
     const int index) override;
  public:

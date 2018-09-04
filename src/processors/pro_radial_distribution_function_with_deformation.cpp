@@ -1,7 +1,7 @@
 /* ---------------------------------------------------------------------
 ProRadialDistributionFunctionWithDeformation: stands for Processor
 which computes Radial Distribution Function (RDF) taking Deformation
-into consideration; Deformation is guessed using gyration radius around
+into consideration; Deformation is guessed using gyration radius in
 perpendicular and parallel directions of the point-to-point vector.
 
 create: 2018/09/03 by Takayuki Kobayashi
@@ -17,7 +17,7 @@ create: 2018/09/03 by Takayuki Kobayashi
 namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
-
+/*
 ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunctionWithDeformation(
   const ElPtr &beads,
   const ElPtr &box)
@@ -27,7 +27,7 @@ ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunctionWithD
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunctionWithDeformation(
   const Vec<std::pair<ElPtr,ElPtr>> &pairs)
 {
@@ -112,26 +112,6 @@ void ProRDFWD::run_impl(
 
   auto reciprocal_width = 1.0 / bin_width;
 
-  /* NOTE:
-    If `gyration_radius` is equal to zero, temporary gyration radius
-    will be computed. However, it is preferable to use gyration radius
-    determined by averaging over all the samples (such as steps in a
-    trajectory).
-  */
-  if (gyration_radius == 0.0)
-  {
-    ut::warning("Temporary gyration radius will be used");
-
-    double Rg2_sum = 0.0;
-
-    for (const auto &item : rs_and_Is_per_mass)
-    {
-      Rg2_sum += 0.5 * item.second.trace();
-    }
-
-    gyration_radius = sqrt(Rg2_sum/double(n_beads));
-  }
-
   // computation body
 
   number_traj[index] = n_beads;
@@ -187,24 +167,29 @@ void ProRDFWD::run_impl(
             auto quad_i = e_ij.transpose() * I_i * e_ij;
             auto quad_j = e_ij.transpose() * I_j * e_ij;
 
+            auto Rg2_i = 0.5*I_i.trace();
+            auto Rg2_j = 0.5*I_j.trace();
+
             // perpendicular (not used for now)
-            //auto R2_perp_i = 1.5 * quad_i;
-            //auto R2_perp_j = 1.5 * quad_j;
+            //auto Rg2_perp_i = 1.5 * quad_i;
+            //auto Rg2_perp_j = 1.5 * quad_j;
 
             // parallel
-            auto R2_para_i = 3.0 * (0.5*I_i.trace() - quad_i);
-            auto R2_para_j = 3.0 * (0.5*I_j.trace() - quad_j);
+            auto Rg2_para_i = 3.0 * (Rg2_i - quad_i);
+            auto Rg2_para_j = 3.0 * (Rg2_j - quad_j);
 
             auto r_modified = sqrt(r2) + (
-              2.0*gyration_radius - sqrt(R2_para_i) - sqrt(R2_para_j));
+              (sqrt(Rg2_i) - sqrt(Rg2_para_i)) +
+              (sqrt(Rg2_j) - sqrt(Rg2_para_j)));
 
             /* NOTE:
               The below lines check if the mergin is efficiently large;
-              no distance becomes out of range by modification. This
-              somewhat ensure that every modified distance smaller than
-              `r_max` is counted (I made an assumption: if no distance
-              goes from [0,r_max) to [r_margined,+inf), no distance
-              goes from [r_margined,+inf) to [0,r_max).
+              no distance becomes out of range by the modification.
+              This somewhat ensure that every modified distance smaller
+              than `r_max` is counted (I made an assumption: if no
+              distance goes from [0,r_max) to [r_margined,+inf), no
+              distance goes from [r_margined,+inf) to [0,r_max) by the
+              modification.
             */
             if (r2 < r2_max && r_margined <= r_modified)
             {
@@ -224,7 +209,7 @@ void ProRDFWD::run_impl(
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 void ProRDFWD::prepare()
 {
   number_traj.resize(n_generators);
@@ -233,7 +218,7 @@ void ProRDFWD::prepare()
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 void ProRDFWD::finish()
 {
   ArrayXd shell_volume(n_bins);
@@ -289,7 +274,7 @@ void ProRDFWD::finish()
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 void ProRDFWD::set_bin(
   double bin_width_,
   int n_bins_)
@@ -307,7 +292,7 @@ void ProRDFWD::set_margin(
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 void ProRDFWD::set_gyration_radius(
   double gyration_radius_)
 {
@@ -315,7 +300,7 @@ void ProRDFWD::set_gyration_radius(
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 void ProRDFWD::bin_from_r_to_r_plus_dr(
   bool bin_from_r_)
 {
@@ -323,7 +308,7 @@ void ProRDFWD::bin_from_r_to_r_plus_dr(
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 void ProRDFWD::beyond_half_box_length(
   bool beyond_half_)
 {
@@ -331,7 +316,7 @@ void ProRDFWD::beyond_half_box_length(
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 const ArrayXd ProRDFWD::get_r_axis()
 {
   ArrayXd rs(n_bins);
@@ -345,15 +330,16 @@ const ArrayXd ProRDFWD::get_r_axis()
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 const ArrayXd &ProRDFWD::get_rdf()
 {
   return rdf;
 }
 
 /* ------------------------------------------------------------------ */
-
+/*
 const Vec<ArrayXd> &ProRDFWD::get_rdf_traj()
 {
   return rdf_traj;
 }
+*/
