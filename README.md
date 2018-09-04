@@ -34,7 +34,7 @@ tar xzvf archive.dumps_atom.tar.gz
 python test.py
 ```
 
-Tests can be conducted seperately.
+Tests can be conducted separately.
 
 ```bash
 python test.py starter # filter, adder, processor
