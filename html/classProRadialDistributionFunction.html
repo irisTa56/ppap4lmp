@@ -64,6 +64,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classProRadialDistributionFunction-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ProRadialDistributionFunction Class Reference</div>  </div>
@@ -74,6 +75,7 @@ Inheritance diagram for ProRadialDistributionFunction:</div>
 <div class="dyncontent">
 <div class="center"><img src="classProRadialDistributionFunction__inherit__graph.png" border="0" usemap="#ProRadialDistributionFunction_inherit__map" alt="Inheritance graph"/></div>
 <map name="ProRadialDistributionFunction_inherit__map" id="ProRadialDistributionFunction_inherit__map">
+<area shape="rect" id="node3" href="classProRadialDistributionFunctionWithDeformation.html" title="ProRadialDistributionFunction\lWithDeformation" alt="" coords="5,155,199,196"/>
 <area shape="rect" id="node2" href="classProcessor.html" title="Processor" alt="" coords="61,5,143,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -88,9 +90,9 @@ Collaboration diagram for ProRadialDistributionFunction:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a249b98a5c610625d5c5f0e794b0149d8"><td class="memItemLeft" align="right" valign="top"><a id="a249b98a5c610625d5c5f0e794b0149d8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ProRadialDistributionFunction</b> (const ElPtr &amp;atoms, const ElPtr &amp;box)</td></tr>
-<tr class="separator:a249b98a5c610625d5c5f0e794b0149d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7721bce6ef774785881d3cf2e6ac02ad"><td class="memItemLeft" align="right" valign="top"><a id="a7721bce6ef774785881d3cf2e6ac02ad"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ProRadialDistributionFunction</b> (const ElPtr &amp;targets, const ElPtr &amp;box)</td></tr>
+<tr class="separator:a7721bce6ef774785881d3cf2e6ac02ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad873a6f5e730027d51f07fc28d526ae9"><td class="memItemLeft" align="right" valign="top"><a id="ad873a6f5e730027d51f07fc28d526ae9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ProRadialDistributionFunction</b> (const Vec&lt; std::pair&lt; ElPtr, ElPtr &gt;&gt; &amp;pairs)</td></tr>
 <tr class="separator:ad873a6f5e730027d51f07fc28d526ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,8 +140,35 @@ template&lt;class GEN &gt; </td></tr>
 <tr class="memitem:abcf04231ed598d17e888eaf3216c9350 inherit pro_methods_classProcessor"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>register_generators</b> (const Vec&lt; ShPtr&lt; GEN &gt;&gt; &amp;gens)</td></tr>
 <tr class="separator:abcf04231ed598d17e888eaf3216c9350 inherit pro_methods_classProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a3f8a8fdd7874bd4687ed103ec22f1534"><td class="memItemLeft" align="right" valign="top"><a id="a3f8a8fdd7874bd4687ed103ec22f1534"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>n_bins</b> = 1</td></tr>
+<tr class="separator:a3f8a8fdd7874bd4687ed103ec22f1534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7057bca74cd401a456ae2b0e29c67d55"><td class="memItemLeft" align="right" valign="top"><a id="a7057bca74cd401a456ae2b0e29c67d55"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>bin_width</b> = 1.0</td></tr>
+<tr class="separator:a7057bca74cd401a456ae2b0e29c67d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a598385ab05267c4dcfcd66bd497bb6e6"><td class="memItemLeft" align="right" valign="top"><a id="a598385ab05267c4dcfcd66bd497bb6e6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>bin_from_r</b> = false</td></tr>
+<tr class="separator:a598385ab05267c4dcfcd66bd497bb6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60a2e1523ca478c50a19d49692409e33"><td class="memItemLeft" align="right" valign="top"><a id="a60a2e1523ca478c50a19d49692409e33"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>beyond_half</b> = false</td></tr>
+<tr class="separator:a60a2e1523ca478c50a19d49692409e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd778f00cd6330e99b6a13cc0fb32fdb"><td class="memItemLeft" align="right" valign="top"><a id="afd778f00cd6330e99b6a13cc0fb32fdb"></a>
+ArrayXd&#160;</td><td class="memItemRight" valign="bottom"><b>rdf</b></td></tr>
+<tr class="separator:afd778f00cd6330e99b6a13cc0fb32fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a48e9152ff079c91c856d82afcb5e7"><td class="memItemLeft" align="right" valign="top"><a id="aa3a48e9152ff079c91c856d82afcb5e7"></a>
+Vec&lt; ArrayXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rdf_traj</b></td></tr>
+<tr class="separator:aa3a48e9152ff079c91c856d82afcb5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d3092dc6e786a44b0255fc00011163"><td class="memItemLeft" align="right" valign="top"><a id="a01d3092dc6e786a44b0255fc00011163"></a>
+Vec&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>number_traj</b></td></tr>
+<tr class="separator:a01d3092dc6e786a44b0255fc00011163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9c40d3245fdcfa95321696235d8523"><td class="memItemLeft" align="right" valign="top"><a id="a2c9c40d3245fdcfa95321696235d8523"></a>
+Vec&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>volume_traj</b></td></tr>
+<tr class="separator:a2c9c40d3245fdcfa95321696235d8523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbced3543849a85e148ef9d74b504c76"><td class="memItemLeft" align="right" valign="top"><a id="afbced3543849a85e148ef9d74b504c76"></a>
+Vec&lt; ArrayXi &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>counts_traj</b></td></tr>
+<tr class="separator:afbced3543849a85e148ef9d74b504c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classProcessor"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classProcessor')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classProcessor.html">Processor</a></td></tr>
 <tr class="memitem:a8eb44a97cb6b609d3816b43a4c39e9d1 inherit pro_attribs_classProcessor"><td class="memItemLeft" align="right" valign="top"><a id="a8eb44a97cb6b609d3816b43a4c39e9d1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>n_generators</b></td></tr>

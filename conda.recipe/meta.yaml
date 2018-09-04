@@ -1,6 +1,6 @@
 package:
   name: ppap4lmp
-  version: 0.3.0a
+  version: 0.3.2a
 
 build:
   number: 1
@@ -22,9 +22,10 @@ requirements:
   run:
     - python
     - numpy
-    - scipy
 
 test:
+  requires:
+    - scipy
   source_files:
     - tests
 
