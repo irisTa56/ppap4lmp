@@ -6,7 +6,7 @@ from math import sqrt
 
 from ppap4lmp import \
   create, StaCustom, StaMolecules, \
-  AddCoMPositions, AddInertiaMoment, AddGyrationRadius
+  AddCoMPosition, AddInertiaMoment, AddGyrationRadius
 
 class TestAddGyrationRadius(unittest.TestCase):
 
@@ -37,7 +37,7 @@ class TestAddGyrationRadius(unittest.TestCase):
 
     atoms = create(StaCustom(self.custom_data))
     molecules = create(StaMolecules(atoms))
-    molecules.append_updater(AddCoMPositions(atoms))
+    molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(AddGyrationRadius())
 
@@ -69,7 +69,7 @@ class TestAddGyrationRadius(unittest.TestCase):
 
     atoms = create(StaCustom(custom_data))
     molecules = create(StaMolecules(atoms))
-    molecules.append_updater(AddCoMPositions(atoms))
+    molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(
       AddGyrationRadius().with_squared().without_sqrted())

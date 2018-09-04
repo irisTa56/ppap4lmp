@@ -7,7 +7,7 @@ from math import sqrt
 
 from ppap4lmp import \
   create, StaCustom, StaMolecules, \
-  AddCoMPositions, AddInertiaMoment, AddMolecularOrientation
+  AddCoMPosition, AddInertiaMoment, AddMolecularOrientation
 
 class TestAddMolecularOrientation(unittest.TestCase):
 
@@ -39,7 +39,7 @@ class TestAddMolecularOrientation(unittest.TestCase):
 
     atoms = create(StaCustom(self.custom_data))
     molecules = create(StaMolecules(atoms))
-    molecules.append_updater(AddCoMPositions(atoms))
+    molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(AddMolecularOrientation())
 
@@ -61,7 +61,7 @@ class TestAddMolecularOrientation(unittest.TestCase):
       {"id": 4, "mol": 1, "mass": 1.0, "xu": 8.0, "yu": 1.0, "zu": 1.0},
     ]))
     molecules = create(StaMolecules(atoms))
-    molecules.append_updater(AddCoMPositions(atoms))
+    molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(AddMolecularOrientation())
 

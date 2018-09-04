@@ -2,8 +2,8 @@ import unittest
 
 from test_AddMap import TestAddMap
 from test_AddRename import TestAddRename
-from test_AddWrappedPositions import TestAddWrappedPositions
-from test_AddCoMPositions import TestAddCoMPositions
+from test_AddWrappedPosition import TestAddWrappedPosition
+from test_AddCoMPosition import TestAddCoMPosition
 from test_AddInertiaMoment import TestAddInertiaMoment
 from test_AddGyrationRadius import TestAddGyrationRadius
 from test_AddMolecularOrientation import TestAddMolecularOrientation
@@ -26,13 +26,13 @@ suite.addTest(TestAddRename("test_nonarray"))
 suite.addTest(TestAddRename("test_array"))
 suite.addTest(TestAddRename("test_overwrite"))
 
-suite.addTest(TestAddWrappedPositions("test_error01"))
-suite.addTest(TestAddWrappedPositions("test_error02"))
-suite.addTest(TestAddWrappedPositions("test_wrapping"))
+suite.addTest(TestAddWrappedPosition("test_error01"))
+suite.addTest(TestAddWrappedPosition("test_error02"))
+suite.addTest(TestAddWrappedPosition("test_wrapping"))
 
-suite.addTest(TestAddCoMPositions("test_error01"))
-suite.addTest(TestAddCoMPositions("test_positions"))
-suite.addTest(TestAddCoMPositions("test_beads"))
+suite.addTest(TestAddCoMPosition("test_error01"))
+suite.addTest(TestAddCoMPosition("test_positions"))
+suite.addTest(TestAddCoMPosition("test_beads"))
 
 suite.addTest(TestAddInertiaMoment("test_error01"))
 suite.addTest(TestAddInertiaMoment("test_error02"))

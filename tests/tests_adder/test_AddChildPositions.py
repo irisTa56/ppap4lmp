@@ -8,7 +8,7 @@ from random import uniform
 
 from ppap4lmp import \
   create, StaCustom, StaMolecules, AddChildPositions, \
-  AddCoMPositions, AddInertiaMoment, AddGyrationRadius
+  AddCoMPosition, AddInertiaMoment, AddGyrationRadius
 
 class TestAddChildPositions(unittest.TestCase):
 
@@ -70,7 +70,7 @@ class TestAddChildPositions(unittest.TestCase):
     atoms = create(StaCustom(abst_atoms))
 
     moles = create(StaMolecules(atoms))
-    moles.append_updater(AddCoMPositions(atoms))
+    moles.append_updater(AddCoMPosition(atoms))
     moles.append_updater(AddChildPositions(atoms, "atom"))
 
     data = moles.get_data()
@@ -100,7 +100,7 @@ class TestAddChildPositions(unittest.TestCase):
     atoms = create(StaCustom(abst_atoms))
 
     moles = create(StaMolecules(atoms))
-    moles.append_updater(AddCoMPositions(atoms))
+    moles.append_updater(AddCoMPosition(atoms))
     moles.append_updater(AddChildPositions(atoms, "atom"))
 
     moles.append_updater(AddInertiaMoment(atoms))

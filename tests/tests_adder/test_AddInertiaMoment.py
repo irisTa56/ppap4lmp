@@ -2,7 +2,7 @@ import unittest
 import traceback
 
 from ppap4lmp import \
-  create, StaCustom, StaMolecules, AddCoMPositions, AddInertiaMoment
+  create, StaCustom, StaMolecules, AddCoMPosition, AddInertiaMoment
 
 class TestAddInertiaMoment(unittest.TestCase):
 
@@ -19,7 +19,7 @@ class TestAddInertiaMoment(unittest.TestCase):
 
     atoms = create(StaCustom(self.custom_data))
     molecules = create(StaMolecules(atoms))
-    molecules.append_updater(AddCoMPositions(atoms))
+    molecules.append_updater(AddCoMPosition(atoms))
 
     molecules.append_updater(
       AddInertiaMoment(create(StaCustom({"foo": 0, "bar": 1}))))
@@ -50,7 +50,7 @@ class TestAddInertiaMoment(unittest.TestCase):
 
     atoms = create(StaCustom(self.custom_data))
     molecules = create(StaMolecules(atoms))
-    molecules.append_updater(AddCoMPositions(atoms))
+    molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
 
     data = molecules.get_data()[0]
