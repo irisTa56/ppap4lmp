@@ -14,16 +14,16 @@ void AddMolecularOrientation::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  datakeys.required({"I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx"});
+  datakeys.required({"I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz"});
 
   for (auto &d : data)
   {
     // compute principal values and vectors
 
     MatrixXd inertia_moment(3, 3);
-    inertia_moment << d["I_xx"], d["I_xy"], d["I_zx"],
+    inertia_moment << d["I_xx"], d["I_xy"], d["I_xz"],
                       d["I_xy"], d["I_yy"], d["I_yz"],
-                      d["I_zx"], d["I_yz"], d["I_zz"];
+                      d["I_xz"], d["I_yz"], d["I_zz"];
 
     Eigen::EigenSolver<MatrixXd> solver(inertia_moment);
 

@@ -109,11 +109,6 @@ void ProDistanceInMolecule::finish()
     distance2_array.row(i) = distance2_traj[i];
   }
 
-  if (do_sqrt)
-  {
-    distance_array = distance2_array.sqrt();
-  }
-
   distance2_traj.clear();
   distance2_traj.shrink_to_fit();
 }
@@ -138,17 +133,9 @@ void ProDistanceInMolecule::set_moltype(
 
 /* ------------------------------------------------------------------ */
 
-void ProDistanceInMolecule::compute_sqrt(
-  bool do_sqrt_)
+ArrayXXd ProDistanceInMolecule::get_distance_array()
 {
-  do_sqrt = do_sqrt_;
-}
-
-/* ------------------------------------------------------------------ */
-
-const ArrayXXd &ProDistanceInMolecule::get_distance_array()
-{
-  return distance_array;
+  return distance2_array.sqrt();
 }
 
 /* ------------------------------------------------------------------ */

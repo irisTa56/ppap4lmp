@@ -10,9 +10,7 @@ static void pybind_pro_value_array(py::module &m)
     .def(py::init<const ElPtr &>())
     .def(py::init<const Vec<ElPtr> &>())
     .def("select", &ProValueArray::select)
-    .def(
-      "get_results", &ProValueArray::get_results,
-      py::return_value_policy::reference_internal);
+    .def("get_results", &ProValueArray::get_results);
 }
 
 #endif

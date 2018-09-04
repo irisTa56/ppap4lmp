@@ -25,7 +25,7 @@ class ProRadialDistributionFunction : public Processor {
     const int index) override;
  public:
   ProRadialDistributionFunction(
-    const ElPtr &atoms,
+    const ElPtr &targets,
     const ElPtr &box);
   ProRadialDistributionFunction(
     const Vec<std::pair<ElPtr,ElPtr>> &pairs);

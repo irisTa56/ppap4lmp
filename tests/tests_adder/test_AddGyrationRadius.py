@@ -56,7 +56,7 @@ class TestAddGyrationRadius(unittest.TestCase):
     self.assertEqual(
       molecules.get_keys(), {
         "id", "atom-ids", "mass", "xu", "yu", "zu",
-        "I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx",
+        "I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz",
         "Rg", "Rg(y+z)", "Rg(z+x)", "Rg(x+y)",
         "Rg(x)", "Rg(y)", "Rg(z)"})
 
@@ -87,6 +87,6 @@ class TestAddGyrationRadius(unittest.TestCase):
     self.assertEqual(
       molecules.get_keys(), {
         "id", "atom-ids", "mass", "xu", "yu", "zu",
-        "I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx",
+        "I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz",
         "Rg^2", "Rg^2(y+z)", "Rg^2(z+x)", "Rg^2(x+y)",
         "Rg^2(x)", "Rg^2(y)", "Rg^2(z)"})

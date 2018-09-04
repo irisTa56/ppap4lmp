@@ -62,8 +62,9 @@ void AddInertiaMoment::compute_with_weights(
     d["I_yy"] = tr - sum(1, 1);
     d["I_zz"] = tr - sum(2, 2);
     d["I_xy"] = -sum(0, 1);
+    d["I_xz"] = -sum(0, 2);
     d["I_yz"] = -sum(1, 2);
-    d["I_zx"] = -sum(2, 0);
+
   }
 }
 
@@ -104,8 +105,8 @@ void AddInertiaMoment::compute_without_weights(
     d["I_yy"] = tr - sum(1, 1);
     d["I_zz"] = tr - sum(2, 2);
     d["I_xy"] = -sum(0, 1);
+    d["I_xz"] = -sum(0, 2);
     d["I_yz"] = -sum(1, 2);
-    d["I_zx"] = -sum(2, 0);
   }
 }
 
@@ -130,5 +131,5 @@ void AddInertiaMoment::compute_impl(
     compute_without_weights(data, el_atoms);
   }
 
-  datakeys.add({"I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx"});
+  datakeys.add({"I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz"});
 }

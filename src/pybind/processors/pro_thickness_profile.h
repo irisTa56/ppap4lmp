@@ -15,11 +15,9 @@ static void pybind_pro_thickness_profile(py::module &m)
       "shift_half_delta", &ProThicknessProfile::shift_half_delta,
       py::arg("shift_half_") = true)
     .def(
-      "get_conditions", &ProThicknessProfile::get_conditions,
-      py::return_value_policy::reference_internal)
+      "get_conditions", &ProThicknessProfile::get_conditions)
     .def(
-      "get_profiles", &ProThicknessProfile::get_profiles,
-      py::return_value_policy::reference_internal);
+      "get_profiles", &ProThicknessProfile::get_profiles);
 }
 
 #endif

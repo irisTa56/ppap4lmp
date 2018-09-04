@@ -17,40 +17,18 @@ create: 2018/09/03 by Takayuki Kobayashi
 namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
-/*
-ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunctionWithDeformation(
-  const ElPtr &beads,
-  const ElPtr &box)
-{
-  register_generator(ShPtr<GenDict>(
-    new GenDict({{"Beads", beads}, {"Box", box}})));
-}
-
-/* ------------------------------------------------------------------ */
-/*
-ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunctionWithDeformation(
-  const Vec<std::pair<ElPtr,ElPtr>> &pairs)
-{
-  Vec<ShPtr<GenDict>> gens;
-
-  for (const auto &pair : pairs)
-  {
-    gens.push_back(ShPtr<GenDict>(
-      new GenDict({{"Beads", pair.first}, {"Box", pair.second}})));
-  }
-
-  register_generators(gens);
-}
-
-/* ------------------------------------------------------------------ */
 
 void ProRDFWD::run_impl(
   const int index)
 {
-  auto el_beads = generators[index]->get_element("Beads");
+  /* NOTE:
+    Although 'bead' is used in variable names, you can compute RDF of
+    molecules.
+  */
+  auto el_beads = generators[index]->get_element("Targets");
 
   el_beads->required({
-    "I_xx", "I_yy", "I_zz", "I_xy", "I_yz", "I_zx", "mass",
+    "I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz", "mass",
     "x", "y", "z", "id"});
 
   auto &beads = el_beads->get_data();
@@ -67,17 +45,17 @@ void ProRDFWD::run_impl(
 
   auto n_beads = beads.size();
 
-  Vec<std::pair<VectorXd,MatrixXd>> rs_and_Is_per_mass;
+  Vec<std::pair<Vector3d,Matrix3d>> rs_and_Is_per_mass;
   rs_and_Is_per_mass.reserve(n_beads);
 
   for (const auto &bead : beads)
   {
     rs_and_Is_per_mass.push_back(std::make_pair(
-      (Eigen::Vector3d() << bead["x"], bead["y"], bead["z"])
+      (Vector3d() << bead["x"], bead["y"], bead["z"])
       .finished(),
-      (Eigen::Matrix3d() << bead["I_xx"], bead["I_xy"], bead["I_zx"],
-                            bead["I_xy"], bead["I_yy"], bead["I_yz"],
-                            bead["I_zx"], bead["I_yz"], bead["I_zz"])
+      (Matrix3d() << bead["I_xx"], bead["I_xy"], bead["I_xz"],
+                     bead["I_xy"], bead["I_yy"], bead["I_yz"],
+                     bead["I_xz"], bead["I_yz"], bead["I_zz"])
       .finished() / bead["mass"].get<double>()));
   }
 
@@ -116,9 +94,21 @@ void ProRDFWD::run_impl(
 
   number_traj[index] = n_beads;
   volume_traj[index] = length.prod();
-  counts_traj[index] = ArrayXi::Zero(n_bins);
 
+  counts_traj[index] = ArrayXi::Zero(n_bins);
   auto &counts = counts_traj[index];
+
+  raw_counts_traj[index] = ArrayXi::Zero(n_bins);
+  auto &raw_counts = raw_counts_traj[index];
+
+  Rg2_sum_traj[index] = ArrayXd::Zero(n_bins);
+  auto &Rg2_sum = Rg2_sum_traj[index];
+
+  Rg2_para_sum_traj[index] = ArrayXd::Zero(n_bins);
+  auto &Rg2_para_sum = Rg2_para_sum_traj[index];
+
+  Rg2_perp_sum_traj[index] = ArrayXd::Zero(n_bins);
+  auto &Rg2_perp_sum = Rg2_perp_sum_traj[index];
 
   for (int i = 0; i != n_beads; ++i)
   {
@@ -161,24 +151,38 @@ void ProRDFWD::run_impl(
 
             if (r2_margined <= r2) continue;
 
-            auto e_ij = Eigen::Vector3d(dx, dy, dz);
+            auto e_ij = Vector3d(dx, dy, dz);
             e_ij.normalize();
 
-            auto quad_i = e_ij.transpose() * I_i * e_ij;
-            auto quad_j = e_ij.transpose() * I_j * e_ij;
+            // explicit definition is required (I don't know the reason)
+            double quad_i = e_ij.transpose() * I_i * e_ij;
+            double quad_j = e_ij.transpose() * I_j * e_ij;
 
-            auto Rg2_i = 0.5*I_i.trace();
-            auto Rg2_j = 0.5*I_j.trace();
-
-            // perpendicular (not used for now)
-            //auto Rg2_perp_i = 1.5 * quad_i;
-            //auto Rg2_perp_j = 1.5 * quad_j;
+            auto Rg2_i = 0.5 * I_i.trace();
+            auto Rg2_j = 0.5 * I_j.trace();
 
             // parallel
             auto Rg2_para_i = 3.0 * (Rg2_i - quad_i);
             auto Rg2_para_j = 3.0 * (Rg2_j - quad_j);
 
-            auto r_modified = sqrt(r2) + (
+            // perpendicular
+            auto Rg2_perp_i = 1.5 * quad_i;
+            auto Rg2_perp_j = 1.5 * quad_i;
+
+            auto r = sqrt(r2);
+
+            if (r < r_max)
+            {
+              auto index = bin_from_r ?
+                floor(r*reciprocal_width) : round(r*reciprocal_width);
+
+              raw_counts(index) += 2;
+              Rg2_sum(index) += Rg2_i + Rg2_j;
+              Rg2_para_sum(index) += Rg2_para_i + Rg2_para_j;
+              Rg2_perp_sum(index) += Rg2_perp_i + Rg2_perp_j;
+            }
+
+            auto r_modified = r + (
               (sqrt(Rg2_i) - sqrt(Rg2_para_i)) +
               (sqrt(Rg2_j) - sqrt(Rg2_para_j)));
 
@@ -196,6 +200,8 @@ void ProRDFWD::run_impl(
               ut::warning("Margin is too small");
             }
 
+            if (r_max <= r_modified) continue;
+
             auto index = bin_from_r ?
               floor(r_modified*reciprocal_width) :
               round(r_modified*reciprocal_width);
@@ -209,78 +215,74 @@ void ProRDFWD::run_impl(
 }
 
 /* ------------------------------------------------------------------ */
-/*
+
 void ProRDFWD::prepare()
 {
-  number_traj.resize(n_generators);
-  volume_traj.resize(n_generators);
-  counts_traj.resize(n_generators);
+  ProRDF::prepare();
+
+  raw_counts_traj.resize(n_generators);
+  Rg2_sum_traj.resize(n_generators);
+  Rg2_para_sum_traj.resize(n_generators);
+  Rg2_perp_sum_traj.resize(n_generators);
 }
 
 /* ------------------------------------------------------------------ */
-/*
+
 void ProRDFWD::finish()
 {
-  ArrayXd shell_volume(n_bins);
+  ProRDF::finish();
 
-  double ball_coeff = 4.0 * M_PI / 3.0;
+  Rg2_array_traj.resize(n_generators);
+  Rg2_para_array_traj.resize(n_generators);
+  Rg2_perp_array_traj.resize(n_generators);
 
-  for (int i = 0; i != n_bins; ++i)
-  {
-    auto r_inner = bin_from_r ?
-      i * bin_width : std::max(0.0, (i-0.5) * bin_width);
-    auto r_outer = bin_from_r ?
-      (i+1) * bin_width : (i+0.5) * bin_width;
-
-    shell_volume(i) = ball_coeff * (pow(r_outer, 3) - pow(r_inner, 3));
-  }
-
-  int number_sum = 0;
-  double volume_sum = 0.0;
+  // DO NOT USE `auto` to initialize using Eigen's Zero()
   ArrayXi counts_sum = ArrayXi::Zero(n_bins);
-
-  rdf_traj.reserve(n_generators);
+  ArrayXd Rg2_sum = ArrayXd::Zero(n_bins);
+  ArrayXd Rg2_para_sum = ArrayXd::Zero(n_bins);
+  ArrayXd Rg2_perp_sum = ArrayXd::Zero(n_bins);
 
   for (int i = 0; i != n_generators; ++i)
   {
-    auto number_tmp = number_traj[i];
-    auto volume_tmp = volume_traj[i];
-    auto counts_tmp = counts_traj[i];
+    auto counts_tmp = raw_counts_traj[i];
+    auto Rg2_tmp = Rg2_sum_traj[i];
+    auto Rg2_para_tmp = Rg2_para_sum_traj[i];
+    auto Rg2_perp_tmp = Rg2_perp_sum_traj[i];
 
-    auto density_tmp = number_tmp / volume_tmp;
-    auto number_distribution_tmp
-      = counts_tmp.cast<double>() / double(number_tmp);
+    auto reciprocal_counts = (1.0 / counts_tmp.cast<double>())
+    .unaryExpr([](double x)
+    {
+      return std::isfinite(x) ? x : 0.0;
+    });
 
-    rdf_traj.push_back(
-      number_distribution_tmp / (density_tmp*shell_volume));
+    Rg2_array_traj[i] = Rg2_tmp * reciprocal_counts;
+    Rg2_para_array_traj[i] = Rg2_para_tmp * reciprocal_counts;
+    Rg2_perp_array_traj[i] = Rg2_perp_tmp * reciprocal_counts;
 
-    number_sum += number_tmp;
-    volume_sum += volume_tmp;
     counts_sum += counts_tmp;
+    Rg2_sum += Rg2_tmp;
+    Rg2_para_sum += Rg2_para_tmp;
+    Rg2_perp_sum += Rg2_perp_tmp;
   }
 
-  auto density = number_sum / volume_sum;
-  auto number_distribution
-    = counts_sum.cast<double>() / double(number_sum);
+  auto reciprocal_counts = (1.0 / counts_sum.cast<double>())
+    .unaryExpr([](double x)
+    {
+      return std::isfinite(x) ? x : 0.0;
+    });
 
-  rdf = number_distribution / (density*shell_volume);
+  Rg2_array = Rg2_sum * reciprocal_counts;
+  Rg2_para_array = Rg2_para_sum * reciprocal_counts;
+  Rg2_perp_array = Rg2_perp_sum * reciprocal_counts;
 
-  number_traj.clear();
-  number_traj.shrink_to_fit();
-  volume_traj.clear();
-  volume_traj.shrink_to_fit();
-  counts_traj.clear();
-  counts_traj.shrink_to_fit();
-}
-
-/* ------------------------------------------------------------------ */
-/*
-void ProRDFWD::set_bin(
-  double bin_width_,
-  int n_bins_)
-{
-  n_bins = n_bins_;
-  bin_width = bin_width_;
+  raw_counts_traj.clear();
+  raw_counts_traj.shrink_to_fit();
+  Rg2_sum_traj.clear();
+  Rg2_sum_traj.shrink_to_fit();
+  Rg2_para_sum_traj.clear();
+  Rg2_para_sum_traj.shrink_to_fit();
+  Rg2_perp_sum_traj.clear();
+  Rg2_perp_sum_traj.shrink_to_fit();
 }
 
 /* ------------------------------------------------------------------ */
@@ -292,54 +294,61 @@ void ProRDFWD::set_margin(
 }
 
 /* ------------------------------------------------------------------ */
-/*
-void ProRDFWD::set_gyration_radius(
-  double gyration_radius_)
+
+Map<Str,ArrayXd> ProRDFWD::get_gyration_radius()
 {
-  gyration_radius = gyration_radius_;
+  return {
+    {"isotropic", Rg2_array.sqrt()},
+    {"parallel", Rg2_para_array.sqrt()},
+    {"perpendicular", Rg2_perp_array.sqrt()}};
 }
 
 /* ------------------------------------------------------------------ */
-/*
-void ProRDFWD::bin_from_r_to_r_plus_dr(
-  bool bin_from_r_)
+
+Map<Str,Vec<ArrayXd>> ProRDFWD::get_gyration_radius_traj()
 {
-  bin_from_r = bin_from_r_;
+  Map<Str,Vec<ArrayXd>> tmp;
+
+  auto &iso = tmp["isotropic"];
+
+  for (const auto &array : Rg2_array_traj)
+{
+    iso.push_back(array.sqrt());
 }
 
-/* ------------------------------------------------------------------ */
-/*
-void ProRDFWD::beyond_half_box_length(
-  bool beyond_half_)
+  auto &para = tmp["parallel"];
+
+  for (const auto &array : Rg2_array_traj)
 {
-  beyond_half = beyond_half_;
+    para.push_back(array.sqrt());
 }
 
-/* ------------------------------------------------------------------ */
-/*
-const ArrayXd ProRDFWD::get_r_axis()
-{
-  ArrayXd rs(n_bins);
+  auto &perp = tmp["perpendicular"];
 
-  for (int i = 0; i != n_bins; ++i)
+  for (const auto &array : Rg2_array_traj)
   {
-    rs(i) = i * bin_width;
+    perp.push_back(array.sqrt());
   }
 
-  return rs;
+  return tmp;
 }
 
 /* ------------------------------------------------------------------ */
-/*
-const ArrayXd &ProRDFWD::get_rdf()
+
+Map<Str,ArrayXd> ProRDFWD::get_squared_gyration_radius()
 {
-  return rdf;
+  return {
+    {"isotropic", Rg2_array},
+    {"parallel", Rg2_para_array},
+    {"perpendicular", Rg2_perp_array}};
 }
 
 /* ------------------------------------------------------------------ */
-/*
-const Vec<ArrayXd> &ProRDFWD::get_rdf_traj()
+
+Map<Str,Vec<ArrayXd>> ProRDFWD::get_squared_gyration_radius_traj()
 {
-  return rdf_traj;
+  return {
+    {"isotropic", Rg2_array_traj},
+    {"parallel", Rg2_para_array_traj},
+    {"perpendicular", Rg2_perp_array_traj}};
 }
-*/

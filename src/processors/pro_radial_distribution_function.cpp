@@ -17,15 +17,11 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 ProRadialDistributionFunction::ProRadialDistributionFunction(
-  const ElPtr &atoms,
+  const ElPtr &targets,
   const ElPtr &box)
 {
-  /* NOTE:
-    Although 'Atoms' is used as key, you can compute RDF of beads and
-    molecules.
-  */
   register_generator(ShPtr<GenDict>(
-    new GenDict({{"Atoms", atoms}, {"Box", box}})));
+    new GenDict({{"Targets", targets}, {"Box", box}})));
 }
 
 /* ------------------------------------------------------------------ */
@@ -38,7 +34,7 @@ ProRadialDistributionFunction::ProRadialDistributionFunction(
   for (const auto &pair : pairs)
   {
     gens.push_back(ShPtr<GenDict>(
-      new GenDict({{"Atoms", pair.first}, {"Box", pair.second}})));
+      new GenDict({{"Targets", pair.first}, {"Box", pair.second}})));
   }
 
   register_generators(gens);
@@ -49,7 +45,11 @@ ProRadialDistributionFunction::ProRadialDistributionFunction(
 void ProRadialDistributionFunction::run_impl(
   const int index)
 {
-  auto el_atoms = generators[index]->get_element("Atoms");
+  /* NOTE:
+    Although 'atom' is used in variable names, you can compute RDF of
+    beads and molecules.
+  */
+  auto el_atoms = generators[index]->get_element("Targets");
 
   el_atoms->required({"x", "y", "z", "id"});
 

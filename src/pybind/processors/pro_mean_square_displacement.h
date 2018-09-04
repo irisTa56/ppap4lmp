@@ -13,11 +13,11 @@ static void pybind_pro_mean_square_displacement(py::module &m)
       "without_drift_correction", &ProMeanSquareDisplacement::without_drift_correction,
       py::arg("without_drift_correction_") = false)
     .def(
-      "get_displacement2_array", &ProMeanSquareDisplacement::get_displacement2_array,
-      py::return_value_policy::reference_internal)
+      "get_displacement2_array",
+      &ProMeanSquareDisplacement::get_displacement2_array)
     .def(
-      "get_mean_square_displacement", &ProMeanSquareDisplacement::get_mean_square_displacement,
-      py::return_value_policy::reference_internal);
+      "get_mean_square_displacement",
+      &ProMeanSquareDisplacement::get_mean_square_displacement);
 }
 
 #endif

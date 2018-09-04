@@ -32,8 +32,8 @@ class TestAddMolecularOrientation(unittest.TestCase):
       msg = traceback.format_exc()
       self.assertEqual(
         msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_yy', 'I_yz', "
-        + "'I_zx', 'I_zz'")
+        "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', "
+        + "'I_yz', 'I_zz'")
 
   def test_isotropic(self):
 

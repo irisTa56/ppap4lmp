@@ -12,14 +12,11 @@ static void pybind_pro_distance_in_molecule(py::module &m)
     .def("set_indices", &ProDistanceInMolecule::set_indices)
     .def("set_moltype", &ProDistanceInMolecule::set_moltype)
     .def(
-      "compute_sqrt", &ProDistanceInMolecule::compute_sqrt,
-      py::arg("do_sqrt_") = true)
+      "get_distance_array",
+      &ProDistanceInMolecule::get_distance_array)
     .def(
-      "get_distance_array", &ProDistanceInMolecule::get_distance_array,
-      py::return_value_policy::reference_internal)
-    .def(
-      "get_distance2_array", &ProDistanceInMolecule::get_distance2_array,
-      py::return_value_policy::reference_internal);
+      "get_distance2_array",
+      &ProDistanceInMolecule::get_distance2_array);
 }
 
 #endif

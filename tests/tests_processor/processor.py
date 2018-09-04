@@ -4,6 +4,7 @@ from test_ProData import TestProData
 from test_ProValueArray import TestProValueArray
 from test_ProThicknessProfile import TestProThicknessProfile
 from test_ProRadialDistributionFunction import TestProRadialDistributionFunction
+from test_ProRadialDistributionFunctionWithDeformation import TestProRadialDistributionFunctionWithDeformation
 from test_ProDistanceInMolecule import TestProDistanceInMolecule
 from test_ProMeanSquareDisplacement import TestProMeanSquareDisplacement
 
@@ -32,10 +33,15 @@ suite.addTest(TestProRadialDistributionFunction("test_cubic_bin_from_r_to_r_plus
 suite.addTest(TestProRadialDistributionFunction("test_cubic_beyond_half_box_length"))
 suite.addTest(TestProRadialDistributionFunction("test_traj"))
 
+suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_error01"))
+suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_cubic_isotropic"))
+suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_cubic_same_size"))
+suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_with_and_without_modification"))
+
 suite.addTest(TestProDistanceInMolecule("test_error01"))
 suite.addTest(TestProDistanceInMolecule("test_error02"))
-suite.addTest(TestProDistanceInMolecule("test_only_squared_distance"))
-suite.addTest(TestProDistanceInMolecule("test_compute_sqrt"))
+suite.addTest(TestProDistanceInMolecule("test_squared_distance"))
+suite.addTest(TestProDistanceInMolecule("test_square_rooted_distance"))
 
 suite.addTest(TestProMeanSquareDisplacement("test_error01"))
 suite.addTest(TestProMeanSquareDisplacement("test_dimension_3d"))

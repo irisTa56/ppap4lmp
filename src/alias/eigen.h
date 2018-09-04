@@ -32,6 +32,15 @@ using VectorXd = Eigen::VectorXd;
 using RowVectorXi = Eigen::RowVectorXi;
 using RowVectorXd = Eigen::RowVectorXd;
 
+using Matrix3i = Eigen::Matrix3i;
+using Matrix3d = Eigen::Matrix3d;
+
+using Vector3i = Eigen::Vector3i;
+using Vector3d = Eigen::Vector3d;
+
+using RowVector3i = Eigen::RowVector3i;
+using RowVector3d = Eigen::RowVector3d;
+
 #ifdef ALIAS_PYBIND_H
 #include <alias/pybind_eigen.h>
 #endif

@@ -15,9 +15,7 @@ class ProDistanceInMolecule : public Processor {
   int index1_in_mol = 0;
   int index2_in_mol = 0;
   int target_moltype = 1;
-  bool do_sqrt = false;
   Vec<RowArrayXd> distance2_traj;
-  ArrayXXd distance_array;
   ArrayXXd distance2_array;
  protected:
   virtual void run_impl(
@@ -36,9 +34,7 @@ class ProDistanceInMolecule : public Processor {
     int index2_in_mol_);
   void set_moltype(
     int target_moltype_);
-  void compute_sqrt(
-    bool do_sqrt_ = true);
-  const ArrayXXd &get_distance_array();
+  ArrayXXd get_distance_array();
   const ArrayXXd &get_distance2_array();
 };
 

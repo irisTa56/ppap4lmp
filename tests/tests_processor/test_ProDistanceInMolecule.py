@@ -56,7 +56,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
         msg.split("\n")[0],
         "RuntimeError: Missing key(s) 'atom-ids'")
 
-  def test_only_squared_distance(self):
+  def test_squared_distance(self):
 
     abst_atoms = []
     n_atoms_in_mol = len(self.base_data)
@@ -107,7 +107,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
 
     self.assertTrue(np.allclose(pro.get_distance2_array(), expects))
 
-  def test_compute_sqrt(self):
+  def test_square_rooted_distance(self):
 
     abst_atoms = []
     n_atoms_in_mol = len(self.base_data)
@@ -150,7 +150,6 @@ class TestProDistanceInMolecule(unittest.TestCase):
 
     pro = ProDistanceInMolecule(list(zip(molses, atomses)))
     pro.set_indices(1, 5)
-    pro.compute_sqrt()
 
     InvOMP(pro).execute()
 

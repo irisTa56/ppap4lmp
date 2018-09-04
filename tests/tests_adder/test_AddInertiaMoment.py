@@ -57,5 +57,5 @@ class TestAddInertiaMoment(unittest.TestCase):
 
     self.assertEqual(data["I_xx"], data["I_yy"])
     self.assertEqual(data["I_yy"], data["I_zz"])
+    self.assertEqual(data["I_xy"], data["I_xz"])
     self.assertEqual(data["I_xy"], data["I_yz"])
-    self.assertEqual(data["I_zx"], data["I_xy"])
