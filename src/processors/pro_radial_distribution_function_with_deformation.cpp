@@ -7,10 +7,6 @@ perpendicular and parallel directions of the point-to-point vector.
 create: 2018/09/03 by Takayuki Kobayashi
 --------------------------------------------------------------------- */
 
-#define _USE_MATH_DEFINES
-
-#include <cmath>
-
 #include "pro_radial_distribution_function_with_deformation.h"
 #include "../utils/message.h"
 
@@ -51,12 +47,11 @@ void ProRDFWD::run_impl(
   for (const auto &bead : beads)
   {
     rs_and_Is_per_mass.push_back(std::make_pair(
-      (Vector3d() << bead["x"], bead["y"], bead["z"])
-      .finished(),
+      (Vector3d() << bead["x"], bead["y"], bead["z"]).finished(),
       (Matrix3d() << bead["I_xx"], bead["I_xy"], bead["I_xz"],
                      bead["I_xy"], bead["I_yy"], bead["I_yz"],
                      bead["I_xz"], bead["I_yz"], bead["I_zz"])
-      .finished() / bead["mass"].get<double>()));
+        .finished() / bead["mass"].get<double>()));
   }
 
   ArrayXd length(3);
@@ -89,6 +84,8 @@ void ProRDFWD::run_impl(
     std::make_pair(-1, 1) : std::make_pair(0, 0);
 
   auto reciprocal_width = 1.0 / bin_width;
+
+  double two_thirds = 2.0 / 3.0;
 
   // computation body
 
@@ -151,23 +148,22 @@ void ProRDFWD::run_impl(
 
             if (r2_margined <= r2) continue;
 
-            auto e_ij = Vector3d(dx, dy, dz);
+            Vector3d e_ij;
+            e_ij << dx, dy, dz;
             e_ij.normalize();
-
-            // explicit definition is required (I don't know the reason)
-            double quad_i = e_ij.transpose() * I_i * e_ij;
-            double quad_j = e_ij.transpose() * I_j * e_ij;
 
             auto Rg2_i = 0.5 * I_i.trace();
             auto Rg2_j = 0.5 * I_j.trace();
 
-            // parallel
-            auto Rg2_para_i = 3.0 * (Rg2_i - quad_i);
-            auto Rg2_para_j = 3.0 * (Rg2_j - quad_j);
+            /* NOTE:
+              Using `auto` leads to an Eigen related error (I cannot
+              figure out the details).
+            */
+            double Rg2_perp_i = 1.5 * e_ij.transpose() * I_i * e_ij;
+            double Rg2_perp_j = 1.5 * e_ij.transpose() * I_j * e_ij;
 
-            // perpendicular
-            auto Rg2_perp_i = 1.5 * quad_i;
-            auto Rg2_perp_j = 1.5 * quad_i;
+            auto Rg2_para_i = 3.0 * (Rg2_i - two_thirds*Rg2_perp_i);
+            auto Rg2_para_j = 3.0 * (Rg2_j - two_thirds*Rg2_perp_j);
 
             auto r = sqrt(r2);
 

@@ -231,6 +231,12 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
     pro_with_modify = ProRDFWD(list(zip(molses, boxes)))
     pro_without_modify = ProRDF(list(zip(molses, boxes)))
 
+    num_bins = 20
+    bin_width = 0.1
+
+    pro_with_modify.set_bin(bin_width, num_bins)
+    pro_without_modify.set_bin(bin_width, num_bins)
+
     InvOMP([pro_with_modify, pro_without_modify]).execute()
 
     self.assertTrue(np.allclose(
@@ -240,4 +246,52 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
       np.array(pro_without_modify.get_rdf_traj())))
 
   def test_for_beads(self):
-    pass
+
+    n_samples = 50
+    interval = 1000
+
+    atomses = [create(
+      StaDumpAtoms("dumps_atom/atom.{}.dump".format(i), i))
+      for i in range(0, n_samples*interval+1, interval)]
+    boxes = [create(
+      StaDumpBox("dumps_atom/atom.{}.dump".format(i), i))
+      for i in range(0, n_samples*interval+1, interval)]
+    molses = [create(StaMolecules(atoms)) for atoms in atomses]
+
+    mappings = [
+      [0, 1, 2, 12, 13, 14, 15, 16, 17, 18],
+      [3, 4, 5, 19, 20, 21, 22, 23, 24],
+      [6, 7, 8, 25, 26, 27, 28, 29, 30],
+      [9, 10, 11, 31, 32, 33, 34, 35, 36, 37]]
+
+    abst_beads = [
+      {"type": 1, "indices-in-mol": mapping} for mapping in mappings]
+
+    beadses = [create(StaBeads(mols, abst_beads))
+        .append_updater(AddCoMPosition(atoms))
+        .append_updater(AddInertiaMoment(atoms))
+        .append_updater(AddWrappedPosition(box))
+      for atoms, box, mols in zip(atomses, boxes, molses)]
+
+    pro = ProRDFWD(list(zip(beadses, boxes)))
+
+    num_bins = 150
+    bin_width = 0.1
+
+    pro.set_bin(bin_width, num_bins)
+    pro.set_margin(2.0)
+
+    InvOMP(pro).execute()
+
+    Rg2s = pro.get_squared_gyration_radius()
+
+    self.assertTrue(np.allclose(
+      Rg2s["isotropic"],
+      (1/3)*Rg2s["parallel"] + (2/3)*Rg2s["perpendicular"]))
+
+    Rg2s_traj = pro.get_squared_gyration_radius_traj()
+
+    self.assertTrue(np.allclose(
+      np.array(Rg2s_traj["isotropic"]),
+      (1/3)*np.array(Rg2s_traj["parallel"])
+        + (2/3)*np.array(Rg2s_traj["perpendicular"])))

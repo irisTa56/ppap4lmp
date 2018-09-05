@@ -37,6 +37,7 @@ suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_error01"))
 suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_cubic_isotropic"))
 suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_cubic_same_size"))
 suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_with_and_without_modification"))
+suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_for_beads"))
 
 suite.addTest(TestProDistanceInMolecule("test_error01"))
 suite.addTest(TestProDistanceInMolecule("test_error02"))
