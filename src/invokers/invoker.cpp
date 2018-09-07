@@ -31,6 +31,11 @@ Invoker::Invoker(
 
 void Invoker::execute()
 {
+  for (const auto &p : processors)
+  {
+    p->startup();
+  }
+
   try
   {
     for (const auto &p : processors)

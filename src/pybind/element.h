@@ -43,8 +43,7 @@ static void pybind_element(py::module &m)
     "create",
     [](ShPtr<Updater> upd)
     {
-      return ElPtr(
-        new Element())->append_updater(upd);
+      return ElPtr(new Element())->append_updater(upd);
     });
 }
 

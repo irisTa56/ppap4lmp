@@ -10,7 +10,7 @@ create: 2018/06/22 by Takayuki Kobayashi
 #include <core/generators.h>
 
 class Processor {
-  int i_generator = 0;
+  int i_generator;
  protected:
   int n_generators;
   Vec<ShPtr<Generator>> generators;
@@ -27,6 +27,7 @@ class Processor {
   virtual void prepare() {}
   virtual void finish() {}
   virtual bool run();
+  void startup();
 };
 
 #endif

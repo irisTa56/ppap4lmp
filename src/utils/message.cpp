@@ -1,4 +1,5 @@
-#include <iostream>
+//#include <iostream>
+#include <alias/pybind.h>
 
 #include "message.h"
 
@@ -11,9 +12,10 @@ bool ToF_LOGGING = false;
 void ut::_message(
   const Str &msg)
 {
-  #pragma omp critical (stdout)
+  #pragma omp critical (pyprint)
   {
-    std::cout << msg << std::endl;
+    //std::cout << msg << std::endl;
+    py::print(msg);
   }
 }
 

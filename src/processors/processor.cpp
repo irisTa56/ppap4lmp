@@ -17,11 +17,6 @@ void Processor::register_generator(
   generators.push_back(gen);
 
   n_generators = generators.size();
-
-  for (const auto &g : generators)
-  {
-    g->appoint();
-  }
 }
 
 template void Processor::register_generator(
@@ -45,11 +40,6 @@ void Processor::register_generators(
   }
 
   n_generators = generators.size();
-
-  for (const auto &g : generators)
-  {
-    g->appoint();
-  }
 }
 
 template void Processor::register_generators(
@@ -82,4 +72,16 @@ bool Processor::run()
   }
 
   return true;
+}
+
+/* ------------------------------------------------------------------ */
+
+void Processor::startup()
+{
+  i_generator = 0;
+
+  for (const auto &g : generators)
+  {
+    g->appoint();
+  }
 }
