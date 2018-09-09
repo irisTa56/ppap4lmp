@@ -106,7 +106,7 @@ pip install .
 
 ## Sequence diagram
 
-![sequence_diagram](images/mermaid_sequence.svg)
+<img src="images/mermaid_sequence.svg" width="100%"><br/>
 
 * Actually, Generator stored as an item of UpdatePair is actually its subclass Element. An Element class instance has data (Json) as its member.
 * Updater has some subclasses: Starter, Adder. Starter updates empty data (initializing data) and Adder updates non-empty data (adding new properties to existing data).
