@@ -111,7 +111,18 @@ functions.sort()
 
 with open("src/pybind.h", "w") as f:
 
-  f.write("""#ifndef PYBIND_H
+  f.write("""/*!
+  @file src/pybind.h
+  @brief This file includes all the header files containing definitions
+  of functions to bind C++ and Python.
+  @author Takayuki Kobayashi
+  @date 2018/09/08
+  @details This file is not included in the GitHub repository. It will
+  be created at installation time. One can find how this file is
+  written in 'setup.py' in the root directory.
+*/
+
+#ifndef PYBIND_H
 #define PYBIND_H
 
 #include <pybind11/pybind11.h>

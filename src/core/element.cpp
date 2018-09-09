@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-Element: stands for Generator containing data 'element'.
-
-create: 2018/07/01 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/core/element.cpp
+  @brief This file has implementations of the Element class, which is
+  one of the cores of this program.
+  @author Takayuki Kobayashi
+  @date 2018/07/01
+  @details \e Element stands for Generator containing data \e element,
+  or data entity. Please see the header file for more details.
+*/
 
 #include "element.h"
 #include "updater.h"
@@ -15,10 +19,7 @@ namespace ut = utils;
 int Element::instance_count = 0;
 
 /* ------------------------------------------------------------------ */
-/* NOTE:
-  The following constructor is thread-unsafe. It is assumed to be not
-  called from multithreads.
-*/
+
 Element::Element()
 {
   instance_count++;
@@ -118,10 +119,7 @@ ShPtr<Generator> Element::get_generator(
 }
 
 /* ------------------------------------------------------------------ */
-/* NOTE:
-  The following method is thread-unsafe. It is assumed to be not called
-  from multithreads.
-*/
+
 ElPtr Element::append_updater(
   const ShPtr<Updater> &upd)
 {
