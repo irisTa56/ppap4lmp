@@ -119,7 +119,7 @@ with open("src/pybind.h", "w") as f:
   @date 2018/09/08
   @details This file is not included in the GitHub repository. It will
   be created at installation time. One can find how this file is
-  written in 'setup.py' in the root directory.
+  written in \c setup.py in the root directory of this project.
 */
 
 #ifndef PYBIND_H

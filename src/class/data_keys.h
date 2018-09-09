@@ -1,3 +1,11 @@
+/*!
+  @file src/class/data_keys.h
+  @brief ...
+  @author Takayuki Kobayashi
+  @date 2018/09/09
+  @details ...
+*/
+
 #ifndef DATA_KEYS_H
 #define DATA_KEYS_H
 
@@ -16,8 +24,14 @@ class DataKeys {
     const Json &key_);
   void remove(
     const Json &key_);
+  /*!
+    @brief ...
+  */
   void required(
     const Json &key_);
+  /*!
+    @brief ...
+  */
   bool optional(
     const Json &key_);
   const Set<Str> &get();

@@ -3,7 +3,6 @@
   @brief This file has a definition of the GenDict class.
   @author Takayuki Kobayashi
   @date 2018/07/03
-  @details \e GenDict stands for Generator Dictionary (or map).
 */
 
 #ifndef GEN_DICT_H
@@ -12,56 +11,58 @@
 #include <core/element.h>
 
 /*!
-  @brief The GenDict class is a subclass of the Generator class.
-  @details This class can stores an arbitrary number of Generator
-  instance as a dictionary (map) of shared pointers.
+  @brief \e GenDict stands for Generator Dictionary (or map).
+  @details This class is a subclass of the Generator class and stores
+  an arbitrary number of Generator instance as a dictionary (map) of
+  shared pointers.
 */
 class GenDict : public Generator {
   /*!
-    @brief Dictionary of shared pointers of Generator: keys are strings
-    and values are shared pointers. The core of the GenDict class.
+    @brief Dictionary of shared pointers of Generator (keys are strings
+    and values are shared pointers). The core of the GenDict class.
     @details The values can be a pointer to Element up-casted to a
     shared pointer of Generator.
   */
   Map<Str,ShPtr<Generator>> generator_dict;
  public:
   /*!
-    @brief Constructor of the GenDict class.
-    @param const Map<Str,ShPtr<Generator>> &generator_dict_.
+    @brief Constructor of GenDict class.
+    @param const ::Map<::Str,::ShPtr<#Generator>> &generator_dict_:
+    a dictionary of shared pointers to be stored.
     @return Instance of the class.
-    @details The argument is stored to the \e generator_dict as it is.
+    @details The argument is stored to the #generator_dict as it is.
     This constructor is thread-unsafe because it accesses its members
-    thread-globally. Ensure this constructor is called from (via)
-    Python (such as constructors of Updater, Processor and their
+    thread-globally. Ensure this constructor is called (indirectly)
+    from Python (such as constructors of Updater, Processor and their
     subclasses) and not called in a multithreads context.
   */
   GenDict(
     const Map<Str,ShPtr<Generator>> &generator_dict_);
   virtual ~GenDict() = default;
   /*!
-    @brief Get a value of \e generator_dict as a shared pointer of
-    the Element class.
-    @param const Json &name = nullptr.
-    @return Shared pointer to a value of the \e generator_dict.
-    @details One needs get as the Element when accessing the data. The
-    \e name must be a string, that is a key for the value in
-    \e generator_dict.
+    @brief Get a value of #generator_dict as a shared pointer of
+    Element class.
+    @param const ::Json &name: a string key in the #generator_dict.
+    @return A value of the #generator_dict up-casted to Element class.
+    @details One needs to get as Element when accessing the data. The
+    argument \c name must be a string, which is a key for the value in
+    #generator_dict.
   */
   virtual ElPtr get_element(
     const Json &name = nullptr) override;
   /*!
-    @brief Get a value of \e generator_dict as a shared pointer of
-    the Generator class.
-    @param const Json &name = nullptr.
-    @return Shared pointer to a value of the \e generator_dict.
-    @details One needs get as the Generator when storing the instance.
-    The \e name must be a string, that is a key for the value in
-    \e generator_dict.
+    @brief Get a value of #generator_dict as a shared pointer of
+    Generator class.
+    @param const ::Json &name: a string key in the #generator_dict.
+    @return A value of the #generator_dict.
+    @details One needs to get as Generator when storing the instance.
+    The argument \c name must be a string, which is a key for the value
+    in #generator_dict.
   */
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;
   /*!
-    @brief Get a set of the keys of the \e generator_list.
+    @brief Get a set of the keys in the #generator_list.
     @param None.
     @return Set of strings.
   */

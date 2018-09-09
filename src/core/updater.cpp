@@ -1,8 +1,11 @@
-/* ---------------------------------------------------------------------
-Updater: is an abstract class to update data held by Generator.
-
-create: 2018/06/29 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/core/updater.cpp
+  @brief This file has implementations of the Updater class, which is
+  one of the cores of this program.
+  @author Takayuki Kobayashi
+  @date 2018/06/29
+  @details Please see the header file for more details.
+*/
 
 #include "updater.h"
 

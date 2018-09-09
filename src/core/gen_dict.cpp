@@ -3,8 +3,7 @@
   @brief This file has implementations of the GenDict class.
   @author Takayuki Kobayashi
   @date 2018/07/03
-  @details \e GenDict stands for Generator Dictionary (or map). Please
-  see the header file for more details.
+  @details Please see the header file for more details.
 */
 
 #include "gen_dict.h"
@@ -65,3 +64,5 @@ Set<Str> GenDict::get_keys()
 
   return tmp;
 }
+
+/* ------------------------------------------------------------------ */

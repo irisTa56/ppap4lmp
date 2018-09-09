@@ -73,21 +73,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This file has a definition of the <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> class, which is one of the cores of this program.  
+<p>This file has a definition of the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class, which is one of the cores of this program.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;alias/std.h&gt;</code><br />
-<code>#include &lt;alias/json.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="std_8h_source.html">alias/std.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="json_8h_source.html">alias/json.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for generator.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="generator_8h__incl.svg" width="662" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="generator_8h__incl.svg" width="662" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="generator_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="generator_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="generator_8h_source.html">Go to the source code of this file.</a></p>
@@ -95,21 +93,20 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html">Generator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> class is one of the cores of this program.  <a href="classGenerator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em><a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a></em> is an abstract class to generate data.  <a href="classGenerator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aa743f1a2c3b5394843428e88fd4dda26"><td class="memItemLeft" align="right" valign="top"><a id="aa743f1a2c3b5394843428e88fd4dda26"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> = std::pair&lt; ShPtr&lt; <a class="el" href="classElement.html">Element</a> &gt;, ShPtr&lt; <a class="el" href="classUpdater.html">Updater</a> &gt; &gt;</td></tr>
-<tr class="memdesc:aa743f1a2c3b5394843428e88fd4dda26"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>UpdatePair</em> is a pair of shared pointer of the <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> class and the <a class="el" href="classUpdater.html">Updater</a> class. The <a class="el" href="classUpdater.html">Updater</a> instance updates <em>data</em> of the <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> instance (in other words, the <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> instance calls its <em>update_data</em> method taking the <a class="el" href="classUpdater.html">Updater</a> instance as its argument). This is created in <em>append_updater</em> method of the <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> class. <br /></td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> = std::pair&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classElement.html">Element</a> &gt;, <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classUpdater.html">Updater</a> &gt; &gt;</td></tr>
+<tr class="memdesc:aa743f1a2c3b5394843428e88fd4dda26"><td class="mdescLeft">&#160;</td><td class="mdescRight"><em>UpdatePair</em> is a pair of shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class and <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class. The <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">Element::data</a> of the <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> instance (in other words, the <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> instance calls <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73" title="This method updates data of this instance. ">Element::update_data</a> taking the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance as its argument). UpdatePair is created only in <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an instance of Updater class to this instance. Can be called from Python. ">Element::append_updater</a>. <br /></td></tr>
 <tr class="separator:aa743f1a2c3b5394843428e88fd4dda26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file has a definition of the <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> class, which is one of the cores of this program. </p>
+<div class="textblock"><p>This file has a definition of the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class, which is one of the cores of this program. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/06/21</dd></dl>
-<p><em><a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a></em> is an abstract class to generate data. </p>
+<dl class="section date"><dt>Date</dt><dd>2018/06/21 </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

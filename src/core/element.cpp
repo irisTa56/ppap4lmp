@@ -4,8 +4,7 @@
   one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/07/01
-  @details \e Element stands for Generator containing data \e element,
-  or data entity. Please see the header file for more details.
+  @details Please see the header file for more details.
 */
 
 #include "element.h"

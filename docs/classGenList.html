@@ -70,71 +70,69 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classGenList.html" title="The GenList class is a subclass of the Generator class. ">GenList</a> class is a subclass of the <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> class.  
+<p><em><a class="el" href="classGenList.html" title="GenList stands for Generator List (or vector). ">GenList</a></em> stands for <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> List (or vector).  
  <a href="classGenList.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="gen__list_8h_source.html">gen_list.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GenList:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__inherit__graph.svg" width="172" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__inherit__graph.svg" width="172" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for GenList:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__coll__graph.svg" width="172" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__coll__graph.svg" width="172" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a52312e9310f32ffe141e661409ab3a59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a52312e9310f32ffe141e661409ab3a59">GenList</a> (const Vec&lt; ShPtr&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&gt; &amp;generator_list_)</td></tr>
-<tr class="memdesc:a52312e9310f32ffe141e661409ab3a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="classGenList.html" title="The GenList class is a subclass of the Generator class. ">GenList</a> class.  <a href="#a52312e9310f32ffe141e661409ab3a59">More...</a><br /></td></tr>
+<tr class="memitem:a52312e9310f32ffe141e661409ab3a59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a52312e9310f32ffe141e661409ab3a59">GenList</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&gt; &amp;generator_list_)</td></tr>
+<tr class="memdesc:a52312e9310f32ffe141e661409ab3a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classGenList.html" title="GenList stands for Generator List (or vector). ">GenList</a> class.  <a href="#a52312e9310f32ffe141e661409ab3a59">More...</a><br /></td></tr>
 <tr class="separator:a52312e9310f32ffe141e661409ab3a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="core_2element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#aca8f4c0c3ff7e95f74864afb5ddc1888">get_element</a> (const Json &amp;name=nullptr) override</td></tr>
-<tr class="memdesc:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <em>generator_list</em> as a shared pointer of the <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> class.  <a href="#aca8f4c0c3ff7e95f74864afb5ddc1888">More...</a><br /></td></tr>
+<tr class="memitem:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="core_2element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#aca8f4c0c3ff7e95f74864afb5ddc1888">get_element</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
+<tr class="memdesc:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a> as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class.  <a href="#aca8f4c0c3ff7e95f74864afb5ddc1888">More...</a><br /></td></tr>
 <tr class="separator:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a415cfc1b9b18024ba9f20fa94caacb39"><td class="memItemLeft" align="right" valign="top">virtual ShPtr&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a415cfc1b9b18024ba9f20fa94caacb39">get_generator</a> (const Json &amp;name=nullptr) override</td></tr>
-<tr class="memdesc:a415cfc1b9b18024ba9f20fa94caacb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <em>generator_list</em> as a shared pointer of the <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> class.  <a href="#a415cfc1b9b18024ba9f20fa94caacb39">More...</a><br /></td></tr>
+<tr class="memitem:a415cfc1b9b18024ba9f20fa94caacb39"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a415cfc1b9b18024ba9f20fa94caacb39">get_generator</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
+<tr class="memdesc:a415cfc1b9b18024ba9f20fa94caacb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a> as a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class.  <a href="#a415cfc1b9b18024ba9f20fa94caacb39">More...</a><br /></td></tr>
 <tr class="separator:a415cfc1b9b18024ba9f20fa94caacb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d90767ee64acbd33d7432c47dd6abf5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a3d90767ee64acbd33d7432c47dd6abf5">get_length</a> ()</td></tr>
-<tr class="memdesc:a3d90767ee64acbd33d7432c47dd6abf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of the <em>generator_list</em>.  <a href="#a3d90767ee64acbd33d7432c47dd6abf5">More...</a><br /></td></tr>
+<tr class="memdesc:a3d90767ee64acbd33d7432c47dd6abf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a>.  <a href="#a3d90767ee64acbd33d7432c47dd6abf5">More...</a><br /></td></tr>
 <tr class="separator:a3d90767ee64acbd33d7432c47dd6abf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classGenerator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classGenerator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classGenerator.html">Generator</a></td></tr>
 <tr class="memitem:a26b5fae1411adc475d862e1c35dffae0 inherit pub_methods_classGenerator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#a26b5fae1411adc475d862e1c35dffae0">appoint</a> ()</td></tr>
-<tr class="memdesc:a26b5fae1411adc475d862e1c35dffae0 inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appoint to this <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> instance.  <a href="classGenerator.html#a26b5fae1411adc475d862e1c35dffae0">More...</a><br /></td></tr>
+<tr class="memdesc:a26b5fae1411adc475d862e1c35dffae0 inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appoint to this <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> instance.  <a href="classGenerator.html#a26b5fae1411adc475d862e1c35dffae0">More...</a><br /></td></tr>
 <tr class="separator:a26b5fae1411adc475d862e1c35dffae0 inherit pub_methods_classGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4648b055ee0e51c1e68ea084156c222 inherit pub_methods_classGenerator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222">hello</a> ()</td></tr>
-<tr class="memdesc:ac4648b055ee0e51c1e68ea084156c222 inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hello to this <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> instance.  <a href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222">More...</a><br /></td></tr>
+<tr class="memdesc:ac4648b055ee0e51c1e68ea084156c222 inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hello to this <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> instance.  <a href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222">More...</a><br /></td></tr>
 <tr class="separator:ac4648b055ee0e51c1e68ea084156c222 inherit pub_methods_classGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad73afe8839404d7834d471b8bb3dfe02 inherit pub_methods_classGenerator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02">goodbye</a> ()</td></tr>
-<tr class="memdesc:ad73afe8839404d7834d471b8bb3dfe02 inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Goodbye to this <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> instance.  <a href="classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02">More...</a><br /></td></tr>
+<tr class="memdesc:ad73afe8839404d7834d471b8bb3dfe02 inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Goodbye to this <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> instance.  <a href="classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02">More...</a><br /></td></tr>
 <tr class="separator:ad73afe8839404d7834d471b8bb3dfe02 inherit pub_methods_classGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac65fc48a12c0ea6e7f87717d1779d1a inherit pub_methods_classGenerator"><td class="memItemLeft" align="right" valign="top">const Vec&lt; <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#aac65fc48a12c0ea6e7f87717d1779d1a">get_update_chain</a> ()</td></tr>
-<tr class="memdesc:aac65fc48a12c0ea6e7f87717d1779d1a inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <em>update_chain</em> of this instance.  <a href="classGenerator.html#aac65fc48a12c0ea6e7f87717d1779d1a">More...</a><br /></td></tr>
+<tr class="memitem:aac65fc48a12c0ea6e7f87717d1779d1a inherit pub_methods_classGenerator"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#aac65fc48a12c0ea6e7f87717d1779d1a">get_update_chain</a> ()</td></tr>
+<tr class="memdesc:aac65fc48a12c0ea6e7f87717d1779d1a inherit pub_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">update_chain</a> of this instance.  <a href="classGenerator.html#aac65fc48a12c0ea6e7f87717d1779d1a">More...</a><br /></td></tr>
 <tr class="separator:aac65fc48a12c0ea6e7f87717d1779d1a inherit pub_methods_classGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a300d347c49a8d1cf5e49a7307fa85ae0"><td class="memItemLeft" align="right" valign="top">Vec&lt; ShPtr&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a></td></tr>
-<tr class="memdesc:a300d347c49a8d1cf5e49a7307fa85ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of shared pointers of <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a>. The core of the <a class="el" href="classGenList.html" title="The GenList class is a subclass of the Generator class. ">GenList</a> class.  <a href="#a300d347c49a8d1cf5e49a7307fa85ae0">More...</a><br /></td></tr>
+<tr class="memitem:a300d347c49a8d1cf5e49a7307fa85ae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a></td></tr>
+<tr class="memdesc:a300d347c49a8d1cf5e49a7307fa85ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>. The core of <a class="el" href="classGenList.html" title="GenList stands for Generator List (or vector). ">GenList</a> class.  <a href="#a300d347c49a8d1cf5e49a7307fa85ae0">More...</a><br /></td></tr>
 <tr class="separator:a300d347c49a8d1cf5e49a7307fa85ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classGenerator"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classGenerator')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classGenerator.html">Generator</a></td></tr>
-<tr class="memitem:a540c397ab90d552e413ddfa4bf5e51cc inherit pro_methods_classGenerator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc">merge_update_chain</a> (const Vec&lt; <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> &gt; &amp;new_chain)</td></tr>
-<tr class="memdesc:a540c397ab90d552e413ddfa4bf5e51cc inherit pro_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a sequence of UpdatePairs to <em>update_chain</em> of this instance.  <a href="classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc">More...</a><br /></td></tr>
+<tr class="memitem:a540c397ab90d552e413ddfa4bf5e51cc inherit pro_methods_classGenerator"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc">merge_update_chain</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> &gt; &amp;new_chain)</td></tr>
+<tr class="memdesc:a540c397ab90d552e413ddfa4bf5e51cc inherit pro_methods_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge a given chain of <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater instance updat...">UpdatePair</a> instances to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">update_chain</a>.  <a href="classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc">More...</a><br /></td></tr>
 <tr class="separator:a540c397ab90d552e413ddfa4bf5e51cc inherit pro_methods_classGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classGenerator"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classGenerator')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classGenerator.html">Generator</a></td></tr>
-<tr class="memitem:ac187dba6169f8ec15c15705f19e55ecf inherit pro_attribs_classGenerator"><td class="memItemLeft" align="right" valign="top">Vec&lt; <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">update_chain</a></td></tr>
-<tr class="memdesc:ac187dba6169f8ec15c15705f19e55ecf inherit pro_attribs_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence of UpdatePairs. It represents the process how the data is updated (filled by keys and values).  <a href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">More...</a><br /></td></tr>
+<tr class="memitem:ac187dba6169f8ec15c15705f19e55ecf inherit pro_attribs_classGenerator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26">UpdatePair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">update_chain</a></td></tr>
+<tr class="memdesc:ac187dba6169f8ec15c15705f19e55ecf inherit pro_attribs_classGenerator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chain (sequence) of <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater instance updat...">UpdatePair</a> instances. It represents the process how the data is generated and updated.  <a href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">More...</a><br /></td></tr>
 <tr class="separator:ac187dba6169f8ec15c15705f19e55ecf inherit pro_attribs_classGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classGenList.html" title="The GenList class is a subclass of the Generator class. ">GenList</a> class is a subclass of the <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> class. </p>
-<p>This class can stores an arbitrary number of <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> instance as a list (vector) of shared pointers. </p>
+<div class="textblock"><p><em><a class="el" href="classGenList.html" title="GenList stands for Generator List (or vector). ">GenList</a></em> stands for <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> List (or vector). </p>
+<p>This class is a subclass of the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and stores an arbitrary number of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> instance as a list (vector) of shared pointers. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a52312e9310f32ffe141e661409ab3a59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a52312e9310f32ffe141e661409ab3a59">&#9670;&nbsp;</a></span>GenList()</h2>
@@ -145,27 +143,26 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">GenList::GenList </td>
           <td>(</td>
-          <td class="paramtype">const Vec&lt; ShPtr&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>generator_list_</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor of the <a class="el" href="classGenList.html" title="The GenList class is a subclass of the Generator class. ">GenList</a> class. </p>
+<p>Constructor of <a class="el" href="classGenList.html" title="GenList stands for Generator List (or vector). ">GenList</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td>Vec&lt;ShPtr&lt;Generator&gt;&gt; &amp;generator_list_. </td></tr>
+    <tr><td class="paramname">const</td><td><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="... ">Vec</a>&lt;<a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395" title="... ">ShPtr</a>&lt;<a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>&gt;&gt; &amp;generator_list_: a list of shared pointers to be stored. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Instance of the class.</dd></dl>
-<p>The argument is stored to the <em>generator_list</em> as it is. This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is called from (via) Python (such as constructors of <a class="el" href="classUpdater.html">Updater</a>, <a class="el" href="classProcessor.html">Processor</a> and their subclasses) and not called in a multithreads context. </p>
+<p>The argument is stored to the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a> as it is. This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is called (indirectly) from Python (such as constructors of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a>, <a class="el" href="classProcessor.html">Processor</a> and their subclasses) and not called in a multithreads context. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList_a52312e9310f32ffe141e661409ab3a59_cgraph.svg" width="348" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList_a52312e9310f32ffe141e661409ab3a59_cgraph.svg" width="348" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -183,7 +180,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="core_2element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> GenList::get_element </td>
           <td>(</td>
-          <td class="paramtype">const Json &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
         </tr>
@@ -195,15 +192,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Get an element of <em>generator_list</em> as a shared pointer of the <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> class. </p>
+<p>Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a> as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td>Json &amp;name = nullptr. </td></tr>
+    <tr><td class="paramname">const</td><td><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="... ">Json</a> &amp;name: an index in the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Shared pointer to an element of the <em>generator_list</em>.</dd></dl>
-<p>One needs get as the <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> when accessing the data. The <em>name</em> must be an integer, that is an index of the <em>generator_list</em>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A value of the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a> up-casted to <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class.</dd></dl>
+<p>One needs to get as <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> when accessing the data. The argument <code>name</code> must be an integer, which is an index of the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a>. </p>
 
 <p>Implements <a class="el" href="classGenerator.html#a81a0f591e4d004c5f8937807a7573497">Generator</a>.</p>
 
@@ -219,9 +216,9 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">ShPtr&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; GenList::get_generator </td>
+          <td class="memname"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; GenList::get_generator </td>
           <td>(</td>
-          <td class="paramtype">const Json &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
           <td class="paramname"><em>name</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
         </tr>
@@ -233,15 +230,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Get an element of <em>generator_list</em> as a shared pointer of the <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> class. </p>
+<p>Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a> as a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td>Json &amp;name = nullptr. </td></tr>
+    <tr><td class="paramname">const</td><td><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="... ">Json</a> &amp;name: an index in the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Shared pointer to an element of the <em>generator_list</em>.</dd></dl>
-<p>One needs get as the <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a> when storing the instance. The <em>name</em> must be an integer, that is an index of the <em>generator_list</em>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A value of the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a>.</dd></dl>
+<p>One needs to get as <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> when storing the instance. The argument <code>name</code> must be an integer, which is an index of the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a>. </p>
 
 <p>Implements <a class="el" href="classGenerator.html#a76231ee9835f9b21951630e7909816e1">Generator</a>.</p>
 
@@ -262,7 +259,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the length of the <em>generator_list</em>. </p>
+<p>Get the length of the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None.</td><td></td></tr>
@@ -284,7 +281,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec&lt;ShPtr&lt;<a class="el" href="classGenerator.html">Generator</a>&gt; &gt; GenList::generator_list</td>
+          <td class="memname"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;<a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt;<a class="el" href="classGenerator.html">Generator</a>&gt; &gt; GenList::generator_list</td>
         </tr>
       </table>
   </td>
@@ -294,8 +291,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>List of shared pointers of <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a>. The core of the <a class="el" href="classGenList.html" title="The GenList class is a subclass of the Generator class. ">GenList</a> class. </p>
-<p>The element can be a pointer to <a class="el" href="classElement.html" title="The Element class is one of the cores of this program. ">Element</a> up-casted to a shared pointer of <a class="el" href="classGenerator.html" title="The Generator class is one of the cores of this program. ">Generator</a>. </p>
+<p>List of shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>. The core of <a class="el" href="classGenList.html" title="GenList stands for Generator List (or vector). ">GenList</a> class. </p>
+<p>The element can be a pointer to <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> up-casted to a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>. </p>
 
 </div>
 </div>

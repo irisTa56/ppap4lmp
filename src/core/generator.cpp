@@ -4,8 +4,7 @@
   one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/21
-  @details \e Generator is an abstract class to generate data. Please
-  see the header file for more details.
+  @details Please see the header file for more details.
 */
 
 #include "generator.h"

@@ -3,8 +3,7 @@
   @brief This file has implementations of the GenList class.
   @author Takayuki Kobayashi
   @date 2018/07/03
-  @details \e GenList stands for Generator List (or vector). Please see
-  the header file for more details.
+  @details Please see the header file for more details.
 */
 
 #include "gen_list.h"
@@ -13,10 +12,7 @@
 namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
-/* NOTE:
-  The following constructor is thread-unsafe. It is assumed to be not
-  called from multithreads.
-*/
+
 GenList::GenList(
   const Vec<ShPtr<Generator>> &generator_list_)
 {
@@ -61,3 +57,5 @@ int GenList::get_length()
 {
   return generator_list.size();
 }
+
+/* ------------------------------------------------------------------ */
