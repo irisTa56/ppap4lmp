@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['optional',['optional',['../classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2',1,'DataKeys::optional()'],['../classElement.html#a0d0123e7fa1a7b96fb0ac271c0837a7d',1,'Element::optional()']]]
+  ['merge_5fupdate_5fchain',['merge_update_chain',['../classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc',1,'Generator']]]
 ];

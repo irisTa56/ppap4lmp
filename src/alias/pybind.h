@@ -1,9 +1,9 @@
 /*!
   @file src/alias/pybind.h
-  @brief ...
+  @brief This file includes \e pybind11 and defines an alias for the
+   namespace \c pybind11.
   @author Takayuki Kobayashi
   @date 2018/09/09
-  @details ...
 */
 
 #ifndef ALIAS_PYBIND_H
@@ -11,9 +11,6 @@
 
 #include <pybind11/pybind11.h>
 
-/*!
-  @brief ...
-*/
 namespace py = pybind11;
 
 #ifdef ALIAS_STD_H

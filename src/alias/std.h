@@ -1,9 +1,9 @@
 /*!
   @file src/alias/std.h
-  @brief ...
+  @brief This file includes a part of C++ Standard Template Library and
+  defines aliases for them.
   @author Takayuki Kobayashi
   @date 2018/09/09
-  @details ...
 */
 
 #ifndef ALIAS_STD_H
@@ -12,13 +12,14 @@
 #include <memory>
 
 /*!
-  @brief ...
+  @brief \e ShPtr is an alias for shared pointer.
 */
 template <typename T>
 using ShPtr = std::shared_ptr<T>;
 
 /*!
-  @brief ...
+  @brief \e EnShThis is an alias for a class which can create shared
+  pointer of itself by calling \c shared_from_this().
 */
 template <typename T>
 using EnShThis = std::enable_shared_from_this<T>;
@@ -26,14 +27,14 @@ using EnShThis = std::enable_shared_from_this<T>;
 #include <string>
 
 /*!
-  @brief ...
+  @brief \e Str is an alias for string.
 */
 using Str = std::string;
 
 #include <vector>
 
 /*!
-  @brief ...
+  @brief \e Vec is an alias for vector (same as list in Python).
 */
 template <typename T>
 using Vec = std::vector<T>;
@@ -41,7 +42,9 @@ using Vec = std::vector<T>;
 #include <unordered_map>
 
 /*!
-  @brief ...
+  @brief \e Map is an alias for unordered map (same as dict in Python).
+  @details Searching an item from unordered map is (considerably)
+  faster than doing the same thing with ordered (regular in C++) map.
 */
 template <typename T, typename U>
 using Map = std::unordered_map<T,U>;
@@ -49,7 +52,9 @@ using Map = std::unordered_map<T,U>;
 #include <unordered_set>
 
 /*!
-  @brief ...
+  @brief \e Set is an alias for unordered set (same as set in Python).
+  @details Searching an element from unordered set is (considerably)
+  faster than doing the same thing with ordered (regular in C++) set.
 */
 template <typename T>
 using Set = std::unordered_set<T>;

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['remove_5ffrom_5fblacklist',['remove_from_blacklist',['../classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b',1,'Updater']]],
-  ['required',['required',['../classDataKeys.html#a03517cffe825c983c3582ffb55318a7b',1,'DataKeys::required()'],['../classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517',1,'Element::required()']]]
+  ['optional',['optional',['../classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2',1,'DataKeys::optional()'],['../classElement.html#a0d0123e7fa1a7b96fb0ac271c0837a7d',1,'Element::optional()']]]
 ];

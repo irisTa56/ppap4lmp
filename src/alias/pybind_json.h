@@ -1,26 +1,38 @@
+/*!
+  @file src/alias/pybind_json.h
+  @brief To bind ::Json type to Python, a custom type caster of
+  \e pybind11 is required.
+  @author Takayuki Kobayashi
+  @date 2018/09/09
+*/
+
 #ifndef ALIAS_PYBIND_JSON_H
 #define ALIAS_PYBIND_JSON_H
 
 static py::object json_dumps = py::module::import("json").attr("dumps");
 static py::object json_loads = py::module::import("json").attr("loads");
 
-/* NOTE:
-  Casting Json from C++ to Python (and vice versa) is done by
-  serialization, that is, Json is once converted to a string. This
-  process might take a long time. So, using other containers is
-  preferable (if you can).
-*/
-
 namespace pybind11
 {
   namespace detail
   {
-    template <>
-    struct type_caster<Json> {
+    /*!
+      @brief A type caster of \e pybind11 for ::Json.
+    */
+    template <> struct type_caster<Json> {
      public:
 
       PYBIND11_TYPE_CASTER(Json, _("json"));
 
+      /*!
+        @brief Loading ::Json from Python and assigning it in C++.
+        @details First, a JSON variable (complex of dict and list in
+        Python) is dumped as a string by \c dumps attribute of Python's
+        \c json module (serialization). Then the string is parsed by
+        \c parse function of \e nlohmann/json and converted to a ::Json
+        instance. This process might take a long time. So, using other
+        containers is preferable (if you can).
+      */
       bool load(handle src, bool)
       {
         try
@@ -36,6 +48,14 @@ namespace pybind11
         return true;
       }
 
+      /*!
+        @brief Casting ::Json from C++ to Python.
+        @details First, a ::Json instance is serialized to a string by
+        its \c dump  method. Then the string is loaded by \c loads
+        attribute of Python's \c json module and released as a complex
+        of dict and list. This process might take a long time. So,
+        using other containers is preferable (if you can).
+      */
       static handle cast(Json src, return_value_policy, handle)
       {
         return json_loads(src.dump()).release();
