@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><em><a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a></em> is a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> containing data <em>element</em>, or data entity.  
+<p><em><a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a></em> is a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> containing data <em>element</em> (or entity, object).  
  <a href="classElement.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="core_2element_8h_source.html">element.h</a>&gt;</code></p>
@@ -91,10 +91,10 @@ Collaboration diagram for Element:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab0d0e20be9a36ae676202db753faeec9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ab0d0e20be9a36ae676202db753faeec9">Element</a> ()</td></tr>
-<tr class="memdesc:ab0d0e20be9a36ae676202db753faeec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class.  <a href="#ab0d0e20be9a36ae676202db753faeec9">More...</a><br /></td></tr>
+<tr class="memdesc:ab0d0e20be9a36ae676202db753faeec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class.  <a href="#ab0d0e20be9a36ae676202db753faeec9">More...</a><br /></td></tr>
 <tr class="separator:ab0d0e20be9a36ae676202db753faeec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab12675e00173496f85052d82f334f395"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classElement.html">Element</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ab12675e00173496f85052d82f334f395">get_element</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
-<tr class="memdesc:ab12675e00173496f85052d82f334f395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this instance as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class.  <a href="#ab12675e00173496f85052d82f334f395">More...</a><br /></td></tr>
+<tr class="memdesc:ab12675e00173496f85052d82f334f395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this instance as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class.  <a href="#ab12675e00173496f85052d82f334f395">More...</a><br /></td></tr>
 <tr class="separator:ab12675e00173496f85052d82f334f395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5474cb60706c92e37268ac4c3ff2c46b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a5474cb60706c92e37268ac4c3ff2c46b">get_generator</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
 <tr class="memdesc:a5474cb60706c92e37268ac4c3ff2c46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this instance as a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class.  <a href="#a5474cb60706c92e37268ac4c3ff2c46b">More...</a><br /></td></tr>
@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adc43106f0ea5e11d03105c40df1fe0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an instance of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class to this instance. <b>Can be called from Python</b>.  <a href="#adc43106f0ea5e11d03105c40df1fe0a8">More...</a><br /></td></tr>
 <tr class="separator:adc43106f0ea5e11d03105c40df1fe0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47096a22005245db075143ff1ee1981c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a47096a22005245db075143ff1ee1981c">get_data</a> ()</td></tr>
-<tr class="memdesc:a47096a22005245db075143ff1ee1981c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> of this instance.  <a href="#a47096a22005245db075143ff1ee1981c">More...</a><br /></td></tr>
+<tr class="memdesc:a47096a22005245db075143ff1ee1981c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> of this instance.  <a href="#a47096a22005245db075143ff1ee1981c">More...</a><br /></td></tr>
 <tr class="separator:a47096a22005245db075143ff1ee1981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5881587aff2e2425e3110f35241e5ce8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a5881587aff2e2425e3110f35241e5ce8">get_data</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;key_)</td></tr>
 <tr class="memdesc:a5881587aff2e2425e3110f35241e5ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the partial data of this instance.  <a href="#a5881587aff2e2425e3110f35241e5ce8">More...</a><br /></td></tr>
@@ -113,11 +113,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a060b21b533cc1deb92e666653a89f229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576395d61902a76979ffd336afa714b3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a576395d61902a76979ffd336afa714b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classElement.html#a576395d61902a76979ffd336afa714b3">array1d</a> (T &amp;array, const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;key)</td></tr>
-<tr class="memdesc:a576395d61902a76979ffd336afa714b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> as an one-dimensional Eigen-Array.  <a href="#a576395d61902a76979ffd336afa714b3">More...</a><br /></td></tr>
+<tr class="memdesc:a576395d61902a76979ffd336afa714b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> as an one-dimensional Eigen-Array.  <a href="#a576395d61902a76979ffd336afa714b3">More...</a><br /></td></tr>
 <tr class="separator:a576395d61902a76979ffd336afa714b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classElement.html#a4c2fcdb60e23dedce2b54b9deeadc469">array2d</a> (T &amp;array, const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt; &amp;keys)</td></tr>
-<tr class="memdesc:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> as a two-dimensional Eigen-Array.  <a href="#a4c2fcdb60e23dedce2b54b9deeadc469">More...</a><br /></td></tr>
+<tr class="memdesc:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> as a two-dimensional Eigen-Array.  <a href="#a4c2fcdb60e23dedce2b54b9deeadc469">More...</a><br /></td></tr>
 <tr class="separator:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dd2b3ed6f76878ae6cc1c1a36183517"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517">required</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;key_)</td></tr>
 <tr class="memdesc:a2dd2b3ed6f76878ae6cc1c1a36183517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" title="... ">DataKeys::required</a>.  <a href="#a2dd2b3ed6f76878ae6cc1c1a36183517">More...</a><br /></td></tr>
@@ -166,7 +166,7 @@ Private Member Functions</h2></td></tr>
 <tr class="memdesc:a9ff7a4e19165faa6da26635d9145b46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method decrements <a class="el" href="classElement.html#a678d35749bc335254f3fd4a4cc135d83" title="The number of times this instance will be used in the future. ">n_remain</a>.  <a href="#a9ff7a4e19165faa6da26635d9145b46b">More...</a><br /></td></tr>
 <tr class="separator:a9ff7a4e19165faa6da26635d9145b46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae8f7d596f055b36ea44206bbef38c73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73">update_data</a> (const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classUpdater.html">Updater</a> &gt; &amp;upd)</td></tr>
-<tr class="memdesc:aae8f7d596f055b36ea44206bbef38c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> of this instance.  <a href="#aae8f7d596f055b36ea44206bbef38c73">More...</a><br /></td></tr>
+<tr class="memdesc:aae8f7d596f055b36ea44206bbef38c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> of this instance.  <a href="#aae8f7d596f055b36ea44206bbef38c73">More...</a><br /></td></tr>
 <tr class="separator:aae8f7d596f055b36ea44206bbef38c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fdb9455f49d2c66a0276925f7246cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad">init_for_python</a> ()</td></tr>
 <tr class="memdesc:a1fdb9455f49d2c66a0276925f7246cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routines to be conducted when a wrapper of getter is called from Python.  <a href="#a1fdb9455f49d2c66a0276925f7246cad">More...</a><br /></td></tr>
@@ -178,10 +178,10 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a678d35749bc335254f3fd4a4cc135d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of times this instance will be used in the future.  <a href="#a678d35749bc335254f3fd4a4cc135d83">More...</a><br /></td></tr>
 <tr class="separator:a678d35749bc335254f3fd4a4cc135d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a644085ed8d59a6835d218b7651ceb4c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">dataid</a></td></tr>
-<tr class="memdesc:a644085ed8d59a6835d218b7651ceb4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique ID for an instance of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class.  <a href="#a644085ed8d59a6835d218b7651ceb4c3">More...</a><br /></td></tr>
+<tr class="memdesc:a644085ed8d59a6835d218b7651ceb4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique ID for an instance of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class.  <a href="#a644085ed8d59a6835d218b7651ceb4c3">More...</a><br /></td></tr>
 <tr class="separator:a644085ed8d59a6835d218b7651ceb4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7cd44abcb0c90a9c5035584bc92ac5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a></td></tr>
-<tr class="memdesc:a2a7cd44abcb0c90a9c5035584bc92ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data element (or data entity) itself.  <a href="#a2a7cd44abcb0c90a9c5035584bc92ac5">More...</a><br /></td></tr>
+<tr class="memdesc:a2a7cd44abcb0c90a9c5035584bc92ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data <em>element</em> (or entity, object) itself.  <a href="#a2a7cd44abcb0c90a9c5035584bc92ac5">More...</a><br /></td></tr>
 <tr class="separator:a2a7cd44abcb0c90a9c5035584bc92ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a141b8b8adc3aa5c9b3d6c3262c36a7c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataKeys.html">DataKeys</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">datakeys</a></td></tr>
 <tr class="memdesc:a141b8b8adc3aa5c9b3d6c3262c36a7c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of keys (or property names, attributes) of the data.  <a href="#a141b8b8adc3aa5c9b3d6c3262c36a7c4">More...</a><br /></td></tr>
@@ -193,7 +193,7 @@ Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a814393093779993a8ecbc961e16fdd32"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a814393093779993a8ecbc961e16fdd32">instance_count</a> = 0</td></tr>
-<tr class="memdesc:a814393093779993a8ecbc961e16fdd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of created instances of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class.  <a href="#a814393093779993a8ecbc961e16fdd32">More...</a><br /></td></tr>
+<tr class="memdesc:a814393093779993a8ecbc961e16fdd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of created instances of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class.  <a href="#a814393093779993a8ecbc961e16fdd32">More...</a><br /></td></tr>
 <tr class="separator:a814393093779993a8ecbc961e16fdd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -215,8 +215,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac187dba6169f8ec15c15705f19e55ecf inherit pro_attribs_classGenerator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><em><a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a></em> is a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> containing data <em>element</em>, or data entity. </p>
-<p>This class inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="... ">EnShThis</a>&lt;<a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a>&gt;. <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class is different from the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and its subclasses (except for this class) by owning data element (or data entity). The data is stored as a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="... ">Json</a> instance, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a>, and a set of the keys (or property names, attributes) of the data is stored as a <a class="el" href="classDataKeys.html">DataKeys</a> instance, <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">datakeys</a>. This class can update its own data by calling <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73" title="This method updates data of this instance. ">update_data</a> where an editable reference of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> is passed to an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance. </p>
+<div class="textblock"><p><em><a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a></em> is a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> containing data <em>element</em> (or entity, object). </p>
+<p>This class inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="... ">EnShThis</a>&lt;<a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a>&gt;. <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class is different from the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and its subclasses (except for this class) by owning data <em>element</em> (or entity, object). The data is stored as a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="... ">Json</a> instance, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a>, and a set of the keys (or property names, attributes) of the data is stored as a <a class="el" href="classDataKeys.html">DataKeys</a> instance, <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">datakeys</a>. This class can update its own data by calling <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73" title="This method updates data of this instance. ">update_data</a> where an editable reference of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> is passed to an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab0d0e20be9a36ae676202db753faeec9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0d0e20be9a36ae676202db753faeec9">&#9670;&nbsp;</a></span>Element()</h2>
@@ -233,7 +233,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class. </p>
+<p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None.</td><td></td></tr>
@@ -269,8 +269,8 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Shared pointer of this <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> instance.</dd></dl>
-<p>To update the data, one creates an instance of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class in Python and appends it to an instance of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class. <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">Generator::update_chain</a> stored in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an instance of Generator class used in updating process. It is different from the E...">Updater::ext_generator</a> of the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance, which is taken as <code>upd</code>, will be merged to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">Generator::update_chain</a> of this instance; then the pair consisting of this instance and the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance will be added to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">Generator::update_chain</a> of this instance. Please also see <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> and <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class. </p>
+<dl class="section return"><dt>Returns</dt><dd>Shared pointer of this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> instance.</dd></dl>
+<p>To update the data, one creates an instance of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class in Python and appends it to an instance of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class. <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">Generator::update_chain</a> stored in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an instance of Generator class used in updating process. It is different from the E...">Updater::ext_generator</a> of the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance, which is taken as <code>upd</code>, will be merged to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">Generator::update_chain</a> of this instance; then the pair consisting of this instance and the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance will be added to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair instances. It represents the process how the data is generated and upd...">Generator::update_chain</a> of this instance. Please also see <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> and <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -307,7 +307,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> as an one-dimensional Eigen-Array. </p>
+<p>Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> as an one-dimensional Eigen-Array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>&amp;array (T should be <a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98" title="... ">ArrayXi</a> or <a class="el" href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220" title="... ">ArrayXd</a>). </td></tr>
@@ -353,7 +353,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> as a two-dimensional Eigen-Array. </p>
+<p>Extract values in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> as a two-dimensional Eigen-Array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">T</td><td>&amp;array (T should be <a class="el" href="eigen_8h.html#a187c541a6423e8b13a361d39799a2bac" title="... ">ArrayXXi</a> or <a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9" title="... ">ArrayXXd</a>). </td></tr>
@@ -402,7 +402,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>If one increments <a class="el" href="classElement.html#a678d35749bc335254f3fd4a4cc135d83" title="The number of times this instance will be used in the future. ">n_remain</a> of this instance before using the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> and then decrements it after using the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a>, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> is cleared to save memory. This system is convenient to access <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> multiple times and save memory at the same time. </p>
+<p>If one increments <a class="el" href="classElement.html#a678d35749bc335254f3fd4a4cc135d83" title="The number of times this instance will be used in the future. ">n_remain</a> of this instance before using the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> and then decrements it after using the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a>, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> is cleared to save memory. This system is convenient to access <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> multiple times and save memory at the same time. </p>
 
 </div>
 </div>
@@ -553,7 +553,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> of this instance. </p>
+<p>Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> of this instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None.</td><td></td></tr>
@@ -616,7 +616,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="... ">Json</a>.</dd></dl>
-<p>This method provides a functionality to access the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> directly from Python. An updating process associated with this instance is executed before getting the data. </p>
+<p>This method provides a functionality to access the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> directly from Python. An updating process associated with this instance is executed before getting the data. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -649,15 +649,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Get this instance as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class. </p>
+<p>Get this instance as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">const</td><td><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="... ">Json</a> &amp;name = nullptr. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Shared pointer of this <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> instance.</dd></dl>
-<p>One needs to get as <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> when accessing the data. The argument <code>name</code> must be left as default. </p>
+<dl class="section return"><dt>Returns</dt><dd>Shared pointer of this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> instance.</dd></dl>
+<p>One needs to get as <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> when accessing the data. The argument <code>name</code> must be left as default. </p>
 
 <p>Implements <a class="el" href="classGenerator.html#a81a0f591e4d004c5f8937807a7573497">Generator</a>.</p>
 
@@ -868,7 +868,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool.</dd></dl>
-<p>It is convenient that the method can be called without getting <a class="el" href="classDataKeys.html">DataKeys</a> instance from this <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> instance. For more details, please see <a class="el" href="classDataKeys.html">DataKeys</a> class. </p>
+<p>It is convenient that the method can be called without getting <a class="el" href="classDataKeys.html">DataKeys</a> instance from this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> instance. For more details, please see <a class="el" href="classDataKeys.html">DataKeys</a> class. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -901,7 +901,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>It is convenient that the method can be called without getting <a class="el" href="classDataKeys.html">DataKeys</a> instance from this <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> instance. For more details, please see <a class="el" href="classDataKeys.html">DataKeys</a> class. </p>
+<p>It is convenient that the method can be called without getting <a class="el" href="classDataKeys.html">DataKeys</a> instance from this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> instance. For more details, please see <a class="el" href="classDataKeys.html">DataKeys</a> class. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -939,15 +939,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>This method updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> of this instance. </p>
+<p>This method updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> of this instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395" title="... ">ShPtr</a>&lt;<a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a>&gt; &amp;upd: an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance updating the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a>. </td></tr>
+    <tr><td class="paramname">const</td><td><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395" title="... ">ShPtr</a>&lt;<a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a>&gt; &amp;upd: an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance updating the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This method updates the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> using an instance of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> taken as <code>upd</code>. This instance and the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance are paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater instance updat...">UpdatePair</a> by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an instance of Updater class to this instance. Can be called from Python. ">append_updater</a> in advance. In this method, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a>, <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">datakeys</a> and <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an instance of Element class. ">dataid</a> are passed to the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance. </p>
+<p>This method updates the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> using an instance of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> taken as <code>upd</code>. This instance and the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance are paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater instance updat...">UpdatePair</a> by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an instance of Updater class to this instance. Can be called from Python. ">append_updater</a> in advance. In this method, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a>, <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">datakeys</a> and <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an instance of Element class. ">dataid</a> are passed to the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> instance. </p>
 
 </div>
 </div>
@@ -972,7 +972,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Data element (or data entity) itself. </p>
+<p>Data <em>element</em> (or entity, object) itself. </p>
 <p>This member is an instance of <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="... ">Json</a>, which is a very flexible data container consisting of hierarchically organized pairs of a string key and int/bool/double/string/array value. This can store data of Box, Atoms, Molecules, Beads, Cube ... and more!! </p>
 
 </div>
@@ -997,7 +997,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Unique ID for an instance of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class. </p>
+<p>Unique ID for an instance of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class. </p>
 <p>This member is used to prevent duplication of updating process of the data. For more details, please see <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class. </p>
 
 </div>
@@ -1023,7 +1023,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set of keys (or property names, attributes) of the data. </p>
-<p>This member stores string keys the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> has. For more details, please see <a class="el" href="classDataKeys.html">DataKeys</a> class.Note that after updating the data, the set of keys must be manually updated (add/remove keys) in <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> or its subclasses. </p>
+<p>This member stores string keys the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> has. For more details, please see <a class="el" href="classDataKeys.html">DataKeys</a> class.Note that after updating the data, the set of keys must be manually updated (add/remove keys) in <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> or its subclasses. </p>
 
 </div>
 </div>
@@ -1047,7 +1047,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>The number of created instances of <a class="el" href="classElement.html" title="Element is a Generator containing data element, or data entity. ">Element</a> class. </p>
+<p>The number of created instances of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class. </p>
 <p>This member is only used to set <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an instance of Element class. ">dataid</a>. </p>
 
 </div>
@@ -1073,7 +1073,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>The number of times this instance will be used in the future. </p>
-<p>This member can be incremented by <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e" title="This method increments n_remain. ">increment_remain</a> and decremented by <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>. If this member becomes 0 in <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> is cleared to save memory. </p>
+<p>This member can be incremented by <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e" title="This method increments n_remain. ">increment_remain</a> and decremented by <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>. If this member becomes 0 in <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> is cleared to save memory. </p>
 
 </div>
 </div>
@@ -1098,7 +1098,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>A variable used for OpenMP. </p>
-<p>This member is used to update the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> exclusively in a multithread context. To prevent the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or data entity) itself. ">data</a> from being updated from multiple threads at the same time, this member must be locked in the <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73" title="This method updates data of this instance. ">update_data</a>, <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e" title="This method increments n_remain. ">increment_remain</a> and <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>. </p>
+<p>This member is used to update the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> exclusively in a multithread context. To prevent the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">data</a> from being updated from multiple threads at the same time, this member must be locked in the <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73" title="This method updates data of this instance. ">update_data</a>, <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e" title="This method increments n_remain. ">increment_remain</a> and <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>. </p>
 
 </div>
 </div>

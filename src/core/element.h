@@ -17,12 +17,12 @@
 #include <class/data_keys.h>
 
 /*!
-  @brief \e Element is a Generator containing data \e element, or data
-  entity.
+  @brief \e Element is a Generator containing data \e element (or
+  entity, object).
   @details This class inherits Generator class and
   ::EnShThis<#Element>. Element class is different from the Generator
   class and its subclasses (except for this class) by owning data
-  element (or data entity). The data is stored as a ::Json instance,
+  \e element (or entity, object). The data is stored as a ::Json instance,
   #data, and a set of the keys (or property names, attributes) of the
   data is stored as a DataKeys instance, #datakeys. This class can
   update its own data by calling #update_data where an editable
@@ -49,7 +49,7 @@ class Element : public Generator, public EnShThis<Element> {
   */
   int dataid;
   /*!
-    @brief Data element (or data entity) itself.
+    @brief Data \e element (or entity, object) itself.
     @details This member is an instance of ::Json, which is a very
     flexible data container consisting of hierarchically organized
     pairs of a string key and int/bool/double/string/array value. This
