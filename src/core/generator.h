@@ -48,7 +48,7 @@ class Generator {
   /*!
     @brief Merge a given chain of ::UpdatePair instances to
     #update_chain.
-    @param const ::Vec<::UpdatePair> &new_chain: a sequence of
+    @param const ::Vec<#UpdatePair> &new_chain: a sequence of
     ::UpdatePair instances to be merged.
     @return None.
     @details In merging a chain of ::UpdatePair instances, relative
@@ -111,7 +111,7 @@ class Generator {
   /*!
     @brief Get the #update_chain of this instance.
     @param None.
-    @return Constance reference to ::Vec<::UpdatePair>.
+    @return Constance reference to ::Vec<#UpdatePair>.
     @details This method is mainly used to access #update_chain of
     Updater::ext_generator.
   */

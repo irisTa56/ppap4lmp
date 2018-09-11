@@ -1,3 +1,12 @@
+/*!
+  @file src/class/data_keys.cpp
+  @brief This file has implementations of the DataKeys class, which is
+  owned by Element class.
+  @author Takayuki Kobayashi
+  @date 2018/09/09
+  @details Please see the header file for more details.
+*/
+
 #include <algorithm>
 
 #include "data_keys.h"

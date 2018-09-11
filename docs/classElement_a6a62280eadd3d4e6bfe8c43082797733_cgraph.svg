@@ -9,84 +9,84 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 100)">
 <title>Element::get_2d_float_py</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-100 426,-100 426,4 -4,4"/>
-<!-- Node29 -->
+<!-- Node30 -->
 <g id="node1" class="node">
-<title>Node29</title>
+<title>Node30</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-38.5 0,-57.5 128,-57.5 128,-38.5 0,-38.5"/>
 <text text-anchor="middle" x="64" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </g>
-<!-- Node30 -->
+<!-- Node31 -->
 <g id="node2" class="node">
-<title>Node30</title>
+<title>Node31</title>
 <g id="a_node2"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Routines to be conducted when a wrapper of getter is called from Python. ">
 <polygon fill="#ffffff" stroke="#000000" points="164,-76.5 164,-95.5 286,-95.5 286,-76.5 164,-76.5"/>
 <text text-anchor="middle" x="225" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::init_for_python</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node30 -->
+<!-- Node30&#45;&gt;Node31 -->
 <g id="edge1" class="edge">
-<title>Node29&#45;&gt;Node30</title>
+<title>Node30&#45;&gt;Node31</title>
 <path fill="none" stroke="#191970" d="M104.6271,-57.589C125.9685,-62.6261 152.3119,-68.8438 174.9081,-74.1771"/>
 <polygon fill="#191970" stroke="#191970" points="174.1284,-77.5891 184.665,-76.4799 175.7365,-70.7763 174.1284,-77.5891"/>
 </g>
-<!-- Node32 -->
+<!-- Node33 -->
 <g id="node4" class="node">
-<title>Node32</title>
+<title>Node33</title>
 <g id="a_node4"><a xlink:href="classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517" target="_top" xlink:title="Wrapper for DataKeys::required. ">
 <polygon fill="#ffffff" stroke="#000000" points="178.5,-38.5 178.5,-57.5 271.5,-57.5 271.5,-38.5 178.5,-38.5"/>
 <text text-anchor="middle" x="225" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::required</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node32 -->
+<!-- Node30&#45;&gt;Node33 -->
 <g id="edge3" class="edge">
-<title>Node29&#45;&gt;Node32</title>
+<title>Node30&#45;&gt;Node33</title>
 <path fill="none" stroke="#191970" d="M128.0941,-48C141.3792,-48 155.287,-48 168.2856,-48"/>
 <polygon fill="#191970" stroke="#191970" points="168.4862,-51.5001 178.4862,-48 168.4861,-44.5001 168.4862,-51.5001"/>
 </g>
-<!-- Node34 -->
+<!-- Node35 -->
 <g id="node6" class="node">
-<title>Node34</title>
+<title>Node35</title>
 <g id="a_node6"><a xlink:href="classElement.html#a4c2fcdb60e23dedce2b54b9deeadc469" target="_top" xlink:title="Extract values in data as a two&#45;dimensional Eigen&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="179.5,-.5 179.5,-19.5 270.5,-19.5 270.5,-.5 179.5,-.5"/>
 <text text-anchor="middle" x="225" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::array2d</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node34 -->
+<!-- Node30&#45;&gt;Node35 -->
 <g id="edge5" class="edge">
-<title>Node29&#45;&gt;Node34</title>
+<title>Node30&#45;&gt;Node35</title>
 <path fill="none" stroke="#191970" d="M104.6271,-38.411C125.9685,-33.3739 152.3119,-27.1562 174.9081,-21.8229"/>
 <polygon fill="#191970" stroke="#191970" points="175.7365,-25.2237 184.665,-19.5201 174.1284,-18.4109 175.7365,-25.2237"/>
 </g>
-<!-- Node31 -->
+<!-- Node32 -->
 <g id="node3" class="node">
-<title>Node31</title>
+<title>Node32</title>
 <g id="a_node3"><a xlink:href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222" target="_top" xlink:title="Hello to this Generator instance. ">
 <polygon fill="#ffffff" stroke="#000000" points="329,-76.5 329,-95.5 415,-95.5 415,-76.5 329,-76.5"/>
 <text text-anchor="middle" x="372" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Generator::hello</text>
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node31 -->
+<!-- Node31&#45;&gt;Node32 -->
 <g id="edge2" class="edge">
-<title>Node30&#45;&gt;Node31</title>
+<title>Node31&#45;&gt;Node32</title>
 <path fill="none" stroke="#191970" d="M286.0642,-86C296.8317,-86 307.9659,-86 318.5061,-86"/>
 <polygon fill="#191970" stroke="#191970" points="318.8126,-89.5001 328.8126,-86 318.8125,-82.5001 318.8126,-89.5001"/>
 </g>
-<!-- Node33 -->
+<!-- Node34 -->
 <g id="node5" class="node">
-<title>Node33</title>
-<g id="a_node5"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="... ">
+<title>Node34</title>
+<g id="a_node5"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="Check if this instance has required key(s). ">
 <polygon fill="#ffffff" stroke="#000000" points="322,-38.5 322,-57.5 422,-57.5 422,-38.5 322,-38.5"/>
 <text text-anchor="middle" x="372" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::required</text>
 </a>
 </g>
 </g>
-<!-- Node32&#45;&gt;Node33 -->
+<!-- Node33&#45;&gt;Node34 -->
 <g id="edge4" class="edge">
-<title>Node32&#45;&gt;Node33</title>
+<title>Node33&#45;&gt;Node34</title>
 <path fill="none" stroke="#191970" d="M271.5117,-48C284.3141,-48 298.3852,-48 311.8392,-48"/>
 <polygon fill="#191970" stroke="#191970" points="311.9761,-51.5001 321.9761,-48 311.976,-44.5001 311.9761,-51.5001"/>
 </g>

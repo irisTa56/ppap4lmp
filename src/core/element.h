@@ -180,7 +180,7 @@ class Element : public Generator, public EnShThis<Element> {
   const DataKeys &get_keys();
   /*!
     @brief Extract values in #data as an one-dimensional Eigen-Array.
-    @param T &array (T should be ::ArrayXi or ::ArrayXd).
+    @param T &array: T should be ::ArrayXi or ::ArrayXd.
     @param const ::Str &key: a string key for values to be extracted.
     @return None.
     @details If one passed ::ArrayXi or ::ArrayXd as a reference, this
@@ -192,8 +192,8 @@ class Element : public Generator, public EnShThis<Element> {
     const Str &key);
   /*!
     @brief Extract values in #data as a two-dimensional Eigen-Array.
-    @param T &array (T should be ::ArrayXXi or ::ArrayXXd).
-    @param const ::Vec<::Str> &keys: a vector of string keys for
+    @param T &array: T should be ::ArrayXi or ::ArrayXd.
+    @param const ::Vec<#Str> &keys: a vector of string keys for
     values to be extracted.
     @return None.
     @details If one passed ::ArrayXXi or ::ArrayXXd as a reference,
@@ -238,7 +238,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief Wrapper for the #get_keys method. <b>Can be called from
     Python as \e get_keys</b>.
     @param None.
-    @return Constant reference to set of strings.
+    @return Constant reference to ::Set<#Str>.
     @details This method provides a functionality to access #datakeys
     directly from Python. An updating process associated with this
     instance is executed before getting the set of keys.
