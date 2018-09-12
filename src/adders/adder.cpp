@@ -1,8 +1,11 @@
-/* ---------------------------------------------------------------------
-Adder: is an abstract class to add new properties to data.
-
-create: 2018/06/29 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/adder.cpp
+  @brief This file has implementations of the Adder class, which is a
+  subclass of the Updater class.
+  @author Takayuki Kobayashi
+  @date 2018/06/29
+  @details Please see the header file for more details.
+*/
 
 #include "adder.h"
 #include "../utils/runtime_error.h"
@@ -33,3 +36,5 @@ void Adder::compute(
     }
   }
 }
+
+/* ------------------------------------------------------------------ */

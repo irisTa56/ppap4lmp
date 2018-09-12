@@ -1,3 +1,11 @@
+/*!
+  @file src/pybind/adders/add_gyration_radius.h
+  @brief This file has a function to bind AddGyrationRadius class to
+  Python.
+  @author Takayuki Kobayashi
+  @date 2018/07/15
+*/
+
 #ifndef PYBIND_ADD_GYRATION_RADIUS_H
 #define PYBIND_ADD_GYRATION_RADIUS_H
 

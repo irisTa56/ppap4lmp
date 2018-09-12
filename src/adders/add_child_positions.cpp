@@ -1,9 +1,11 @@
-/* ---------------------------------------------------------------------
-AddChildPositions: stands for Adder for Child Positions relative to the
-parent position (such as atoms' positions in a coarse-grained bead).
-
-create: 2018/09/03 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_child_positions.cpp
+  @brief This file has implementations of the AddChildPositions class,
+  which is a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+  @details Please see the header file for more details.
+*/
 
 #include "add_child_positions.h"
 #include "../utils/map_to_index.h"
@@ -69,3 +71,5 @@ void AddChildPositions::compute_impl(
 
   datakeys.add({key_x, key_y, key_z});
 }
+
+/* ------------------------------------------------------------------ */

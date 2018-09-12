@@ -1,9 +1,11 @@
-/* ---------------------------------------------------------------------
-AddChildIDs: stands for Adder for Child IDs (such as atom-ids in the
-case of molecules).
-
-create: 2018/08/19 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_child_ids.cpp
+  @brief This file has implementations of the AddChildIDs class, which
+  is a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/08/19
+  @details Please see the header file for more details.
+*/
 
 #include "add_child_ids.h"
 #include "../utils/map_to_index.h"
@@ -52,3 +54,5 @@ void AddChildIDs::compute_impl(
 
   datakeys.add(key_for_child_ids);
 }
+
+/* ------------------------------------------------------------------ */

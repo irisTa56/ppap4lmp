@@ -1,3 +1,11 @@
+/*!
+  @file src/pybind/adders/add_com_position.h
+  @brief This file has a function to bind AddCoMPosition class to
+  Python.
+  @author Takayuki Kobayashi
+  @date 2018/07/13
+*/
+
 #ifndef PYBIND_ADD_COM_POSITION_H
 #define PYBIND_ADD_COM_POSITION_H
 

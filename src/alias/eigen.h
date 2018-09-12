@@ -1,7 +1,7 @@
 /*!
   @file src/alias/eigen.h
   @brief This file includes \e Eigen and defines some aliases for the
-  Eigen- Vector, Matrix and Array.
+  Eigen-Vector, Matrix and Array.
   @author Takayuki Kobayashi
   @date 2018/09/09
 */

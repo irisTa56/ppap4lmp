@@ -1,8 +1,11 @@
-/* ---------------------------------------------------------------------
-AddCoMPosition: stands for Adder for Center of Mass added as Positions.
-
-create: 2018/07/13 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_com_position.cpp
+  @brief This file has implementations of the AddCoMPosition class,
+  which is a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/07/13
+  @details Please see the header file for more details.
+*/
 
 #include "add_com_position.h"
 #include "../utils/map_to_index.h"
@@ -124,3 +127,5 @@ void AddCoMPosition::compute_impl(
 
   datakeys.add({"mass", "xu", "yu", "zu"});
 }
+
+/* ------------------------------------------------------------------ */

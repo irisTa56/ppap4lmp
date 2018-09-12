@@ -1,3 +1,11 @@
+/*!
+  @file src/pybind/adders/add_child_positions.h
+  @brief This file has a function to bind AddChildPositions class to
+  Python.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+*/
+
 #ifndef PYBIND_ADD_CHILD_POSITIONS_H
 #define PYBIND_ADD_CHILD_POSITIONS_H
 

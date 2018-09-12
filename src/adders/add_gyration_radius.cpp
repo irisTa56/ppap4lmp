@@ -1,8 +1,11 @@
-/* ---------------------------------------------------------------------
-AddGyrationRadius: stands for Adder for Gyration Radius (of molecules).
-
-create: 2018/07/15 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_gyration_radius.cpp
+  @brief This file has implementations of the AddGyrationRadius class,
+  which is a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/07/15
+  @details Please see the header file for more details.
+*/
 
 #include "add_gyration_radius.h"
 
@@ -81,3 +84,5 @@ ShPtr<AddGyrationRadius> AddGyrationRadius::without_sqrted(
 
   return shared_from_this();
 }
+
+/* ------------------------------------------------------------------ */

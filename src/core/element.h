@@ -25,8 +25,8 @@
   \e element (or entity, object). The data is stored as a ::Json instance,
   #data, and a set of the keys (or property names, attributes) of the
   data is stored as a DataKeys instance, #datakeys. This class can
-  update its own data by calling #update_data where an editable
-  reference of #data is passed to an Updater instance.
+  update its own data by calling #update_data where a mutable reference
+  of #data is passed to an Updater instance.
 */
 class Element : public Generator, public EnShThis<Element> {
   /*!

@@ -1,11 +1,11 @@
 <map id="Updater" name="Updater">
-<area shape="rect" id="node2" href="$classAdder.html" title="{Adder\n||+ ~Adder()\l+ compute()\l+ Updater()\l}" alt="" coords="967,255,1059,362"/>
+<area shape="rect" id="node2" href="$classAdder.html" title="Adder adds new properties (keys and values) to non&#45;empty Element::data. " alt="" coords="967,255,1059,362"/>
 <area shape="rect" id="node13" href="$classFilter.html" title="{Filter\n||+ Filter()\l+ ~Filter()\l+ compute()\l+ Updater()\l}" alt="" coords="1946,248,2038,369"/>
 <area shape="rect" id="node16" href="$classStarter.html" title="{Starter\n||+ ~Starter()\l+ compute()\l+ Updater()\l&#45; sort_by_id()\l}" alt="" coords="2367,248,2465,369"/>
-<area shape="rect" id="node3" href="$classAddChildIDs.html" title="{AddChildIDs\n|&#45; child_name\l&#45; key_for_parent_id\l|+ AddChildIDs()\l+ ~AddChildIDs()\l# compute_impl()\l}" alt="" coords="5,447,139,568"/>
-<area shape="rect" id="node4" href="$classAddChildPositions.html" title="{AddChildPositions\n|&#45; child_name\l|+ AddChildPositions()\l+ ~AddChildPositions()\l# compute_impl()\l}" alt="" coords="163,454,319,561"/>
-<area shape="rect" id="node5" href="$classAddCoMPosition.html" title="{AddCoMPosition\n||+ AddCoMPosition()\l+ ~AddCoMPosition()\l# compute_impl()\l&#45; compute_with_weights()\l&#45; compute_without_weights()\l}" alt="" coords="344,439,531,575"/>
-<area shape="rect" id="node6" href="$classAddGyrationRadius.html" title="{AddGyrationRadius\n|&#45; add_squared\l&#45; add_sqrted\l|+ ~AddGyrationRadius()\l+ with_squared()\l+ without_sqrted()\l# compute_impl()\l}" alt="" coords="555,439,717,575"/>
+<area shape="rect" id="node3" href="$classAddChildIDs.html" title="AddChildIDs stands for Adder for Child IDs (such as atom&#45;ids for molecules). " alt="" coords="5,447,139,568"/>
+<area shape="rect" id="node4" href="$classAddChildPositions.html" title="AddChildPositions stands for Adder for Child Positions (such as atom&#45;xs, atom&#45;ys and atom&#45;zs for mole..." alt="" coords="163,454,319,561"/>
+<area shape="rect" id="node5" href="$classAddCoMPosition.html" title="AddCoMPosition stands for Adder for Center of Mass added as Position, xu, yu and zu. " alt="" coords="344,439,531,575"/>
+<area shape="rect" id="node6" href="$classAddGyrationRadius.html" title="AddGyrationRadius stands for Adder for Gyration Radius. " alt="" coords="555,439,717,575"/>
 <area shape="rect" id="node7" href="$classAddInertiaMoment.html" title="{AddInertiaMoment\n||+ AddInertiaMoment()\l+ ~AddInertiaMoment()\l# compute_impl()\l&#45; compute_with_weights()\l&#45; compute_without_weights()\l}" alt="" coords="741,439,928,575"/>
 <area shape="rect" id="node8" href="$classAddMap.html" title="{AddMap\n|&#45; do_overwrite\l&#45; key_ref\l&#45; key_new\l&#45; mapping\l|+ AddMap()\l+ ~AddMap()\l+ overwrite()\l# compute_impl()\l}" alt="" coords="952,425,1075,590"/>
 <area shape="rect" id="node9" href="$classAddMolecularOrientation.html" title="{AddMolecularOrientation\n||+ ~AddMolecularOrientation()\l# compute_impl()\l}" alt="" coords="1099,461,1291,553"/>
