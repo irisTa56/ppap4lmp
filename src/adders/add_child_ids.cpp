@@ -4,7 +4,8 @@
   is a subclass of the Adder class.
   @author Takayuki Kobayashi
   @date 2018/08/19
-  @details Please see the header file for more details.
+  @details For more details, please see the header file,
+  src/adders/add_child_ids.h.
 */
 
 #include "add_child_ids.h"

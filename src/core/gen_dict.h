@@ -27,9 +27,9 @@ class GenDict : public Generator {
  public:
   /*!
     @brief Constructor of GenDict class.
-    @param const ::Map<::Str,::ShPtr<#Generator>> &generator_dict_:
-    a dictionary of shared pointers to be stored.
-    @return Instance of the class.
+    @param generator_dict_ : A dictionary of shared pointers to
+    Generator instance.
+    @return Instance of this class.
     @details The argument is stored to the #generator_dict as it is.
     This constructor is thread-unsafe because it accesses its members
     thread-globally. Ensure this constructor is called (indirectly)
@@ -42,7 +42,7 @@ class GenDict : public Generator {
   /*!
     @brief Get a value of #generator_dict as a shared pointer of
     Element class.
-    @param const ::Json &name: a string key in the #generator_dict.
+    @param name : A string key in the #generator_dict.
     @return A value of the #generator_dict up-casted to Element class.
     @details One needs to get as Element when accessing the data. The
     argument \c name must be a string, which is a key for the value in
@@ -53,7 +53,7 @@ class GenDict : public Generator {
   /*!
     @brief Get a value of #generator_dict as a shared pointer of
     Generator class.
-    @param const ::Json &name: a string key in the #generator_dict.
+    @param name : A string key in the #generator_dict.
     @return A value of the #generator_dict.
     @details One needs to get as Generator when storing the instance.
     The argument \c name must be a string, which is a key for the value
@@ -63,7 +63,6 @@ class GenDict : public Generator {
     const Json &name = nullptr) override;
   /*!
     @brief Get a set of the keys in the #generator_list.
-    @param None.
     @return Set of strings.
   */
   Set<Str> get_keys();

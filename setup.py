@@ -50,7 +50,7 @@ class CMakeBuild(build_ext):
       RuntimeError("Windows is not supported")
     else:
       cmake_args += ["-DCMAKE_BUILD_TYPE=" + cfg]
-      cmake_args += ["-DCMAKE_CXX_FLAGS_RELEASE='-fopenmp -O3 -fPIC'"]
+      cmake_args += ["-DCMAKE_CXX_FLAGS_RELEASE='-fopenmp -O2 -fPIC'"]
       build_args += ["--", "-j2"]
 
     env = os.environ.copy()
@@ -118,8 +118,8 @@ with open("src/pybind.h", "w") as f:
   @author Takayuki Kobayashi
   @date 2018/09/08
   @details This file is not included in the GitHub repository. It will
-  be created at installation time. One can find how this file is
-  written in \c setup.py in the root directory of this project.
+  be created at installation time. To find the way how this file is
+  written, please see \c setup.py in the root directory of this project.
 */
 
 #ifndef PYBIND_H

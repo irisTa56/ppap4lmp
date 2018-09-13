@@ -4,7 +4,8 @@
   one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/07/01
-  @details Please see the header file for more details.
+  @details For more details, please see the header file,
+  src/core/element.h.
 */
 
 #include "element.h"

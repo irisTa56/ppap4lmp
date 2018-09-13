@@ -1,3 +1,11 @@
+/*!
+  @file src/pybind/adders/add_inertia_moment.h
+  @brief This file has a function to bind AddInertiaMoment class to
+  Python.
+  @author Takayuki Kobayashi
+  @date 2018/07/15
+*/
+
 #ifndef PYBIND_ADD_INERTIA_MOMENT_H
 #define PYBIND_ADD_INERTIA_MOMENT_H
 

@@ -27,12 +27,11 @@ class Adder : public Updater {
   /*!
     @brief Compute properties and add them to Element::data given as a
     reference.
-    @param ::Json &data: Mutable reference to Element::data where
-    computed properties are added to.
-    @param DataKeys &datakeys: Mutable reference to Element::datakeys
-    where keys of computed properties are added to.
-    @param const int dataid: Constant integer copied from
-    Element::dataid.
+    @param data : Mutable reference to Element::data where computed
+    properties are added to.
+    @param datakeys : Mutable reference to Element::datakeys where keys
+    of computed properties are added to.
+    @param dataid : Constant integer copied from Element::dataid.
     @return None.
     @details This method checks if \c dataid is in
     Adder::dataid_blacklist. If it is not in the blacklist, this method

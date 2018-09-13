@@ -1,63 +1,69 @@
 <map id="src/core/element.h" name="src/core/element.h">
-<area shape="rect" id="node2" href="$element_8cpp.html" title="This file has implementations of the Element class, which is one of the cores of this program..." alt="" coords="4179,304,4323,331"/>
-<area shape="rect" id="node3" href="$gen__dict_8h.html" title="This file has a definition of the GenDict class. " alt="" coords="4862,80,4995,107"/>
-<area shape="rect" id="node5" href="$generators_8h.html" title="This file includes all the header files of subclasses of Generator. " alt="" coords="4893,155,5038,181"/>
-<area shape="rect" id="node9" href="$generator_8cpp.html" title="This file has implementations of the Generator class, which is one of the cores of this program..." alt="" coords="5024,304,5176,331"/>
-<area shape="rect" id="node60" href="$gen__list_8h.html" title="This file has a definition of the GenList class. " alt="" coords="5121,80,5250,107"/>
-<area shape="rect" id="node62" href="$pybind_2element_8h_source.html" title="src/pybind/element.h" alt="" coords="5485,229,5628,256"/>
-<area shape="rect" id="node4" href="$gen__dict_8cpp.html" title="This file has implementations of the GenDict class. " alt="" coords="4722,155,4868,181"/>
-<area shape="rect" id="node6" href="$core_2updater_8h.html" title="This file has a definition of the Updater class, which is one of the cores of this program..." alt="" coords="4680,229,4806,256"/>
-<area shape="rect" id="node59" href="$processors_2processor_8h_source.html" title="src/processors/processor.h" alt="" coords="4865,229,5045,256"/>
-<area shape="rect" id="node7" href="$adders_2adder_8h.html" title="This file has a definition of the Adder class, which is a subclass of the Updater class..." alt="" coords="4347,304,4478,331"/>
-<area shape="rect" id="node10" href="$updater_8cpp.html" title="This file has implementations of the Updater class, which is one of the cores of this program..." alt="" coords="4502,304,4643,331"/>
-<area shape="rect" id="node11" href="$filters_2filter_8h_source.html" title="src/filters/filter.h" alt="" coords="4668,304,4784,331"/>
-<area shape="rect" id="node12" href="$pybind_2updater_8h_source.html" title="src/pybind/updater.h" alt="" coords="4456,379,4596,405"/>
-<area shape="rect" id="node52" href="$starters_2starter_8h_source.html" title="src/starters/starter.h" alt="" coords="4860,304,5000,331"/>
-<area shape="rect" id="node8" href="$adder_8cpp.html" title="This file has implementations of the Adder class, which is a subclass of the Updater class..." alt="" coords="4287,379,4431,405"/>
-<area shape="rect" id="node13" href="$pybind_8h.html" title="This file includes all the header files containing definitions of functions to bind C++ and Python..." alt="" coords="3699,639,3792,666"/>
-<area shape="rect" id="node15" href="$pybind_2adders_2adder_8h_source.html" title="src/pybind/adders/adder.h" alt="" coords="1768,461,1940,487"/>
-<area shape="rect" id="node40" href="$pybind_2filters_2filter_8h_source.html" title="src/pybind/filters\l/filter.h" alt="" coords="4197,453,4316,495"/>
-<area shape="rect" id="node45" href="$pybind_2starters_2starter_8h_source.html" title="src/pybind/starters\l/starter.h" alt="" coords="4812,453,4943,495"/>
-<area shape="rect" id="node14" href="$ppap4lmp_8cpp.html" title="This file has no implementation, only includes a header file to bind C++ and Python. " alt="" coords="3683,721,3808,748"/>
-<area shape="rect" id="node16" href="$adders_2add__child__ids_8h.html" title="This file has a definition of the AddChildIDs class, which is a subclass of the Adder class..." alt="" coords="28,543,170,584"/>
-<area shape="rect" id="node18" href="$adders_2add__child__positions_8h.html" title="This file has a definition of the AddChildPositions class, which is a subclass of the Adder class..." alt="" coords="194,543,337,584"/>
-<area shape="rect" id="node20" href="$adders_2add__com__position_8h.html" title="This file has a definition of the AddCoMPosition class, which is a subclass of the Adder class..." alt="" coords="361,543,501,584"/>
-<area shape="rect" id="node22" href="$adders_2add__gyration__radius_8h.html" title="This file has a definition of the AddGyrationRadius class, which is a subclass of the Adder class..." alt="" coords="525,543,686,584"/>
-<area shape="rect" id="node24" href="$adders_2add__inertia__moment_8h_source.html" title="src/adders/add_inertia\l_moment.h" alt="" coords="762,543,913,584"/>
-<area shape="rect" id="node25" href="$adders_2add__map_8h_source.html" title="src/adders/add_map.h" alt="" coords="937,550,1088,577"/>
-<area shape="rect" id="node26" href="$adders_2add__molecular__orientation_8h_source.html" title="src/adders/add_molecular\l_orientation.h" alt="" coords="1112,543,1283,584"/>
-<area shape="rect" id="node27" href="$adders_2add__rename_8h_source.html" title="src/adders/add_rename.h" alt="" coords="1308,550,1477,577"/>
-<area shape="rect" id="node28" href="$adders_2add__special__bonds_8h_source.html" title="src/adders/add_special\l_bonds.h" alt="" coords="1501,543,1657,584"/>
-<area shape="rect" id="node29" href="$adders_2add__wrapped__position_8h_source.html" title="src/adders/add_wrapped\l_position.h" alt="" coords="1682,543,1844,584"/>
-<area shape="rect" id="node30" href="$pybind_2adders_2add__map_8h_source.html" title="src/pybind/adders/add\l_map.h" alt="" coords="1869,543,2020,584"/>
-<area shape="rect" id="node31" href="$pybind_2adders_2add__rename_8h_source.html" title="src/pybind/adders/add\l_rename.h" alt="" coords="2068,543,2218,584"/>
-<area shape="rect" id="node32" href="$pybind_2adders_2add__child__ids_8h.html" title="This file has a function to bind AddChildIDs class to Python. " alt="" coords="2266,543,2417,584"/>
-<area shape="rect" id="node33" href="$pybind_2adders_2add__child__positions_8h.html" title="This file has a function to bind AddChildPositions class to Python. " alt="" coords="2465,543,2616,584"/>
-<area shape="rect" id="node34" href="$pybind_2adders_2add__com__position_8h.html" title="This file has a function to bind AddCoMPosition class to Python. " alt="" coords="2664,543,2814,584"/>
-<area shape="rect" id="node35" href="$pybind_2adders_2add__gyration__radius_8h.html" title="This file has a function to bind AddGyrationRadius class to Python. " alt="" coords="2862,543,3013,584"/>
-<area shape="rect" id="node36" href="$pybind_2adders_2add__inertia__moment_8h_source.html" title="src/pybind/adders/add\l_inertia_moment.h" alt="" coords="3061,543,3212,584"/>
-<area shape="rect" id="node37" href="$pybind_2adders_2add__molecular__orientation_8h_source.html" title="src/pybind/adders/add\l_molecular_orientation.h" alt="" coords="3260,543,3423,584"/>
-<area shape="rect" id="node38" href="$pybind_2adders_2add__special__bonds_8h_source.html" title="src/pybind/adders/add\l_special_bonds.h" alt="" coords="3472,543,3622,584"/>
-<area shape="rect" id="node39" href="$pybind_2adders_2add__wrapped__position_8h_source.html" title="src/pybind/adders/add\l_wrapped_position.h" alt="" coords="3670,543,3821,584"/>
-<area shape="rect" id="node17" href="$add__child__ids_8cpp.html" title="This file has implementations of the AddChildIDs class, which is a subclass of the Adder class..." alt="" coords="28,632,170,673"/>
-<area shape="rect" id="node19" href="$add__child__positions_8cpp.html" title="This file has implementations of the AddChildPositions class, which is a subclass of the Adder class..." alt="" coords="194,632,337,673"/>
-<area shape="rect" id="node21" href="$add__com__position_8cpp.html" title="This file has implementations of the AddCoMPosition class, which is a subclass of the Adder class..." alt="" coords="361,632,501,673"/>
-<area shape="rect" id="node23" href="$add__gyration__radius_8cpp.html" title="This file has implementations of the AddGyrationRadius class, which is a subclass of the Adder class..." alt="" coords="525,632,686,673"/>
-<area shape="rect" id="node41" href="$filters_2fil__comparison_8h_source.html" title="src/filters/fil_comparison.h" alt="" coords="3921,550,4096,577"/>
-<area shape="rect" id="node42" href="$filters_2fil__set_8h_source.html" title="src/filters/fil_set.h" alt="" coords="4120,550,4246,577"/>
-<area shape="rect" id="node43" href="$pybind_2filters_2fil__comparison_8h_source.html" title="src/pybind/filters\l/fil_comparison.h" alt="" coords="4270,543,4392,584"/>
-<area shape="rect" id="node44" href="$pybind_2filters_2fil__set_8h_source.html" title="src/pybind/filters\l/fil_set.h" alt="" coords="4440,543,4558,584"/>
-<area shape="rect" id="node46" href="$pybind_2starters_2sta__beads_8h_source.html" title="src/pybind/starters\l/sta_beads.h" alt="" coords="4607,543,4738,584"/>
-<area shape="rect" id="node47" href="$pybind_2starters_2sta__custom_8h_source.html" title="src/pybind/starters\l/sta_custom.h" alt="" coords="4812,543,4943,584"/>
-<area shape="rect" id="node48" href="$pybind_2starters_2sta__dump_8h_source.html" title="src/pybind/starters\l/sta_dump.h" alt="" coords="4967,543,5098,584"/>
-<area shape="rect" id="node49" href="$pybind_2starters_2sta__molecules_8h_source.html" title="src/pybind/starters\l/sta_molecules.h" alt="" coords="5439,543,5570,584"/>
-<area shape="rect" id="node50" href="$pybind_2starters_2sta__dump__atoms_8h_source.html" title="src/pybind/starters\l/sta_dump_atoms.h" alt="" coords="5122,543,5260,584"/>
-<area shape="rect" id="node51" href="$pybind_2starters_2sta__dump__box_8h_source.html" title="src/pybind/starters\l/sta_dump_box.h" alt="" coords="5284,543,5415,584"/>
-<area shape="rect" id="node53" href="$starters_2sta__beads_8h_source.html" title="src/starters/sta_beads.h" alt="" coords="4648,379,4811,405"/>
-<area shape="rect" id="node54" href="$starters_2sta__custom_8h_source.html" title="src/starters/sta_custom.h" alt="" coords="4899,379,5070,405"/>
-<area shape="rect" id="node55" href="$starters_2sta__dump_8h_source.html" title="src/starters/sta_dump.h" alt="" coords="5095,379,5255,405"/>
-<area shape="rect" id="node58" href="$starters_2sta__molecules_8h_source.html" title="src/starters/sta_molecules.h" alt="" coords="5331,379,5518,405"/>
-<area shape="rect" id="node56" href="$starters_2sta__dump__atoms_8h_source.html" title="src/starters/sta_dump\l_atoms.h" alt="" coords="5100,453,5250,495"/>
-<area shape="rect" id="node57" href="$starters_2sta__dump__box_8h_source.html" title="src/starters/sta_dump\l_box.h" alt="" coords="5275,453,5424,495"/>
-<area shape="rect" id="node61" href="$gen__list_8cpp.html" title="This file has implementations of the GenList class. " alt="" coords="5121,155,5264,181"/>
+<area shape="rect" id="node2" href="$element_8cpp.html" title="This file has implementations of the Element class, which is one of the cores of this program..." alt="" coords="271,304,415,331"/>
+<area shape="rect" id="node3" href="$gen__dict_8h.html" title="This file has a definition of the GenDict class. " alt="" coords="881,80,1015,107"/>
+<area shape="rect" id="node5" href="$generators_8h.html" title="This file includes all the header files of subclasses of Generator. " alt="" coords="919,155,1065,181"/>
+<area shape="rect" id="node9" href="$generator_8cpp.html" title="This file has implementations of the Generator class, which is one of the cores of this program..." alt="" coords="1420,304,1572,331"/>
+<area shape="rect" id="node66" href="$gen__list_8h.html" title="This file has a definition of the GenList class. " alt="" coords="1141,80,1270,107"/>
+<area shape="rect" id="node68" href="$pybind_2element_8h_source.html" title="src/pybind/element.h" alt="" coords="1106,229,1249,256"/>
+<area shape="rect" id="node4" href="$gen__dict_8cpp.html" title="This file has implementations of the GenDict class. " alt="" coords="748,155,895,181"/>
+<area shape="rect" id="node6" href="$core_2updater_8h.html" title="This file has a definition of the Updater class, which is one of the cores of this program..." alt="" coords="751,229,878,256"/>
+<area shape="rect" id="node65" href="$processors_2processor_8h_source.html" title="src/processors/processor.h" alt="" coords="902,229,1082,256"/>
+<area shape="rect" id="node7" href="$adders_2adder_8h.html" title="This file has a definition of the Adder class, which is a subclass of the Updater class..." alt="" coords="1215,304,1345,331"/>
+<area shape="rect" id="node10" href="$updater_8cpp.html" title="This file has implementations of the Updater class, which is one of the cores of this program..." alt="" coords="439,304,580,331"/>
+<area shape="rect" id="node11" href="$filters_2filter_8h_source.html" title="src/filters/filter.h" alt="" coords="605,304,721,331"/>
+<area shape="rect" id="node12" href="$pybind_2updater_8h_source.html" title="src/pybind/updater.h" alt="" coords="1383,379,1523,405"/>
+<area shape="rect" id="node58" href="$starters_2starter_8h_source.html" title="src/starters/starter.h" alt="" coords="745,304,885,331"/>
+<area shape="rect" id="node8" href="$adder_8cpp.html" title="This file has implementations of the Adder class, which is a subclass of the Updater class..." alt="" coords="1215,379,1359,405"/>
+<area shape="rect" id="node13" href="$pybind_8h.html" title="This file includes all the header files containing definitions of functions to bind C++ and Python..." alt="" coords="1748,639,1841,666"/>
+<area shape="rect" id="node15" href="$pybind_2adders_2adder_8h.html" title="This file has a function to bind Adder class to Python. " alt="" coords="3575,461,3747,487"/>
+<area shape="rect" id="node46" href="$pybind_2filters_2filter_8h_source.html" title="src/pybind/filters\l/filter.h" alt="" coords="1370,453,1489,495"/>
+<area shape="rect" id="node51" href="$pybind_2starters_2starter_8h_source.html" title="src/pybind/starters\l/starter.h" alt="" coords="585,453,716,495"/>
+<area shape="rect" id="node14" href="$ppap4lmp_8cpp.html" title="This file has no implementation, only includes a header file to bind C++ and Python. " alt="" coords="1732,721,1857,748"/>
+<area shape="rect" id="node16" href="$adders_2add__child__ids_8h.html" title="This file has a definition of the AddChildIDs class, which is a subclass of the Adder class..." alt="" coords="4073,543,4215,584"/>
+<area shape="rect" id="node18" href="$adders_2add__child__positions_8h.html" title="This file has a definition of the AddChildPositions class, which is a subclass of the Adder class..." alt="" coords="4239,543,4382,584"/>
+<area shape="rect" id="node20" href="$adders_2add__com__position_8h.html" title="This file has a definition of the AddCoMPosition class, which is a subclass of the Adder class..." alt="" coords="4406,543,4546,584"/>
+<area shape="rect" id="node22" href="$adders_2add__gyration__radius_8h.html" title="This file has a definition of the AddGyrationRadius class, which is a subclass of the Adder class..." alt="" coords="4570,543,4731,584"/>
+<area shape="rect" id="node24" href="$adders_2add__inertia__moment_8h.html" title="This file has a definition of the AddInertiaMoment class, which is a subclass of the Adder class..." alt="" coords="4755,543,4906,584"/>
+<area shape="rect" id="node26" href="$adders_2add__map_8h.html" title="This file has a definition of the AddMap class, which is a subclass of the Adder class. " alt="" coords="4934,550,5085,577"/>
+<area shape="rect" id="node28" href="$adders_2add__molecular__orientation_8h.html" title="This file has a definition of the AddMolecularOrientation class, which is a subclass of the Adder cla..." alt="" coords="5115,543,5285,584"/>
+<area shape="rect" id="node30" href="$adders_2add__rename_8h.html" title="This file has a definition of the AddRename class, which is a subclass of the Adder class..." alt="" coords="5315,550,5485,577"/>
+<area shape="rect" id="node32" href="$adders_2add__special__bonds_8h.html" title="This file has a definition of the AddSpecialBonds class, which is a subclass of the Adder class..." alt="" coords="5515,543,5671,584"/>
+<area shape="rect" id="node34" href="$adders_2add__wrapped__position_8h.html" title="This file has a definition of the AddWrappedPosition class, which is a subclass of the Adder class..." alt="" coords="3885,543,4048,584"/>
+<area shape="rect" id="node36" href="$pybind_2adders_2add__map_8h.html" title="This file has a function to bind AddMap class to Python. " alt="" coords="2693,543,2843,584"/>
+<area shape="rect" id="node37" href="$pybind_2adders_2add__rename_8h.html" title="This file has a function to bind AddRename class to Python. " alt="" coords="2891,543,3042,584"/>
+<area shape="rect" id="node38" href="$pybind_2adders_2add__child__ids_8h.html" title="This file has a function to bind AddChildIDs class to Python. " alt="" coords="3090,543,3241,584"/>
+<area shape="rect" id="node39" href="$pybind_2adders_2add__child__positions_8h.html" title="This file has a function to bind AddChildPositions class to Python. " alt="" coords="3289,543,3439,584"/>
+<area shape="rect" id="node40" href="$pybind_2adders_2add__com__position_8h.html" title="This file has a function to bind AddCoMPosition class to Python. " alt="" coords="3487,543,3638,584"/>
+<area shape="rect" id="node41" href="$pybind_2adders_2add__gyration__radius_8h.html" title="This file has a function to bind AddGyrationRadius class to Python. " alt="" coords="3686,543,3837,584"/>
+<area shape="rect" id="node42" href="$pybind_2adders_2add__inertia__moment_8h.html" title="This file has a function to bind AddInertiaMoment class to Python. " alt="" coords="1833,543,1983,584"/>
+<area shape="rect" id="node43" href="$pybind_2adders_2add__molecular__orientation_8h.html" title="This file has a function to bind AddMolecularOrientation class to Python. " alt="" coords="2032,543,2195,584"/>
+<area shape="rect" id="node44" href="$pybind_2adders_2add__special__bonds_8h.html" title="This file has a function to bind AddSpecialBonds class to Python. " alt="" coords="2243,543,2394,584"/>
+<area shape="rect" id="node45" href="$pybind_2adders_2add__wrapped__position_8h.html" title="This file has a function to bind AddWrappedPosition class to Python. " alt="" coords="2442,543,2593,584"/>
+<area shape="rect" id="node17" href="$add__child__ids_8cpp.html" title="This file has implementations of the AddChildIDs class, which is a subclass of the Adder class..." alt="" coords="4073,632,4215,673"/>
+<area shape="rect" id="node19" href="$add__child__positions_8cpp.html" title="This file has implementations of the AddChildPositions class, which is a subclass of the Adder class..." alt="" coords="4239,632,4382,673"/>
+<area shape="rect" id="node21" href="$add__com__position_8cpp.html" title="This file has implementations of the AddCoMPosition class, which is a subclass of the Adder class..." alt="" coords="4406,632,4546,673"/>
+<area shape="rect" id="node23" href="$add__gyration__radius_8cpp.html" title="This file has implementations of the AddGyrationRadius class, which is a subclass of the Adder class..." alt="" coords="4570,632,4731,673"/>
+<area shape="rect" id="node25" href="$add__inertia__moment_8cpp.html" title="This file has implementations of the AddInertiaMoment class, which is a subclass of the Adder class..." alt="" coords="4755,632,4906,673"/>
+<area shape="rect" id="node27" href="$add__map_8cpp.html" title="This file has implementations of the AddMap class, which is a subclass of the Adder class..." alt="" coords="4931,639,5096,666"/>
+<area shape="rect" id="node29" href="$add__molecular__orientation_8cpp.html" title="This file has implementations of the AddMolecularOrientation class, which is a subclass of the Adder ..." alt="" coords="5120,632,5291,673"/>
+<area shape="rect" id="node31" href="$add__rename_8cpp.html" title="This file has implementations of the AddRename class, which is a subclass of the Adder class..." alt="" coords="5315,639,5498,666"/>
+<area shape="rect" id="node33" href="$add__special__bonds_8cpp.html" title="This file has implementations of the AddSpecialBonds class, which is a subclass of the Adder class..." alt="" coords="5522,632,5678,673"/>
+<area shape="rect" id="node35" href="$add__wrapped__position_8cpp.html" title="This file has implementations of the AddWrappedPosition class, which is a subclass of the Adder class..." alt="" coords="3885,632,4048,673"/>
+<area shape="rect" id="node47" href="$filters_2fil__comparison_8h_source.html" title="src/filters/fil_comparison.h" alt="" coords="993,550,1167,577"/>
+<area shape="rect" id="node48" href="$filters_2fil__set_8h_source.html" title="src/filters/fil_set.h" alt="" coords="1191,550,1318,577"/>
+<area shape="rect" id="node49" href="$pybind_2filters_2fil__comparison_8h_source.html" title="src/pybind/filters\l/fil_comparison.h" alt="" coords="1561,543,1682,584"/>
+<area shape="rect" id="node50" href="$pybind_2filters_2fil__set_8h_source.html" title="src/pybind/filters\l/fil_set.h" alt="" coords="1342,543,1461,584"/>
+<area shape="rect" id="node52" href="$pybind_2starters_2sta__beads_8h_source.html" title="src/pybind/starters\l/sta_beads.h" alt="" coords="160,543,291,584"/>
+<area shape="rect" id="node53" href="$pybind_2starters_2sta__custom_8h_source.html" title="src/pybind/starters\l/sta_custom.h" alt="" coords="315,543,445,584"/>
+<area shape="rect" id="node54" href="$pybind_2starters_2sta__dump_8h_source.html" title="src/pybind/starters\l/sta_dump.h" alt="" coords="837,543,968,584"/>
+<area shape="rect" id="node55" href="$pybind_2starters_2sta__molecules_8h_source.html" title="src/pybind/starters\l/sta_molecules.h" alt="" coords="5,543,136,584"/>
+<area shape="rect" id="node56" href="$pybind_2starters_2sta__dump__atoms_8h_source.html" title="src/pybind/starters\l/sta_dump_atoms.h" alt="" coords="470,543,607,584"/>
+<area shape="rect" id="node57" href="$pybind_2starters_2sta__dump__box_8h_source.html" title="src/pybind/starters\l/sta_dump_box.h" alt="" coords="683,543,813,584"/>
+<area shape="rect" id="node59" href="$starters_2sta__beads_8h_source.html" title="src/starters/sta_beads.h" alt="" coords="300,379,463,405"/>
+<area shape="rect" id="node60" href="$starters_2sta__custom_8h_source.html" title="src/starters/sta_custom.h" alt="" coords="488,379,659,405"/>
+<area shape="rect" id="node61" href="$starters_2sta__dump_8h_source.html" title="src/starters/sta_dump.h" alt="" coords="735,379,895,405"/>
+<area shape="rect" id="node64" href="$starters_2sta__molecules_8h_source.html" title="src/starters/sta_molecules.h" alt="" coords="85,379,272,405"/>
+<area shape="rect" id="node62" href="$starters_2sta__dump__atoms_8h_source.html" title="src/starters/sta_dump\l_atoms.h" alt="" coords="412,453,561,495"/>
+<area shape="rect" id="node63" href="$starters_2sta__dump__box_8h_source.html" title="src/starters/sta_dump\l_box.h" alt="" coords="740,453,889,495"/>
+<area shape="rect" id="node67" href="$gen__list_8cpp.html" title="This file has implementations of the GenList class. " alt="" coords="1141,155,1283,181"/>
 </map>

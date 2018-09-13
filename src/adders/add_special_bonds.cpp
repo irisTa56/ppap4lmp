@@ -1,9 +1,12 @@
-/* ---------------------------------------------------------------------
-AddSpecialBonds: stands for Adder for Special Bonds.
-See: https://lammps.sandia.gov/doc/special_bonds.html
-
-create: 2018/08/19 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_special_bonds.cpp
+  @brief This file has implementations of the AddSpecialBonds class,
+  which is a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/08/19
+  @details For more details, please see the header file,
+  src/adders/add_special_bonds.h.
+*/
 
 #include "add_special_bonds.h"
 #include "../utils/map_to_index.h"
@@ -81,3 +84,5 @@ void AddSpecialBonds::compute_impl(
 
   datakeys.add("special-bonds");
 }
+
+/* ------------------------------------------------------------------ */

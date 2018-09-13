@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['optional',['optional',['../classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2',1,'DataKeys::optional()'],['../classElement.html#a0d0123e7fa1a7b96fb0ac271c0837a7d',1,'Element::optional()']]],
-  ['overwrite',['overwrite',['../classAddMap.html#a272eeaa7e7c0ba549209165f84f9441b',1,'AddMap::overwrite()'],['../classAddRename.html#a600c0c6383de7ed16387f5be064dac8f',1,'AddRename::overwrite()']]]
+  ['with_5fsquared',['with_squared',['../classAddGyrationRadius.html#a36cdb31db55a78681aada61ac5651bc9',1,'AddGyrationRadius']]],
+  ['without_5fsqrted',['without_sqrted',['../classAddGyrationRadius.html#a0919259a47f76c08c86f54156bdb2ac6',1,'AddGyrationRadius']]]
 ];

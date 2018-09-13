@@ -27,9 +27,9 @@ class GenList : public Generator {
  public:
   /*!
     @brief Constructor of GenList class.
-    @param const ::Vec<::ShPtr<#Generator>> &generator_list_: a list of
-    shared pointers to be stored.
-    @return Instance of the class.
+    @param generator_list_ : A list of shared pointers to
+    Generator instance.
+    @return Instance of this class.
     @details The argument is stored to the #generator_list as it is.
     This constructor is thread-unsafe because it accesses its members
     thread-globally. Ensure this constructor is called (indirectly)
@@ -42,7 +42,7 @@ class GenList : public Generator {
   /*!
     @brief Get an element of #generator_list as a shared pointer of
     Element class.
-    @param const ::Json &name: an index in the #generator_list.
+    @param name : An index in the #generator_list.
     @return A value of the #generator_list up-casted to Element class.
     @details One needs to get as Element when accessing the data. The
     argument \c name must be an integer, which is an index of the
@@ -53,7 +53,7 @@ class GenList : public Generator {
   /*!
     @brief Get an element of #generator_list as a shared pointer of
     Generator class.
-    @param const ::Json &name: an index in the #generator_list.
+    @param name : An index in the #generator_list.
     @return A value of the #generator_list.
     @details One needs to get as Generator when storing the instance.
     The argument \c name must be an integer, which is an index of the
@@ -63,7 +63,6 @@ class GenList : public Generator {
     const Json &name = nullptr) override;
   /*!
     @brief Get the length of the #generator_list.
-    @param None.
     @return Integer.
   */
   int get_length();

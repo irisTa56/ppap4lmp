@@ -30,42 +30,41 @@ class DataKeys {
  public:
   /*!
     @brief Constructor of DataKeys class (default).
-    @param None.
-    @return Instance of the class.
+    @return Instance of this class.
   */
   DataKeys() = default;
   virtual ~DataKeys() = default;
   /*!
     @brief Clear the #_keys.
-    @param None.
     @return None.
   */
   void clear();
   /*!
     @brief Set a given set of keys as the #_keys.
-    @param const ::Set<#Str> &keys: A set of string keys to be
-    assigned #_keys.
+    @param keys : A set of string keys to be assigned to #_keys.
     @return None.
   */
   void set(
     const Set<Str> &keys);
   /*!
     @brief Add a key or keys in an array to the #_keys.
-    @param const ::Json &key_: A key or an array of keys to be added.
+    @param key_ : ::Json for either a key or an array of keys to be
+    added.
     @return None.
   */
   void add(
     const Json &key_);
   /*!
     @brief Remove a key or keys in an array from the #_keys.
-    @param const ::Json &key_: A key or an array of keys to be removed.
+    @param key_ : ::Json for either a key or an array of keys to be
+    removed.
     @return None.
   */
   void remove(
     const Json &key_);
   /*!
     @brief Check if this instance has required key(s).
-    @param const ::Json &key_: A key or an array of keys to be
+    @param key_ : ::Json for either a key or an array of keys to be
     required.
     @return None.
     @details If this instance does not have the given required key(s),
@@ -75,7 +74,8 @@ class DataKeys {
     const Json &key_);
   /*!
     @brief Check if this instance has optional key(s).
-    @param const ::Json &key_: A key or an array of keys to be checked.
+    @param key_ : ::Json for either a key or an array of keys to be
+    checked.
     @return Boolean.
     @details If this instance has the given key(s), it returns true. If
     not, it returns false.
@@ -84,7 +84,6 @@ class DataKeys {
     const Json &key_);
   /*!
     @brief Get a constant reference to the #_keys.
-    @param None.
     @return A constant reference to ::Set<#Str>.
   */
   const Set<Str> &get();

@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-AddInertiaMoment: stands for Adder for Inertia Moment (of molecules).
-
-create: 2018/07/15 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_inertia_moment.cpp
+  @brief This file has implementations of the AddInertiaMoment class,
+  which is a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/07/15
+  @details For more details, please see the header file,
+  src/adders/add_inertia_moment.h.
+*/
 
 #include "add_inertia_moment.h"
 #include "../utils/map_to_index.h"
@@ -133,3 +137,5 @@ void AddInertiaMoment::compute_impl(
 
   datakeys.add({"I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz"});
 }
+
+/* ------------------------------------------------------------------ */

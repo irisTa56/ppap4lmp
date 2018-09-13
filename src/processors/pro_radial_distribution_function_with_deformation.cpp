@@ -169,13 +169,13 @@ void ProRDFWD::run_impl(
 
             if (r < r_max)
             {
-              auto index = bin_from_r ?
+              auto r_index = bin_from_r ?
                 floor(r*reciprocal_width) : round(r*reciprocal_width);
 
-              raw_counts(index) += 2;
-              Rg2_sum(index) += Rg2_i + Rg2_j;
-              Rg2_para_sum(index) += Rg2_para_i + Rg2_para_j;
-              Rg2_perp_sum(index) += Rg2_perp_i + Rg2_perp_j;
+              raw_counts(r_index) += 2;
+              Rg2_sum(r_index) += Rg2_i + Rg2_j;
+              Rg2_para_sum(r_index) += Rg2_para_i + Rg2_para_j;
+              Rg2_perp_sum(r_index) += Rg2_perp_i + Rg2_perp_j;
             }
 
             auto r_modified = r + (
@@ -198,11 +198,11 @@ void ProRDFWD::run_impl(
 
             if (r_max <= r_modified) continue;
 
-            auto index = bin_from_r ?
+            auto r_index = bin_from_r ?
               floor(r_modified*reciprocal_width) :
               round(r_modified*reciprocal_width);
 
-            counts(index) += 2;  // i -> j & j -> i
+            counts(r_index) += 2;  // i -> j & j -> i
           }
         }
       }

@@ -141,13 +141,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor of <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys for Element::data. ">DataKeys</a> class (default). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">None.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Instance of the class. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of this class. </dd></dl>
 
 </div>
 </div>
@@ -171,7 +165,7 @@ Private Attributes</h2></td></tr>
 <p>Add a key or keys in an array to the <a class="el" href="classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83" title="A set of string key for Element::data. ">_keys</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> &amp;key_: A key or an array of keys to be added. </td></tr>
+    <tr><td class="paramname">key_</td><td>: <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> for either a key or an array of keys to be added. </td></tr>
   </table>
   </dd>
 </dl>
@@ -179,7 +173,8 @@ Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classDataKeys_a626d56b99861008c2a63580ed17b809d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classDataKeys_a626d56b99861008c2a63580ed17b809d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -200,12 +195,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Clear the <a class="el" href="classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83" title="A set of string key for Element::data. ">_keys</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">None.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -231,12 +220,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Get a constant reference to the <a class="el" href="classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83" title="A set of string key for Element::data. ">_keys</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">None.</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section return"><dt>Returns</dt><dd>A constant reference to <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307" title="Set is an alias for unordered set (same as set in Python). ">Set</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6" title="Str is an alias for string. ">Str</a>&gt;. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -265,7 +248,7 @@ Here is the caller graph for this function:</div>
 <p>Check if this instance has optional key(s). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> &amp;key_: A key or an array of keys to be checked. </td></tr>
+    <tr><td class="paramname">key_</td><td>: <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> for either a key or an array of keys to be checked. </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,7 +281,7 @@ Here is the caller graph for this function:</div>
 <p>Remove a key or keys in an array from the <a class="el" href="classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83" title="A set of string key for Element::data. ">_keys</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> &amp;key_: A key or an array of keys to be removed. </td></tr>
+    <tr><td class="paramname">key_</td><td>: <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> for either a key or an array of keys to be removed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -330,7 +313,7 @@ Here is the caller graph for this function:</div>
 <p>Check if this instance has required key(s). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> &amp;key_: A key or an array of keys to be required. </td></tr>
+    <tr><td class="paramname">key_</td><td>: <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> for either a key or an array of keys to be required. </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,7 +322,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classDataKeys_a03517cffe825c983c3582ffb55318a7b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classDataKeys_a03517cffe825c983c3582ffb55318a7b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -363,7 +347,7 @@ Here is the caller graph for this function:</div>
 <p>Set a given set of keys as the <a class="el" href="classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83" title="A set of string key for Element::data. ">_keys</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">const</td><td><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307" title="Set is an alias for unordered set (same as set in Python). ">Set</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6" title="Str is an alias for string. ">Str</a>&gt; &amp;keys: A set of string keys to be assigned <a class="el" href="classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83" title="A set of string key for Element::data. ">_keys</a>. </td></tr>
+    <tr><td class="paramname">keys</td><td>: A set of string keys to be assigned to <a class="el" href="classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83" title="A set of string key for Element::data. ">_keys</a>. </td></tr>
   </table>
   </dd>
 </dl>

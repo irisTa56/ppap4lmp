@@ -22,16 +22,16 @@
   @details This class inherits Generator class and
   ::EnShThis<#Element>. Element class is different from the Generator
   class and its subclasses (except for this class) by owning data
-  \e element (or entity, object). The data is stored as a ::Json instance,
-  #data, and a set of the keys (or property names, attributes) of the
-  data is stored as a DataKeys instance, #datakeys. This class can
-  update its own data by calling #update_data where a mutable reference
-  of #data is passed to an Updater instance.
+  \e element (or entity, object). The data is stored as a ::Json
+  instance, #data, and a set of the keys (or property names, attributes)
+  of the data is stored as a DataKeys instance, #datakeys. This class
+  can update its own data by calling #update_data where a mutable
+  reference of #data is passed to an Updater instance.
 */
 class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief The number of created instances of Element class.
-    @details This member is only used to set #dataid.
+    @details This member is only used for setting #dataid.
   */
   static int instance_count;
   /*!
@@ -59,7 +59,7 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Set of keys (or property names, attributes) of the data.
     @details This member stores string keys the #data has. For more
-    details, please see DataKeys class.Note that after updating the
+    details, please see DataKeys class. Note that after updating the
     data, the set of keys must be manually updated (add/remove keys) in
     Updater or its subclasses.
   */
@@ -74,14 +74,12 @@ class Element : public Generator, public EnShThis<Element> {
   omp_lock_t omp_lock;
   /*!
     @brief This method increments #n_remain.
-    @param None.
     @return None.
     @details Please see #decrement_remain.
   */
   void increment_remain();
   /*!
     @brief This method decrements #n_remain.
-    @param None.
     @return None.
     @details If one increments #n_remain of this instance before using
     the #data and then decrements it after using the #data, the #data
@@ -91,8 +89,8 @@ class Element : public Generator, public EnShThis<Element> {
   void decrement_remain();
   /*!
     @brief This method updates #data of this instance.
-    @param const ::ShPtr<#Updater> &upd: an Updater instance updating
-    the #data.
+    @param upd : Shared pointer to an Updater instance updating the
+    #data.
     @return None.
     @details This method updates the #data using an instance of Updater
     taken as \c upd. This instance and the Updater instance are paired
@@ -109,8 +107,7 @@ class Element : public Generator, public EnShThis<Element> {
  public:
   /*!
     @brief Constructor of Element class.
-    @param None.
-    @return Instance of the class.
+    @return Instance of this class.
     @details This constructor is thread-unsafe because it accesses its
     members thread-globally. Ensure this constructor is called
     (indirectly) from Python and not called in a multithreads context.
@@ -119,7 +116,7 @@ class Element : public Generator, public EnShThis<Element> {
   virtual ~Element() = default;
   /*!
     @brief Get this instance as a shared pointer of Element class.
-    @param const ::Json &name = nullptr.
+    @param name : ::Json (default is \c nullptr).
     @return Shared pointer of this Element instance.
     @details One needs to get as Element when accessing the data. The
     argument \c name must be left as default.
@@ -128,7 +125,7 @@ class Element : public Generator, public EnShThis<Element> {
     const Json &name = nullptr) override;
   /*!
     @brief Get this instance as a shared pointer of Generator class.
-    @param const ::Json &name = nullptr.
+    @param name : ::Json (default is \c nullptr).
     @return Shared pointer of this Generator instance.
     @details One needs to get as Generator when storing the instance.
     The argument \c name must be left as default.
@@ -138,8 +135,8 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Append an instance of Updater class to this instance. <b>Can
     be called from Python</b>.
-    @param const ::ShPtr<#Updater> &upd: an Updater instance to be
-    appended to this instance.
+    @param upd : Shared pointer to an Updater instance to be appended
+    to this instance.
     @return Shared pointer of this Element instance.
     @details To update the data, one creates an instance of Updater
     class in Python and appends it to an instance of Element class.
@@ -154,7 +151,6 @@ class Element : public Generator, public EnShThis<Element> {
     const ShPtr<Updater> &upd);
   /*!
     @brief Get the reference to #data of this instance.
-    @param None.
     @return Constant reference to ::Json.
     @details One can refer the whole data stored in this instance by
     this method.
@@ -162,7 +158,7 @@ class Element : public Generator, public EnShThis<Element> {
   const Json &get_data();
   /*!
     @brief Get the partial data of this instance.
-    @param const ::Json &key_: a string key or an array of string keys.
+    @param key_ : ::Json for either a key or an array of keys.
     @return ::Json (not a reference).
     @details One can get the partial data stored in this instance by
     this method. To select which data is included, specify a key or an
@@ -172,7 +168,6 @@ class Element : public Generator, public EnShThis<Element> {
     const Json &key_);
   /*!
     @brief Get keys of the data of this instance.
-    @param None.
     @return Constant reference to DataKeys.
     @details One can get the keys (property names) in the data by this
     method.
@@ -180,8 +175,8 @@ class Element : public Generator, public EnShThis<Element> {
   const DataKeys &get_keys();
   /*!
     @brief Extract values in #data as an one-dimensional Eigen-Array.
-    @param T &array: T should be ::ArrayXi or ::ArrayXd.
-    @param const ::Str &key: a string key for values to be extracted.
+    @param array : Mutable reference to ::ArrayXi or ::ArrayXd.
+    @param key : A string key for values to be extracted.
     @return None.
     @details If one passed ::ArrayXi or ::ArrayXd as a reference, this
     method fills it by values of a property specified by \c key.
@@ -192,8 +187,8 @@ class Element : public Generator, public EnShThis<Element> {
     const Str &key);
   /*!
     @brief Extract values in #data as a two-dimensional Eigen-Array.
-    @param T &array: T should be ::ArrayXi or ::ArrayXd.
-    @param const ::Vec<#Str> &keys: a vector of string keys for
+    @param array : Mutable reference to ::ArrayXXi or ::ArrayXXd.
+    @param keys : A vector of string keys for values to be extracted.
     values to be extracted.
     @return None.
     @details If one passed ::ArrayXXi or ::ArrayXXd as a reference,
@@ -206,7 +201,7 @@ class Element : public Generator, public EnShThis<Element> {
     const Vec<Str> &keys);
   /*!
     @brief Wrapper for DataKeys::required.
-    @param const ::Json &key_: a string key or an array of string keys.
+    @param key_ : ::Json for either a key or an array of keys.
     @return None.
     @details It is convenient that the method can be called without
     getting DataKeys instance from this Element instance. For more
@@ -216,7 +211,7 @@ class Element : public Generator, public EnShThis<Element> {
     const Json &key_);
   /*!
     @brief Wrapper for DataKeys::optional.
-    @param const ::Json &key_: a string key or an array of string keys.
+    @param key_ : ::Json for either a key or an array of keys.
     @return bool.
     @details It is convenient that the method can be called without
     getting DataKeys instance from this Element instance. For more
@@ -227,7 +222,6 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Wrapper for the #get_data method which returns a reference.
     <b>Can be called from Python as \e get_data</b>.
-    @param None.
     @return Constant reference to ::Json.
     @details This method provides a functionality to access the #data
     directly from Python. An updating process associated with this
@@ -237,7 +231,6 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Wrapper for the #get_keys method. <b>Can be called from
     Python as \e get_keys</b>.
-    @param None.
     @return Constant reference to ::Set<#Str>.
     @details This method provides a functionality to access #datakeys
     directly from Python. An updating process associated with this
@@ -247,7 +240,7 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Wrapper for the #array1d method for integer values. <b>Can
     be called from Python as \e get_1d_int</b>.
-    @param const ::Str &key: a key specifying a property.
+    @param key : A string key specifying a property.
     @return ::ArrayXi (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
     this instance directly from Python as an one-dimensional array. An
@@ -259,7 +252,7 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Wrapper for the #array1d method for float (double in C++)
     values. <b>Can be called from Python as \e get_1d_float</b>.
-    @param const ::Str &key: a key specifying a property.
+    @param key : A string key specifying a property.
     @return ::ArrayXd (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
     this instance directly from Python as an one-dimensional array. An
@@ -271,8 +264,8 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Wrapper for the #array2d method for integer values. <b>Can
     be called from Python as \e get_2d_int</b>.
-    @param const py::args &args (*args in Python): a list (order
-    matters) of keys specifying properties.
+    @param args : An ordered list of keys specifying properties (*args
+    in Python).
     @return ::ArrayXXi (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
     this instance directly from Python as a two-dimensional array. An
@@ -284,8 +277,8 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Wrapper for the #array2d method for float (double in C++)
     values. <b>Can be called from Python as \e get_2d_float</b>.
-    @param const py::args &args (*args in Python): a list (order
-    matters) of keys specifying properties.
+    @param args : An ordered list of keys specifying properties (*args
+    in Python).
     @return ::ArrayXXd (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
     this instance directly from Python as a two-dimensional array. An
@@ -298,7 +291,6 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Routines to be conducted when a wrapper of getter is called
     from Python.
-    @param None.
     @return None.
     @details This method runs updating process associated with this
     instance so that a wrapper of getter can access the filled data.

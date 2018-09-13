@@ -61,7 +61,7 @@ class Updater {
   virtual void compute_impl(Json &, DataKeys &) = 0;
   /*!
     @brief Look for Element::dataid in #dataid_blacklist.
-    @param const int dataid: Element::dataid to be checked.
+    @param dataid : Element::dataid to be checked.
     @return Boolean.
     @details If \c dataid is found in #dataid_blacklist, this
     method returns false, that is, rejects the Element instance of
@@ -72,8 +72,7 @@ class Updater {
  public:
   /*!
     @brief Constructor of Updater class.
-    @param None.
-    @return Instance of the class.
+    @return Instance of this class.
     @details This constructor is thread-unsafe because it accesses its
     members thread-globally. Ensure this constructor is called
     (indirectly) from Python and not called in a multithreads context.
@@ -88,7 +87,7 @@ class Updater {
   virtual void compute(Json &, DataKeys &, const int) = 0;
   /*!
     @brief Remove Element::dataid from #dataid_blacklist.
-    @param const int dataid: Element::dataid to be removed.
+    @param dataid : Element::dataid to be removed.
     @return None.
     @details Removing \c dataid from #dataid_blacklist is necessary in
     case that this instance updates the Element instance of the
@@ -98,7 +97,6 @@ class Updater {
     const int dataid);
   /*!
     @brief Get the #ext_generator of this instance.
-    @param None.
     @return Constance reference to ::ShPtr<#Generator>.
     @details This method is mainly used in Element::update_chain.
   */

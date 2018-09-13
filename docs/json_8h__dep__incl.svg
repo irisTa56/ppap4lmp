@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 4375;
+var viewWidth = 4535;
 var viewHeight = 677;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,12 +54,12 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>src/alias/json.h</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-673 4370.9994,-673 4370.9994,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-673 4530.5,-673 4530.5,4 -4,4"/>
 <!-- Node2 -->
 <g id="node1" class="node">
 <title>Node2</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="3541,-649.5 3541,-668.5 3624,-668.5 3624,-649.5 3541,-649.5"/>
-<text text-anchor="middle" x="3582.5" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/alias/json.h</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="4112,-649.5 4112,-668.5 4195,-668.5 4195,-649.5 4112,-649.5"/>
+<text text-anchor="middle" x="4153.5" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/alias/json.h</text>
 </g>
 <!-- Node3 -->
 <g id="node2" class="node">
@@ -73,1329 +73,1435 @@ var sectionId = 'dynsection-1';
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M3530.7681,-658.7437C3097.3998,-656.4331 87.5,-637.1405 87.5,-547 87.5,-547 87.5,-547 87.5,-267 87.5,-221.7054 71.7892,-169.1819 64.7929,-148.0381"/>
-<polygon fill="#191970" stroke="#191970" points="3530.7964,-662.2438 3540.8147,-658.7967 3530.8334,-655.2439 3530.7964,-662.2438"/>
+<path fill="none" stroke="#191970" d="M4101.664,-658.2756C3629.2772,-651.5924 87.5,-599.7262 87.5,-547 87.5,-547 87.5,-547 87.5,-267 87.5,-221.7054 71.7892,-169.1819 64.7929,-148.0381"/>
+<polygon fill="#191970" stroke="#191970" points="4101.8845,-661.779 4111.933,-658.4206 4101.9834,-654.7797 4101.8845,-661.779"/>
 </g>
-<!-- Node7 -->
-<g id="node6" class="node">
-<title>Node7</title>
-<g id="a_node6"><a xlink:href="data__keys_8h.html" target="_top" xlink:title="This file has a definition of the DataKeys class, which is owned by Element class. ">
-<polygon fill="#ffffff" stroke="#000000" points="3526,-593.5 3526,-612.5 3639,-612.5 3639,-593.5 3526,-593.5"/>
-<text text-anchor="middle" x="3582.5" y="-600.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/class/data_keys.h</text>
+<!-- Node9 -->
+<g id="node8" class="node">
+<title>Node9</title>
+<g id="a_node8"><a xlink:href="data__keys_8h.html" target="_top" xlink:title="This file has a definition of the DataKeys class, which is owned by Element class. ">
+<polygon fill="#ffffff" stroke="#000000" points="4097,-593.5 4097,-612.5 4210,-612.5 4210,-593.5 4097,-593.5"/>
+<text text-anchor="middle" x="4153.5" y="-600.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/class/data_keys.h</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node7 -->
-<g id="edge5" class="edge">
-<title>Node2&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M3582.5,-639.1575C3582.5,-630.155 3582.5,-619.9199 3582.5,-612.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3579.0001,-639.2455 3582.5,-649.2455 3586.0001,-639.2456 3579.0001,-639.2455"/>
+<!-- Node2&#45;&gt;Node9 -->
+<g id="edge7" class="edge">
+<title>Node2&#45;&gt;Node9</title>
+<path fill="none" stroke="#191970" d="M4153.5,-639.1575C4153.5,-630.155 4153.5,-619.9199 4153.5,-612.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4150.0001,-639.2455 4153.5,-649.2455 4157.0001,-639.2456 4150.0001,-639.2455"/>
 </g>
-<!-- Node68 -->
-<g id="node67" class="node">
-<title>Node68</title>
-<g id="a_node67"><a xlink:href="generator_8h.html" target="_top" xlink:title="This file has a definition of the Generator class, which is one of the cores of this program...">
-<polygon fill="#ffffff" stroke="#000000" points="3658.5,-593.5 3658.5,-612.5 3762.5,-612.5 3762.5,-593.5 3658.5,-593.5"/>
-<text text-anchor="middle" x="3710.5" y="-600.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/generator.h</text>
+<!-- Node74 -->
+<g id="node73" class="node">
+<title>Node74</title>
+<g id="a_node73"><a xlink:href="generator_8h.html" target="_top" xlink:title="This file has a definition of the Generator class, which is one of the cores of this program...">
+<polygon fill="#ffffff" stroke="#000000" points="4229.5,-593.5 4229.5,-612.5 4333.5,-612.5 4333.5,-593.5 4229.5,-593.5"/>
+<text text-anchor="middle" x="4281.5" y="-600.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/generator.h</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node68 -->
-<g id="edge116" class="edge">
-<title>Node2&#45;&gt;Node68</title>
-<path fill="none" stroke="#191970" d="M3613.9348,-645.2473C3637.1809,-635.0771 3668.2411,-621.4883 3688.7831,-612.5011"/>
-<polygon fill="#191970" stroke="#191970" points="3612.2627,-642.1585 3604.504,-649.3733 3615.0685,-648.5716 3612.2627,-642.1585"/>
+<!-- Node2&#45;&gt;Node74 -->
+<g id="edge124" class="edge">
+<title>Node2&#45;&gt;Node74</title>
+<path fill="none" stroke="#191970" d="M4184.9348,-645.2473C4208.1809,-635.0771 4239.2411,-621.4883 4259.7831,-612.5011"/>
+<polygon fill="#191970" stroke="#191970" points="4183.2627,-642.1585 4175.504,-649.3733 4186.0685,-648.5716 4183.2627,-642.1585"/>
 </g>
 <!-- Node4 -->
 <g id="node3" class="node">
 <title>Node4</title>
 <g id="a_node3"><a xlink:href="add__child__ids_8cpp.html" target="_top" xlink:title="This file has implementations of the AddChildIDs class, which is a subclass of the Adder class...">
-<polygon fill="#ffffff" stroke="#000000" points="94,-56.5 94,-86.5 201,-86.5 201,-56.5 94,-56.5"/>
-<text text-anchor="start" x="102" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
-<text text-anchor="middle" x="147.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_ids.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="91,-56.5 91,-86.5 198,-86.5 198,-56.5 91,-56.5"/>
+<text text-anchor="start" x="99" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
+<text text-anchor="middle" x="144.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_ids.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge2" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M81.8942,-122.6115C95.9225,-111.6825 114.4359,-97.2592 128.2183,-86.5218"/>
-<polygon fill="#191970" stroke="#191970" points="79.5593,-119.9937 73.8217,-128.9005 83.8613,-125.5158 79.5593,-119.9937"/>
+<path fill="none" stroke="#191970" d="M81.1828,-122.6115C94.7217,-111.6825 112.5893,-97.2592 125.8909,-86.5218"/>
+<polygon fill="#191970" stroke="#191970" points="78.9746,-119.8959 73.3919,-128.9005 83.3715,-125.3427 78.9746,-119.8959"/>
 </g>
 <!-- Node5 -->
 <g id="node4" class="node">
 <title>Node5</title>
 <g id="a_node4"><a xlink:href="add__child__positions_8cpp.html" target="_top" xlink:title="This file has implementations of the AddChildPositions class, which is a subclass of the Adder class...">
-<polygon fill="#ffffff" stroke="#000000" points="262,-56.5 262,-86.5 369,-86.5 369,-56.5 262,-56.5"/>
-<text text-anchor="start" x="270" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
-<text text-anchor="middle" x="315.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_positions.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="222,-56.5 222,-86.5 329,-86.5 329,-56.5 222,-56.5"/>
+<text text-anchor="start" x="230" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
+<text text-anchor="middle" x="275.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_positions.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node5 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M107.3513,-126.4054C150.7632,-114.9542 215.9421,-97.7613 261.772,-85.6723"/>
-<polygon fill="#191970" stroke="#191970" points="106.3988,-123.0368 97.6223,-128.9717 108.1842,-129.8053 106.3988,-123.0368"/>
+<path fill="none" stroke="#191970" d="M101.7673,-125.893C137.4677,-114.7157 189.6652,-98.3735 227.52,-86.5218"/>
+<polygon fill="#191970" stroke="#191970" points="100.6584,-122.5725 92.161,-128.9005 102.75,-129.2528 100.6584,-122.5725"/>
 </g>
 <!-- Node6 -->
 <g id="node5" class="node">
 <title>Node6</title>
 <g id="a_node5"><a xlink:href="add__com__position_8cpp.html" target="_top" xlink:title="This file has implementations of the AddCoMPosition class, which is a subclass of the Adder class...">
-<polygon fill="#ffffff" stroke="#000000" points="430,-56.5 430,-86.5 535,-86.5 535,-56.5 430,-56.5"/>
-<text text-anchor="start" x="438" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_com</text>
-<text text-anchor="middle" x="482.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_position.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="388,-56.5 388,-86.5 493,-86.5 493,-56.5 388,-56.5"/>
+<text text-anchor="start" x="396" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_com</text>
+<text text-anchor="middle" x="440.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_position.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node6 -->
 <g id="edge4" class="edge">
 <title>Node3&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M116.6165,-126.9016C123.6347,-125.53 130.7285,-124.1951 137.5,-123 151.7385,-120.4871 336.7768,-93.0562 429.8236,-79.2884"/>
-<polygon fill="#191970" stroke="#191970" points="115.5603,-123.543 106.4345,-128.9252 116.9249,-130.4087 115.5603,-123.543"/>
+<path fill="none" stroke="#191970" d="M116.9172,-126.9778C123.841,-125.6031 130.8299,-124.2467 137.5,-123 225.092,-106.6286 327.3462,-89.7008 387.858,-79.9094"/>
+<polygon fill="#191970" stroke="#191970" points="115.9808,-123.5959 106.8645,-128.9943 117.3576,-130.4591 115.9808,-123.5959"/>
+</g>
+<!-- Node7 -->
+<g id="node6" class="node">
+<title>Node7</title>
+<g id="a_node6"><a xlink:href="add__inertia__moment_8cpp.html" target="_top" xlink:title="This file has implementations of the AddInertiaMoment class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="532,-56.5 532,-86.5 645,-86.5 645,-56.5 532,-56.5"/>
+<text text-anchor="start" x="540" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_inertia</text>
+<text text-anchor="middle" x="588.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_moment.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node3&#45;&gt;Node7 -->
+<g id="edge5" class="edge">
+<title>Node3&#45;&gt;Node7</title>
+<path fill="none" stroke="#191970" d="M114.3959,-126.9875C122.123,-125.5169 130.0009,-124.1325 137.5,-123 298.2444,-98.7249 340.4661,-109.2739 501.5,-87 511.3783,-85.6337 521.849,-83.9619 531.9744,-82.2279"/>
+<polygon fill="#191970" stroke="#191970" points="113.5073,-123.5951 104.3693,-128.9566 114.8563,-130.4639 113.5073,-123.5951"/>
 </g>
 <!-- Node8 -->
 <g id="node7" class="node">
 <title>Node8</title>
-<g id="a_node7"><a xlink:href="data__keys_8cpp.html" target="_top" xlink:title="This file has implementations of the DataKeys class, which is owned by Element class. ">
-<polygon fill="#ffffff" stroke="#000000" points="3520,-537.5 3520,-556.5 3643,-556.5 3643,-537.5 3520,-537.5"/>
-<text text-anchor="middle" x="3581.5" y="-544.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/class/data_keys.cpp</text>
+<g id="a_node7"><a xlink:href="add__special__bonds_8cpp.html" target="_top" xlink:title="This file has implementations of the AddSpecialBonds class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="673,-56.5 673,-86.5 790,-86.5 790,-56.5 673,-56.5"/>
+<text text-anchor="start" x="681" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_special</text>
+<text text-anchor="middle" x="731.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_bonds.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
+<!-- Node3&#45;&gt;Node8 -->
 <g id="edge6" class="edge">
-<title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="#191970" d="M3582.1457,-583.1575C3581.9849,-574.155 3581.8021,-563.9199 3581.6722,-556.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3578.6477,-583.3097 3582.3258,-593.2455 3585.6466,-583.1846 3578.6477,-583.3097"/>
-</g>
-<!-- Node9 -->
-<g id="node8" class="node">
-<title>Node9</title>
-<g id="a_node8"><a xlink:href="core_2element_8h.html" target="_top" xlink:title="This file has a definition of the Element class, which is one of the cores of this program...">
-<polygon fill="#ffffff" stroke="#000000" points="3661.5,-537.5 3661.5,-556.5 3759.5,-556.5 3759.5,-537.5 3661.5,-537.5"/>
-<text text-anchor="middle" x="3710.5" y="-544.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/element.h</text>
-</a>
-</g>
-</g>
-<!-- Node7&#45;&gt;Node9 -->
-<g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node9</title>
-<path fill="none" stroke="#191970" d="M3613.9348,-589.2473C3637.1809,-579.0771 3668.2411,-565.4883 3688.7831,-556.5011"/>
-<polygon fill="#191970" stroke="#191970" points="3612.2627,-586.1585 3604.504,-593.3733 3615.0685,-592.5716 3612.2627,-586.1585"/>
+<title>Node3&#45;&gt;Node8</title>
+<path fill="none" stroke="#191970" d="M112.9697,-127.0516C121.1455,-125.5083 129.5319,-124.0857 137.5,-123 365.286,-91.9629 425.6367,-117.4646 653.5,-87 659.795,-86.1584 666.3461,-85.1188 672.8581,-83.9795"/>
+<polygon fill="#191970" stroke="#191970" points="112.2828,-123.6196 103.1437,-128.9794 113.6305,-130.4887 112.2828,-123.6196"/>
 </g>
 <!-- Node10 -->
 <g id="node9" class="node">
 <title>Node10</title>
-<g id="a_node9"><a xlink:href="element_8cpp.html" target="_top" xlink:title="This file has implementations of the Element class, which is one of the cores of this program...">
-<polygon fill="#ffffff" stroke="#000000" points="3184.5,-313.5 3184.5,-332.5 3292.5,-332.5 3292.5,-313.5 3184.5,-313.5"/>
-<text text-anchor="middle" x="3238.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/element.cpp</text>
+<g id="a_node9"><a xlink:href="data__keys_8cpp.html" target="_top" xlink:title="This file has implementations of the DataKeys class, which is owned by Element class. ">
+<polygon fill="#ffffff" stroke="#000000" points="4091,-537.5 4091,-556.5 4214,-556.5 4214,-537.5 4091,-537.5"/>
+<text text-anchor="middle" x="4152.5" y="-544.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/class/data_keys.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node10 -->
 <g id="edge8" class="edge">
 <title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="#191970" d="M3660.2731,-534.9163C3629.2629,-526.7907 3588.9566,-515.0183 3554.5,-501 3430.8532,-450.6956 3295.2865,-361.6371 3252.338,-332.5092"/>
-<polygon fill="#191970" stroke="#191970" points="3659.4382,-538.3154 3669.9955,-537.4246 3661.1869,-531.5374 3659.4382,-538.3154"/>
+<path fill="none" stroke="#191970" d="M4153.1457,-583.1575C4152.9849,-574.155 4152.8021,-563.9199 4152.6722,-556.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4149.6477,-583.3097 4153.3258,-593.2455 4156.6466,-583.1846 4149.6477,-583.3097"/>
 </g>
 <!-- Node11 -->
 <g id="node10" class="node">
 <title>Node11</title>
-<g id="a_node10"><a xlink:href="gen__dict_8h.html" target="_top" xlink:title="This file has a definition of the GenDict class. ">
-<polygon fill="#ffffff" stroke="#000000" points="3563.5,-481.5 3563.5,-500.5 3663.5,-500.5 3663.5,-481.5 3563.5,-481.5"/>
-<text text-anchor="middle" x="3613.5" y="-488.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_dict.h</text>
+<g id="a_node10"><a xlink:href="core_2element_8h.html" target="_top" xlink:title="This file has a definition of the Element class, which is one of the cores of this program...">
+<polygon fill="#ffffff" stroke="#000000" points="4232.5,-537.5 4232.5,-556.5 4330.5,-556.5 4330.5,-537.5 4232.5,-537.5"/>
+<text text-anchor="middle" x="4281.5" y="-544.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/element.h</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node11 -->
 <g id="edge9" class="edge">
 <title>Node9&#45;&gt;Node11</title>
-<path fill="none" stroke="#191970" d="M3684.5984,-532.0465C3667.3391,-522.0824 3645.1624,-509.2794 3630.2025,-500.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3683.1936,-535.2768 3693.6039,-537.2455 3686.6935,-529.2146 3683.1936,-535.2768"/>
-</g>
-<!-- Node13 -->
-<g id="node12" class="node">
-<title>Node13</title>
-<g id="a_node12"><a xlink:href="generators_8h.html" target="_top" xlink:title="This file includes all the header files of subclasses of Generator. ">
-<polygon fill="#ffffff" stroke="#000000" points="3586,-425.5 3586,-444.5 3695,-444.5 3695,-425.5 3586,-425.5"/>
-<text text-anchor="middle" x="3640.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/generators.h</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node13 -->
-<g id="edge113" class="edge">
-<title>Node9&#45;&gt;Node13</title>
-<path fill="none" stroke="#191970" d="M3700.3095,-528.3278C3692.8852,-514.9713 3682.4302,-496.6607 3672.5,-481 3664.373,-468.1831 3654.268,-453.9052 3647.6135,-444.7064"/>
-<polygon fill="#191970" stroke="#191970" points="3697.445,-530.3816 3705.3373,-537.45 3703.5755,-527.0027 3697.445,-530.3816"/>
-</g>
-<!-- Node17 -->
-<g id="node16" class="node">
-<title>Node17</title>
-<g id="a_node16"><a xlink:href="generator_8cpp.html" target="_top" xlink:title="This file has implementations of the Generator class, which is one of the cores of this program...">
-<polygon fill="#ffffff" stroke="#000000" points="3857.5,-313.5 3857.5,-332.5 3971.5,-332.5 3971.5,-313.5 3857.5,-313.5"/>
-<text text-anchor="middle" x="3914.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/generator.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node17 -->
-<g id="edge112" class="edge">
-<title>Node9&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M3713.6134,-527.2827C3718.2879,-502.012 3728.8628,-457.5802 3749.5,-425 3780.7666,-375.639 3845.4407,-346.3343 3883.878,-332.5728"/>
-<polygon fill="#191970" stroke="#191970" points="3710.1132,-526.9849 3711.8659,-537.4338 3717.0118,-528.1725 3710.1132,-526.9849"/>
-</g>
-<!-- Node65 -->
-<g id="node64" class="node">
-<title>Node65</title>
-<g id="a_node64"><a xlink:href="gen__list_8h.html" target="_top" xlink:title="This file has a definition of the GenList class. ">
-<polygon fill="#ffffff" stroke="#000000" points="3758,-481.5 3758,-500.5 3855,-500.5 3855,-481.5 3758,-481.5"/>
-<text text-anchor="middle" x="3806.5" y="-488.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_list.h</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node65 -->
-<g id="edge109" class="edge">
-<title>Node9&#45;&gt;Node65</title>
-<path fill="none" stroke="#191970" d="M3736.1346,-532.0465C3753.2159,-522.0824 3775.164,-509.2794 3789.9697,-500.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3734.0962,-529.1836 3727.2219,-537.2455 3737.6233,-535.23 3734.0962,-529.1836"/>
-</g>
-<!-- Node67 -->
-<g id="node66" class="node">
-<title>Node67</title>
-<g id="a_node66"><a xlink:href="pybind_2element_8h_source.html" target="_top" xlink:title="src/pybind/element.h">
-<polygon fill="#ffffff" stroke="#000000" points="3818,-369.5 3818,-388.5 3925,-388.5 3925,-369.5 3818,-369.5"/>
-<text text-anchor="middle" x="3871.5" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/element.h</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node67 -->
-<g id="edge114" class="edge">
-<title>Node9&#45;&gt;Node67</title>
-<path fill="none" stroke="#191970" d="M3769.8228,-535.9554C3807.5418,-527.7184 3851.6234,-515.4286 3864.5,-501 3893.0347,-469.0261 3880.8964,-411.5514 3874.5059,-388.7269"/>
-<polygon fill="#191970" stroke="#191970" points="3768.9447,-532.5637 3759.8901,-538.0651 3770.3991,-539.411 3768.9447,-532.5637"/>
+<path fill="none" stroke="#191970" d="M4184.9348,-589.2473C4208.1809,-579.0771 4239.2411,-565.4883 4259.7831,-556.5011"/>
+<polygon fill="#191970" stroke="#191970" points="4183.2627,-586.1585 4175.504,-593.3733 4186.0685,-592.5716 4183.2627,-586.1585"/>
 </g>
 <!-- Node12 -->
 <g id="node11" class="node">
 <title>Node12</title>
-<g id="a_node11"><a xlink:href="gen__dict_8cpp.html" target="_top" xlink:title="This file has implementations of the GenDict class. ">
-<polygon fill="#ffffff" stroke="#000000" points="3457.5,-425.5 3457.5,-444.5 3567.5,-444.5 3567.5,-425.5 3457.5,-425.5"/>
-<text text-anchor="middle" x="3512.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_dict.cpp</text>
+<g id="a_node11"><a xlink:href="element_8cpp.html" target="_top" xlink:title="This file has implementations of the Element class, which is one of the cores of this program...">
+<polygon fill="#ffffff" stroke="#000000" points="4336.5,-313.5 4336.5,-332.5 4444.5,-332.5 4444.5,-313.5 4336.5,-313.5"/>
+<text text-anchor="middle" x="4390.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/element.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge10" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="#191970" d="M3587.0281,-476.3225C3568.9875,-466.3198 3545.6123,-453.3593 3529.8913,-444.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3585.4643,-479.4574 3595.9071,-481.2455 3588.8587,-473.3354 3585.4643,-479.4574"/>
+<path fill="none" stroke="#191970" d="M4294.9938,-529.2795C4301.0383,-520.937 4308.0219,-510.7059 4313.5,-501 4348.0891,-439.7166 4377.5227,-359.8571 4387.1644,-332.5993"/>
+<polygon fill="#191970" stroke="#191970" points="4292.0612,-527.3583 4288.919,-537.4765 4297.6851,-531.5262 4292.0612,-527.3583"/>
+</g>
+<!-- Node13 -->
+<g id="node12" class="node">
+<title>Node13</title>
+<g id="a_node12"><a xlink:href="gen__dict_8h.html" target="_top" xlink:title="This file has a definition of the GenDict class. ">
+<polygon fill="#ffffff" stroke="#000000" points="4388.5,-481.5 4388.5,-500.5 4488.5,-500.5 4488.5,-481.5 4388.5,-481.5"/>
+<text text-anchor="middle" x="4438.5" y="-488.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_dict.h</text>
+</a>
+</g>
 </g>
 <!-- Node11&#45;&gt;Node13 -->
 <g id="edge11" class="edge">
 <title>Node11&#45;&gt;Node13</title>
-<path fill="none" stroke="#191970" d="M3622.6396,-472.0437C3627.0805,-462.8331 3632.2265,-452.1598 3635.8509,-444.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3619.3934,-470.7178 3618.203,-481.2455 3625.6988,-473.7579 3619.3934,-470.7178"/>
+<path fill="none" stroke="#191970" d="M4318.1619,-533.9231C4346.8624,-523.686 4386.1044,-509.6889 4411.8629,-500.5011"/>
+<polygon fill="#191970" stroke="#191970" points="4316.7322,-530.7171 4308.4893,-537.3733 4319.0839,-537.3102 4316.7322,-530.7171"/>
+</g>
+<!-- Node15 -->
+<g id="node14" class="node">
+<title>Node15</title>
+<g id="a_node14"><a xlink:href="generators_8h.html" target="_top" xlink:title="This file includes all the header files of subclasses of Generator. ">
+<polygon fill="#ffffff" stroke="#000000" points="4060,-425.5 4060,-444.5 4169,-444.5 4169,-425.5 4060,-425.5"/>
+<text text-anchor="middle" x="4114.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/generators.h</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node15 -->
+<g id="edge121" class="edge">
+<title>Node11&#45;&gt;Node15</title>
+<path fill="none" stroke="#191970" d="M4245.9523,-533.6084C4226.6571,-525.5456 4202.8609,-514.2745 4183.5,-501 4158.8905,-484.1269 4134.7755,-458.3522 4122.6263,-444.5356"/>
+<polygon fill="#191970" stroke="#191970" points="4244.7218,-536.8863 4255.3035,-537.4145 4247.3608,-530.4028 4244.7218,-536.8863"/>
+</g>
+<!-- Node19 -->
+<g id="node18" class="node">
+<title>Node19</title>
+<g id="a_node18"><a xlink:href="generator_8cpp.html" target="_top" xlink:title="This file has implementations of the Generator class, which is one of the cores of this program...">
+<polygon fill="#ffffff" stroke="#000000" points="3964.5,-313.5 3964.5,-332.5 4078.5,-332.5 4078.5,-313.5 3964.5,-313.5"/>
+<text text-anchor="middle" x="4021.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/generator.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node19 -->
+<g id="edge120" class="edge">
+<title>Node11&#45;&gt;Node19</title>
+<path fill="none" stroke="#191970" d="M4241.591,-534.267C4216.2631,-525.7665 4183.0084,-513.8251 4154.5,-501 4067.8832,-462.0337 4016.1122,-473.3731 3972.5,-389 3961.2289,-367.1946 3987.2227,-344.8968 4005.4947,-332.6115"/>
+<polygon fill="#191970" stroke="#191970" points="4240.6353,-537.6375 4251.2287,-537.4643 4242.8394,-530.9935 4240.6353,-537.6375"/>
+</g>
+<!-- Node71 -->
+<g id="node70" class="node">
+<title>Node71</title>
+<g id="a_node70"><a xlink:href="gen__list_8h.html" target="_top" xlink:title="This file has a definition of the GenList class. ">
+<polygon fill="#ffffff" stroke="#000000" points="4192,-481.5 4192,-500.5 4289,-500.5 4289,-481.5 4192,-481.5"/>
+<text text-anchor="middle" x="4240.5" y="-488.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_list.h</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node71 -->
+<g id="edge117" class="edge">
+<title>Node11&#45;&gt;Node71</title>
+<path fill="none" stroke="#191970" d="M4268.2636,-528.9209C4261.3789,-519.5176 4253.2391,-508.3997 4247.5598,-500.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4265.6269,-531.2445 4274.3583,-537.2455 4271.2749,-527.1093 4265.6269,-531.2445"/>
+</g>
+<!-- Node73 -->
+<g id="node72" class="node">
+<title>Node73</title>
+<g id="a_node72"><a xlink:href="pybind_2element_8h_source.html" target="_top" xlink:title="src/pybind/element.h">
+<polygon fill="#ffffff" stroke="#000000" points="4247,-369.5 4247,-388.5 4354,-388.5 4354,-369.5 4247,-369.5"/>
+<text text-anchor="middle" x="4300.5" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/element.h</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node73 -->
+<g id="edge122" class="edge">
+<title>Node11&#45;&gt;Node73</title>
+<path fill="none" stroke="#191970" d="M4289.8009,-528.0258C4293.0336,-519.8589 4296.4481,-510.1106 4298.5,-501 4307.7156,-460.0818 4303.8722,-409.4779 4301.6577,-388.6483"/>
+<polygon fill="#191970" stroke="#191970" points="4286.5282,-526.7805 4285.9196,-537.3579 4292.9915,-529.4688 4286.5282,-526.7805"/>
 </g>
 <!-- Node14 -->
 <g id="node13" class="node">
 <title>Node14</title>
-<g id="a_node13"><a xlink:href="core_2updater_8h.html" target="_top" xlink:title="This file has a definition of the Updater class, which is one of the cores of this program...">
-<polygon fill="#ffffff" stroke="#000000" points="3457,-369.5 3457,-388.5 3552,-388.5 3552,-369.5 3457,-369.5"/>
-<text text-anchor="middle" x="3504.5" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/updater.h</text>
+<g id="a_node13"><a xlink:href="gen__dict_8cpp.html" target="_top" xlink:title="This file has implementations of the GenDict class. ">
+<polygon fill="#ffffff" stroke="#000000" points="4388.5,-425.5 4388.5,-444.5 4498.5,-444.5 4498.5,-425.5 4388.5,-425.5"/>
+<text text-anchor="middle" x="4443.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_dict.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node14 -->
 <g id="edge12" class="edge">
 <title>Node13&#45;&gt;Node14</title>
-<path fill="none" stroke="#191970" d="M3607.7601,-421.5189C3582.9917,-411.3201 3549.595,-397.5685 3527.5742,-388.5011"/>
-<polygon fill="#191970" stroke="#191970" points="3606.5413,-424.8021 3617.1208,-425.3733 3609.2066,-418.3293 3606.5413,-424.8021"/>
+<path fill="none" stroke="#191970" d="M4440.2717,-471.1575C4441.0754,-462.155 4441.9893,-451.9199 4442.639,-444.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4436.7742,-470.9739 4439.3709,-481.2455 4443.7465,-471.5965 4436.7742,-470.9739"/>
 </g>
-<!-- Node64 -->
-<g id="node63" class="node">
-<title>Node64</title>
-<g id="a_node63"><a xlink:href="processors_2processor_8h_source.html" target="_top" xlink:title="src/processors/processor.h">
-<polygon fill="#ffffff" stroke="#000000" points="3570,-369.5 3570,-388.5 3705,-388.5 3705,-369.5 3570,-369.5"/>
-<text text-anchor="middle" x="3637.5" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/processors/processor.h</text>
-</a>
-</g>
-</g>
-<!-- Node13&#45;&gt;Node64 -->
-<g id="edge108" class="edge">
-<title>Node13&#45;&gt;Node64</title>
-<path fill="none" stroke="#191970" d="M3639.437,-415.1575C3638.9547,-406.155 3638.4064,-395.9199 3638.0166,-388.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3635.9474,-415.4471 3639.9774,-425.2455 3642.9374,-415.0726 3635.9474,-415.4471"/>
-</g>
-<!-- Node14&#45;&gt;Node10 -->
-<g id="edge15" class="edge">
-<title>Node14&#45;&gt;Node10</title>
-<path fill="none" stroke="#191970" d="M3449.267,-367.372C3400.2399,-357.0505 3329.48,-342.1537 3283.7374,-332.5237"/>
-<polygon fill="#191970" stroke="#191970" points="3448.5686,-370.8016 3459.0752,-369.4369 3450.0108,-363.9518 3448.5686,-370.8016"/>
-</g>
-<!-- Node15 -->
-<g id="node14" class="node">
-<title>Node15</title>
-<g id="a_node14"><a xlink:href="adders_2adder_8h.html" target="_top" xlink:title="This file has a definition of the Adder class, which is a subclass of the Updater class...">
-<polygon fill="#ffffff" stroke="#000000" points="3310.5,-313.5 3310.5,-332.5 3408.5,-332.5 3408.5,-313.5 3310.5,-313.5"/>
-<text text-anchor="middle" x="3359.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/adder.h</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node15 -->
+<!-- Node13&#45;&gt;Node15 -->
 <g id="edge13" class="edge">
-<title>Node14&#45;&gt;Node15</title>
-<path fill="none" stroke="#191970" d="M3469.9435,-365.6541C3443.5014,-355.4419 3407.6831,-341.6086 3384.1011,-332.5011"/>
-<polygon fill="#191970" stroke="#191970" points="3468.9842,-369.0354 3479.5736,-369.3733 3471.5061,-362.5055 3468.9842,-369.0354"/>
-</g>
-<!-- Node14&#45;&gt;Node17 -->
-<g id="edge16" class="edge">
-<title>Node14&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M3562.2621,-368.9497C3690.3396,-349.9131 3724.3928,-350.1829 3848.5,-333 3851.3699,-332.6027 3854.3087,-332.1876 3857.2756,-331.7619"/>
-<polygon fill="#191970" stroke="#191970" points="3561.4289,-365.5354 3552.0574,-370.4775 3562.4654,-372.4582 3561.4289,-365.5354"/>
-</g>
-<!-- Node18 -->
-<g id="node17" class="node">
-<title>Node18</title>
-<g id="a_node17"><a xlink:href="updater_8cpp.html" target="_top" xlink:title="This file has implementations of the Updater class, which is one of the cores of this program...">
-<polygon fill="#ffffff" stroke="#000000" points="3426.5,-313.5 3426.5,-332.5 3532.5,-332.5 3532.5,-313.5 3426.5,-313.5"/>
-<text text-anchor="middle" x="3479.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/updater.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node18 -->
-<g id="edge17" class="edge">
-<title>Node14&#45;&gt;Node18</title>
-<path fill="none" stroke="#191970" d="M3496.0374,-360.0437C3491.9255,-350.8331 3487.1606,-340.1598 3483.8048,-332.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3492.8728,-361.541 3500.1453,-369.2455 3499.2648,-358.6874 3492.8728,-361.541"/>
-</g>
-<!-- Node19 -->
-<g id="node18" class="node">
-<title>Node19</title>
-<g id="a_node18"><a xlink:href="filters_2filter_8h_source.html" target="_top" xlink:title="src/filters/filter.h">
-<polygon fill="#ffffff" stroke="#000000" points="3551,-313.5 3551,-332.5 3638,-332.5 3638,-313.5 3551,-313.5"/>
-<text text-anchor="middle" x="3594.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/filters/filter.h</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node19 -->
-<g id="edge18" class="edge">
-<title>Node14&#45;&gt;Node19</title>
-<path fill="none" stroke="#191970" d="M3528.9784,-363.769C3544.9266,-353.8456 3565.251,-341.1994 3579.0028,-332.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3526.8183,-360.9908 3520.1768,-369.2455 3530.5165,-366.9342 3526.8183,-360.9908"/>
-</g>
-<!-- Node20 -->
-<g id="node19" class="node">
-<title>Node20</title>
-<g id="a_node19"><a xlink:href="pybind_2updater_8h_source.html" target="_top" xlink:title="src/pybind/updater.h">
-<polygon fill="#ffffff" stroke="#000000" points="3367,-257.5 3367,-276.5 3472,-276.5 3472,-257.5 3367,-257.5"/>
-<text text-anchor="middle" x="3419.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/updater.h</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node20 -->
-<g id="edge19" class="edge">
-<title>Node14&#45;&gt;Node20</title>
-<path fill="none" stroke="#191970" d="M3562.368,-367.613C3597.3097,-359.4306 3637.05,-347.3389 3647.5,-333 3652.7353,-325.8164 3653.1297,-319.8789 3647.5,-313 3625.7615,-286.4376 3532.3512,-274.8684 3472.0445,-270.093"/>
-<polygon fill="#191970" stroke="#191970" points="3561.1718,-364.2953 3552.1935,-369.9202 3562.7199,-371.1219 3561.1718,-364.2953"/>
-</g>
-<!-- Node57 -->
-<g id="node56" class="node">
-<title>Node57</title>
-<g id="a_node56"><a xlink:href="starters_2starter_8h_source.html" target="_top" xlink:title="src/starters/starter.h">
-<polygon fill="#ffffff" stroke="#000000" points="3734,-313.5 3734,-332.5 3839,-332.5 3839,-313.5 3734,-313.5"/>
-<text text-anchor="middle" x="3786.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/starter.h</text>
-</a>
-</g>
-</g>
-<!-- Node14&#45;&gt;Node57 -->
-<g id="edge94" class="edge">
-<title>Node14&#45;&gt;Node57</title>
-<path fill="none" stroke="#191970" d="M3562.0751,-367.5666C3614.0039,-357.2545 3689.507,-342.261 3738.3141,-332.5688"/>
-<polygon fill="#191970" stroke="#191970" points="3561.1453,-364.1829 3552.0186,-369.5637 3562.5088,-371.0488 3561.1453,-364.1829"/>
+<title>Node13&#45;&gt;Node15</title>
+<path fill="none" stroke="#191970" d="M4378.1529,-480.5696C4318.2124,-470.2095 4227.1161,-454.4645 4169.2231,-444.4583"/>
+<polygon fill="#191970" stroke="#191970" points="4377.7805,-484.0571 4388.2305,-482.3114 4378.9727,-477.1594 4377.7805,-484.0571"/>
 </g>
 <!-- Node16 -->
 <g id="node15" class="node">
 <title>Node16</title>
-<g id="a_node15"><a xlink:href="adder_8cpp.html" target="_top" xlink:title="This file has implementations of the Adder class, which is a subclass of the Updater class...">
-<polygon fill="#ffffff" stroke="#000000" points="3240.5,-257.5 3240.5,-276.5 3348.5,-276.5 3348.5,-257.5 3240.5,-257.5"/>
-<text text-anchor="middle" x="3294.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/adder.cpp</text>
+<g id="a_node15"><a xlink:href="core_2updater_8h.html" target="_top" xlink:title="This file has a definition of the Updater class, which is one of the cores of this program...">
+<polygon fill="#ffffff" stroke="#000000" points="3981,-369.5 3981,-388.5 4076,-388.5 4076,-369.5 3981,-369.5"/>
+<text text-anchor="middle" x="4028.5" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/updater.h</text>
 </a>
 </g>
 </g>
 <!-- Node15&#45;&gt;Node16 -->
 <g id="edge14" class="edge">
 <title>Node15&#45;&gt;Node16</title>
-<path fill="none" stroke="#191970" d="M3340.5165,-306.645C3329.2121,-296.9058 3315.253,-284.8795 3305.6924,-276.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3338.3173,-309.3701 3348.1779,-313.2455 3342.8862,-304.0668 3338.3173,-309.3701"/>
+<path fill="none" stroke="#191970" d="M4091.1095,-419.769C4075.8701,-409.8456 4056.4491,-397.1994 4043.3084,-388.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4089.2301,-422.7218 4099.5199,-425.2455 4093.0498,-416.8558 4089.2301,-422.7218"/>
+</g>
+<!-- Node70 -->
+<g id="node69" class="node">
+<title>Node70</title>
+<g id="a_node69"><a xlink:href="processors_2processor_8h_source.html" target="_top" xlink:title="src/processors/processor.h">
+<polygon fill="#ffffff" stroke="#000000" points="4094,-369.5 4094,-388.5 4229,-388.5 4229,-369.5 4094,-369.5"/>
+<text text-anchor="middle" x="4161.5" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/processors/processor.h</text>
+</a>
+</g>
+</g>
+<!-- Node15&#45;&gt;Node70 -->
+<g id="edge116" class="edge">
+<title>Node15&#45;&gt;Node70</title>
+<path fill="none" stroke="#191970" d="M4129.1872,-417.5004C4137.1796,-407.9775 4146.7625,-396.5596 4153.407,-388.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4126.4346,-415.3357 4122.6868,-425.2455 4131.7964,-419.8358 4126.4346,-415.3357"/>
+</g>
+<!-- Node16&#45;&gt;Node12 -->
+<g id="edge17" class="edge">
+<title>Node16&#45;&gt;Node12</title>
+<path fill="none" stroke="#191970" d="M4086.1066,-368.9358C4194.5003,-351.4692 4223.1724,-349.0395 4327.5,-333 4330.3459,-332.5625 4333.2636,-332.1107 4336.2091,-331.652"/>
+<polygon fill="#191970" stroke="#191970" points="4085.383,-365.5072 4076.0701,-370.5591 4086.5007,-372.4174 4085.383,-365.5072"/>
+</g>
+<!-- Node17 -->
+<g id="node16" class="node">
+<title>Node17</title>
+<g id="a_node16"><a xlink:href="adders_2adder_8h.html" target="_top" xlink:title="This file has a definition of the Adder class, which is a subclass of the Updater class...">
+<polygon fill="#ffffff" stroke="#000000" points="4096.5,-313.5 4096.5,-332.5 4194.5,-332.5 4194.5,-313.5 4096.5,-313.5"/>
+<text text-anchor="middle" x="4145.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/adder.h</text>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node17 -->
+<g id="edge15" class="edge">
+<title>Node16&#45;&gt;Node17</title>
+<path fill="none" stroke="#191970" d="M4057.8042,-364.9741C4078.988,-354.8348 4107.0403,-341.408 4125.6494,-332.5011"/>
+<polygon fill="#191970" stroke="#191970" points="4056.122,-361.8989 4048.613,-369.3733 4059.1441,-368.2129 4056.122,-361.8989"/>
+</g>
+<!-- Node16&#45;&gt;Node19 -->
+<g id="edge18" class="edge">
+<title>Node16&#45;&gt;Node19</title>
+<path fill="none" stroke="#191970" d="M4026.0197,-359.1575C4024.8944,-350.155 4023.615,-339.9199 4022.7053,-332.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4022.5673,-359.7569 4027.2807,-369.2455 4029.5132,-358.8886 4022.5673,-359.7569"/>
+</g>
+<!-- Node20 -->
+<g id="node19" class="node">
+<title>Node20</title>
+<g id="a_node19"><a xlink:href="updater_8cpp.html" target="_top" xlink:title="This file has implementations of the Updater class, which is one of the cores of this program...">
+<polygon fill="#ffffff" stroke="#000000" points="4212.5,-313.5 4212.5,-332.5 4318.5,-332.5 4318.5,-313.5 4212.5,-313.5"/>
+<text text-anchor="middle" x="4265.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/updater.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node20 -->
+<g id="edge19" class="edge">
+<title>Node16&#45;&gt;Node20</title>
+<path fill="none" stroke="#191970" d="M4078.8097,-367.1125C4122.4448,-356.8021 4184.7792,-342.0733 4225.1945,-332.5237"/>
+<polygon fill="#191970" stroke="#191970" points="4077.8996,-363.7311 4068.9725,-369.4369 4079.5093,-370.5435 4077.8996,-363.7311"/>
 </g>
 <!-- Node21 -->
 <g id="node20" class="node">
 <title>Node21</title>
-<g id="a_node20"><a xlink:href="pybind_8h.html" target="_top" xlink:title="This file includes all the header files containing definitions of functions to bind C++ and Python...">
+<g id="a_node20"><a xlink:href="filters_2filter_8h_source.html" target="_top" xlink:title="src/filters/filter.h">
+<polygon fill="#ffffff" stroke="#000000" points="3697,-313.5 3697,-332.5 3784,-332.5 3784,-313.5 3697,-313.5"/>
+<text text-anchor="middle" x="3740.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/filters/filter.h</text>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node21 -->
+<g id="edge20" class="edge">
+<title>Node16&#45;&gt;Node21</title>
+<path fill="none" stroke="#191970" d="M3970.999,-367.8192C3916.005,-357.126 3834.27,-341.233 3784.3487,-331.5261"/>
+<polygon fill="#191970" stroke="#191970" points="3970.4584,-371.2796 3980.9427,-369.7527 3971.7946,-364.4083 3970.4584,-371.2796"/>
+</g>
+<!-- Node22 -->
+<g id="node21" class="node">
+<title>Node22</title>
+<g id="a_node21"><a xlink:href="pybind_2updater_8h_source.html" target="_top" xlink:title="src/pybind/updater.h">
+<polygon fill="#ffffff" stroke="#000000" points="3316,-257.5 3316,-276.5 3421,-276.5 3421,-257.5 3316,-257.5"/>
+<text text-anchor="middle" x="3368.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/updater.h</text>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node22 -->
+<g id="edge21" class="edge">
+<title>Node16&#45;&gt;Node22</title>
+<path fill="none" stroke="#191970" d="M3970.8079,-369.2931C3931.1829,-361.7036 3877.7698,-349.637 3832.5,-333 3814.216,-326.2805 3812.1616,-318.5858 3793.5,-313 3725.0672,-292.5167 3519.2417,-276.8284 3421.3434,-270.3058"/>
+<polygon fill="#191970" stroke="#191970" points="3970.3539,-372.7689 3980.8279,-371.1733 3971.645,-365.889 3970.3539,-372.7689"/>
+</g>
+<!-- Node63 -->
+<g id="node62" class="node">
+<title>Node63</title>
+<g id="a_node62"><a xlink:href="starters_2starter_8h_source.html" target="_top" xlink:title="src/starters/starter.h">
+<polygon fill="#ffffff" stroke="#000000" points="3841,-313.5 3841,-332.5 3946,-332.5 3946,-313.5 3841,-313.5"/>
+<text text-anchor="middle" x="3893.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/starter.h</text>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node63 -->
+<g id="edge102" class="edge">
+<title>Node16&#45;&gt;Node63</title>
+<path fill="none" stroke="#191970" d="M3996.0009,-365.5189C3971.4146,-355.3201 3938.2634,-341.5685 3916.4045,-332.5011"/>
+<polygon fill="#191970" stroke="#191970" points="3994.7148,-368.7745 4005.2927,-369.3733 3997.3969,-362.3087 3994.7148,-368.7745"/>
+</g>
+<!-- Node18 -->
+<g id="node17" class="node">
+<title>Node18</title>
+<g id="a_node17"><a xlink:href="adder_8cpp.html" target="_top" xlink:title="This file has implementations of the Adder class, which is a subclass of the Updater class...">
+<polygon fill="#ffffff" stroke="#000000" points="4336.5,-257.5 4336.5,-276.5 4444.5,-276.5 4444.5,-257.5 4336.5,-257.5"/>
+<text text-anchor="middle" x="4390.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/adder.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node17&#45;&gt;Node18 -->
+<g id="edge16" class="edge">
+<title>Node17&#45;&gt;Node18</title>
+<path fill="none" stroke="#191970" d="M4197.2233,-311.1775C4242.3445,-300.8641 4306.9665,-286.0934 4348.8339,-276.5237"/>
+<polygon fill="#191970" stroke="#191970" points="4196.3073,-307.7966 4187.3386,-313.4369 4197.8671,-314.6206 4196.3073,-307.7966"/>
+</g>
+<!-- Node23 -->
+<g id="node22" class="node">
+<title>Node23</title>
+<g id="a_node22"><a xlink:href="pybind_8h.html" target="_top" xlink:title="This file includes all the header files containing definitions of functions to bind C++ and Python...">
 <polygon fill="#ffffff" stroke="#000000" points="2933.5,-62 2933.5,-81 3003.5,-81 3003.5,-62 2933.5,-62"/>
 <text text-anchor="middle" x="2968.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind.h</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node21 -->
-<g id="edge20" class="edge">
-<title>Node20&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3356.7079,-257.0931C2924.7802,-219.8713 1891.0534,-235.5969 1476.5,-221 1331.288,-215.8869 270.5774,-259.3431 170.5,-154 161.0105,-144.0112 160.8477,-132.8316 170.5,-123 195.9213,-97.1065 2612.6055,-74.6738 2933.4592,-71.8086"/>
-<polygon fill="#191970" stroke="#191970" points="3356.5298,-260.5908 3366.7984,-257.9822 3357.1443,-253.6179 3356.5298,-260.5908"/>
-</g>
-<!-- Node23 -->
-<g id="node22" class="node">
-<title>Node23</title>
-<g id="a_node22"><a xlink:href="pybind_2adders_2adder_8h_source.html" target="_top" xlink:title="src/pybind/adders/adder.h">
-<polygon fill="#ffffff" stroke="#000000" points="1485,-196 1485,-215 1614,-215 1614,-196 1485,-196"/>
-<text text-anchor="middle" x="1549.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/adder.h</text>
-</a>
-</g>
-</g>
-<!-- Node20&#45;&gt;Node23 -->
+<!-- Node22&#45;&gt;Node23 -->
 <g id="edge22" class="edge">
-<title>Node20&#45;&gt;Node23</title>
-<path fill="none" stroke="#191970" d="M3356.6356,-257.0756C2988.1257,-223.7794 1891.8647,-209.3852 1614.0354,-206.1996"/>
-<polygon fill="#191970" stroke="#191970" points="3356.5153,-260.5794 3366.7953,-258.016 3357.1605,-253.6092 3356.5153,-260.5794"/>
+<title>Node22&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3305.968,-265.9923C2863.9679,-258.7254 226.6979,-212.9337 170.5,-154 160.9918,-144.029 160.8477,-132.8316 170.5,-123 195.9213,-97.1065 2612.6055,-74.6738 2933.4592,-71.8086"/>
+<polygon fill="#191970" stroke="#191970" points="3305.9422,-269.4923 3315.9983,-266.1568 3306.057,-262.4932 3305.9422,-269.4923"/>
 </g>
-<!-- Node45 -->
-<g id="node44" class="node">
-<title>Node45</title>
-<g id="a_node44"><a xlink:href="pybind_2filters_2filter_8h_source.html" target="_top" xlink:title="src/pybind/filters\l/filter.h">
-<polygon fill="#ffffff" stroke="#000000" points="3293,-190.5 3293,-220.5 3382,-220.5 3382,-190.5 3293,-190.5"/>
-<text text-anchor="start" x="3301" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/filters</text>
-<text text-anchor="middle" x="3337.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/filter.h</text>
+<!-- Node25 -->
+<g id="node24" class="node">
+<title>Node25</title>
+<g id="a_node24"><a xlink:href="pybind_2adders_2adder_8h.html" target="_top" xlink:title="This file has a function to bind Adder class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="1588,-196 1588,-215 1717,-215 1717,-196 1588,-196"/>
+<text text-anchor="middle" x="1652.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/adder.h</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node45 -->
-<g id="edge69" class="edge">
-<title>Node20&#45;&gt;Node45</title>
-<path fill="none" stroke="#191970" d="M3398.5825,-251.3119C3385.9769,-241.8577 3370.0079,-229.8809 3357.5595,-220.5446"/>
-<polygon fill="#191970" stroke="#191970" points="3396.5875,-254.1906 3406.6875,-257.3906 3400.7875,-248.5906 3396.5875,-254.1906"/>
+<!-- Node22&#45;&gt;Node25 -->
+<g id="edge24" class="edge">
+<title>Node22&#45;&gt;Node25</title>
+<path fill="none" stroke="#191970" d="M3305.3838,-264.738C3036.6115,-255.1054 1988.833,-217.5539 1717.1392,-207.8166"/>
+<polygon fill="#191970" stroke="#191970" points="3305.6162,-268.2485 3315.7352,-265.109 3305.867,-261.2529 3305.6162,-268.2485"/>
 </g>
-<!-- Node50 -->
-<g id="node49" class="node">
-<title>Node50</title>
-<g id="a_node49"><a xlink:href="pybind_2starters_2starter_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/starter.h">
-<polygon fill="#ffffff" stroke="#000000" points="3752.5,-190.5 3752.5,-220.5 3850.5,-220.5 3850.5,-190.5 3752.5,-190.5"/>
-<text text-anchor="start" x="3760.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="3801.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/starter.h</text>
+<!-- Node51 -->
+<g id="node50" class="node">
+<title>Node51</title>
+<g id="a_node50"><a xlink:href="pybind_2filters_2filter_8h_source.html" target="_top" xlink:title="src/pybind/filters\l/filter.h">
+<polygon fill="#ffffff" stroke="#000000" points="3324,-190.5 3324,-220.5 3413,-220.5 3413,-190.5 3324,-190.5"/>
+<text text-anchor="start" x="3332" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/filters</text>
+<text text-anchor="middle" x="3368.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/filter.h</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node50 -->
-<g id="edge80" class="edge">
-<title>Node20&#45;&gt;Node50</title>
-<path fill="none" stroke="#191970" d="M3482.5506,-256.8492C3558.214,-244.6678 3683.4746,-224.5015 3752.3498,-213.4129"/>
-<polygon fill="#191970" stroke="#191970" points="3481.5309,-253.4682 3472.2144,-258.5133 3482.6436,-260.3792 3481.5309,-253.4682"/>
+<!-- Node22&#45;&gt;Node51 -->
+<g id="edge77" class="edge">
+<title>Node22&#45;&gt;Node51</title>
+<path fill="none" stroke="#191970" d="M3368.5,-247.3693C3368.5,-238.681 3368.5,-228.6241 3368.5,-220.5446"/>
+<polygon fill="#191970" stroke="#191970" points="3365.0001,-247.3906 3368.5,-257.3906 3372.0001,-247.3907 3365.0001,-247.3906"/>
 </g>
-<!-- Node22 -->
-<g id="node21" class="node">
-<title>Node22</title>
-<g id="a_node21"><a xlink:href="ppap4lmp_8cpp.html" target="_top" xlink:title="This file has no implementation, only includes a header file to bind C++ and Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="2921.5,-.5 2921.5,-19.5 3015.5,-19.5 3015.5,-.5 2921.5,-.5"/>
-<text text-anchor="middle" x="2968.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/ppap4lmp.cpp</text>
+<!-- Node56 -->
+<g id="node55" class="node">
+<title>Node56</title>
+<g id="a_node55"><a xlink:href="pybind_2starters_2starter_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/starter.h">
+<polygon fill="#ffffff" stroke="#000000" points="3928.5,-190.5 3928.5,-220.5 4026.5,-220.5 4026.5,-190.5 3928.5,-190.5"/>
+<text text-anchor="start" x="3936.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="3977.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/starter.h</text>
 </a>
 </g>
 </g>
-<!-- Node21&#45;&gt;Node22 -->
-<g id="edge21" class="edge">
-<title>Node21&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M2968.5,-51.7462C2968.5,-41.0519 2968.5,-28.314 2968.5,-19.7449"/>
-<polygon fill="#191970" stroke="#191970" points="2965.0001,-51.8906 2968.5,-61.8906 2972.0001,-51.8907 2965.0001,-51.8906"/>
-</g>
-<!-- Node23&#45;&gt;Node21 -->
-<g id="edge37" class="edge">
-<title>Node23&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M1474.8506,-203.5939C1276.2197,-198.1606 748.0679,-181.2096 722.5,-154 713.0653,-143.9594 712.87,-132.8534 722.5,-123 762.8599,-81.7041 2651.4816,-72.7372 2933.443,-71.6279"/>
-<polygon fill="#191970" stroke="#191970" points="1474.8169,-207.0942 1484.9082,-203.8668 1475.0069,-200.0967 1474.8169,-207.0942"/>
-</g>
-<!-- Node23&#45;&gt;Node23 -->
-<g id="edge38" class="edge">
-<title>Node23&#45;&gt;Node23</title>
-<path fill="none" stroke="#191970" d="M1590.0968,-216.2729C1612.0037,-218.1355 1632,-214.5445 1632,-205.5 1632,-195.0703 1605.4097,-191.8925 1579.962,-195.9666"/>
-<polygon fill="#191970" stroke="#191970" points="1590.313,-212.7733 1579.962,-215.0334 1589.4631,-219.7216 1590.313,-212.7733"/>
+<!-- Node22&#45;&gt;Node56 -->
+<g id="edge88" class="edge">
+<title>Node22&#45;&gt;Node56</title>
+<path fill="none" stroke="#191970" d="M3431.5294,-265.3782C3534.3812,-261.919 3744.4069,-251.4554 3919.5,-221 3922.3752,-220.4999 3925.3153,-219.9238 3928.2717,-219.2942"/>
+<polygon fill="#191970" stroke="#191970" points="3431.1984,-261.887 3421.3175,-265.7103 3431.426,-268.8833 3431.1984,-261.887"/>
 </g>
 <!-- Node24 -->
 <g id="node23" class="node">
 <title>Node24</title>
-<g id="a_node23"><a xlink:href="adders_2add__child__ids_8h.html" target="_top" xlink:title="This file has a definition of the AddChildIDs class, which is a subclass of the Adder class...">
-<polygon fill="#ffffff" stroke="#000000" points="180,-123.5 180,-153.5 287,-153.5 287,-123.5 180,-123.5"/>
-<text text-anchor="start" x="188" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
-<text text-anchor="middle" x="233.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_ids.h</text>
+<g id="a_node23"><a xlink:href="ppap4lmp_8cpp.html" target="_top" xlink:title="This file has no implementation, only includes a header file to bind C++ and Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="2921.5,-.5 2921.5,-19.5 3015.5,-19.5 3015.5,-.5 2921.5,-.5"/>
+<text text-anchor="middle" x="2968.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/ppap4lmp.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node23&#45;&gt;Node24 -->
 <g id="edge23" class="edge">
 <title>Node23&#45;&gt;Node24</title>
-<path fill="none" stroke="#191970" d="M1474.5521,-204.4264C1240.4994,-200.7576 525.1417,-187.0673 295.5,-154 292.7545,-153.6047 289.954,-153.1387 287.1354,-152.6197"/>
-<polygon fill="#191970" stroke="#191970" points="1474.6151,-207.9277 1484.6683,-204.5834 1474.7238,-200.9285 1474.6151,-207.9277"/>
+<path fill="none" stroke="#191970" d="M2968.5,-51.7462C2968.5,-41.0519 2968.5,-28.314 2968.5,-19.7449"/>
+<polygon fill="#191970" stroke="#191970" points="2965.0001,-51.8906 2968.5,-61.8906 2972.0001,-51.8907 2965.0001,-51.8906"/>
 </g>
-<!-- Node25 -->
-<g id="node24" class="node">
-<title>Node25</title>
-<g id="a_node24"><a xlink:href="adders_2add__child__positions_8h.html" target="_top" xlink:title="This file has a definition of the AddChildPositions class, which is a subclass of the Adder class...">
+<!-- Node25&#45;&gt;Node23 -->
+<g id="edge45" class="edge">
+<title>Node25&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M1727.3924,-204.6348C1869.3369,-202.114 2171.9654,-192.2785 2268.5,-154 2289.083,-145.8383 2286.894,-131.1035 2307.5,-123 2365.947,-100.0153 2805.1672,-78.7899 2933.4319,-73.0299"/>
+<polygon fill="#191970" stroke="#191970" points="1726.9826,-201.1411 1717.0436,-204.8106 1727.1016,-208.1401 1726.9826,-201.1411"/>
+</g>
+<!-- Node25&#45;&gt;Node25 -->
+<g id="edge46" class="edge">
+<title>Node25&#45;&gt;Node25</title>
+<path fill="none" stroke="#191970" d="M1693.0968,-216.2729C1715.0037,-218.1355 1735,-214.5445 1735,-205.5 1735,-195.0703 1708.4097,-191.8925 1682.962,-195.9666"/>
+<polygon fill="#191970" stroke="#191970" points="1693.313,-212.7733 1682.962,-215.0334 1692.4631,-219.7216 1693.313,-212.7733"/>
+</g>
+<!-- Node26 -->
+<g id="node25" class="node">
+<title>Node26</title>
+<g id="a_node25"><a xlink:href="adders_2add__child__ids_8h.html" target="_top" xlink:title="This file has a definition of the AddChildIDs class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="180,-123.5 180,-153.5 287,-153.5 287,-123.5 180,-123.5"/>
+<text text-anchor="start" x="188" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
+<text text-anchor="middle" x="233.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_ids.h</text>
+</a>
+</g>
+</g>
+<!-- Node25&#45;&gt;Node26 -->
+<g id="edge25" class="edge">
+<title>Node25&#45;&gt;Node26</title>
+<path fill="none" stroke="#191970" d="M1577.3895,-204.696C1330.5747,-201.7327 546.0214,-189.676 295.5,-154 292.7539,-153.6089 289.9529,-153.1464 287.1339,-152.6302"/>
+<polygon fill="#191970" stroke="#191970" points="1577.6481,-208.1992 1587.6889,-204.8181 1577.7311,-201.1997 1577.6481,-208.1992"/>
+</g>
+<!-- Node27 -->
+<g id="node26" class="node">
+<title>Node27</title>
+<g id="a_node26"><a xlink:href="adders_2add__child__positions_8h.html" target="_top" xlink:title="This file has a definition of the AddChildPositions class, which is a subclass of the Adder class...">
 <polygon fill="#ffffff" stroke="#000000" points="305,-123.5 305,-153.5 412,-153.5 412,-123.5 305,-123.5"/>
 <text text-anchor="start" x="313" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
 <text text-anchor="middle" x="358.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_positions.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node25 -->
-<g id="edge25" class="edge">
-<title>Node23&#45;&gt;Node25</title>
-<path fill="none" stroke="#191970" d="M1474.6518,-204.0332C1256.6748,-199.4525 624.8685,-183.9016 420.5,-154 417.7554,-153.5984 414.9556,-153.1275 412.1376,-152.6045"/>
-<polygon fill="#191970" stroke="#191970" points="1474.6447,-207.5337 1484.7155,-204.243 1474.7907,-200.5352 1474.6447,-207.5337"/>
+<!-- Node25&#45;&gt;Node27 -->
+<g id="edge27" class="edge">
+<title>Node25&#45;&gt;Node27</title>
+<path fill="none" stroke="#191970" d="M1577.3213,-204.3587C1345.7869,-200.528 645.6048,-186.4981 420.5,-154 417.7547,-153.6037 414.9543,-153.1369 412.1357,-152.6173"/>
+<polygon fill="#191970" stroke="#191970" points="1577.6054,-207.8638 1587.6614,-204.5282 1577.7201,-200.8647 1577.6054,-207.8638"/>
 </g>
-<!-- Node26 -->
-<g id="node25" class="node">
-<title>Node26</title>
-<g id="a_node25"><a xlink:href="adders_2add__com__position_8h.html" target="_top" xlink:title="This file has a definition of the AddCoMPosition class, which is a subclass of the Adder class...">
+<!-- Node28 -->
+<g id="node27" class="node">
+<title>Node28</title>
+<g id="a_node27"><a xlink:href="adders_2add__com__position_8h.html" target="_top" xlink:title="This file has a definition of the AddCoMPosition class, which is a subclass of the Adder class...">
 <polygon fill="#ffffff" stroke="#000000" points="430,-123.5 430,-153.5 535,-153.5 535,-123.5 430,-123.5"/>
 <text text-anchor="start" x="438" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_com</text>
 <text text-anchor="middle" x="482.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_position.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node26 -->
-<g id="edge27" class="edge">
-<title>Node23&#45;&gt;Node26</title>
-<path fill="none" stroke="#191970" d="M1474.6628,-203.546C1273.4395,-197.9917 723.8965,-180.7625 544.5,-154 541.4274,-153.5416 538.2852,-152.9981 535.1254,-152.3935"/>
-<polygon fill="#191970" stroke="#191970" points="1474.7469,-207.0495 1484.8391,-203.8251 1474.9389,-200.0522 1474.7469,-207.0495"/>
-</g>
-<!-- Node27 -->
-<g id="node26" class="node">
-<title>Node27</title>
-<g id="a_node26"><a xlink:href="adders_2add__gyration__radius_8h.html" target="_top" xlink:title="This file has a definition of the AddGyrationRadius class, which is a subclass of the Adder class...">
-<polygon fill="#ffffff" stroke="#000000" points="553,-123.5 553,-153.5 674,-153.5 674,-123.5 553,-123.5"/>
-<text text-anchor="start" x="561" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_gyration</text>
-<text text-anchor="middle" x="613.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_radius.h</text>
-</a>
-</g>
-</g>
-<!-- Node23&#45;&gt;Node27 -->
+<!-- Node25&#45;&gt;Node28 -->
 <g id="edge29" class="edge">
-<title>Node23&#45;&gt;Node27</title>
-<path fill="none" stroke="#191970" d="M1474.9281,-204.6477C1325.2136,-202.1424 977.6394,-192.322 688.5,-154 683.8867,-153.3886 679.133,-152.6546 674.3635,-151.843"/>
-<polygon fill="#191970" stroke="#191970" points="1474.8764,-208.1473 1484.9316,-204.8091 1474.9893,-201.1482 1474.8764,-208.1473"/>
+<title>Node25&#45;&gt;Node28</title>
+<path fill="none" stroke="#191970" d="M1577.5213,-203.9964C1362.0512,-199.3612 743.7353,-183.775 543.5,-154 540.798,-153.5982 538.042,-153.1271 535.2683,-152.604"/>
+<polygon fill="#191970" stroke="#191970" points="1577.7075,-207.501 1587.7799,-204.2153 1577.8569,-200.5026 1577.7075,-207.501"/>
 </g>
 <!-- Node29 -->
 <g id="node28" class="node">
 <title>Node29</title>
-<g id="a_node28"><a xlink:href="adders_2add__inertia__moment_8h_source.html" target="_top" xlink:title="src/adders/add_inertia\l_moment.h">
-<polygon fill="#ffffff" stroke="#000000" points="731,-123.5 731,-153.5 844,-153.5 844,-123.5 731,-123.5"/>
-<text text-anchor="start" x="739" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_inertia</text>
-<text text-anchor="middle" x="787.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_moment.h</text>
+<g id="a_node28"><a xlink:href="adders_2add__gyration__radius_8h.html" target="_top" xlink:title="This file has a definition of the AddGyrationRadius class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="960,-123.5 960,-153.5 1081,-153.5 1081,-123.5 960,-123.5"/>
+<text text-anchor="start" x="968" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_gyration</text>
+<text text-anchor="middle" x="1020.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_radius.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node29 -->
+<!-- Node25&#45;&gt;Node29 -->
 <g id="edge31" class="edge">
-<title>Node23&#45;&gt;Node29</title>
-<path fill="none" stroke="#191970" d="M1474.7492,-203.8082C1346.8175,-200.0579 1077.9628,-188.4442 853.5,-154 850.4752,-153.5358 847.384,-153.0061 844.2711,-152.4288"/>
-<polygon fill="#191970" stroke="#191970" points="1474.7332,-207.3091 1484.8291,-204.0959 1474.933,-200.312 1474.7332,-207.3091"/>
-</g>
-<!-- Node30 -->
-<g id="node29" class="node">
-<title>Node30</title>
-<g id="a_node29"><a xlink:href="adders_2add__map_8h_source.html" target="_top" xlink:title="src/adders/add_map.h">
-<polygon fill="#ffffff" stroke="#000000" points="862,-129 862,-148 975,-148 975,-129 862,-129"/>
-<text text-anchor="middle" x="918.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_map.h</text>
-</a>
-</g>
-</g>
-<!-- Node23&#45;&gt;Node30 -->
-<g id="edge32" class="edge">
-<title>Node23&#45;&gt;Node30</title>
-<path fill="none" stroke="#191970" d="M1474.5362,-202.0073C1365.9313,-196.1923 1158.7482,-182.2602 984.5,-154 974.8568,-152.436 964.5289,-150.2569 954.9739,-148.0258"/>
-<polygon fill="#191970" stroke="#191970" points="1474.5637,-205.5135 1484.7342,-202.5449 1474.9323,-198.5232 1474.5637,-205.5135"/>
+<title>Node25&#45;&gt;Node29</title>
+<path fill="none" stroke="#191970" d="M1577.5437,-201.6547C1469.4554,-195.4257 1263.7654,-181.0107 1090.5,-154 1087.4254,-153.5207 1084.2836,-152.9872 1081.1173,-152.4146"/>
+<polygon fill="#191970" stroke="#191970" points="1577.5121,-205.1585 1587.6948,-202.2321 1577.9097,-198.1698 1577.5121,-205.1585"/>
 </g>
 <!-- Node31 -->
 <g id="node30" class="node">
 <title>Node31</title>
-<g id="a_node30"><a xlink:href="adders_2add__molecular__orientation_8h_source.html" target="_top" xlink:title="src/adders/add_molecular\l_orientation.h">
-<polygon fill="#ffffff" stroke="#000000" points="993.5,-123.5 993.5,-153.5 1121.5,-153.5 1121.5,-123.5 993.5,-123.5"/>
-<text text-anchor="start" x="1001.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_molecular</text>
-<text text-anchor="middle" x="1057.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_orientation.h</text>
+<g id="a_node30"><a xlink:href="adders_2add__inertia__moment_8h.html" target="_top" xlink:title="This file has a definition of the AddInertiaMoment class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="553,-123.5 553,-153.5 666,-153.5 666,-123.5 553,-123.5"/>
+<text text-anchor="start" x="561" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_inertia</text>
+<text text-anchor="middle" x="609.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_moment.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node31 -->
+<!-- Node25&#45;&gt;Node31 -->
 <g id="edge33" class="edge">
-<title>Node23&#45;&gt;Node31</title>
-<path fill="none" stroke="#191970" d="M1474.6163,-198.1878C1390.7601,-189.5553 1250.9436,-173.8315 1131.5,-154 1128.2628,-153.4625 1124.9522,-152.8822 1121.6133,-152.2725"/>
-<polygon fill="#191970" stroke="#191970" points="1474.5071,-201.6948 1484.8114,-199.2307 1475.2195,-194.7311 1474.5071,-201.6948"/>
+<title>Node25&#45;&gt;Node31</title>
+<path fill="none" stroke="#191970" d="M1577.647,-203.3183C1380.2176,-197.2823 848.6077,-179.1307 674.5,-154 671.7443,-153.6022 668.934,-153.1428 666.1035,-152.6368"/>
+<polygon fill="#191970" stroke="#191970" points="1577.8179,-206.825 1587.9197,-203.6307 1578.0307,-199.8283 1577.8179,-206.825"/>
 </g>
 <!-- Node32 -->
 <g id="node31" class="node">
 <title>Node32</title>
-<g id="a_node31"><a xlink:href="adders_2add__rename_8h_source.html" target="_top" xlink:title="src/adders/add_rename.h">
-<polygon fill="#ffffff" stroke="#000000" points="1140,-129 1140,-148 1267,-148 1267,-129 1140,-129"/>
-<text text-anchor="middle" x="1203.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_rename.h</text>
+<g id="a_node31"><a xlink:href="adders_2add__map_8h.html" target="_top" xlink:title="This file has a definition of the AddMap class, which is a subclass of the Adder class. ">
+<polygon fill="#ffffff" stroke="#000000" points="1099,-129 1099,-148 1212,-148 1212,-129 1099,-129"/>
+<text text-anchor="middle" x="1155.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_map.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node32 -->
-<g id="edge34" class="edge">
-<title>Node23&#45;&gt;Node32</title>
-<path fill="none" stroke="#191970" d="M1487.0851,-194.1435C1431.7007,-183.9668 1348.6224,-168.4576 1276.5,-154 1267.0995,-152.1156 1257.0339,-150.0254 1247.4734,-148.006"/>
-<polygon fill="#191970" stroke="#191970" points="1486.6279,-197.618 1497.0954,-195.9803 1487.8912,-190.733 1486.6279,-197.618"/>
-</g>
-<!-- Node33 -->
-<g id="node32" class="node">
-<title>Node33</title>
-<g id="a_node32"><a xlink:href="adders_2add__special__bonds_8h_source.html" target="_top" xlink:title="src/adders/add_special\l_bonds.h">
-<polygon fill="#ffffff" stroke="#000000" points="1285,-123.5 1285,-153.5 1402,-153.5 1402,-123.5 1285,-123.5"/>
-<text text-anchor="start" x="1293" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_special</text>
-<text text-anchor="middle" x="1343.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_bonds.h</text>
-</a>
-</g>
-</g>
-<!-- Node23&#45;&gt;Node33 -->
+<!-- Node25&#45;&gt;Node32 -->
 <g id="edge35" class="edge">
-<title>Node23&#45;&gt;Node33</title>
-<path fill="none" stroke="#191970" d="M1510.2966,-192.7494C1475.943,-181.5761 1425.9703,-165.3229 1389.6863,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="1509.393,-196.1359 1519.9852,-195.9005 1511.5581,-189.4791 1509.393,-196.1359"/>
+<title>Node25&#45;&gt;Node32</title>
+<path fill="none" stroke="#191970" d="M1577.6939,-199.1192C1491.4384,-191.1708 1345.582,-175.9128 1221.5,-154 1212.1115,-152.342 1202.0567,-150.1815 1192.6972,-148.0024"/>
+<polygon fill="#191970" stroke="#191970" points="1577.6351,-202.6283 1587.9119,-200.0522 1578.2717,-195.6573 1577.6351,-202.6283"/>
 </g>
 <!-- Node34 -->
 <g id="node33" class="node">
 <title>Node34</title>
-<g id="a_node33"><a xlink:href="adders_2add__wrapped__position_8h_source.html" target="_top" xlink:title="src/adders/add_wrapped\l_position.h">
-<polygon fill="#ffffff" stroke="#000000" points="1420.5,-123.5 1420.5,-153.5 1542.5,-153.5 1542.5,-123.5 1420.5,-123.5"/>
-<text text-anchor="start" x="1428.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_wrapped</text>
-<text text-anchor="middle" x="1481.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_position.h</text>
+<g id="a_node33"><a xlink:href="adders_2add__molecular__orientation_8h.html" target="_top" xlink:title="This file has a definition of the AddMolecularOrientation class, which is a subclass of the Adder cla...">
+<polygon fill="#ffffff" stroke="#000000" points="1230.5,-123.5 1230.5,-153.5 1358.5,-153.5 1358.5,-123.5 1230.5,-123.5"/>
+<text text-anchor="start" x="1238.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_molecular</text>
+<text text-anchor="middle" x="1294.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_orientation.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node34 -->
-<g id="edge36" class="edge">
-<title>Node23&#45;&gt;Node34</title>
-<path fill="none" stroke="#191970" d="M1532.4242,-188.6753C1521.4566,-177.8691 1507.3353,-163.9553 1496.746,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="1530.1775,-191.3752 1539.7573,-195.9005 1535.0905,-186.3889 1530.1775,-191.3752"/>
-</g>
-<!-- Node35 -->
-<g id="node34" class="node">
-<title>Node35</title>
-<g id="a_node34"><a xlink:href="pybind_2adders_2add__map_8h_source.html" target="_top" xlink:title="src/pybind/adders/add\l_map.h">
-<polygon fill="#ffffff" stroke="#000000" points="1561,-123.5 1561,-153.5 1674,-153.5 1674,-123.5 1561,-123.5"/>
-<text text-anchor="start" x="1569" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="1617.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_map.h</text>
-</a>
-</g>
-</g>
-<!-- Node23&#45;&gt;Node35 -->
-<g id="edge39" class="edge">
-<title>Node23&#45;&gt;Node35</title>
-<path fill="none" stroke="#191970" d="M1566.5758,-188.6753C1577.5434,-177.8691 1591.6647,-163.9553 1602.254,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="1563.9095,-186.3889 1559.2427,-195.9005 1568.8225,-191.3752 1563.9095,-186.3889"/>
+<!-- Node25&#45;&gt;Node34 -->
+<g id="edge37" class="edge">
+<title>Node25&#45;&gt;Node34</title>
+<path fill="none" stroke="#191970" d="M1587.3817,-194.2083C1529.7578,-184.093 1443.4269,-168.6378 1368.5,-154 1365.2794,-153.3708 1361.9821,-152.7167 1358.6538,-152.0485"/>
+<polygon fill="#191970" stroke="#191970" points="1586.988,-197.6926 1597.442,-195.9712 1588.1963,-190.7976 1586.988,-197.6926"/>
 </g>
 <!-- Node36 -->
 <g id="node35" class="node">
 <title>Node36</title>
-<g id="a_node35"><a xlink:href="pybind_2adders_2add__rename_8h_source.html" target="_top" xlink:title="src/pybind/adders/add\l_rename.h">
-<polygon fill="#ffffff" stroke="#000000" points="1710,-123.5 1710,-153.5 1823,-153.5 1823,-123.5 1710,-123.5"/>
-<text text-anchor="start" x="1718" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="1766.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_rename.h</text>
+<g id="a_node35"><a xlink:href="adders_2add__rename_8h.html" target="_top" xlink:title="This file has a definition of the AddRename class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="1377,-129 1377,-148 1504,-148 1504,-129 1377,-129"/>
+<text text-anchor="middle" x="1440.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_rename.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node36 -->
-<g id="edge42" class="edge">
-<title>Node23&#45;&gt;Node36</title>
-<path fill="none" stroke="#191970" d="M1590.3318,-192.893C1626.5327,-181.7157 1679.4619,-165.3735 1717.8474,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="1589.1132,-189.6061 1580.5908,-195.9005 1591.1783,-196.2946 1589.1132,-189.6061"/>
-</g>
-<!-- Node37 -->
-<g id="node36" class="node">
-<title>Node37</title>
-<g id="a_node36"><a xlink:href="pybind_2adders_2add__child__ids_8h.html" target="_top" xlink:title="This file has a function to bind AddChildIDs class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="1859,-123.5 1859,-153.5 1972,-153.5 1972,-123.5 1859,-123.5"/>
-<text text-anchor="start" x="1867" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="1915.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_child_ids.h</text>
-</a>
-</g>
-</g>
-<!-- Node23&#45;&gt;Node37 -->
-<g id="edge45" class="edge">
-<title>Node23&#45;&gt;Node37</title>
-<path fill="none" stroke="#191970" d="M1622.2049,-194.4106C1683.3217,-184.7658 1772.8843,-169.8768 1850.5,-154 1853.2278,-153.442 1856.0154,-152.8524 1858.8277,-152.242"/>
-<polygon fill="#191970" stroke="#191970" points="1621.6047,-190.9619 1612.2693,-195.9719 1622.6914,-197.877 1621.6047,-190.9619"/>
+<!-- Node25&#45;&gt;Node36 -->
+<g id="edge39" class="edge">
+<title>Node25&#45;&gt;Node36</title>
+<path fill="none" stroke="#191970" d="M1612.4133,-192.8311C1571.2253,-179.8141 1508.0232,-159.8399 1470.8181,-148.0817"/>
+<polygon fill="#191970" stroke="#191970" points="1611.5357,-196.2243 1622.1256,-195.9005 1613.6452,-189.5497 1611.5357,-196.2243"/>
 </g>
 <!-- Node38 -->
 <g id="node37" class="node">
 <title>Node38</title>
-<g id="a_node37"><a xlink:href="pybind_2adders_2add__child__positions_8h.html" target="_top" xlink:title="This file has a function to bind AddChildPositions class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="2008,-123.5 2008,-153.5 2121,-153.5 2121,-123.5 2008,-123.5"/>
-<text text-anchor="start" x="2016" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="2064.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_child_positions.h</text>
+<g id="a_node37"><a xlink:href="adders_2add__special__bonds_8h.html" target="_top" xlink:title="This file has a definition of the AddSpecialBonds class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="684,-123.5 684,-153.5 801,-153.5 801,-123.5 684,-123.5"/>
+<text text-anchor="start" x="692" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_special</text>
+<text text-anchor="middle" x="742.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_bonds.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node38 -->
-<g id="edge48" class="edge">
-<title>Node23&#45;&gt;Node38</title>
-<path fill="none" stroke="#191970" d="M1624.3795,-199.702C1714.0095,-192.1239 1868.4374,-177.0405 1999.5,-154 2002.2422,-153.5179 2005.0416,-152.99 2007.8632,-152.4291"/>
-<polygon fill="#191970" stroke="#191970" points="1623.9836,-196.2228 1614.3104,-200.5447 1624.5675,-203.1984 1623.9836,-196.2228"/>
+<!-- Node25&#45;&gt;Node38 -->
+<g id="edge41" class="edge">
+<title>Node25&#45;&gt;Node38</title>
+<path fill="none" stroke="#191970" d="M1577.9254,-202.5013C1400.5933,-195.1179 957.595,-175.1191 810.5,-154 807.5036,-153.5698 804.444,-153.0758 801.362,-152.5346"/>
+<polygon fill="#191970" stroke="#191970" points="1577.812,-205.9995 1587.9484,-202.9169 1578.1021,-199.0055 1577.812,-205.9995"/>
 </g>
 <!-- Node39 -->
 <g id="node38" class="node">
 <title>Node39</title>
-<g id="a_node38"><a xlink:href="pybind_2adders_2add__com__position_8h.html" target="_top" xlink:title="This file has a function to bind AddCoMPosition class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="2157,-123.5 2157,-153.5 2270,-153.5 2270,-123.5 2157,-123.5"/>
-<text text-anchor="start" x="2165" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="2213.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_com_position.h</text>
+<g id="a_node38"><a xlink:href="adders_2add__wrapped__position_8h.html" target="_top" xlink:title="This file has a definition of the AddWrappedPosition class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="819.5,-123.5 819.5,-153.5 941.5,-153.5 941.5,-123.5 819.5,-123.5"/>
+<text text-anchor="start" x="827.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_wrapped</text>
+<text text-anchor="middle" x="880.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_position.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node39 -->
-<g id="edge51" class="edge">
-<title>Node23&#45;&gt;Node39</title>
-<path fill="none" stroke="#191970" d="M1624.1476,-202.6413C1737.9033,-197.4845 1961.2016,-184.2122 2148.5,-154 2151.2487,-153.5566 2154.0534,-153.0601 2156.8793,-152.5244"/>
-<polygon fill="#191970" stroke="#191970" points="1623.9855,-199.145 1614.1511,-203.0863 1624.2969,-206.1381 1623.9855,-199.145"/>
-</g>
-<!-- Node40 -->
-<g id="node39" class="node">
-<title>Node40</title>
-<g id="a_node39"><a xlink:href="pybind_2adders_2add__gyration__radius_8h.html" target="_top" xlink:title="This file has a function to bind AddGyrationRadius class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="2306,-123.5 2306,-153.5 2419,-153.5 2419,-123.5 2306,-123.5"/>
-<text text-anchor="start" x="2314" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="2362.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_gyration_radius.h</text>
-</a>
-</g>
-</g>
-<!-- Node23&#45;&gt;Node40 -->
-<g id="edge54" class="edge">
-<title>Node23&#45;&gt;Node40</title>
-<path fill="none" stroke="#191970" d="M1624.421,-204.4313C1759.6301,-201.596 2053.1034,-191.2909 2297.5,-154 2300.2524,-153.58 2303.06,-153.1026 2305.8883,-152.5821"/>
-<polygon fill="#191970" stroke="#191970" points="1624.1067,-200.9368 1614.1794,-204.638 1624.2481,-207.9354 1624.1067,-200.9368"/>
+<!-- Node25&#45;&gt;Node39 -->
+<g id="edge43" class="edge">
+<title>Node25&#45;&gt;Node39</title>
+<path fill="none" stroke="#191970" d="M1577.7703,-203.482C1449.2069,-199.2367 1178.135,-186.8944 951.5,-154 948.2537,-153.5288 944.9344,-152.9935 941.5905,-152.4118"/>
+<polygon fill="#191970" stroke="#191970" points="1577.7902,-206.9844 1587.898,-203.8093 1578.0164,-199.988 1577.7902,-206.9844"/>
 </g>
 <!-- Node41 -->
 <g id="node40" class="node">
 <title>Node41</title>
-<g id="a_node40"><a xlink:href="pybind_2adders_2add__inertia__moment_8h_source.html" target="_top" xlink:title="src/pybind/adders/add\l_inertia_moment.h">
-<polygon fill="#ffffff" stroke="#000000" points="2455,-123.5 2455,-153.5 2568,-153.5 2568,-123.5 2455,-123.5"/>
-<text text-anchor="start" x="2463" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="2511.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_inertia_moment.h</text>
+<g id="a_node40"><a xlink:href="pybind_2adders_2add__map_8h.html" target="_top" xlink:title="This file has a function to bind AddMap class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="2316,-123.5 2316,-153.5 2429,-153.5 2429,-123.5 2316,-123.5"/>
+<text text-anchor="start" x="2324" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="2372.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_map.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node41 -->
-<g id="edge57" class="edge">
-<title>Node23&#45;&gt;Node41</title>
-<path fill="none" stroke="#191970" d="M1624.2822,-202.9107C1809.9946,-196.206 2288.5937,-177.1744 2446.5,-154 2449.2548,-153.5957 2452.0643,-153.131 2454.8941,-152.6207"/>
-<polygon fill="#191970" stroke="#191970" points="1623.9353,-199.4208 1614.0675,-203.2777 1624.1867,-206.4163 1623.9353,-199.4208"/>
+<!-- Node25&#45;&gt;Node41 -->
+<g id="edge47" class="edge">
+<title>Node25&#45;&gt;Node41</title>
+<path fill="none" stroke="#191970" d="M1727.5897,-202.8528C1848.8535,-197.8361 2095.0815,-184.5771 2301.5,-154 2306.1178,-153.316 2310.8839,-152.5059 2315.659,-151.6204"/>
+<polygon fill="#191970" stroke="#191970" points="1727.1588,-199.3673 1717.3093,-203.2707 1727.4432,-206.3615 1727.1588,-199.3673"/>
 </g>
 <!-- Node42 -->
 <g id="node41" class="node">
 <title>Node42</title>
-<g id="a_node41"><a xlink:href="pybind_2adders_2add__molecular__orientation_8h_source.html" target="_top" xlink:title="src/pybind/adders/add\l_molecular_orientation.h">
-<polygon fill="#ffffff" stroke="#000000" points="2604.5,-123.5 2604.5,-153.5 2726.5,-153.5 2726.5,-123.5 2604.5,-123.5"/>
-<text text-anchor="start" x="2612.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="2665.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_molecular_orientation.h</text>
+<g id="a_node41"><a xlink:href="pybind_2adders_2add__rename_8h.html" target="_top" xlink:title="This file has a function to bind AddRename class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="2465,-123.5 2465,-153.5 2578,-153.5 2578,-123.5 2465,-123.5"/>
+<text text-anchor="start" x="2473" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="2521.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_rename.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node42 -->
-<g id="edge60" class="edge">
-<title>Node23&#45;&gt;Node42</title>
-<path fill="none" stroke="#191970" d="M1624.4601,-203.4545C1831.3693,-197.546 2407.5503,-179.2517 2595.5,-154 2598.3373,-153.6188 2601.2299,-153.181 2604.1448,-152.6998"/>
-<polygon fill="#191970" stroke="#191970" points="1624.197,-199.9604 1614.3004,-203.7431 1624.3958,-206.9576 1624.197,-199.9604"/>
+<!-- Node25&#45;&gt;Node42 -->
+<g id="edge50" class="edge">
+<title>Node25&#45;&gt;Node42</title>
+<path fill="none" stroke="#191970" d="M1727.3329,-202.3373C1899.0183,-194.8168 2317.1377,-174.9241 2456.5,-154 2459.2534,-153.5866 2462.0618,-153.1145 2464.8908,-152.5983"/>
+<polygon fill="#191970" stroke="#191970" points="1726.9621,-198.8501 1717.1241,-202.7826 1727.2672,-205.8434 1726.9621,-198.8501"/>
 </g>
 <!-- Node43 -->
 <g id="node42" class="node">
 <title>Node43</title>
-<g id="a_node42"><a xlink:href="pybind_2adders_2add__special__bonds_8h_source.html" target="_top" xlink:title="src/pybind/adders/add\l_special_bonds.h">
-<polygon fill="#ffffff" stroke="#000000" points="2763,-123.5 2763,-153.5 2876,-153.5 2876,-123.5 2763,-123.5"/>
-<text text-anchor="start" x="2771" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="2819.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_special_bonds.h</text>
+<g id="a_node42"><a xlink:href="pybind_2adders_2add__child__ids_8h.html" target="_top" xlink:title="This file has a function to bind AddChildIDs class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="2614,-123.5 2614,-153.5 2727,-153.5 2727,-123.5 2614,-123.5"/>
+<text text-anchor="start" x="2622" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="2670.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_child_ids.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node43 -->
-<g id="edge63" class="edge">
-<title>Node23&#45;&gt;Node43</title>
-<path fill="none" stroke="#191970" d="M1624.5315,-204.1369C1852.3373,-199.7064 2533.8056,-184.2225 2753.5,-154 2756.5317,-153.5829 2759.6283,-153.0907 2762.7455,-152.5429"/>
-<polygon fill="#191970" stroke="#191970" points="1624.2832,-200.6409 1614.3526,-204.3333 1624.4183,-207.6396 1624.2832,-200.6409"/>
+<!-- Node25&#45;&gt;Node43 -->
+<g id="edge53" class="edge">
+<title>Node25&#45;&gt;Node43</title>
+<path fill="none" stroke="#191970" d="M1727.1612,-203.2052C1920.8952,-196.9718 2436.3507,-178.5339 2605.5,-154 2608.2554,-153.6003 2611.0655,-153.1394 2613.8958,-152.6321"/>
+<polygon fill="#191970" stroke="#191970" points="1726.9577,-199.7099 1717.0748,-203.5281 1727.1817,-206.7063 1726.9577,-199.7099"/>
 </g>
 <!-- Node44 -->
 <g id="node43" class="node">
 <title>Node44</title>
-<g id="a_node43"><a xlink:href="pybind_2adders_2add__wrapped__position_8h_source.html" target="_top" xlink:title="src/pybind/adders/add\l_wrapped_position.h">
+<g id="a_node43"><a xlink:href="pybind_2adders_2add__child__positions_8h.html" target="_top" xlink:title="This file has a function to bind AddChildPositions class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="2763,-123.5 2763,-153.5 2876,-153.5 2876,-123.5 2763,-123.5"/>
+<text text-anchor="start" x="2771" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="2819.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_child_positions.h</text>
+</a>
+</g>
+</g>
+<!-- Node25&#45;&gt;Node44 -->
+<g id="edge56" class="edge">
+<title>Node25&#45;&gt;Node44</title>
+<path fill="none" stroke="#191970" d="M1727.316,-202.8177C1958.7587,-194.4063 2653.5925,-168.2607 2754.5,-154 2757.2569,-153.6104 2760.0681,-153.1576 2762.8993,-152.6569"/>
+<polygon fill="#191970" stroke="#191970" points="1727.1712,-199.3205 1717.3047,-203.181 1727.4251,-206.3159 1727.1712,-199.3205"/>
+</g>
+<!-- Node45 -->
+<g id="node44" class="node">
+<title>Node45</title>
+<g id="a_node44"><a xlink:href="pybind_2adders_2add__com__position_8h.html" target="_top" xlink:title="This file has a function to bind AddCoMPosition class to Python. ">
 <polygon fill="#ffffff" stroke="#000000" points="2912,-123.5 2912,-153.5 3025,-153.5 3025,-123.5 2912,-123.5"/>
 <text text-anchor="start" x="2920" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
-<text text-anchor="middle" x="2968.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_wrapped_position.h</text>
+<text text-anchor="middle" x="2968.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_com_position.h</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node44 -->
-<g id="edge66" class="edge">
-<title>Node23&#45;&gt;Node44</title>
-<path fill="none" stroke="#191970" d="M1624.4297,-204.5842C1870.6524,-201.271 2653.343,-188.2463 2903.5,-154 2906.2585,-153.6224 2909.0711,-153.1793 2911.9034,-152.6864"/>
-<polygon fill="#191970" stroke="#191970" points="1624.1075,-201.0881 1614.155,-204.721 1624.2007,-208.0874 1624.1075,-201.0881"/>
-</g>
-<!-- Node24&#45;&gt;Node4 -->
-<g id="edge24" class="edge">
-<title>Node24&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M205.9855,-117.0643C193.2696,-107.1577 178.4684,-95.6265 166.9375,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="203.9456,-119.9119 213.9853,-123.2967 208.2477,-114.3899 203.9456,-119.9119"/>
-</g>
-<!-- Node25&#45;&gt;Node5 -->
-<g id="edge26" class="edge">
-<title>Node25&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M343.2725,-114.7735C337.2666,-105.4154 330.5449,-94.9421 325.2188,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="340.3958,-116.7712 348.7426,-123.2967 346.2869,-112.9903 340.3958,-116.7712"/>
-</g>
-<!-- Node26&#45;&gt;Node6 -->
-<g id="edge28" class="edge">
-<title>Node26&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M482.5,-113.0249C482.5,-104.128 482.5,-94.4287 482.5,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="479.0001,-113.2966 482.5,-123.2967 486.0001,-113.2967 479.0001,-113.2966"/>
-</g>
-<!-- Node28 -->
-<g id="node27" class="node">
-<title>Node28</title>
-<g id="a_node27"><a xlink:href="add__gyration__radius_8cpp.html" target="_top" xlink:title="This file has implementations of the AddGyrationRadius class, which is a subclass of the Adder class...">
-<polygon fill="#ffffff" stroke="#000000" points="553,-56.5 553,-86.5 674,-86.5 674,-56.5 553,-56.5"/>
-<text text-anchor="start" x="561" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_gyration</text>
-<text text-anchor="middle" x="613.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_radius.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node27&#45;&gt;Node28 -->
-<g id="edge30" class="edge">
-<title>Node27&#45;&gt;Node28</title>
-<path fill="none" stroke="#191970" d="M613.5,-113.0249C613.5,-104.128 613.5,-94.4287 613.5,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="610.0001,-113.2966 613.5,-123.2967 617.0001,-113.2967 610.0001,-113.2966"/>
-</g>
-<!-- Node35&#45;&gt;Node21 -->
-<g id="edge40" class="edge">
-<title>Node35&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M1684.5427,-125.2532C1690.2636,-124.3893 1695.9735,-123.619 1701.5,-123 1949.9506,-95.1703 2754.8487,-76.1845 2933.2615,-72.2556"/>
-<polygon fill="#191970" stroke="#191970" points="1683.5917,-121.8608 1674.2704,-126.897 1684.6978,-128.7729 1683.5917,-121.8608"/>
-</g>
-<!-- Node35&#45;&gt;Node35 -->
-<g id="edge41" class="edge">
-<title>Node35&#45;&gt;Node35</title>
-<path fill="none" stroke="#191970" d="M1683.9878,-147.7251C1688.9517,-145.6628 1692,-142.5877 1692,-138.5 1692,-132.1191 1684.5723,-128.2059 1674.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="1682.8648,-144.3987 1674.0255,-150.2398 1684.578,-151.1858 1682.8648,-144.3987"/>
-</g>
-<!-- Node36&#45;&gt;Node21 -->
-<g id="edge43" class="edge">
-<title>Node36&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M1833.5464,-125.2859C1839.2665,-124.4148 1844.9752,-123.634 1850.5,-123 2067.9071,-98.0523 2768.2773,-77.1357 2933.3935,-72.4708"/>
-<polygon fill="#191970" stroke="#191970" points="1832.5919,-121.8944 1823.2751,-126.939 1833.7043,-128.8054 1832.5919,-121.8944"/>
-</g>
-<!-- Node36&#45;&gt;Node36 -->
-<g id="edge44" class="edge">
-<title>Node36&#45;&gt;Node36</title>
-<path fill="none" stroke="#191970" d="M1832.9878,-147.7251C1837.9517,-145.6628 1841,-142.5877 1841,-138.5 1841,-132.1191 1833.5723,-128.2059 1823.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="1831.8648,-144.3987 1823.0255,-150.2398 1833.578,-151.1858 1831.8648,-144.3987"/>
-</g>
-<!-- Node37&#45;&gt;Node21 -->
-<g id="edge46" class="edge">
-<title>Node37&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M1982.5514,-125.3285C1988.2704,-124.4481 1993.9775,-123.6535 1999.5,-123 2362.5396,-80.0407 2806.3606,-72.907 2933.1617,-71.7305"/>
-<polygon fill="#191970" stroke="#191970" points="1981.5923,-121.9383 1972.2815,-126.9939 1982.7129,-128.848 1981.5923,-121.9383"/>
-</g>
-<!-- Node37&#45;&gt;Node37 -->
-<g id="edge47" class="edge">
-<title>Node37&#45;&gt;Node37</title>
-<path fill="none" stroke="#191970" d="M1981.9878,-147.7251C1986.9517,-145.6628 1990,-142.5877 1990,-138.5 1990,-132.1191 1982.5723,-128.2059 1972.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="1980.8648,-144.3987 1972.0255,-150.2398 1982.578,-151.1858 1980.8648,-144.3987"/>
-</g>
-<!-- Node38&#45;&gt;Node21 -->
-<g id="edge49" class="edge">
-<title>Node38&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2131.5584,-125.3866C2137.2759,-124.4935 2142.9807,-123.6801 2148.5,-123 2450.7541,-85.7578 2819.1923,-74.8146 2933.1949,-72.2076"/>
-<polygon fill="#191970" stroke="#191970" points="2130.5932,-121.998 2121.2906,-127.0687 2131.7249,-128.9059 2130.5932,-121.998"/>
-</g>
-<!-- Node38&#45;&gt;Node38 -->
-<g id="edge50" class="edge">
-<title>Node38&#45;&gt;Node38</title>
-<path fill="none" stroke="#191970" d="M2130.9878,-147.7251C2135.9517,-145.6628 2139,-142.5877 2139,-138.5 2139,-132.1191 2131.5723,-128.2059 2121.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="2129.8648,-144.3987 2121.0255,-150.2398 2131.578,-151.1858 2129.8648,-144.3987"/>
-</g>
-<!-- Node39&#45;&gt;Node21 -->
-<g id="edge52" class="edge">
-<title>Node39&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2280.569,-125.4703C2286.2842,-124.5588 2291.9855,-123.7183 2297.5,-123 2539.6407,-91.4574 2833.6454,-77.0922 2933.4385,-72.8807"/>
-<polygon fill="#191970" stroke="#191970" points="2279.595,-122.0841 2270.3042,-127.1764 2280.7428,-128.9893 2279.595,-122.0841"/>
-</g>
-<!-- Node39&#45;&gt;Node39 -->
-<g id="edge53" class="edge">
-<title>Node39&#45;&gt;Node39</title>
-<path fill="none" stroke="#191970" d="M2279.9878,-147.7251C2284.9517,-145.6628 2288,-142.5877 2288,-138.5 2288,-132.1191 2280.5723,-128.2059 2270.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="2278.8648,-144.3987 2270.0255,-150.2398 2280.578,-151.1858 2278.8648,-144.3987"/>
-</g>
-<!-- Node40&#45;&gt;Node21 -->
-<g id="edge55" class="edge">
-<title>Node40&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2429.5868,-125.6012C2435.298,-124.6611 2440.9937,-123.7782 2446.5,-123 2628.8665,-97.2251 2848.8921,-80.0322 2933.2463,-73.9488"/>
-<polygon fill="#191970" stroke="#191970" points="2428.5992,-122.2187 2419.3271,-127.3449 2429.7722,-129.1198 2428.5992,-122.2187"/>
-</g>
-<!-- Node40&#45;&gt;Node40 -->
-<g id="edge56" class="edge">
-<title>Node40&#45;&gt;Node40</title>
-<path fill="none" stroke="#191970" d="M2428.9878,-147.7251C2433.9517,-145.6628 2437,-142.5877 2437,-138.5 2437,-132.1191 2429.5723,-128.2059 2419.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="2427.8648,-144.3987 2419.0255,-150.2398 2429.578,-151.1858 2427.8648,-144.3987"/>
-</g>
-<!-- Node41&#45;&gt;Node21 -->
-<g id="edge58" class="edge">
-<title>Node41&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2578.6221,-125.8347C2584.3256,-124.8435 2590.0098,-123.8851 2595.5,-123 2719.413,-103.0237 2867.269,-84.0431 2933.4524,-75.8013"/>
-<polygon fill="#191970" stroke="#191970" points="2577.6111,-122.459 2568.3726,-127.6455 2578.829,-129.3522 2577.6111,-122.459"/>
-</g>
-<!-- Node41&#45;&gt;Node41 -->
+<!-- Node25&#45;&gt;Node45 -->
 <g id="edge59" class="edge">
-<title>Node41&#45;&gt;Node41</title>
-<path fill="none" stroke="#191970" d="M2577.9878,-147.7251C2582.9517,-145.6628 2586,-142.5877 2586,-138.5 2586,-132.1191 2578.5723,-128.2059 2568.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="2576.8648,-144.3987 2568.0255,-150.2398 2578.578,-151.1858 2576.8648,-144.3987"/>
-</g>
-<!-- Node42&#45;&gt;Node21 -->
-<g id="edge61" class="edge">
-<title>Node42&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2736.8918,-122.7137C2798.6738,-109.0523 2885.4061,-89.8739 2933.2837,-79.2871"/>
-<polygon fill="#191970" stroke="#191970" points="2735.825,-119.365 2726.8166,-124.9416 2737.3364,-126.1999 2735.825,-119.365"/>
-</g>
-<!-- Node42&#45;&gt;Node42 -->
-<g id="edge62" class="edge">
-<title>Node42&#45;&gt;Node42</title>
-<path fill="none" stroke="#191970" d="M2736.6318,-147.4702C2741.5235,-145.4126 2744.5,-142.4226 2744.5,-138.5 2744.5,-132.377 2737.2472,-128.5261 2726.7789,-126.9475"/>
-<polygon fill="#191970" stroke="#191970" points="2735.5649,-144.1315 2726.7789,-150.0525 2737.3396,-150.9028 2735.5649,-144.1315"/>
-</g>
-<!-- Node43&#45;&gt;Node21 -->
-<g id="edge64" class="edge">
-<title>Node43&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2862.0622,-119.3613C2889.8803,-106.8525 2925.0267,-91.0484 2947.142,-81.1039"/>
-<polygon fill="#191970" stroke="#191970" points="2860.6235,-116.1706 2852.9385,-123.4639 2863.4943,-122.5549 2860.6235,-116.1706"/>
-</g>
-<!-- Node43&#45;&gt;Node43 -->
-<g id="edge65" class="edge">
-<title>Node43&#45;&gt;Node43</title>
-<path fill="none" stroke="#191970" d="M2885.9878,-147.7251C2890.9517,-145.6628 2894,-142.5877 2894,-138.5 2894,-132.1191 2886.5723,-128.2059 2876.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="2884.8648,-144.3987 2876.0255,-150.2398 2886.578,-151.1858 2884.8648,-144.3987"/>
-</g>
-<!-- Node44&#45;&gt;Node21 -->
-<g id="edge67" class="edge">
-<title>Node44&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2968.5,-113.1199C2968.5,-101.9072 2968.5,-89.4031 2968.5,-81.055"/>
-<polygon fill="#191970" stroke="#191970" points="2965.0001,-113.2966 2968.5,-123.2967 2972.0001,-113.2967 2965.0001,-113.2966"/>
-</g>
-<!-- Node44&#45;&gt;Node44 -->
-<g id="edge68" class="edge">
-<title>Node44&#45;&gt;Node44</title>
-<path fill="none" stroke="#191970" d="M3034.9878,-147.7251C3039.9517,-145.6628 3043,-142.5877 3043,-138.5 3043,-132.1191 3035.5723,-128.2059 3025.0255,-126.7602"/>
-<polygon fill="#191970" stroke="#191970" points="3033.8648,-144.3987 3025.0255,-150.2398 3035.578,-151.1858 3033.8648,-144.3987"/>
-</g>
-<!-- Node45&#45;&gt;Node21 -->
-<g id="edge72" class="edge">
-<title>Node45&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3282.6544,-201.3334C3231.2219,-195.765 3153.2085,-182.9749 3091.5,-154 3071.4574,-144.5891 3070.6386,-135.699 3052.5,-123 3030.0791,-107.3029 3002.8718,-91.11 2985.6193,-81.1727"/>
-<polygon fill="#191970" stroke="#191970" points="3282.5868,-204.8447 3292.892,-202.3843 3283.3017,-197.8813 3282.5868,-204.8447"/>
-</g>
-<!-- Node45&#45;&gt;Node45 -->
-<g id="edge73" class="edge">
-<title>Node45&#45;&gt;Node45</title>
-<path fill="none" stroke="#191970" d="M3391.9682,-214.4264C3396.8999,-212.567 3400,-209.5915 3400,-205.5 3400,-199.1133 3392.4463,-195.4459 3382.1631,-194.4979"/>
-<polygon fill="#191970" stroke="#191970" points="3391.2214,-211.0069 3382.1631,-216.5021 3392.6712,-217.8551 3391.2214,-211.0069"/>
+<title>Node25&#45;&gt;Node45</title>
+<path fill="none" stroke="#191970" d="M1727.2537,-204.3148C1960.7023,-200.3153 2674.2321,-185.7518 2903.5,-154 2906.2579,-153.618 2909.0701,-153.1715 2911.902,-152.6758"/>
+<polygon fill="#191970" stroke="#191970" points="1727.1027,-200.8168 1717.1637,-204.4862 1727.2217,-207.8158 1727.1027,-200.8168"/>
 </g>
 <!-- Node46 -->
 <g id="node45" class="node">
 <title>Node46</title>
-<g id="a_node45"><a xlink:href="filters_2fil__comparison_8h_source.html" target="_top" xlink:title="src/filters/fil_comparison.h">
-<polygon fill="#ffffff" stroke="#000000" points="3100,-129 3100,-148 3231,-148 3231,-129 3100,-129"/>
-<text text-anchor="middle" x="3165.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/filters/fil_comparison.h</text>
+<g id="a_node45"><a xlink:href="pybind_2adders_2add__gyration__radius_8h.html" target="_top" xlink:title="This file has a function to bind AddGyrationRadius class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="1522,-123.5 1522,-153.5 1635,-153.5 1635,-123.5 1522,-123.5"/>
+<text text-anchor="start" x="1530" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="1578.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_gyration_radius.h</text>
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node46 -->
-<g id="edge70" class="edge">
-<title>Node45&#45;&gt;Node46</title>
-<path fill="none" stroke="#191970" d="M3289.1738,-186.6753C3256.8311,-174.0767 3215.6282,-158.0267 3189.9016,-148.0053"/>
-<polygon fill="#191970" stroke="#191970" points="3288.3114,-190.0954 3298.8998,-190.4639 3290.8522,-183.5728 3288.3114,-190.0954"/>
+<!-- Node25&#45;&gt;Node46 -->
+<g id="edge62" class="edge">
+<title>Node25&#45;&gt;Node46</title>
+<path fill="none" stroke="#191970" d="M1634.2641,-188.9892C1622.281,-178.1395 1606.7267,-164.0566 1595.0912,-153.5218"/>
+<polygon fill="#191970" stroke="#191970" points="1632.1355,-191.7833 1641.8976,-195.9005 1636.8337,-186.5942 1632.1355,-191.7833"/>
 </g>
 <!-- Node47 -->
 <g id="node46" class="node">
 <title>Node47</title>
-<g id="a_node46"><a xlink:href="filters_2fil__set_8h_source.html" target="_top" xlink:title="src/filters/fil_set.h">
-<polygon fill="#ffffff" stroke="#000000" points="3249,-129 3249,-148 3344,-148 3344,-129 3249,-129"/>
-<text text-anchor="middle" x="3296.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/filters/fil_set.h</text>
+<g id="a_node46"><a xlink:href="pybind_2adders_2add__inertia__moment_8h.html" target="_top" xlink:title="This file has a function to bind AddInertiaMoment class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="1671,-123.5 1671,-153.5 1784,-153.5 1784,-123.5 1671,-123.5"/>
+<text text-anchor="start" x="1679" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="1727.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_inertia_moment.h</text>
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node47 -->
-<g id="edge71" class="edge">
-<title>Node45&#45;&gt;Node47</title>
-<path fill="none" stroke="#191970" d="M3322.8135,-181.5001C3315.7428,-169.9456 3307.6663,-156.7473 3302.3471,-148.055"/>
-<polygon fill="#191970" stroke="#191970" points="3319.9914,-183.5939 3328.1965,-190.2967 3325.9622,-179.9401 3319.9914,-183.5939"/>
+<!-- Node25&#45;&gt;Node47 -->
+<g id="edge65" class="edge">
+<title>Node25&#45;&gt;Node47</title>
+<path fill="none" stroke="#191970" d="M1670.9823,-188.9892C1683.1274,-178.1395 1698.8918,-164.0566 1710.6846,-153.5218"/>
+<polygon fill="#191970" stroke="#191970" points="1668.3716,-186.6282 1663.2457,-195.9005 1673.0351,-191.8485 1668.3716,-186.6282"/>
 </g>
 <!-- Node48 -->
 <g id="node47" class="node">
 <title>Node48</title>
-<g id="a_node47"><a xlink:href="pybind_2filters_2fil__comparison_8h_source.html" target="_top" xlink:title="src/pybind/filters\l/fil_comparison.h">
-<polygon fill="#ffffff" stroke="#000000" points="3362,-123.5 3362,-153.5 3453,-153.5 3453,-123.5 3362,-123.5"/>
-<text text-anchor="start" x="3370" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/filters</text>
-<text text-anchor="middle" x="3407.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/fil_comparison.h</text>
+<g id="a_node47"><a xlink:href="pybind_2adders_2add__molecular__orientation_8h.html" target="_top" xlink:title="This file has a function to bind AddMolecularOrientation class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="1820.5,-123.5 1820.5,-153.5 1942.5,-153.5 1942.5,-123.5 1820.5,-123.5"/>
+<text text-anchor="start" x="1828.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="1881.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_molecular_orientation.h</text>
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node48 -->
-<g id="edge74" class="edge">
-<title>Node45&#45;&gt;Node48</title>
-<path fill="none" stroke="#191970" d="M3360.7867,-183.2113C3370.9319,-173.5009 3382.5614,-162.3698 3391.6788,-153.6432"/>
-<polygon fill="#191970" stroke="#191970" points="3358.1882,-180.8536 3353.3841,-190.2967 3363.0284,-185.9105 3358.1882,-180.8536"/>
+<!-- Node25&#45;&gt;Node48 -->
+<g id="edge68" class="edge">
+<title>Node25&#45;&gt;Node48</title>
+<path fill="none" stroke="#191970" d="M1695.1009,-193.036C1733.3149,-181.8555 1789.4756,-165.4242 1830.157,-153.5218"/>
+<polygon fill="#191970" stroke="#191970" points="1693.9249,-189.7332 1685.3101,-195.9005 1695.8906,-196.4516 1693.9249,-189.7332"/>
 </g>
 <!-- Node49 -->
 <g id="node48" class="node">
 <title>Node49</title>
-<g id="a_node48"><a xlink:href="pybind_2filters_2fil__set_8h_source.html" target="_top" xlink:title="src/pybind/filters\l/fil_set.h">
-<polygon fill="#ffffff" stroke="#000000" points="3489,-123.5 3489,-153.5 3578,-153.5 3578,-123.5 3489,-123.5"/>
-<text text-anchor="start" x="3497" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/filters</text>
-<text text-anchor="middle" x="3533.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/fil_set.h</text>
+<g id="a_node48"><a xlink:href="pybind_2adders_2add__special__bonds_8h.html" target="_top" xlink:title="This file has a function to bind AddSpecialBonds class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="1979,-123.5 1979,-153.5 2092,-153.5 2092,-123.5 1979,-123.5"/>
+<text text-anchor="start" x="1987" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="2035.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_special_bonds.h</text>
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node49 -->
-<g id="edge77" class="edge">
-<title>Node45&#45;&gt;Node49</title>
-<path fill="none" stroke="#191970" d="M3391.2121,-187.1392C3422.0335,-176.6033 3460.256,-163.5375 3489.3219,-153.6017"/>
-<polygon fill="#191970" stroke="#191970" points="3389.8165,-183.9174 3381.4862,-190.4639 3392.0808,-190.5411 3389.8165,-183.9174"/>
+<!-- Node25&#45;&gt;Node49 -->
+<g id="edge71" class="edge">
+<title>Node25&#45;&gt;Node49</title>
+<path fill="none" stroke="#191970" d="M1727.1561,-194.8708C1791.5613,-185.3435 1886.9583,-170.3766 1969.5,-154 1972.5017,-153.4044 1975.5745,-152.77 1978.6729,-152.1107"/>
+<polygon fill="#191970" stroke="#191970" points="1726.4757,-191.4331 1717.0923,-196.3525 1727.4955,-198.3585 1726.4757,-191.4331"/>
 </g>
-<!-- Node48&#45;&gt;Node21 -->
-<g id="edge75" class="edge">
-<title>Node48&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3351.9595,-122.8458C3218.4567,-95.5489 3069.9151,-80.4201 3003.5634,-74.4554"/>
-<polygon fill="#191970" stroke="#191970" points="3351.4501,-126.3145 3361.9525,-124.918 3352.8715,-119.4604 3351.4501,-126.3145"/>
+<!-- Node50 -->
+<g id="node49" class="node">
+<title>Node50</title>
+<g id="a_node49"><a xlink:href="pybind_2adders_2add__wrapped__position_8h.html" target="_top" xlink:title="This file has a function to bind AddWrappedPosition class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="2128,-123.5 2128,-153.5 2241,-153.5 2241,-123.5 2128,-123.5"/>
+<text text-anchor="start" x="2136" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/adders/add</text>
+<text text-anchor="middle" x="2184.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_wrapped_position.h</text>
+</a>
+</g>
+</g>
+<!-- Node25&#45;&gt;Node50 -->
+<g id="edge74" class="edge">
+<title>Node25&#45;&gt;Node50</title>
+<path fill="none" stroke="#191970" d="M1727.173,-200.1423C1819.7109,-192.843 1982.0067,-177.8795 2119.5,-154 2122.2432,-153.5236 2125.0434,-153.0002 2127.8656,-152.443"/>
+<polygon fill="#191970" stroke="#191970" points="1726.7625,-196.6636 1717.0651,-200.931 1727.3071,-203.6424 1726.7625,-196.6636"/>
+</g>
+<!-- Node26&#45;&gt;Node4 -->
+<g id="edge26" class="edge">
+<title>Node26&#45;&gt;Node4</title>
+<path fill="none" stroke="#191970" d="M205.0257,-117.0643C191.8662,-107.1577 176.5487,-95.6265 164.6156,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="203.2103,-120.0785 213.3045,-123.2967 207.4203,-114.486 203.2103,-120.0785"/>
+</g>
+<!-- Node27&#45;&gt;Node5 -->
+<g id="edge28" class="edge">
+<title>Node27&#45;&gt;Node5</title>
+<path fill="none" stroke="#191970" d="M331.5942,-116.7808C319.4012,-106.9383 305.2821,-95.541 294.2595,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="329.6864,-119.7389 339.666,-123.2967 334.0832,-114.292 329.6864,-119.7389"/>
+</g>
+<!-- Node28&#45;&gt;Node6 -->
+<g id="edge30" class="edge">
+<title>Node28&#45;&gt;Node6</title>
+<path fill="none" stroke="#191970" d="M467.6267,-114.7735C461.7604,-105.4154 455.195,-94.9421 449.9927,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="464.6926,-116.6828 472.9695,-123.2967 470.6237,-112.9648 464.6926,-116.6828"/>
+</g>
+<!-- Node30 -->
+<g id="node29" class="node">
+<title>Node30</title>
+<g id="a_node29"><a xlink:href="add__gyration__radius_8cpp.html" target="_top" xlink:title="This file has implementations of the AddGyrationRadius class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="954,-56.5 954,-86.5 1075,-86.5 1075,-56.5 954,-56.5"/>
+<text text-anchor="start" x="962" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_gyration</text>
+<text text-anchor="middle" x="1014.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_radius.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node29&#45;&gt;Node30 -->
+<g id="edge32" class="edge">
+<title>Node29&#45;&gt;Node30</title>
+<path fill="none" stroke="#191970" d="M1018.2449,-113.3179C1017.441,-104.3414 1016.561,-94.5143 1015.8561,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1014.7604,-113.6487 1019.1385,-123.2967 1021.7325,-113.0243 1014.7604,-113.6487"/>
+</g>
+<!-- Node31&#45;&gt;Node7 -->
+<g id="edge34" class="edge">
+<title>Node31&#45;&gt;Node7</title>
+<path fill="none" stroke="#191970" d="M601.6988,-113.6103C598.8606,-104.5553 595.7403,-94.5998 593.2464,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="598.4041,-114.8012 604.7348,-123.2967 605.0836,-112.7076 598.4041,-114.8012"/>
+</g>
+<!-- Node33 -->
+<g id="node32" class="node">
+<title>Node33</title>
+<g id="a_node32"><a xlink:href="add__map_8cpp.html" target="_top" xlink:title="This file has implementations of the AddMap class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="1093.5,-62 1093.5,-81 1217.5,-81 1217.5,-62 1093.5,-62"/>
+<text text-anchor="middle" x="1155.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_map.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node32&#45;&gt;Node33 -->
+<g id="edge36" class="edge">
+<title>Node32&#45;&gt;Node33</title>
+<path fill="none" stroke="#191970" d="M1155.5,-118.6079C1155.5,-106.214 1155.5,-90.8263 1155.5,-81.0817"/>
+<polygon fill="#191970" stroke="#191970" points="1152.0001,-118.9005 1155.5,-128.9005 1159.0001,-118.9006 1152.0001,-118.9005"/>
+</g>
+<!-- Node35 -->
+<g id="node34" class="node">
+<title>Node35</title>
+<g id="a_node34"><a xlink:href="add__molecular__orientation_8cpp.html" target="_top" xlink:title="This file has implementations of the AddMolecularOrientation class, which is a subclass of the Adder ...">
+<polygon fill="#ffffff" stroke="#000000" points="1235.5,-56.5 1235.5,-86.5 1363.5,-86.5 1363.5,-56.5 1235.5,-56.5"/>
+<text text-anchor="start" x="1243.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_molecular</text>
+<text text-anchor="middle" x="1299.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_orientation.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node34&#45;&gt;Node35 -->
+<g id="edge38" class="edge">
+<title>Node34&#45;&gt;Node35</title>
+<path fill="none" stroke="#191970" d="M1296.3793,-113.3179C1297.0491,-104.3414 1297.7825,-94.5143 1298.3699,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1292.8886,-113.0639 1295.6346,-123.2967 1299.8692,-113.5849 1292.8886,-113.0639"/>
+</g>
+<!-- Node37 -->
+<g id="node36" class="node">
+<title>Node37</title>
+<g id="a_node36"><a xlink:href="add__rename_8cpp.html" target="_top" xlink:title="This file has implementations of the AddRename class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="1382,-62 1382,-81 1519,-81 1519,-62 1382,-62"/>
+<text text-anchor="middle" x="1450.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_rename.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node36&#45;&gt;Node37 -->
+<g id="edge40" class="edge">
+<title>Node36&#45;&gt;Node37</title>
+<path fill="none" stroke="#191970" d="M1443.4125,-118.9863C1445.2718,-106.5286 1447.6006,-90.9258 1449.0699,-81.0817"/>
+<polygon fill="#191970" stroke="#191970" points="1439.9474,-118.4934 1441.9328,-128.9005 1446.8707,-119.5268 1439.9474,-118.4934"/>
+</g>
+<!-- Node38&#45;&gt;Node8 -->
+<g id="edge42" class="edge">
+<title>Node38&#45;&gt;Node8</title>
+<path fill="none" stroke="#191970" d="M738.3656,-113.3179C736.8919,-104.3414 735.2785,-94.5143 733.9862,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="734.93,-113.9958 740.0039,-123.2967 741.8375,-112.8617 734.93,-113.9958"/>
+</g>
+<!-- Node40 -->
+<g id="node39" class="node">
+<title>Node40</title>
+<g id="a_node39"><a xlink:href="add__wrapped__position_8cpp.html" target="_top" xlink:title="This file has implementations of the AddWrappedPosition class, which is a subclass of the Adder class...">
+<polygon fill="#ffffff" stroke="#000000" points="813.5,-56.5 813.5,-86.5 935.5,-86.5 935.5,-56.5 813.5,-56.5"/>
+<text text-anchor="start" x="821.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_wrapped</text>
+<text text-anchor="middle" x="874.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_position.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node39&#45;&gt;Node40 -->
+<g id="edge44" class="edge">
+<title>Node39&#45;&gt;Node40</title>
+<path fill="none" stroke="#191970" d="M878.2449,-113.3179C877.441,-104.3414 876.561,-94.5143 875.8561,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="874.7604,-113.6487 879.1385,-123.2967 881.7325,-113.0243 874.7604,-113.6487"/>
+</g>
+<!-- Node41&#45;&gt;Node23 -->
+<g id="edge48" class="edge">
+<title>Node41&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2439.5884,-125.6127C2445.2993,-124.67 2450.9944,-123.7835 2456.5,-123 2634.9404,-97.6063 2850.1207,-80.2518 2933.3069,-74.0369"/>
+<polygon fill="#191970" stroke="#191970" points="2438.5997,-122.2306 2429.3292,-127.3597 2439.7749,-129.1312 2438.5997,-122.2306"/>
+</g>
+<!-- Node41&#45;&gt;Node41 -->
+<g id="edge49" class="edge">
+<title>Node41&#45;&gt;Node41</title>
+<path fill="none" stroke="#191970" d="M2438.9878,-147.7251C2443.9517,-145.6628 2447,-142.5877 2447,-138.5 2447,-132.1191 2439.5723,-128.2059 2429.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="2437.8648,-144.3987 2429.0255,-150.2398 2439.578,-151.1858 2437.8648,-144.3987"/>
+</g>
+<!-- Node42&#45;&gt;Node23 -->
+<g id="edge51" class="edge">
+<title>Node42&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2588.6257,-125.857C2594.3285,-124.8609 2600.0115,-123.8953 2605.5,-123 2725.4892,-103.4266 2868.4981,-84.3926 2933.3843,-75.9888"/>
+<polygon fill="#191970" stroke="#191970" points="2587.6125,-122.482 2578.3772,-127.6744 2588.8348,-129.3745 2587.6125,-122.482"/>
+</g>
+<!-- Node42&#45;&gt;Node42 -->
+<g id="edge52" class="edge">
+<title>Node42&#45;&gt;Node42</title>
+<path fill="none" stroke="#191970" d="M2587.9878,-147.7251C2592.9517,-145.6628 2596,-142.5877 2596,-138.5 2596,-132.1191 2588.5723,-128.2059 2578.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="2586.8648,-144.3987 2578.0255,-150.2398 2588.578,-151.1858 2586.8648,-144.3987"/>
+</g>
+<!-- Node43&#45;&gt;Node23 -->
+<g id="edge54" class="edge">
+<title>Node43&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2737.1411,-123.5169C2797.8991,-109.8566 2885.2966,-90.2068 2933.4118,-79.389"/>
+<polygon fill="#191970" stroke="#191970" points="2736.2416,-120.1317 2727.253,-125.7401 2737.7772,-126.9612 2736.2416,-120.1317"/>
+</g>
+<!-- Node43&#45;&gt;Node43 -->
+<g id="edge55" class="edge">
+<title>Node43&#45;&gt;Node43</title>
+<path fill="none" stroke="#191970" d="M2736.9878,-147.7251C2741.9517,-145.6628 2745,-142.5877 2745,-138.5 2745,-132.1191 2737.5723,-128.2059 2727.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="2735.8648,-144.3987 2727.0255,-150.2398 2737.578,-151.1858 2735.8648,-144.3987"/>
+</g>
+<!-- Node44&#45;&gt;Node23 -->
+<g id="edge57" class="edge">
+<title>Node44&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2862.0622,-119.3613C2889.8803,-106.8525 2925.0267,-91.0484 2947.142,-81.1039"/>
+<polygon fill="#191970" stroke="#191970" points="2860.6235,-116.1706 2852.9385,-123.4639 2863.4943,-122.5549 2860.6235,-116.1706"/>
+</g>
+<!-- Node44&#45;&gt;Node44 -->
+<g id="edge58" class="edge">
+<title>Node44&#45;&gt;Node44</title>
+<path fill="none" stroke="#191970" d="M2885.9878,-147.7251C2890.9517,-145.6628 2894,-142.5877 2894,-138.5 2894,-132.1191 2886.5723,-128.2059 2876.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="2884.8648,-144.3987 2876.0255,-150.2398 2886.578,-151.1858 2884.8648,-144.3987"/>
+</g>
+<!-- Node45&#45;&gt;Node23 -->
+<g id="edge60" class="edge">
+<title>Node45&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2968.5,-113.1199C2968.5,-101.9072 2968.5,-89.4031 2968.5,-81.055"/>
+<polygon fill="#191970" stroke="#191970" points="2965.0001,-113.2966 2968.5,-123.2967 2972.0001,-113.2967 2965.0001,-113.2966"/>
+</g>
+<!-- Node45&#45;&gt;Node45 -->
+<g id="edge61" class="edge">
+<title>Node45&#45;&gt;Node45</title>
+<path fill="none" stroke="#191970" d="M3034.9878,-147.7251C3039.9517,-145.6628 3043,-142.5877 3043,-138.5 3043,-132.1191 3035.5723,-128.2059 3025.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="3033.8648,-144.3987 3025.0255,-150.2398 3035.578,-151.1858 3033.8648,-144.3987"/>
+</g>
+<!-- Node46&#45;&gt;Node23 -->
+<g id="edge63" class="edge">
+<title>Node46&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M1645.5419,-125.2459C1651.263,-124.3836 1656.9731,-123.6157 1662.5,-123 1919.1669,-94.4074 2751.929,-75.9454 2933.3822,-72.204"/>
+<polygon fill="#191970" stroke="#191970" points="1644.5917,-121.8533 1635.2693,-126.8876 1645.6964,-128.7656 1644.5917,-121.8533"/>
+</g>
+<!-- Node46&#45;&gt;Node46 -->
+<g id="edge64" class="edge">
+<title>Node46&#45;&gt;Node46</title>
+<path fill="none" stroke="#191970" d="M1644.9878,-147.7251C1649.9517,-145.6628 1653,-142.5877 1653,-138.5 1653,-132.1191 1645.5723,-128.2059 1635.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="1643.8648,-144.3987 1635.0255,-150.2398 1645.578,-151.1858 1643.8648,-144.3987"/>
+</g>
+<!-- Node47&#45;&gt;Node23 -->
+<g id="edge66" class="edge">
+<title>Node47&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M1794.5454,-125.2765C1800.2657,-124.4075 1805.9747,-123.6297 1811.5,-123 2036.9946,-97.3012 2764.514,-76.8785 2933.2987,-72.4108"/>
+<polygon fill="#191970" stroke="#191970" points="1793.5918,-121.8848 1784.2738,-126.927 1794.7024,-128.7961 1793.5918,-121.8848"/>
+</g>
+<!-- Node47&#45;&gt;Node47 -->
+<g id="edge67" class="edge">
+<title>Node47&#45;&gt;Node47</title>
+<path fill="none" stroke="#191970" d="M1793.9878,-147.7251C1798.9517,-145.6628 1802,-142.5877 1802,-138.5 1802,-132.1191 1794.5723,-128.2059 1784.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="1792.8648,-144.3987 1784.0255,-150.2398 1794.578,-151.1858 1792.8648,-144.3987"/>
+</g>
+<!-- Node48&#45;&gt;Node23 -->
+<g id="edge69" class="edge">
+<title>Node48&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M1952.7236,-125.3126C1958.724,-124.44 1964.7089,-123.6513 1970.5,-123 2345.9174,-80.7793 2804.7347,-73.1232 2933.4612,-71.7779"/>
+<polygon fill="#191970" stroke="#191970" points="1951.9997,-121.8825 1942.642,-126.8508 1953.0555,-128.8024 1951.9997,-121.8825"/>
 </g>
 <!-- Node48&#45;&gt;Node48 -->
-<g id="edge76" class="edge">
+<g id="edge70" class="edge">
 <title>Node48&#45;&gt;Node48</title>
-<path fill="none" stroke="#191970" d="M3462.9771,-148.2625C3467.9079,-146.2135 3471,-142.9594 3471,-138.5 3471,-131.5391 3463.4656,-127.5148 3453.1646,-126.4271"/>
-<polygon fill="#191970" stroke="#191970" points="3462.0962,-144.8741 3453.1646,-150.5729 3463.7006,-151.6877 3462.0962,-144.8741"/>
+<path fill="none" stroke="#191970" d="M1952.6318,-147.4702C1957.5235,-145.4126 1960.5,-142.4226 1960.5,-138.5 1960.5,-132.377 1953.2472,-128.5261 1942.7789,-126.9475"/>
+<polygon fill="#191970" stroke="#191970" points="1951.5649,-144.1315 1942.7789,-150.0525 1953.3396,-150.9028 1951.5649,-144.1315"/>
 </g>
-<!-- Node49&#45;&gt;Node21 -->
-<g id="edge78" class="edge">
-<title>Node49&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3478.7424,-122.8612C3295.5928,-88.0609 3085.4843,-76.3141 3003.5886,-72.802"/>
-<polygon fill="#191970" stroke="#191970" points="3478.3413,-126.3482 3488.8232,-124.8055 3479.6671,-119.4749 3478.3413,-126.3482"/>
+<!-- Node49&#45;&gt;Node23 -->
+<g id="edge72" class="edge">
+<title>Node49&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2102.5568,-125.3737C2108.2746,-124.4834 2113.9799,-123.6742 2119.5,-123 2433.5426,-84.6459 2816.5928,-74.4181 2933.1804,-72.1022"/>
+<polygon fill="#191970" stroke="#191970" points="2101.5929,-121.9847 2092.2885,-127.0521 2102.7222,-128.8931 2101.5929,-121.9847"/>
 </g>
 <!-- Node49&#45;&gt;Node49 -->
-<g id="edge79" class="edge">
+<g id="edge73" class="edge">
 <title>Node49&#45;&gt;Node49</title>
-<path fill="none" stroke="#191970" d="M3587.9682,-148.3191C3592.8999,-146.2737 3596,-143.0006 3596,-138.5 3596,-131.4746 3588.4463,-127.4405 3578.1631,-126.3977"/>
-<polygon fill="#191970" stroke="#191970" points="3587.1087,-144.9255 3578.1631,-150.6023 3588.6964,-151.7431 3587.1087,-144.9255"/>
+<path fill="none" stroke="#191970" d="M2101.9878,-147.7251C2106.9517,-145.6628 2110,-142.5877 2110,-138.5 2110,-132.1191 2102.5723,-128.2059 2092.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="2100.8648,-144.3987 2092.0255,-150.2398 2102.578,-151.1858 2100.8648,-144.3987"/>
 </g>
-<!-- Node50&#45;&gt;Node21 -->
+<!-- Node50&#45;&gt;Node23 -->
+<g id="edge75" class="edge">
+<title>Node50&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2251.4276,-126.116C2258.8593,-124.9579 2266.3303,-123.8878 2273.5,-123 2525.3542,-91.8145 2831.0634,-77.1592 2933.3044,-72.8818"/>
+<polygon fill="#191970" stroke="#191970" points="2250.6651,-122.6936 2241.3497,-127.7409 2251.7794,-129.6044 2250.6651,-122.6936"/>
+</g>
+<!-- Node50&#45;&gt;Node50 -->
+<g id="edge76" class="edge">
+<title>Node50&#45;&gt;Node50</title>
+<path fill="none" stroke="#191970" d="M2250.9878,-147.7251C2255.9517,-145.6628 2259,-142.5877 2259,-138.5 2259,-132.1191 2251.5723,-128.2059 2241.0255,-126.7602"/>
+<polygon fill="#191970" stroke="#191970" points="2249.8648,-144.3987 2241.0255,-150.2398 2251.578,-151.1858 2249.8648,-144.3987"/>
+</g>
+<!-- Node51&#45;&gt;Node23 -->
+<g id="edge80" class="edge">
+<title>Node51&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3423.0162,-201.0035C3496.0945,-193.0093 3611.7071,-172.2677 3566.5,-123 3528.3243,-81.3953 3126.1076,-73.3237 3003.669,-71.8266"/>
+<polygon fill="#191970" stroke="#191970" points="3422.5904,-197.5289 3413.008,-202.0486 3423.3175,-204.491 3422.5904,-197.5289"/>
+</g>
+<!-- Node51&#45;&gt;Node51 -->
 <g id="edge81" class="edge">
-<title>Node50&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3782.4688,-182.4353C3763.7797,-160.4557 3736.0225,-129.7402 3721.5,-123 3655.9058,-92.5564 3143.5282,-76.3223 3003.6679,-72.4288"/>
-<polygon fill="#191970" stroke="#191970" points="3780.024,-184.966 3789.1411,-190.3632 3785.3797,-180.4585 3780.024,-184.966"/>
-</g>
-<!-- Node51 -->
-<g id="node50" class="node">
-<title>Node51</title>
-<g id="a_node50"><a xlink:href="pybind_2starters_2sta__beads_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_beads.h">
-<polygon fill="#ffffff" stroke="#000000" points="3614.5,-123.5 3614.5,-153.5 3712.5,-153.5 3712.5,-123.5 3614.5,-123.5"/>
-<text text-anchor="start" x="3622.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="3663.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_beads.h</text>
-</a>
-</g>
-</g>
-<!-- Node50&#45;&gt;Node51 -->
-<g id="edge82" class="edge">
-<title>Node50&#45;&gt;Node51</title>
-<path fill="none" stroke="#191970" d="M3761.4425,-186.0518C3740.2377,-175.7567 3714.5788,-163.2991 3694.844,-153.7177"/>
-<polygon fill="#191970" stroke="#191970" points="3760.0056,-189.2448 3770.5301,-190.4639 3763.0629,-182.9478 3760.0056,-189.2448"/>
+<title>Node51&#45;&gt;Node51</title>
+<path fill="none" stroke="#191970" d="M3422.9682,-214.4264C3427.8999,-212.567 3431,-209.5915 3431,-205.5 3431,-199.1133 3423.4463,-195.4459 3413.1631,-194.4979"/>
+<polygon fill="#191970" stroke="#191970" points="3422.2214,-211.0069 3413.1631,-216.5021 3423.6712,-217.8551 3422.2214,-211.0069"/>
 </g>
 <!-- Node52 -->
 <g id="node51" class="node">
 <title>Node52</title>
-<g id="a_node51"><a xlink:href="pybind_2starters_2sta__custom_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_custom.h">
-<polygon fill="#ffffff" stroke="#000000" points="3768.5,-123.5 3768.5,-153.5 3866.5,-153.5 3866.5,-123.5 3768.5,-123.5"/>
-<text text-anchor="start" x="3776.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="3817.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_custom.h</text>
+<g id="a_node51"><a xlink:href="filters_2fil__comparison_8h_source.html" target="_top" xlink:title="src/filters/fil_comparison.h">
+<polygon fill="#ffffff" stroke="#000000" points="3061,-129 3061,-148 3192,-148 3192,-129 3061,-129"/>
+<text text-anchor="middle" x="3126.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/filters/fil_comparison.h</text>
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node52 -->
-<g id="edge84" class="edge">
-<title>Node50&#45;&gt;Node52</title>
-<path fill="none" stroke="#191970" d="M3807.5136,-180.3179C3809.6573,-171.3414 3812.0041,-161.5143 3813.8837,-153.6432"/>
-<polygon fill="#191970" stroke="#191970" points="3804.0492,-179.7572 3805.1306,-190.2967 3810.8577,-181.3831 3804.0492,-179.7572"/>
+<!-- Node51&#45;&gt;Node52 -->
+<g id="edge78" class="edge">
+<title>Node51&#45;&gt;Node52</title>
+<path fill="none" stroke="#191970" d="M3314.1452,-190.4514C3267.2979,-177.4812 3201.0796,-159.1481 3161.1204,-148.085"/>
+<polygon fill="#191970" stroke="#191970" points="3313.2601,-193.8379 3323.8314,-193.1331 3315.1279,-187.0917 3313.2601,-193.8379"/>
 </g>
 <!-- Node53 -->
 <g id="node52" class="node">
 <title>Node53</title>
-<g id="a_node52"><a xlink:href="pybind_2starters_2sta__dump_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_dump.h">
-<polygon fill="#ffffff" stroke="#000000" points="3884.5,-123.5 3884.5,-153.5 3982.5,-153.5 3982.5,-123.5 3884.5,-123.5"/>
-<text text-anchor="start" x="3892.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="3933.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_dump.h</text>
+<g id="a_node52"><a xlink:href="filters_2fil__set_8h_source.html" target="_top" xlink:title="src/filters/fil_set.h">
+<polygon fill="#ffffff" stroke="#000000" points="3210,-129 3210,-148 3305,-148 3305,-129 3210,-129"/>
+<text text-anchor="middle" x="3257.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/filters/fil_set.h</text>
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node53 -->
-<g id="edge86" class="edge">
-<title>Node50&#45;&gt;Node53</title>
-<path fill="none" stroke="#191970" d="M3840.089,-185.9132C3860.3187,-175.645 3884.7267,-163.2561 3903.5188,-153.7177"/>
-<polygon fill="#191970" stroke="#191970" points="3838.4563,-182.8168 3831.1234,-190.4639 3841.6246,-189.0587 3838.4563,-182.8168"/>
+<!-- Node51&#45;&gt;Node53 -->
+<g id="edge79" class="edge">
+<title>Node51&#45;&gt;Node53</title>
+<path fill="none" stroke="#191970" d="M3334.8857,-185.2103C3314.4843,-172.8959 3289.3847,-157.7457 3273.411,-148.1039"/>
+<polygon fill="#191970" stroke="#191970" points="3333.2194,-188.2927 3343.5894,-190.4639 3336.8368,-182.2998 3333.2194,-188.2927"/>
 </g>
 <!-- Node54 -->
 <g id="node53" class="node">
 <title>Node54</title>
-<g id="a_node53"><a xlink:href="pybind_2starters_2sta__molecules_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_molecules.h">
-<polygon fill="#ffffff" stroke="#000000" points="4238.5,-123.5 4238.5,-153.5 4336.5,-153.5 4336.5,-123.5 4238.5,-123.5"/>
-<text text-anchor="start" x="4246.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="4287.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_molecules.h</text>
+<g id="a_node53"><a xlink:href="pybind_2filters_2fil__comparison_8h_source.html" target="_top" xlink:title="src/pybind/filters\l/fil_comparison.h">
+<polygon fill="#ffffff" stroke="#000000" points="3323,-123.5 3323,-153.5 3414,-153.5 3414,-123.5 3323,-123.5"/>
+<text text-anchor="start" x="3331" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/filters</text>
+<text text-anchor="middle" x="3368.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/fil_comparison.h</text>
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node54 -->
-<g id="edge88" class="edge">
-<title>Node50&#45;&gt;Node54</title>
-<path fill="none" stroke="#191970" d="M3860.5893,-199.436C3960.8683,-188.9695 4160.2278,-167.3544 4229.5,-154 4232.3656,-153.4476 4235.2982,-152.8305 4238.2489,-152.1697"/>
-<polygon fill="#191970" stroke="#191970" points="3860.2011,-195.9574 3850.6173,-200.4741 3860.926,-202.9198 3860.2011,-195.9574"/>
+<!-- Node51&#45;&gt;Node54 -->
+<g id="edge82" class="edge">
+<title>Node51&#45;&gt;Node54</title>
+<path fill="none" stroke="#191970" d="M3368.5,-180.0249C3368.5,-171.128 3368.5,-161.4287 3368.5,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="3365.0001,-180.2966 3368.5,-190.2967 3372.0001,-180.2967 3365.0001,-180.2966"/>
 </g>
 <!-- Node55 -->
 <g id="node54" class="node">
 <title>Node55</title>
-<g id="a_node54"><a xlink:href="pybind_2starters_2sta__dump__atoms_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_dump_atoms.h">
-<polygon fill="#ffffff" stroke="#000000" points="4001,-123.5 4001,-153.5 4104,-153.5 4104,-123.5 4001,-123.5"/>
-<text text-anchor="start" x="4009" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="4052.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_dump_atoms.h</text>
+<g id="a_node54"><a xlink:href="pybind_2filters_2fil__set_8h_source.html" target="_top" xlink:title="src/pybind/filters\l/fil_set.h">
+<polygon fill="#ffffff" stroke="#000000" points="3450,-123.5 3450,-153.5 3539,-153.5 3539,-123.5 3450,-123.5"/>
+<text text-anchor="start" x="3458" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/filters</text>
+<text text-anchor="middle" x="3494.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/fil_set.h</text>
 </a>
 </g>
 </g>
-<!-- Node50&#45;&gt;Node55 -->
-<g id="edge90" class="edge">
-<title>Node50&#45;&gt;Node55</title>
-<path fill="none" stroke="#191970" d="M3860.4587,-189.762C3903.0137,-178.4027 3959.929,-163.2102 4000.7322,-152.3185"/>
-<polygon fill="#191970" stroke="#191970" points="3859.5491,-186.3822 3850.79,-192.3429 3861.3544,-193.1454 3859.5491,-186.3822"/>
-</g>
-<!-- Node56 -->
-<g id="node55" class="node">
-<title>Node56</title>
-<g id="a_node55"><a xlink:href="pybind_2starters_2sta__dump__box_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_dump_box.h">
-<polygon fill="#ffffff" stroke="#000000" points="4122.5,-123.5 4122.5,-153.5 4220.5,-153.5 4220.5,-123.5 4122.5,-123.5"/>
-<text text-anchor="start" x="4130.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="4171.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_dump_box.h</text>
-</a>
-</g>
-</g>
-<!-- Node50&#45;&gt;Node56 -->
-<g id="edge92" class="edge">
-<title>Node50&#45;&gt;Node56</title>
-<path fill="none" stroke="#191970" d="M3860.8332,-197.4652C3923.8415,-188.5232 4026.1887,-172.8256 4113.5,-154 4116.3528,-153.3849 4119.2754,-152.7189 4122.2185,-152.0205"/>
-<polygon fill="#191970" stroke="#191970" points="3860.0991,-194.034 3850.6853,-198.8952 3861.0759,-200.9655 3860.0991,-194.034"/>
-</g>
-<!-- Node51&#45;&gt;Node21 -->
-<g id="edge83" class="edge">
-<title>Node51&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3604.2268,-122.9782C3370.5208,-83.5303 3098.999,-74.2752 3003.6487,-72.1209"/>
-<polygon fill="#191970" stroke="#191970" points="3603.8263,-126.4605 3614.2733,-124.6968 3605.0067,-119.5607 3603.8263,-126.4605"/>
-</g>
-<!-- Node52&#45;&gt;Node21 -->
+<!-- Node51&#45;&gt;Node55 -->
 <g id="edge85" class="edge">
-<title>Node52&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3758.3837,-123.6342C3757.0794,-123.4103 3755.7836,-123.1984 3754.5,-123 3606.5146,-100.1293 3136.5071,-78.6998 3003.7369,-72.9832"/>
-<polygon fill="#191970" stroke="#191970" points="3758.0094,-127.1258 3768.4876,-125.5579 3759.3186,-120.2493 3758.0094,-127.1258"/>
+<title>Node51&#45;&gt;Node55</title>
+<path fill="none" stroke="#191970" d="M3405.8578,-185.6352C3425.0645,-175.422 3448.1053,-163.1702 3465.8816,-153.7177"/>
+<polygon fill="#191970" stroke="#191970" points="3403.963,-182.6786 3396.7769,-190.4639 3407.2495,-188.8591 3403.963,-182.6786"/>
 </g>
-<!-- Node53&#45;&gt;Node21 -->
+<!-- Node54&#45;&gt;Node23 -->
+<g id="edge83" class="edge">
+<title>Node54&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3312.9926,-122.8255C3194.6722,-97.7047 3064.761,-81.9147 3003.645,-75.1805"/>
+<polygon fill="#191970" stroke="#191970" points="3312.4297,-126.2844 3322.9422,-124.9662 3313.9021,-119.441 3312.4297,-126.2844"/>
+</g>
+<!-- Node54&#45;&gt;Node54 -->
+<g id="edge84" class="edge">
+<title>Node54&#45;&gt;Node54</title>
+<path fill="none" stroke="#191970" d="M3423.9771,-148.2625C3428.9079,-146.2135 3432,-142.9594 3432,-138.5 3432,-131.5391 3424.4656,-127.5148 3414.1646,-126.4271"/>
+<polygon fill="#191970" stroke="#191970" points="3423.0962,-144.8741 3414.1646,-150.5729 3424.7006,-151.6877 3423.0962,-144.8741"/>
+</g>
+<!-- Node55&#45;&gt;Node23 -->
+<g id="edge86" class="edge">
+<title>Node55&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3439.8187,-122.8608C3272.0141,-90.272 3080.8698,-77.406 3003.5348,-73.201"/>
+<polygon fill="#191970" stroke="#191970" points="3439.3299,-126.3317 3449.818,-124.8319 3440.6838,-119.4639 3439.3299,-126.3317"/>
+</g>
+<!-- Node55&#45;&gt;Node55 -->
 <g id="edge87" class="edge">
-<title>Node53&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3874.3769,-123.0803C3683.4801,-94.6832 3146.2048,-76.8755 3003.5885,-72.5327"/>
-<polygon fill="#191970" stroke="#191970" points="3873.8691,-126.5433 3884.287,-124.6148 3874.9403,-119.6258 3873.8691,-126.5433"/>
+<title>Node55&#45;&gt;Node55</title>
+<path fill="none" stroke="#191970" d="M3548.9682,-148.3191C3553.8999,-146.2737 3557,-143.0006 3557,-138.5 3557,-131.4746 3549.4463,-127.4405 3539.1631,-126.3977"/>
+<polygon fill="#191970" stroke="#191970" points="3548.1087,-144.9255 3539.1631,-150.6023 3549.6964,-151.7431 3548.1087,-144.9255"/>
 </g>
-<!-- Node54&#45;&gt;Node21 -->
+<!-- Node56&#45;&gt;Node23 -->
 <g id="edge89" class="edge">
-<title>Node54&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M4228.3294,-123.0887C3963.2434,-85.2839 3179.1715,-73.993 3003.6206,-71.8894"/>
-<polygon fill="#191970" stroke="#191970" points="4227.8915,-126.5619 4238.2955,-124.5602 4228.914,-119.637 4227.8915,-126.5619"/>
+<title>Node56&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3979.0908,-180.2604C3978.768,-161.4476 3974.8578,-136.7279 3958.5,-123 3921.1952,-91.6928 3175.739,-75.4839 3003.7063,-72.1516"/>
+<polygon fill="#191970" stroke="#191970" points="3975.5913,-180.2116 3978.9456,-190.2614 3982.5905,-180.3134 3975.5913,-180.2116"/>
 </g>
-<!-- Node55&#45;&gt;Node21 -->
-<g id="edge91" class="edge">
-<title>Node55&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3990.7644,-123.1463C3775.0687,-92.822 3157.999,-76.129 3003.7487,-72.3346"/>
-<polygon fill="#191970" stroke="#191970" points="3990.3282,-126.6196 4000.7288,-124.6006 3991.3392,-119.693 3990.3282,-126.6196"/>
+<!-- Node57 -->
+<g id="node56" class="node">
+<title>Node57</title>
+<g id="a_node56"><a xlink:href="pybind_2starters_2sta__beads_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_beads.h">
+<polygon fill="#ffffff" stroke="#000000" points="4121.5,-123.5 4121.5,-153.5 4219.5,-153.5 4219.5,-123.5 4121.5,-123.5"/>
+<text text-anchor="start" x="4129.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="4170.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_beads.h</text>
+</a>
 </g>
-<!-- Node56&#45;&gt;Node21 -->
-<g id="edge93" class="edge">
-<title>Node56&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M4112.2037,-123.0669C3871.3576,-88.3871 3169.0706,-74.8354 3003.6638,-72.0577"/>
-<polygon fill="#191970" stroke="#191970" points="4111.8859,-126.5582 4122.2933,-124.5744 4112.9203,-119.6351 4111.8859,-126.5582"/>
 </g>
-<!-- Node57&#45;&gt;Node50 -->
-<g id="edge95" class="edge">
-<title>Node57&#45;&gt;Node50</title>
-<path fill="none" stroke="#191970" d="M3789.0146,-303.3022C3791.985,-280.0339 3796.8624,-241.8278 3799.5577,-220.7143"/>
-<polygon fill="#191970" stroke="#191970" points="3785.5221,-303.0217 3787.7275,-313.3845 3792.4657,-303.9082 3785.5221,-303.0217"/>
+<!-- Node56&#45;&gt;Node57 -->
+<g id="edge90" class="edge">
+<title>Node56&#45;&gt;Node57</title>
+<path fill="none" stroke="#191970" d="M4030.39,-187.1392C4060.7396,-176.6033 4098.3771,-163.5375 4126.9981,-153.6017"/>
+<polygon fill="#191970" stroke="#191970" points="4029.1121,-183.8779 4020.813,-190.4639 4031.4078,-190.4907 4029.1121,-183.8779"/>
 </g>
 <!-- Node58 -->
 <g id="node57" class="node">
 <title>Node58</title>
-<g id="a_node57"><a xlink:href="starters_2sta__beads_8h_source.html" target="_top" xlink:title="src/starters/sta_beads.h">
-<polygon fill="#ffffff" stroke="#000000" points="3611.5,-257.5 3611.5,-276.5 3733.5,-276.5 3733.5,-257.5 3611.5,-257.5"/>
-<text text-anchor="middle" x="3672.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_beads.h</text>
+<g id="a_node57"><a xlink:href="pybind_2starters_2sta__custom_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_custom.h">
+<polygon fill="#ffffff" stroke="#000000" points="4237.5,-123.5 4237.5,-153.5 4335.5,-153.5 4335.5,-123.5 4237.5,-123.5"/>
+<text text-anchor="start" x="4245.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="4286.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_custom.h</text>
 </a>
 </g>
 </g>
-<!-- Node57&#45;&gt;Node58 -->
-<g id="edge96" class="edge">
-<title>Node57&#45;&gt;Node58</title>
-<path fill="none" stroke="#191970" d="M3757.6679,-308.8368C3737.0605,-298.7139 3709.8918,-285.3679 3691.8416,-276.5011"/>
-<polygon fill="#191970" stroke="#191970" points="3756.384,-312.1056 3766.9027,-313.3733 3759.4703,-305.8227 3756.384,-312.1056"/>
+<!-- Node56&#45;&gt;Node58 -->
+<g id="edge92" class="edge">
+<title>Node56&#45;&gt;Node58</title>
+<path fill="none" stroke="#191970" d="M4036.6073,-194.3899C4087.6076,-184.5611 4163.1518,-169.4219 4228.5,-154 4231.3404,-153.3297 4234.2532,-152.6206 4237.1888,-151.8892"/>
+<polygon fill="#191970" stroke="#191970" points="4035.9056,-190.9606 4026.7448,-196.2834 4037.2254,-197.8351 4035.9056,-190.9606"/>
 </g>
 <!-- Node59 -->
 <g id="node58" class="node">
 <title>Node59</title>
-<g id="a_node58"><a xlink:href="starters_2sta__custom_8h_source.html" target="_top" xlink:title="src/starters/sta_custom.h">
-<polygon fill="#ffffff" stroke="#000000" points="3814.5,-257.5 3814.5,-276.5 3942.5,-276.5 3942.5,-257.5 3814.5,-257.5"/>
-<text text-anchor="middle" x="3878.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_custom.h</text>
+<g id="a_node58"><a xlink:href="pybind_2starters_2sta__dump_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_dump.h">
+<polygon fill="#ffffff" stroke="#000000" points="3613.5,-123.5 3613.5,-153.5 3711.5,-153.5 3711.5,-123.5 3613.5,-123.5"/>
+<text text-anchor="start" x="3621.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="3662.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_dump.h</text>
 </a>
 </g>
 </g>
-<!-- Node57&#45;&gt;Node59 -->
-<g id="edge98" class="edge">
-<title>Node57&#45;&gt;Node59</title>
-<path fill="none" stroke="#191970" d="M3811.5224,-307.769C3827.825,-297.8456 3848.601,-285.1994 3862.6585,-276.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3809.2473,-305.0563 3802.5252,-313.2455 3812.887,-311.0357 3809.2473,-305.0563"/>
+<!-- Node56&#45;&gt;Node59 -->
+<g id="edge94" class="edge">
+<title>Node56&#45;&gt;Node59</title>
+<path fill="none" stroke="#191970" d="M3918.3463,-189.8458C3830.4982,-170.6168 3805.7486,-172.6964 3721.5,-154 3718.2949,-153.2887 3715.0008,-152.5224 3711.6864,-151.7248"/>
+<polygon fill="#191970" stroke="#191970" points="3917.6855,-193.2842 3928.2063,-192.0346 3919.2025,-186.4506 3917.6855,-193.2842"/>
 </g>
 <!-- Node60 -->
 <g id="node59" class="node">
 <title>Node60</title>
-<g id="a_node59"><a xlink:href="starters_2sta__dump_8h_source.html" target="_top" xlink:title="src/starters/sta_dump.h">
-<polygon fill="#ffffff" stroke="#000000" points="3962.5,-257.5 3962.5,-276.5 4082.5,-276.5 4082.5,-257.5 3962.5,-257.5"/>
-<text text-anchor="middle" x="4022.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump.h</text>
+<g id="a_node59"><a xlink:href="pybind_2starters_2sta__molecules_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_molecules.h">
+<polygon fill="#ffffff" stroke="#000000" points="4005.5,-123.5 4005.5,-153.5 4103.5,-153.5 4103.5,-123.5 4005.5,-123.5"/>
+<text text-anchor="start" x="4013.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="4054.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_molecules.h</text>
 </a>
 </g>
 </g>
-<!-- Node57&#45;&gt;Node60 -->
-<g id="edge100" class="edge">
-<title>Node57&#45;&gt;Node60</title>
-<path fill="none" stroke="#191970" d="M3836.5974,-311.1125C3880.0484,-300.8021 3942.1198,-286.0733 3982.3645,-276.5237"/>
-<polygon fill="#191970" stroke="#191970" points="3835.7234,-307.7226 3826.8017,-313.4369 3837.3396,-314.5335 3835.7234,-307.7226"/>
-</g>
-<!-- Node63 -->
-<g id="node62" class="node">
-<title>Node63</title>
-<g id="a_node62"><a xlink:href="starters_2sta__molecules_8h_source.html" target="_top" xlink:title="src/starters/sta_molecules.h">
-<polygon fill="#ffffff" stroke="#000000" points="4158.5,-257.5 4158.5,-276.5 4298.5,-276.5 4298.5,-257.5 4158.5,-257.5"/>
-<text text-anchor="middle" x="4228.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_molecules.h</text>
-</a>
-</g>
-</g>
-<!-- Node57&#45;&gt;Node63 -->
-<g id="edge106" class="edge">
-<title>Node57&#45;&gt;Node63</title>
-<path fill="none" stroke="#191970" d="M3849.2177,-312.9443C3963.4897,-296.9497 4084.1781,-282.9347 4158.3546,-274.6524"/>
-<polygon fill="#191970" stroke="#191970" points="3848.6585,-309.4885 3839.2438,-314.3478 3849.6339,-316.4202 3848.6585,-309.4885"/>
-</g>
-<!-- Node58&#45;&gt;Node51 -->
-<g id="edge97" class="edge">
-<title>Node58&#45;&gt;Node51</title>
-<path fill="none" stroke="#191970" d="M3671.1183,-247.2718C3669.3146,-221.5195 3666.1962,-176.9952 3664.5647,-153.7016"/>
-<polygon fill="#191970" stroke="#191970" points="3667.6333,-247.6106 3671.8235,-257.3416 3674.6162,-247.1215 3667.6333,-247.6106"/>
-</g>
-<!-- Node59&#45;&gt;Node52 -->
-<g id="edge99" class="edge">
-<title>Node59&#45;&gt;Node52</title>
-<path fill="none" stroke="#191970" d="M3876.03,-246.9427C3873.4807,-230.8897 3868.5565,-208.1409 3859.5,-190 3852.8007,-176.5808 3842.0747,-163.51 3833.1392,-153.8942"/>
-<polygon fill="#191970" stroke="#191970" points="3872.6269,-247.8748 3877.4917,-257.2867 3879.558,-246.8954 3872.6269,-247.8748"/>
-</g>
-<!-- Node60&#45;&gt;Node53 -->
-<g id="edge101" class="edge">
-<title>Node60&#45;&gt;Node53</title>
-<path fill="none" stroke="#191970" d="M3994.2579,-252.333C3981.7106,-244.5422 3967.7245,-233.8961 3958.5,-221 3943.8723,-200.55 3937.6768,-171.4108 3935.1459,-153.7941"/>
-<polygon fill="#191970" stroke="#191970" points="3992.6551,-255.4505 4003.0513,-257.4926 3996.1976,-249.4131 3992.6551,-255.4505"/>
+<!-- Node56&#45;&gt;Node60 -->
+<g id="edge96" class="edge">
+<title>Node56&#45;&gt;Node60</title>
+<path fill="none" stroke="#191970" d="M4002.7876,-183.4965C4014.024,-173.7193 4026.9692,-162.4554 4037.0967,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="4000.219,-181.092 3994.9725,-190.2967 4004.8139,-186.3728 4000.219,-181.092"/>
 </g>
 <!-- Node61 -->
 <g id="node60" class="node">
 <title>Node61</title>
-<g id="a_node60"><a xlink:href="starters_2sta__dump__atoms_8h_source.html" target="_top" xlink:title="src/starters/sta_dump\l_atoms.h">
-<polygon fill="#ffffff" stroke="#000000" points="3967.5,-190.5 3967.5,-220.5 4079.5,-220.5 4079.5,-190.5 3967.5,-190.5"/>
-<text text-anchor="start" x="3975.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
-<text text-anchor="middle" x="4023.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_atoms.h</text>
+<g id="a_node60"><a xlink:href="pybind_2starters_2sta__dump__atoms_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_dump_atoms.h">
+<polygon fill="#ffffff" stroke="#000000" points="3730,-123.5 3730,-153.5 3833,-153.5 3833,-123.5 3730,-123.5"/>
+<text text-anchor="start" x="3738" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="3781.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_dump_atoms.h</text>
 </a>
 </g>
 </g>
-<!-- Node60&#45;&gt;Node61 -->
-<g id="edge102" class="edge">
-<title>Node60&#45;&gt;Node61</title>
-<path fill="none" stroke="#191970" d="M4022.8192,-247.3693C4022.9605,-238.681 4023.124,-228.6241 4023.2554,-220.5446"/>
-<polygon fill="#191970" stroke="#191970" points="4019.3194,-247.335 4022.6563,-257.3906 4026.3185,-247.4489 4019.3194,-247.335"/>
+<!-- Node56&#45;&gt;Node61 -->
+<g id="edge98" class="edge">
+<title>Node56&#45;&gt;Node61</title>
+<path fill="none" stroke="#191970" d="M3923.7879,-187.1392C3892.9665,-176.6033 3854.744,-163.5375 3825.6781,-153.6017"/>
+<polygon fill="#191970" stroke="#191970" points="3922.9192,-190.5411 3933.5138,-190.4639 3925.1835,-183.9174 3922.9192,-190.5411"/>
 </g>
 <!-- Node62 -->
 <g id="node61" class="node">
 <title>Node62</title>
-<g id="a_node61"><a xlink:href="starters_2sta__dump__box_8h_source.html" target="_top" xlink:title="src/starters/sta_dump\l_box.h">
-<polygon fill="#ffffff" stroke="#000000" points="4103.5,-190.5 4103.5,-220.5 4215.5,-220.5 4215.5,-190.5 4103.5,-190.5"/>
-<text text-anchor="start" x="4111.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
-<text text-anchor="middle" x="4159.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_box.h</text>
+<g id="a_node61"><a xlink:href="pybind_2starters_2sta__dump__box_8h_source.html" target="_top" xlink:title="src/pybind/starters\l/sta_dump_box.h">
+<polygon fill="#ffffff" stroke="#000000" points="3851.5,-123.5 3851.5,-153.5 3949.5,-153.5 3949.5,-123.5 3851.5,-123.5"/>
+<text text-anchor="start" x="3859.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="3900.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/sta_dump_box.h</text>
 </a>
 </g>
 </g>
-<!-- Node60&#45;&gt;Node62 -->
-<g id="edge104" class="edge">
-<title>Node60&#45;&gt;Node62</title>
-<path fill="none" stroke="#191970" d="M4053.2748,-253.185C4074.89,-243.4819 4103.7882,-230.5093 4125.986,-220.5446"/>
-<polygon fill="#191970" stroke="#191970" points="4051.5958,-250.1022 4043.9063,-257.3906 4054.4626,-256.4883 4051.5958,-250.1022"/>
+<!-- Node56&#45;&gt;Node62 -->
+<g id="edge100" class="edge">
+<title>Node56&#45;&gt;Node62</title>
+<path fill="none" stroke="#191970" d="M3952.2124,-183.4965C3940.976,-173.7193 3928.0308,-162.4554 3917.9033,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="3950.1861,-186.3728 3960.0275,-190.2967 3954.781,-181.092 3950.1861,-186.3728"/>
 </g>
-<!-- Node61&#45;&gt;Node55 -->
+<!-- Node57&#45;&gt;Node23 -->
+<g id="edge91" class="edge">
+<title>Node57&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M4111.2121,-123.0681C3870.5694,-88.4121 3168.8955,-74.8414 3003.6331,-72.0588"/>
+<polygon fill="#191970" stroke="#191970" points="4110.8858,-126.5581 4121.2933,-124.5745 4111.9204,-119.635 4110.8858,-126.5581"/>
+</g>
+<!-- Node58&#45;&gt;Node23 -->
+<g id="edge93" class="edge">
+<title>Node58&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M4227.3371,-123.0898C3962.4549,-85.309 3179.0045,-73.9988 3003.5927,-71.8904"/>
+<polygon fill="#191970" stroke="#191970" points="4226.8914,-126.5618 4237.2955,-124.5603 4227.9141,-119.6369 4226.8914,-126.5618"/>
+</g>
+<!-- Node59&#45;&gt;Node23 -->
+<g id="edge95" class="edge">
+<title>Node59&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3603.3792,-123.6623C3602.0763,-123.4299 3600.782,-123.2086 3599.5,-123 3374.3927,-86.3632 3099.6471,-75.2833 3003.624,-72.4"/>
+<polygon fill="#191970" stroke="#191970" points="3602.9897,-127.1523 3613.4753,-125.6351 3604.3322,-120.2823 3602.9897,-127.1523"/>
+</g>
+<!-- Node60&#45;&gt;Node23 -->
+<g id="edge97" class="edge">
+<title>Node60&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3995.3877,-123.6077C3994.0822,-123.3918 3992.7851,-123.1887 3991.5,-123 3794.6637,-94.1022 3160.4194,-76.3774 3003.7434,-72.3702"/>
+<polygon fill="#191970" stroke="#191970" points="3995.0277,-127.1006 4005.4986,-125.4848 3996.3055,-120.2182 3995.0277,-127.1006"/>
+</g>
+<!-- Node61&#45;&gt;Node23 -->
+<g id="edge99" class="edge">
+<title>Node61&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3719.631,-123.1084C3560.4235,-99.5279 3129.5749,-78.791 3003.5349,-73.058"/>
+<polygon fill="#191970" stroke="#191970" points="3719.3018,-126.599 3729.7187,-124.6656 3720.3698,-119.6809 3719.3018,-126.599"/>
+</g>
+<!-- Node62&#45;&gt;Node23 -->
+<g id="edge101" class="edge">
+<title>Node62&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M3841.2036,-123.0521C3657.1193,-95.5435 3143.1719,-77.2158 3003.7452,-72.6242"/>
+<polygon fill="#191970" stroke="#191970" points="3840.8663,-126.5417 3851.2858,-124.6221 3841.9434,-119.625 3840.8663,-126.5417"/>
+</g>
+<!-- Node63&#45;&gt;Node56 -->
 <g id="edge103" class="edge">
-<title>Node61&#45;&gt;Node55</title>
-<path fill="none" stroke="#191970" d="M4034.1468,-180.9021C4038.0997,-171.7696 4042.4645,-161.6854 4045.9455,-153.6432"/>
-<polygon fill="#191970" stroke="#191970" points="4030.8408,-179.7291 4030.0805,-190.2967 4037.2649,-182.5097 4030.8408,-179.7291"/>
+<title>Node63&#45;&gt;Node56</title>
+<path fill="none" stroke="#191970" d="M3884.3101,-303.7698C3879.0981,-289.8756 3875.1219,-271.1432 3883.5,-257 3893.4581,-240.1895 3911.0609,-228.5051 3928.3621,-220.5698"/>
+<polygon fill="#191970" stroke="#191970" points="3881.2241,-305.4574 3888.3526,-313.2954 3887.6679,-302.7227 3881.2241,-305.4574"/>
 </g>
-<!-- Node62&#45;&gt;Node56 -->
-<g id="edge105" class="edge">
-<title>Node62&#45;&gt;Node56</title>
-<path fill="none" stroke="#191970" d="M4164.0102,-180.3179C4165.618,-171.3414 4167.378,-161.5143 4168.7878,-153.6432"/>
-<polygon fill="#191970" stroke="#191970" points="4160.5409,-179.8362 4162.223,-190.2967 4167.4312,-181.0704 4160.5409,-179.8362"/>
+<!-- Node64 -->
+<g id="node63" class="node">
+<title>Node64</title>
+<g id="a_node63"><a xlink:href="starters_2sta__beads_8h_source.html" target="_top" xlink:title="src/starters/sta_beads.h">
+<polygon fill="#ffffff" stroke="#000000" points="4050.5,-257.5 4050.5,-276.5 4172.5,-276.5 4172.5,-257.5 4050.5,-257.5"/>
+<text text-anchor="middle" x="4111.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_beads.h</text>
+</a>
 </g>
-<!-- Node63&#45;&gt;Node54 -->
-<g id="edge107" class="edge">
-<title>Node63&#45;&gt;Node54</title>
-<path fill="none" stroke="#191970" d="M4237.242,-247.9602C4249.0146,-222.3198 4269.7292,-177.2041 4280.5203,-153.7016"/>
-<polygon fill="#191970" stroke="#191970" points="4233.9265,-246.7933 4232.9346,-257.3416 4240.288,-249.7142 4233.9265,-246.7933"/>
 </g>
-<!-- Node65&#45;&gt;Node13 -->
-<g id="edge111" class="edge">
-<title>Node65&#45;&gt;Node13</title>
-<path fill="none" stroke="#191970" d="M3768.1333,-478.057C3737.7534,-467.8084 3696.0181,-453.729 3668.664,-444.5011"/>
-<polygon fill="#191970" stroke="#191970" points="3767.3694,-481.4931 3777.9636,-481.3733 3769.607,-474.8603 3767.3694,-481.4931"/>
+<!-- Node63&#45;&gt;Node64 -->
+<g id="edge104" class="edge">
+<title>Node63&#45;&gt;Node64</title>
+<path fill="none" stroke="#191970" d="M3940.7939,-310.8511C3980.9093,-300.5462 4037.6535,-285.9697 4074.5135,-276.5011"/>
+<polygon fill="#191970" stroke="#191970" points="3939.7902,-307.4952 3930.9755,-313.3733 3941.5319,-314.2751 3939.7902,-307.4952"/>
+</g>
+<!-- Node65 -->
+<g id="node64" class="node">
+<title>Node65</title>
+<g id="a_node64"><a xlink:href="starters_2sta__custom_8h_source.html" target="_top" xlink:title="src/starters/sta_custom.h">
+<polygon fill="#ffffff" stroke="#000000" points="4190.5,-257.5 4190.5,-276.5 4318.5,-276.5 4318.5,-257.5 4190.5,-257.5"/>
+<text text-anchor="middle" x="4254.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_custom.h</text>
+</a>
+</g>
+</g>
+<!-- Node63&#45;&gt;Node65 -->
+<g id="edge106" class="edge">
+<title>Node63&#45;&gt;Node65</title>
+<path fill="none" stroke="#191970" d="M3956.3839,-312.8693C4044.025,-299.0825 4133.5013,-285.3847 4191.7701,-276.5153"/>
+<polygon fill="#191970" stroke="#191970" points="3955.5948,-309.4503 3946.261,-314.4634 3956.6838,-316.3651 3955.5948,-309.4503"/>
 </g>
 <!-- Node66 -->
 <g id="node65" class="node">
 <title>Node66</title>
-<g id="a_node65"><a xlink:href="gen__list_8cpp.html" target="_top" xlink:title="This file has implementations of the GenList class. ">
-<polygon fill="#ffffff" stroke="#000000" points="3758,-425.5 3758,-444.5 3865,-444.5 3865,-425.5 3758,-425.5"/>
-<text text-anchor="middle" x="3811.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_list.cpp</text>
+<g id="a_node65"><a xlink:href="starters_2sta__dump_8h_source.html" target="_top" xlink:title="src/starters/sta_dump.h">
+<polygon fill="#ffffff" stroke="#000000" points="3674.5,-257.5 3674.5,-276.5 3794.5,-276.5 3794.5,-257.5 3674.5,-257.5"/>
+<text text-anchor="middle" x="3734.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump.h</text>
 </a>
 </g>
 </g>
-<!-- Node65&#45;&gt;Node66 -->
+<!-- Node63&#45;&gt;Node66 -->
+<g id="edge108" class="edge">
+<title>Node63&#45;&gt;Node66</title>
+<path fill="none" stroke="#191970" d="M3856.371,-309.9231C3827.305,-299.686 3787.5631,-285.6889 3761.4764,-276.5011"/>
+<polygon fill="#191970" stroke="#191970" points="3855.5721,-313.3524 3866.1669,-313.3733 3857.8975,-306.75 3855.5721,-313.3524"/>
+</g>
+<!-- Node69 -->
+<g id="node68" class="node">
+<title>Node69</title>
+<g id="a_node68"><a xlink:href="starters_2sta__molecules_8h_source.html" target="_top" xlink:title="src/starters/sta_molecules.h">
+<polygon fill="#ffffff" stroke="#000000" points="3892.5,-257.5 3892.5,-276.5 4032.5,-276.5 4032.5,-257.5 3892.5,-257.5"/>
+<text text-anchor="middle" x="3962.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_molecules.h</text>
+</a>
+</g>
+</g>
+<!-- Node63&#45;&gt;Node69 -->
+<g id="edge114" class="edge">
+<title>Node63&#45;&gt;Node69</title>
+<path fill="none" stroke="#191970" d="M3913.303,-306.928C3925.3636,-297.1397 3940.3714,-284.9595 3950.6188,-276.6427"/>
+<polygon fill="#191970" stroke="#191970" points="3911.0779,-304.2262 3905.5189,-313.2455 3915.4891,-309.6614 3911.0779,-304.2262"/>
+</g>
+<!-- Node64&#45;&gt;Node57 -->
+<g id="edge105" class="edge">
+<title>Node64&#45;&gt;Node57</title>
+<path fill="none" stroke="#191970" d="M4120.242,-247.9602C4132.0146,-222.3198 4152.7292,-177.2041 4163.5203,-153.7016"/>
+<polygon fill="#191970" stroke="#191970" points="4116.9265,-246.7933 4115.9346,-257.3416 4123.288,-249.7142 4116.9265,-246.7933"/>
+</g>
+<!-- Node65&#45;&gt;Node58 -->
+<g id="edge107" class="edge">
+<title>Node65&#45;&gt;Node58</title>
+<path fill="none" stroke="#191970" d="M4259.3269,-247.6171C4265.7263,-221.9192 4276.8876,-177.0997 4282.7144,-153.7016"/>
+<polygon fill="#191970" stroke="#191970" points="4255.9255,-246.7922 4256.9052,-257.3416 4262.718,-248.4838 4255.9255,-246.7922"/>
+</g>
+<!-- Node66&#45;&gt;Node59 -->
+<g id="edge109" class="edge">
+<title>Node66&#45;&gt;Node59</title>
+<path fill="none" stroke="#191970" d="M3696.4729,-253.1435C3682.2415,-245.8855 3667.5789,-235.4324 3659.5,-221 3647.7388,-199.9894 3652.7062,-171.0254 3657.511,-153.5954"/>
+<polygon fill="#191970" stroke="#191970" points="3695.1489,-256.3882 3705.6892,-257.4613 3698.1186,-250.0494 3695.1489,-256.3882"/>
+</g>
+<!-- Node67 -->
+<g id="node66" class="node">
+<title>Node67</title>
+<g id="a_node66"><a xlink:href="starters_2sta__dump__atoms_8h_source.html" target="_top" xlink:title="src/starters/sta_dump\l_atoms.h">
+<polygon fill="#ffffff" stroke="#000000" points="3668.5,-190.5 3668.5,-220.5 3780.5,-220.5 3780.5,-190.5 3668.5,-190.5"/>
+<text text-anchor="start" x="3676.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
+<text text-anchor="middle" x="3724.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_atoms.h</text>
+</a>
+</g>
+</g>
+<!-- Node66&#45;&gt;Node67 -->
 <g id="edge110" class="edge">
-<title>Node65&#45;&gt;Node66</title>
-<path fill="none" stroke="#191970" d="M3808.2717,-471.1575C3809.0754,-462.155 3809.9893,-451.9199 3810.639,-444.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3804.7742,-470.9739 3807.3709,-481.2455 3811.7465,-471.5965 3804.7742,-470.9739"/>
+<title>Node66&#45;&gt;Node67</title>
+<path fill="none" stroke="#191970" d="M3731.308,-247.3693C3729.8953,-238.681 3728.26,-228.6241 3726.9463,-220.5446"/>
+<polygon fill="#191970" stroke="#191970" points="3727.8778,-248.082 3732.9375,-257.3906 3734.7871,-246.9585 3727.8778,-248.082"/>
 </g>
-<!-- Node67&#45;&gt;Node21 -->
+<!-- Node68 -->
+<g id="node67" class="node">
+<title>Node68</title>
+<g id="a_node67"><a xlink:href="starters_2sta__dump__box_8h_source.html" target="_top" xlink:title="src/starters/sta_dump\l_box.h">
+<polygon fill="#ffffff" stroke="#000000" points="3798.5,-190.5 3798.5,-220.5 3910.5,-220.5 3910.5,-190.5 3798.5,-190.5"/>
+<text text-anchor="start" x="3806.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
+<text text-anchor="middle" x="3854.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_box.h</text>
+</a>
+</g>
+</g>
+<!-- Node66&#45;&gt;Node68 -->
+<g id="edge112" class="edge">
+<title>Node66&#45;&gt;Node68</title>
+<path fill="none" stroke="#191970" d="M3762.2271,-252.7899C3781.0721,-243.1318 3805.9641,-230.3747 3825.1447,-220.5446"/>
+<polygon fill="#191970" stroke="#191970" points="3760.553,-249.7149 3753.25,-257.3906 3763.7457,-255.9444 3760.553,-249.7149"/>
+</g>
+<!-- Node67&#45;&gt;Node61 -->
+<g id="edge111" class="edge">
+<title>Node67&#45;&gt;Node61</title>
+<path fill="none" stroke="#191970" d="M3743.9494,-182.6385C3752.0937,-173.0653 3761.3384,-162.1987 3768.617,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="3741.2482,-180.4121 3737.4342,-190.2967 3746.5798,-184.948 3741.2482,-180.4121"/>
+</g>
+<!-- Node68&#45;&gt;Node62 -->
+<g id="edge113" class="edge">
+<title>Node68&#45;&gt;Node62</title>
+<path fill="none" stroke="#191970" d="M3870.7898,-181.7735C3877.2148,-172.4154 3884.4054,-161.9421 3890.1032,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="3867.7128,-180.0716 3864.9381,-190.2967 3873.4836,-184.0337 3867.7128,-180.0716"/>
+</g>
+<!-- Node69&#45;&gt;Node60 -->
 <g id="edge115" class="edge">
-<title>Node67&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M3935.2783,-371.1358C4068.5918,-353.8313 4364.5,-310.5198 4364.5,-267 4364.5,-267 4364.5,-267 4364.5,-205.5 4364.5,-167.8735 4374.4974,-146.9771 4345.5,-123 4292.2643,-78.981 3213.9156,-72.47 3003.8083,-71.6181"/>
-<polygon fill="#191970" stroke="#191970" points="3934.6687,-367.6853 3925.1981,-372.4348 3935.5635,-374.6279 3934.6687,-367.6853"/>
+<title>Node69&#45;&gt;Node60</title>
+<path fill="none" stroke="#191970" d="M3996.137,-252.9358C4010.273,-245.42 4025.6824,-234.8268 4035.5,-221 4049.8806,-200.7468 4053.5546,-171.2801 4054.391,-153.5911"/>
+<polygon fill="#191970" stroke="#191970" points="3994.4951,-249.8434 3987.103,-257.4334 3997.6148,-256.1098 3994.4951,-249.8434"/>
 </g>
-<!-- Node68&#45;&gt;Node9 -->
-<g id="edge117" class="edge">
-<title>Node68&#45;&gt;Node9</title>
-<path fill="none" stroke="#191970" d="M3710.5,-583.1575C3710.5,-574.155 3710.5,-563.9199 3710.5,-556.6427"/>
-<polygon fill="#191970" stroke="#191970" points="3707.0001,-583.2455 3710.5,-593.2455 3714.0001,-583.2456 3707.0001,-583.2455"/>
+<!-- Node71&#45;&gt;Node15 -->
+<g id="edge119" class="edge">
+<title>Node71&#45;&gt;Node15</title>
+<path fill="none" stroke="#191970" d="M4209.5564,-477.2473C4186.6735,-467.0771 4156.0986,-453.4883 4135.8775,-444.5011"/>
+<polygon fill="#191970" stroke="#191970" points="4208.2802,-480.5102 4218.8398,-481.3733 4211.1232,-474.1135 4208.2802,-480.5102"/>
 </g>
-<!-- Node68&#45;&gt;Node17 -->
+<!-- Node72 -->
+<g id="node71" class="node">
+<title>Node72</title>
+<g id="a_node71"><a xlink:href="gen__list_8cpp.html" target="_top" xlink:title="This file has implementations of the GenList class. ">
+<polygon fill="#ffffff" stroke="#000000" points="4187,-425.5 4187,-444.5 4294,-444.5 4294,-425.5 4187,-425.5"/>
+<text text-anchor="middle" x="4240.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/core/gen_list.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node71&#45;&gt;Node72 -->
 <g id="edge118" class="edge">
-<title>Node68&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M3760.1785,-590.7975C3831.2592,-571.8639 3953.5,-533.1723 3953.5,-491 3953.5,-491 3953.5,-491 3953.5,-435 3953.5,-395.2621 3931.3334,-351.7836 3920.4233,-332.7906"/>
-<polygon fill="#191970" stroke="#191970" points="3758.8677,-587.5228 3750.083,-593.4456 3760.6438,-594.2937 3758.8677,-587.5228"/>
+<title>Node71&#45;&gt;Node72</title>
+<path fill="none" stroke="#191970" d="M4240.5,-471.1575C4240.5,-462.155 4240.5,-451.9199 4240.5,-444.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4237.0001,-471.2455 4240.5,-481.2455 4244.0001,-471.2456 4237.0001,-471.2455"/>
+</g>
+<!-- Node73&#45;&gt;Node23 -->
+<g id="edge123" class="edge">
+<title>Node73&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M4359.7247,-367.3102C4396.8293,-358.8616 4440.0765,-346.5823 4453.5,-333 4474.9569,-311.2893 4472.5,-297.5246 4472.5,-267 4472.5,-267 4472.5,-267 4472.5,-205.5 4472.5,-137.8185 4409.0585,-143.3221 4344.5,-123 4213.3141,-81.7046 3206.08,-73.0367 3003.8094,-71.7064"/>
+<polygon fill="#191970" stroke="#191970" points="4358.9533,-363.8961 4349.9503,-369.4815 4360.4713,-370.7295 4358.9533,-363.8961"/>
+</g>
+<!-- Node74&#45;&gt;Node11 -->
+<g id="edge125" class="edge">
+<title>Node74&#45;&gt;Node11</title>
+<path fill="none" stroke="#191970" d="M4281.5,-583.1575C4281.5,-574.155 4281.5,-563.9199 4281.5,-556.6427"/>
+<polygon fill="#191970" stroke="#191970" points="4278.0001,-583.2455 4281.5,-593.2455 4285.0001,-583.2456 4278.0001,-583.2455"/>
+</g>
+<!-- Node74&#45;&gt;Node19 -->
+<g id="edge126" class="edge">
+<title>Node74&#45;&gt;Node19</title>
+<path fill="none" stroke="#191970" d="M4331.4296,-590.9116C4403.0721,-572.0871 4526.5,-533.49 4526.5,-491 4526.5,-491 4526.5,-491 4526.5,-435 4526.5,-344.1142 4168.5999,-344.4318 4087.5,-333 4084.6311,-332.5956 4081.6931,-332.1748 4078.7268,-331.7447"/>
+<polygon fill="#191970" stroke="#191970" points="4330.4861,-587.5404 4321.6824,-593.4349 4332.2405,-594.317 4330.4861,-587.5404"/>
 </g>
 </g>
 </svg>

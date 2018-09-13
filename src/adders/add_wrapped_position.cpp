@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-AddWrappedPosition: stands for Adder for Wrapped Postisions.
-
-create: 2018/07/07 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_wrapped_position.cpp
+  @brief This file has implementations of the AddWrappedPosition class,
+  which is a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/07/07
+  @details For more details, please see the header file,
+  src/adders/add_wrapped_position.h.
+*/
 
 #include "add_wrapped_position.h"
 
@@ -56,3 +60,5 @@ void AddWrappedPosition::compute_impl(
 
   datakeys.add({"x", "y", "z"});
 }
+
+/* ------------------------------------------------------------------ */

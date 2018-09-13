@@ -1,3 +1,10 @@
+/*!
+  @file src/pybind/adders/adder.h
+  @brief This file has a function to bind Adder class to Python.
+  @author Takayuki Kobayashi
+  @date 2018/06/29
+*/
+
 #ifndef PYBIND_ADDER_H
 #define PYBIND_ADDER_H
 

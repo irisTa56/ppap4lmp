@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['n_5fremain',['n_remain',['../classElement.html#a678d35749bc335254f3fd4a4cc135d83',1,'Element']]]
+  ['generator_5fdict',['generator_dict',['../classGenDict.html#ad9aa3218f199683f3193b770148638ab',1,'GenDict']]],
+  ['generator_5flist',['generator_list',['../classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0',1,'GenList']]]
 ];

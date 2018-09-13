@@ -1,3 +1,10 @@
+/*!
+  @file src/pybind/adders/add_map.h
+  @brief This file has a function to bind AddMap class to Python.
+  @author Takayuki Kobayashi
+  @date 2018/06/26
+*/
+
 #ifndef PYBIND_ADD_MAP_H
 #define PYBIND_ADD_MAP_H
 

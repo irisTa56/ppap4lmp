@@ -1,3 +1,11 @@
+/*!
+  @file src/pybind/adders/add_molecular_orientation.h
+  @brief This file has a function to bind AddMolecularOrientation class
+  to Python.
+  @author Takayuki Kobayashi
+  @date 2018/07/16
+*/
+
 #ifndef PYBIND_ADD_MOLECULAR_ORIENTATION_H
 #define PYBIND_ADD_MOLECULAR_ORIENTATION_H
 

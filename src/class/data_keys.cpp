@@ -4,7 +4,8 @@
   owned by Element class.
   @author Takayuki Kobayashi
   @date 2018/09/09
-  @details Please see the header file for more details.
+  @details For more details, please see the header file,
+  src/class/data_keys.h.
 */
 
 #include <algorithm>

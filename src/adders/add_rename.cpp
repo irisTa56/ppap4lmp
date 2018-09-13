@@ -1,9 +1,12 @@
-/* ---------------------------------------------------------------------
-AddRename: stands for Adder to create new property by Renaming existing
-property.
-
-create: 2018/08/17 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/adders/add_rename.cpp
+  @brief This file has implementations of the AddRename class, which is
+  a subclass of the Adder class.
+  @author Takayuki Kobayashi
+  @date 2018/08/17
+  @details For more details, please see the header file,
+  src/adders/add_rename.h.
+*/
 
 #include "add_rename.h"
 #include "../utils/runtime_error.h"
@@ -62,3 +65,5 @@ ShPtr<AddRename> AddRename::overwrite(
 
   return shared_from_this();
 }
+
+/* ------------------------------------------------------------------ */

@@ -141,10 +141,10 @@ void ProRadialDistributionFunction::run_impl(
 
             auto r = sqrt(r2);
 
-            auto index = bin_from_r ?
+            auto r_index = bin_from_r ?
               floor(r*reciprocal_width) : round(r*reciprocal_width);
 
-            counts(index) += 2;  // i -> j & j -> i
+            counts(r_index) += 2;  // i -> j & j -> i
           }
         }
       }

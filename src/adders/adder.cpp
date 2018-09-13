@@ -4,7 +4,8 @@
   subclass of the Updater class.
   @author Takayuki Kobayashi
   @date 2018/06/29
-  @details Please see the header file for more details.
+  @details For more details, please see the header file,
+  src/adders/adder.h.
 */
 
 #include "adder.h"
