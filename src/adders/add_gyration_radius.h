@@ -13,10 +13,10 @@
 
 /*!
   @brief \e AddGyrationRadius stands for Adder for Gyration Radius.
-  @details This class inherits Adder class and and
+  @details This class inherits Adder class and
   ::EnShThis<#AddGyrationRadius>, and overrides Adder::compute_impl.
   This class computes radius of gyration of molecules (or something
-  else) from their inertia moment. About usage in Python, please see
+  else) from their inertia moments. About usage in Python, please see
   src/pybind/adders/add_gyration_radius.h.
   <p>
   Name (key) of property to be added (by default):
@@ -73,19 +73,18 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
  public:
   /*!
     @brief Constructor of AddGyrationRadius class (default).
-    @return Instance of this class.
   */
   using Adder::Adder;
   virtual ~AddGyrationRadius() = default;
   /*!
-    @brief Switch #add_squared (to true default by default).
+    @brief Switch #add_squared (to true by default).
     @param add_squared_ : A boolean to be assigned to #add_squared.
     @return Shared pointer to this instance.
   */
   ShPtr<AddGyrationRadius> with_squared(
     bool add_squared_ = true);
   /*!
-    @brief Switch #add_sqrted (to false default by default).
+    @brief Switch #add_sqrted (to false by default).
     @param without_sqrted_ : A boolean whose negation is assigned to
     #add_sqrted.
     @return Shared pointer to this instance.

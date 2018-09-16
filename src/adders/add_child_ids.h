@@ -62,7 +62,6 @@ class AddChildIDs : public Adder {
     @param child_name_ : A string for name of the \e children instance.
     @param key_for_parent_id_ : A string for key in the \e children
     instance corresponding to \c id of \e parent instance.
-    @return Instance of this class.
     @details The \c elem, \c child_name_ and \c key_for_parent_id_ are
     assigned to the #ext_generator, #child_name and #key_for_parent_id,
     respectively.

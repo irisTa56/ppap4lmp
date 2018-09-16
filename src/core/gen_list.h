@@ -29,7 +29,6 @@ class GenList : public Generator {
     @brief Constructor of GenList class.
     @param generator_list_ : A list of shared pointers to
     Generator instance.
-    @return Instance of this class.
     @details The argument is stored to the #generator_list as it is.
     This constructor is thread-unsafe because it accesses its members
     thread-globally. Ensure this constructor is called (indirectly)

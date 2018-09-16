@@ -87,7 +87,7 @@ Collaboration diagram for AddMolecularOrientation:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a886b802585d1dfa299dd9f42e3eef29e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:a886b802585d1dfa299dd9f42e3eef29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation to update the data.  <a href="#a886b802585d1dfa299dd9f42e3eef29e">More...</a><br /></td></tr>
+<tr class="memdesc:a886b802585d1dfa299dd9f42e3eef29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a reference.  <a href="#a886b802585d1dfa299dd9f42e3eef29e">More...</a><br /></td></tr>
 <tr class="separator:a886b802585d1dfa299dd9f42e3eef29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
@@ -120,7 +120,22 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><em><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation stands for Adder for Molecular Orientation. ">AddMolecularOrientation</a></em> stands for <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> for Molecular Orientation. </p>
-<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Adder::compute_impl</a>. About usage in Python, please see <a class="el" href="pybind_2adders_2add__molecular__orientation_8h.html" title="This file has a function to bind AddMolecularOrientation class to Python. ">src/pybind/adders/add_molecular_orientation.h</a>. </p>
+<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Adder::compute_impl</a>. This class computes orientation (a.k.a. order parameter) of molecules from their inertia moments. To compute the orientation, a direction of eigenvector corresponding the minimum eigenvalue of the inertia moment (that is, long axis of the molecule) is used for each molecule. About usage in Python, please see <a class="el" href="pybind_2adders_2add__molecular__orientation_8h.html" title="This file has a function to bind AddMolecularOrientation class to Python. ">src/pybind/adders/add_molecular_orientation.h</a>. </p>
+<p>Name (key) of property to be added:</p><ul>
+<li><code>I_values</code> (array of float; eigenvalues of inertia moment)</li>
+<li><code>I_vectors</code> (array of array of float; eigenvectors of inertia moment)</li>
+<li><code>S_x</code> (float)</li>
+<li><code>S_y</code> (float)</li>
+<li><code>S_z</code> (float) </li>
+</ul>
+<p>Name (key) of property to be required:</p><ul>
+<li><code>I_xx</code> (float)</li>
+<li><code>I_yy</code> (float)</li>
+<li><code>I_zz</code> (float)</li>
+<li><code>I_xy</code> (float)</li>
+<li><code>I_xz</code> (float)</li>
+<li><code>I_yz</code> (float) </li>
+</ul>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a886b802585d1dfa299dd9f42e3eef29e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a886b802585d1dfa299dd9f42e3eef29e">&#9670;&nbsp;</a></span>compute_impl()</h2>
@@ -135,13 +150,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void AddMolecularOrientation::compute_impl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classDataKeys.html">DataKeys</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>datakeys</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -156,8 +171,16 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of computation to update the data. </p>
-<p>This is a pure virtual function, please see the subclasses for more details. </p>
+<p>Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> where computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<p>I'm sorry to say that source code is the best documentation for this method... </p>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 <div class="dynheader">

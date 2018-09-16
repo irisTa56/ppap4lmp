@@ -17,8 +17,7 @@
   @details This class inherits Adder class and overrides
   Adder::compute_impl. An Element instance, which an instance of this
   class is appended to, consists of (that is, is started from) an
-  Element instance stored as the #ext_generator. You can probably find
-  a definition of the center of mass elsewhere. About usage in Python,
+  Element instance stored as the #ext_generator. About usage in Python,
   please see src/pybind/adders/add_com_position.h.
   <p>
   Name (key) of property to be added:
@@ -74,9 +73,8 @@ class AddCoMPosition : public Adder {
   /*!
     @brief Constructor of AddCoMPosition class.
     @param elem : Shared pointer to an Element instance, which is used
-    when one creates another Element instance where this AddCoMPosition
-    instance is appended to.
-    @return Instance of this class.
+    for creating another Element instance where the constructed instance
+    is appended to.
     @details The \c elem is assigned to the #ext_generator.
   */
   AddCoMPosition(

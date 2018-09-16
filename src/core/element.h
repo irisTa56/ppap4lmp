@@ -107,7 +107,6 @@ class Element : public Generator, public EnShThis<Element> {
  public:
   /*!
     @brief Constructor of Element class.
-    @return Instance of this class.
     @details This constructor is thread-unsafe because it accesses its
     members thread-globally. Ensure this constructor is called
     (indirectly) from Python and not called in a multithreads context.

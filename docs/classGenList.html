@@ -153,11 +153,10 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor of <a class="el" href="classGenList.html" title="GenList stands for Generator List (or vector). ">GenList</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">generator_list_</td><td>: A list of shared pointers to <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> instance. </td></tr>
+    <tr><td class="paramname">generator_list_</td><td>: A list of shared pointers to <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> instance.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Instance of this class.</dd></dl>
 <p>The argument is stored to the <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0" title="List of shared pointers of Generator. The core of GenList class. ">generator_list</a> as it is. This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is called (indirectly) from Python (such as constructors of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a>, <a class="el" href="classProcessor.html">Processor</a> and their subclasses) and not called in a multithreads context. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>

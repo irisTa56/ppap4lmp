@@ -63,7 +63,6 @@ class AddChildPositions : public Adder {
     @brief Constructor of AddChildPositions class.
     @param elem : Shared pointer to \e children instance.
     @param child_name_ : A string for name of the \e children instance.
-    @return Instance of this class.
     @details The \c elem and \c child_name_ are assigned to the
     #ext_generator and #child_name respectively.
   */

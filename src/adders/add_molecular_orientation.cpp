@@ -24,12 +24,12 @@ void AddMolecularOrientation::compute_impl(
   {
     // compute principal values and vectors
 
-    MatrixXd inertia_moment(3, 3);
+    Matrix3d inertia_moment;
     inertia_moment << d["I_xx"], d["I_xy"], d["I_xz"],
                       d["I_xy"], d["I_yy"], d["I_yz"],
                       d["I_xz"], d["I_yz"], d["I_zz"];
 
-    Eigen::EigenSolver<MatrixXd> solver(inertia_moment);
+    Eigen::EigenSolver<Matrix3d> solver(inertia_moment);
 
     // eigens are real since inertia moment is symmetric
     ArrayXd evals = solver.eigenvalues().real();

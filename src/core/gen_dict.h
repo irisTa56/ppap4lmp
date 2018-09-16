@@ -29,7 +29,6 @@ class GenDict : public Generator {
     @brief Constructor of GenDict class.
     @param generator_dict_ : A dictionary of shared pointers to
     Generator instance.
-    @return Instance of this class.
     @details The argument is stored to the #generator_dict as it is.
     This constructor is thread-unsafe because it accesses its members
     thread-globally. Ensure this constructor is called (indirectly)

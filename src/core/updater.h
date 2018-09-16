@@ -72,7 +72,6 @@ class Updater {
  public:
   /*!
     @brief Constructor of Updater class.
-    @return Instance of this class.
     @details This constructor is thread-unsafe because it accesses its
     members thread-globally. Ensure this constructor is called
     (indirectly) from Python and not called in a multithreads context.

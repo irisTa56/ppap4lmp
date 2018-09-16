@@ -40,7 +40,7 @@ void AddInertiaMoment::compute_with_weights(
     RowArrayXd r_mol(3);
     r_mol << d["xu"], d["yu"], d["zu"];
 
-    MatrixXd sum = MatrixXd::Zero(3, 3);
+    Matrix3d sum = Matrix3d::Zero();
 
     auto &atom_ids = d["atom-ids"];
     auto &atom_weights = d["atom-weights"];
@@ -55,7 +55,7 @@ void AddInertiaMoment::compute_with_weights(
       auto index = id2index_atom[id];
       auto mass = ms_atom(index) * weight;
 
-      RowVectorXd dr = rs_atom.row(index) - r_mol;
+      RowVector3d dr = rs_atom.row(index) - r_mol;
 
       sum += mass * dr.transpose() * dr;
     }
@@ -91,14 +91,14 @@ void AddInertiaMoment::compute_without_weights(
     RowArrayXd r_mol(3);
     r_mol << d["xu"], d["yu"], d["zu"];
 
-    MatrixXd sum = MatrixXd::Zero(3, 3);
+    Matrix3d sum = Matrix3d::Zero();
 
     for (const int id : d["atom-ids"])
     {
       auto index = id2index_atom[id];
       auto mass = ms_atom(index);
 
-      RowVectorXd dr = rs_atom.row(index) - r_mol;
+      RowVector3d dr = rs_atom.row(index) - r_mol;
 
       sum += mass * dr.transpose() * dr;
     }

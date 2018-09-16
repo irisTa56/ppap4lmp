@@ -30,7 +30,6 @@ class DataKeys {
  public:
   /*!
     @brief Constructor of DataKeys class (default).
-    @return Instance of this class.
   */
   DataKeys() = default;
   virtual ~DataKeys() = default;
