@@ -9,6 +9,7 @@ create: 2018/09/03 by Takayuki Kobayashi
 
 #include "pro_radial_distribution_function_with_deformation.h"
 #include "../utils/message.h"
+#include "../utils/runtime_error.h"
 
 namespace ut = utils;
 
@@ -196,7 +197,14 @@ void ProRDFWD::run_impl(
               ut::warning("Margin is too small");
             }
 
-            if (r_max <= r_modified) continue;
+            if (r_max <= r_modified)
+            {
+              continue;
+            }
+            else if (r_max < 0.0)
+            {
+              ut::runtime_error("Deformation might be too large");
+            }
 
             auto r_index = bin_from_r ?
               floor(r_modified*reciprocal_width) :
