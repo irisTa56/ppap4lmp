@@ -50,8 +50,8 @@ class AddSpecialBonds : public Adder {
   /*!
     @brief Constructor of AddSpecialBonds class for one type of
     molecule.
-    @param el_mols : Shared pointer to an Element instance created from
-    another Element instance where the constructed instance is appended
+    @param el_mols : Shared pointer to an Element object created from
+    another Element object where the constructed object is appended
     to.
     @param scheme : Vector of vector of index of atoms in a molecule
     representing special bonds.
@@ -65,8 +65,8 @@ class AddSpecialBonds : public Adder {
   /*!
     @brief Constructor of AddSpecialBonds class for multiple types of
     molecule.
-    @param el_mols : Shared pointer to an Element instance created from
-    another Element instance where the constructed instance is appended
+    @param el_mols : Shared pointer to an Element object created from
+    another Element object where the constructed object is appended
     to.
     @param schemes : Map from types of molecule to vector of vector of
     index of atoms in a molecule representing special bonds for the

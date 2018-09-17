@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -72,19 +73,20 @@ $(function() {
 <div class="title">element.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This file is for binding <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class to Python.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="alias_2pybind_8h_source.html">alias/pybind.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="core_2element_8h_source.html">core/element.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for element.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="pybind_2element_8h__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="pybind_2element_8h__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pybind_2element_8h__dep__incl.svg" width="154" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pybind_2element_8h__dep__incl.svg" width="154" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="pybind_2element_8h_source.html">Go to the source code of this file.</a></p>
@@ -92,14 +94,76 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPyElement.html">PyElement</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trampoline class to bind <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class to Python.  <a href="classPyElement.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a32471b3cace9ede01900bfbdaca5e16a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pybind_2element_8h.html#a32471b3cace9ede01900bfbdaca5e16a">pybind_element</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:a32471b3cace9ede01900bfbdaca5e16a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class to Python.  <a href="#a32471b3cace9ede01900bfbdaca5e16a">More...</a><br /></td></tr>
 <tr class="separator:a32471b3cace9ede01900bfbdaca5e16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file is for binding <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class to Python. </p>
+<dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2018/07/01</dd></dl>
+<p><b>Python-side methods of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class</b>: </p><table class="py_table">
+<tr class="py_tr">
+<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><code>append_updater</code>  </td><td class="py_td"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an object of Updater class to this object. Can be called from Python. ">Element::append_updater</a> </td><td class="py_td">Append an object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a>'s or <a class="el" href="classFilter.html">Filter</a>'s subclass to this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object.  </td><td class="py_td"><ul class="py_ul">
+<li>
+An object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a>'s or <a class="el" href="classFilter.html">Filter</a>'s subclass.  </li>
+</ul>
+</td><td class="py_td">This <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object.   </td></tr>
+<tr class="py_tr">
+<td class="py_td"><code>get_data</code>  </td><td class="py_td"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388" title="Wrapper for the get_data method which returns a reference. Can be called from Python as get_data...">Element::get_data_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> of this object as a complex of <em>dict</em> and <em>list</em>.  </td><td class="py_td"><ul class="py_ul">
+<li>
+None.  </li>
+</ul>
+</td><td class="py_td">Json-like object consisting of <em>dict</em> and <em>list</em>.   </td></tr>
+<tr class="py_tr">
+<td class="py_td"><code>get_keys</code>  </td><td class="py_td"><a class="el" href="classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Wrapper for the get_keys method. Can be called from Python as get_keys. ">Element::get_keys_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">Element::datakeys</a> of this object as a set of strings.  </td><td class="py_td"><ul class="py_ul">
+<li>
+None.  </li>
+</ul>
+</td><td class="py_td">Set of strings.   </td></tr>
+<tr class="py_tr">
+<td class="py_td"><code>get_1d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Wrapper for the array1d method for integer values. Can be called from Python as get_1d_int. ">Element::get_1d_int_py</a> </td><td class="py_td">Get values of an integer property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
+<li>
+String key specifying a property to be extracted.  </li>
+</ul>
+</td><td class="py_td">One-dimensional Numpy-Array whose elements are integers.   </td></tr>
+<tr class="py_tr">
+<td class="py_td"><code>get_1d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a3f11848589faad4cbca8119385887713" title="Wrapper for the array1d method for float (double in C++) values. Can be called from Python as get_1d_...">Element::get_1d_float_py</a> </td><td class="py_td">Get values of a float property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
+<li>
+String key specifying a property to be extracted.  </li>
+</ul>
+</td><td class="py_td">One-dimensional Numpy-Array whose elements are floats.   </td></tr>
+<tr class="py_tr">
+<td class="py_td"><code>get_2d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Wrapper for the array2d method for integer values. Can be called from Python as get_2d_int. ">Element::get_2d_int_py</a> </td><td class="py_td">Get values of multiple integer properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
+<li>
+A variable number of string keys specifying properties to be extracted.  </li>
+</ul>
+</td><td class="py_td">Two-dimensional Numpy-Array whose elements are integers.   </td></tr>
+<tr class="py_tr">
+<td class="py_td"><code>get_2d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Wrapper for the array2d method for float (double in C++) values. Can be called from Python as get_2d_...">Element::get_2d_float_py</a> </td><td class="py_td">Get values of multiple float properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
+<li>
+A variable number of string keys specifying properties to be extracted.  </li>
+</ul>
+</td><td class="py_td">Two-dimensional Numpy-Array whose elements are floats.   </td></tr>
+</table>
+<p><b>Python-side functions</b>: </p><table class="py_table">
+<tr class="py_tr">
+<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><code>create</code>  </td><td class="py_td">Lambda. </td><td class="py_td">Factory function for <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class. This function takes one argument, an object of <a class="el" href="classStarter.html">Starter</a>'s subclass (such class is prefixed by <code>Sta</code>) which adds some properties to empty data of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object.  </td><td class="py_td"><ul class="py_ul">
+<li>
+An object of <a class="el" href="classStarter.html">Starter</a>'s subclass.  </li>
+</ul>
+</td><td class="py_td">An object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class.   </td></tr>
+</table>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a32471b3cace9ede01900bfbdaca5e16a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32471b3cace9ede01900bfbdaca5e16a">&#9670;&nbsp;</a></span>pybind_element()</h2>
 
@@ -123,17 +187,13 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Function to bind <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class to Python. </p>
+<p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class is hidden from Python. A Python-side function <b>create</b> provides functionality to create an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class with an object of <a class="el" href="classStarter.html">Starter</a>'s subclass. Such a function is required to make <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a> from shared pointers to the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object and <a class="el" href="classStarter.html">Starter</a> object taken as the argument; because constructor cannot call <code>shared_from_this()</code> and therefore cannot make <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a>. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="pybind_2element_8h_a32471b3cace9ede01900bfbdaca5e16a_cgraph.svg" width="100%" height="587"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pybind_2element_8h_a32471b3cace9ede01900bfbdaca5e16a_icgraph.svg" width="319" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="pybind_2element_8h_a32471b3cace9ede01900bfbdaca5e16a_cgraph.svg" width="100%" height="566"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>

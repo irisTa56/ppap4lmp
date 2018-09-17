@@ -1,0 +1,28 @@
+.py_table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.py_table, .py_td, .py_th {
+  border: 1px solid black;
+}
+
+.py_td {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.py_tr:hover {background-color: #f5f5f5;}
+
+.py_th {
+  background-color: rgb(61, 88, 207);
+  color: white;
+}
+
+.py_ul {
+  margin-left: -20px;
+  text-align: left;
+}

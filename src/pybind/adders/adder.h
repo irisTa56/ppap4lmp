@@ -11,6 +11,11 @@
 #include <adders/adder.h>
 #include <pybind/updater.h>
 
+/*!
+  @brief Function to bind Adder class to Python.
+  @details Constructor of Adder class is hidden from Python, because
+  the class is an abstract.
+*/
 static void pybind_adder(py::module &m)
 {
   py::class_<

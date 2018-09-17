@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['remove',['remove',['../classDataKeys.html#ac06bc8ecc2ff5a774c358f85df959b19',1,'DataKeys']]],
-  ['remove_5ffrom_5fblacklist',['remove_from_blacklist',['../classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b',1,'Updater']]],
-  ['required',['required',['../classDataKeys.html#a03517cffe825c983c3582ffb55318a7b',1,'DataKeys::required()'],['../classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517',1,'Element::required()']]]
+  ['pybind_5fadder',['pybind_adder',['../pybind_2adders_2adder_8h.html#a7413cb814115262dc0e0e530c9aa6edf',1,'adder.h']]],
+  ['pybind_5felement',['pybind_element',['../pybind_2element_8h.html#a32471b3cace9ede01900bfbdaca5e16a',1,'element.h']]],
+  ['pybind_5fupdater',['pybind_updater',['../pybind_2updater_8h.html#a76252e83c0e3a6b7f064c72b77a653b2',1,'updater.h']]]
 ];

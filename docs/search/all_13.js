@@ -5,5 +5,5 @@ var searchData=
   ['updatepair',['UpdatePair',['../generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26',1,'generator.h']]],
   ['updater',['Updater',['../classUpdater.html',1,'Updater'],['../classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549',1,'Updater::Updater()']]],
   ['updater_2ecpp',['updater.cpp',['../updater_8cpp.html',1,'']]],
-  ['updater_2eh',['updater.h',['../core_2updater_8h.html',1,'']]]
+  ['updater_2eh',['updater.h',['../core_2updater_8h.html',1,'(Global Namespace)'],['../pybind_2updater_8h.html',1,'(Global Namespace)']]]
 ];

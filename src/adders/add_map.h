@@ -72,13 +72,13 @@ class AddMap : public Adder, public EnShThis<AddMap> {
     @param key_ref_ : A string key for an existing property to be used
     as domain of mapping.
     @param key_new_ : A string key for a new property to be added.
-    @param mapping_ : ::Map from ::Json to ::Json. Constructed instance
+    @param mapping_ : ::Map from ::Json to ::Json. Constructed object
     conducts mapping process defined by this argument.
     @details The \c key_ref_, \c key_new_ and \c mapping_ are assigned
     to the #key_ref, #key_new and #mapping, respectively. Note that
     domain of the \c mapping_ must cover all values of property
     specified by \c key_ref_; the property is stored in an Element
-    instance where the constructed instance is appended to.
+    object where the constructed object is appended to.
   */
   AddMap(
     const Str &key_ref_,
@@ -88,7 +88,7 @@ class AddMap : public Adder, public EnShThis<AddMap> {
   /*!
     @brief Switch #do_overwrite (to true by default).
     @param do_overwrite_ : A boolean to be assigned to #do_overwrite.
-    @return Shared pointer to this instance.
+    @return Shared pointer to this object.
   */
   ShPtr<AddMap> overwrite(
     bool do_overwrite_ = true);

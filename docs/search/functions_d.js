@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['with_5fsquared',['with_squared',['../classAddGyrationRadius.html#a36cdb31db55a78681aada61ac5651bc9',1,'AddGyrationRadius']]],
-  ['without_5fsqrted',['without_sqrted',['../classAddGyrationRadius.html#a0919259a47f76c08c86f54156bdb2ac6',1,'AddGyrationRadius']]]
+  ['update_5fdata',['update_data',['../classElement.html#aae8f7d596f055b36ea44206bbef38c73',1,'Element']]],
+  ['updater',['Updater',['../classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549',1,'Updater']]]
 ];

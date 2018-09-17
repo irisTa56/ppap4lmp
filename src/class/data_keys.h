@@ -15,7 +15,7 @@
 /*!
   @brief \e DataKeys is a small class owning a set of string keys for
   Element::data.
-  @details An instance of this class is owned by an Element instance to
+  @details An object of this class is owned by an Element object to
   check whether keys for property of the data exists quickly. Checking
   against the Element::data itself is a very time consuming process if
   it is an array data.
@@ -62,21 +62,21 @@ class DataKeys {
   void remove(
     const Json &key_);
   /*!
-    @brief Check if this instance has required key(s).
+    @brief Check if this object has required key(s).
     @param key_ : ::Json for either a key or an array of keys to be
     required.
     @return None.
-    @details If this instance does not have the given required key(s),
+    @details If this object does not have the given required key(s),
     a runtime error is thrown in C++ (and also raised in Python).
   */
   void required(
     const Json &key_);
   /*!
-    @brief Check if this instance has optional key(s).
+    @brief Check if this object has optional key(s).
     @param key_ : ::Json for either a key or an array of keys to be
     checked.
     @return Boolean.
-    @details If this instance has the given key(s), it returns true. If
+    @details If this object has the given key(s), it returns true. If
     not, it returns false.
   */
   bool optional(

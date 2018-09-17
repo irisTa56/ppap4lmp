@@ -23,19 +23,19 @@
   ::EnShThis<#Element>. Element class is different from the Generator
   class and its subclasses (except for this class) by owning data
   \e element (or entity, object). The data is stored as a ::Json
-  instance, #data, and a set of the keys (or property names, attributes)
-  of the data is stored as a DataKeys instance, #datakeys. This class
+  object, #data, and a set of the keys (or property names, attributes)
+  of the data is stored as a DataKeys object, #datakeys. This class
   can update its own data by calling #update_data where a mutable
-  reference of #data is passed to an Updater instance.
+  reference of #data is passed to an Updater object.
 */
 class Element : public Generator, public EnShThis<Element> {
   /*!
-    @brief The number of created instances of Element class.
+    @brief The number of created instances (objects) of Element class.
     @details This member is only used for setting #dataid.
   */
   static int instance_count;
   /*!
-    @brief The number of times this instance will be used in the
+    @brief The number of times this object will be used in the
     future.
     @details This member can be incremented by #increment_remain and
     decremented by #decrement_remain. If this member becomes 0 in
@@ -43,14 +43,14 @@ class Element : public Generator, public EnShThis<Element> {
   */
   int n_remain = 0;
   /*!
-    @brief Unique ID for an instance of Element class.
+    @brief Unique ID for an object of Element class.
     @details This member is used to prevent duplication of updating
     process of the data. For more details, please see Updater class.
   */
   int dataid;
   /*!
     @brief Data \e element (or entity, object) itself.
-    @details This member is an instance of ::Json, which is a very
+    @details This member is an object of ::Json, which is a very
     flexible data container consisting of hierarchically organized
     pairs of a string key and int/bool/double/string/array value. This
     can store data of Box, Atoms, Molecules, Beads, Cube ... and more!!
@@ -81,21 +81,21 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief This method decrements #n_remain.
     @return None.
-    @details If one increments #n_remain of this instance before using
+    @details If one increments #n_remain of this object before using
     the #data and then decrements it after using the #data, the #data
     is cleared to save memory. This system is convenient to access
     #data multiple times and save memory at the same time.
   */
   void decrement_remain();
   /*!
-    @brief This method updates #data of this instance.
-    @param upd : Shared pointer to an Updater instance updating the
+    @brief This method updates #data of this object.
+    @param upd : Shared pointer to an Updater object updating the
     #data.
     @return None.
-    @details This method updates the #data using an instance of Updater
-    taken as \c upd. This instance and the Updater instance are paired
+    @details This method updates the #data using an object of Updater
+    taken as \c upd. This object and the Updater object are paired
     as ::UpdatePair by #append_updater in advance. In this method, the
-    #data, #datakeys and #dataid are passed to the Updater instance.
+    #data, #datakeys and #dataid are passed to the Updater object.
   */
   void update_data(
     const ShPtr<Updater> &upd);
@@ -114,59 +114,59 @@ class Element : public Generator, public EnShThis<Element> {
   Element();
   virtual ~Element() = default;
   /*!
-    @brief Get this instance as a shared pointer of Element class.
+    @brief Get this object as a shared pointer of Element class.
     @param name : ::Json (default is \c nullptr).
-    @return Shared pointer of this Element instance.
+    @return Shared pointer of this Element object.
     @details One needs to get as Element when accessing the data. The
     argument \c name must be left as default.
   */
   virtual ShPtr<Element> get_element(
     const Json &name = nullptr) override;
   /*!
-    @brief Get this instance as a shared pointer of Generator class.
+    @brief Get this object as a shared pointer of Generator class.
     @param name : ::Json (default is \c nullptr).
-    @return Shared pointer of this Generator instance.
-    @details One needs to get as Generator when storing the instance.
+    @return Shared pointer of this Generator object.
+    @details One needs to get as Generator when storing the object.
     The argument \c name must be left as default.
   */
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;
   /*!
-    @brief Append an instance of Updater class to this instance. <b>Can
+    @brief Append an object of Updater class to this object. <b>Can
     be called from Python</b>.
-    @param upd : Shared pointer to an Updater instance to be appended
-    to this instance.
-    @return Shared pointer of this Element instance.
-    @details To update the data, one creates an instance of Updater
-    class in Python and appends it to an instance of Element class.
+    @param upd : Shared pointer to an Updater object to be appended
+    to this object.
+    @return Shared pointer of this Element object.
+    @details To update the data, one creates an object of Updater
+    class in Python and appends it to an object of Element class.
     Generator::update_chain stored in Updater::ext_generator of the
-    Updater instance, which is taken as \c upd, will be merged to
-    Generator::update_chain of this instance; then the pair consisting
-    of this instance and the Updater instance will be added to
-    Generator::update_chain of this instance. Please also see Generator
+    Updater object, which is taken as \c upd, will be merged to
+    Generator::update_chain of this object; then the pair consisting
+    of this object and the Updater object will be added to
+    Generator::update_chain of this object. Please also see Generator
     and Updater class.
   */
   ShPtr<Element> append_updater(
     const ShPtr<Updater> &upd);
   /*!
-    @brief Get the reference to #data of this instance.
+    @brief Get the reference to #data of this object.
     @return Constant reference to ::Json.
-    @details One can refer the whole data stored in this instance by
+    @details One can refer the whole data stored in this object by
     this method.
   */
   const Json &get_data();
   /*!
-    @brief Get the partial data of this instance.
+    @brief Get the partial data of this object.
     @param key_ : ::Json for either a key or an array of keys.
     @return ::Json (not a reference).
-    @details One can get the partial data stored in this instance by
+    @details One can get the partial data stored in this object by
     this method. To select which data is included, specify a key or an
     array of keys as \c key_.
   */
   Json get_data(
     const Json &key_);
   /*!
-    @brief Get keys of the data of this instance.
+    @brief Get keys of the data of this object.
     @return Constant reference to DataKeys.
     @details One can get the keys (property names) in the data by this
     method.
@@ -203,7 +203,7 @@ class Element : public Generator, public EnShThis<Element> {
     @param key_ : ::Json for either a key or an array of keys.
     @return None.
     @details It is convenient that the method can be called without
-    getting DataKeys instance from this Element instance. For more
+    getting DataKeys object from this Element object. For more
     details, please see DataKeys class.
   */
   void required(
@@ -213,7 +213,7 @@ class Element : public Generator, public EnShThis<Element> {
     @param key_ : ::Json for either a key or an array of keys.
     @return bool.
     @details It is convenient that the method can be called without
-    getting DataKeys instance from this Element instance. For more
+    getting DataKeys object from this Element object. For more
     details, please see DataKeys class.
   */
   bool optional(
@@ -224,7 +224,7 @@ class Element : public Generator, public EnShThis<Element> {
     @return Constant reference to ::Json.
     @details This method provides a functionality to access the #data
     directly from Python. An updating process associated with this
-    instance is executed before getting the data.
+    object is executed before getting the data.
   */
   const Json &get_data_py();
   /*!
@@ -233,7 +233,7 @@ class Element : public Generator, public EnShThis<Element> {
     @return Constant reference to ::Set<#Str>.
     @details This method provides a functionality to access #datakeys
     directly from Python. An updating process associated with this
-    instance is executed before getting the set of keys.
+    object is executed before getting the set of keys.
   */
   const Set<Str> &get_keys_py();
   /*!
@@ -242,8 +242,8 @@ class Element : public Generator, public EnShThis<Element> {
     @param key : A string key specifying a property.
     @return ::ArrayXi (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
-    this instance directly from Python as an one-dimensional array. An
-    updating process associated with this instance is executed before
+    this object directly from Python as an one-dimensional array. An
+    updating process associated with this object is executed before
     getting the data.
   */
   ArrayXi get_1d_int_py(
@@ -254,8 +254,8 @@ class Element : public Generator, public EnShThis<Element> {
     @param key : A string key specifying a property.
     @return ::ArrayXd (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
-    this instance directly from Python as an one-dimensional array. An
-    updating process associated with this instance is executed before
+    this object directly from Python as an one-dimensional array. An
+    updating process associated with this object is executed before
     getting the data.
   */
   ArrayXd get_1d_float_py(
@@ -267,8 +267,8 @@ class Element : public Generator, public EnShThis<Element> {
     in Python).
     @return ::ArrayXXi (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
-    this instance directly from Python as a two-dimensional array. An
-    updating process associated with this instance is executed before
+    this object directly from Python as a two-dimensional array. An
+    updating process associated with this object is executed before
     getting the data.
   */
   ArrayXXi get_2d_int_py(
@@ -280,8 +280,8 @@ class Element : public Generator, public EnShThis<Element> {
     in Python).
     @return ::ArrayXXd (Numpy-Array in Python).
     @details This method provides a functionality to access the data of
-    this instance directly from Python as a two-dimensional array. An
-    updating process associated with this instance is executed before
+    this object directly from Python as a two-dimensional array. An
+    updating process associated with this object is executed before
     getting the data.
   */
   ArrayXXd get_2d_float_py(
@@ -292,7 +292,7 @@ class Element : public Generator, public EnShThis<Element> {
     from Python.
     @return None.
     @details This method runs updating process associated with this
-    instance so that a wrapper of getter can access the filled data.
+    object so that a wrapper of getter can access the filled data.
   */
   void init_for_python();
 };

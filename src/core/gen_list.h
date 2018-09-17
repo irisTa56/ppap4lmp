@@ -13,7 +13,7 @@
 /*!
   @brief \e GenList stands for Generator List (or vector).
   @details This class is a subclass of the Generator class and stores
-  an arbitrary number of Generator instance as a list (vector) of
+  an arbitrary number of Generator object as a list (vector) of
   shared pointers.
 */
 class GenList : public Generator {
@@ -28,7 +28,7 @@ class GenList : public Generator {
   /*!
     @brief Constructor of GenList class.
     @param generator_list_ : A list of shared pointers to
-    Generator instance.
+    Generator object.
     @details The argument is stored to the #generator_list as it is.
     This constructor is thread-unsafe because it accesses its members
     thread-globally. Ensure this constructor is called (indirectly)
@@ -54,7 +54,7 @@ class GenList : public Generator {
     Generator class.
     @param name : An index in the #generator_list.
     @return A value of the #generator_list.
-    @details One needs to get as Generator when storing the instance.
+    @details One needs to get as Generator when storing the object.
     The argument \c name must be an integer, which is an index of the
     #generator_list.
   */

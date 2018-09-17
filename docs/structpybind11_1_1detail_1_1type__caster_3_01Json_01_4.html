@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -146,7 +147,7 @@ struct pybind11::detail::type_caster&lt; Json &gt;</h3>
 </div><div class="memdoc">
 
 <p>Casting <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> from C++ to Python. </p>
-<p>First, a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> instance is serialized to a string by its <code>dump</code> method. Then the string is loaded by <code>loads</code> attribute of Python's <code>json</code> module and released as a complex of dict and list. This process might take a long time. So, using other containers is preferable (if you can). </p>
+<p>First, a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> object is serialized to a string by its <code>dump</code> method. Then the string is loaded by <code>loads</code> attribute of Python's <code>json</code> module and released as a complex of dict and list. This process might take a long time. So, using other containers is preferable (if you can). </p>
 
 </div>
 </div>
@@ -185,7 +186,7 @@ struct pybind11::detail::type_caster&lt; Json &gt;</h3>
 </div><div class="memdoc">
 
 <p>Loading <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> from Python and assigning it in C++. </p>
-<p>First, a JSON variable (complex of dict and list in Python) is dumped as a string by <code>dumps</code> attribute of Python's <code>json</code> module (serialization). Then the string is parsed by <code>parse</code> function of <em>nlohmann/json</em> and converted to a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> instance. This process might take a long time. So, using other containers is preferable (if you can). </p>
+<p>First, a JSON variable (complex of dict and list in Python) is dumped as a string by <code>dumps</code> attribute of Python's <code>json</code> module (serialization). Then the string is parsed by <code>parse</code> function of <em>nlohmann/json</em> and converted to a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> object. This process might take a long time. So, using other containers is preferable (if you can). </p>
 
 </div>
 </div>

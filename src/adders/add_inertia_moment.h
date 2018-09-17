@@ -76,8 +76,8 @@ class AddInertiaMoment : public Adder {
  public:
   /*!
     @brief Constructor of AddInertiaMoment class.
-    @param elem : Shared pointer to an Element instance, which is used
-    for creating another Element instance where the constructed instance
+    @param elem : Shared pointer to an Element object, which is used
+    for creating another Element object where the constructed object
     is appended to.
     @details The \c elem is assigned to the #ext_generator.
   */

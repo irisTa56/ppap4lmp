@@ -15,9 +15,9 @@
   @brief \e AddCoMPosition stands for Adder for Center of Mass added as
   Position, \c xu, \c yu and \c zu.
   @details This class inherits Adder class and overrides
-  Adder::compute_impl. An Element instance, which an instance of this
+  Adder::compute_impl. An Element object, which an object of this
   class is appended to, consists of (that is, is started from) an
-  Element instance stored as the #ext_generator. About usage in Python,
+  Element object stored as the #ext_generator. About usage in Python,
   please see src/pybind/adders/add_com_position.h.
   <p>
   Name (key) of property to be added:
@@ -72,8 +72,8 @@ class AddCoMPosition : public Adder {
  public:
   /*!
     @brief Constructor of AddCoMPosition class.
-    @param elem : Shared pointer to an Element instance, which is used
-    for creating another Element instance where the constructed instance
+    @param elem : Shared pointer to an Element object, which is used
+    for creating another Element object where the constructed object
     is appended to.
     @details The \c elem is assigned to the #ext_generator.
   */

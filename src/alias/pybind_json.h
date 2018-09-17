@@ -30,7 +30,7 @@ namespace pybind11
         Python) is dumped as a string by \c dumps attribute of Python's
         \c json module (serialization). Then the string is parsed by
         \c parse function of \e nlohmann/json and converted to a ::Json
-        instance. This process might take a long time. So, using other
+        object. This process might take a long time. So, using other
         containers is preferable (if you can).
       */
       bool load(handle src, bool)
@@ -50,7 +50,7 @@ namespace pybind11
 
       /*!
         @brief Casting ::Json from C++ to Python.
-        @details First, a ::Json instance is serialized to a string by
+        @details First, a ::Json object is serialized to a string by
         its \c dump  method. Then the string is loaded by \c loads
         attribute of Python's \c json module and released as a complex
         of dict and list. This process might take a long time. So,

@@ -13,7 +13,7 @@
 /*!
   @brief \e GenDict stands for Generator Dictionary (or map).
   @details This class is a subclass of the Generator class and stores
-  an arbitrary number of Generator instance as a dictionary (map) of
+  an arbitrary number of Generator object as a dictionary (map) of
   shared pointers.
 */
 class GenDict : public Generator {
@@ -28,7 +28,7 @@ class GenDict : public Generator {
   /*!
     @brief Constructor of GenDict class.
     @param generator_dict_ : A dictionary of shared pointers to
-    Generator instance.
+    Generator object.
     @details The argument is stored to the #generator_dict as it is.
     This constructor is thread-unsafe because it accesses its members
     thread-globally. Ensure this constructor is called (indirectly)
@@ -54,7 +54,7 @@ class GenDict : public Generator {
     Generator class.
     @param name : A string key in the #generator_dict.
     @return A value of the #generator_dict.
-    @details One needs to get as Generator when storing the instance.
+    @details One needs to get as Generator when storing the object.
     The argument \c name must be a string, which is a key for the value
     in #generator_dict.
   */

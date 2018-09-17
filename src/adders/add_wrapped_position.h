@@ -52,7 +52,7 @@ class AddWrappedPosition : public Adder {
  public:
   /*!
     @brief Constructor of AddWrappedPosition class.
-    @param elem : Shared pointer to an Element instance representing
+    @param elem : Shared pointer to an Element object representing
     the simulation box.
     @details The \c elem is assigned to the #ext_generator.
   */

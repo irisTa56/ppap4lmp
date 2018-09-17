@@ -65,7 +65,7 @@ class AddRename : public Adder, public EnShThis<AddRename> {
   /*!
     @brief Switch #do_overwrite (to true by default).
     @param do_overwrite_ : A boolean to be assigned to #do_overwrite.
-    @return Shared pointer to this instance.
+    @return Shared pointer to this object.
   */
   ShPtr<AddRename> overwrite(
     bool do_overwrite_ = true);
