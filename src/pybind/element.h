@@ -24,7 +24,7 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            An object of Adder's or Filter's subclass.
+            \c upd : An object of Adder's or Filter's subclass.
           </li>
         </ul>
       </td>
@@ -47,7 +47,7 @@
         </ul>
       </td>
       <td class="py_td">
-        Json-like object consisting of \e dict and \e list.
+        JSON-like object consisting of \e dict and \e list.
       </td>
     </tr>
     <tr class="py_tr">
@@ -77,7 +77,7 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            String key specifying a property to be extracted.
+            \c key : String key specifying a property to be extracted.
           </li>
         </ul>
       </td>
@@ -95,7 +95,7 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            String key specifying a property to be extracted.
+            \c key : String key specifying a property to be extracted.
           </li>
         </ul>
       </td>
@@ -113,8 +113,8 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            A variable number of string keys specifying properties to
-            be extracted.
+            \c *args : A variable number of string keys specifying
+            properties to be extracted.
           </li>
         </ul>
       </td>
@@ -132,8 +132,8 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            A variable number of string keys specifying properties to
-            be extracted.
+            \c *args : A variable number of string keys specifying
+            properties to be extracted.
           </li>
         </ul>
       </td>
@@ -164,7 +164,7 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            An object of Starter's subclass.
+            \c upd : An object of Starter's subclass.
           </li>
         </ul>
       </td>
@@ -217,21 +217,10 @@ static void pybind_element(py::module &m)
 {
   m.def(
     "create",
-    [](ShPtr<Updater> starter)
+    [](ShPtr<Updater> upd)
     {
-      return ElPtr(new Element())->append_updater(starter);
-    },
-    R"EOF(
-      Factory function for Element class. This function takes one
-      argument, an object of Starter's subclass (such class is
-      prefixed by 'Sta') which adds some properties to empty data
-      of the created Element object.
-
-      # argument
-        - An object of Starter's subclass.
-      # return
-        An object of Element class.
-    )EOF"
+      return ElPtr(new Element())->append_updater(upd);
+    }
   );
 
   py::class_<
@@ -239,95 +228,25 @@ static void pybind_element(py::module &m)
     .def(py::init<>())
     .def(
       "append_updater",
-      &Element::append_updater,
-      R"EOF(
-        Append an object of Adder's or Filter's subclass to this
-        Element object.
-
-        # argument
-          - An object of Adder's or Filter's subclass.
-        # return
-          This Element object.
-      )EOF"
-    )
+      &Element::append_updater)
     .def(
       "get_data",
-      &Element::get_data_py,
-      R"EOF(
-        Get data of this Element object as a complex of dict and list.
-
-        # argument
-          - None.
-        # return
-          Json-like object consisting of dict and list.
-      )EOF"
-    )
+      &Element::get_data_py)
     .def(
       "get_keys",
-      &Element::get_keys_py,
-      R"EOF(
-        Get datakeys of this Element object as a set of strings.
-
-        # argument
-          - None.
-        # return
-          Set of strings.
-      )EOF"
-    )
+      &Element::get_keys_py)
     .def(
       "get_1d_int",
-      &Element::get_1d_int_py,
-      R"EOF(
-        Get values of an integer property contained in data of this
-        Element object as an one-dimensional Numpy-Array.
-
-        # argument
-          - String key specifying a property to be extracted.
-        # return
-          One-dimensional Numpy-Array whose elements are integers.
-      )EOF"
-    )
+      &Element::get_1d_int_py)
     .def(
       "get_1d_float",
-      &Element::get_1d_float_py,
-      R"EOF(
-        Get values of a float property contained in data of this
-        Element object as an one-dimensional Numpy-Array.
-
-        # argument
-          - String key specifying a property to be extracted.
-        # return
-          One-dimensional Numpy-Array whose elements are floats.
-      )EOF"
-    )
+      &Element::get_1d_float_py)
     .def(
       "get_2d_int",
-      &Element::get_2d_int_py,
-      R"EOF(
-        Get values of multiple integer properties contained  in data
-        of this Element object as a two-dimensional Numpy-Array.
-
-        # argument
-          - A variable number of string keys specifying properties
-            to be extracted.
-        # return
-          Two-dimensional Numpy-Array whose elements are integers.
-      )EOF"
-    )
+      &Element::get_2d_int_py)
     .def(
       "get_2d_float",
-      &Element::get_2d_float_py,
-      R"EOF(
-        Get values of multiple float properties contained  in data
-        of this Element object as a two-dimensional Numpy-Array.
-
-        # argument
-          - A variable number of string keys specifying properties
-            to be extracted.
-        # return
-          Two-dimensional Numpy-Array whose elements are floats.
-      )EOF"
-    );
+      &Element::get_2d_float_py);
 }
 
 #endif

@@ -138,7 +138,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><em><a class="el" href="classAddSpecialBonds.html" title="AddSpecialBonds stands for Adder for Special Bonds. ">AddSpecialBonds</a></em> stands for <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> for Special Bonds. </p>
-<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Adder::compute_impl</a>. Special bonds is a property for atoms (or beads) belonging to the same molecule; if an atom has another atom as one of its special bonds, the two atoms are considered to interact with each other through bonded potential(s) (bond-length, bond-angle ...). For more details about special bonds, please see Lammps documentation: <a href="https://lammps.sandia.gov/doc/special_bonds.html">https://lammps.sandia.gov/doc/special_bonds.html</a>. About usage in Python, please see <a class="el" href="pybind_2adders_2add__special__bonds_8h.html" title="This file has a function to bind AddSpecialBonds class to Python. ">src/pybind/adders/add_special_bonds.h</a>. Name (key) of property to be added:</p><ul>
+<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Adder::compute_impl</a>. Special bonds is a property for atoms (or beads) belonging to the same molecule; if an atom has another atom as one of its special bonds, the two atoms are considered to interact with each other through bonded potential(s) (bond-length, bond-angle ...). For more details about special bonds, please see Lammps documentation: <a href="https://lammps.sandia.gov/doc/special_bonds.html">https://lammps.sandia.gov/doc/special_bonds.html</a>. About usage in Python, please see <a class="el" href="pybind_2adders__py_2add__special__bonds_8h.html" title="This file has a function to bind AddSpecialBonds class to Python. ">src/pybind/adders_py/add_special_bonds.h</a>. </p>
+<p>Name (key) of property to be added:</p><ul>
 <li><code><code>special-bonds</code></code> (array of integer) </li>
 </ul>
 <p>Name (key) of property in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a> to be required:</p><ul>
@@ -298,7 +299,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Blueprints of special bonds for each type of molecule. </p>
-<p>Definition of special bonds is stored as a map (dictionary) from types of molecule to vector of vector (list of list) of index of atoms &lt;e&gt;in a molecule&lt;/e&gt; of the type. The first vector corresponds atoms in a molecule, and the second vector corresponds special bonds of the each atom. </p>
+<p>Definition of special bonds is stored as a map (dictionary) from types of molecule to vector of vector (list of list) of index of atoms <em>in a molecule</em> of the type. The first vector corresponds atoms in a molecule, and the second vector corresponds special bonds of the each atom. </p>
 
 </div>
 </div>

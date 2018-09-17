@@ -20,24 +20,24 @@
   orientation, a direction of eigenvector corresponding the minimum
   eigenvalue of the inertia moment (that is, long axis of the molecule)
   is used for each molecule. About usage in Python, please see
-  src/pybind/adders/add_molecular_orientation.h.
+  src/pybind/adders_py/add_molecular_orientation.h.
   <p>
-  Name (key) of property to be added:
-    - \c I_values (array of float; eigenvalues of inertia moment)
-    - \c I_vectors (array of array of float; eigenvectors of inertia
-    moment)
-    - \c S_x (float)
-    - \c S_y (float)
-    - \c S_z (float)
+    Name (key) of property to be added:
+      - \c I_values (array of float; eigenvalues of inertia moment)
+      - \c I_vectors (array of array of float; eigenvectors of inertia
+      moment)
+      - \c S_x (float)
+      - \c S_y (float)
+      - \c S_z (float)
   </p>
   <p>
-  Name (key) of property to be required:
-    - \c I_xx (float)
-    - \c I_yy (float)
-    - \c I_zz (float)
-    - \c I_xy (float)
-    - \c I_xz (float)
-    - \c I_yz (float)
+    Name (key) of property to be required:
+      - \c I_xx (float)
+      - \c I_yy (float)
+      - \c I_zz (float)
+      - \c I_xy (float)
+      - \c I_xz (float)
+      - \c I_yz (float)
   </p>
 */
 class AddMolecularOrientation : public Adder {

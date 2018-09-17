@@ -19,19 +19,19 @@
   \e children object (such as atoms) as the #ext_generator and be
   appended to \e parent object (such as molecules). \c id property of
   a \e child is appended to an array belonging to its \e parent. About
-  usage in Python, please see src/pybind/adders/add_child_ids.h.
+  usage in Python, please see src/pybind/adders_py/add_child_ids.h.
   <p>
-  Name (key) of property to be added:
-    - <c>[child_name]-ids</c> (array of integer)
+    Name (key) of property to be added:
+      - <c>[child_name]-ids</c> (array of integer)
   </p>
   <p>
-  Name (key) of property to be required:
-    - \c id (integer)
+    Name (key) of property to be required:
+      - \c id (integer)
   </p>
   <p>
-  Name (key) of property in #ext_generator to be required:
-    - \c id (integer)
-    - <c>[key_for_parent_id]</c>  (integer)
+    Name (key) of property in #ext_generator to be required:
+      - \c id (integer)
+      - <c>[key_for_parent_id]</c>  (integer)
   </p>
 */
 class AddChildIDs : public Adder {

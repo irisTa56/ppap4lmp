@@ -18,14 +18,14 @@
   and overrides Adder::compute_impl. This class simply renames an
   existing property; copies values of the existing property with a new
   arbitrary name, then deletes the old property. About usage in Python,
-  please see src/pybind/adders/add_rename.h.
+  please see src/pybind/adders_py/add_rename.h.
   <p>
-  Name (key) of property to be added:
-    - \c <c>[key_new]</c> (any type)
+    Name (key) of property to be added:
+      - \c <c>[key_new]</c> (any type)
   </p>
   <p>
-  Name (key) of property to be required:
-    - <c>[key_old]</c> (any type)
+    Name (key) of property to be required:
+      - <c>[key_old]</c> (any type)
   </p>
 */
 class AddRename : public Adder, public EnShThis<AddRename> {

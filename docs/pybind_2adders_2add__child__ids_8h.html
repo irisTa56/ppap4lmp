@@ -93,13 +93,28 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad2342686c1a05d6776d6eb852c0c961f"><td class="memItemLeft" align="right" valign="top"><a id="ad2342686c1a05d6776d6eb852c0c961f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>pybind_add_child_ids</b> (py::module &amp;m)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pybind_2adders_2add__child__ids_8h.html#ad2342686c1a05d6776d6eb852c0c961f">pybind_add_child_ids</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:ad2342686c1a05d6776d6eb852c0c961f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classAddChildIDs.html" title="AddChildIDs stands for Adder for Child IDs (such as atom-ids for molecules). ">AddChildIDs</a> class to Python. <br /></td></tr>
 <tr class="separator:ad2342686c1a05d6776d6eb852c0c961f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file has a function to bind <a class="el" href="classAddChildIDs.html" title="AddChildIDs stands for Adder for Child IDs (such as atom-ids for molecules). ">AddChildIDs</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/08/19 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2018/08/19</dd></dl>
+<p><b>Python-side constructor of <a class="el" href="classAddChildIDs.html" title="AddChildIDs stands for Adder for Child IDs (such as atom-ids for molecules). ">AddChildIDs</a> class</b>: </p><table class="py_table">
+<tr class="py_tr">
+<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><code>AddChildIDs</code>  </td><td class="py_td"><a class="el" href="classAddChildIDs.html#a7278a3244f0a6d52e7f30491f2154a70" title="Constructor of AddChildIDs class. ">AddChildIDs::AddChildIDs</a> </td><td class="py_td">Constructor of <a class="el" href="classAddChildIDs.html" title="AddChildIDs stands for Adder for Child IDs (such as atom-ids for molecules). ">AddChildIDs</a> class.  </td><td class="py_td"><ul class="py_ul">
+<li>
+<code>elem</code> : Child object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object containing atoms data).  </li>
+<li>
+<code>child_name_</code> : A string for name of the above child object.  </li>
+<li>
+<code>key_for_parent_id_</code> : A string for key in the child object corresponding to <code>id</code> property of parent object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object containing molecules data).  </li>
+</ul>
+</td><td class="py_td">Constructed <a class="el" href="classAddChildIDs.html" title="AddChildIDs stands for Adder for Child IDs (such as atom-ids for molecules). ">AddChildIDs</a> object.   </td></tr>
+</table>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

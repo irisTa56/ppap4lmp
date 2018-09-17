@@ -18,27 +18,27 @@
   Adder::compute_impl. Wrapping is a process to resolve periodic
   boundary condition; wrapped positions are in the original simulation
   box. About usage in Python, please see
-  src/pybind/adders/add_wrapped_position.h.
+  src/pybind/adders_py/add_wrapped_position.h.
   <p>
-  Name (key) of property to be added:
-    - \c x (float)
-    - \c y (float)
-    - \c z (float)
+    Name (key) of property to be added:
+      - \c x (float)
+      - \c y (float)
+      - \c z (float)
   </p>
   <p>
-  Name (key) of property to be required:
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
+    Name (key) of property to be required:
+      - \c xu (float)
+      - \c yu (float)
+      - \c zu (float)
   </p>
   <p>
-  Name (key) of property in #ext_generator to be required:
-    - \c lo_x (float)
-    - \c lo_y (float)
-    - \c lo_z (float)
-    - \c hi_x (float)
-    - \c hi_y (float)
-    - \c hi_z (float)
+    Name (key) of property in #ext_generator to be required:
+      - \c lo_x (float)
+      - \c lo_y (float)
+      - \c lo_z (float)
+      - \c hi_x (float)
+      - \c hi_y (float)
+      - \c hi_z (float)
   </p>
 */
 class AddWrappedPosition : public Adder {

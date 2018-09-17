@@ -41,7 +41,7 @@ class PyUpdater : public UPD {
 /*!
   @brief Function to bind Updater class to Python.
   @details Constructor of Updater class is hidden from Python, because
-  the class is an abstract.
+  the class is an abstract one.
 */
 static void pybind_updater(py::module &m)
 {

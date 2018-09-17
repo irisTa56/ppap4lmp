@@ -93,13 +93,36 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8c69e928a93c4b2b2b5e56296bb1029b"><td class="memItemLeft" align="right" valign="top"><a id="a8c69e928a93c4b2b2b5e56296bb1029b"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>pybind_add_rename</b> (py::module &amp;m)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pybind_2adders_2add__rename_8h.html#a8c69e928a93c4b2b2b5e56296bb1029b">pybind_add_rename</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:a8c69e928a93c4b2b2b5e56296bb1029b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classAddRename.html" title="AddRename stands for Adder creating new property by Renaming existing property. ">AddRename</a> class to Python. <br /></td></tr>
 <tr class="separator:a8c69e928a93c4b2b2b5e56296bb1029b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file has a function to bind <a class="el" href="classAddRename.html" title="AddRename stands for Adder creating new property by Renaming existing property. ">AddRename</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/08/17 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2018/08/17</dd></dl>
+<p><b>Python-side constructor of <a class="el" href="classAddRename.html" title="AddRename stands for Adder creating new property by Renaming existing property. ">AddRename</a> class</b>: </p><table class="py_table">
+<tr class="py_tr">
+<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><code>AddRename</code>  </td><td class="py_td"><a class="el" href="classAddRename.html#a3119359de9028c40ed5fbf24b5fc3a46" title="Constructor of AddRename class. ">AddRename::AddRename</a> </td><td class="py_td">Constructor of <a class="el" href="classAddRename.html" title="AddRename stands for Adder creating new property by Renaming existing property. ">AddRename</a> class.  </td><td class="py_td"><ul class="py_ul">
+<li>
+<code>key_old_</code> : A string key for an old property: an existing property to be renamed.  </li>
+<li>
+<code>key_new_</code> : A string key for a new property, that is a new name of the existing property.  </li>
+</ul>
+</td><td class="py_td">Constructed <a class="el" href="classAddRename.html" title="AddRename stands for Adder creating new property by Renaming existing property. ">AddRename</a> object.   </td></tr>
+</table>
+<p><b>Python-side methods of <a class="el" href="classAddRename.html" title="AddRename stands for Adder creating new property by Renaming existing property. ">AddRename</a> class</b>: </p><table class="py_table">
+<tr class="py_tr">
+<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><code>overwrite</code>  </td><td class="py_td"><a class="el" href="classAddRename.html#a600c0c6383de7ed16387f5be064dac8f" title="Switch do_overwrite (to true by default). ">AddRename::overwrite</a> </td><td class="py_td">Allow overwriting an existing property whose name is the same as new property to be added.  </td><td class="py_td"><ul class="py_ul">
+<li>
+<code>do_overwrite_</code> : A boolean, whether overwriting is allowed or not. No argument leads to allowing overwriting.  </li>
+</ul>
+</td><td class="py_td">This <a class="el" href="classAddRename.html" title="AddRename stands for Adder creating new property by Renaming existing property. ">AddRename</a> object.   </td></tr>
+</table>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

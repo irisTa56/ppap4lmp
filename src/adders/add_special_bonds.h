@@ -20,13 +20,14 @@
   other through bonded potential(s) (bond-length, bond-angle ...). For
   more details about special bonds, please see Lammps documentation:
   https://lammps.sandia.gov/doc/special_bonds.html. About usage in
-  Python, please see src/pybind/adders/add_special_bonds.h.
-  Name (key) of property to be added:
-    - \c <c>special-bonds</c> (array of integer)
+  Python, please see src/pybind/adders_py/add_special_bonds.h.
+  <p>
+    Name (key) of property to be added:
+      - \c <c>special-bonds</c> (array of integer)
   </p>
   <p>
-  Name (key) of property in #ext_generator to be required:
-    - \c atom-ids (array of integer)
+    Name (key) of property in #ext_generator to be required:
+      - \c atom-ids (array of integer)
   </p>
 */
 class AddSpecialBonds : public Adder {
@@ -34,7 +35,7 @@ class AddSpecialBonds : public Adder {
     @brief Blueprints of special bonds for each type of molecule.
     @details Definition of special bonds is stored as a map (dictionary)
     from types of molecule to vector of vector (list of list) of index
-    of atoms <e>in a molecule</e> of the type. The first vector
+    of atoms <i>in a molecule</i> of the type. The first vector
     corresponds atoms in a molecule, and the second vector corresponds
     special bonds of the each atom.
   */

@@ -23,10 +23,10 @@
   ::EnShThis<#Element>. Element class is different from the Generator
   class and its subclasses (except for this class) by owning data
   \e element (or entity, object). The data is stored as a ::Json
-  object, #data, and a set of the keys (or property names, attributes)
-  of the data is stored as a DataKeys object, #datakeys. This class
-  can update its own data by calling #update_data where a mutable
-  reference of #data is passed to an Updater object.
+  object, #data, and a set of keys (or property names, attributes) of
+  the data is stored as a DataKeys object, #datakeys. This class can
+  update its own data by calling #update_data where a mutable reference
+  of #data is passed to an Updater object.
 */
 class Element : public Generator, public EnShThis<Element> {
   /*!

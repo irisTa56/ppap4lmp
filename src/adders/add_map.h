@@ -18,15 +18,15 @@
   and overrides Adder::compute_impl. This class adds a new property by
   mapping from an existing property. Domain of the mapping must cover
   all values of the existing property. About usage in Python, please
-  see src/pybind/adders/add_map.h.
+  see src/pybind/adders_py/add_map.h.
   <p>
-  Name (key) of property to be added:
-    - \c <c>[key_new]</c> (any type)
+    Name (key) of property to be added:
+      - \c <c>[key_new]</c> (any type)
   </p>
   <p>
-  Name (key) of property to be required:
-    - <c>[key_ref]</c> (any type; but, in most cases, integer or
-    strings)
+    Name (key) of property to be required:
+      - <c>[key_ref]</c> (any type; but, in most cases, integer or
+      strings)
   </p>
 */
 class AddMap : public Adder, public EnShThis<AddMap> {

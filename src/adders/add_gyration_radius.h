@@ -17,33 +17,33 @@
   ::EnShThis<#AddGyrationRadius>, and overrides Adder::compute_impl.
   This class computes radius of gyration of molecules (or something
   else) from their inertia moments. About usage in Python, please see
-  src/pybind/adders/add_gyration_radius.h.
+  src/pybind/adders_py/add_gyration_radius.h.
   <p>
-  Name (key) of property to be added (by default):
-    - \c Rg (float)
-    - \c Rg(y+z) (float)
-    - \c Rg(z+x) (float)
-    - \c Rg(x+y) (float)
-    - \c Rg(x) (float)
-    - \c Rg(y) (float)
-    - \c Rg(z) (float)
+    Name (key) of property to be added (by default):
+      - \c Rg (float)
+      - \c Rg(y+z) (float)
+      - \c Rg(z+x) (float)
+      - \c Rg(x+y) (float)
+      - \c Rg(x) (float)
+      - \c Rg(y) (float)
+      - \c Rg(z) (float)
   </p>
   <p>
-  Name (key) of property to be added (optional):
-    - \c Rg^2 (float)
-    - \c Rg^2(y+z) (float)
-    - \c Rg^2(z+x) (float)
-    - \c Rg^2(x+y) (float)
-    - \c Rg^2(x) (float)
-    - \c Rg^2(y) (float)
-    - \c Rg^2(z) (float)
+    Name (key) of property to be added (optional):
+      - \c Rg^2 (float)
+      - \c Rg^2(y+z) (float)
+      - \c Rg^2(z+x) (float)
+      - \c Rg^2(x+y) (float)
+      - \c Rg^2(x) (float)
+      - \c Rg^2(y) (float)
+      - \c Rg^2(z) (float)
   </p>
   <p>
-  Name (key) of property to be required:
-    - \c mass (float)
-    - \c I_xx (float)
-    - \c I_yy (float)
-    - \c I_zz (float)
+    Name (key) of property to be required:
+      - \c mass (float)
+      - \c I_xx (float)
+      - \c I_yy (float)
+      - \c I_zz (float)
   </p>
 */
 class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {

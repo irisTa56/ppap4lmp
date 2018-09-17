@@ -18,25 +18,25 @@
   Adder::compute_impl. An Element object, which an object of this
   class is appended to, consists of (that is, is started from) an
   Element object stored as the #ext_generator. About usage in Python,
-  please see src/pybind/adders/add_com_position.h.
+  please see src/pybind/adders_py/add_com_position.h.
   <p>
-  Name (key) of property to be added:
-    - \c mass (float)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
+    Name (key) of property to be added:
+      - \c mass (float)
+      - \c xu (float)
+      - \c yu (float)
+      - \c zu (float)
   </p>
   <p>
-  Name (key) of property to be required:
-    - <c>atom-ids</c> (array of integer)
+    Name (key) of property to be required:
+      - <c>atom-ids</c> (array of integer)
   </p>
   <p>
-  Name (key) of property in #ext_generator to be required:
-    - \c id (integer)
-    - \c mass (float)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
+    Name (key) of property in #ext_generator to be required:
+      - \c id (integer)
+      - \c mass (float)
+      - \c xu (float)
+      - \c yu (float)
+      - \c zu (float)
   </p>
 */
 class AddCoMPosition : public Adder {

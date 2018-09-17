@@ -20,26 +20,26 @@
   appended to \e parent object (such as molecules). A position of a
   \e child is computed relative to a position of its \e parent and
   appended to an array belonging to the \e parent. About usage in
-  Python, please see src/pybind/adders/add_child_positions.h.
+  Python, please see src/pybind/adders_py/add_child_positions.h.
   <p>
-  Name (key) of property to be added:
-    - <c>[child_name]-xs</c> (array of float)
-    - <c>[child_name]-ys</c> (array of float)
-    - <c>[child_name]-zs</c> (array of float)
+    Name (key) of property to be added:
+      - <c>[child_name]-xs</c> (array of float)
+      - <c>[child_name]-ys</c> (array of float)
+      - <c>[child_name]-zs</c> (array of float)
   </p>
   <p>
-  Name (key) of property to be required:
-    - <c>[child_name]-ids</c> (array of integer)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
+    Name (key) of property to be required:
+      - <c>[child_name]-ids</c> (array of integer)
+      - \c xu (float)
+      - \c yu (float)
+      - \c zu (float)
   </p>
   <p>
-  Name (key) of property in #ext_generator to be required:
-    - \c id (integer)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
+    Name (key) of property in #ext_generator to be required:
+      - \c id (integer)
+      - \c xu (float)
+      - \c yu (float)
+      - \c zu (float)
   </p>
 */
 class AddChildPositions : public Adder {

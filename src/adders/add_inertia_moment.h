@@ -17,30 +17,30 @@
   Adder::compute_impl. This class computes elements of 3x3 matrix of
   inertia moment (a.k.a. inertia matrix, inertia tensor) of molecules
   (or something else, such as beads). About usage in Python, please see
-  src/pybind/adders/add_inertia_moment.h.
+  src/pybind/adders_py/add_inertia_moment.h.
   <p>
-  Name (key) of property to be added:
-    - \c I_xx (float)
-    - \c I_yy (float)
-    - \c I_zz (float)
-    - \c I_xy (float)
-    - \c I_xz (float)
-    - \c I_yz (float)
+    Name (key) of property to be added:
+      - \c I_xx (float)
+      - \c I_yy (float)
+      - \c I_zz (float)
+      - \c I_xy (float)
+      - \c I_xz (float)
+      - \c I_yz (float)
   </p>
   <p>
-  Name (key) of property to be required:
-    - <c>atom-ids</c> (array of integer)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
+    Name (key) of property to be required:
+      - <c>atom-ids</c> (array of integer)
+      - \c xu (float)
+      - \c yu (float)
+      - \c zu (float)
   </p>
   <p>
-  Name (key) of property in #ext_generator to be required:
-    - \c id (int)
-    - \c mass (float)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
+    Name (key) of property in #ext_generator to be required:
+      - \c id (int)
+      - \c mass (float)
+      - \c xu (float)
+      - \c yu (float)
+      - \c zu (float)
   </p>
 */
 class AddInertiaMoment : public Adder {
