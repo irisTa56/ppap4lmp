@@ -18,7 +18,7 @@
   and overrides Adder::compute_impl. This class adds a new property by
   mapping from an existing property. Domain of the mapping must cover
   all values of the existing property. About usage in Python, please
-  see src/pybind/adders_py/add_map.h.
+  see src/pybind/py_adders/add_map.h.
   <p>
     Name (key) of property to be added:
       - \c <c>[key_new]</c> (any type)

@@ -17,7 +17,7 @@
   Adder::compute_impl. This class computes elements of 3x3 matrix of
   inertia moment (a.k.a. inertia matrix, inertia tensor) of molecules
   (or something else, such as beads). About usage in Python, please see
-  src/pybind/adders_py/add_inertia_moment.h.
+  src/pybind/py_adders/add_inertia_moment.h.
   <p>
     Name (key) of property to be added:
       - \c I_xx (float)

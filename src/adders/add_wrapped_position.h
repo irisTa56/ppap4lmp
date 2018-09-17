@@ -18,7 +18,7 @@
   Adder::compute_impl. Wrapping is a process to resolve periodic
   boundary condition; wrapped positions are in the original simulation
   box. About usage in Python, please see
-  src/pybind/adders_py/add_wrapped_position.h.
+  src/pybind/py_adders/add_wrapped_position.h.
   <p>
     Name (key) of property to be added:
       - \c x (float)

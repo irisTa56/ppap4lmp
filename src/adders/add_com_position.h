@@ -18,7 +18,7 @@
   Adder::compute_impl. An Element object, which an object of this
   class is appended to, consists of (that is, is started from) an
   Element object stored as the #ext_generator. About usage in Python,
-  please see src/pybind/adders_py/add_com_position.h.
+  please see src/pybind/py_adders/add_com_position.h.
   <p>
     Name (key) of property to be added:
       - \c mass (float)

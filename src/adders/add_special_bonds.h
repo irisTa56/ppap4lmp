@@ -20,7 +20,7 @@
   other through bonded potential(s) (bond-length, bond-angle ...). For
   more details about special bonds, please see Lammps documentation:
   https://lammps.sandia.gov/doc/special_bonds.html. About usage in
-  Python, please see src/pybind/adders_py/add_special_bonds.h.
+  Python, please see src/pybind/py_adders/add_special_bonds.h.
   <p>
     Name (key) of property to be added:
       - \c <c>special-bonds</c> (array of integer)

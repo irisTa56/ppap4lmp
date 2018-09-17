@@ -17,7 +17,7 @@
   ::EnShThis<#AddGyrationRadius>, and overrides Adder::compute_impl.
   This class computes radius of gyration of molecules (or something
   else) from their inertia moments. About usage in Python, please see
-  src/pybind/adders_py/add_gyration_radius.h.
+  src/pybind/py_adders/add_gyration_radius.h.
   <p>
     Name (key) of property to be added (by default):
       - \c Rg (float)

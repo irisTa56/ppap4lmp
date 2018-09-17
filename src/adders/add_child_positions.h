@@ -20,7 +20,7 @@
   appended to \e parent object (such as molecules). A position of a
   \e child is computed relative to a position of its \e parent and
   appended to an array belonging to the \e parent. About usage in
-  Python, please see src/pybind/adders_py/add_child_positions.h.
+  Python, please see src/pybind/py_adders/add_child_positions.h.
   <p>
     Name (key) of property to be added:
       - <c>[child_name]-xs</c> (array of float)
