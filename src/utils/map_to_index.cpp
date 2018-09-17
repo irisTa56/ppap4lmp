@@ -1,3 +1,10 @@
+/*!
+  @file src/utils/map_to_index.cpp
+  @brief This file has an implementation of ::utils::map_to_index.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+*/
+
 #include "map_to_index.h"
 #include "runtime_error.h"
 

@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1068;
+var viewWidth = 782;
 var viewHeight = 95;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,17 +54,17 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>src/utils/map_to_index.h</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-91 1063.5,-91 1063.5,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-91 777.5,-91 777.5,4 -4,4"/>
 <!-- Node9 -->
 <g id="node1" class="node">
 <title>Node9</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="434,-67.5 434,-86.5 557,-86.5 557,-67.5 434,-67.5"/>
-<text text-anchor="middle" x="495.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/utils/map_to_index.h</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="304,-67.5 304,-86.5 427,-86.5 427,-67.5 304,-67.5"/>
+<text text-anchor="middle" x="365.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/utils/map_to_index.h</text>
 </g>
 <!-- Node10 -->
 <g id="node2" class="node">
 <title>Node10</title>
-<g id="a_node2"><a xlink:href="add__child__ids_8cpp.html" target="_top" xlink:title="src/adders/add_child\l_ids.cpp">
+<g id="a_node2"><a xlink:href="add__child__ids_8cpp.html" target="_top" xlink:title="This file has implementations of the AddChildIDs class, which is a subclass of the Adder class...">
 <polygon fill="#ffffff" stroke="#000000" points="0,-.5 0,-30.5 107,-30.5 107,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
 <text text-anchor="middle" x="53.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_ids.cpp</text>
@@ -74,13 +74,13 @@ var sectionId = 'dynsection-1';
 <!-- Node9&#45;&gt;Node10 -->
 <g id="edge1" class="edge">
 <title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="#191970" d="M423.9047,-71.0137C347.2135,-63.9778 222.1301,-50.7035 115.5,-31 112.7724,-30.496 109.9862,-29.9426 107.179,-29.3543"/>
-<polygon fill="#191970" stroke="#191970" points="423.6605,-74.5058 433.9359,-71.9237 424.293,-67.5344 423.6605,-74.5058"/>
+<path fill="none" stroke="#191970" d="M297.5769,-65.6937C247.166,-57.0136 176.8317,-44.2952 115.5,-31 112.7892,-30.4124 110.0165,-29.7917 107.22,-29.15"/>
+<polygon fill="#191970" stroke="#191970" points="297.2552,-69.1895 307.7027,-67.4291 298.4376,-62.2901 297.2552,-69.1895"/>
 </g>
 <!-- Node11 -->
 <g id="node3" class="node">
 <title>Node11</title>
-<g id="a_node3"><a xlink:href="add__child__positions_8cpp.html" target="_top" xlink:title="src/adders/add_child\l_positions.cpp">
+<g id="a_node3"><a xlink:href="add__child__positions_8cpp.html" target="_top" xlink:title="This file has implementations of the AddChildPositions class, which is a subclass of the Adder class...">
 <polygon fill="#ffffff" stroke="#000000" points="125,-.5 125,-30.5 232,-30.5 232,-.5 125,-.5"/>
 <text text-anchor="start" x="133" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_child</text>
 <text text-anchor="middle" x="178.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_positions.cpp</text>
@@ -90,13 +90,13 @@ var sectionId = 'dynsection-1';
 <!-- Node9&#45;&gt;Node11 -->
 <g id="edge2" class="edge">
 <title>Node9&#45;&gt;Node11</title>
-<path fill="none" stroke="#191970" d="M426.2766,-65.7929C374.848,-57.1565 303.0696,-44.4492 240.5,-31 237.7881,-30.4171 235.0147,-29.8002 232.2175,-29.1616"/>
-<polygon fill="#191970" stroke="#191970" points="425.8421,-69.2688 436.2823,-67.4649 426.9959,-62.3645 425.8421,-69.2688"/>
+<path fill="none" stroke="#191970" d="M326.6435,-64.221C296.8444,-54.4207 255.6365,-40.8684 224.2453,-30.5446"/>
+<polygon fill="#191970" stroke="#191970" points="325.6883,-67.5912 336.2813,-67.3906 327.8753,-60.9416 325.6883,-67.5912"/>
 </g>
 <!-- Node12 -->
 <g id="node4" class="node">
 <title>Node12</title>
-<g id="a_node4"><a xlink:href="add__com__position_8cpp.html" target="_top" xlink:title="src/adders/add_com\l_position.cpp">
+<g id="a_node4"><a xlink:href="add__com__position_8cpp.html" target="_top" xlink:title="This file has implementations of the AddCoMPosition class, which is a subclass of the Adder class...">
 <polygon fill="#ffffff" stroke="#000000" points="250,-.5 250,-30.5 355,-30.5 355,-.5 250,-.5"/>
 <text text-anchor="start" x="258" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_com</text>
 <text text-anchor="middle" x="302.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_position.cpp</text>
@@ -106,13 +106,13 @@ var sectionId = 'dynsection-1';
 <!-- Node9&#45;&gt;Node12 -->
 <g id="edge3" class="edge">
 <title>Node9&#45;&gt;Node12</title>
-<path fill="none" stroke="#191970" d="M455.7972,-64.3486C425.0115,-54.5386 382.2523,-40.9133 349.7131,-30.5446"/>
-<polygon fill="#191970" stroke="#191970" points="454.7531,-67.6892 465.3438,-67.3906 456.8784,-61.0197 454.7531,-67.6892"/>
+<path fill="none" stroke="#191970" d="M348.3006,-60.2101C338.8047,-50.9403 327.1077,-39.5218 317.9115,-30.5446"/>
+<polygon fill="#191970" stroke="#191970" points="346.0556,-62.9097 355.6563,-67.3906 350.9454,-57.9007 346.0556,-62.9097"/>
 </g>
 <!-- Node13 -->
 <g id="node5" class="node">
 <title>Node13</title>
-<g id="a_node5"><a xlink:href="add__inertia__moment_8cpp.html" target="_top" xlink:title="src/adders/add_inertia\l_moment.cpp">
+<g id="a_node5"><a xlink:href="add__inertia__moment_8cpp.html" target="_top" xlink:title="This file has implementations of the AddInertiaMoment class, which is a subclass of the Adder class...">
 <polygon fill="#ffffff" stroke="#000000" points="373,-.5 373,-30.5 486,-30.5 486,-.5 373,-.5"/>
 <text text-anchor="start" x="381" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_inertia</text>
 <text text-anchor="middle" x="429.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_moment.cpp</text>
@@ -122,13 +122,13 @@ var sectionId = 'dynsection-1';
 <!-- Node9&#45;&gt;Node13 -->
 <g id="edge4" class="edge">
 <title>Node9&#45;&gt;Node13</title>
-<path fill="none" stroke="#191970" d="M477.7793,-60.4875C467.7788,-51.1689 455.3759,-39.6116 445.6454,-30.5446"/>
-<polygon fill="#191970" stroke="#191970" points="475.4853,-63.134 485.1875,-67.3906 480.2574,-58.0127 475.4853,-63.134"/>
+<path fill="none" stroke="#191970" d="M382.9724,-60.2101C392.6191,-50.9403 404.5017,-39.5218 413.8438,-30.5446"/>
+<polygon fill="#191970" stroke="#191970" points="380.2854,-57.9381 375.5,-67.3906 385.1356,-62.9854 380.2854,-57.9381"/>
 </g>
 <!-- Node14 -->
 <g id="node6" class="node">
 <title>Node14</title>
-<g id="a_node6"><a xlink:href="add__special__bonds_8cpp.html" target="_top" xlink:title="src/adders/add_special\l_bonds.cpp">
+<g id="a_node6"><a xlink:href="add__special__bonds_8cpp.html" target="_top" xlink:title="This file has implementations of the AddSpecialBonds class, which is a subclass of the Adder class...">
 <polygon fill="#ffffff" stroke="#000000" points="504,-.5 504,-30.5 621,-30.5 621,-.5 504,-.5"/>
 <text text-anchor="start" x="512" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/adders/add_special</text>
 <text text-anchor="middle" x="562.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_bonds.cpp</text>
@@ -138,54 +138,23 @@ var sectionId = 'dynsection-1';
 <!-- Node9&#45;&gt;Node14 -->
 <g id="edge5" class="edge">
 <title>Node9&#45;&gt;Node14</title>
-<path fill="none" stroke="#191970" d="M513.4892,-60.4875C523.6412,-51.1689 536.2321,-39.6116 546.11,-30.5446"/>
-<polygon fill="#191970" stroke="#191970" points="510.969,-58.0499 505.9688,-67.3906 515.7025,-63.2068 510.969,-58.0499"/>
+<path fill="none" stroke="#191970" d="M406.0256,-64.3486C437.4494,-54.5386 481.0948,-40.9133 514.3084,-30.5446"/>
+<polygon fill="#191970" stroke="#191970" points="404.7839,-61.0696 396.2813,-67.3906 406.8699,-67.7515 404.7839,-61.0696"/>
 </g>
 <!-- Node15 -->
 <g id="node7" class="node">
 <title>Node15</title>
-<g id="a_node7"><a xlink:href="pro__distance__in__molecule_8cpp.html" target="_top" xlink:title="src/processors/pro\l_distance_in_molecule.cpp">
-<polygon fill="#ffffff" stroke="#000000" points="639.5,-.5 639.5,-30.5 773.5,-30.5 773.5,-.5 639.5,-.5"/>
-<text text-anchor="start" x="647.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/processors/pro</text>
-<text text-anchor="middle" x="706.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_distance_in_molecule.cpp</text>
+<g id="a_node7"><a xlink:href="map__to__index_8cpp.html" target="_top" xlink:title="This file has an implementation of utils::map_to_index. ">
+<polygon fill="#ffffff" stroke="#000000" points="639.5,-6 639.5,-25 773.5,-25 773.5,-6 639.5,-6"/>
+<text text-anchor="middle" x="706.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/utils/map_to_index.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node15 -->
 <g id="edge6" class="edge">
 <title>Node9&#45;&gt;Node15</title>
-<path fill="none" stroke="#191970" d="M538.4692,-64.4758C572.1576,-54.6567 619.1556,-40.9582 654.8836,-30.5446"/>
-<polygon fill="#191970" stroke="#191970" points="537.0899,-61.2321 528.4688,-67.3906 539.0487,-67.9525 537.0899,-61.2321"/>
-</g>
-<!-- Node16 -->
-<g id="node8" class="node">
-<title>Node16</title>
-<g id="a_node8"><a xlink:href="starter_8cpp.html" target="_top" xlink:title="src/starters/starter.cpp">
-<polygon fill="#ffffff" stroke="#000000" points="791.5,-6 791.5,-25 907.5,-25 907.5,-6 791.5,-6"/>
-<text text-anchor="middle" x="849.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/starter.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node16 -->
-<g id="edge7" class="edge">
-<title>Node9&#45;&gt;Node16</title>
-<path fill="none" stroke="#191970" d="M567.2153,-66.8965C625.418,-58.3629 709.5015,-45.2765 782.5,-31 791.5222,-29.2355 801.1785,-27.1302 810.2711,-25.0487"/>
-<polygon fill="#191970" stroke="#191970" points="566.4096,-63.4769 557.0195,-68.3837 567.42,-70.4036 566.4096,-63.4769"/>
-</g>
-<!-- Node17 -->
-<g id="node9" class="node">
-<title>Node17</title>
-<g id="a_node9"><a xlink:href="map__to__index_8cpp.html" target="_top" xlink:title="src/utils/map_to_index.cpp">
-<polygon fill="#ffffff" stroke="#000000" points="925.5,-6 925.5,-25 1059.5,-25 1059.5,-6 925.5,-6"/>
-<text text-anchor="middle" x="992.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/utils/map_to_index.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node17 -->
-<g id="edge8" class="edge">
-<title>Node9&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M567.2876,-71.1898C651.2986,-63.9205 794.4635,-50.0699 916.5,-31 927.1437,-29.3368 938.5569,-27.1994 949.2194,-25.0466"/>
-<polygon fill="#191970" stroke="#191970" points="566.7542,-67.7226 557.0901,-72.0649 567.3528,-74.697 566.7542,-67.7226"/>
+<path fill="none" stroke="#191970" d="M433.2937,-65.7947C486.8934,-56.7998 563.5768,-43.63 630.5,-31 640.292,-29.152 650.7734,-27.0773 660.7274,-25.0612"/>
+<polygon fill="#191970" stroke="#191970" points="432.5114,-62.3769 423.2268,-67.4806 433.6676,-69.2808 432.5114,-62.3769"/>
 </g>
 </g>
 </svg>

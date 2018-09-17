@@ -1,3 +1,10 @@
+/*!
+  @file src/utils/split.cpp
+  @brief This file has an implementation of ::utils::split.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+*/
+
 #include <sstream>
 
 #include "split.h"
@@ -20,35 +27,6 @@ Vec<Str> ut::split(
     if (!item.empty())
     {
       tmp.push_back(item);
-    }
-  }
-
-  return tmp;
-}
-
-/* ------------------------------------------------------------------ */
-/* Not need for now
-Vec<Str> ut::split2(
-  const Str &str,
-  char delim1,
-  char delim2)
-{
-  Vec<Str> tmp;
-
-  std::stringstream ss1(str);
-  Str item1;
-
-  while (getline(ss1, item1, delim1))
-  {
-    std::stringstream ss2(item1);
-    Str item2;
-
-    while (getline(ss2, item2, delim2))
-    {
-      if (!item2.empty())
-      {
-        tmp.push_back(item2);
-      }
     }
   }
 

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -67,30 +68,44 @@ $(function() {
 <div class="title">utils Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Namespace for utility functions.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5e5339e32b770a14691521435849c949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a5e5339e32b770a14691521435849c949">join</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt; &amp;strs, const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;jointer)</td></tr>
+<tr class="memdesc:a5e5339e32b770a14691521435849c949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mimicking Python's <code>join</code>.  <a href="#a5e5339e32b770a14691521435849c949">More...</a><br /></td></tr>
 <tr class="separator:a5e5339e32b770a14691521435849c949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeabf3fc19efc71936f355f069d336b5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6">Map</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a">map_to_index</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;key)</td></tr>
+<tr class="memdesc:aeabf3fc19efc71936f355f069d336b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mainly used for creating a map from values of selected property in array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> to corresponding index in the array.  <a href="#aeabf3fc19efc71936f355f069d336b5a">More...</a><br /></td></tr>
 <tr class="separator:aeabf3fc19efc71936f355f069d336b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b5f21e223fdb0898119de641a1685f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a3b5f21e223fdb0898119de641a1685f6">_message</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;msg)</td></tr>
+<tr class="memdesc:a3b5f21e223fdb0898119de641a1685f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print to standard output.  <a href="#a3b5f21e223fdb0898119de641a1685f6">More...</a><br /></td></tr>
 <tr class="separator:a3b5f21e223fdb0898119de641a1685f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26267fe7371b6215c5d61374d716527b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a26267fe7371b6215c5d61374d716527b">log</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;msg)</td></tr>
+<tr class="memdesc:a26267fe7371b6215c5d61374d716527b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging a message.  <a href="#a26267fe7371b6215c5d61374d716527b">More...</a><br /></td></tr>
 <tr class="separator:a26267fe7371b6215c5d61374d716527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a362e3ea9867513a7bba06b6382d6527b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a362e3ea9867513a7bba06b6382d6527b">warning</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;msg)</td></tr>
+<tr class="memdesc:a362e3ea9867513a7bba06b6382d6527b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waning with a message.  <a href="#a362e3ea9867513a7bba06b6382d6527b">More...</a><br /></td></tr>
 <tr class="separator:a362e3ea9867513a7bba06b6382d6527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad13518af28215c74f69e74980e554310"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ad13518af28215c74f69e74980e554310">log_switch</a> (bool input)</td></tr>
+<tr class="memdesc:ad13518af28215c74f69e74980e554310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch on/off logging.  <a href="#ad13518af28215c74f69e74980e554310">More...</a><br /></td></tr>
 <tr class="separator:ad13518af28215c74f69e74980e554310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fdbb91c9e48ca033fca642b6e73d850"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9fdbb91c9e48ca033fca642b6e73d850"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850">pyargs_to_vec</a> (const py::args &amp;args, <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; T &gt; &amp;vec)</td></tr>
+<tr class="memdesc:a9fdbb91c9e48ca033fca642b6e73d850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert py::args (a variable number arguments) to <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a>.  <a href="#a9fdbb91c9e48ca033fca642b6e73d850">More...</a><br /></td></tr>
 <tr class="separator:a9fdbb91c9e48ca033fca642b6e73d850"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acee57b54806ee63ddaa30518fed90adb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb">runtime_error</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;msg)</td></tr>
+<tr class="memdesc:acee57b54806ee63ddaa30518fed90adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise (for Python) and throw (for C++) a runtime error.  <a href="#acee57b54806ee63ddaa30518fed90adb">More...</a><br /></td></tr>
 <tr class="separator:acee57b54806ee63ddaa30518fed90adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96d358b93c453a686f65db462e2be70f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a96d358b93c453a686f65db462e2be70f">split</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;str, char delim=' ')</td></tr>
+<tr class="memdesc:a96d358b93c453a686f65db462e2be70f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mimicking Python's <code>split</code>.  <a href="#a96d358b93c453a686f65db462e2be70f">More...</a><br /></td></tr>
 <tr class="separator:a96d358b93c453a686f65db462e2be70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Namespace for utility functions. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a3b5f21e223fdb0898119de641a1685f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b5f21e223fdb0898119de641a1685f6">&#9670;&nbsp;</a></span>_message()</h2>
 
@@ -106,11 +121,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Print to standard output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>: String to be printed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutils_a3b5f21e223fdb0898119de641a1685f6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a3b5f21e223fdb0898119de641a1685f6_icgraph.svg" width="430" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -140,11 +163,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Mimicking Python's <code>join</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strs</td><td>: Vector (list) of strings to be joined. </td></tr>
+    <tr><td class="paramname">jointer</td><td>: A string used for jointing elements of the <code>strs</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutils_a5e5339e32b770a14691521435849c949_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutils_a5e5339e32b770a14691521435849c949_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -164,17 +196,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a26267fe7371b6215c5d61374d716527b_cgraph.svg" width="244" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+
+<p>Logging a message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>: String to be printed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutils_a26267fe7371b6215c5d61374d716527b_icgraph.svg" width="100%" height="537"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutils_a26267fe7371b6215c5d61374d716527b_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -194,10 +228,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Switch on/off logging. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>: Whether enable the logging or not. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<p>Note that logging is disabled by default. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ad13518af28215c74f69e74980e554310_icgraph.svg" width="459" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_ad13518af28215c74f69e74980e554310_icgraph.svg" width="264" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -228,6 +272,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Mainly used for creating a map from values of selected property in array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> to corresponding index in the array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>: Array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a>. </td></tr>
+    <tr><td class="paramname">key</td><td>: A string key specifying a property used as domain of the mapping. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6" title="Map is an alias for unordered map (same as dict in Python). ">Map</a> from elements of an array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for the JSON type. ">Json</a> to corresponding index in the array.</dd></dl>
+<p>Note that the mapping must be bijection. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -270,10 +325,20 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Convert py::args (a variable number arguments) to <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>: Python's variable number arguments. </td></tr>
+    <tr><td class="paramname">vec</td><td>: Mutable reference to <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> where elements of the <code>args</code> are appended to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="namespaceutils_a9fdbb91c9e48ca033fca642b6e73d850_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a9fdbb91c9e48ca033fca642b6e73d850_icgraph.svg" width="530" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -294,6 +359,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Raise (for Python) and throw (for C++) a runtime error. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>: Message for the runtime error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -328,10 +402,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Mimicking Python's <code>split</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>: A string to be splitted. </td></tr>
+    <tr><td class="paramname">delim</td><td>: A character by which the <code>str</code> is splitted. Default delimiter is a whitespace. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of strings. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a96d358b93c453a686f65db462e2be70f_icgraph.svg" width="576" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a96d358b93c453a686f65db462e2be70f_icgraph.svg" width="340" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -352,6 +436,15 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Waning with a message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>: String to be printed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -361,7 +454,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a362e3ea9867513a7bba06b6382d6527b_icgraph.svg" width="351" height="170"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="namespaceutils_a362e3ea9867513a7bba06b6382d6527b_icgraph.svg" width="267" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

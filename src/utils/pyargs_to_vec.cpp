@@ -1,3 +1,10 @@
+/*!
+  @file src/utils/pyargs_to_vec.cpp
+  @brief This file has an implementation of ::utils::pyargs_to_vec.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+*/
+
 #include "pyargs_to_vec.h"
 
 namespace ut = utils;

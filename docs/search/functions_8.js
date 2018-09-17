@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['merge_5fupdate_5fchain',['merge_update_chain',['../classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc',1,'Generator']]]
+  ['join',['join',['../namespaceutils.html#a5e5339e32b770a14691521435849c949',1,'utils']]]
 ];

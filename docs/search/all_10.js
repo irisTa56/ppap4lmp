@@ -8,5 +8,8 @@ var searchData=
   ['rowvector3d',['RowVector3d',['../eigen_8h.html#a3f795fff7442e68a6adcd937ef1972a3',1,'eigen.h']]],
   ['rowvector3i',['RowVector3i',['../eigen_8h.html#a60d0d8815f3a921d9305ec6f2e124997',1,'eigen.h']]],
   ['rowvectorxd',['RowVectorXd',['../eigen_8h.html#a2d2e56a3e8fa99f9ed76529b3d385a27',1,'eigen.h']]],
-  ['rowvectorxi',['RowVectorXi',['../eigen_8h.html#a8e2b75bedb25a06aa253e6692a1d27fa',1,'eigen.h']]]
+  ['rowvectorxi',['RowVectorXi',['../eigen_8h.html#a8e2b75bedb25a06aa253e6692a1d27fa',1,'eigen.h']]],
+  ['runtime_5ferror',['runtime_error',['../namespaceutils.html#acee57b54806ee63ddaa30518fed90adb',1,'utils']]],
+  ['runtime_5ferror_2ecpp',['runtime_error.cpp',['../runtime__error_8cpp.html',1,'']]],
+  ['runtime_5ferror_2eh',['runtime_error.h',['../runtime__error_8h.html',1,'']]]
 ];

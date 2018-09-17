@@ -1,3 +1,10 @@
+/*!
+  @file src/utils/join.cpp
+  @brief This file has an implementation of ::utils::join.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+*/
+
 #include "join.h"
 
 namespace ut = utils;

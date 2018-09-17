@@ -1,4 +1,10 @@
-//#include <iostream>
+/*!
+  @file src/utils/message.cpp
+  @brief This file has implementations of messaging functions.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+*/
+
 #include <alias/pybind.h>
 
 #include "message.h"
@@ -14,7 +20,6 @@ void ut::_message(
 {
   #pragma omp critical (pyprint)
   {
-    //std::cout << msg << std::endl;
     py::print(msg);
   }
 }

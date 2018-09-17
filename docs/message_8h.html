@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -72,17 +73,19 @@ $(function() {
 <div class="title">message.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This file has definitions of messaging functions.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="std_8h_source.html">alias/std.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for message.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="message_8h__incl.svg" width="507" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="message_8h__incl.svg" width="507" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="message_8h__dep__incl.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="message_8h__dep__incl.svg" width="476" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -91,20 +94,29 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceutils"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html">utils</a></td></tr>
+<tr class="memdesc:namespaceutils"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for utility functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3b5f21e223fdb0898119de641a1685f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a3b5f21e223fdb0898119de641a1685f6">utils::_message</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;msg)</td></tr>
+<tr class="memdesc:a3b5f21e223fdb0898119de641a1685f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print to standard output.  <a href="namespaceutils.html#a3b5f21e223fdb0898119de641a1685f6">More...</a><br /></td></tr>
 <tr class="separator:a3b5f21e223fdb0898119de641a1685f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26267fe7371b6215c5d61374d716527b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a26267fe7371b6215c5d61374d716527b">utils::log</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;msg)</td></tr>
+<tr class="memdesc:a26267fe7371b6215c5d61374d716527b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging a message.  <a href="namespaceutils.html#a26267fe7371b6215c5d61374d716527b">More...</a><br /></td></tr>
 <tr class="separator:a26267fe7371b6215c5d61374d716527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a362e3ea9867513a7bba06b6382d6527b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a362e3ea9867513a7bba06b6382d6527b">utils::warning</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;msg)</td></tr>
+<tr class="memdesc:a362e3ea9867513a7bba06b6382d6527b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waning with a message.  <a href="namespaceutils.html#a362e3ea9867513a7bba06b6382d6527b">More...</a><br /></td></tr>
 <tr class="separator:a362e3ea9867513a7bba06b6382d6527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad13518af28215c74f69e74980e554310"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#ad13518af28215c74f69e74980e554310">utils::log_switch</a> (bool input)</td></tr>
+<tr class="memdesc:ad13518af28215c74f69e74980e554310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch on/off logging.  <a href="namespaceutils.html#ad13518af28215c74f69e74980e554310">More...</a><br /></td></tr>
 <tr class="separator:ad13518af28215c74f69e74980e554310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file has definitions of messaging functions. </p>
+<dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2018/09/03 </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

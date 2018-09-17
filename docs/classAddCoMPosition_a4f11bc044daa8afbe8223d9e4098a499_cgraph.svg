@@ -9,40 +9,40 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 35)">
 <title>AddCoMPosition::compute_with_weights</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-35 408,-35 408,4 -4,4"/>
-<!-- Node14 -->
+<!-- Node12 -->
 <g id="node1" class="node">
-<title>Node14</title>
+<title>Node12</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-30.5 133,-30.5 133,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute</text>
 <text text-anchor="middle" x="66.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>
 </g>
-<!-- Node15 -->
+<!-- Node13 -->
 <g id="node2" class="node">
-<title>Node15</title>
-<g id="a_node2"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="utils::map_to_index">
+<title>Node13</title>
+<g id="a_node2"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="Mainly used for creating a map from values of selected property in array Element::data to correspondi...">
 <polygon fill="#ffffff" stroke="#000000" points="169,-6 169,-25 270,-25 270,-6 169,-6"/>
 <text text-anchor="middle" x="219.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::map_to_index</text>
 </a>
 </g>
 </g>
-<!-- Node14&#45;&gt;Node15 -->
+<!-- Node12&#45;&gt;Node13 -->
 <g id="edge1" class="edge">
-<title>Node14&#45;&gt;Node15</title>
+<title>Node12&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M133.1629,-15.5C141.636,-15.5 150.2728,-15.5 158.6481,-15.5"/>
 <polygon fill="#191970" stroke="#191970" points="158.706,-19.0001 168.706,-15.5 158.7059,-12.0001 158.706,-19.0001"/>
 </g>
-<!-- Node16 -->
+<!-- Node14 -->
 <g id="node3" class="node">
-<title>Node16</title>
-<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="utils::runtime_error">
+<title>Node14</title>
+<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
 <polygon fill="#ffffff" stroke="#000000" points="306,-6 306,-25 404,-25 404,-6 306,-6"/>
 <text text-anchor="middle" x="355" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node16 -->
+<!-- Node13&#45;&gt;Node14 -->
 <g id="edge2" class="edge">
-<title>Node15&#45;&gt;Node16</title>
+<title>Node13&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M270.3407,-15.5C278.5624,-15.5 287.1391,-15.5 295.543,-15.5"/>
 <polygon fill="#191970" stroke="#191970" points="295.6726,-19.0001 305.6726,-15.5 295.6726,-12.0001 295.6726,-19.0001"/>
 </g>

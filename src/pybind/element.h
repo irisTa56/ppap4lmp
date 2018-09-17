@@ -77,7 +77,7 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            \c key : String key specifying a property to be extracted.
+            \c key : A string key specifying a property to be extracted.
           </li>
         </ul>
       </td>
@@ -95,7 +95,7 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            \c key : String key specifying a property to be extracted.
+            \c key : A string key specifying a property to be extracted.
           </li>
         </ul>
       </td>

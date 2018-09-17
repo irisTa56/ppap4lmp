@@ -9,143 +9,143 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 199)">
 <title>AddInertiaMoment::compute_impl</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-199 614,-199 614,4 -4,4"/>
-<!-- Node4 -->
+<!-- Node2 -->
 <g id="node1" class="node">
-<title>Node4</title>
+<title>Node2</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-93.5 0,-112.5 163,-112.5 163,-93.5 0,-93.5"/>
 <text text-anchor="middle" x="81.5" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute_impl</text>
 </g>
-<!-- Node5 -->
+<!-- Node3 -->
 <g id="node2" class="node">
-<title>Node5</title>
-<g id="a_node2"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="... ">
+<title>Node3</title>
+<g id="a_node2"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="Check if this object has required key(s). ">
 <polygon fill="#ffffff" stroke="#000000" points="219,-175.5 219,-194.5 319,-194.5 319,-175.5 219,-175.5"/>
 <text text-anchor="middle" x="269" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::required</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node5 -->
+<!-- Node2&#45;&gt;Node3 -->
 <g id="edge1" class="edge">
-<title>Node4&#45;&gt;Node5</title>
+<title>Node2&#45;&gt;Node3</title>
 <path fill="none" stroke="#191970" d="M96.5471,-112.5136C118.3944,-125.9864 160.5019,-150.6857 199,-166 204.9893,-168.3825 211.3821,-170.5719 217.7776,-172.5501"/>
 <polygon fill="#191970" stroke="#191970" points="217.1913,-176.0255 227.7722,-175.4823 219.162,-169.3086 217.1913,-176.0255"/>
 </g>
-<!-- Node8 -->
+<!-- Node6 -->
 <g id="node5" class="node">
-<title>Node8</title>
-<g id="a_node5"><a xlink:href="classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2" target="_top" xlink:title="... ">
+<title>Node6</title>
+<g id="a_node5"><a xlink:href="classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2" target="_top" xlink:title="Check if this object has optional key(s). ">
 <polygon fill="#ffffff" stroke="#000000" points="219.5,-137.5 219.5,-156.5 318.5,-156.5 318.5,-137.5 219.5,-137.5"/>
 <text text-anchor="middle" x="269" y="-144.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::optional</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node8 -->
+<!-- Node2&#45;&gt;Node6 -->
 <g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node8</title>
+<title>Node2&#45;&gt;Node6</title>
 <path fill="none" stroke="#191970" d="M122.1847,-112.5473C150.4406,-119.1781 188.2858,-128.0591 218.475,-135.1435"/>
 <polygon fill="#191970" stroke="#191970" points="217.8595,-138.594 228.3947,-137.4713 219.4588,-131.7792 217.8595,-138.594"/>
 </g>
-<!-- Node9 -->
+<!-- Node7 -->
 <g id="node6" class="node">
-<title>Node9</title>
-<g id="a_node6"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="AddInertiaMoment::compute\l_with_weights">
+<title>Node7</title>
+<g id="a_node6"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="Compute the inertia moment with weighed atoms. ">
 <polygon fill="#ffffff" stroke="#000000" points="199,-88 199,-118 339,-118 339,-88 199,-88"/>
 <text text-anchor="start" x="207" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute</text>
 <text text-anchor="middle" x="269" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node9 -->
+<!-- Node2&#45;&gt;Node7 -->
 <g id="edge5" class="edge">
-<title>Node4&#45;&gt;Node9</title>
+<title>Node2&#45;&gt;Node7</title>
 <path fill="none" stroke="#191970" d="M163.1948,-103C171.614,-103 180.165,-103 188.5703,-103"/>
 <polygon fill="#191970" stroke="#191970" points="188.7319,-106.5001 198.7319,-103 188.7318,-99.5001 188.7319,-106.5001"/>
 </g>
-<!-- Node11 -->
+<!-- Node9 -->
 <g id="node8" class="node">
-<title>Node11</title>
-<g id="a_node8"><a xlink:href="classAddInertiaMoment.html#a6b71b7cb75a8b76585a38938bb8ae0a8" target="_top" xlink:title="AddInertiaMoment::compute\l_without_weights">
+<title>Node9</title>
+<g id="a_node8"><a xlink:href="classAddInertiaMoment.html#a6b71b7cb75a8b76585a38938bb8ae0a8" target="_top" xlink:title="Compute the inertia moment. ">
 <polygon fill="#ffffff" stroke="#000000" points="199,-39 199,-69 339,-69 339,-39 199,-39"/>
 <text text-anchor="start" x="207" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute</text>
 <text text-anchor="middle" x="269" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_without_weights</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node11 -->
+<!-- Node2&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
-<title>Node4&#45;&gt;Node11</title>
+<title>Node2&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M118.097,-93.436C141.8351,-87.2324 173.4787,-78.9629 201.6568,-71.599"/>
 <polygon fill="#191970" stroke="#191970" points="202.6705,-74.9517 211.4606,-69.037 200.9005,-68.1792 202.6705,-74.9517"/>
 </g>
-<!-- Node12 -->
+<!-- Node10 -->
 <g id="node9" class="node">
-<title>Node12</title>
-<g id="a_node9"><a xlink:href="classDataKeys.html#a626d56b99861008c2a63580ed17b809d" target="_top" xlink:title="DataKeys::add">
+<title>Node10</title>
+<g id="a_node9"><a xlink:href="classDataKeys.html#a626d56b99861008c2a63580ed17b809d" target="_top" xlink:title="Add a key or keys in an array to the _keys. ">
 <polygon fill="#ffffff" stroke="#000000" points="228.5,-.5 228.5,-19.5 309.5,-19.5 309.5,-.5 228.5,-.5"/>
 <text text-anchor="middle" x="269" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::add</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node12 -->
+<!-- Node2&#45;&gt;Node10 -->
 <g id="edge10" class="edge">
-<title>Node4&#45;&gt;Node12</title>
+<title>Node2&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M93.8413,-93.469C114.5176,-77.9183 157.9395,-47.0192 199,-29 205.1979,-26.2801 211.879,-23.8647 218.5672,-21.7459"/>
 <polygon fill="#191970" stroke="#191970" points="219.7248,-25.0534 228.3158,-18.853 217.7333,-18.3426 219.7248,-25.0534"/>
 </g>
-<!-- Node6 -->
+<!-- Node4 -->
 <g id="node3" class="node">
-<title>Node6</title>
-<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="utils::runtime_error">
+<title>Node4</title>
+<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
 <polygon fill="#ffffff" stroke="#000000" points="512,-134.5 512,-153.5 610,-153.5 610,-134.5 512,-134.5"/>
 <text text-anchor="middle" x="561" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node6 -->
+<!-- Node3&#45;&gt;Node4 -->
 <g id="edge2" class="edge">
-<title>Node5&#45;&gt;Node6</title>
+<title>Node3&#45;&gt;Node4</title>
 <path fill="none" stroke="#191970" d="M319.0709,-182.6765C361.1805,-180.1804 422.8474,-175.2553 476,-166 490.1209,-163.5412 505.3362,-159.9205 518.9368,-156.3232"/>
 <polygon fill="#191970" stroke="#191970" points="520.2444,-159.5949 528.9777,-153.5965 518.4099,-152.8396 520.2444,-159.5949"/>
 </g>
-<!-- Node7 -->
+<!-- Node5 -->
 <g id="node4" class="node">
-<title>Node7</title>
-<g id="a_node4"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="utils::join">
+<title>Node5</title>
+<g id="a_node4"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
 <polygon fill="#ffffff" stroke="#000000" points="397.5,-137.5 397.5,-156.5 453.5,-156.5 453.5,-137.5 397.5,-137.5"/>
 <text text-anchor="middle" x="425.5" y="-144.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node7 -->
+<!-- Node3&#45;&gt;Node5 -->
 <g id="edge3" class="edge">
-<title>Node5&#45;&gt;Node7</title>
+<title>Node3&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M308.4916,-175.411C332.7364,-169.5241 363.6226,-162.0245 387.5736,-156.209"/>
 <polygon fill="#191970" stroke="#191970" points="388.4823,-159.5901 397.3741,-153.8293 386.8306,-152.7877 388.4823,-159.5901"/>
 </g>
-<!-- Node10 -->
+<!-- Node8 -->
 <g id="node7" class="node">
-<title>Node10</title>
-<g id="a_node7"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="utils::map_to_index">
+<title>Node8</title>
+<g id="a_node7"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="Mainly used for creating a map from values of selected property in array Element::data to correspondi...">
 <polygon fill="#ffffff" stroke="#000000" points="375,-93.5 375,-112.5 476,-112.5 476,-93.5 375,-93.5"/>
 <text text-anchor="middle" x="425.5" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::map_to_index</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node10 -->
+<!-- Node7&#45;&gt;Node8 -->
 <g id="edge6" class="edge">
-<title>Node9&#45;&gt;Node10</title>
+<title>Node7&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M339.0107,-103C347.5739,-103 356.2701,-103 364.6832,-103"/>
 <polygon fill="#191970" stroke="#191970" points="364.7768,-106.5001 374.7768,-103 364.7767,-99.5001 364.7768,-106.5001"/>
 </g>
-<!-- Node10&#45;&gt;Node6 -->
+<!-- Node8&#45;&gt;Node4 -->
 <g id="edge7" class="edge">
-<title>Node10&#45;&gt;Node6</title>
+<title>Node8&#45;&gt;Node4</title>
 <path fill="none" stroke="#191970" d="M456.927,-112.5093C475.6047,-118.1608 499.5115,-125.3946 519.7008,-131.5036"/>
 <polygon fill="#191970" stroke="#191970" points="518.6889,-134.854 529.274,-134.4003 520.7163,-128.154 518.6889,-134.854"/>
 </g>
-<!-- Node11&#45;&gt;Node10 -->
+<!-- Node9&#45;&gt;Node8 -->
 <g id="edge9" class="edge">
-<title>Node11&#45;&gt;Node10</title>
+<title>Node9&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M317.2322,-69.1014C338.9974,-75.9161 364.4147,-83.8742 385.1505,-90.3666"/>
 <polygon fill="#191970" stroke="#191970" points="384.3284,-93.7767 394.9173,-93.4246 386.42,-87.0965 384.3284,-93.7767"/>
 </g>
