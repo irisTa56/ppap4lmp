@@ -9,69 +9,69 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 100)">
 <title>Filter::compute</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-100 368,-100 368,4 -4,4"/>
-<!-- Node0 -->
+<!-- Node2 -->
 <g id="node1" class="node">
-<title>Node0</title>
+<title>Node2</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-38.5 0,-57.5 82,-57.5 82,-38.5 0,-38.5"/>
 <text text-anchor="middle" x="41" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Filter::compute</text>
 </g>
-<!-- Node1 -->
+<!-- Node3 -->
 <g id="node2" class="node">
-<title>Node1</title>
+<title>Node3</title>
 <g id="a_node2"><a xlink:href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8" target="_top" xlink:title="Look for Element::dataid in dataid_blacklist. ">
 <polygon fill="#ffffff" stroke="#000000" points="118,-76.5 118,-95.5 242,-95.5 242,-76.5 118,-76.5"/>
 <text text-anchor="middle" x="180" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Updater::check_blacklist</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node1 -->
+<!-- Node2&#45;&gt;Node3 -->
 <g id="edge1" class="edge">
-<title>Node0&#45;&gt;Node1</title>
+<title>Node2&#45;&gt;Node3</title>
 <path fill="none" stroke="#191970" d="M76.0756,-57.589C94.0191,-62.4944 116.0584,-68.5196 135.2167,-73.7571"/>
 <polygon fill="#191970" stroke="#191970" points="134.3666,-77.1531 144.9357,-76.4141 136.2126,-70.4008 134.3666,-77.1531"/>
 </g>
-<!-- Node2 -->
+<!-- Node4 -->
 <g id="node3" class="node">
-<title>Node2</title>
+<title>Node4</title>
 <g id="a_node3"><a xlink:href="namespaceutils.html#a362e3ea9867513a7bba06b6382d6527b" target="_top" xlink:title="Waning with a message. ">
 <polygon fill="#ffffff" stroke="#000000" points="143,-38.5 143,-57.5 217,-57.5 217,-38.5 143,-38.5"/>
 <text text-anchor="middle" x="180" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::warning</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node2 -->
+<!-- Node2&#45;&gt;Node4 -->
 <g id="edge2" class="edge">
-<title>Node0&#45;&gt;Node2</title>
+<title>Node2&#45;&gt;Node4</title>
 <path fill="none" stroke="#191970" d="M82.3282,-48C98.0834,-48 116.1636,-48 132.4513,-48"/>
 <polygon fill="#191970" stroke="#191970" points="132.8533,-51.5001 142.8533,-48 132.8533,-44.5001 132.8533,-51.5001"/>
 </g>
-<!-- Node4 -->
+<!-- Node6 -->
 <g id="node5" class="node">
-<title>Node4</title>
+<title>Node6</title>
 <g id="a_node5"><a xlink:href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" target="_top" xlink:title="Implementation of computation to update the data. ">
 <polygon fill="#ffffff" stroke="#000000" points="121.5,-.5 121.5,-19.5 238.5,-19.5 238.5,-.5 121.5,-.5"/>
 <text text-anchor="middle" x="180" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Updater::compute_impl</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node4 -->
+<!-- Node2&#45;&gt;Node6 -->
 <g id="edge4" class="edge">
-<title>Node0&#45;&gt;Node4</title>
+<title>Node2&#45;&gt;Node6</title>
 <path fill="none" stroke="#191970" d="M76.0756,-38.411C94.0191,-33.5056 116.0584,-27.4804 135.2167,-22.2429"/>
 <polygon fill="#191970" stroke="#191970" points="136.2126,-25.5992 144.9357,-19.5859 134.3666,-18.8469 136.2126,-25.5992"/>
 </g>
-<!-- Node3 -->
+<!-- Node5 -->
 <g id="node4" class="node">
-<title>Node3</title>
+<title>Node5</title>
 <g id="a_node4"><a xlink:href="namespaceutils.html#a3b5f21e223fdb0898119de641a1685f6" target="_top" xlink:title="Print to standard output. ">
 <polygon fill="#ffffff" stroke="#000000" points="278,-38.5 278,-57.5 364,-57.5 364,-38.5 278,-38.5"/>
 <text text-anchor="middle" x="321" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::_message</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node3 -->
+<!-- Node4&#45;&gt;Node5 -->
 <g id="edge3" class="edge">
-<title>Node2&#45;&gt;Node3</title>
+<title>Node4&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M217.0461,-48C232.5195,-48 250.7919,-48 267.6671,-48"/>
 <polygon fill="#191970" stroke="#191970" points="267.9562,-51.5001 277.9562,-48 267.9562,-44.5001 267.9562,-51.5001"/>
 </g>

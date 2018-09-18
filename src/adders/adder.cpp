@@ -1,6 +1,6 @@
 /*!
   @file src/adders/adder.cpp
-  @brief This file has implementations of the Adder class, which is a
+  @brief This file has an implementation of the Adder class, which is a
   subclass of the Updater class.
   @author Takayuki Kobayashi
   @date 2018/06/29

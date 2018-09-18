@@ -22,6 +22,7 @@
 */
 class Adder : public Updater {
  public:
+  //! Constructor of Adder class (inherited).
   using Updater::Updater;
   virtual ~Adder() = default;
   /*!
@@ -33,14 +34,13 @@ class Adder : public Updater {
     of computed properties are added to.
     @param dataid : Constant integer copied from Element::dataid.
     @return None.
-    @details This method checks if \c dataid is in
-    Adder::dataid_blacklist. If it is not in the blacklist, this method
-    passes \c data and \c datakeys to Adder::compute_impl. Note that
-    actual computation of properties is conducted by
-    Adder::compute_impl orveridden in subclasses of this class. In
-    addition, this method ensures that new property named \e id is not
-    added; that property must be set at initialization (done by
-    Starter) only.
+    @details This method checks if \c dataid is in #dataid_blacklist.
+    If it is not in the blacklist, this method passes \c data and
+    \c datakeys to Adder::compute_impl. Note that actual computation of
+    properties is conducted by Adder::compute_impl orveridden in
+    subclasses of this class. In addition, this method ensures that new
+    property named \e id is not added; that property must be set at
+    initialization (done by Starter) only.
   */
   virtual void compute(
     Json &data,

@@ -157,14 +157,15 @@
       <td class="py_td">Lambda.</td>
       <td class="py_td">
         Factory function for Element class. This function takes one
-        argument, an object of Starter's subclass (such class is
-        prefixed by \c Sta) which adds some properties to empty data
-        of the created Element object.
+        argument, an object of Starter's or Filter's subclass (such
+        class is prefixed by \c Sta and \c Fil, respectively) which
+        adds some properties to empty data of the created Element
+        object.
       </td>
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            \c upd : An object of Starter's subclass.
+            \c upd : An object of Starter's or Filter's subclass.
           </li>
         </ul>
       </td>
@@ -207,11 +208,11 @@ class PyElement : public Element {
   @brief Function to bind Element class to Python.
   @details Constructor of Element class is hidden from Python. A
   Python-side function \b create provides functionality to create an
-  object of Element class with an object of Starter's subclass. Such a
-  function is required to make ::UpdatePair from shared pointers to the
-  created Element object and Starter object taken as the argument;
-  because constructor cannot call \c shared_from_this() and therefore
-  cannot make ::UpdatePair.
+  object of Element class with an object of Starter's or Filter's
+  subclass. This function is required to make ::UpdatePair from shared
+  pointers to the created Element object and Starter (or Filter) object
+  taken as the argument; because constructor cannot call
+  \c shared_from_this() and therefore cannot make ::UpdatePair.
 */
 static void pybind_element(py::module &m)
 {

@@ -1,6 +1,6 @@
 /*!
   @file src/adders/add_com_position.cpp
-  @brief This file has implementations of the AddCoMPosition class,
+  @brief This file has an implementation of the AddCoMPosition class,
   which is a subclass of the Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/13

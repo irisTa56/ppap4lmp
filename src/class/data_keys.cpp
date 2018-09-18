@@ -1,7 +1,7 @@
 /*!
   @file src/class/data_keys.cpp
-  @brief This file has implementations of the DataKeys class, which is
-  owned by Element class.
+  @brief This file has an implementation of the DataKeys class, which
+  is owned by Element class.
   @author Takayuki Kobayashi
   @date 2018/09/09
   @details For more details, please see the header file,

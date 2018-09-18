@@ -1,6 +1,6 @@
 /*!
   @file src/adders/add_molecular_orientation.cpp
-  @brief This file has implementations of the AddMolecularOrientation
+  @brief This file has an implementation of the AddMolecularOrientation
   class, which is a subclass of the Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/16

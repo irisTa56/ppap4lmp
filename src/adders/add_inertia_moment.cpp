@@ -1,6 +1,6 @@
 /*!
   @file src/adders/add_inertia_moment.cpp
-  @brief This file has implementations of the AddInertiaMoment class,
+  @brief This file has an implementation of the AddInertiaMoment class,
   which is a subclass of the Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/15

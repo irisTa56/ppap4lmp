@@ -71,9 +71,7 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     Json &data,
     DataKeys &datakeys) override;
  public:
-  /*!
-    @brief Constructor of AddGyrationRadius class (default).
-  */
+  //! Constructor of AddGyrationRadius class (inherited).
   using Adder::Adder;
   virtual ~AddGyrationRadius() = default;
   /*!

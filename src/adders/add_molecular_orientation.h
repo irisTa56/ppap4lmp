@@ -49,9 +49,7 @@ class AddMolecularOrientation : public Adder {
     Json &data,
     DataKeys &datakeys) override;
  public:
-  /*!
-    @brief Constructor of AddMolecularOrientation class (default).
-  */
+  //! Constructor of AddMolecularOrientation class (inherited).
   using Adder::Adder;
   virtual ~AddMolecularOrientation() = default;
 };

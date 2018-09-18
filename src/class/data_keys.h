@@ -29,7 +29,7 @@ class DataKeys {
   Set<Str> _keys;
  public:
   /*!
-    @brief Constructor of DataKeys class (default).
+    @brief Constructor of DataKeys class (inherited).
   */
   DataKeys() = default;
   virtual ~DataKeys() = default;

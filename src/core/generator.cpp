@@ -1,7 +1,7 @@
 /*!
   @file src/core/generator.cpp
-  @brief This file has implementations of the Generator class, which is
-  one of the cores of this program.
+  @brief This file has an implementation of the Generator class, which
+  is one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/21
   @details For more details, please see the header file,

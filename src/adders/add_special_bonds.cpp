@@ -1,6 +1,6 @@
 /*!
   @file src/adders/add_special_bonds.cpp
-  @brief This file has implementations of the AddSpecialBonds class,
+  @brief This file has an implementation of the AddSpecialBonds class,
   which is a subclass of the Adder class.
   @author Takayuki Kobayashi
   @date 2018/08/19

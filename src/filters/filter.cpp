@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-Filter: is an abstract class to filter data.
-
-create: 2018/06/30 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/filters/filter.cpp
+  @brief This file has an implementation of the Filter class, which is
+  a subclass of the Updater class.
+  @author Takayuki Kobayashi
+  @date 2018/06/30
+  @details For more details, please see the header file,
+  src/filters/filter.h.
+*/
 
 #include "filter.h"
 #include "../utils/message.h"
@@ -48,3 +52,5 @@ void Filter::compute(
     }
   }
 }
+
+/* ------------------------------------------------------------------ */

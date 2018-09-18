@@ -1,6 +1,6 @@
 /*!
   @file src/core/element.cpp
-  @brief This file has implementations of the Element class, which is
+  @brief This file has an implementation of the Element class, which is
   one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/07/01

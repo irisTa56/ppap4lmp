@@ -1,6 +1,6 @@
 /*!
   @file src/core/updater.cpp
-  @brief This file has implementations of the Updater class, which is
+  @brief This file has an implementation of the Updater class, which is
   one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/29

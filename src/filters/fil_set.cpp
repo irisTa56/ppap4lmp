@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-FilSet: stands for Filter using Set of values.
-
-create: 2018/07/01 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/filters/fil_set.cpp
+  @brief This file has an implementation of the FilSet class, which is
+  a subclass of the Filter class.
+  @author Takayuki Kobayashi
+  @date 2018/07/01
+  @details For more details, please see the header file,
+  src/filters/fil_set.h.
+*/
 
 #include "fil_set.h"
 
@@ -59,3 +63,5 @@ void FilSet::compute_impl(
 
   data.swap(tmp);
 }
+
+/* ------------------------------------------------------------------ */
