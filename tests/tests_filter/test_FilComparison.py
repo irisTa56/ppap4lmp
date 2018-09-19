@@ -3,7 +3,8 @@ import traceback
 
 import numpy as np
 
-from ppap4lmp import create, StaDumpAtoms, FilSet, FilComparison
+from ppap4lmp import \
+  create, StaDumpAtoms, StaCopy, FilSet, FilComparison
 
 class TestFilComparison(unittest.TestCase):
 
@@ -50,8 +51,10 @@ class TestFilComparison(unittest.TestCase):
   def _test_equivalent_filter(self, arguments, filterset, filtercom):
 
     atoms = create(StaDumpAtoms(*arguments))
-    filtered_atoms1 = create(FilSet(atoms, filterset))
-    filtered_atoms2 = create(FilComparison(atoms, filtercom))
+    filtered_atoms1 = create(
+      StaCopy(atoms)).append_updater(FilSet(filterset))
+    filtered_atoms2 = create(
+      StaCopy(atoms)).append_updater(FilComparison(filtercom))
 
     self.assertEqual(
       filtered_atoms1.get_data(), filtered_atoms2.get_data())
@@ -93,18 +96,21 @@ class TestFilComparison(unittest.TestCase):
     atoms = create(StaDumpAtoms(*arguments))
     num_total = len(atoms.get_data())
 
-    filtered_atoms1 = create(FilComparison(atoms, (key1, "<", lim1)))
+    filtered_atoms1 = create(
+      StaCopy(atoms)).append_updater(FilComparison((key1, "<", lim1)))
     vec1 = filtered_atoms1.get_1d_float(key1)
     num1 = len(vec1)
     self.assertTrue(np.all(vec1 < lim1))
 
-    filtered_atoms2 = create(FilComparison(atoms, (key2, "<", lim2)))
+    filtered_atoms2 = create(
+      StaCopy(atoms)).append_updater(FilComparison((key2, "<", lim2)))
     vec2 = filtered_atoms2.get_1d_float(key2)
     num2 = len(vec2)
     self.assertTrue(np.all(vec2 < lim2))
 
-    filtered_atoms = create(FilComparison(
-      atoms, [(key1, "<", lim1), (key2, "<", lim2)]))
+    filtered_atoms = create(
+      StaCopy(atoms)).append_updater(
+        FilComparison([(key1, "<", lim1), (key2, "<", lim2)]))
     arr = filtered_atoms.get_2d_float(key1, key2)
     num = arr.shape[0]
     self.assertTrue(np.all(arr.T[0] < lim1) and np.all(arr.T[1] < lim2))

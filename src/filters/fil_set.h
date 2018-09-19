@@ -35,9 +35,6 @@ class FilSet : public Filter {
  public:
   FilSet(
     const Map<Str,Set<Json>> &value_sets_);
-  FilSet(
-    const ElPtr &elem,
-    const Map<Str,Set<Json>> &value_sets_);
   virtual ~FilSet() = default;
 };
 

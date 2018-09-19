@@ -78,6 +78,8 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     @brief Switch #add_squared (to true by default).
     @param add_squared_ : A boolean to be assigned to #add_squared.
     @return Shared pointer to this object.
+    @details Please be careful not to call this method in
+    a multithreads context because it is thread-unsafe.
   */
   ShPtr<AddGyrationRadius> with_squared(
     bool add_squared_ = true);
@@ -86,6 +88,8 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     @param without_sqrted_ : A boolean whose negation is assigned to
     #add_sqrted.
     @return Shared pointer to this object.
+    @details Please be careful not to call this method in
+    a multithreads context because it is thread-unsafe.
   */
   ShPtr<AddGyrationRadius> without_sqrted(
     bool without_sqrted_ = true);

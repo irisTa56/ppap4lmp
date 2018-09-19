@@ -26,18 +26,6 @@
 class Filter : public Updater {
  public:
   /*!
-    @brief Constructor of Filter class. Constructed object is used for
-    creating a new Element object.
-    @param elem : Shared pointer to an Element object from which a new
-    Element object is generated.
-    @details If an Element object is created with an object constructed
-    by this constructor, Element::data of the Element object consists
-    of items in Element::data of the \c elem which pass user-defined
-    criteria.
-  */
-  Filter(
-    const ElPtr &elem);
-  /*!
     @brief Constructor of Filter class (inherited). Constructed object
     is used for modifying an existing Element object.
     @details Element::data of an Element object where an object

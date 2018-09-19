@@ -1,7 +1,7 @@
 import unittest
 import traceback
 
-from ppap4lmp import create, StaDumpAtoms, FilSet
+from ppap4lmp import create, StaDumpAtoms, StaCopy, FilSet
 
 class TestFilSet(unittest.TestCase):
 
@@ -32,8 +32,10 @@ class TestFilSet(unittest.TestCase):
   def _test_equivalent_filter(self, arguments, filter1, filter2):
 
     atoms = create(StaDumpAtoms(*arguments))
-    filtered_atoms1 = create(FilSet(atoms, filter1))
-    filtered_atoms2 = create(FilSet(atoms, filter2))
+    filtered_atoms1 = create(
+      StaCopy(atoms)).append_updater(FilSet(filter1))
+    filtered_atoms2 = create(
+      StaCopy(atoms)).append_updater(FilSet(filter2))
 
     self.assertEqual(
       filtered_atoms1.get_data(), filtered_atoms2.get_data())

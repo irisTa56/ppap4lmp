@@ -28,8 +28,8 @@ class Updater {
   /*!
     @brief Set of Element::dataid updated by this Updater object.
     @details If this Updater object is called from an Element
-    object for the first time, this object stores Element::dataid
-    in the #dataid_blacklist and updates Element::data. From the second
+    object for the first time, this object stores Element::dataid in
+    the #dataid_blacklist and updates Element::data. From the second
     time on, this object can skip the updating computation.
   */
   Set<int> dataid_blacklist;
@@ -73,7 +73,8 @@ class Updater {
     @brief Constructor of Updater class.
     @details This constructor is thread-unsafe because it accesses its
     members thread-globally. Ensure this constructor is not called in
-    a multithreads context.
+    a multithreads context. Please be careful that constructors of
+    subclasses of this class are also thread-unsafe.
   */
   Updater();
   virtual ~Updater() = default;

@@ -15,14 +15,6 @@ namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
 
-Filter::Filter(
-  const ElPtr &elem)
-{
-  ext_generator = elem;
-}
-
-/* ------------------------------------------------------------------ */
-
 void Filter::compute(
   Json &data,
   DataKeys &datakeys,
@@ -30,18 +22,6 @@ void Filter::compute(
 {
   if (check_blacklist(dataid))
   {
-    if (ext_generator)
-    {
-      if (data != nullptr)
-      {
-        ut::warning("Non-empty data will be overwritten");
-      }
-
-      auto elem = ext_generator->get_element();
-      data = elem->get_data();
-      datakeys = elem->get_keys();
-    }
-
     if (data.is_array())
     {
       compute_impl(data, datakeys);

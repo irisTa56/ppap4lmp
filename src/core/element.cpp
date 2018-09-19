@@ -151,7 +151,7 @@ Json Element::get_data(const Json &key_)
     for (const auto &d : data)
     {
       tmp.push_back({});
-      Json &elem = tmp.back();
+      auto &elem = tmp.back();
 
       for (const auto &key : keys)
       {

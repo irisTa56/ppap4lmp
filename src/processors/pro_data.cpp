@@ -53,7 +53,7 @@ void ProData::run_impl(
       for (const auto &d : data)
       {
         json.push_back({});
-        Json &elem = json.back();
+        auto &elem = json.back();
 
         for (const auto &k : selected_keys)
         {

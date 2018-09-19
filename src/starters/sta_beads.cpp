@@ -123,9 +123,9 @@ void StaBeads::compute_impl(
     {
       data.push_back({{"id", ++bead_id}, {"mol", mol["id"]}});
 
-      Json &back = data.back();
+      auto &back = data.back();
 
-      Json &ids_tmp = back["atom-ids"];
+      auto &ids_tmp = back["atom-ids"];
 
       for (const int index : abst_bead["indices-in-mol"])
       {

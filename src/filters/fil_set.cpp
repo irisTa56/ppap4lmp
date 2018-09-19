@@ -20,15 +20,6 @@ FilSet::FilSet(
 
 /* ------------------------------------------------------------------ */
 
-FilSet::FilSet(
-  const ElPtr &elem,
-  const Map<Str,Set<Json>> &value_sets_) : Filter(elem)
-{
-  value_sets = value_sets_;
-}
-
-/* ------------------------------------------------------------------ */
-
 void FilSet::compute_impl(
   Json &data,
   DataKeys &datakeys)
