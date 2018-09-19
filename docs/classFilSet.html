@@ -71,6 +71,11 @@ $(function() {
 <div class="title">FilSet Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><em><a class="el" href="classFilSet.html" title="FilSet applies filtering using sets of acceptable values. ">FilSet</a></em> applies filtering using sets of acceptable values.  
+ <a href="classFilSet.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="filters_2fil__set_8h_source.html">fil_set.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for FilSet:</div>
 <div class="dyncontent">
@@ -123,8 +128,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ae7d1e9a219ce00098498213c0af4bf26"><td class="memItemLeft" align="right" valign="top"><a id="ae7d1e9a219ce00098498213c0af4bf26"></a>
-<a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6">Map</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>, <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>value_sets</b></td></tr>
+<tr class="memitem:ae7d1e9a219ce00098498213c0af4bf26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6">Map</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>, <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFilSet.html#ae7d1e9a219ce00098498213c0af4bf26">value_sets</a></td></tr>
+<tr class="memdesc:ae7d1e9a219ce00098498213c0af4bf26"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6" title="Map is an alias for unordered map (same as dict in Python). ">Map</a> (dictionary) representing an user-defined criterion of this filter.  <a href="#ae7d1e9a219ce00098498213c0af4bf26">More...</a><br /></td></tr>
 <tr class="separator:ae7d1e9a219ce00098498213c0af4bf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -134,7 +139,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to an object of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class used in updating process. It is different from the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object to be updated.  <a href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">More...</a><br /></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><em><a class="el" href="classFilSet.html" title="FilSet applies filtering using sets of acceptable values. ">FilSet</a></em> applies filtering using sets of acceptable values. </p>
+<p>This class inherits <a class="el" href="classFilter.html" title="Filter removes items in array Element::data if the items fail user-defined criteria. ">Filter</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Filter::compute_impl</a>. An object of this class has <a class="el" href="classFilSet.html#ae7d1e9a219ce00098498213c0af4bf26" title="Map (dictionary) representing an user-defined criterion of this filter. ">value_sets</a>, which is a dictionary consisting of pairs of a string key and a set of acceptable values. An item of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> can pass this filter only if every value for every key of <a class="el" href="classFilSet.html#ae7d1e9a219ce00098498213c0af4bf26" title="Map (dictionary) representing an user-defined criterion of this filter. ">value_sets</a> is included in the corresponding set (value of <a class="el" href="classFilSet.html#ae7d1e9a219ce00098498213c0af4bf26" title="Map (dictionary) representing an user-defined criterion of this filter. ">value_sets</a>). </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0335614b1856870777ab1af370406fd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0335614b1856870777ab1af370406fd2">&#9670;&nbsp;</a></span>compute_impl()</h2>
 
@@ -181,9 +189,35 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae7d1e9a219ce00098498213c0af4bf26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d1e9a219ce00098498213c0af4bf26">&#9670;&nbsp;</a></span>value_sets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6">Map</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>,<a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt;<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>&gt; &gt; FilSet::value_sets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6" title="Map is an alias for unordered map (same as dict in Python). ">Map</a> (dictionary) representing an user-defined criterion of this filter. </p>
+<p>Keys of the dictionary are a part of <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">Element::datakeys</a> of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object where this object appended to. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/filters/<a class="el" href="filters_2fil__set_8h_source.html">fil_set.h</a></li>
-<li>src/filters/fil_set.cpp</li>
+<li>src/filters/<a class="el" href="fil__set_8cpp.html">fil_set.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

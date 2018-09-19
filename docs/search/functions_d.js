@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pyargs_5fto_5fvec',['pyargs_to_vec',['../namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850',1,'utils']]],
-  ['pybind_5fadd_5fchild_5fids',['pybind_add_child_ids',['../pybind_2py__adders_2add__child__ids_8h.html#ad2342686c1a05d6776d6eb852c0c961f',1,'add_child_ids.h']]],
+  ['pybind_5fadd_5fchild_5fids',['pybind_add_child_ids',['../py__add__child__ids_8h.html#ad2342686c1a05d6776d6eb852c0c961f',1,'py_add_child_ids.h']]],
   ['pybind_5fadd_5fchild_5fpositions',['pybind_add_child_positions',['../pybind_2py__adders_2add__child__positions_8h.html#abd9328696dac6921c4fa8a51cd3f060d',1,'add_child_positions.h']]],
   ['pybind_5fadd_5fcom_5fposition',['pybind_add_com_position',['../pybind_2py__adders_2add__com__position_8h.html#a75c8f3fc63ecd4f6e3e2e4bc808e3bc9',1,'add_com_position.h']]],
   ['pybind_5fadd_5fgyration_5fradius',['pybind_add_gyration_radius',['../pybind_2py__adders_2add__gyration__radius_8h.html#a048d51f0746bbe667f9e7ecb7f1431c7',1,'add_gyration_radius.h']]],

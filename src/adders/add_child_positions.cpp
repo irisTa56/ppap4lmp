@@ -1,7 +1,7 @@
 /*!
   @file src/adders/add_child_positions.cpp
-  @brief This file has an implementation of the AddChildPositions class,
-  which is a subclass of the Adder class.
+  @brief This file has an implementation of AddChildPositions class,
+  which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/09/03
   @details For more details, please see the header file,

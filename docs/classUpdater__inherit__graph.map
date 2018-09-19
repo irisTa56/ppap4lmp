@@ -2,10 +2,10 @@
 <area shape="rect" id="node2" href="$classAdder.html" title="Adder adds new properties (keys and values) to non&#45;empty Element::data. " alt="" coords="967,255,1059,362"/>
 <area shape="rect" id="node13" href="$classFilter.html" title="Filter removes items in array Element::data if the items fail user&#45;defined criteria. " alt="" coords="1946,248,2038,369"/>
 <area shape="rect" id="node16" href="$classStarter.html" title="{Starter\n||+ ~Starter()\l+ compute()\l+ Updater()\l&#45; sort_by_id()\l}" alt="" coords="2367,248,2465,369"/>
-<area shape="rect" id="node3" href="$classAddChildIDs.html" title="AddChildIDs stands for Adder for Child IDs (such as atom&#45;ids for molecules). " alt="" coords="5,447,139,568"/>
-<area shape="rect" id="node4" href="$classAddChildPositions.html" title="AddChildPositions stands for Adder for Child Positions (such as atom&#45;xs, atom&#45;ys and atom&#45;zs for mole..." alt="" coords="163,454,319,561"/>
-<area shape="rect" id="node5" href="$classAddCoMPosition.html" title="AddCoMPosition stands for Adder for Center of Mass added as Position, xu, yu and zu. " alt="" coords="344,439,531,575"/>
-<area shape="rect" id="node6" href="$classAddGyrationRadius.html" title="AddGyrationRadius stands for Adder for Gyration Radius. " alt="" coords="555,439,717,575"/>
+<area shape="rect" id="node3" href="$classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. " alt="" coords="5,447,139,568"/>
+<area shape="rect" id="node4" href="$classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object..." alt="" coords="163,454,319,561"/>
+<area shape="rect" id="node5" href="$classAddCoMPosition.html" title="AddCoMPosition adds center of mass of an Element object as its unwrapped position. " alt="" coords="344,439,531,575"/>
+<area shape="rect" id="node6" href="$classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius of an Element object. " alt="" coords="555,439,717,575"/>
 <area shape="rect" id="node7" href="$classAddInertiaMoment.html" title="AddInertiaMoment stands for Adder for Inertia Moment. " alt="" coords="741,439,928,575"/>
 <area shape="rect" id="node8" href="$classAddMap.html" title="AddMap stands for Adder for Mapping from existing property to new property. " alt="" coords="952,425,1075,590"/>
 <area shape="rect" id="node9" href="$classAddMolecularOrientation.html" title="AddMolecularOrientation stands for Adder for Molecular Orientation. " alt="" coords="1099,461,1291,553"/>
@@ -13,9 +13,9 @@
 <area shape="rect" id="node11" href="$classAddSpecialBonds.html" title="AddSpecialBonds stands for Adder for Special Bonds. " alt="" coords="1462,439,1626,575"/>
 <area shape="rect" id="node12" href="$classAddWrappedPosition.html" title="AddWrappedPosition stands for Adder for Wrapped Postisions, x, y and z. " alt="" coords="1651,454,1821,561"/>
 <area shape="rect" id="node14" href="$classFilComparison.html" title="{FilComparison\n|&#45; comparisons\l|+ FilComparison()\l+ FilComparison()\l+ FilComparison()\l+ FilComparison()\l+ ~FilComparison()\l# compute_impl()\l&#45; make_lambda()\l&#45; convert_to_funcs()\l}" alt="" coords="1845,417,1984,597"/>
-<area shape="rect" id="node15" href="$classFilSet.html" title="{FilSet\n|&#45; value_sets\l|+ FilSet()\l+ FilSet()\l+ ~FilSet()\l# compute_impl()\l}" alt="" coords="2008,447,2131,568"/>
+<area shape="rect" id="node15" href="$classFilSet.html" title="FilSet applies filtering using sets of acceptable values. " alt="" coords="2008,447,2131,568"/>
 <area shape="rect" id="node17" href="$classStaBeads.html" title="{StaBeads\n|&#45; mol_type_to_abst_beads\l|+ StaBeads()\l+ StaBeads()\l+ ~StaBeads()\l# compute_impl()\l&#45; check_mol_type_to_abst\l_beads()\l}" alt="" coords="2155,432,2330,583"/>
-<area shape="rect" id="node18" href="$classStaCustom.html" title="{StaCustom\n|&#45; json\l&#45; jsonkeys\l|+ StaCustom()\l+ ~StaCustom()\l# compute_impl()\l}" alt="" coords="2355,447,2477,568"/>
+<area shape="rect" id="node18" href="$classStaCustom.html" title="{StaCustom\n|&#45; json\l&#45; jsonkeys\l|+ StaCustom()\l+ ~StaCustom()\l+ StaCustom()\l+ ~StaCustom()\l# compute_impl()\l# compute_impl()\l}" alt="" coords="2355,425,2477,590"/>
 <area shape="rect" id="node19" href="$classStaDump.html" title="{StaDump\n|# timestep\l# filepath\l|+ StaDump()\l+ ~StaDump()\l}" alt="" coords="2501,454,2605,561"/>
 <area shape="rect" id="node22" href="$classStaMolecules.html" title="{StaMolecules\n||+ StaMolecules()\l+ ~StaMolecules()\l# compute_impl()\l}" alt="" coords="2630,454,2759,561"/>
 <area shape="rect" id="node20" href="$classStaDumpAtoms.html" title="{StaDumpAtoms\n||+ ~StaDumpAtoms()\l+ StaDump()\l# compute_impl()\l&#45; make_is_int_vector()\l}" alt="" coords="2397,645,2547,767"/>

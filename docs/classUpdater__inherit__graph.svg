@@ -141,7 +141,7 @@ var sectionId = 'dynsection-0';
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classAddChildIDs.html" target="_top" xlink:title="AddChildIDs stands for Adder for Child IDs (such as atom&#45;ids for molecules). ">
+<g id="a_node3"><a xlink:href="classAddChildIDs.html" target="_top" xlink:title="AddChildIDs adds id property of a child Element object to a parent Element object. ">
 <polygon fill="#ffffff" stroke="#000000" points="0,-149.5 0,-239.5 100,-239.5 100,-149.5 0,-149.5"/>
 <text text-anchor="middle" x="50" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildIDs</text>
 <polyline fill="none" stroke="#000000" points="0,-220.5 100,-220.5 "/>
@@ -163,7 +163,7 @@ var sectionId = 'dynsection-0';
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classAddChildPositions.html" target="_top" xlink:title="AddChildPositions stands for Adder for Child Positions (such as atom&#45;xs, atom&#45;ys and atom&#45;zs for mole...">
+<g id="a_node4"><a xlink:href="classAddChildPositions.html" target="_top" xlink:title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">
 <polygon fill="#ffffff" stroke="#000000" points="118.5,-155 118.5,-234 235.5,-234 235.5,-155 118.5,-155"/>
 <text text-anchor="middle" x="177" y="-222" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildPositions</text>
 <polyline fill="none" stroke="#000000" points="118.5,-215 235.5,-215 "/>
@@ -184,7 +184,7 @@ var sectionId = 'dynsection-0';
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classAddCoMPosition.html" target="_top" xlink:title="AddCoMPosition stands for Adder for Center of Mass added as Position, xu, yu and zu. ">
+<g id="a_node5"><a xlink:href="classAddCoMPosition.html" target="_top" xlink:title="AddCoMPosition adds center of mass of an Element object as its unwrapped position. ">
 <polygon fill="#ffffff" stroke="#000000" points="254,-144 254,-245 394,-245 394,-144 254,-144"/>
 <text text-anchor="middle" x="324" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition</text>
 <polyline fill="none" stroke="#000000" points="254,-226 394,-226 "/>
@@ -207,7 +207,7 @@ var sectionId = 'dynsection-0';
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classAddGyrationRadius.html" target="_top" xlink:title="AddGyrationRadius stands for Adder for Gyration Radius. ">
+<g id="a_node6"><a xlink:href="classAddGyrationRadius.html" target="_top" xlink:title="AddGyrationRadius adds gyration radius of an Element object. ">
 <polygon fill="#ffffff" stroke="#000000" points="412,-144 412,-245 534,-245 534,-144 412,-144"/>
 <text text-anchor="middle" x="473" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddGyrationRadius</text>
 <polyline fill="none" stroke="#000000" points="412,-226 534,-226 "/>
@@ -392,7 +392,7 @@ var sectionId = 'dynsection-0';
 <!-- Node14 -->
 <g id="node15" class="node">
 <title>Node14</title>
-<g id="a_node15"><a xlink:href="classFilSet.html" target="_top" xlink:title="{FilSet\n|&#45; value_sets\l|+ FilSet()\l+ FilSet()\l+ ~FilSet()\l# compute_impl()\l}">
+<g id="a_node15"><a xlink:href="classFilSet.html" target="_top" xlink:title="FilSet applies filtering using sets of acceptable values. ">
 <polygon fill="#ffffff" stroke="#000000" points="1502,-149.5 1502,-239.5 1594,-239.5 1594,-149.5 1502,-149.5"/>
 <text text-anchor="middle" x="1548" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilSet</text>
 <polyline fill="none" stroke="#000000" points="1502,-220.5 1594,-220.5 "/>
@@ -438,24 +438,33 @@ var sectionId = 'dynsection-0';
 <!-- Node17 -->
 <g id="node18" class="node">
 <title>Node17</title>
-<g id="a_node18"><a xlink:href="classStaCustom.html" target="_top" xlink:title="{StaCustom\n|&#45; json\l&#45; jsonkeys\l|+ StaCustom()\l+ ~StaCustom()\l# compute_impl()\l}">
-<polygon fill="#ffffff" stroke="#000000" points="1762,-149.5 1762,-239.5 1854,-239.5 1854,-149.5 1762,-149.5"/>
-<text text-anchor="middle" x="1808" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
-<polyline fill="none" stroke="#000000" points="1762,-220.5 1854,-220.5 "/>
-<text text-anchor="start" x="1770" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
-<text text-anchor="start" x="1770" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; jsonkeys</text>
-<polyline fill="none" stroke="#000000" points="1762,-190.5 1854,-190.5 "/>
-<text text-anchor="start" x="1770" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
-<text text-anchor="start" x="1770" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
-<text text-anchor="start" x="1770" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node18"><a xlink:href="classStaCustom.html" target="_top" xlink:title="{StaCustom\n|&#45; json\l&#45; jsonkeys\l|+ StaCustom()\l+ ~StaCustom()\l+ StaCustom()\l+ ~StaCustom()\l# compute_impl()\l# compute_impl()\l}">
+<polygon fill="#ffffff" stroke="#000000" points="1762,-133 1762,-256 1854,-256 1854,-133 1762,-133"/>
+<text text-anchor="middle" x="1808" y="-244" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
+<polyline fill="none" stroke="#000000" points="1762,-237 1854,-237 "/>
+<text text-anchor="start" x="1770" y="-225" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
+<text text-anchor="start" x="1770" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; jsonkeys</text>
+<polyline fill="none" stroke="#000000" points="1762,-207 1854,-207 "/>
+<text text-anchor="start" x="1770" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
+<text text-anchor="start" x="1770" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
+<text text-anchor="start" x="1770" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
+<text text-anchor="start" x="1770" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
+<text text-anchor="start" x="1770" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="1770" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node15&#45;&gt;Node17 -->
 <g id="edge17" class="edge">
 <title>Node15&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M1808,-288.1234C1808,-272.1732 1808,-254.9687 1808,-239.7129"/>
-<polygon fill="none" stroke="#191970" points="1804.5001,-288.3907 1808,-298.3907 1811.5001,-288.3908 1804.5001,-288.3907"/>
+<path fill="none" stroke="#191970" d="M1801.4531,-288.1885C1801.2281,-277.7743 1801.19,-266.8232 1801.339,-256.2275"/>
+<polygon fill="none" stroke="#191970" points="1797.9602,-288.4933 1801.7404,-298.3907 1804.9574,-288.2961 1797.9602,-288.4933"/>
+</g>
+<!-- Node15&#45;&gt;Node17 -->
+<g id="edge18" class="edge">
+<title>Node15&#45;&gt;Node17</title>
+<path fill="none" stroke="#191970" d="M1814.5469,-288.1885C1814.7719,-277.7743 1814.81,-266.8232 1814.661,-256.2275"/>
+<polygon fill="none" stroke="#191970" points="1811.0426,-288.2961 1814.2596,-298.3907 1818.0398,-288.4933 1811.0426,-288.2961"/>
 </g>
 <!-- Node18 -->
 <g id="node19" class="node">
@@ -473,7 +482,7 @@ var sectionId = 'dynsection-0';
 </g>
 </g>
 <!-- Node15&#45;&gt;Node18 -->
-<g id="edge18" class="edge">
+<g id="edge19" class="edge">
 <title>Node15&#45;&gt;Node18</title>
 <path fill="none" stroke="#191970" d="M1844.9132,-290.1013C1857.6094,-271.7349 1871.5947,-251.5037 1883.418,-234.4002"/>
 <polygon fill="none" stroke="#191970" points="1841.9902,-288.1746 1839.1829,-298.3907 1847.7484,-292.1551 1841.9902,-288.1746"/>
@@ -494,7 +503,7 @@ var sectionId = 'dynsection-0';
 </g>
 </g>
 <!-- Node15&#45;&gt;Node21 -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>Node15&#45;&gt;Node21</title>
 <path fill="none" stroke="#191970" d="M1854.432,-323.8712C1885.7532,-309.3739 1927.0387,-287.7372 1959,-262 1968.9882,-253.9569 1978.5965,-244.0338 1987.0214,-234.2952"/>
 <polygon fill="none" stroke="#191970" points="1852.706,-320.8112 1845.0528,-328.1378 1855.6045,-327.1829 1852.706,-320.8112"/>
@@ -516,7 +525,7 @@ var sectionId = 'dynsection-0';
 </g>
 </g>
 <!-- Node18&#45;&gt;Node19 -->
-<g id="edge19" class="edge">
+<g id="edge20" class="edge">
 <title>Node18&#45;&gt;Node19</title>
 <path fill="none" stroke="#191970" d="M1890.9095,-145.4265C1883.6976,-127.8106 1875.6034,-108.0394 1868.53,-90.7619"/>
 <polygon fill="none" stroke="#191970" points="1887.7854,-147.0335 1894.8133,-154.9619 1894.2635,-144.3814 1887.7854,-147.0335"/>
@@ -537,7 +546,7 @@ var sectionId = 'dynsection-0';
 </g>
 </g>
 <!-- Node18&#45;&gt;Node20 -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>Node18&#45;&gt;Node20</title>
 <path fill="none" stroke="#191970" d="M1931.0205,-145.5974C1939.0332,-126.0254 1948.1444,-103.7703 1955.7376,-85.2228"/>
 <polygon fill="none" stroke="#191970" points="1927.7365,-144.3814 1927.1867,-154.9619 1934.2146,-147.0335 1927.7365,-144.3814"/>

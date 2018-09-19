@@ -18,7 +18,7 @@
 <!-- Node57 -->
 <g id="node2" class="node">
 <title>Node57</title>
-<g id="a_node2"><a xlink:href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node2"><a xlink:href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="334,-353.3868 334,-372.3868 471,-372.3868 471,-353.3868 334,-353.3868"/>
 <text text-anchor="middle" x="402.5" y="-360.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildIDs::compute_impl</text>
 </a>
@@ -33,7 +33,7 @@
 <!-- Node58 -->
 <g id="node3" class="node">
 <title>Node58</title>
-<g id="a_node3"><a xlink:href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node3"><a xlink:href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="343,-817.3868 343,-836.3868 462,-836.3868 462,-817.3868 343,-817.3868"/>
 <text text-anchor="middle" x="402.5" y="-824.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMap::compute_impl</text>
 </a>
@@ -48,7 +48,7 @@
 <!-- Node59 -->
 <g id="node4" class="node">
 <title>Node59</title>
-<g id="a_node4"><a xlink:href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node4"><a xlink:href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="334,-779.3868 334,-798.3868 471,-798.3868 471,-779.3868 334,-779.3868"/>
 <text text-anchor="middle" x="402.5" y="-786.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddRename::compute_impl</text>
 </a>
@@ -63,7 +63,7 @@
 <!-- Node60 -->
 <g id="node5" class="node">
 <title>Node60</title>
-<g id="a_node5"><a xlink:href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node5"><a xlink:href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="322,-65.3868 322,-84.3868 483,-84.3868 483,-65.3868 322,-65.3868"/>
 <text text-anchor="middle" x="402.5" y="-72.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddSpecialBonds::compute_impl</text>
 </a>
@@ -322,7 +322,7 @@
 <!-- Node63 -->
 <g id="node8" class="node">
 <title>Node63</title>
-<g id="a_node8"><a xlink:href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node8"><a xlink:href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="351.5,-391.8868 351.5,-421.8868 453.5,-421.8868 453.5,-391.8868 351.5,-391.8868"/>
 <text text-anchor="start" x="359.5" y="-409.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildPositions::</text>
 <text text-anchor="middle" x="402.5" y="-398.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">compute_impl</text>
@@ -338,7 +338,7 @@
 <!-- Node64 -->
 <g id="node9" class="node">
 <title>Node64</title>
-<g id="a_node9"><a xlink:href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node9"><a xlink:href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="522.5,-309.3868 522.5,-328.3868 678.5,-328.3868 678.5,-309.3868 522.5,-309.3868"/>
 <text text-anchor="middle" x="600.5" y="-316.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute_impl</text>
 </a>
@@ -353,7 +353,7 @@
 <!-- Node65 -->
 <g id="node10" class="node">
 <title>Node65</title>
-<g id="a_node10"><a xlink:href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node10"><a xlink:href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="349,-653.8868 349,-683.8868 456,-683.8868 456,-653.8868 349,-653.8868"/>
 <text text-anchor="start" x="357" y="-671.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddGyrationRadius::</text>
 <text text-anchor="middle" x="402.5" y="-660.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">compute_impl</text>
@@ -369,7 +369,7 @@
 <!-- Node66 -->
 <g id="node11" class="node">
 <title>Node66</title>
-<g id="a_node11"><a xlink:href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node11"><a xlink:href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="519,-211.3868 519,-230.3868 682,-230.3868 682,-211.3868 519,-211.3868"/>
 <text text-anchor="middle" x="600.5" y="-218.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute_impl</text>
 </a>
@@ -384,7 +384,7 @@
 <!-- Node67 -->
 <g id="node12" class="node">
 <title>Node67</title>
-<g id="a_node12"><a xlink:href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node12"><a xlink:href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="341,-604.8868 341,-634.8868 464,-634.8868 464,-604.8868 341,-604.8868"/>
 <text text-anchor="start" x="349" y="-622.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMolecularOrientation</text>
 <text text-anchor="middle" x="402.5" y="-611.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::compute_impl</text>
@@ -400,7 +400,7 @@
 <!-- Node68 -->
 <g id="node13" class="node">
 <title>Node68</title>
-<g id="a_node13"><a xlink:href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node13"><a xlink:href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="349,-555.8868 349,-585.8868 456,-585.8868 456,-555.8868 349,-555.8868"/>
 <text text-anchor="start" x="357" y="-573.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddWrappedPosition</text>
 <text text-anchor="middle" x="402.5" y="-562.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::compute_impl</text>
@@ -638,7 +638,7 @@
 <!-- Node92 -->
 <g id="node37" class="node">
 <title>Node92</title>
-<g id="a_node37"><a xlink:href="classAddCoMPosition.html#a4f11bc044daa8afbe8223d9e4098a499" target="_top" xlink:title="Compute the center of mass with weighed atoms. ">
+<g id="a_node37"><a xlink:href="classAddCoMPosition.html#a4f11bc044daa8afbe8223d9e4098a499" target="_top" xlink:title="Compute the center of mass with weighting factors. ">
 <polygon fill="#ffffff" stroke="#000000" points="336,-254.8868 336,-284.8868 469,-284.8868 469,-254.8868 336,-254.8868"/>
 <text text-anchor="start" x="344" y="-272.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute</text>
 <text text-anchor="middle" x="402.5" y="-261.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>

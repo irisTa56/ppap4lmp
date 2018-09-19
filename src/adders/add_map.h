@@ -53,12 +53,12 @@ class AddMap : public Adder, public EnShThis<AddMap> {
   Map<Json,Json> mapping;
  protected:
   /*!
-    @brief Compute properties and add them to Element::data given as a
-    reference.
-    @param data : Mutable reference to Element::data where computed
-    properties are added to.
-    @param datakeys : Mutable reference to Element::datakeys where keys
-    of computed properties are added to.
+    @brief Compute properties and add them to Element::data
+    given as a mutable reference.
+    @param data : Mutable reference to Element::data
+    where computed properties are added to.
+    @param datakeys : Mutable reference to Element::datakeys
+    where keys of computed properties are added to.
     @return None.
     @details I'm sorry to say that source code is the best
     documentation for this method...

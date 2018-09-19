@@ -1,7 +1,7 @@
 /*!
   @file src/adders/add_child_ids.h
-  @brief This file has a definition of the AddChildIDs class, which is
-  a subclass of the Adder class.
+  @brief This file has a definition of AddChildIDs class,
+  which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/08/19
 */
@@ -12,40 +12,46 @@
 #include <adders/adder.h>
 
 /*!
-  @brief \e AddChildIDs stands for Adder for Child IDs (such as
-  \c atom-ids for molecules).
+  @brief AddChildIDs adds \c id property of a child Element object to
+  a parent Element object.
   @details This class inherits Adder class and overrides
-  Adder::compute_impl. An object of this class is supposed to own a
-  \e children object (such as atoms) as the #ext_generator and be
-  appended to \e parent object (such as molecules). \c id property of
-  a \e child is appended to an array belonging to its \e parent. About
-  usage in Python, please see src/pybind/py_adders/add_child_ids.h.
-  <p>
-    Name (key) of property to be added:
-      - <c>[child_name]-ids</c> (array of integer)
-  </p>
-  <p>
-    Name (key) of property to be required:
-      - \c id (integer)
-  </p>
-  <p>
-    Name (key) of property in #ext_generator to be required:
-      - \c id (integer)
-      - <c>[key_for_parent_id]</c>  (integer)
-  </p>
+  Adder::compute_impl.
+
+  An object of this class owns a \e child Element object
+  as the #ext_generator, and is appended to a \e parent object
+  using its Element::append_updater. An example of \e child is
+  an Element object containing data for atoms, and an example of
+  \e parent is an Element object containing data for molecules.
+  \c id property of the \e child is appended to an array belonging
+  to the \e parent.
+
+  The terms \e child and \e parent are used because a \e parent object
+  consists of a \e child object. In terms of time series, however,
+  the \e child is created earlier than the \e parent.
+
+  About usage in Python,
+  please see src/pybind/py_adders/add_child_ids.h.
+
+  Key of property to be added:
+    - <c>[child_name]-ids</c> (array of integer)
+
+  Required key of property:
+    - \c id (integer)
+
+  Required key of property in #ext_generator:
+    - \c id (integer)
+    - <c>[key_for_parent_id]</c> (integer)
 */
 class AddChildIDs : public Adder {
   /*!
-    @brief Name of \e children object stored as #ext_generator.
-    @details The name (key) of property added by this class is named
-    as <c>[child_name]-ids</c>.
+    @brief Name of \e child object stored as #ext_generator.
+    @details The key of property added by this class is named as
+    <c>[child_name]-ids</c>.
   */
   Str child_name;
   /*!
     @brief Key in #ext_generator corresponding to \c id of \e parent
     object.
-    @details The \e parent object is an Element object where this
-    object is appended to.
   */
   Str key_for_parent_id;
  protected:
@@ -58,13 +64,13 @@ class AddChildIDs : public Adder {
  public:
   /*!
     @brief Constructor of AddChildIDs class.
-    @param elem : Shared pointer to \e children object.
-    @param child_name_ : A string for name of the \e children object.
-    @param key_for_parent_id_ : A string for key in the \e children
-    object corresponding to \c id of \e parent object.
-    @details The \c elem, \c child_name_ and \c key_for_parent_id_ are
-    assigned to the #ext_generator, #child_name and #key_for_parent_id,
-    respectively.
+    @param elem : Shared pointer to \e child object.
+    This argument is assigned to #ext_generator.
+    @param child_name_ : A string for naming the \e child object.
+    This argument is assigned to #child_name.
+    @param key_for_parent_id_ : A string for key in the \e child object
+    corresponding to \c id of \e parent object.
+    This argument is assigned to #key_for_parent_id.
   */
   AddChildIDs(
     const ElPtr &elem,

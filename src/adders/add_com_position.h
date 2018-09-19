@@ -1,7 +1,7 @@
 /*!
   @file src/adders/add_com_position.h
-  @brief This file has a definition of the AddCoMPosition class, which
-  is a subclass of the Adder class.
+  @brief This file has a definition of AddCoMPosition class,
+  which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/13
 */
@@ -12,42 +12,50 @@
 #include <adders/adder.h>
 
 /*!
-  @brief \e AddCoMPosition stands for Adder for Center of Mass added as
-  Position, \c xu, \c yu and \c zu.
+  @brief AddCoMPosition adds center of mass of an Element object
+  as its unwrapped position.
   @details This class inherits Adder class and overrides
-  Adder::compute_impl. An Element object, which an object of this
-  class is appended to, consists of (that is, is started from) an
-  Element object stored as the #ext_generator. About usage in Python,
-  please see src/pybind/py_adders/add_com_position.h.
-  <p>
-    Name (key) of property to be added:
-      - \c mass (float)
-      - \c xu (float)
-      - \c yu (float)
-      - \c zu (float)
-  </p>
-  <p>
-    Name (key) of property to be required:
-      - <c>atom-ids</c> (array of integer)
-  </p>
-  <p>
-    Name (key) of property in #ext_generator to be required:
-      - \c id (integer)
-      - \c mass (float)
-      - \c xu (float)
-      - \c yu (float)
-      - \c zu (float)
-  </p>
+  Adder::compute_impl.
+
+  An object of this class computes center of mass of a parent
+  Element object from unwrapped positions of a child Element object
+  and adds it to the parent object as its unwrapped position.
+  That object owns the \e child object as the #ext_generator, and is
+  appended to a \e parent object using its Element::append_updater.
+  An example of \e child is an Element object containing data for atoms,
+  and an example of \e parent is an Element object containing data
+  for molecules.
+
+  The terms \e child and \e parent are used because a \e parent object
+  consists of a \e child object. In terms of time series, however,
+  the \e child is created earlier than the \e parent.
+
+  Key of property to be added:
+    - \c mass (float)
+    - \c xu (float)
+    - \c yu (float)
+    - \c zu (float)
+
+  Required key of property:
+    - <c>atom-ids</c> (array of integer)
+
+  Required key of property in #ext_generator:
+    - \c id (integer)
+    - \c mass (float)
+    - \c xu (float)
+    - \c yu (float)
+    - \c zu (float)
 */
 class AddCoMPosition : public Adder {
   /*!
-    @brief Compute the center of mass with weighed atoms.
+    @brief Compute the center of mass with weighting factors.
     @param data : Mutable reference to Element::data where computed
     properties are added to.
     @param el_atoms : Shared pointer of up-casted #ext_generator.
     @return None.
-    @details Note that the weight is different from mass of the atom.
-    It is an artificial value defined with some reason.
+    @details Note that the weighting factors are different from
+    something like mass of atoms. Weighting factors are
+    artificial values defined with some reason.
   */
   void compute_with_weights(
     Json &data,
@@ -72,10 +80,8 @@ class AddCoMPosition : public Adder {
  public:
   /*!
     @brief Constructor of AddCoMPosition class.
-    @param elem : Shared pointer to an Element object, which is used
-    for creating another Element object where the constructed object
-    is appended to.
-    @details The \c elem is assigned to the #ext_generator.
+    @param elem : Shared pointer to \e child object.
+    This argument is assigned to #ext_generator.
   */
   AddCoMPosition(
     const ElPtr &elem);

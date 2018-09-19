@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><em><a class="el" href="classAddChildPositions.html" title="AddChildPositions stands for Adder for Child Positions (such as atom-xs, atom-ys and atom-zs for mole...">AddChildPositions</a></em> stands for <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> for Child Positions (such as <code>atom-xs</code>, <code>atom-ys</code> and <code>atom-zs</code> for molecules).  
+<p><a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a> adds relative positions of a child <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object to a parent <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object.  
  <a href="classAddChildPositions.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="adders_2add__child__positions_8h_source.html">add_child_positions.h</a>&gt;</code></p>
@@ -90,7 +90,7 @@ Collaboration diagram for AddChildPositions:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4db976f729aaf211154e36d47ee97f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddChildPositions.html#ad4db976f729aaf211154e36d47ee97f2">AddChildPositions</a> (const <a class="el" href="core_2element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;child_name_)</td></tr>
-<tr class="memdesc:ad4db976f729aaf211154e36d47ee97f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAddChildPositions.html" title="AddChildPositions stands for Adder for Child Positions (such as atom-xs, atom-ys and atom-zs for mole...">AddChildPositions</a> class.  <a href="#ad4db976f729aaf211154e36d47ee97f2">More...</a><br /></td></tr>
+<tr class="memdesc:ad4db976f729aaf211154e36d47ee97f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a> class.  <a href="#ad4db976f729aaf211154e36d47ee97f2">More...</a><br /></td></tr>
 <tr class="separator:ad4db976f729aaf211154e36d47ee97f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAdder"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAdder')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAdder.html">Adder</a></td></tr>
 <tr class="memitem:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
@@ -114,7 +114,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab200c619009c1db1deefb92c68010f9a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:ab200c619009c1db1deefb92c68010f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a reference.  <a href="#ab200c619009c1db1deefb92c68010f9a">More...</a><br /></td></tr>
+<tr class="memdesc:ab200c619009c1db1deefb92c68010f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a mutable reference.  <a href="#ab200c619009c1db1deefb92c68010f9a">More...</a><br /></td></tr>
 <tr class="separator:ab200c619009c1db1deefb92c68010f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
@@ -124,7 +124,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:acde97085231187792667e1ce2ed46955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddChildPositions.html#acde97085231187792667e1ce2ed46955">child_name</a></td></tr>
-<tr class="memdesc:acde97085231187792667e1ce2ed46955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of <em>children</em> object stored as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a>.  <a href="#acde97085231187792667e1ce2ed46955">More...</a><br /></td></tr>
+<tr class="memdesc:acde97085231187792667e1ce2ed46955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of <em>child</em> object stored as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a>.  <a href="#acde97085231187792667e1ce2ed46955">More...</a><br /></td></tr>
 <tr class="separator:acde97085231187792667e1ce2ed46955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -135,20 +135,23 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><em><a class="el" href="classAddChildPositions.html" title="AddChildPositions stands for Adder for Child Positions (such as atom-xs, atom-ys and atom-zs for mole...">AddChildPositions</a></em> stands for <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> for Child Positions (such as <code>atom-xs</code>, <code>atom-ys</code> and <code>atom-zs</code> for molecules). </p>
-<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Adder::compute_impl</a>. An object of this class is supposed to own a <em>children</em> object (such as atoms) as the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a> and be appended to <em>parent</em> object (such as molecules). A position of a <em>child</em> is computed relative to a position of its <em>parent</em> and appended to an array belonging to the <em>parent</em>. About usage in Python, please see <a class="el" href="pybind_2py__adders_2add__child__positions_8h.html" title="This file has a function to bind AddChildPositions class to Python. ">src/pybind/py_adders/add_child_positions.h</a>. </p>
-<p>Name (key) of property to be added:</p><ul>
+<div class="textblock"><p><a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a> adds relative positions of a child <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object to a parent <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object. </p>
+<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Adder::compute_impl</a>.</p>
+<p>An object of this class owns a <em>child</em> object as the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a>, and is appended to a <em>parent</em> object using its <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an object of Updater class to this object. Can be called from Python. ">Element::append_updater</a>. An example of <em>child</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object containing data for atoms, and an example of <em>parent</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object containing data for molecules. Positions of a <em>child</em> is computed relative to a position of a <em>parent</em> and appended to an array belonging to the <em>parent</em>.</p>
+<p>The terms <em>child</em> and <em>parent</em> are used because a <em>parent</em> object consists of a <em>child</em> object. In terms of time series, however, the <em>child</em> is created earlier than the <em>parent</em>.</p>
+<p>About usage in Python, please see <a class="el" href="pybind_2py__adders_2add__child__positions_8h.html" title="This file is for binding AddChildPositions class to Python. ">src/pybind/py_adders/add_child_positions.h</a>.</p>
+<p>Key of property to be added:</p><ul>
 <li><code>[child_name]-xs</code> (array of float)</li>
 <li><code>[child_name]-ys</code> (array of float)</li>
-<li><code>[child_name]-zs</code> (array of float) </li>
+<li><code>[child_name]-zs</code> (array of float)</li>
 </ul>
-<p>Name (key) of property to be required:</p><ul>
+<p>Required key of property:</p><ul>
 <li><code>[child_name]-ids</code> (array of integer)</li>
 <li><code>xu</code> (float)</li>
 <li><code>yu</code> (float)</li>
-<li><code>zu</code> (float) </li>
+<li><code>zu</code> (float)</li>
 </ul>
-<p>Name (key) of property in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a> to be required:</p><ul>
+<p>Required key of property in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a>:</p><ul>
 <li><code>id</code> (integer)</li>
 <li><code>xu</code> (float)</li>
 <li><code>yu</code> (float)</li>
@@ -181,15 +184,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classAddChildPositions.html" title="AddChildPositions stands for Adder for Child Positions (such as atom-xs, atom-ys and atom-zs for mole...">AddChildPositions</a> class. </p>
+<p>Constructor of <a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">elem</td><td>: Shared pointer to <em>children</em> object. </td></tr>
-    <tr><td class="paramname">child_name_</td><td>: A string for name of the <em>children</em> object.</td></tr>
+    <tr><td class="paramname">elem</td><td>: Shared pointer to <em>child</em> object. This argument is assigned to <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a>. </td></tr>
+    <tr><td class="paramname">child_name_</td><td>: A string for naming the <em>child</em> object. This argument is assigned to <a class="el" href="classAddChildPositions.html#acde97085231187792667e1ce2ed46955" title="Name of child object stored as ext_generator. ">child_name</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<p>The <code>elem</code> and <code>child_name_</code> are assigned to the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a> and <a class="el" href="classAddChildPositions.html#acde97085231187792667e1ce2ed46955" title="Name of children object stored as ext_generator. ">child_name</a> respectively. </p>
 
 </div>
 </div>
@@ -228,7 +230,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a reference. </p>
+<p>Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a mutable reference. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> where computed properties are added to. </td></tr>
@@ -269,8 +271,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Name of <em>children</em> object stored as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a>. </p>
-<p>The name (key) of property added to the <em>parent</em> object by this class is named as <code>[child_name]-xs</code>, <code>[child_name]-ys</code> and <code>[child_name]-zs</code>. The <em>parent</em> object is also required to have <code>[child_name]-ids</code> property. </p>
+<p>Name of <em>child</em> object stored as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a>. </p>
+<p>The key of property added to a <em>parent</em> object by this class is named as <code>[child_name]-xs</code>, <code>[child_name]-ys</code> and <code>[child_name]-zs</code>. The <em>parent</em> object is also required to have <code>[child_name]-ids</code> property. </p>
 
 </div>
 </div>

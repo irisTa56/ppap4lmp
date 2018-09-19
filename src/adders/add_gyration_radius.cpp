@@ -1,7 +1,7 @@
 /*!
   @file src/adders/add_gyration_radius.cpp
-  @brief This file has an implementation of the AddGyrationRadius class,
-  which is a subclass of the Adder class.
+  @brief This file has an implementation of AddGyrationRadius class,
+  which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/15
   @details For more details, please see the header file,
