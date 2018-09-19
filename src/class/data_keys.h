@@ -1,7 +1,7 @@
 /*!
   @file src/class/data_keys.h
-  @brief This file has a definition of the DataKeys class, which is
-  owned by Element class.
+  @brief This file has a definition of DataKeys class,
+  which is owned by Element class.
   @author Takayuki Kobayashi
   @date 2018/09/09
 */
@@ -13,24 +13,23 @@
 #include <alias/json.h>
 
 /*!
-  @brief \e DataKeys is a small class owning a set of string keys for
-  Element::data.
-  @details An object of this class is owned by an Element object to
-  check whether keys for property of the data exists quickly. Checking
-  against the Element::data itself is a very time consuming process if
-  it is an array data.
+  @brief DataKeys is a small class owning a set of string keys
+  in Element::data.
+  @details An object of this class is owned by an Element object
+  and used for checking existence of keys for property in
+  the Element::data quickly. Note that checking keys against
+  the Element::data itself is a time consuming process if it is
+  a large array ::Json.
 */
 class DataKeys {
   /*!
-    @brief A set of string key for Element::data.
+    @brief A set of string keys in Element::data.
     @details Do not forget to add key(s) to this member manually when
-    new value(s) is added to Element::data in Updater::compute_impl.
+    new item(s) is added to Element::data.
   */
   Set<Str> _keys;
  public:
-  /*!
-    @brief Constructor of DataKeys class (inherited).
-  */
+  //! Constructor of DataKeys class (default).
   DataKeys() = default;
   virtual ~DataKeys() = default;
   /*!
@@ -46,7 +45,7 @@ class DataKeys {
   void set(
     const Set<Str> &keys);
   /*!
-    @brief Add a key or keys in an array to the #_keys.
+    @brief Add key(s) in an array to the #_keys.
     @param key_ : ::Json for either a key or an array of keys to be
     added.
     @return None.
@@ -54,7 +53,7 @@ class DataKeys {
   void add(
     const Json &key_);
   /*!
-    @brief Remove a key or keys in an array from the #_keys.
+    @brief Remove key(s) in an array from the #_keys.
     @param key_ : ::Json for either a key or an array of keys to be
     removed.
     @return None.
@@ -63,8 +62,8 @@ class DataKeys {
     const Json &key_);
   /*!
     @brief Check if this object has required key(s).
-    @param key_ : ::Json for either a key or an array of keys to be
-    required.
+    @param key_ : ::Json for either a key or an array of keys for
+    required property.
     @return None.
     @details If this object does not have the given required key(s),
     a runtime error is thrown in C++ (and also raised in Python).
@@ -73,8 +72,8 @@ class DataKeys {
     const Json &key_);
   /*!
     @brief Check if this object has optional key(s).
-    @param key_ : ::Json for either a key or an array of keys to be
-    checked.
+    @param key_ : ::Json for either a key or an array of keys for
+    optional property.
     @return Boolean.
     @details If this object has the given key(s), it returns true. If
     not, it returns false.

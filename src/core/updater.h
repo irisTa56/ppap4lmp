@@ -1,7 +1,7 @@
 /*!
   @file src/core/updater.h
-  @brief This file has a definition of the Updater class, which is
-  one of the cores of this program.
+  @brief This file has a definition of Updater class,
+  which is one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/29
 */
@@ -14,14 +14,15 @@
 #include <core/generators.h>
 
 /*!
-  @brief \e Updater is an abstract class to update data held by
-  Element class.
+  @brief Updater is an abstract class to update data held by
+  an Element object.
   @details This class is a superclass of the Starter, Adder and Filter
-  class. An object of this class is append to an Element object by
+  class.
+
+  An object of this class is append to an Element object by
   Element::append_updater and stored as ::UpdatePair (where the first
   item is the Element object and the second item is the object of
-  this class). For more details about ::UpdatePair, please see the
-  Generator class.
+  this class).
 */
 class Updater {
   /*!
@@ -34,27 +35,25 @@ class Updater {
   Set<int> dataid_blacklist;
   /*!
     @brief A variable used for OpenMP.
-    @details This member is used to update the #dataid_blacklist
-    exclusively in a multithread context. To prevent the
-    #dataid_blacklist from being updated from multiple threads at the
-    same time, this member must be locked in the #check_blacklist and
-    #remove_from_blacklist.
+    @details In this program, #dataid_blacklist is modified in
+    a multithread context. To prevent the #dataid_blacklist from being
+    modified from multiple threads at the same time, this member
+    must be locked in the #check_blacklist and #remove_from_blacklist.
   */
   omp_lock_t omp_lock;
  protected:
   /*!
-    @brief Shared pointer to an object of Generator class used in
-    updating process. It is different from the Element object to be
-    updated.
-    @details To compute some properties of the data, external object
-    of Generator (can be Element/GenDict/GenList) might be required.
-    For example, to compute the center of mass of molecules, an Element
-    object holding the data of positions of atoms in the molecules is
+    @brief Shared pointer to a Generator object used in update process.
+    @details To compute some properties for an Element object where
+    this object is appended to, an external Generator object (can be
+    Element/GenDict/GenList) might be required. For example, to compute
+    the center of mass of molecules for a molecular Element object,
+    an atomic Element object containing positions of the atoms is
     required.
   */
   ShPtr<Generator> ext_generator;
   /*!
-    @brief Implementation of computation to update the data.
+    @brief Implementation of computation to update Element::data.
     @details This is a pure virtual function, please see the subclasses
     for more details.
   */
@@ -73,13 +72,13 @@ class Updater {
   /*!
     @brief Constructor of Updater class.
     @details This constructor is thread-unsafe because it accesses its
-    members thread-globally. Ensure this constructor is called
-    (indirectly) from Python and not called in a multithreads context.
+    members thread-globally. Ensure this constructor is not called in
+    a multithreads context.
   */
   Updater();
   virtual ~Updater() = default;
   /*!
-    @brief Managing computation to update the data.
+    @brief Managing computation to update Element::data.
     @details This is a pure virtual function, please see the subclasses
     for more details.
   */
@@ -88,14 +87,14 @@ class Updater {
     @brief Remove Element::dataid from #dataid_blacklist.
     @param dataid : Element::dataid to be removed.
     @return None.
-    @details Removing \c dataid from #dataid_blacklist is necessary in
-    case that this object updates the Element object of the
-    \c dataid again after its data being cleared.
+    @details Removing \c dataid from #dataid_blacklist is necessary
+    so that this object can update the Element object of the \c dataid
+    again after its Element::data being cleared.
   */
   void remove_from_blacklist(
     const int dataid);
   /*!
-    @brief Get the #ext_generator of this object.
+    @brief Get #ext_generator of this object.
     @return Constance reference to ::ShPtr<#Generator>.
     @details This method is mainly used in Element::update_chain.
   */

@@ -1,6 +1,6 @@
 /*!
   @file src/core/generator.h
-  @brief This file has a definition of the Generator class, which is
+  @brief This file has a definition of Generator class, which is
   one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/21
@@ -25,40 +25,42 @@ class Updater;
 using UpdatePair = std::pair<ShPtr<Element>,ShPtr<Updater>>;
 
 /*!
-  @brief \e Generator is an abstract class to generate data.
-  @details This class is a superclass of Element class. This class
-  stores a chain (sequence) of ::UpdatePair objects which represents
-  the process how Element::data will be generated and updated. By using
-  subclasses, GenDict and GenList class, one can group Element objects
-  in one Generator object and control all the updating process.
+  @brief Generator is an abstract class to generate data.
+  @details This class is a superclass of Element class.
+
+  This class stores a chain (sequence) of ::UpdatePair objects
+  which represents a process how Element::data will be generated
+  and updated. In addition, by using GenDict and GenList class,
+  which are subclasses of this class, one can group Element objects
+  in one Generator object and control all updating processes
+  associated with the Element objects.
 */
 class Generator {
  protected:
   /*!
     @brief Chain (sequence) of ::UpdatePair objects. It represents
-    the process how the data is generated and updated.
+    a process how Element::data is generated and updated.
     @details This chain of ::UpdatePair objects is executed one by
-    one by the #hello. In this updating process, the Element objects
-    (the first items of ::UpdatePair) uses the Updater objects (the
-    second items of ::UpdatePair) to update the Element::data. An
-    element of this sequence is added only in Element::append_updater.
+    one by calling the #hello. In this updating process,
+    the Element objects (the first items of ::UpdatePair) uses
+    the Updater objects (the second items of ::UpdatePair) to update
+    their Element::data. An element of this sequence is added
+    only in Element::append_updater.
   */
   Vec<UpdatePair> update_chain;
   /*!
-    @brief Merge a given chain of ::UpdatePair objects to
-    #update_chain.
+    @brief Merge a given chain of ::UpdatePair objects to #update_chain.
     @param new_chain : A chain of ::UpdatePair objects to be merged.
     @return None.
     @details In merging a chain of ::UpdatePair objects, relative
-    orders of the chain taken as \c new_chain and the #update_chain
-    are retained so that dependency order of the updating process will
-    not be broken. During the merging, duplication of ::UpdatePair
-    objects will be removed. If there is no explicit preference,
-    elements in the \c new_chain will be appended to the end of
-    #update_chain. This method is thread-unsafe because it accesses the
-    #update_chain thread-globally. Ensure this method is called
-    (indirectly) from Python (via Element::append_updater) and not
-    called in a multithreads context.
+    orders of ::UpdatePair objects in the \c new_chain and
+    the #update_chain are retained so that dependency order of
+    the updating process will be preserved. During the merging,
+    duplication of ::UpdatePair objects will be removed. If there is
+    no explicit preference, elements in the \c new_chain will be
+    appended to the end of #update_chain. This method is thread-unsafe
+    because it accesses the #update_chain thread-globally. Ensure this
+    method is not called in a multithreads context.
   */
   void merge_update_chain(
     const Vec<UpdatePair> &new_chain);
@@ -93,8 +95,8 @@ class Generator {
     the ::UpdatePair objects in the #update_chain, that is, executing
     the updating process associated with this object. By executing
     this method, Element::data in this Element object (or Element
-    objects in this GenDict or GenList object) is set (filled with
-    values).
+    objects in this GenDict or GenList object) is ready to be used
+    (filled with values).
   */
   void hello();
   /*!
@@ -105,8 +107,8 @@ class Generator {
   */
   void goodbye();
   /*!
-    @brief Get the #update_chain of this object.
-    @return Constance reference to ::Vec<#UpdatePair>.
+    @brief Get #update_chain of this object.
+    @return Constant reference to ::Vec<#UpdatePair>.
     @details This method is mainly used in Element::append_updater to
     access #update_chain of Updater::ext_generator.
   */

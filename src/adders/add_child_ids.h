@@ -30,15 +30,15 @@
   the \e child is created earlier than the \e parent.
 
   About usage in Python,
-  please see src/pybind/py_adders/add_child_ids.h.
+  please see src/pybind/adders/py_add_child_ids.h.
 
   Key of property to be added:
     - <c>[child_name]-ids</c> (array of integer)
 
-  Required key of property:
+  Key of required property:
     - \c id (integer)
 
-  Required key of property in #ext_generator:
+  Key of required property in #ext_generator:
     - \c id (integer)
     - <c>[key_for_parent_id]</c> (integer)
 */
@@ -64,7 +64,7 @@ class AddChildIDs : public Adder {
  public:
   /*!
     @brief Constructor of AddChildIDs class.
-    @param elem : Shared pointer to \e child object.
+    @param elem : Shared pointer to a \e child object.
     This argument is assigned to #ext_generator.
     @param child_name_ : A string for naming the \e child object.
     This argument is assigned to #child_name.

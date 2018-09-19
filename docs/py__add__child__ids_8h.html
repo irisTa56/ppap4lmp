@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ppap4lmp: src/pybind/py_adders/py_add_child_ids.h File Reference</title>
+<title>ppap4lmp: src/pybind/adders/py_add_child_ids.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f55f6dc9e21b09a12acc690b19f5e964.html">pybind</a></li><li class="navelem"><a class="el" href="dir_c3d26da41206c2dbb29e3cae3e9d78f5.html">py_adders</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f55f6dc9e21b09a12acc690b19f5e964.html">pybind</a></li><li class="navelem"><a class="el" href="dir_6304a303afdde898cf6f1514bb96ad28.html">adders</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,12 +76,16 @@ $(function() {
 <p>This file is for binding <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> class to Python.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="add__child__ids_8h_source.html">adders/add_child_ids.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="pybind_2py__adders_2adder_8h_source.html">pybind/py_adders/adder.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="py__adder_8h_source.html">pybind/adders/py_adder.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for py_add_child_ids.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="py__add__child__ids_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="py__add__child__ids_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="py__add__child__ids_8h__dep__incl.svg" width="154" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="py__add__child__ids_8h_source.html">Go to the source code of this file.</a></p>
@@ -105,15 +109,15 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="py_tr">
 <td class="py_td"><code>AddChildIDs</code>  </td><td class="py_td"><a class="el" href="classAddChildIDs.html#a7278a3244f0a6d52e7f30491f2154a70" title="Constructor of AddChildIDs class. ">AddChildIDs::AddChildIDs</a> </td><td class="py_td">Constructor of <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> class.  </td><td class="py_td"><ul class="py_ul">
 <li>
-<code>elem</code> : <em>Child</em> object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object containing data for atoms).  </li>
+<code>elem</code> : <em>Child</em> object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for atoms).  </li>
 <li>
 <code>child_name_</code> : A string for naming the above child object.  </li>
 <li>
-<code>key_for_parent_id_</code> : A string for key in the child object corresponding to <code>id</code> property of parent object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object containing data for molecules).  </li>
+<code>key_for_parent_id_</code> : A string for key in the child object corresponding to <code>id</code> property of parent object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules).  </li>
 </ul>
-</td><td class="py_td">Constructed <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> object, which is appended to a <em>parent</em> object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object containing data for molecules).   </td></tr>
+</td><td class="py_td">Constructed <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> object, which is appended to a <em>parent</em> object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules).   </td></tr>
 </table>
-<p>Usage example of the constructor to add <code>bead-ids</code> property to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object for molecules.</p>
+<p>Usage example of the constructor to add <code>bead-ids</code> property to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
 <div class="fragment"><div class="line">atoms = create(...)</div><div class="line">molecules = create(StaMolecules(atoms))</div><div class="line">beads = create(StaBeads(molecules, ...))</div><div class="line"></div><div class="line">molecules.append_updater(AddChildIDs(beads, &quot;bead&quot;, &quot;mol&quot;))</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

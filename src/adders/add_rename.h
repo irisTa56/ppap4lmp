@@ -1,7 +1,7 @@
 /*!
   @file src/adders/add_rename.h
-  @brief This file has a definition of the AddRename class, which is a
-  subclass of the Adder class.
+  @brief This file has a definition of AddRename class,
+  which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/08/17
 */
@@ -12,21 +12,22 @@
 #include <adders/adder.h>
 
 /*!
-  @brief \e AddRename stands for Adder creating new property by Renaming
-  existing property.
-  @details This class inherits Adder class and ::EnShThis<#AddRename>,
-  and overrides Adder::compute_impl. This class simply renames an
-  existing property; copies values of the existing property with a new
-  arbitrary name, then deletes the old property. About usage in Python,
-  please see src/pybind/py_adders/add_rename.h.
-  <p>
-    Name (key) of property to be added:
-      - \c <c>[key_new]</c> (any type)
-  </p>
-  <p>
-    Name (key) of property to be required:
-      - <c>[key_old]</c> (any type)
-  </p>
+  @brief AddRename renames an existing property.
+  @details This class inherits Adder class
+  and ::EnShThis<#AddRename>, and overrides Adder::compute_impl.
+
+  An object of this class simply renames an existing property; that is,
+  copies values of the existing property, names the values as
+  a new user-defined name, and then deletes the old property.
+
+  About usage in Python,
+  please see src/pybind/adders/py_add_rename.h.
+
+  Key of property to be added:
+    - \c <c>[key_new]</c> (any type)
+
+  Key of required property:
+    - <c>[key_old]</c> (any type)
 */
 class AddRename : public Adder, public EnShThis<AddRename> {
   /*!
@@ -35,12 +36,11 @@ class AddRename : public Adder, public EnShThis<AddRename> {
   */
   bool do_overwrite = false;
   /*!
-    @brief Name (key) of an existing property.
+    @brief Key of an existing property to be renamed.
   */
   Str key_old;
   /*!
-    @brief Name (key) of a new property to be added (codomain of the
-    mapping).
+    @brief New key by which the existing property is renamed.
   */
   Str key_new;
  protected:
@@ -53,10 +53,12 @@ class AddRename : public Adder, public EnShThis<AddRename> {
  public:
   /*!
     @brief Constructor of AddRename class.
-    @param key_old_ : A string key for an old property to be renamed.
-    @param key_new_ : A string key for a new property to be added.
-    @details The \c key_old_ and \c key_new_ are assigned to the
-    #key_old and #key_new, respectively.
+    @param key_old_ : A string key of an existing property to be
+    renamed.
+    This argument is assigned to #key_old.
+    @param key_new_ : A string key by which the old key of the existing
+    property is renamed.
+    This argument is assigned to #key_new.
   */
   AddRename(
     const Str &key_old_,

@@ -72,10 +72,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius of an Element object. ">AddGyrationRadius</a> adds gyration radius of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object.  
+<p><a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> adds gyration radius to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  
  <a href="classAddGyrationRadius.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="adders_2add__gyration__radius_8h_source.html">add_gyration_radius.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="add__gyration__radius_8h_source.html">add_gyration_radius.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for AddGyrationRadius:</div>
 <div class="dyncontent">
@@ -97,7 +97,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0919259a47f76c08c86f54156bdb2ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAdder"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAdder')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAdder.html">Adder</a></td></tr>
 <tr class="memitem:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
-<tr class="memdesc:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a reference.  <a href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">More...</a><br /></td></tr>
+<tr class="memdesc:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference.  <a href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">More...</a><br /></td></tr>
 <tr class="separator:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -105,19 +105,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class.  <a href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb7ad60b6b3e19b83299fb644b49f02b inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b">remove_from_blacklist</a> (const int dataid)</td></tr>
 <tr class="memdesc:afb7ad60b6b3e19b83299fb644b49f02b inherit pub_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a>.  <a href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b">More...</a><br /></td></tr>
 <tr class="separator:afb7ad60b6b3e19b83299fb644b49f02b inherit pub_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64bb77bc8aa6d7ee1ddeaf98a033ec36 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36">get_ext_generator</a> ()</td></tr>
-<tr class="memdesc:a64bb77bc8aa6d7ee1ddeaf98a033ec36 inherit pub_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a> of this object.  <a href="classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36">More...</a><br /></td></tr>
+<tr class="memdesc:a64bb77bc8aa6d7ee1ddeaf98a033ec36 inherit pub_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a> of this object.  <a href="classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36">More...</a><br /></td></tr>
 <tr class="separator:a64bb77bc8aa6d7ee1ddeaf98a033ec36 inherit pub_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a53d9c62c9dbf976b815cb715a9f18a36"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:a53d9c62c9dbf976b815cb715a9f18a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a mutable reference.  <a href="#a53d9c62c9dbf976b815cb715a9f18a36">More...</a><br /></td></tr>
+<tr class="memdesc:a53d9c62c9dbf976b815cb715a9f18a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference.  <a href="#a53d9c62c9dbf976b815cb715a9f18a36">More...</a><br /></td></tr>
 <tr class="separator:a53d9c62c9dbf976b815cb715a9f18a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
@@ -137,14 +137,14 @@ Private Attributes</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a></td></tr>
-<tr class="memdesc:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to an object of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class used in updating process. It is different from the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object to be updated.  <a href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">More...</a><br /></td></tr>
+<tr class="memdesc:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object used in update process.  <a href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">More...</a><br /></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius of an Element object. ">AddGyrationRadius</a> adds gyration radius of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object. </p>
-<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="EnShThis is an alias for a class which can create shared pointer of itself by calling shared_from_thi...">EnShThis</a>&lt;<a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius of an Element object. ">AddGyrationRadius</a>&gt;, and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update the data. ">Adder::compute_impl</a>.</p>
-<p>This class computes radius of gyration of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object (such as one containing data for molecules) from its inertia moment.</p>
-<p>About usage in Python, please see <a class="el" href="pybind_2py__adders_2add__gyration__radius_8h.html" title="This file is for binding AddGyrationRadius class to Python. ">src/pybind/py_adders/add_gyration_radius.h</a>.</p>
+<div class="textblock"><p><a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> adds gyration radius to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
+<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="EnShThis is an alias for a class which can create shared pointer of itself by calling shared_from_thi...">EnShThis</a>&lt;<a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a>&gt;, and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Adder::compute_impl</a>.</p>
+<p>This class computes radius of gyration of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object (such as one containing data for molecules) from its inertia moment.</p>
+<p>About usage in Python, please see <a class="el" href="py__add__gyration__radius_8h.html" title="This file is for binding AddGyrationRadius class to Python. ">src/pybind/adders/py_add_gyration_radius.h</a>.</p>
 <p>Key of property to be added (default):</p><ul>
 <li><code>Rg</code> (float)</li>
 <li><code>Rg</code>(y+z) (float)</li>
@@ -163,7 +163,7 @@ Additional Inherited Members</h2></td></tr>
 <li><code>Rg^2</code>(y) (float)</li>
 <li><code>Rg^2</code>(z) (float)</li>
 </ul>
-<p>Required key of property:</p><ul>
+<p>Key of required property:</p><ul>
 <li><code>mass</code> (float)</li>
 <li><code>I_xx</code> (float)</li>
 <li><code>I_yy</code> (float)</li>
@@ -204,11 +204,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> given as a mutable reference. </p>
+<p>Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys (or property names, attributes) of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
   </table>
   </dd>
 </dl>
@@ -251,8 +251,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classAddGyrationRadius_a36cdb31db55a78681aada61ac5651bc9_icgraph.svg" width="343" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classAddGyrationRadius_a36cdb31db55a78681aada61ac5651bc9_icgraph.svg" width="343" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -284,8 +283,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classAddGyrationRadius_a0919259a47f76c08c86f54156bdb2ac6_icgraph.svg" width="343" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classAddGyrationRadius_a0919259a47f76c08c86f54156bdb2ac6_icgraph.svg" width="343" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -342,7 +340,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/adders/<a class="el" href="adders_2add__gyration__radius_8h_source.html">add_gyration_radius.h</a></li>
+<li>src/adders/<a class="el" href="add__gyration__radius_8h_source.html">add_gyration_radius.h</a></li>
 <li>src/adders/<a class="el" href="add__gyration__radius_8cpp.html">add_gyration_radius.cpp</a></li>
 </ul>
 </div><!-- contents -->

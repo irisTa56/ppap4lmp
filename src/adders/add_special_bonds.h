@@ -1,7 +1,7 @@
 /*!
   @file src/adders/add_special_bonds.h
-  @brief This file has a definition of the AddSpecialBonds class, which
-  is a subclass of the Adder class.
+  @brief This file has a definition of AddSpecialBonds class,
+  which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/08/19
 */
@@ -12,32 +12,38 @@
 #include <adders/adder.h>
 
 /*!
-  @brief \e AddSpecialBonds stands for Adder for Special Bonds.
+  @brief AddSpecialBonds adds special bonds.
   @details This class inherits Adder class and overrides
-  Adder::compute_impl. Special bonds is a property for atoms (or beads)
-  belonging to the same molecule; if an atom has another atom as one of
-  its special bonds, the two atoms are considered to interact with each
-  other through bonded potential(s) (bond-length, bond-angle ...). For
-  more details about special bonds, please see Lammps documentation:
-  https://lammps.sandia.gov/doc/special_bonds.html. About usage in
-  Python, please see src/pybind/py_adders/add_special_bonds.h.
-  <p>
-    Name (key) of property to be added:
-      - \c <c>special-bonds</c> (array of integer)
-  </p>
-  <p>
-    Name (key) of property in #ext_generator to be required:
-      - \c atom-ids (array of integer)
-  </p>
+  Adder::compute_impl.
+
+  Special bonds is a property for atoms (or beads) belonging to
+  the same molecule; if an atom has another atom as one of its special
+  bonds, the two atoms are considered to interact with each other
+  through bonded potential(s) (bond-length, bond-angle ...).
+
+  An object of this class has a molecular Element object as
+  the #ext_generator, and is appended to an atomic (or bead) Element
+  object. That object owns schemes for special bonds for each type of
+  molecule; a scheme is something like a list of special bonds of
+  atoms in one molecule.
+
+  About usage in Python,
+  please see src/pybind/adders/py_add_special_bonds.h.
+
+  Key of property to be added:
+    - \c <c>special-bonds</c> (array of integer)
+
+  Key of required property:
+    - \c atom-ids (array of integer)
 */
 class AddSpecialBonds : public Adder {
   /*!
-    @brief Blueprints of special bonds for each type of molecule.
+    @brief Schemes of special bonds for each molecular type.
     @details Definition of special bonds is stored as a map (dictionary)
-    from types of molecule to vector of vector (list of list) of index
-    of atoms <i>in a molecule</i> of the type. The first vector
-    corresponds atoms in a molecule, and the second vector corresponds
-    special bonds of the each atom.
+    from molecular types to vector of vector (list of list) of
+    zero-based index of atoms <i>in a molecule</i> of the type.
+    The first vector corresponds atoms in a molecule,
+    and the second vector corresponds special bonds of the each atom.
   */
   Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol;
  protected:
@@ -49,31 +55,30 @@ class AddSpecialBonds : public Adder {
     DataKeys &datakeys) override;
  public:
   /*!
-    @brief Constructor of AddSpecialBonds class for one type of
-    molecule.
-    @param el_mols : Shared pointer to an Element object created from
-    another Element object where the constructed object is appended
-    to.
-    @param scheme : Vector of vector of index of atoms in a molecule
-    representing special bonds.
-    @details The \c el_mols is assigned to #ext_generator. The
-    \c scheme is stored in #mol_type_to_sbondses_in_mol as a blueprint
-    of special bonds for molecular type 1.
+    @brief Constructor of AddSpecialBonds class for
+    one molecular type.
+    @param el_mols : Shared pointer to a molecular Element object
+    consisting of an atomic (or bead) Element object where the
+    constructed object is appended to.
+    This argument is assigned to #ext_generator.
+    @param scheme : ::Vec of ::Vec of zero-based index of atoms in
+    a molecule.
+    This argument is stored in #mol_type_to_sbondses_in_mol as a scheme
+    for molecular type 1.
   */
   AddSpecialBonds(
     const ElPtr &el_mols,
     const Vec<Vec<int>> &scheme);
   /*!
-    @brief Constructor of AddSpecialBonds class for multiple types of
-    molecule.
-    @param el_mols : Shared pointer to an Element object created from
-    another Element object where the constructed object is appended
-    to.
-    @param schemes : Map from types of molecule to vector of vector of
-    index of atoms in a molecule representing special bonds for the
-    each molecular type.
-    @details The \c el_mols is assigned to #ext_generator. The
-    \c schemes is assigned to #mol_type_to_sbondses_in_mol.
+    @brief Constructor of AddSpecialBonds class for
+    multiple molecular types.
+    @param el_mols : Shared pointer to a molecular Element object
+    consisting of an atomic (or bead) Element object where the
+    constructed object is appended to.
+    This argument is assigned to #ext_generator.
+    @param schemes : ::Map from molecular types to ::Vec of ::Vec of
+    zero-based index of atoms in a molecule.
+    This argument is assigned to #mol_type_to_sbondses_in_mol.
   */
   AddSpecialBonds(
     const ElPtr &el_mols,

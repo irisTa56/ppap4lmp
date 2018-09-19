@@ -15,13 +15,13 @@
 namespace utils
 {
   /*!
-    @brief Mainly used for creating a map from values of selected
-    property in array Element::data to corresponding index in the array.
+    @brief Create a map from values of selected property
+    in an array ::Json to corresponding index in the array ::Json.
     @param data : Array ::Json.
     @param key : A string key specifying a property used as domain of
     the mapping.
     @return ::Map from elements of an array ::Json to corresponding
-    index in the array.
+    index in the array ::Json.
     @details Note that the mapping must be bijection.
   */
   Map<Json,int> map_to_index(

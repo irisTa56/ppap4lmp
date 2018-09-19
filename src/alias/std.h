@@ -11,9 +11,7 @@
 
 #include <memory>
 
-/*!
-  @brief \e ShPtr is an alias for shared pointer.
-*/
+//! \e ShPtr is an alias for shared pointer.
 template <typename T>
 using ShPtr = std::shared_ptr<T>;
 
@@ -26,16 +24,12 @@ using EnShThis = std::enable_shared_from_this<T>;
 
 #include <string>
 
-/*!
-  @brief \e Str is an alias for string.
-*/
+//! \e Str is an alias for string.
 using Str = std::string;
 
 #include <vector>
 
-/*!
-  @brief \e Vec is an alias for vector (same as list in Python).
-*/
+//! \e Vec is an alias for vector (same as list in Python).
 template <typename T>
 using Vec = std::vector<T>;
 
@@ -43,8 +37,8 @@ using Vec = std::vector<T>;
 
 /*!
   @brief \e Map is an alias for unordered map (same as dict in Python).
-  @details Searching an item from unordered map is (considerably)
-  faster than doing the same thing with ordered (regular in C++) map.
+  @details Searching an item from unordered map takes shorter time
+  than doing the same thing with ordered map (\c std::map).
 */
 template <typename T, typename U>
 using Map = std::unordered_map<T,U>;
@@ -53,8 +47,8 @@ using Map = std::unordered_map<T,U>;
 
 /*!
   @brief \e Set is an alias for unordered set (same as set in Python).
-  @details Searching an element from unordered set is (considerably)
-  faster than doing the same thing with ordered (regular in C++) set.
+  @details Searching an element from unordered set takes shorter time
+  than doing the same thing with ordered set (\c std::set).
 */
 template <typename T>
 using Set = std::unordered_set<T>;

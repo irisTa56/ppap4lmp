@@ -1,7 +1,7 @@
 /*!
   @file src/core/updater.cpp
-  @brief This file has an implementation of the Updater class, which is
-  one of the cores of this program.
+  @brief This file has an implementation of Updater class,
+  which is one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/29
   @details For more details, please see the header file,

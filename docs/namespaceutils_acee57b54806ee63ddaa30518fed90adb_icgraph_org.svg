@@ -78,7 +78,7 @@
 <!-- Node61 -->
 <g id="node6" class="node">
 <title>Node61</title>
-<g id="a_node6"><a xlink:href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100" target="_top" xlink:title="Compute properties and add them to Element::data given as a reference. ">
+<g id="a_node6"><a xlink:href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="167,-539.3868 167,-558.3868 253,-558.3868 253,-539.3868 167,-539.3868"/>
 <text text-anchor="middle" x="210" y="-546.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Adder::compute</text>
 </a>
@@ -169,7 +169,7 @@
 <!-- Node83 -->
 <g id="node28" class="node">
 <title>Node83</title>
-<g id="a_node28"><a xlink:href="classGenDict.html#ae1c5bb525375ebba3427367a9b98fd7e" target="_top" xlink:title="Get a value of generator_dict as a shared pointer of Element class. ">
+<g id="a_node28"><a xlink:href="classGenDict.html#ae1c5bb525375ebba3427367a9b98fd7e" target="_top" xlink:title="Get a value in generator_dict as a shared pointer of Element class. ">
 <polygon fill="#ffffff" stroke="#000000" points="154.5,-299.3868 154.5,-318.3868 265.5,-318.3868 265.5,-299.3868 154.5,-299.3868"/>
 <text text-anchor="middle" x="210" y="-306.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">GenDict::get_element</text>
 </a>
@@ -184,7 +184,7 @@
 <!-- Node84 -->
 <g id="node29" class="node">
 <title>Node84</title>
-<g id="a_node29"><a xlink:href="classGenDict.html#a8762308e25e392c38e4c3672ee5cd2eb" target="_top" xlink:title="Get a value of generator_dict as a shared pointer of Generator class. ">
+<g id="a_node29"><a xlink:href="classGenDict.html#a8762308e25e392c38e4c3672ee5cd2eb" target="_top" xlink:title="Get a value in generator_dict as a shared pointer of Generator class. ">
 <polygon fill="#ffffff" stroke="#000000" points="151.5,-261.3868 151.5,-280.3868 268.5,-280.3868 268.5,-261.3868 151.5,-261.3868"/>
 <text text-anchor="middle" x="210" y="-268.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">GenDict::get_generator</text>
 </a>
@@ -229,7 +229,7 @@
 <!-- Node87 -->
 <g id="node32" class="node">
 <title>Node87</title>
-<g id="a_node32"><a xlink:href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab" target="_top" xlink:title="Implementation of computation to update the data. ">
+<g id="a_node32"><a xlink:href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab" target="_top" xlink:title="Implementation of computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="144,-147.3868 144,-166.3868 276,-166.3868 276,-147.3868 144,-147.3868"/>
 <text text-anchor="middle" x="210" y="-154.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom::compute_impl</text>
 </a>
@@ -244,7 +244,7 @@
 <!-- Node88 -->
 <g id="node33" class="node">
 <title>Node88</title>
-<g id="a_node33"><a xlink:href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561" target="_top" xlink:title="Implementation of computation to update the data. ">
+<g id="a_node33"><a xlink:href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561" target="_top" xlink:title="Implementation of computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="134,-109.3868 134,-128.3868 286,-128.3868 286,-109.3868 134,-109.3868"/>
 <text text-anchor="middle" x="210" y="-116.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms::compute_impl</text>
 </a>
@@ -259,7 +259,7 @@
 <!-- Node89 -->
 <g id="node34" class="node">
 <title>Node89</title>
-<g id="a_node34"><a xlink:href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e" target="_top" xlink:title="Implementation of computation to update the data. ">
+<g id="a_node34"><a xlink:href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e" target="_top" xlink:title="Implementation of computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="139.5,-71.3868 139.5,-90.3868 280.5,-90.3868 280.5,-71.3868 139.5,-71.3868"/>
 <text text-anchor="middle" x="210" y="-78.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox::compute_impl</text>
 </a>
@@ -274,7 +274,7 @@
 <!-- Node90 -->
 <g id="node35" class="node">
 <title>Node90</title>
-<g id="a_node35"><a xlink:href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a" target="_top" xlink:title="Managing computation to update the data. ">
+<g id="a_node35"><a xlink:href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a" target="_top" xlink:title="Managing computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="165.5,-33.3868 165.5,-52.3868 254.5,-52.3868 254.5,-33.3868 165.5,-33.3868"/>
 <text text-anchor="middle" x="210" y="-40.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter::compute</text>
 </a>
@@ -289,7 +289,7 @@
 <!-- Node91 -->
 <g id="node36" class="node">
 <title>Node91</title>
-<g id="a_node36"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="Mainly used for creating a map from values of selected property in array Element::data to correspondi...">
+<g id="a_node36"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="Create a map from values of selected property in an array Json to corresponding index in the array Js...">
 <polygon fill="#ffffff" stroke="#000000" points="159.5,-337.3868 159.5,-356.3868 260.5,-356.3868 260.5,-337.3868 159.5,-337.3868"/>
 <text text-anchor="middle" x="210" y="-344.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::map_to_index</text>
 </a>
@@ -431,7 +431,7 @@
 <!-- Node75 -->
 <g id="node20" class="node">
 <title>Node75</title>
-<g id="a_node20"><a xlink:href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f" target="_top" xlink:title="Implementation of computation to update the data. ">
+<g id="a_node20"><a xlink:href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f" target="_top" xlink:title="Implementation of computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="329.5,-517.3868 329.5,-536.3868 475.5,-536.3868 475.5,-517.3868 329.5,-517.3868"/>
 <text text-anchor="middle" x="402.5" y="-524.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::compute_impl</text>
 </a>
@@ -446,7 +446,7 @@
 <!-- Node76 -->
 <g id="node21" class="node">
 <title>Node76</title>
-<g id="a_node21"><a xlink:href="classFilSet.html#a0335614b1856870777ab1af370406fd2" target="_top" xlink:title="Implementation of computation to update the data. ">
+<g id="a_node21"><a xlink:href="classFilSet.html#a0335614b1856870777ab1af370406fd2" target="_top" xlink:title="Implementation of computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="348,-479.3868 348,-498.3868 457,-498.3868 457,-479.3868 348,-479.3868"/>
 <text text-anchor="middle" x="402.5" y="-486.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilSet::compute_impl</text>
 </a>
@@ -461,7 +461,7 @@
 <!-- Node70 -->
 <g id="node15" class="node">
 <title>Node70</title>
-<g id="a_node15"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Wrapper for the array1d method for integer values. Can be called from Python as get_1d_int. ">
+<g id="a_node15"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Wrapper for the array1d method for integer values. ">
 <polygon fill="#ffffff" stroke="#000000" points="541,-722.3868 541,-741.3868 660,-741.3868 660,-722.3868 541,-722.3868"/>
 <text text-anchor="middle" x="600.5" y="-729.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_int_py</text>
 </a>
@@ -476,7 +476,7 @@
 <!-- Node72 -->
 <g id="node17" class="node">
 <title>Node72</title>
-<g id="a_node17"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Wrapper for the array1d method for float (double in C++) values. Can be called from Python as get_1d_...">
+<g id="a_node17"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Wrapper for the array1d method for float (double in C++) values. ">
 <polygon fill="#ffffff" stroke="#000000" points="536.5,-836.3868 536.5,-855.3868 664.5,-855.3868 664.5,-836.3868 536.5,-836.3868"/>
 <text text-anchor="middle" x="600.5" y="-843.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_float_py</text>
 </a>
@@ -491,7 +491,7 @@
 <!-- Node73 -->
 <g id="node18" class="node">
 <title>Node73</title>
-<g id="a_node18"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for the array2d method for integer values. Can be called from Python as get_2d_int. ">
+<g id="a_node18"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for the array2d method for integer values. ">
 <polygon fill="#ffffff" stroke="#000000" points="541,-798.3868 541,-817.3868 660,-817.3868 660,-798.3868 541,-798.3868"/>
 <text text-anchor="middle" x="600.5" y="-805.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_int_py</text>
 </a>
@@ -506,7 +506,7 @@
 <!-- Node74 -->
 <g id="node19" class="node">
 <title>Node74</title>
-<g id="a_node19"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for the array2d method for float (double in C++) values. Can be called from Python as get_2d_...">
+<g id="a_node19"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for the array2d method for float (double in C++) values. ">
 <polygon fill="#ffffff" stroke="#000000" points="536.5,-760.3868 536.5,-779.3868 664.5,-779.3868 664.5,-760.3868 536.5,-760.3868"/>
 <text text-anchor="middle" x="600.5" y="-767.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </a>
@@ -521,7 +521,7 @@
 <!-- Node71 -->
 <g id="node16" class="node">
 <title>Node71</title>
-<g id="a_node16"><a xlink:href="pybind_2element_8h.html#a32471b3cace9ede01900bfbdaca5e16a" target="_top" xlink:title="Function to bind Element class to Python. ">
+<g id="a_node16"><a xlink:href="py__element_8h.html#a32471b3cace9ede01900bfbdaca5e16a" target="_top" xlink:title="Function to bind Element class to Python. ">
 <polygon fill="#ffffff" stroke="#000000" points="718,-817.3868 718,-836.3868 803,-836.3868 803,-817.3868 718,-817.3868"/>
 <text text-anchor="middle" x="760.5" y="-824.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pybind_element</text>
 </a>
@@ -578,7 +578,7 @@
 <!-- Node81 -->
 <g id="node26" class="node">
 <title>Node81</title>
-<g id="a_node26"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Wrapper for the get_data method which returns a reference. Can be called from Python as get_data...">
+<g id="a_node26"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Wrapper for the get_data method, which returns a reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="544.5,-912.3868 544.5,-931.3868 656.5,-931.3868 656.5,-912.3868 544.5,-912.3868"/>
 <text text-anchor="middle" x="600.5" y="-919.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_data_py</text>
 </a>
@@ -593,7 +593,7 @@
 <!-- Node82 -->
 <g id="node27" class="node">
 <title>Node82</title>
-<g id="a_node27"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Wrapper for the get_keys method. Can be called from Python as get_keys. ">
+<g id="a_node27"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Wrapper for the get_keys method. ">
 <polygon fill="#ffffff" stroke="#000000" points="543.5,-874.3868 543.5,-893.3868 657.5,-893.3868 657.5,-874.3868 543.5,-874.3868"/>
 <text text-anchor="middle" x="600.5" y="-881.3868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys_py</text>
 </a>
@@ -670,7 +670,7 @@
 <!-- Node94 -->
 <g id="node39" class="node">
 <title>Node94</title>
-<g id="a_node39"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="Compute the inertia moment with weighed atoms. ">
+<g id="a_node39"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="Compute the inertia moment with weighting factors. ">
 <polygon fill="#ffffff" stroke="#000000" points="332.5,-156.8868 332.5,-186.8868 472.5,-186.8868 472.5,-156.8868 332.5,-156.8868"/>
 <text text-anchor="start" x="340.5" y="-174.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute</text>
 <text text-anchor="middle" x="402.5" y="-163.8868" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>

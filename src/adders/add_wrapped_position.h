@@ -1,7 +1,7 @@
 /*!
   @file src/adders/add_wrapped_position.h
-  @brief This file has a definition of the AddWrappedPosition class,
-  which is a subclass of the Adder class.
+  @brief This file has a definition of AddWrappedPosition class,
+  which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/07
 */
@@ -12,34 +12,33 @@
 #include <adders/adder.h>
 
 /*!
-  @brief \e AddWrappedPosition stands for Adder for Wrapped Postisions,
-  \c x, \c y and \c z.
+  @brief AddWrappedPosition adds wrapped positions of an Element object.
   @details This class inherits Adder class and overrides
-  Adder::compute_impl. Wrapping is a process to resolve periodic
-  boundary condition; wrapped positions are in the original simulation
-  box. About usage in Python, please see
-  src/pybind/py_adders/add_wrapped_position.h.
-  <p>
-    Name (key) of property to be added:
-      - \c x (float)
-      - \c y (float)
-      - \c z (float)
-  </p>
-  <p>
-    Name (key) of property to be required:
-      - \c xu (float)
-      - \c yu (float)
-      - \c zu (float)
-  </p>
-  <p>
-    Name (key) of property in #ext_generator to be required:
-      - \c lo_x (float)
-      - \c lo_y (float)
-      - \c lo_z (float)
-      - \c hi_x (float)
-      - \c hi_y (float)
-      - \c hi_z (float)
-  </p>
+  Adder::compute_impl.
+
+  Wrapping is a process to resolve periodic boundary condition;
+  wrapped positions are in the original simulation box.
+
+  About usage in Python,
+  please see src/pybind/adders/py_add_wrapped_position.h.
+
+  Key of property to be added:
+    - \c x (float)
+    - \c y (float)
+    - \c z (float)
+
+  Key of required property:
+    - \c xu (float)
+    - \c yu (float)
+    - \c zu (float)
+
+  Key of required property in #ext_generator:
+    - \c lo_x (float)
+    - \c lo_y (float)
+    - \c lo_z (float)
+    - \c hi_x (float)
+    - \c hi_y (float)
+    - \c hi_z (float)
 */
 class AddWrappedPosition : public Adder {
  protected:
@@ -54,7 +53,7 @@ class AddWrappedPosition : public Adder {
     @brief Constructor of AddWrappedPosition class.
     @param elem : Shared pointer to an Element object representing
     the simulation box.
-    @details The \c elem is assigned to the #ext_generator.
+    This argument is assigned to #ext_generator.
   */
   AddWrappedPosition(
     const ElPtr &elem);

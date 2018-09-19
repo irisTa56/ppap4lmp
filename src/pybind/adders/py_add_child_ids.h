@@ -1,5 +1,5 @@
 /*!
-  @file src/pybind/py_adders/py_add_child_ids.h
+  @file src/pybind/adders/py_add_child_ids.h
   @brief This file is for binding AddChildIDs class to Python.
   @author Takayuki Kobayashi
   @date 2018/08/19

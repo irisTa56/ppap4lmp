@@ -1,5 +1,5 @@
 /*!
-  @file src/pybind/py_adders/add_com_position.h
+  @file src/pybind/adders/py_add_com_position.h
   @brief This file is for binding AddCoMPosition class to Python.
   @author Takayuki Kobayashi
   @date 2018/07/13

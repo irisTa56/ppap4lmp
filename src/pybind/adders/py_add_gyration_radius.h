@@ -1,5 +1,5 @@
 /*!
-  @file src/pybind/py_adders/add_gyration_radius.h
+  @file src/pybind/adders/py_add_gyration_radius.h
   @brief This file is for binding AddGyrationRadius class to Python.
   @author Takayuki Kobayashi
   @date 2018/07/15
@@ -35,7 +35,7 @@
       </td>
     </tr>
   </table>
-
+  <br/>
   <table class="py_table">
     <caption>
       Python-side methods of AddGyrationRadius
@@ -89,6 +89,18 @@
       </td>
     </tr>
   </table>
+
+  Usage example of the constructor and method to add square of
+  gyration radius to an Element object for molecules.
+
+  \code{.python}
+    atoms = create(...)
+    molecules = create(StaMolecules(atoms))
+
+    molecules.append_updater(AddCoMPosition(atoms))
+    molecules.append_updater(AddInertiaMoment(atoms))
+    molecules.append_updater(AddGyrationRadius().with_squared())
+  \endcode
 */
 
 #ifndef PYBIND_ADD_GYRATION_RADIUS_H

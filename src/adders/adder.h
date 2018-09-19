@@ -1,7 +1,7 @@
 /*!
   @file src/adders/adder.h
-  @brief This file has a definition of the Adder class, which is a
-  subclass of the Updater class.
+  @brief This file has a definition of Adder class,
+  which is a subclass of Updater class.
   @author Takayuki Kobayashi
   @date 2018/06/29
 */
@@ -12,11 +12,14 @@
 #include <core/updater.h>
 
 /*!
-  @brief \e Adder adds new properties (keys and values) to non-empty
+  @brief Adder adds new properties (keys and values) to non-empty
   Element::data.
   @details This class inherits Updater class and overrides
-  Updater::compute. This class is an abstract class and has a pure
-  virtual function, Adder::compute_impl (defined in Updater class).
+  Updater::compute.
+
+  This class is an abstract class and has a pure virtual function,
+  Adder::compute_impl.
+
   Names of subclass of this class should be prefixed by \e Add. Unlike
   Starter, Adder accepts only non-empty Element::data.
 */
@@ -27,7 +30,7 @@ class Adder : public Updater {
   virtual ~Adder() = default;
   /*!
     @brief Compute properties and add them to Element::data given as a
-    reference.
+    mutable reference.
     @param data : Mutable reference to Element::data where computed
     properties are added to.
     @param datakeys : Mutable reference to Element::datakeys where keys
@@ -39,7 +42,7 @@ class Adder : public Updater {
     \c datakeys to Adder::compute_impl. Note that actual computation of
     properties is conducted by Adder::compute_impl orveridden in
     subclasses of this class. In addition, this method ensures that new
-    property named \e id is not added; that property must be set at
+    property named \e id is not added; \c id property must be set at
     initialization (done by Starter) only.
   */
   virtual void compute(

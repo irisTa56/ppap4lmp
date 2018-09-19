@@ -30,20 +30,20 @@
   the \e child is created earlier than the \e parent.
 
   About usage in Python,
-  please see src/pybind/py_adders/add_child_positions.h.
+  please see src/pybind/adders/py_add_child_positions.h.
 
   Key of property to be added:
     - <c>[child_name]-xs</c> (array of float)
     - <c>[child_name]-ys</c> (array of float)
     - <c>[child_name]-zs</c> (array of float)
 
-  Required key of property:
+  Key of required property:
     - <c>[child_name]-ids</c> (array of integer)
     - \c xu (float)
     - \c yu (float)
     - \c zu (float)
 
-  Required key of property in #ext_generator:
+  Key of required property in #ext_generator:
     - \c id (integer)
     - \c xu (float)
     - \c yu (float)
@@ -69,7 +69,7 @@ class AddChildPositions : public Adder {
  public:
   /*!
     @brief Constructor of AddChildPositions class.
-    @param elem : Shared pointer to \e child object.
+    @param elem : Shared pointer to a \e child object.
     This argument is assigned to #ext_generator.
     @param child_name_ : A string for naming the \e child object.
     This argument is assigned to #child_name.

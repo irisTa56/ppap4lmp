@@ -1,13 +1,14 @@
 /*!
-  @file src/pybind/py_adders/add_inertia_moment.h
-  @brief This file has a function to bind AddInertiaMoment class to
-  Python.
+  @file src/pybind/adders/py_add_inertia_moment.h
+  @brief This file is for binding AddInertiaMoment class to Python.
   @author Takayuki Kobayashi
   @date 2018/07/15
   @details
 
-  <b>Python-side constructor of AddInertiaMoment class</b>:
   <table class="py_table">
+    <caption>
+      Python-side constructor of AddInertiaMoment
+    </caption>
     <tr class="py_tr">
       <th class="py_th">Name</th>
       <th class="py_th">C++-side</th>
@@ -24,19 +25,29 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            \c elem : An Element object, which is used for creating
-            another Element object where the constructed object is
-            appended to. For example, the former Element object is the
-            one containing atoms data, and the latter is the one
-            containing molecules data generated using the atoms.
+            \c elem : \e Child object (such as an Element object
+            containing data for atoms).
           </li>
         </ul>
       </td>
       <td class="py_td">
-        Constructed AddInertiaMoment object.
+        Constructed AddInertiaMoment object, which is appended to
+        a \e parent object (such as an Element object containing data
+        for molecules).
       </td>
     </tr>
   </table>
+
+  Usage example of the constructor to add elements of inertia moment
+  to an Element object for molecules.
+
+  \code{.python}
+    atoms = create(...)
+    molecules = create(StaMolecules(atoms))
+
+    molecules.append_updater(AddCoMPosition(atoms))
+    molecules.append_updater(AddInertiaMoment(atoms))
+  \endcode
 */
 
 #ifndef PYBIND_ADD_INERTIA_MOMENT_H
@@ -45,9 +56,7 @@
 #include <adders/add_inertia_moment.h>
 #include <pybind/adders/py_adder.h>
 
-/*!
-  @brief Function to bind AddInertiaMoment class to Python.
-*/
+//! Function to bind AddInertiaMoment class to Python.
 static void pybind_add_inertia_moment(py::module &m)
 {
   py::class_<AddInertiaMoment,PyUpdater<AddInertiaMoment>,Adder,Updater,ShPtr<AddInertiaMoment>>(m, "AddInertiaMoment")

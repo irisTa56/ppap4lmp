@@ -1,6 +1,6 @@
 /*!
   @file src/pybind/adders/py_adder.h
-  @brief This file has a function to bind Adder class to Python.
+  @brief This file is for binding Adder class to Python.
   @author Takayuki Kobayashi
   @date 2018/06/29
 */
@@ -13,8 +13,8 @@
 
 /*!
   @brief Function to bind Adder class to Python.
-  @details Constructor of Adder class is hidden from Python, because
-  the class is an abstract one.
+  @details Constructor of Adder class is hidden from Python,
+  because the class is an abstract one.
 */
 static void pybind_adder(py::module &m)
 {

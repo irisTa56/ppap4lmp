@@ -218,7 +218,7 @@ var sectionId = 'dynsection-7';
 <!-- Node56 -->
 <g id="node17" class="node">
 <title>Node56</title>
-<g id="a_node17"><a xlink:href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f" target="_top" xlink:title="Implementation of computation to update the data. ">
+<g id="a_node17"><a xlink:href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f" target="_top" xlink:title="Implementation of computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="144.5,-38.5 144.5,-57.5 290.5,-57.5 290.5,-38.5 144.5,-38.5"/>
 <text text-anchor="middle" x="217.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::compute_impl</text>
 </a>
@@ -233,7 +233,7 @@ var sectionId = 'dynsection-7';
 <!-- Node57 -->
 <g id="node18" class="node">
 <title>Node57</title>
-<g id="a_node18"><a xlink:href="classFilSet.html#a0335614b1856870777ab1af370406fd2" target="_top" xlink:title="Implementation of computation to update the data. ">
+<g id="a_node18"><a xlink:href="classFilSet.html#a0335614b1856870777ab1af370406fd2" target="_top" xlink:title="Implementation of computation to update Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="163,-.5 163,-19.5 272,-19.5 272,-.5 163,-.5"/>
 <text text-anchor="middle" x="217.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilSet::compute_impl</text>
 </a>
@@ -248,7 +248,7 @@ var sectionId = 'dynsection-7';
 <!-- Node51 -->
 <g id="node12" class="node">
 <title>Node51</title>
-<g id="a_node12"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Wrapper for the array1d method for integer values. Can be called from Python as get_1d_int. ">
+<g id="a_node12"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Wrapper for the array1d method for integer values. ">
 <polygon fill="#ffffff" stroke="#000000" points="339.5,-133.5 339.5,-152.5 458.5,-152.5 458.5,-133.5 339.5,-133.5"/>
 <text text-anchor="middle" x="399" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_int_py</text>
 </a>
@@ -263,7 +263,7 @@ var sectionId = 'dynsection-7';
 <!-- Node53 -->
 <g id="node14" class="node">
 <title>Node53</title>
-<g id="a_node14"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Wrapper for the array1d method for float (double in C++) values. Can be called from Python as get_1d_...">
+<g id="a_node14"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Wrapper for the array1d method for float (double in C++) values. ">
 <polygon fill="#ffffff" stroke="#000000" points="335,-95.5 335,-114.5 463,-114.5 463,-95.5 335,-95.5"/>
 <text text-anchor="middle" x="399" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_float_py</text>
 </a>
@@ -278,7 +278,7 @@ var sectionId = 'dynsection-7';
 <!-- Node54 -->
 <g id="node15" class="node">
 <title>Node54</title>
-<g id="a_node15"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for the array2d method for integer values. Can be called from Python as get_2d_int. ">
+<g id="a_node15"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for the array2d method for integer values. ">
 <polygon fill="#ffffff" stroke="#000000" points="339.5,-57.5 339.5,-76.5 458.5,-76.5 458.5,-57.5 339.5,-57.5"/>
 <text text-anchor="middle" x="399" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_int_py</text>
 </a>
@@ -293,7 +293,7 @@ var sectionId = 'dynsection-7';
 <!-- Node55 -->
 <g id="node16" class="node">
 <title>Node55</title>
-<g id="a_node16"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for the array2d method for float (double in C++) values. Can be called from Python as get_2d_...">
+<g id="a_node16"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for the array2d method for float (double in C++) values. ">
 <polygon fill="#ffffff" stroke="#000000" points="335,-19.5 335,-38.5 463,-38.5 463,-19.5 335,-19.5"/>
 <text text-anchor="middle" x="399" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </a>
@@ -308,7 +308,7 @@ var sectionId = 'dynsection-7';
 <!-- Node52 -->
 <g id="node13" class="node">
 <title>Node52</title>
-<g id="a_node13"><a xlink:href="pybind_2element_8h.html#a32471b3cace9ede01900bfbdaca5e16a" target="_top" xlink:title="Function to bind Element class to Python. ">
+<g id="a_node13"><a xlink:href="py__element_8h.html#a32471b3cace9ede01900bfbdaca5e16a" target="_top" xlink:title="Function to bind Element class to Python. ">
 <polygon fill="#ffffff" stroke="#000000" points="499,-76.5 499,-95.5 584,-95.5 584,-76.5 499,-76.5"/>
 <text text-anchor="middle" x="541.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pybind_element</text>
 </a>

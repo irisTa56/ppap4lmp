@@ -1,5 +1,5 @@
 /*!
-  @file src/pybind/updater.h
+  @file src/pybind/py_updater.h
   @brief This file is for binding Updater class to Python.
   @author Takayuki Kobayashi
   @date 2018/06/29
@@ -12,7 +12,8 @@
 #include <core/updater.h>
 
 /*!
-  @brief Trampoline class to bind Updater class to Python.
+  @brief Trampoline class to bind Updater class and its subclasses
+  to Python.
   @details For more details, please see pybind11 documentation:
   https://pybind11.readthedocs.io/en/stable/advanced/classes.html.
 */
@@ -40,8 +41,8 @@ class PyUpdater : public UPD {
 
 /*!
   @brief Function to bind Updater class to Python.
-  @details Constructor of Updater class is hidden from Python, because
-  the class is an abstract one.
+  @details Constructor of Updater class is hidden from Python,
+  because the class is an abstract one.
 */
 static void pybind_updater(py::module &m)
 {

@@ -1,6 +1,6 @@
 /*!
   @file src/alias/pybind_json.h
-  @brief To bind ::Json type to Python, a custom type caster of
+  @brief To bind ::Json to Python, a custom type caster of
   \e pybind11 is required.
   @author Takayuki Kobayashi
   @date 2018/09/09
@@ -16,22 +16,20 @@ namespace pybind11
 {
   namespace detail
   {
-    /*!
-      @brief A type caster of \e pybind11 for ::Json.
-    */
+    //! A type caster of \e pybind11 for ::Json.
     template <> struct type_caster<Json> {
      public:
 
       PYBIND11_TYPE_CASTER(Json, _("json"));
 
       /*!
-        @brief Loading ::Json from Python and assigning it in C++.
-        @details First, a JSON variable (complex of dict and list in
-        Python) is dumped as a string by \c dumps attribute of Python's
-        \c json module (serialization). Then the string is parsed by
-        \c parse function of \e nlohmann/json and converted to a ::Json
-        object. This process might take a long time. So, using other
-        containers is preferable (if you can).
+        @brief Loading ::Json from Python and assigning it to C++.
+        @details First, a JSON-like object in Python (complex of dict
+        and list) is dumped as a string by \c dumps attribute of
+        Python's \c json module (serialization). Then the string is
+        parsed by \c parse function of \e nlohmann/json and converted
+        to a ::Json object. Since this conversion process might take
+        a long time, using other containers is preferable (if you can).
       */
       bool load(handle src, bool)
       {
@@ -53,8 +51,8 @@ namespace pybind11
         @details First, a ::Json object is serialized to a string by
         its \c dump  method. Then the string is loaded by \c loads
         attribute of Python's \c json module and released as a complex
-        of dict and list. This process might take a long time. So,
-        using other containers is preferable (if you can).
+        of dict and list. Since this conversion process might take
+        a long time, using other containers is preferable (if you can).
       */
       static handle cast(Json src, return_value_policy, handle)
       {

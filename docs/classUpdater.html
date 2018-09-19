@@ -73,10 +73,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><em><a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a></em> is an abstract class to update data held by <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class.  
+<p><a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> is an abstract class to update data held by an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  
  <a href="classUpdater.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="core_2updater_8h_source.html">updater.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="updater_8h_source.html">updater.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Updater:</div>
 <div class="dyncontent">
@@ -91,22 +91,22 @@ Collaboration diagram for Updater:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class.  <a href="#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af16520931c56ec6b8af28cf13c174c57"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;, const int)=0</td></tr>
-<tr class="memdesc:af16520931c56ec6b8af28cf13c174c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing computation to update the data.  <a href="#af16520931c56ec6b8af28cf13c174c57">More...</a><br /></td></tr>
+<tr class="memdesc:af16520931c56ec6b8af28cf13c174c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  <a href="#af16520931c56ec6b8af28cf13c174c57">More...</a><br /></td></tr>
 <tr class="separator:af16520931c56ec6b8af28cf13c174c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb7ad60b6b3e19b83299fb644b49f02b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b">remove_from_blacklist</a> (const int dataid)</td></tr>
 <tr class="memdesc:afb7ad60b6b3e19b83299fb644b49f02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a>.  <a href="#afb7ad60b6b3e19b83299fb644b49f02b">More...</a><br /></td></tr>
 <tr class="separator:afb7ad60b6b3e19b83299fb644b49f02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64bb77bc8aa6d7ee1ddeaf98a033ec36"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36">get_ext_generator</a> ()</td></tr>
-<tr class="memdesc:a64bb77bc8aa6d7ee1ddeaf98a033ec36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a> of this object.  <a href="#a64bb77bc8aa6d7ee1ddeaf98a033ec36">More...</a><br /></td></tr>
+<tr class="memdesc:a64bb77bc8aa6d7ee1ddeaf98a033ec36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a> of this object.  <a href="#a64bb77bc8aa6d7ee1ddeaf98a033ec36">More...</a><br /></td></tr>
 <tr class="separator:a64bb77bc8aa6d7ee1ddeaf98a033ec36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a91e7bdd1442c19e682ec9b3154ee910f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;)=0</td></tr>
-<tr class="memdesc:a91e7bdd1442c19e682ec9b3154ee910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation to update the data.  <a href="#a91e7bdd1442c19e682ec9b3154ee910f">More...</a><br /></td></tr>
+<tr class="memdesc:a91e7bdd1442c19e682ec9b3154ee910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  <a href="#a91e7bdd1442c19e682ec9b3154ee910f">More...</a><br /></td></tr>
 <tr class="separator:a91e7bdd1442c19e682ec9b3154ee910f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
 <tr class="memdesc:a2184a4efa52ad2f4a631c134379ef7b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look for <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a>.  <a href="#a2184a4efa52ad2f4a631c134379ef7b8">More...</a><br /></td></tr>
@@ -115,21 +115,22 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a26dc5059d13d9e8b5d96390286976868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a></td></tr>
-<tr class="memdesc:a26dc5059d13d9e8b5d96390286976868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to an object of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class used in updating process. It is different from the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object to be updated.  <a href="#a26dc5059d13d9e8b5d96390286976868">More...</a><br /></td></tr>
+<tr class="memdesc:a26dc5059d13d9e8b5d96390286976868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object used in update process.  <a href="#a26dc5059d13d9e8b5d96390286976868">More...</a><br /></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a963bbb490a5f715e3330c508fe209deb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a></td></tr>
-<tr class="memdesc:a963bbb490a5f715e3330c508fe209deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> updated by this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> object.  <a href="#a963bbb490a5f715e3330c508fe209deb">More...</a><br /></td></tr>
+<tr class="memdesc:a963bbb490a5f715e3330c508fe209deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> updated by this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object.  <a href="#a963bbb490a5f715e3330c508fe209deb">More...</a><br /></td></tr>
 <tr class="separator:a963bbb490a5f715e3330c508fe209deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74289331716430382f81370e9cb64c42"><td class="memItemLeft" align="right" valign="top">omp_lock_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a74289331716430382f81370e9cb64c42">omp_lock</a></td></tr>
 <tr class="memdesc:a74289331716430382f81370e9cb64c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variable used for OpenMP.  <a href="#a74289331716430382f81370e9cb64c42">More...</a><br /></td></tr>
 <tr class="separator:a74289331716430382f81370e9cb64c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><em><a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a></em> is an abstract class to update data held by <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> class. </p>
-<p>This class is a superclass of the <a class="el" href="classStarter.html">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> and <a class="el" href="classFilter.html" title="Filter removes items in array Element::data if the items fail user-defined criteria. ">Filter</a> class. An object of this class is append to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an object of Updater class to this object. Can be called from Python. ">Element::append_updater</a> and stored as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a> (where the first item is the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object and the second item is the object of this class). For more details about <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a>, please see the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. </p>
+<div class="textblock"><p><a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> is an abstract class to update data held by an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
+<p>This class is a superclass of the <a class="el" href="classStarter.html">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> and <a class="el" href="classFilter.html" title="Filter removes items in array Element::data if the items fail user-defined criteria. ">Filter</a> class.</p>
+<p>An object of this class is append to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a> and stored as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a> (where the first item is the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object and the second item is the object of this class). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae5e87ea9ea0f6f31de04f93cd1819549">&#9670;&nbsp;</a></span>Updater()</h2>
@@ -146,8 +147,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> class. </p>
-<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is called (indirectly) from Python and not called in a multithreads context. </p>
+<p>Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class. </p>
+<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreads context. </p>
 
 </div>
 </div>
@@ -184,7 +185,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Boolean.</dd></dl>
-<p>If <code>dataid</code> is found in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a>, this method returns false, that is, rejects the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object of the <code>dataid</code>. </p>
+<p>If <code>dataid</code> is found in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a>, this method returns false, that is, rejects the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object of the <code>dataid</code>. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -233,7 +234,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Managing computation to update the data. </p>
+<p>Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
 <p>This is a pure virtual function, please see the subclasses for more details. </p>
 
 <p>Implemented in <a class="el" href="classFilter.html#acd658aa335c8b5215242737aabcf5155">Filter</a>, <a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">Adder</a>, and <a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">Starter</a>.</p>
@@ -274,10 +275,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of computation to update the data. </p>
+<p>Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
 <p>This is a pure virtual function, please see the subclasses for more details. </p>
 
-<p>Implemented in <a class="el" href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2">AddCoMPosition</a>, <a class="el" href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259">AddInertiaMoment</a>, <a class="el" href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">AddGyrationRadius</a>, <a class="el" href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a">AddChildPositions</a>, <a class="el" href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf">AddMap</a>, <a class="el" href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d">AddChildIDs</a>, <a class="el" href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d">AddRename</a>, <a class="el" href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822">AddWrappedPosition</a>, <a class="el" href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e">AddMolecularOrientation</a>, <a class="el" href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b">AddSpecialBonds</a>, <a class="el" href="classFilSet.html#a0335614b1856870777ab1af370406fd2">FilSet</a>, <a class="el" href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f">FilComparison</a>, <a class="el" href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561">StaDumpAtoms</a>, <a class="el" href="classStaBeads.html#a28dd7a99528b0c892dc3ab85b131ed85">StaBeads</a>, <a class="el" href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab">StaCustom</a>, <a class="el" href="classStaCustom.html#a08735a8fd3153f06d19df5e61e16d451">StaCustom</a>, <a class="el" href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e">StaDumpBox</a>, and <a class="el" href="classStaMolecules.html#a6e43cdfdce04105ab20a5f93584aabec">StaMolecules</a>.</p>
+<p>Implemented in <a class="el" href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259">AddInertiaMoment</a>, <a class="el" href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2">AddCoMPosition</a>, <a class="el" href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf">AddMap</a>, <a class="el" href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">AddGyrationRadius</a>, <a class="el" href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a">AddChildPositions</a>, <a class="el" href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d">AddChildIDs</a>, <a class="el" href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b">AddSpecialBonds</a>, <a class="el" href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e">AddMolecularOrientation</a>, <a class="el" href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d">AddRename</a>, <a class="el" href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822">AddWrappedPosition</a>, <a class="el" href="classFilSet.html#a0335614b1856870777ab1af370406fd2">FilSet</a>, <a class="el" href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f">FilComparison</a>, <a class="el" href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561">StaDumpAtoms</a>, <a class="el" href="classStaBeads.html#a28dd7a99528b0c892dc3ab85b131ed85">StaBeads</a>, <a class="el" href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab">StaCustom</a>, <a class="el" href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e">StaDumpBox</a>, and <a class="el" href="classStaMolecules.html#a6e43cdfdce04105ab20a5f93584aabec">StaMolecules</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -301,9 +302,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to an object of Generator class used in updating process. It is different from the Ele...">ext_generator</a> of this object. </p>
+<p>Get <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a> of this object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constance reference to <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395" title="ShPtr is an alias for shared pointer. ">ShPtr</a>&lt;<a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>&gt;.</dd></dl>
-<p>This method is mainly used in <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair objects. It represents the process how the data is generated and updat...">Element::update_chain</a>. </p>
+<p>This method is mainly used in <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair objects. It represents a process how Element::data is generated and up...">Element::update_chain</a>. </p>
 
 </div>
 </div>
@@ -331,7 +332,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>Removing <code>dataid</code> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> is necessary in case that this object updates the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object of the <code>dataid</code> again after its data being cleared. </p>
+<p>Removing <code>dataid</code> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> is necessary so that this object can update the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object of the <code>dataid</code> again after its <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> being cleared. </p>
 
 </div>
 </div>
@@ -356,8 +357,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Set of <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> updated by this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> object. </p>
-<p>If this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by Element class. ">Updater</a> object is called from an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object for the first time, this object stores <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> in the <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> and updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity, object) itself. ">Element::data</a>. From the second time on, this object can skip the updating computation. </p>
+<p>Set of <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> updated by this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. </p>
+<p>If this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object is called from an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for the first time, this object stores <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a> in the <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> and updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. From the second time on, this object can skip the updating computation. </p>
 
 </div>
 </div>
@@ -381,8 +382,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Shared pointer to an object of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class used in updating process. It is different from the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object to be updated. </p>
-<p>To compute some properties of the data, external object of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> (can be Element/GenDict/GenList) might be required. For example, to compute the center of mass of molecules, an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity, object). ">Element</a> object holding the data of positions of atoms in the molecules is required. </p>
+<p>Shared pointer to a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object used in update process. </p>
+<p>To compute some properties for an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where this object is appended to, an external <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object (can be Element/GenDict/GenList) might be required. For example, to compute the center of mass of molecules for a molecular <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object, an atomic <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing positions of the atoms is required. </p>
 
 </div>
 </div>
@@ -407,12 +408,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>A variable used for OpenMP. </p>
-<p>This member is used to update the <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> exclusively in a multithread context. To prevent the <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> from being updated from multiple threads at the same time, this member must be locked in the <a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8" title="Look for Element::dataid in dataid_blacklist. ">check_blacklist</a> and <a class="el" href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b" title="Remove Element::dataid from dataid_blacklist. ">remove_from_blacklist</a>. </p>
+<p>In this program, <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> is modified in a multithread context. To prevent the <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a> from being modified from multiple threads at the same time, this member must be locked in the <a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8" title="Look for Element::dataid in dataid_blacklist. ">check_blacklist</a> and <a class="el" href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b" title="Remove Element::dataid from dataid_blacklist. ">remove_from_blacklist</a>. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/core/<a class="el" href="core_2updater_8h_source.html">updater.h</a></li>
+<li>src/core/<a class="el" href="updater_8h_source.html">updater.h</a></li>
 <li>src/core/<a class="el" href="updater_8cpp.html">updater.cpp</a></li>
 </ul>
 </div><!-- contents -->

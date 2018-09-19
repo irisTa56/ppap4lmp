@@ -15,7 +15,7 @@ namespace utils
 {
   /*!
     @brief Print to standard output.
-    @param msg : String to be printed.
+    @param msg : A string to be printed.
     @return None.
   */
   void _message(
@@ -23,7 +23,7 @@ namespace utils
 
   /*!
     @brief Logging a message.
-    @param msg : String to be printed.
+    @param msg : A string to be printed.
     @return None.
   */
   void log(
@@ -31,7 +31,7 @@ namespace utils
 
   /*!
     @brief Waning with a message.
-    @param msg : String to be printed.
+    @param msg : A string to be printed.
     @return None.
   */
   void warning(

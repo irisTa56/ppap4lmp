@@ -1,12 +1,14 @@
 /*!
-  @file src/pybind/py_adders/add_rename.h
-  @brief This file has a function to bind AddRename class to Python.
+  @file src/pybind/adders/py_add_rename.h
+  @brief This file is for binding AddRename class to Python.
   @author Takayuki Kobayashi
   @date 2018/08/17
   @details
 
-  <b>Python-side constructor of AddRename class</b>:
   <table class="py_table">
+    <caption>
+      Python-side constructor of AddRename
+    </caption>
     <tr class="py_tr">
       <th class="py_th">Name</th>
       <th class="py_th">C++-side</th>
@@ -23,12 +25,12 @@
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            \c key_old_ : A string key for an old property: an existing
-            property to be renamed.
+            \c key_old_ : A string key for an existing property to be
+            renamed.
           </li>
           <li>
-            \c key_new_ : A string key for a new property, that is a
-            new name of the existing property.
+            \c key_new_ : A string key by which the old key of the
+            existing property is renamed.
           </li>
         </ul>
       </td>
@@ -37,9 +39,11 @@
       </td>
     </tr>
   </table>
-
-  <b>Python-side methods of AddRename class</b>:
+  <br/>
   <table class="py_table">
+    <caption>
+      Python-side methods of AddRename
+    </caption>
     <tr class="py_tr">
       <th class="py_th">Name</th>
       <th class="py_th">C++-side</th>
@@ -51,8 +55,8 @@
       <td class="py_td">\c overwrite</td>
       <td class="py_td">AddRename::overwrite</td>
       <td class="py_td">
-        Allow overwriting an existing property whose name is the same
-        as new property to be added.
+        Allow overwriting an existing property by a renamed property
+        (another existing property) with the same name.
       </td>
       <td class="py_td">
         <ul class="py_ul">
@@ -75,9 +79,7 @@
 #include <adders/add_rename.h>
 #include <pybind/adders/py_adder.h>
 
-/*!
-  @brief Function to bind AddRename class to Python.
-*/
+//! Function to bind AddRename class to Python.
 static void pybind_add_rename(py::module &m)
 {
   py::class_<AddRename,PyUpdater<AddRename>,Adder,Updater,ShPtr<AddRename>>(m, "AddRename")

@@ -1,12 +1,14 @@
 /*!
-  @file src/pybind/element.h
+  @file src/pybind/py_element.h
   @brief This file is for binding Element class to Python.
   @author Takayuki Kobayashi
   @date 2018/07/01
   @details
 
-  <b>Python-side methods of Element class</b>:
   <table class="py_table">
+    <caption>
+      Python-side methods of Element
+    </caption>
     <tr class="py_tr">
       <th class="py_th">Name</th>
       <th class="py_th">C++-side</th>
@@ -142,9 +144,11 @@
       </td>
     </tr>
   </table>
-
-  <b>Python-side functions</b>:
+  <br/>
   <table class="py_table">
+    <caption>
+      Python-side functions
+    </caption>
     <tr class="py_tr">
       <th class="py_th">Name</th>
       <th class="py_th">C++-side</th>
@@ -157,15 +161,14 @@
       <td class="py_td">Lambda.</td>
       <td class="py_td">
         Factory function for Element class. This function takes one
-        argument, an object of Starter's or Filter's subclass (such
-        class is prefixed by \c Sta and \c Fil, respectively) which
-        adds some properties to empty data of the created Element
-        object.
+        argument, an object of Starter's subclass (such class is
+        prefixed by \c Sta) which adds some properties to
+        empty Element::data of the created Element object.
       </td>
       <td class="py_td">
         <ul class="py_ul">
           <li>
-            \c upd : An object of Starter's or Filter's subclass.
+            \c upd : An object of Starter's subclass.
           </li>
         </ul>
       </td>
@@ -208,11 +211,11 @@ class PyElement : public Element {
   @brief Function to bind Element class to Python.
   @details Constructor of Element class is hidden from Python. A
   Python-side function \b create provides functionality to create an
-  object of Element class with an object of Starter's or Filter's
-  subclass. This function is required to make ::UpdatePair from shared
-  pointers to the created Element object and Starter (or Filter) object
-  taken as the argument; because constructor cannot call
-  \c shared_from_this() and therefore cannot make ::UpdatePair.
+  Element object taking an object of Starter's subclass as argument.
+  This function is required to make ::UpdatePair from shared pointers
+  of the created Element object and the taken Starter's subclass object;
+  because constructor cannot call \c shared_from_this()
+  and therefore cannot make ::UpdatePair.
 */
 static void pybind_element(py::module &m)
 {

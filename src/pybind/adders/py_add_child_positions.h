@@ -1,5 +1,5 @@
 /*!
-  @file src/pybind/py_adders/add_child_positions.h
+  @file src/pybind/adders/py_add_child_positions.h
   @brief This file is for binding AddChildPositions class to Python.
   @author Takayuki Kobayashi
   @date 2018/09/03

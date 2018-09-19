@@ -12,15 +12,15 @@
 #include <adders/adder.h>
 
 /*!
-  @brief AddGyrationRadius adds gyration radius of an Element object.
-  @details This class inherits Adder class and
-  ::EnShThis<#AddGyrationRadius>, and overrides Adder::compute_impl.
+  @brief AddGyrationRadius adds gyration radius to an Element object.
+  @details This class inherits Adder class
+  and ::EnShThis<#AddGyrationRadius>, and overrides Adder::compute_impl.
 
   This class computes radius of gyration of an Element object (such as
   one containing data for molecules) from its inertia moment.
 
   About usage in Python, please see
-  src/pybind/py_adders/add_gyration_radius.h.
+  src/pybind/adders/py_add_gyration_radius.h.
 
   Key of property to be added (default):
     - \c Rg (float)
@@ -40,7 +40,7 @@
     - \c Rg^2(y) (float)
     - \c Rg^2(z) (float)
 
-  Required key of property:
+  Key of required property:
     - \c mass (float)
     - \c I_xx (float)
     - \c I_yy (float)
