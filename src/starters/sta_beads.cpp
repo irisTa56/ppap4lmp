@@ -16,7 +16,6 @@ StaBeads::StaBeads(
   const Vec<Json> &scheme)
 {
   ext_generator = el_mols;
-  // Abstract beads without moltype is used as those for moltype 1
   mol_type_to_abst_beads[1] = scheme;
 }
 
@@ -116,8 +115,8 @@ void StaBeads::compute_impl(
   for (const auto &mol : mols)
   {
     auto &atom_ids = mol["atom-ids"];
-    // If moltype is not set, default value (1) is used
-    auto abst_beads = mol_type_to_abst_beads[mol.value("type", 1)];
+    // If molecular type is not set, default value (1) is used
+    auto &abst_beads = mol_type_to_abst_beads[mol.value("type", 1)];
 
     for (const auto &abst_bead : abst_beads)
     {

@@ -37,7 +37,7 @@ void FilSet::compute_impl(
 
     for (const auto &item : value_sets)
     {
-      auto set = item.second;
+      auto &set = item.second;
 
       if (set.find(d[item.first]) == set.end())
       {

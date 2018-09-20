@@ -187,9 +187,9 @@ void ProRadialDistributionFunction::finish()
 
   for (int i = 0; i != n_generators; ++i)
   {
-    auto number_tmp = number_traj[i];
-    auto volume_tmp = volume_traj[i];
-    auto counts_tmp = counts_traj[i];
+    auto &number_tmp = number_traj[i];
+    auto &volume_tmp = volume_traj[i];
+    auto &counts_tmp = counts_traj[i];
 
     auto density_tmp = number_tmp / volume_tmp;
     auto number_distribution_tmp

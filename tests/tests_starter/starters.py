@@ -1,6 +1,7 @@
 import unittest
 
 from test_StaCustom import TestStaCustom
+from test_StaCopy import TestStaCopy
 from test_StaDumpAtoms import TestStaDumpAtoms
 from test_StaDumpBox import TestStaDumpBox
 from test_StaMolecules import TestStaMolecules
@@ -11,6 +12,9 @@ suite = unittest.TestSuite()
 suite.addTest(TestStaCustom("test_error01"))
 suite.addTest(TestStaCustom("test_get_data"))
 suite.addTest(TestStaCustom("test_get_keys"))
+
+suite.addTest(TestStaCopy("test_get_data"))
+suite.addTest(TestStaCopy("test_get_keys"))
 
 suite.addTest(TestStaDumpAtoms("test_error01"))
 suite.addTest(TestStaDumpAtoms("test_get_data"))

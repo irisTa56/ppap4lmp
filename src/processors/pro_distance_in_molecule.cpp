@@ -62,7 +62,7 @@ void ProDistanceInMolecule::run_impl(
 
   for (const auto &mol : mols)
   {
-    // If moltype is not set, default value (1) is used
+    // If molecular type is not set, default value (1) is used
     if (mol.value("type", 1) != target_moltype) continue;
 
     auto &atom_ids = mol["atom-ids"];

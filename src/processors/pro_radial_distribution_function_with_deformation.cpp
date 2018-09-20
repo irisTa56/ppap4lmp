@@ -248,10 +248,10 @@ void ProRDFWD::finish()
 
   for (int i = 0; i != n_generators; ++i)
   {
-    auto counts_tmp = raw_counts_traj[i];
-    auto Rg2_tmp = Rg2_sum_traj[i];
-    auto Rg2_para_tmp = Rg2_para_sum_traj[i];
-    auto Rg2_perp_tmp = Rg2_perp_sum_traj[i];
+    auto &counts_tmp = raw_counts_traj[i];
+    auto &Rg2_tmp = Rg2_sum_traj[i];
+    auto &Rg2_para_tmp = Rg2_para_sum_traj[i];
+    auto &Rg2_perp_tmp = Rg2_perp_sum_traj[i];
 
     auto reciprocal_counts = (1.0 / counts_tmp.cast<double>())
     .unaryExpr([](double x)
