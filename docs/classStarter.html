@@ -165,6 +165,8 @@ Additional Inherited Members</h2></td></tr>
 <p>This is a pure virtual function, please see the subclasses for more details. </p>
 
 <p>Implements <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57">Updater</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classStaCopy.html#a50e7868dc364e6a21b9c6ab4604deee5">StaCopy</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -186,7 +188,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class. </p>
-<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreads context. </p>
+<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreads context. Please be careful that constructors of subclasses of this class are also thread-unsafe. </p>
 
 </div>
 </div>

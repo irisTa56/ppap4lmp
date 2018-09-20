@@ -50,7 +50,7 @@ class Generator {
   Vec<UpdatePair> update_chain;
   /*!
     @brief Merge a given chain of ::UpdatePair objects to #update_chain.
-    @param new_chain : A chain of ::UpdatePair objects to be merged.
+    @param new_chain : ::Vec of ::UpdatePair objects to be merged.
     @return None.
     @details In merging a chain of ::UpdatePair objects, relative
     orders of ::UpdatePair objects in the \c new_chain and

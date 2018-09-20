@@ -9,92 +9,92 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 111.5)">
 <title>FilComparison::compute_impl</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-111.5 582,-111.5 582,4 -4,4"/>
-<!-- Node10 -->
+<!-- Node4 -->
 <g id="node1" class="node">
-<title>Node10</title>
+<title>Node4</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-60.5 0,-79.5 146,-79.5 146,-60.5 0,-60.5"/>
 <text text-anchor="middle" x="73" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::compute_impl</text>
 </g>
-<!-- Node11 -->
+<!-- Node5 -->
 <g id="node2" class="node">
-<title>Node11</title>
-<g id="a_node2"><a xlink:href="classFilComparison.html#a7300b226ef91df3cdabf2799129a979d" target="_top" xlink:title="FilComparison::convert\l_to_funcs">
+<title>Node5</title>
+<g id="a_node2"><a xlink:href="classFilComparison.html#a7300b226ef91df3cdabf2799129a979d" target="_top" xlink:title="Convert tuples in comparisons to pairs of a string key and CompareFunc. ">
 <polygon fill="#ffffff" stroke="#000000" points="182,-77 182,-107 299,-107 299,-77 182,-77"/>
 <text text-anchor="start" x="190" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::convert</text>
 <text text-anchor="middle" x="240.5" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_to_funcs</text>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node11 -->
+<!-- Node4&#45;&gt;Node5 -->
 <g id="edge1" class="edge">
-<title>Node10&#45;&gt;Node11</title>
+<title>Node4&#45;&gt;Node5</title>
 <path fill="none" stroke="#191970" d="M145.4937,-79.5216C154.1999,-80.6651 163.0714,-81.8303 171.7225,-82.9665"/>
 <polygon fill="#191970" stroke="#191970" points="171.3833,-86.452 181.7539,-84.2841 172.2949,-79.5116 171.3833,-86.452"/>
 </g>
-<!-- Node14 -->
+<!-- Node8 -->
 <g id="node5" class="node">
-<title>Node14</title>
-<g id="a_node5"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="... ">
+<title>Node8</title>
+<g id="a_node5"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="Check if this object has required key(s). ">
 <polygon fill="#ffffff" stroke="#000000" points="190.5,-38.5 190.5,-57.5 290.5,-57.5 290.5,-38.5 190.5,-38.5"/>
 <text text-anchor="middle" x="240.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::required</text>
 </a>
 </g>
 </g>
-<!-- Node10&#45;&gt;Node14 -->
+<!-- Node4&#45;&gt;Node8 -->
 <g id="edge4" class="edge">
-<title>Node10&#45;&gt;Node14</title>
+<title>Node4&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M145.4937,-60.4784C157.0016,-58.967 168.7982,-57.4175 179.9931,-55.9472"/>
 <polygon fill="#191970" stroke="#191970" points="180.6204,-59.3949 190.0795,-54.6224 179.7088,-52.4545 180.6204,-59.3949"/>
 </g>
-<!-- Node12 -->
+<!-- Node6 -->
 <g id="node3" class="node">
-<title>Node12</title>
-<g id="a_node3"><a xlink:href="classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e" target="_top" xlink:title="FilComparison::make\l_lambda">
+<title>Node6</title>
+<g id="a_node3"><a xlink:href="classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e" target="_top" xlink:title="Make a CompareFunc object from a comparison operator and a right side value. ">
 <polygon fill="#ffffff" stroke="#000000" points="335,-77 335,-107 444,-107 444,-77 335,-77"/>
 <text text-anchor="start" x="343" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::make</text>
 <text text-anchor="middle" x="389.5" y="-84" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_lambda</text>
 </a>
 </g>
 </g>
-<!-- Node11&#45;&gt;Node12 -->
+<!-- Node5&#45;&gt;Node6 -->
 <g id="edge2" class="edge">
-<title>Node11&#45;&gt;Node12</title>
+<title>Node5&#45;&gt;Node6</title>
 <path fill="none" stroke="#191970" d="M299.3887,-92C307.7163,-92 316.3164,-92 324.747,-92"/>
 <polygon fill="#191970" stroke="#191970" points="324.9168,-95.5001 334.9168,-92 324.9167,-88.5001 324.9168,-95.5001"/>
 </g>
-<!-- Node13 -->
+<!-- Node7 -->
 <g id="node4" class="node">
-<title>Node13</title>
-<g id="a_node4"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="utils::runtime_error">
+<title>Node7</title>
+<g id="a_node4"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
 <polygon fill="#ffffff" stroke="#000000" points="480,-60.5 480,-79.5 578,-79.5 578,-60.5 480,-60.5"/>
 <text text-anchor="middle" x="529" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
+<!-- Node6&#45;&gt;Node7 -->
 <g id="edge3" class="edge">
-<title>Node12&#45;&gt;Node13</title>
+<title>Node6&#45;&gt;Node7</title>
 <path fill="none" stroke="#191970" d="M444.2337,-83.3682C452.6827,-82.0357 461.4402,-80.6546 469.978,-79.3081"/>
 <polygon fill="#191970" stroke="#191970" points="470.5354,-82.7636 479.8681,-77.7484 469.4449,-75.849 470.5354,-82.7636"/>
 </g>
-<!-- Node14&#45;&gt;Node13 -->
+<!-- Node8&#45;&gt;Node7 -->
 <g id="edge5" class="edge">
-<title>Node14&#45;&gt;Node13</title>
+<title>Node8&#45;&gt;Node7</title>
 <path fill="none" stroke="#191970" d="M290.7529,-51.8321C340.5469,-55.6292 416.8088,-61.4447 469.5786,-65.4687"/>
 <polygon fill="#191970" stroke="#191970" points="469.5673,-68.9779 479.8045,-66.2485 470.0996,-61.9982 469.5673,-68.9779"/>
 </g>
-<!-- Node15 -->
+<!-- Node9 -->
 <g id="node6" class="node">
-<title>Node15</title>
-<g id="a_node6"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="utils::join">
+<title>Node9</title>
+<g id="a_node6"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
 <polygon fill="#ffffff" stroke="#000000" points="361.5,-.5 361.5,-19.5 417.5,-19.5 417.5,-.5 361.5,-.5"/>
 <text text-anchor="middle" x="389.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
 </a>
 </g>
 </g>
-<!-- Node14&#45;&gt;Node15 -->
+<!-- Node8&#45;&gt;Node9 -->
 <g id="edge6" class="edge">
-<title>Node14&#45;&gt;Node15</title>
+<title>Node8&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M278.099,-38.411C300.5273,-32.691 328.9251,-25.4486 351.4353,-19.7078"/>
 <polygon fill="#191970" stroke="#191970" points="352.4961,-23.0493 361.321,-17.1866 350.7662,-16.2665 352.4961,-23.0493"/>
 </g>

@@ -15,13 +15,11 @@
   @brief Adder adds new properties (keys and values) to non-empty
   Element::data.
   @details This class inherits Updater class and overrides
-  Updater::compute.
+  Updater::compute.This class is an abstract class and has
+  a pure virtual function, Adder::compute_impl.
 
-  This class is an abstract class and has a pure virtual function,
-  Adder::compute_impl.
-
-  Names of subclass of this class should be prefixed by \e Add. Unlike
-  Starter, Adder accepts only non-empty Element::data.
+  Names of subclass of this class should be prefixed by \e Add.
+  Unlike Starter, Adder accepts only non-empty Element::data.
 */
 class Adder : public Updater {
  public:
@@ -29,8 +27,8 @@ class Adder : public Updater {
   using Updater::Updater;
   virtual ~Adder() = default;
   /*!
-    @brief Compute properties and add them to Element::data given as a
-    mutable reference.
+    @brief Compute properties and add them to Element::data given
+    as a mutable reference.
     @param data : Mutable reference to Element::data where computed
     properties are added to.
     @param datakeys : Mutable reference to Element::datakeys where keys

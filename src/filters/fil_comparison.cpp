@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-FilComparison: stands for Filter using signs of Comparison.
-
-create: 2018/07/02 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/filters/fil_comparison.cpp
+  @brief This file has an implementation of FilComparison class,
+  which is a subclass of Filter class.
+  @author Takayuki Kobayashi
+  @date 2018/07/02
+  @details For more details, please see the header file,
+  src/filters/fil_comparison.h.
+*/
 
 #include "fil_comparison.h"
 #include "../utils/runtime_error.h"
@@ -128,3 +132,5 @@ void FilComparison::compute_impl(
 
   data.swap(tmp);
 }
+
+/* ------------------------------------------------------------------ */

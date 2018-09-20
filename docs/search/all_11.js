@@ -6,6 +6,7 @@ var searchData=
   ['split_2ecpp',['split.cpp',['../split_8cpp.html',1,'']]],
   ['split_2eh',['split.h',['../split_8h.html',1,'']]],
   ['stabeads',['StaBeads',['../classStaBeads.html',1,'']]],
+  ['stacopy',['StaCopy',['../classStaCopy.html',1,'']]],
   ['stacustom',['StaCustom',['../classStaCustom.html',1,'']]],
   ['stadump',['StaDump',['../classStaDump.html',1,'']]],
   ['stadumpatoms',['StaDumpAtoms',['../classStaDumpAtoms.html',1,'']]],

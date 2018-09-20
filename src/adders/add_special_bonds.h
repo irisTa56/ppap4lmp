@@ -43,7 +43,7 @@ class AddSpecialBonds : public Adder {
     from molecular types to vector of vector (list of list) of
     zero-based index of atoms <i>in a molecule</i> of the type.
     The first vector corresponds atoms in a molecule,
-    and the second vector corresponds special bonds of the each atom.
+    and the second vector corresponds special bonds of each atom.
   */
   Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol;
  protected:

@@ -129,7 +129,7 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> is an abstract class to update data held by an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
-<p>This class is a superclass of the <a class="el" href="classStarter.html">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> and <a class="el" href="classFilter.html" title="Filter removes items in array Element::data if the items fail user-defined criteria. ">Filter</a> class.</p>
+<p>This class is a superclass of the <a class="el" href="classStarter.html">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> and <a class="el" href="classFilter.html" title="Filter removes items from array Element::data if the items fail user-defined criteria. ">Filter</a> class.</p>
 <p>An object of this class is append to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a> and stored as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a> (where the first item is the <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object and the second item is the object of this class). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
@@ -148,7 +148,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class. </p>
-<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreads context. </p>
+<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreads context. Please be careful that constructors of subclasses of this class are also thread-unsafe. </p>
 
 </div>
 </div>
@@ -189,7 +189,7 @@ Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a2184a4efa52ad2f4a631c134379ef7b8_icgraph.svg" width="343" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a2184a4efa52ad2f4a631c134379ef7b8_icgraph.svg" width="355" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -237,7 +237,7 @@ Here is the caller graph for this function:</div>
 <p>Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
 <p>This is a pure virtual function, please see the subclasses for more details. </p>
 
-<p>Implemented in <a class="el" href="classFilter.html#acd658aa335c8b5215242737aabcf5155">Filter</a>, <a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">Adder</a>, and <a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">Starter</a>.</p>
+<p>Implemented in <a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">Adder</a>, <a class="el" href="classFilter.html#acd658aa335c8b5215242737aabcf5155">Filter</a>, <a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">Starter</a>, and <a class="el" href="classStaCopy.html#a50e7868dc364e6a21b9c6ab4604deee5">StaCopy</a>.</p>
 
 </div>
 </div>
@@ -278,7 +278,7 @@ Here is the caller graph for this function:</div>
 <p>Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
 <p>This is a pure virtual function, please see the subclasses for more details. </p>
 
-<p>Implemented in <a class="el" href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259">AddInertiaMoment</a>, <a class="el" href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2">AddCoMPosition</a>, <a class="el" href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf">AddMap</a>, <a class="el" href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">AddGyrationRadius</a>, <a class="el" href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a">AddChildPositions</a>, <a class="el" href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d">AddChildIDs</a>, <a class="el" href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b">AddSpecialBonds</a>, <a class="el" href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e">AddMolecularOrientation</a>, <a class="el" href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d">AddRename</a>, <a class="el" href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822">AddWrappedPosition</a>, <a class="el" href="classFilSet.html#a0335614b1856870777ab1af370406fd2">FilSet</a>, <a class="el" href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f">FilComparison</a>, <a class="el" href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561">StaDumpAtoms</a>, <a class="el" href="classStaBeads.html#a28dd7a99528b0c892dc3ab85b131ed85">StaBeads</a>, <a class="el" href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab">StaCustom</a>, <a class="el" href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e">StaDumpBox</a>, and <a class="el" href="classStaMolecules.html#a6e43cdfdce04105ab20a5f93584aabec">StaMolecules</a>.</p>
+<p>Implemented in <a class="el" href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259">AddInertiaMoment</a>, <a class="el" href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2">AddCoMPosition</a>, <a class="el" href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f">FilComparison</a>, <a class="el" href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf">AddMap</a>, <a class="el" href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">AddGyrationRadius</a>, <a class="el" href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a">AddChildPositions</a>, <a class="el" href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d">AddChildIDs</a>, <a class="el" href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b">AddSpecialBonds</a>, <a class="el" href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e">AddMolecularOrientation</a>, <a class="el" href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d">AddRename</a>, <a class="el" href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822">AddWrappedPosition</a>, <a class="el" href="classFilSet.html#a0335614b1856870777ab1af370406fd2">FilSet</a>, <a class="el" href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561">StaDumpAtoms</a>, <a class="el" href="classStaBeads.html#a28dd7a99528b0c892dc3ab85b131ed85">StaBeads</a>, <a class="el" href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab">StaCustom</a>, <a class="el" href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e">StaDumpBox</a>, <a class="el" href="classStaMolecules.html#a6e43cdfdce04105ab20a5f93584aabec">StaMolecules</a>, and <a class="el" href="classStaCopy.html#ae962c8d37a62afa08d961a48c25dede7">StaCopy</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

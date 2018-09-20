@@ -65,8 +65,8 @@
           <li>
             \c schemes : Dictionary where the keys are molecular types
             and the values are lists of list of zero-based index of
-            atoms in a molecule. Definition of the each list is the
-            same as for the case of one molecular type.
+            atoms in a molecule. Definition of each list is the same
+            as for the case of one molecular type.
           </li>
         </ul>
       </td>

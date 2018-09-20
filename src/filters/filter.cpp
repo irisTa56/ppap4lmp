@@ -1,7 +1,7 @@
 /*!
   @file src/filters/filter.cpp
-  @brief This file has an implementation of the Filter class, which is
-  a subclass of the Updater class.
+  @brief This file has an implementation of Filter class,
+  which is a subclass of Updater class.
   @author Takayuki Kobayashi
   @date 2018/06/30
   @details For more details, please see the header file,

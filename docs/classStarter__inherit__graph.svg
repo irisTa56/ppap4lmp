@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 461;
+var viewWidth = 571;
 var viewHeight = 557;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,19 +54,19 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>Starter</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-553 457,-553 457,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-553 567,-553 567,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="209.5,-276.5 209.5,-366.5 283.5,-366.5 283.5,-276.5 209.5,-276.5"/>
-<text text-anchor="middle" x="246.5" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter</text>
-<polyline fill="none" stroke="#000000" points="209.5,-347.5 283.5,-347.5 "/>
-<text text-anchor="middle" x="246.5" y="-335.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="209.5,-328.5 283.5,-328.5 "/>
-<text text-anchor="start" x="217.5" y="-316.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Starter()</text>
-<text text-anchor="start" x="217.5" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
-<text text-anchor="start" x="217.5" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
-<text text-anchor="start" x="217.5" y="-283.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; sort_by_id()</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="268.5,-276.5 268.5,-366.5 342.5,-366.5 342.5,-276.5 268.5,-276.5"/>
+<text text-anchor="middle" x="305.5" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter</text>
+<polyline fill="none" stroke="#000000" points="268.5,-347.5 342.5,-347.5 "/>
+<text text-anchor="middle" x="305.5" y="-335.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="268.5,-328.5 342.5,-328.5 "/>
+<text text-anchor="start" x="276.5" y="-316.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Starter()</text>
+<text text-anchor="start" x="276.5" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
+<text text-anchor="start" x="276.5" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
+<text text-anchor="start" x="276.5" y="-283.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; sort_by_id()</text>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node">
@@ -89,21 +89,21 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M201.2406,-286.9928C180.0303,-270.8214 154.3566,-251.247 131.0711,-233.4934"/>
-<polygon fill="none" stroke="#191970" points="199.3608,-289.9608 209.4352,-293.2406 203.605,-284.3942 199.3608,-289.9608"/>
+<path fill="none" stroke="#191970" d="M259.2309,-301.4635C225.4577,-286.1704 179.0383,-263.7453 140.5,-240 137.4466,-238.1186 134.3641,-236.1434 131.2801,-234.1043"/>
+<polygon fill="none" stroke="#191970" points="257.8481,-304.6792 268.4043,-305.583 260.7158,-298.2935 257.8481,-304.6792"/>
 </g>
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classStaCustom.html" target="_top" xlink:title="{StaCustom\n|&#45; json\l&#45; jsonkeys\l|+ StaCustom()\l+ ~StaCustom()\l# compute_impl()\l}">
+<g id="a_node4"><a xlink:href="classStaCopy.html" target="_top" xlink:title="{StaCopy\n||+ StaCopy()\l+ ~StaCopy()\l+ compute()\l# compute_impl()\l}">
 <polygon fill="#ffffff" stroke="#000000" points="149.5,-138.5 149.5,-228.5 241.5,-228.5 241.5,-138.5 149.5,-138.5"/>
-<text text-anchor="middle" x="195.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
+<text text-anchor="middle" x="195.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCopy</text>
 <polyline fill="none" stroke="#000000" points="149.5,-209.5 241.5,-209.5 "/>
-<text text-anchor="start" x="157.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
-<text text-anchor="start" x="157.5" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; jsonkeys</text>
-<polyline fill="none" stroke="#000000" points="149.5,-179.5 241.5,-179.5 "/>
-<text text-anchor="start" x="157.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
-<text text-anchor="start" x="157.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
+<text text-anchor="middle" x="195.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="149.5,-190.5 241.5,-190.5 "/>
+<text text-anchor="start" x="157.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCopy()</text>
+<text text-anchor="start" x="157.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCopy()</text>
+<text text-anchor="start" x="157.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
 <text text-anchor="start" x="157.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
@@ -111,120 +111,142 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
 <title>Node0&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M226.2964,-266.8315C221.6367,-254.2228 216.7301,-240.9462 212.2368,-228.7879"/>
-<polygon fill="none" stroke="#191970" points="223.0511,-268.147 229.8007,-276.3136 229.6171,-265.7204 223.0511,-268.147"/>
+<path fill="none" stroke="#191970" d="M263.1035,-268.3117C252.7047,-255.2658 241.6705,-241.423 231.599,-228.7879"/>
+<polygon fill="none" stroke="#191970" points="260.5118,-270.6755 269.4819,-276.3136 265.9856,-266.3123 260.5118,-270.6755"/>
 </g>
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classStaDump.html" target="_top" xlink:title="{StaDump\n|# timestep\l# filepath\l|+ StaDump()\l+ ~StaDump()\l}">
-<polygon fill="#ffffff" stroke="#000000" points="259.5,-144 259.5,-223 337.5,-223 337.5,-144 259.5,-144"/>
-<text text-anchor="middle" x="298.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDump</text>
-<polyline fill="none" stroke="#000000" points="259.5,-204 337.5,-204 "/>
-<text text-anchor="start" x="267.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># timestep</text>
-<text text-anchor="start" x="267.5" y="-181" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># filepath</text>
-<polyline fill="none" stroke="#000000" points="259.5,-174 337.5,-174 "/>
-<text text-anchor="start" x="267.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
-<text text-anchor="start" x="267.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDump()</text>
+<g id="a_node5"><a xlink:href="classStaCustom.html" target="_top" xlink:title="{StaCustom\n|&#45; json\l&#45; jsonkeys\l|+ StaCustom()\l+ ~StaCustom()\l# compute_impl()\l}">
+<polygon fill="#ffffff" stroke="#000000" points="259.5,-138.5 259.5,-228.5 351.5,-228.5 351.5,-138.5 259.5,-138.5"/>
+<text text-anchor="middle" x="305.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
+<polyline fill="none" stroke="#000000" points="259.5,-209.5 351.5,-209.5 "/>
+<text text-anchor="start" x="267.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
+<text text-anchor="start" x="267.5" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; jsonkeys</text>
+<polyline fill="none" stroke="#000000" points="259.5,-179.5 351.5,-179.5 "/>
+<text text-anchor="start" x="267.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
+<text text-anchor="start" x="267.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
+<text text-anchor="start" x="267.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node0&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M267.0781,-266.8888C272.5731,-252.306 278.4063,-236.8257 283.5357,-223.2128"/>
-<polygon fill="none" stroke="#191970" points="263.7777,-265.7218 263.5267,-276.3136 270.3281,-268.1901 263.7777,-265.7218"/>
+<path fill="none" stroke="#191970" d="M305.5,-266.089C305.5,-253.7026 305.5,-240.7078 305.5,-228.7879"/>
+<polygon fill="none" stroke="#191970" points="302.0001,-266.3136 305.5,-276.3136 309.0001,-266.3137 302.0001,-266.3136"/>
 </g>
-<!-- Node7 -->
-<g id="node8" class="node">
-<title>Node7</title>
-<g id="a_node8"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="{StaMolecules\n||+ StaMolecules()\l+ ~StaMolecules()\l# compute_impl()\l}">
-<polygon fill="#ffffff" stroke="#000000" points="356,-144 356,-223 453,-223 453,-144 356,-144"/>
-<text text-anchor="middle" x="404.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaMolecules</text>
-<polyline fill="none" stroke="#000000" points="356,-204 453,-204 "/>
-<text text-anchor="middle" x="404.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="356,-185 453,-185 "/>
-<text text-anchor="start" x="364" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaMolecules()</text>
-<text text-anchor="start" x="364" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaMolecules()</text>
-<text text-anchor="start" x="364" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<!-- Node5 -->
+<g id="node6" class="node">
+<title>Node5</title>
+<g id="a_node6"><a xlink:href="classStaDump.html" target="_top" xlink:title="{StaDump\n|# timestep\l# filepath\l|+ StaDump()\l+ ~StaDump()\l}">
+<polygon fill="#ffffff" stroke="#000000" points="369.5,-144 369.5,-223 447.5,-223 447.5,-144 369.5,-144"/>
+<text text-anchor="middle" x="408.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDump</text>
+<polyline fill="none" stroke="#000000" points="369.5,-204 447.5,-204 "/>
+<text text-anchor="start" x="377.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># timestep</text>
+<text text-anchor="start" x="377.5" y="-181" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># filepath</text>
+<polyline fill="none" stroke="#000000" points="369.5,-174 447.5,-174 "/>
+<text text-anchor="start" x="377.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
+<text text-anchor="start" x="377.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDump()</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node7 -->
-<g id="edge7" class="edge">
-<title>Node0&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M291.5444,-286.1896C308.9954,-272.1487 328.9575,-255.6379 346.5,-240 352.4812,-234.6682 358.6743,-228.9096 364.6885,-223.1787"/>
-<polygon fill="none" stroke="#191970" points="289.3384,-283.4721 283.7207,-292.455 293.7141,-288.936 289.3384,-283.4721"/>
+<!-- Node0&#45;&gt;Node5 -->
+<g id="edge5" class="edge">
+<title>Node0&#45;&gt;Node5</title>
+<path fill="none" stroke="#191970" d="M345.3293,-268.1365C356.4835,-253.1921 368.4086,-237.2146 378.8593,-223.2128"/>
+<polygon fill="none" stroke="#191970" points="342.4026,-266.2062 339.2261,-276.3136 348.0124,-270.3932 342.4026,-266.2062"/>
+</g>
+<!-- Node8 -->
+<g id="node9" class="node">
+<title>Node8</title>
+<g id="a_node9"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="{StaMolecules\n||+ StaMolecules()\l+ ~StaMolecules()\l# compute_impl()\l}">
+<polygon fill="#ffffff" stroke="#000000" points="466,-144 466,-223 563,-223 563,-144 466,-144"/>
+<text text-anchor="middle" x="514.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaMolecules</text>
+<polyline fill="none" stroke="#000000" points="466,-204 563,-204 "/>
+<text text-anchor="middle" x="514.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="466,-185 563,-185 "/>
+<text text-anchor="start" x="474" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaMolecules()</text>
+<text text-anchor="start" x="474" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaMolecules()</text>
+<text text-anchor="start" x="474" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+</a>
+</g>
+</g>
+<!-- Node0&#45;&gt;Node8 -->
+<g id="edge8" class="edge">
+<title>Node0&#45;&gt;Node8</title>
+<path fill="none" stroke="#191970" d="M351.8353,-300.6534C382.7704,-285.756 423.6472,-264.1358 456.5,-240 463.4106,-234.9231 470.3209,-229.0577 476.8388,-223.0678"/>
+<polygon fill="none" stroke="#191970" points="350.1025,-297.6017 342.5739,-305.0562 353.108,-303.9237 350.1025,-297.6017"/>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
 <g id="a_node2"><a xlink:href="classUpdater.html" target="_top" xlink:title="Updater is an abstract class to update data held by an Element object. ">
-<polygon fill="#ffffff" stroke="#000000" points="181.5,-403.5 181.5,-548.5 311.5,-548.5 311.5,-403.5 181.5,-403.5"/>
-<text text-anchor="middle" x="246.5" y="-536.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Updater</text>
-<polyline fill="none" stroke="#000000" points="181.5,-529.5 311.5,-529.5 "/>
-<text text-anchor="start" x="189.5" y="-517.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># ext_generator</text>
-<text text-anchor="start" x="189.5" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; dataid_blacklist</text>
-<text text-anchor="start" x="189.5" y="-495.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; omp_lock</text>
-<polyline fill="none" stroke="#000000" points="181.5,-488.5 311.5,-488.5 "/>
-<text text-anchor="start" x="189.5" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
-<text text-anchor="start" x="189.5" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Updater()</text>
-<text text-anchor="start" x="189.5" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
-<text text-anchor="start" x="189.5" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ remove_from_blacklist()</text>
-<text text-anchor="start" x="189.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_ext_generator()</text>
-<text text-anchor="start" x="189.5" y="-421.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="189.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># check_blacklist()</text>
+<polygon fill="#ffffff" stroke="#000000" points="240.5,-403.5 240.5,-548.5 370.5,-548.5 370.5,-403.5 240.5,-403.5"/>
+<text text-anchor="middle" x="305.5" y="-536.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Updater</text>
+<polyline fill="none" stroke="#000000" points="240.5,-529.5 370.5,-529.5 "/>
+<text text-anchor="start" x="248.5" y="-517.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># ext_generator</text>
+<text text-anchor="start" x="248.5" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; dataid_blacklist</text>
+<text text-anchor="start" x="248.5" y="-495.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; omp_lock</text>
+<polyline fill="none" stroke="#000000" points="240.5,-488.5 370.5,-488.5 "/>
+<text text-anchor="start" x="248.5" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
+<text text-anchor="start" x="248.5" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Updater()</text>
+<text text-anchor="start" x="248.5" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
+<text text-anchor="start" x="248.5" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ remove_from_blacklist()</text>
+<text text-anchor="start" x="248.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_ext_generator()</text>
+<text text-anchor="start" x="248.5" y="-421.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="248.5" y="-410.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># check_blacklist()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node0 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node0</title>
-<path fill="none" stroke="#191970" d="M246.5,-392.9929C246.5,-383.903 246.5,-374.9201 246.5,-366.5512"/>
-<polygon fill="none" stroke="#191970" points="243.0001,-393.274 246.5,-403.2741 250.0001,-393.2741 243.0001,-393.274"/>
-</g>
-<!-- Node5 -->
-<g id="node6" class="node">
-<title>Node5</title>
-<g id="a_node6"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="{StaDumpAtoms\n||+ ~StaDumpAtoms()\l+ StaDump()\l# compute_impl()\l&#45; make_is_int_vector()\l}">
-<polygon fill="#ffffff" stroke="#000000" points="181,-.5 181,-90.5 294,-90.5 294,-.5 181,-.5"/>
-<text text-anchor="middle" x="237.5" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms</text>
-<polyline fill="none" stroke="#000000" points="181,-71.5 294,-71.5 "/>
-<text text-anchor="middle" x="237.5" y="-59.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="181,-52.5 294,-52.5 "/>
-<text text-anchor="start" x="189" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpAtoms()</text>
-<text text-anchor="start" x="189" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
-<text text-anchor="start" x="189" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="189" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; make_is_int_vector()</text>
-</a>
-</g>
-</g>
-<!-- Node4&#45;&gt;Node5 -->
-<g id="edge5" class="edge">
-<title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M276.9658,-134.7833C270.654,-120.504 263.7798,-104.9528 257.5635,-90.8894"/>
-<polygon fill="none" stroke="#191970" points="273.7757,-136.2235 281.0198,-143.9547 280.1781,-133.3934 273.7757,-136.2235"/>
+<path fill="none" stroke="#191970" d="M305.5,-392.9929C305.5,-383.903 305.5,-374.9201 305.5,-366.5512"/>
+<polygon fill="none" stroke="#191970" points="302.0001,-393.274 305.5,-403.2741 309.0001,-393.2741 302.0001,-393.274"/>
 </g>
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="{StaDumpBox\n||+ ~StaDumpBox()\l+ StaDump()\l# compute_impl()\l}">
-<polygon fill="#ffffff" stroke="#000000" points="312,-6 312,-85 407,-85 407,-6 312,-6"/>
-<text text-anchor="middle" x="359.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox</text>
-<polyline fill="none" stroke="#000000" points="312,-66 407,-66 "/>
-<text text-anchor="middle" x="359.5" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="312,-47 407,-47 "/>
-<text text-anchor="start" x="320" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpBox()</text>
-<text text-anchor="start" x="320" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
-<text text-anchor="start" x="320" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node7"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="{StaDumpAtoms\n||+ ~StaDumpAtoms()\l+ StaDump()\l# compute_impl()\l&#45; make_is_int_vector()\l}">
+<polygon fill="#ffffff" stroke="#000000" points="291,-.5 291,-90.5 404,-90.5 404,-.5 291,-.5"/>
+<text text-anchor="middle" x="347.5" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms</text>
+<polyline fill="none" stroke="#000000" points="291,-71.5 404,-71.5 "/>
+<text text-anchor="middle" x="347.5" y="-59.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="291,-52.5 404,-52.5 "/>
+<text text-anchor="start" x="299" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpAtoms()</text>
+<text text-anchor="start" x="299" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
+<text text-anchor="start" x="299" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="299" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; make_is_int_vector()</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node6 -->
+<!-- Node5&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
-<title>Node4&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M320.1105,-134.6107C327.2899,-118.3688 335.1893,-100.498 342.0173,-85.051"/>
-<polygon fill="none" stroke="#191970" points="316.8219,-133.3934 315.9802,-143.9547 323.2243,-136.2235 316.8219,-133.3934"/>
+<title>Node5&#45;&gt;Node6</title>
+<path fill="none" stroke="#191970" d="M386.9658,-134.7833C380.654,-120.504 373.7798,-104.9528 367.5635,-90.8894"/>
+<polygon fill="none" stroke="#191970" points="383.7757,-136.2235 391.0198,-143.9547 390.1781,-133.3934 383.7757,-136.2235"/>
+</g>
+<!-- Node7 -->
+<g id="node8" class="node">
+<title>Node7</title>
+<g id="a_node8"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="{StaDumpBox\n||+ ~StaDumpBox()\l+ StaDump()\l# compute_impl()\l}">
+<polygon fill="#ffffff" stroke="#000000" points="422,-6 422,-85 517,-85 517,-6 422,-6"/>
+<text text-anchor="middle" x="469.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox</text>
+<polyline fill="none" stroke="#000000" points="422,-66 517,-66 "/>
+<text text-anchor="middle" x="469.5" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="422,-47 517,-47 "/>
+<text text-anchor="start" x="430" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpBox()</text>
+<text text-anchor="start" x="430" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
+<text text-anchor="start" x="430" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+</a>
+</g>
+</g>
+<!-- Node5&#45;&gt;Node7 -->
+<g id="edge7" class="edge">
+<title>Node5&#45;&gt;Node7</title>
+<path fill="none" stroke="#191970" d="M430.1105,-134.6107C437.2899,-118.3688 445.1893,-100.498 452.0173,-85.051"/>
+<polygon fill="none" stroke="#191970" points="426.8219,-133.3934 425.9802,-143.9547 433.2243,-136.2235 426.8219,-133.3934"/>
 </g>
 </g>
 </svg>

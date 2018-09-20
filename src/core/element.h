@@ -194,7 +194,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief Extract values of properties in #data as a two-dimensional
     Eigen-Array.
     @param array : Mutable reference to ::ArrayXXi or ::ArrayXXd.
-    @param keys : A vector of string keys of properties to be extracted.
+    @param keys : ::Vec of string keys of properties to be extracted.
     @return None.
     @details If one passed ::ArrayXXi or ::ArrayXXd as a reference,
     this method fills it by values of some properties specified by \c

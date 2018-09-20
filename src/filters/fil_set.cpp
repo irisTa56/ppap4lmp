@@ -1,7 +1,7 @@
 /*!
   @file src/filters/fil_set.cpp
-  @brief This file has an implementation of the FilSet class, which is
-  a subclass of the Filter class.
+  @brief This file has an implementation of FilSet class,
+  which is a subclass of Filter class.
   @author Takayuki Kobayashi
   @date 2018/07/01
   @details For more details, please see the header file,

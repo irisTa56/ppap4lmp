@@ -16,7 +16,7 @@
   @brief DataKeys is a small class owning a set of string keys
   in Element::data.
   @details An object of this class is owned by an Element object
-  and used for checking existence of keys for property in
+  and used for checking existence of keys of property in
   the Element::data quickly. Note that checking keys against
   the Element::data itself is a time consuming process if it is
   a large array ::Json.
@@ -39,7 +39,7 @@ class DataKeys {
   void clear();
   /*!
     @brief Set a given set of keys as the #_keys.
-    @param keys : A set of string keys to be assigned to #_keys.
+    @param keys : ::Set of string keys to be assigned to #_keys.
     @return None.
   */
   void set(

@@ -9,41 +9,41 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 35)">
 <title>FilComparison::convert_to_funcs</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-35 400,-35 400,4 -4,4"/>
-<!-- Node17 -->
+<!-- Node11 -->
 <g id="node1" class="node">
-<title>Node17</title>
+<title>Node11</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-.5 0,-30.5 117,-30.5 117,-.5 0,-.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::convert</text>
 <text text-anchor="middle" x="58.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_to_funcs</text>
 </g>
-<!-- Node18 -->
+<!-- Node12 -->
 <g id="node2" class="node">
-<title>Node18</title>
-<g id="a_node2"><a xlink:href="classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e" target="_top" xlink:title="FilComparison::make\l_lambda">
+<title>Node12</title>
+<g id="a_node2"><a xlink:href="classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e" target="_top" xlink:title="Make a CompareFunc object from a comparison operator and a right side value. ">
 <polygon fill="#ffffff" stroke="#000000" points="153,-.5 153,-30.5 262,-30.5 262,-.5 153,-.5"/>
 <text text-anchor="start" x="161" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::make</text>
 <text text-anchor="middle" x="207.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_lambda</text>
 </a>
 </g>
 </g>
-<!-- Node17&#45;&gt;Node18 -->
+<!-- Node11&#45;&gt;Node12 -->
 <g id="edge1" class="edge">
-<title>Node17&#45;&gt;Node18</title>
+<title>Node11&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M117.3887,-15.5C125.7163,-15.5 134.3164,-15.5 142.747,-15.5"/>
 <polygon fill="#191970" stroke="#191970" points="142.9168,-19.0001 152.9168,-15.5 142.9167,-12.0001 142.9168,-19.0001"/>
 </g>
-<!-- Node19 -->
+<!-- Node13 -->
 <g id="node3" class="node">
-<title>Node19</title>
-<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="utils::runtime_error">
+<title>Node13</title>
+<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
 <polygon fill="#ffffff" stroke="#000000" points="298,-6 298,-25 396,-25 396,-6 298,-6"/>
 <text text-anchor="middle" x="347" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
-<!-- Node18&#45;&gt;Node19 -->
+<!-- Node12&#45;&gt;Node13 -->
 <g id="edge2" class="edge">
-<title>Node18&#45;&gt;Node19</title>
+<title>Node12&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M262.2337,-15.5C270.5908,-15.5 279.2498,-15.5 287.6995,-15.5"/>
 <polygon fill="#191970" stroke="#191970" points="287.8681,-19.0001 297.8681,-15.5 287.8681,-12.0001 287.8681,-19.0001"/>
 </g>

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['make_5flambda',['make_lambda',['../classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e',1,'FilComparison']]],
   ['map',['Map',['../std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6',1,'std.h']]],
   ['map_5fto_5findex',['map_to_index',['../namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a',1,'utils']]],
   ['map_5fto_5findex_2ecpp',['map_to_index.cpp',['../map__to__index_8cpp.html',1,'']]],

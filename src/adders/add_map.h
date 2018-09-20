@@ -61,8 +61,8 @@ class AddMap : public Adder, public EnShThis<AddMap> {
   Map<Json,Json> mapping;
  protected:
   /*!
-    @brief Compute properties and add them to Element::data
-    given as a mutable reference.
+    @brief Compute properties and add them to Element::data given
+    as a mutable reference.
     @param data : Mutable reference to Element::data
     where computed properties are added to.
     @param datakeys : Mutable reference to Element::datakeys
@@ -86,7 +86,7 @@ class AddMap : public Adder, public EnShThis<AddMap> {
     process conducted by the constructed object.
     This argument is assigned to #mapping.
     @details Note that domain of the \c mapping_ must cover all values
-    of property specified by \c key_ref_; the property belongs to
+    of property specified by \c key_ref_: the property belonging to
     an Element object where the constructed object is appended to.
   */
   AddMap(
