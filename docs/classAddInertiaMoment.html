@@ -98,7 +98,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class (inherited). <br /></td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class (inherited). <br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -139,7 +139,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a> adds inertia moment to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
-<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Adder::compute_impl</a>.</p>
+<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Adder::compute_impl</a>.</p>
 <p>An object of this class computes elements of 3x3 matrix of inertia moment (a.k.a. inertia matrix, inertia tensor) of a parent <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object from masses and positions of a child <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object, and adds it to the parent object. That object owns the <em>child</em> object as the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>, and is appended to the <em>parent</em> object using its <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a>. An example of <em>child</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for atoms, and an example of <em>parent</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules.</p>
 <p>The terms <em>child</em> and <em>parent</em> are used because a <em>parent</em> object consists of a <em>child</em> object. In terms of time series, however, the <em>child</em> is created earlier than the <em>parent</em>.</p>
 <p>About usage in Python, please see <a class="el" href="py__add__inertia__moment_8h.html" title="This file is for binding AddInertiaMoment class to Python. ">src/pybind/adders/py_add_inertia_moment.h</a>.</p>
@@ -152,7 +152,7 @@ Additional Inherited Members</h2></td></tr>
 <li><code>I_yz</code> (float)</li>
 </ul>
 <p>Key of required property:</p><ul>
-<li><code>atom-ids</code> (array of integer)</li>
+<li><code>atom-ids</code> (array of integers)</li>
 <li><code>xu</code> (float)</li>
 <li><code>yu</code> (float)</li>
 <li><code>zu</code> (float)</li>

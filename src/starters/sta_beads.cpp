@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-StaBeads: stands for Starter to generate Beads from molecules.
-
-create: 2018/08/18 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/starters/sta_beads.cpp
+  @brief This file has an implementation of StaBeads class,
+  which is a subclass of Starter class.
+  @author Takayuki Kobayashi
+  @date 2018/08/18
+  @details For more details, please see the header file,
+  src/starters/sta_beads.h.
+*/
 
 #include "sta_beads.h"
 #include "../utils/runtime_error.h"
@@ -115,7 +119,6 @@ void StaBeads::compute_impl(
   for (const auto &mol : mols)
   {
     auto &atom_ids = mol["atom-ids"];
-    // If molecular type is not set, default value (1) is used
     auto &abst_beads = mol_type_to_abst_beads[mol.value("type", 1)];
 
     for (const auto &abst_bead : abst_beads)
@@ -155,3 +158,5 @@ void StaBeads::compute_impl(
     datakeys.add("atom-weights");
   }
 }
+
+/* ------------------------------------------------------------------ */

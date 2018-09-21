@@ -42,7 +42,7 @@
 #include <alias/pybind.h>
 #include <utils/message.h>
 
-//! Function to bind ::utils::log_switch to Python.
+//! Function to bind utility functions to Python.
 static void pybind_utils(py::module &m)
 {
   m.def("log_switch", &utils::log_switch);

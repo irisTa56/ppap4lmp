@@ -60,7 +60,7 @@ class GenDict : public Generator {
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;
   /*!
-    @brief Get a set of the keys of the #generator_list.
+    @brief Get a set of the keys of the #generator_dict.
     @return Set of strings.
   */
   Set<Str> get_keys();

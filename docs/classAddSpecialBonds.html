@@ -101,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class (inherited). <br /></td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class (inherited). <br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -139,15 +139,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddSpecialBonds.html" title="AddSpecialBonds adds special bonds. ">AddSpecialBonds</a> adds special bonds. </p>
-<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Adder::compute_impl</a>.</p>
+<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Adder::compute_impl</a>.</p>
 <p>Special bonds is a property for atoms (or beads) belonging to the same molecule; if an atom has another atom as one of its special bonds, the two atoms are considered to interact with each other through bonded potential(s) (bond-length, bond-angle ...).</p>
 <p>An object of this class has a molecular <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object as the <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>, and is appended to an atomic (or bead) <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. That object owns schemes for special bonds for each type of molecule; a scheme is something like a list of special bonds of atoms in one molecule.</p>
 <p>About usage in Python, please see <a class="el" href="py__add__special__bonds_8h.html" title="This file is for binding AddSpecialBonds class to Python. ">src/pybind/adders/py_add_special_bonds.h</a>.</p>
 <p>Key of property to be added:</p><ul>
-<li><code><code>special-bonds</code></code> (array of integer)</li>
+<li><code>special-bonds</code> (array of integers)</li>
 </ul>
 <p>Key of required property:</p><ul>
-<li><code>atom-ids</code> (array of integer) </li>
+<li><code>atom-ids</code> (array of integers) </li>
 </ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0f8fc9908ed16650778fad41640097a8"></a>
@@ -217,7 +217,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">el_mols</td><td>: Shared pointer to a molecular <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object consisting of an atomic (or bead) <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to. This argument is assigned to <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </td></tr>
-    <tr><td class="paramname">schemes</td><td>: <a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6" title="Map is an alias for unordered map (same as dict in Python). ">Map</a> from molecular types to <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of zero-based index of atoms in a molecule. This argument is assigned to <a class="el" href="classAddSpecialBonds.html#ac25904a7316c0f6db9ceb2c0375fddab" title="Schemes of special bonds for each molecular type. ">mol_type_to_sbondses_in_mol</a>. </td></tr>
+    <tr><td class="paramname">schemes</td><td>: <a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6" title="Map is an alias for unordered map (same as dict in Python). ">Map</a> from molecular type to <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of zero-based index of atoms in a molecule. This argument is assigned to <a class="el" href="classAddSpecialBonds.html#ac25904a7316c0f6db9ceb2c0375fddab" title="Schemes of special bonds for each molecular type. ">mol_type_to_sbondses_in_mol</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -301,7 +301,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Schemes of special bonds for each molecular type. </p>
-<p>Definition of special bonds is stored as a map (dictionary) from molecular types to vector of vector (list of list) of zero-based index of atoms <em>in a molecule</em> of the type. The first vector corresponds atoms in a molecule, and the second vector corresponds special bonds of each atom. </p>
+<p>Description of special bonds is stored as a map (dictionary) from molecular type to vector of vectors (list of lists) of zero-based index of atoms <em>in a molecule</em> of that type. The first vector corresponds atoms in a molecule, and the second vector corresponds special bonds of each atom. </p>
 
 </div>
 </div>

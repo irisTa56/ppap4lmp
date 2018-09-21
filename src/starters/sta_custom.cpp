@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-StaCustom: stands for Starter to generate Custom data.
-
-create: 2018/08/16 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/starters/sta_custom.cpp
+  @brief This file has an implementation of StaCustom class,
+  which is a subclass of Starter class.
+  @author Takayuki Kobayashi
+  @date 2018/08/16
+  @details For more details, please see the header file,
+  src/starters/sta_custom.h.
+*/
 
 #include "sta_custom.h"
 #include "../utils/runtime_error.h"
@@ -15,13 +19,6 @@ StaCustom::StaCustom(
   const Json &json_)
 {
   json = json_;
-
-  auto front = json.is_array() ? json.front() : json;
-
-  for (auto it = front.begin(); it != front.end(); ++it)
-  {
-    jsonkeys.insert(it.key());
-  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -30,6 +27,15 @@ void StaCustom::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
+  Set<Str> jsonkeys;
+
+  auto front = json.is_array() ? json.front() : json;
+
+  for (auto it = front.begin(); it != front.end(); ++it)
+  {
+    jsonkeys.insert(it.key());
+  }
+
   if (json.is_array())
   {
     for (const auto &j : json)

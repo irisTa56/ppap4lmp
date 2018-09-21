@@ -27,7 +27,7 @@
   please see src/pybind/adders/py_add_map.h.
 
   Key of property to be added:
-    - \c <c>[key_new]</c> (any type)
+    - <c>[key_new]</c> (any type)
 
   Key of required property:
     - <c>[key_ref]</c> (any type; but, in most cases, integer or

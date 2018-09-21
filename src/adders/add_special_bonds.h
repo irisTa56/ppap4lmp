@@ -31,18 +31,18 @@
   please see src/pybind/adders/py_add_special_bonds.h.
 
   Key of property to be added:
-    - \c <c>special-bonds</c> (array of integer)
+    - <c>special-bonds</c> (array of integers)
 
   Key of required property:
-    - \c atom-ids (array of integer)
+    - \c atom-ids (array of integers)
 */
 class AddSpecialBonds : public Adder {
   /*!
     @brief Schemes of special bonds for each molecular type.
-    @details Definition of special bonds is stored as a map (dictionary)
-    from molecular types to vector of vector (list of list) of
-    zero-based index of atoms <i>in a molecule</i> of the type.
-    The first vector corresponds atoms in a molecule,
+    @details Description of special bonds is stored as a map
+    (dictionary) from molecular type to vector of vectors
+    (list of lists) of zero-based index of atoms <i>in a molecule</i>
+    of that type. The first vector corresponds atoms in a molecule,
     and the second vector corresponds special bonds of each atom.
   */
   Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol;
@@ -76,7 +76,7 @@ class AddSpecialBonds : public Adder {
     consisting of an atomic (or bead) Element object where the
     constructed object is appended to.
     This argument is assigned to #ext_generator.
-    @param schemes : ::Map from molecular types to ::Vec of ::Vec of
+    @param schemes : ::Map from molecular type to ::Vec of ::Vec of
     zero-based index of atoms in a molecule.
     This argument is assigned to #mol_type_to_sbondses_in_mol.
   */

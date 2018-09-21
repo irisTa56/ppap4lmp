@@ -42,7 +42,7 @@
     - \c I_yz (float)
 
   Key of required property:
-    - <c>atom-ids</c> (array of integer)
+    - <c>atom-ids</c> (array of integers)
     - \c xu (float)
     - \c yu (float)
     - \c zu (float)

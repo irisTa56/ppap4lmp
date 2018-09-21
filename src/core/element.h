@@ -22,12 +22,18 @@
   @details This class inherits Generator class and ::EnShThis<#Element>.
 
   Element class is different from Generator, GenDict and GenList by
-  owning data (or \e entity). The data is stored as a #data member,
-  and a set of keys of properties in the data is stored
-  as a #datakeys member. An object of this class can update its own
-  #data and #datakeys by calling its #update_data where mutable
-  references of #data and #datakeys are passed to an Updater object
-  paired as ::UpdatePair.
+  owning data \e element (or \e entity). The data is stored as #data,
+  and a set of keys of property in the data is stored as #datakeys.
+  Note that #data can be either an array ::Json object or
+  a non-array ::Json object. A non-array ::Json object consists of
+  items: pairs of a string key and int/bool/double/string/array value.
+  The key represents a property name. For array #data, it contains
+  non-array ::Json objects. Each non-array ::Json object should have
+  the same set of keys; this set is the one stored as #datakeys.
+
+  An object of this class can update its own #data and #datakeys
+  by calling its #update_data where mutable references of the #data
+  and #datakeys are passed to an Updater object paired as ::UpdatePair.
 
   About usage in Python,
   please see src/pybind/py_element.h.
@@ -55,9 +61,9 @@ class Element : public Generator, public EnShThis<Element> {
   int dataid;
   /*!
     @brief Data \e element (or \e entity) itself.
-    @details This member is an object of ::Json, which is a very
-    flexible data container consisting of hierarchically organized
-    items: pairs of a string key and int/bool/double/string/array value.
+    @details This member is a ::Json object, which is a very flexible
+    data container consisting of hierarchically organized items:
+    pairs of a string key and int/bool/double/string/array value.
     Thanks to this flexibility, this class can store data for box,
     atoms, molecules, beads, cube, ... and more!!
   */

@@ -40,7 +40,7 @@
     - \c zu (float)
 
   Key of required property:
-    - <c>atom-ids</c> (array of integer)
+    - <c>atom-ids</c> (array of integers)
 
   Key of required property in #ext_generator:
     - \c id (integer)

@@ -147,7 +147,7 @@
 <!-- Node1 -->
 <g id="node11" class="node">
 <title>Node1</title>
-<g id="a_node11"><a xlink:href="classAdder.html" target="_top" xlink:title="Adder adds new properties (keys and values) to non&#45;empty Element::data. ">
+<g id="a_node11"><a xlink:href="classAdder.html" target="_top" xlink:title="Adder adds new properties (keys and values) to a non&#45;empty Element object. ">
 <polygon fill="#ffffff" stroke="#000000" points="94.5,-361.5 94.5,-380.5 136.5,-380.5 136.5,-361.5 94.5,-361.5"/>
 <text text-anchor="middle" x="115.5" y="-368.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Adder</text>
 </a>
@@ -162,7 +162,7 @@
 <!-- Node12 -->
 <g id="node19" class="node">
 <title>Node12</title>
-<g id="a_node19"><a xlink:href="classFilter.html" target="_top" xlink:title="Filter removes items from array Element::data if the items fail user&#45;defined criteria. ">
+<g id="a_node19"><a xlink:href="classFilter.html" target="_top" xlink:title="Filter removes elements from array Element::data if the elements fail user&#45;defined criteria...">
 <polygon fill="#ffffff" stroke="#000000" points="96.5,-114.5 96.5,-133.5 134.5,-133.5 134.5,-114.5 96.5,-114.5"/>
 <text text-anchor="middle" x="115.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Filter</text>
 </a>
@@ -177,7 +177,7 @@
 <!-- Node15 -->
 <g id="node22" class="node">
 <title>Node15</title>
-<g id="a_node22"><a xlink:href="classStarter.html" target="_top" xlink:title="Starter">
+<g id="a_node22"><a xlink:href="classStarter.html" target="_top" xlink:title="Starter sets some properties (keys and values) to an empty Element object. ">
 <polygon fill="#ffffff" stroke="#000000" points="92.5,-627.5 92.5,-646.5 138.5,-646.5 138.5,-627.5 92.5,-627.5"/>
 <text text-anchor="middle" x="115.5" y="-634.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter</text>
 </a>
@@ -345,7 +345,7 @@
 <!-- Node16 -->
 <g id="node23" class="node">
 <title>Node16</title>
-<g id="a_node23"><a xlink:href="classStaBeads.html" target="_top" xlink:title="StaBeads">
+<g id="a_node23"><a xlink:href="classStaBeads.html" target="_top" xlink:title="StaBeads sets properties for beads using mapping (coarse&#45;graining) scheme for each molecule...">
 <polygon fill="#ffffff" stroke="#000000" points="213,-646.5 213,-665.5 272,-665.5 272,-646.5 213,-646.5"/>
 <text text-anchor="middle" x="242.5" y="-653.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaBeads</text>
 </a>
@@ -360,7 +360,7 @@
 <!-- Node17 -->
 <g id="node24" class="node">
 <title>Node17</title>
-<g id="a_node24"><a xlink:href="classStaCopy.html" target="_top" xlink:title="StaCopy">
+<g id="a_node24"><a xlink:href="classStaCopy.html" target="_top" xlink:title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">
 <polygon fill="#ffffff" stroke="#000000" points="215.5,-608.5 215.5,-627.5 269.5,-627.5 269.5,-608.5 215.5,-608.5"/>
 <text text-anchor="middle" x="242.5" y="-615.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCopy</text>
 </a>
@@ -375,7 +375,7 @@
 <!-- Node18 -->
 <g id="node25" class="node">
 <title>Node18</title>
-<g id="a_node25"><a xlink:href="classStaCustom.html" target="_top" xlink:title="StaCustom">
+<g id="a_node25"><a xlink:href="classStaCustom.html" target="_top" xlink:title="StaCustom sets an user&#45;defined Json object to a new Element object as its Element::data. ">
 <polygon fill="#ffffff" stroke="#000000" points="210,-570.5 210,-589.5 275,-589.5 275,-570.5 210,-570.5"/>
 <text text-anchor="middle" x="242.5" y="-577.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
 </a>
@@ -390,7 +390,7 @@
 <!-- Node19 -->
 <g id="node26" class="node">
 <title>Node19</title>
-<g id="a_node26"><a xlink:href="classStaDump.html" target="_top" xlink:title="StaDump">
+<g id="a_node26"><a xlink:href="classStaDump.html" target="_top" xlink:title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">
 <polygon fill="#ffffff" stroke="#000000" points="214,-722.5 214,-741.5 271,-741.5 271,-722.5 214,-722.5"/>
 <text text-anchor="middle" x="242.5" y="-729.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDump</text>
 </a>
@@ -405,7 +405,7 @@
 <!-- Node22 -->
 <g id="node29" class="node">
 <title>Node22</title>
-<g id="a_node29"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="StaMolecules">
+<g id="a_node29"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="StaMolecules sets properties for molecules using atoms forming the molecules. ">
 <polygon fill="#ffffff" stroke="#000000" points="204.5,-684.5 204.5,-703.5 280.5,-703.5 280.5,-684.5 204.5,-684.5"/>
 <text text-anchor="middle" x="242.5" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaMolecules</text>
 </a>
@@ -420,7 +420,7 @@
 <!-- Node20 -->
 <g id="node27" class="node">
 <title>Node20</title>
-<g id="a_node27"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="StaDumpAtoms">
+<g id="a_node27"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. ">
 <polygon fill="#ffffff" stroke="#000000" points="340,-703.5 340,-722.5 426,-722.5 426,-703.5 340,-703.5"/>
 <text text-anchor="middle" x="383" y="-710.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms</text>
 </a>
@@ -435,7 +435,7 @@
 <!-- Node21 -->
 <g id="node28" class="node">
 <title>Node21</title>
-<g id="a_node28"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="StaDumpBox">
+<g id="a_node28"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. ">
 <polygon fill="#ffffff" stroke="#000000" points="346,-741.5 346,-760.5 420,-760.5 420,-741.5 346,-741.5"/>
 <text text-anchor="middle" x="383" y="-748.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox</text>
 </a>

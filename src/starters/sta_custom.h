@@ -1,22 +1,44 @@
-/* ---------------------------------------------------------------------
-StaCustom: stands for Starter to generate Custom data.
-
-create: 2018/08/16 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/starters/sta_custom.h
+  @brief This file has a definition of StaCustom class,
+  which is a subclass of Starter class.
+  @author Takayuki Kobayashi
+  @date 2018/08/16
+*/
 
 #ifndef STA_CUSTOM_H
 #define STA_CUSTOM_H
 
 #include <starters/starter.h>
 
+/*!
+  @brief StaCustom sets an user-defined ::Json object to
+  a new Element object as its Element::data.
+  @details This class inherits Starter class and overrides
+  Starter::compute_impl.
+
+  An object of this class takes an user-defined ::Json object
+  to be set as Element::data.
+
+  About usage in Python,
+  please see src/pybind/starters/py_sta_custom.h.
+*/
 class StaCustom : public Starter {
+  //! A ::Json object to be set as Element::data.
   Json json;
-  Set<Str> jsonkeys;
  protected:
+  /*!
+    @copydoc StaCopy::compute_impl
+  */
   virtual void compute_impl(
     Json &data,
     DataKeys &datakeys) override;
  public:
+  /*!
+    @brief Constructor of StaCustom class.
+    @param json_ : A ::Json object to be set as Element::data.
+    This argument is assigned to #json.
+  */
   StaCustom(
     const Json &json_);
   virtual ~StaCustom() = default;

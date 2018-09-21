@@ -25,7 +25,7 @@
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classStaBeads.html" target="_top" xlink:title="{StaBeads\n|&#45; mol_type_to_abst_beads\l|+ StaBeads()\l+ StaBeads()\l+ ~StaBeads()\l# compute_impl()\l&#45; check_mol_type_to_abst\l_beads()\l}">
+<g id="a_node3"><a xlink:href="classStaBeads.html" target="_top" xlink:title="StaBeads sets properties for beads using mapping (coarse&#45;graining) scheme for each molecule...">
 <polygon fill="#ffffff" stroke="#000000" points="0,-127.5 0,-239.5 131,-239.5 131,-127.5 0,-127.5"/>
 <text text-anchor="middle" x="65.5" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaBeads</text>
 <polyline fill="none" stroke="#000000" points="0,-220.5 131,-220.5 "/>
@@ -49,7 +49,7 @@
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classStaCopy.html" target="_top" xlink:title="{StaCopy\n||+ StaCopy()\l+ ~StaCopy()\l+ compute()\l# compute_impl()\l}">
+<g id="a_node4"><a xlink:href="classStaCopy.html" target="_top" xlink:title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">
 <polygon fill="#ffffff" stroke="#000000" points="149.5,-138.5 149.5,-228.5 241.5,-228.5 241.5,-138.5 149.5,-138.5"/>
 <text text-anchor="middle" x="195.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCopy</text>
 <polyline fill="none" stroke="#000000" points="149.5,-209.5 241.5,-209.5 "/>
@@ -71,29 +71,28 @@
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classStaCustom.html" target="_top" xlink:title="{StaCustom\n|&#45; json\l&#45; jsonkeys\l|+ StaCustom()\l+ ~StaCustom()\l# compute_impl()\l}">
-<polygon fill="#ffffff" stroke="#000000" points="259.5,-138.5 259.5,-228.5 351.5,-228.5 351.5,-138.5 259.5,-138.5"/>
-<text text-anchor="middle" x="305.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
-<polyline fill="none" stroke="#000000" points="259.5,-209.5 351.5,-209.5 "/>
-<text text-anchor="start" x="267.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
-<text text-anchor="start" x="267.5" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; jsonkeys</text>
-<polyline fill="none" stroke="#000000" points="259.5,-179.5 351.5,-179.5 "/>
-<text text-anchor="start" x="267.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
-<text text-anchor="start" x="267.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
-<text text-anchor="start" x="267.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node5"><a xlink:href="classStaCustom.html" target="_top" xlink:title="StaCustom sets an user&#45;defined Json object to a new Element object as its Element::data. ">
+<polygon fill="#ffffff" stroke="#000000" points="259.5,-144 259.5,-223 351.5,-223 351.5,-144 259.5,-144"/>
+<text text-anchor="middle" x="305.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
+<polyline fill="none" stroke="#000000" points="259.5,-204 351.5,-204 "/>
+<text text-anchor="start" x="267.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
+<polyline fill="none" stroke="#000000" points="259.5,-185 351.5,-185 "/>
+<text text-anchor="start" x="267.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
+<text text-anchor="start" x="267.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
+<text text-anchor="start" x="267.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node0&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M305.5,-266.089C305.5,-253.7026 305.5,-240.7078 305.5,-228.7879"/>
+<path fill="none" stroke="#191970" d="M305.5,-266.0546C305.5,-251.7169 305.5,-236.5664 305.5,-223.2128"/>
 <polygon fill="none" stroke="#191970" points="302.0001,-266.3136 305.5,-276.3136 309.0001,-266.3137 302.0001,-266.3136"/>
 </g>
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classStaDump.html" target="_top" xlink:title="{StaDump\n|# timestep\l# filepath\l|+ StaDump()\l+ ~StaDump()\l}">
+<g id="a_node6"><a xlink:href="classStaDump.html" target="_top" xlink:title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">
 <polygon fill="#ffffff" stroke="#000000" points="369.5,-144 369.5,-223 447.5,-223 447.5,-144 369.5,-144"/>
 <text text-anchor="middle" x="408.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDump</text>
 <polyline fill="none" stroke="#000000" points="369.5,-204 447.5,-204 "/>
@@ -114,7 +113,7 @@
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="{StaMolecules\n||+ StaMolecules()\l+ ~StaMolecules()\l# compute_impl()\l}">
+<g id="a_node9"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="StaMolecules sets properties for molecules using atoms forming the molecules. ">
 <polygon fill="#ffffff" stroke="#000000" points="466,-144 466,-223 563,-223 563,-144 466,-144"/>
 <text text-anchor="middle" x="514.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaMolecules</text>
 <polyline fill="none" stroke="#000000" points="466,-204 563,-204 "/>
@@ -162,7 +161,7 @@
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="{StaDumpAtoms\n||+ ~StaDumpAtoms()\l+ StaDump()\l# compute_impl()\l&#45; make_is_int_vector()\l}">
+<g id="a_node7"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. ">
 <polygon fill="#ffffff" stroke="#000000" points="291,-.5 291,-90.5 404,-90.5 404,-.5 291,-.5"/>
 <text text-anchor="middle" x="347.5" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms</text>
 <polyline fill="none" stroke="#000000" points="291,-71.5 404,-71.5 "/>
@@ -184,7 +183,7 @@
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="{StaDumpBox\n||+ ~StaDumpBox()\l+ StaDump()\l# compute_impl()\l}">
+<g id="a_node8"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. ">
 <polygon fill="#ffffff" stroke="#000000" points="422,-6 422,-85 517,-85 517,-6 422,-6"/>
 <text text-anchor="middle" x="469.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox</text>
 <polyline fill="none" stroke="#000000" points="422,-66 517,-66 "/>

@@ -101,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class (inherited). <br /></td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class (inherited). <br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -148,11 +148,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> renames an existing property. </p>
-<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to non-empty Element::data. ">Adder</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="EnShThis is an alias for a class which can create shared pointer of itself by calling shared_from_thi...">EnShThis</a>&lt;<a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a>&gt;, and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Adder::compute_impl</a>.</p>
+<p>This class inherits <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="EnShThis is an alias for a class which can create shared pointer of itself by calling shared_from_thi...">EnShThis</a>&lt;<a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a>&gt;, and overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Adder::compute_impl</a>.</p>
 <p>An object of this class simply renames an existing property; that is, copies values of the existing property, names the values as a new user-defined name, and then deletes the old property.</p>
 <p>About usage in Python, please see <a class="el" href="py__add__rename_8h.html" title="This file is for binding AddRename class to Python. ">src/pybind/adders/py_add_rename.h</a>.</p>
 <p>Key of property to be added:</p><ul>
-<li><code><code></code>[key_new]</code> (any type)</li>
+<li><code>[key_new]</code> (any type)</li>
 </ul>
 <p>Key of required property:</p><ul>
 <li><code>[key_old]</code> (any type) </li>

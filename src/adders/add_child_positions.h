@@ -33,12 +33,12 @@
   please see src/pybind/adders/py_add_child_positions.h.
 
   Key of property to be added:
-    - <c>[child_name]-xs</c> (array of float)
-    - <c>[child_name]-ys</c> (array of float)
-    - <c>[child_name]-zs</c> (array of float)
+    - <c>[child_name]-xs</c> (array of floats)
+    - <c>[child_name]-ys</c> (array of floats)
+    - <c>[child_name]-zs</c> (array of floats)
 
   Key of required property:
-    - <c>[child_name]-ids</c> (array of integer)
+    - <c>[child_name]-ids</c> (array of integers)
     - \c xu (float)
     - \c yu (float)
     - \c zu (float)

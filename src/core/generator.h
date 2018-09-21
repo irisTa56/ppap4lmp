@@ -29,7 +29,7 @@ using UpdatePair = std::pair<ShPtr<Element>,ShPtr<Updater>>;
   @details This class is a superclass of Element class.
 
   This class stores a chain (sequence) of ::UpdatePair objects
-  which represents a process how Element::data will be generated
+  which describes a process how Element::data will be generated
   and updated. In addition, by using GenDict and GenList class,
   which are subclasses of this class, one can group Element objects
   in one Generator object and control all updating processes
@@ -38,7 +38,7 @@ using UpdatePair = std::pair<ShPtr<Element>,ShPtr<Updater>>;
 class Generator {
  protected:
   /*!
-    @brief Chain (sequence) of ::UpdatePair objects. It represents
+    @brief Chain (sequence) of ::UpdatePair objects. It describes
     a process how Element::data is generated and updated.
     @details This chain of ::UpdatePair objects is executed one by
     one by calling the #hello. In this updating process,

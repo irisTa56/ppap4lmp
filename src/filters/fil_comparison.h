@@ -38,7 +38,7 @@ using CompareFunc = std::function<bool(const Json &)>;
 */
 class FilComparison : public Filter {
   /*!
-    @brief ::Vec (list) representing criteria of this filter.
+    @brief ::Vec (list) describing criteria of this filter.
     @details Elements of the list are 3-elements tuples.
     Note that the first element of each tuple is a key;
     and the key must be contained in Element::datakeys of
@@ -64,7 +64,7 @@ class FilComparison : public Filter {
     and ::CompareFunc.
     @param comps : #comparisons.
     @return Constant ::Vec<std::pair<#Str,#CompareFunc>>,
-    which represents criteria of this filter.
+    which describes criteria of this filter.
     @details Returned value of this method is used for evaluating
     inequalities consisting of the second and third elements of tuples
     contained in #comparisons. Note that this method should not be

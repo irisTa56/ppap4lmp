@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-StaMolecules: stands for Starter to generate Molecules from atoms.
-
-create: 2018/07/07 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/starters/sta_molecules.cpp
+  @brief This file has an implementation of StaMolecules class,
+  which is a subclass of Starter class.
+  @author Takayuki Kobayashi
+  @date 2018/07/07
+  @details For more details, please see the header file,
+  src/starters/sta_molecules.h.
+*/
 
 #include "sta_molecules.h"
 
@@ -45,3 +49,5 @@ void StaMolecules::compute_impl(
 
   datakeys.add({"id", "atom-ids"});
 }
+
+/* ------------------------------------------------------------------ */

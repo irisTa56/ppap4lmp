@@ -56,7 +56,6 @@ void AddSpecialBonds::compute_impl(
   for (const auto &mol : mols)
   {
     auto &atom_ids = mol["atom-ids"];
-    // If molecular type is not set, default value (1) is used
     auto sbondses_in_mol
       = mol_type_to_sbondses_in_mol[mol.value("type", 1)];
 

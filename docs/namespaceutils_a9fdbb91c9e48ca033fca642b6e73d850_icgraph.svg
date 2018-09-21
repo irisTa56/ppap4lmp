@@ -9,60 +9,60 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
 <title>utils::pyargs_to_vec</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-62 393,-62 393,4 -4,4"/>
-<!-- Node51 -->
+<!-- Node53 -->
 <g id="node1" class="node">
-<title>Node51</title>
+<title>Node53</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-19.5 0,-38.5 104,-38.5 104,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="52" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::pyargs_to_vec</text>
 </g>
-<!-- Node52 -->
+<!-- Node54 -->
 <g id="node2" class="node">
-<title>Node52</title>
+<title>Node54</title>
 <g id="a_node2"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for the array2d method for integer values. ">
 <polygon fill="#ffffff" stroke="#000000" points="144.5,-38.5 144.5,-57.5 263.5,-57.5 263.5,-38.5 144.5,-38.5"/>
 <text text-anchor="middle" x="204" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_int_py</text>
 </a>
 </g>
 </g>
-<!-- Node51&#45;&gt;Node52 -->
+<!-- Node53&#45;&gt;Node54 -->
 <g id="edge1" class="edge">
-<title>Node51&#45;&gt;Node52</title>
+<title>Node53&#45;&gt;Node54</title>
 <path fill="none" stroke="#191970" d="M114.4447,-36.8056C124.3075,-38.0384 134.4849,-39.3106 144.2835,-40.5354"/>
 <polygon fill="#191970" stroke="#191970" points="114.6667,-33.3062 104.3098,-35.5387 113.7984,-40.2521 114.6667,-33.3062"/>
 </g>
-<!-- Node54 -->
+<!-- Node56 -->
 <g id="node4" class="node">
-<title>Node54</title>
+<title>Node56</title>
 <g id="a_node4"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for the array2d method for float (double in C++) values. ">
 <polygon fill="#ffffff" stroke="#000000" points="140,-.5 140,-19.5 268,-19.5 268,-.5 140,-.5"/>
 <text text-anchor="middle" x="204" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </a>
 </g>
 </g>
-<!-- Node51&#45;&gt;Node54 -->
+<!-- Node53&#45;&gt;Node56 -->
 <g id="edge3" class="edge">
-<title>Node51&#45;&gt;Node54</title>
+<title>Node53&#45;&gt;Node56</title>
 <path fill="none" stroke="#191970" d="M114.3845,-21.2019C122.7602,-20.155 131.3639,-19.0795 139.7707,-18.0287"/>
 <polygon fill="#191970" stroke="#191970" points="113.7984,-17.7479 104.3098,-22.4613 114.6667,-24.6938 113.7984,-17.7479"/>
 </g>
-<!-- Node53 -->
+<!-- Node55 -->
 <g id="node3" class="node">
-<title>Node53</title>
+<title>Node55</title>
 <g id="a_node3"><a xlink:href="py__element_8h.html#a32471b3cace9ede01900bfbdaca5e16a" target="_top" xlink:title="Function to bind Element class to Python. ">
 <polygon fill="#ffffff" stroke="#000000" points="304,-19.5 304,-38.5 389,-38.5 389,-19.5 304,-19.5"/>
 <text text-anchor="middle" x="346.5" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pybind_element</text>
 </a>
 </g>
 </g>
-<!-- Node52&#45;&gt;Node53 -->
+<!-- Node54&#45;&gt;Node55 -->
 <g id="edge2" class="edge">
-<title>Node52&#45;&gt;Node53</title>
+<title>Node54&#45;&gt;Node55</title>
 <path fill="none" stroke="#191970" d="M273.7498,-38.7C283.9369,-37.3417 294.1649,-35.978 303.6004,-34.7199"/>
 <polygon fill="#191970" stroke="#191970" points="273.0568,-35.2614 263.6072,-40.0524 273.982,-42.2 273.0568,-35.2614"/>
 </g>
-<!-- Node54&#45;&gt;Node53 -->
+<!-- Node56&#45;&gt;Node55 -->
 <g id="edge4" class="edge">
-<title>Node54&#45;&gt;Node53</title>
+<title>Node56&#45;&gt;Node55</title>
 <path fill="none" stroke="#191970" d="M278.1344,-19.8846C286.9695,-21.0626 295.7453,-22.2327 303.9172,-23.3223"/>
 <polygon fill="#191970" stroke="#191970" points="278.5381,-16.4075 268.1633,-18.5551 277.6129,-23.3461 278.5381,-16.4075"/>
 </g>

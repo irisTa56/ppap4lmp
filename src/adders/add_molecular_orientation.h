@@ -28,8 +28,8 @@
   please see src/pybind/adders/py_add_molecular_orientation.h.
 
   Key of property to be added:
-    - \c I_values (array of float; eigenvalues of inertia moment)
-    - \c I_vectors (array of array of float; eigenvectors of inertia
+    - \c I_values (array of floats; eigenvalues of inertia moment)
+    - \c I_vectors (array of array of floats; eigenvectors of inertia
     moment)
     - \c S_x (float)
     - \c S_y (float)

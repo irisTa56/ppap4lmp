@@ -1,3 +1,13 @@
+/*!
+  @file src/starters/sta_copy.cpp
+  @brief This file has an implementation of StaCopy class,
+  which is a subclass of Starter class.
+  @author Takayuki Kobayashi
+  @date 2018/09/20
+  @details For more details, please see the header file,
+  src/starters/sta_copy.h.
+*/
+
 #include "sta_copy.h"
 #include "../utils/runtime_error.h"
 

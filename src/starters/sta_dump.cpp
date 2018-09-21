@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-StaDump: stands for Starter reading lammps' Dump file.
-
-create: 2018/06/29 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/starters/sta_dump.cpp
+  @brief This file has an implementation of StaDump class,
+  which is a subclass of Starter class.
+  @author Takayuki Kobayashi
+  @date 2018/06/29
+  @details For more details, please see the header file,
+  src/starters/sta_dump.h.
+*/
 
 #include "sta_dump.h"
 

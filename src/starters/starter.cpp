@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-Starter: is an abstract class to parse data from a file or other data.
-
-create: 2018/06/29 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/starters/starter.cpp
+  @brief This file has an implementation of Starter class,
+  which is a subclass of Updater class.
+  @author Takayuki Kobayashi
+  @date 2018/06/29
+  @details For more details, please see the header file,
+  src/starters/starter.h.
+*/
 
 #include "starter.h"
 #include "../utils/map_to_index.h"

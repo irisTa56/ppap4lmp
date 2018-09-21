@@ -24,7 +24,7 @@
   please see src/pybind/adders/py_add_rename.h.
 
   Key of property to be added:
-    - \c <c>[key_new]</c> (any type)
+    - <c>[key_new]</c> (any type)
 
   Key of required property:
     - <c>[key_old]</c> (any type)

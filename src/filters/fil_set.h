@@ -18,7 +18,7 @@
 
   An object of this class has a filter defined by #value_sets,
   which is a dictionary consisting of pairs of a string key
-  and a set of acceptable values. An item of Element::data can pass
+  and a set of acceptable values. An element of Element::data can pass
   this filter only if every value for every key of #value_sets is
   included in the corresponding set (a value of #value_sets).
 
@@ -27,7 +27,7 @@
 */
 class FilSet : public Filter {
   /*!
-    @brief ::Map (dictionary) representing criteria of this filter.
+    @brief ::Map (dictionary) describing criteria of this filter.
     @details Note that keys of this dictionary must be
     a partial set of Element::datakeys of an Element object
     where this object appended to.
@@ -35,7 +35,7 @@ class FilSet : public Filter {
   Map<Str,Set<Json>> value_sets;
  protected:
   /*!
-    @brief Filter items from array Element::data given
+    @brief Filter elements from array Element::data given
     as a mutable reference.
     @param data : Mutable reference to Element::data to be filtered.
     @param datakeys : Mutable reference to Element::datakeys.

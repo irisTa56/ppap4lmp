@@ -51,7 +51,7 @@ namespace pybind11
         @details First, a ::Json object is serialized to a string by
         its \c dump  method. Then the string is loaded by \c loads
         attribute of Python's \c json module and released as a complex
-        of dict and list. Since this conversion process might take
+        of dictionary and list. Since this conversion process might take
         a long time, using other containers is preferable (if you can).
       */
       static handle cast(Json src, return_value_policy, handle)

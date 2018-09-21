@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['processors',['processors',['../classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8',1,'Invoker']]],
-  ['profiles',['profiles',['../classProThicknessProfile.html#a899a12078753db8cdc86dd40cc05b91b',1,'ProThicknessProfile']]]
+  ['update_5fchain',['update_chain',['../classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf',1,'Generator']]]
 ];

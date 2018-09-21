@@ -70,6 +70,11 @@ $(function() {
 <div class="title">Starter Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a> sets some properties (keys and values) to an empty <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  
+ <a href="classStarter.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="starter_8h_source.html">starter.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Starter:</div>
 <div class="dyncontent">
@@ -84,10 +89,11 @@ Collaboration diagram for Starter:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e1cc4f19ad4d82b765b48c5aa8eb22a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
-<tr class="memdesc:a5e1cc4f19ad4d82b765b48c5aa8eb22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  <a href="#a5e1cc4f19ad4d82b765b48c5aa8eb22a">More...</a><br /></td></tr>
+<tr class="memdesc:a5e1cc4f19ad4d82b765b48c5aa8eb22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference.  <a href="#a5e1cc4f19ad4d82b765b48c5aa8eb22a">More...</a><br /></td></tr>
 <tr class="separator:a5e1cc4f19ad4d82b765b48c5aa8eb22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
+<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a> class (inherited). <br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -102,8 +108,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a112a95fc261365ba92609db3fa907939"><td class="memItemLeft" align="right" valign="top"><a id="a112a95fc261365ba92609db3fa907939"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sort_by_id</b> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data)</td></tr>
+<tr class="memitem:a112a95fc261365ba92609db3fa907939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a112a95fc261365ba92609db3fa907939">sort_by_id</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data)</td></tr>
+<tr class="memdesc:a112a95fc261365ba92609db3fa907939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort elements of a array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object by its <code>id</code> property.  <a href="#a112a95fc261365ba92609db3fa907939">More...</a><br /></td></tr>
 <tr class="separator:a112a95fc261365ba92609db3fa907939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -120,7 +126,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object used in update process.  <a href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">More...</a><br /></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a> sets some properties (keys and values) to an empty <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
+<p>This class inherits <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class and overrides <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57" title="Managing computation to update Element::data. ">Updater::compute</a>. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Starter::compute_impl</a>.</p>
+<p>Name of subclass of this class should be prefixed by <em>Sta</em>. Unlike <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>, <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a> accepts only empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5e1cc4f19ad4d82b765b48c5aa8eb22a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e1cc4f19ad4d82b765b48c5aa8eb22a">&#9670;&nbsp;</a></span>compute()</h2>
 
@@ -134,19 +144,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void Starter::compute </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classDataKeys.html">DataKeys</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>datakeys</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>dataid</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -161,8 +171,17 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
-<p>This is a pure virtual function, please see the subclasses for more details. </p>
+<p>Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are set to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are set to. </td></tr>
+    <tr><td class="paramname">dataid</td><td>: Constant integer copied from <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">Element::dataid</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> and <code>datakeys</code> to <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Starter::compute_impl</a>. Note that actual computation and setting of properties is conducted by <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Starter::compute_impl</a> orveridden in subclasses of this class. In addition, this method sorts elements of the <code>data</code> by <code>id</code> property, if the <code>data</code> is an array and <code>id</code> property is set. </p>
 
 <p>Implements <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57">Updater</a>.</p>
 
@@ -170,31 +189,59 @@ Additional Inherited Members</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStarter_a5e1cc4f19ad4d82b765b48c5aa8eb22a_cgraph.svg" width="343" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStarter_a5e1cc4f19ad4d82b765b48c5aa8eb22a_cgraph.svg" width="100%" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
 </div>
-<a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5e87ea9ea0f6f31de04f93cd1819549">&#9670;&nbsp;</a></span>Updater()</h2>
+<a id="a112a95fc261365ba92609db3fa907939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112a95fc261365ba92609db3fa907939">&#9670;&nbsp;</a></span>sort_by_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Updater::Updater</td>
+          <td class="memname">void Starter::sort_by_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class. </p>
-<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreads context. Please be careful that constructors of subclasses of this class are also thread-unsafe. </p>
+<p>Sort elements of a array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object by its <code>id</code> property. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>: Mutable reference to a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStarter_a112a95fc261365ba92609db3fa907939_cgraph.svg" width="502" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStarter_a112a95fc261365ba92609db3fa907939_icgraph.svg" width="307" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/starters/<a class="el" href="starter_8h_source.html">starter.h</a></li>
-<li>src/starters/starter.cpp</li>
+<li>src/starters/<a class="el" href="starter_8cpp.html">starter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

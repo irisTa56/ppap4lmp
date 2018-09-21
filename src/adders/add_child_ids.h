@@ -33,7 +33,7 @@
   please see src/pybind/adders/py_add_child_ids.h.
 
   Key of property to be added:
-    - <c>[child_name]-ids</c> (array of integer)
+    - <c>[child_name]-ids</c> (array of integers)
 
   Key of required property:
     - \c id (integer)
