@@ -21,21 +21,13 @@
 */
 class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
   /*!
-    @brief Whether square of the gyration radius is computed (default
-    is false).
-    @details Note that an average gyration radius should be computed by
-    square rooting an averaged square of the gyration radius, not
-    averaging the gyration radius itself.
-  */
-  bool add_squared = false;
-  /*!
     @brief Whether gyration radius (not squared) is computed (default
-    is true).
+    is \c false).
     @details Note that an average gyration radius should be computed by
     square rooting an averaged square of the gyration radius, not
     averaging the gyration radius itself.
   */
-  bool add_sqrted = true;
+  bool add_sqrted = false;
  protected:
   /*!
     @copydoc Updater::compute_impl
@@ -51,17 +43,6 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
       </tr>
       <tr class="py_tr">
         <td class="py_td">
-
-          [default]
-          - \c Rg : float
-          - \c Rg(y+z) : float
-          - \c Rg(z+x) : float
-          - \c Rg(x+y) : float
-          - \c Rg(x) : float
-          - \c Rg(y) : float
-          - \c Rg(z) : float
-
-          [option]
           - \c Rg^2 : float
           - \c Rg^2(y+z) : float
           - \c Rg^2(z+x) : float
@@ -69,6 +50,15 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
           - \c Rg^2(x) : float
           - \c Rg^2(y) : float
           - \c Rg^2(z) : float
+
+          [option]
+          - \c Rg : float
+          - \c Rg(y+z) : float
+          - \c Rg(z+x) : float
+          - \c Rg(x+y) : float
+          - \c Rg(x) : float
+          - \c Rg(y) : float
+          - \c Rg(z) : float
         </td>
         <td class="py_td">
           - \c mass : float
@@ -90,24 +80,16 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
   using Adder::Adder;
   virtual ~AddGyrationRadius() = default;
   /*!
-    @brief Switch #add_squared (to true by default).
-    @param add_squared_ : A boolean to be assigned to #add_squared.
+    @brief Enable to compute gyration radius (by default, only square
+    of gyration radius is computed).
+    @param add_sqrted_ : A boolean, whether gyration radius is computed
+    or not (default is \c true).
     @return Shared pointer to this object.
     @details Please be careful not to call this method in
     a multithreading context because it is thread-unsafe.
   */
-  ShPtr<AddGyrationRadius> with_squared(
-    bool add_squared_ = true);
-  /*!
-    @brief Switch #add_sqrted (to false by default).
-    @param without_sqrted_ : A boolean whose negation is assigned to
-    #add_sqrted.
-    @return Shared pointer to this object.
-    @details Please be careful not to call this method in
-    a multithreading context because it is thread-unsafe.
-  */
-  ShPtr<AddGyrationRadius> without_sqrted(
-    bool without_sqrted_ = true);
+  ShPtr<AddGyrationRadius> with_sqrted(
+    bool add_sqrted_ = true);
 };
 
 #endif

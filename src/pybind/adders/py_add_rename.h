@@ -49,12 +49,11 @@
       <td class="py_td">\c overwrite</td>
       <td class="py_td">AddRename::overwrite</td>
       <td class="py_td">
-        Allow overwriting an existing property by a renamed property
-        (another existing property) with the same name.
+        @copybrief AddRename::overwrite
       </td>
       <td class="py_td">
         - c do_overwrite_ : A boolean, whether overwriting is
-          allowed or not. No argument leads to allowing overwriting.
+          allowed or not (default is \c True).
       </td>
       <td class="py_td">
         This AddRename object.

@@ -20,7 +20,6 @@ var searchData=
   ['add_5fspecial_5fbonds_2ecpp',['add_special_bonds.cpp',['../add__special__bonds_8cpp.html',1,'']]],
   ['add_5fspecial_5fbonds_2eh',['add_special_bonds.h',['../add__special__bonds_8h.html',1,'']]],
   ['add_5fsqrted',['add_sqrted',['../classAddGyrationRadius.html#a582e3a06805ca0f63119ec3cd1d7fc94',1,'AddGyrationRadius']]],
-  ['add_5fsquared',['add_squared',['../classAddGyrationRadius.html#a85311eba5f5ba556f40f906027685d8f',1,'AddGyrationRadius']]],
   ['add_5fwrapped_5fposition_2ecpp',['add_wrapped_position.cpp',['../add__wrapped__position_8cpp.html',1,'']]],
   ['add_5fwrapped_5fposition_2eh',['add_wrapped_position.h',['../add__wrapped__position_8h.html',1,'']]],
   ['addchildids',['AddChildIDs',['../classAddChildIDs.html',1,'AddChildIDs'],['../classAddChildIDs.html#a7278a3244f0a6d52e7f30491f2154a70',1,'AddChildIDs::AddChildIDs()']]],

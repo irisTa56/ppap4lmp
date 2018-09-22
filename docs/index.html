@@ -324,24 +324,19 @@ For Adder: Updater for adding new properties to an Element object</h2>
 <tr class="py_tr">
 <td class="py_td"><code>AddGyrationRadius</code>  </td><td class="py_td"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549" title="Constructor of Updater class. ">AddGyrationRadius::Updater</a> </td><td class="py_td">Constructor of <a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> class.  </td><td class="py_td">None.  </td><td class="py_td">Constructed <a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> object, which is appended to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object (such as one containing data for molecules).   </td></tr>
 </table>
+<p>Usage example of the constructor to add square of gyration radius to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
+<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">molecules = create(StaMolecules(atoms))</div><div class="line"></div><div class="line">molecules.append_updater(AddCoMPosition(atoms))</div><div class="line">molecules.append_updater(AddInertiaMoment(atoms))</div><div class="line">molecules.append_updater(AddGyrationRadius())</div></div>
 <a class="anchor" id=""></a>
 <table class="py_table">
 <caption>Python-side methods of <a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> </caption>
 <tr class="py_tr">
 <th class="py_th_main">Name </th><th class="py_th_main">C++-side </th><th class="py_th_main">Description </th><th class="py_th_main">Argument </th><th class="py_th_main">Return  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><code>with_squared</code>  </td><td class="py_td"><a class="el" href="classAddGyrationRadius.html#a36cdb31db55a78681aada61ac5651bc9" title="Switch add_squared (to true by default). ">AddGyrationRadius::with_squared</a> </td><td class="py_td">Enable to compute square of gyration radius. Note that an average gyration radius should be computed by square rooting an average of squared gyration radius, not averaging the gyration radius itself.  </td><td class="py_td"><ul class="py_ul">
-<li><code>add_squared_</code> : A boolean, whether squared gyration radius is computed or not. No argument leads to enabling the computation.  </li>
-</ul>
-</td><td class="py_td">This <a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> object.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>without_sqrted</code>  </td><td class="py_td"><a class="el" href="classAddGyrationRadius.html#a0919259a47f76c08c86f54156bdb2ac6" title="Switch add_sqrted (to false by default). ">AddGyrationRadius::without_sqrted</a> </td><td class="py_td">Disable to compute gyration radius (skipping root-squaring).  </td><td class="py_td"><ul class="py_ul">
-<li><code>without_sqrted_</code> : A boolean, whether computing gyration radius is skipped or not. No argument leads to skipping the computation.  </li>
+<td class="py_td"><code>with_sqrted</code>  </td><td class="py_td"><a class="el" href="classAddGyrationRadius.html#a27daed4b7f0e5685ef67fe527bdbcd52" title="Enable to compute gyration radius (by default, only square of gyration radius is computed). ">AddGyrationRadius::with_sqrted</a> </td><td class="py_td">Enable to compute gyration radius (by default, only square of gyration radius is computed). Note that an average gyration radius should be computed by square rooting an average of squared gyration radius, not averaging the gyration radius itself.  </td><td class="py_td"><ul class="py_ul">
+<li><code>add_sqrted_</code> : A boolean, whether gyration radius is computed or not (default is <code>True</code>).  </li>
 </ul>
 </td><td class="py_td">This <a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> object.   </td></tr>
 </table>
-<p>Usage example of the constructor and method to add square of gyration radius to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
-<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">molecules = create(StaMolecules(atoms))</div><div class="line"></div><div class="line">molecules.append_updater(AddCoMPosition(atoms))</div><div class="line">molecules.append_updater(AddInertiaMoment(atoms))</div><div class="line">molecules.append_updater(AddGyrationRadius().with_squared())</div></div>
 <a class="anchor" id=""></a>
 <table class="py_table">
 <caption>Python-side constructor of <a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a> </caption>
@@ -376,8 +371,8 @@ For Adder: Updater for adding new properties to an Element object</h2>
 <tr class="py_tr">
 <th class="py_th_main">Name </th><th class="py_th_main">C++-side </th><th class="py_th_main">Description </th><th class="py_th_main">Argument </th><th class="py_th_main">Return  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><code>overwrite</code>  </td><td class="py_td"><a class="el" href="classAddMap.html#a272eeaa7e7c0ba549209165f84f9441b" title="Switch do_overwrite (to true by default). ">AddMap::overwrite</a> </td><td class="py_td">Allow overwriting an existing property by a new property with the same name.  </td><td class="py_td"><ul class="py_ul">
-<li><code>do_overwrite_</code> : A boolean, whether overwriting is allowed or not. No argument leads to allowing overwriting.  </li>
+<td class="py_td"><code>overwrite</code>  </td><td class="py_td"><a class="el" href="classAddMap.html#a272eeaa7e7c0ba549209165f84f9441b" title="Allow overwriting an existing property by a new property with the same name. ">AddMap::overwrite</a> </td><td class="py_td">Allow overwriting an existing property by a new property with the same name.  </td><td class="py_td"><ul class="py_ul">
+<li><code>do_overwrite_</code> : A boolean, whether overwriting is allowed or not (default is <code>True</code>).  </li>
 </ul>
 </td><td class="py_td">This <a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a> object.   </td></tr>
 </table>
@@ -409,8 +404,8 @@ For Adder: Updater for adding new properties to an Element object</h2>
 <tr class="py_tr">
 <th class="py_th_main">Name </th><th class="py_th_main">C++-side </th><th class="py_th_main">Description </th><th class="py_th_main">Argument </th><th class="py_th_main">Return  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><code>overwrite</code>  </td><td class="py_td"><a class="el" href="classAddRename.html#a600c0c6383de7ed16387f5be064dac8f" title="Switch do_overwrite (to true by default). ">AddRename::overwrite</a> </td><td class="py_td">Allow overwriting an existing property by a renamed property (another existing property) with the same name.  </td><td class="py_td"><ul class="py_ul">
-<li>c do_overwrite_ : A boolean, whether overwriting is allowed or not. No argument leads to allowing overwriting.  </li>
+<td class="py_td"><code>overwrite</code>  </td><td class="py_td"><a class="el" href="classAddRename.html#a600c0c6383de7ed16387f5be064dac8f" title="Allow overwriting an existing property by a renamed property with the same name. ">AddRename::overwrite</a> </td><td class="py_td">Allow overwriting an existing property by a renamed property with the same name.  </td><td class="py_td"><ul class="py_ul">
+<li>c do_overwrite_ : A boolean, whether overwriting is allowed or not (default is <code>True</code>).  </li>
 </ul>
 </td><td class="py_td">This <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> object.   </td></tr>
 </table>
@@ -648,24 +643,23 @@ List of Properties</h1>
 <tr class="py_tr">
 <th class="py_th2_main">Key for property to be added </th><th class="py_th2_main">Key for required property </th><th class="py_th2_main">Key for externally required property  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><p class="starttd"></p>
-<p>[default]</p><ul>
-<li><code>Rg</code> : float</li>
-<li><code>Rg</code>(y+z) : float</li>
-<li><code>Rg</code>(z+x) : float</li>
-<li><code>Rg</code>(x+y) : float</li>
-<li><code>Rg(x)</code> : float</li>
-<li><code>Rg(y)</code> : float</li>
-<li><code>Rg(z)</code> : float</li>
-</ul>
-<p class="endtd">[option]</p><ul>
+<td class="py_td"><ul class="py_ul">
 <li><code>Rg^2</code> : float</li>
 <li><code>Rg^2</code>(y+z) : float</li>
 <li><code>Rg^2</code>(z+x) : float</li>
 <li><code>Rg^2</code>(x+y) : float</li>
 <li><code>Rg^2</code>(x) : float</li>
 <li><code>Rg^2</code>(y) : float</li>
-<li><code>Rg^2</code>(z) : float  </li>
+<li><code>Rg^2</code>(z) : float</li>
+</ul>
+<p class="endtd">[option]</p><ul>
+<li><code>Rg</code> : float</li>
+<li><code>Rg</code>(y+z) : float</li>
+<li><code>Rg</code>(z+x) : float</li>
+<li><code>Rg</code>(x+y) : float</li>
+<li><code>Rg(x)</code> : float</li>
+<li><code>Rg(y)</code> : float</li>
+<li><code>Rg(z)</code> : float  </li>
 </ul>
 </td><td class="py_td"><ul class="py_ul">
 <li><code>mass</code> : float</li>

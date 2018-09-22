@@ -26,7 +26,7 @@
 class AddMap : public Adder, public EnShThis<AddMap> {
   /*!
     @brief Whether overwriting an existing property whose name is the
-    same as new property to be added (default is false).
+    same as a new property to be added (default is \c false).
   */
   bool do_overwrite = false;
   /*!
@@ -100,9 +100,10 @@ class AddMap : public Adder, public EnShThis<AddMap> {
     const Map<Json,Json> &mapping_);
   virtual ~AddMap() = default;
   /*!
-    @brief Switch #do_overwrite (to true by default).
-    @param do_overwrite_ : A boolean to be assigned to #do_overwrite.
-    @return Shared pointer to this object.
+    @brief Allow overwriting an existing property by a new property
+    with the same name.
+    @param do_overwrite_ : A boolean, whether an existing property
+    can be overwritten by a new property (default is \c true).
     @details Please be careful not to call this method in
     a multithreading context because it is thread-unsafe.
   */

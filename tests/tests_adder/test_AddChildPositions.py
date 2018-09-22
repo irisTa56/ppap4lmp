@@ -104,8 +104,7 @@ class TestAddChildPositions(unittest.TestCase):
     moles.append_updater(AddChildPositions(atoms, "atom"))
 
     moles.append_updater(AddInertiaMoment(atoms))
-    moles.append_updater(
-      AddGyrationRadius().with_squared().without_sqrted())
+    moles.append_updater(AddGyrationRadius())
 
     data = moles.get_data()
 

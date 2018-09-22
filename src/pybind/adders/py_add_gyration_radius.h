@@ -32,6 +32,18 @@
     </tr>
   </table>
 
+  Usage example of the constructor to add square of gyration radius
+  to an Element object for molecules.
+
+  @code{.python}
+    atoms = create(...)
+    molecules = create(StaMolecules(atoms))
+
+    molecules.append_updater(AddCoMPosition(atoms))
+    molecules.append_updater(AddInertiaMoment(atoms))
+    molecules.append_updater(AddGyrationRadius())
+  @endcode
+
   <table class="py_table">
     <caption>
       Python-side methods of AddGyrationRadius
@@ -44,51 +56,23 @@
       <th class="py_th">Return</th>
     </tr>
     <tr class="py_tr">
-      <td class="py_td">\c with_squared</td>
-      <td class="py_td">AddGyrationRadius::with_squared</td>
+      <td class="py_td">\c with_sqrted</td>
+      <td class="py_td">AddGyrationRadius::with_sqrted</td>
       <td class="py_td">
-        Enable to compute square of gyration radius. Note that an
-        average gyration radius should be computed by square rooting an
-        average of squared gyration radius, not averaging the gyration
-        radius itself.
+        @copybrief AddGyrationRadius::with_sqrted
+        Note that an average gyration radius should be computed
+        by square rooting an average of squared gyration radius,
+        not averaging the gyration radius itself.
       </td>
       <td class="py_td">
-        - \c add_squared_ : A boolean, whether squared gyration
-          radius is computed or not. No argument leads to enabling
-          the computation.
-      </td>
-      <td class="py_td">
-        This AddGyrationRadius object.
-      </td>
-    </tr>
-    <tr class="py_tr">
-      <td class="py_td">\c without_sqrted</td>
-      <td class="py_td">AddGyrationRadius::without_sqrted</td>
-      <td class="py_td">
-        Disable to compute gyration radius (skipping root-squaring).
-      </td>
-      <td class="py_td">
-        - \c without_sqrted_ : A boolean, whether computing gyration
-          radius is skipped or not. No argument leads to skipping
-          the computation.
+        - \c add_sqrted_ : A boolean, whether gyration radius is
+        computed or not (default is \c True).
       </td>
       <td class="py_td">
         This AddGyrationRadius object.
       </td>
     </tr>
   </table>
-
-  Usage example of the constructor and method to add square of
-  gyration radius to an Element object for molecules.
-
-  @code{.python}
-    atoms = create(...)
-    molecules = create(StaMolecules(atoms))
-
-    molecules.append_updater(AddCoMPosition(atoms))
-    molecules.append_updater(AddInertiaMoment(atoms))
-    molecules.append_updater(AddGyrationRadius().with_squared())
-  @endcode
 */
 
 #ifndef PYBIND_ADD_GYRATION_RADIUS_H
@@ -103,11 +87,8 @@ static void pybind_add_gyration_radius(py::module &m)
   py::class_<AddGyrationRadius,PyUpdater<AddGyrationRadius>,Adder,Updater,ShPtr<AddGyrationRadius>>(m, "AddGyrationRadius")
     .def(py::init<>())
     .def(
-      "with_squared", &AddGyrationRadius::with_squared,
-      py::arg("add_squared_") = true)
-    .def(
-      "without_sqrted", &AddGyrationRadius::without_sqrted,
-      py::arg("without_sqrted_") = true);
+      "with_sqrted", &AddGyrationRadius::with_sqrted,
+      py::arg("add_sqrted_") = true);
 }
 
 #endif

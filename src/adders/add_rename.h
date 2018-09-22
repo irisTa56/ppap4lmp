@@ -23,7 +23,7 @@
 class AddRename : public Adder, public EnShThis<AddRename> {
   /*!
     @brief Whether overwriting an existing property whose name is the
-    same as new property to be added (default is false).
+    same as #key_new (default is \c false).
   */
   bool do_overwrite = false;
   /*!
@@ -78,9 +78,10 @@ class AddRename : public Adder, public EnShThis<AddRename> {
     const Str &key_new_);
   virtual ~AddRename() = default;
   /*!
-    @brief Switch #do_overwrite (to true by default).
-    @param do_overwrite_ : A boolean to be assigned to #do_overwrite.
-    @return Shared pointer to this object.
+    @brief Allow overwriting an existing property by a renamed property
+    with the same name.
+    @param do_overwrite_ : A boolean, whether an existing property
+    can be overwritten by a renamed property (default is \c true).
     @details Please be careful not to call this method in
     a multithreading context because it is thread-unsafe.
   */

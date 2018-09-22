@@ -93,7 +93,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a358ea2d261cc91b117998e0a0d439608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a> class.  <a href="#a358ea2d261cc91b117998e0a0d439608">More...</a><br /></td></tr>
 <tr class="separator:a358ea2d261cc91b117998e0a0d439608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a272eeaa7e7c0ba549209165f84f9441b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classAddMap.html">AddMap</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddMap.html#a272eeaa7e7c0ba549209165f84f9441b">overwrite</a> (bool do_overwrite_=true)</td></tr>
-<tr class="memdesc:a272eeaa7e7c0ba549209165f84f9441b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch <a class="el" href="classAddMap.html#a4a43db4f8c405c0b82132abd43dbe837" title="Whether overwriting an existing property whose name is the same as new property to be added (default ...">do_overwrite</a> (to true by default).  <a href="#a272eeaa7e7c0ba549209165f84f9441b">More...</a><br /></td></tr>
+<tr class="memdesc:a272eeaa7e7c0ba549209165f84f9441b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow overwriting an existing property by a new property with the same name.  <a href="#a272eeaa7e7c0ba549209165f84f9441b">More...</a><br /></td></tr>
 <tr class="separator:a272eeaa7e7c0ba549209165f84f9441b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAdder"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAdder')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAdder.html">Adder</a></td></tr>
 <tr class="memitem:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
@@ -128,7 +128,7 @@ Protected Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4a43db4f8c405c0b82132abd43dbe837"><td class="memItemLeft" align="right" valign="top"><a id="a4a43db4f8c405c0b82132abd43dbe837"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddMap.html#a4a43db4f8c405c0b82132abd43dbe837">do_overwrite</a> = false</td></tr>
-<tr class="memdesc:a4a43db4f8c405c0b82132abd43dbe837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether overwriting an existing property whose name is the same as new property to be added (default is false). <br /></td></tr>
+<tr class="memdesc:a4a43db4f8c405c0b82132abd43dbe837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether overwriting an existing property whose name is the same as a new property to be added (default is <code>false</code>). <br /></td></tr>
 <tr class="separator:a4a43db4f8c405c0b82132abd43dbe837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a530136eb5f0014f0ae6ba9cb6d3f4bed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddMap.html#a530136eb5f0014f0ae6ba9cb6d3f4bed">key_ref</a></td></tr>
 <tr class="memdesc:a530136eb5f0014f0ae6ba9cb6d3f4bed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key for an existing property (domain of the mapping).  <a href="#a530136eb5f0014f0ae6ba9cb6d3f4bed">More...</a><br /></td></tr>
@@ -282,14 +282,13 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Switch <a class="el" href="classAddMap.html#a4a43db4f8c405c0b82132abd43dbe837" title="Whether overwriting an existing property whose name is the same as new property to be added (default ...">do_overwrite</a> (to true by default). </p>
+<p>Allow overwriting an existing property by a new property with the same name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">do_overwrite_</td><td>: A boolean to be assigned to <a class="el" href="classAddMap.html#a4a43db4f8c405c0b82132abd43dbe837" title="Whether overwriting an existing property whose name is the same as new property to be added (default ...">do_overwrite</a>. </td></tr>
+    <tr><td class="paramname">do_overwrite_</td><td>: A boolean, whether an existing property can be overwritten by a new property (default is <code>true</code>).</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Shared pointer to this object.</dd></dl>
 <p>Please be careful not to call this method in a multithreading context because it is thread-unsafe. </p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>

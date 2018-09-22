@@ -39,7 +39,7 @@ class TestAddGyrationRadius(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
-    molecules.append_updater(AddGyrationRadius())
+    molecules.append_updater(AddGyrationRadius().with_sqrted())
 
     data = molecules.get_data()[0]
 
@@ -57,6 +57,8 @@ class TestAddGyrationRadius(unittest.TestCase):
       molecules.get_keys(), {
         "id", "atom-ids", "mass", "xu", "yu", "zu",
         "I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz",
+        "Rg^2", "Rg^2(y+z)", "Rg^2(z+x)", "Rg^2(x+y)",
+        "Rg^2(x)", "Rg^2(y)", "Rg^2(z)",
         "Rg", "Rg(y+z)", "Rg(z+x)", "Rg(x+y)",
         "Rg(x)", "Rg(y)", "Rg(z)"})
 
@@ -71,8 +73,7 @@ class TestAddGyrationRadius(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
-    molecules.append_updater(
-      AddGyrationRadius().with_squared().without_sqrted())
+    molecules.append_updater(AddGyrationRadius())
 
     data = molecules.get_data()[0]
 
