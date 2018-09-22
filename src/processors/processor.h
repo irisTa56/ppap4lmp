@@ -103,11 +103,11 @@ class Processor {
     @details First, this method copies #i_generator as
     an index in #generators for a Generator object to be analyzed.
     This method then
-    calls Generator::hello, that is,
-    executes update processes associated with the Generator object,
+    calls Generator::hello
+    to execute update processes associated with the Generator object,
     and calls #run_impl taking the copied index,
-    and finally calls Generator::goodbye,
-    that is, clears Element::data if it is no longer to be used.
+    and finally calls Generator::goodbye
+    to clears Element::data if it is no longer to be used.
   */
   virtual bool run();
   /*!

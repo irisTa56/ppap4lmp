@@ -23,7 +23,7 @@
         Constructor of AddChildPositions class.
       </td>
       <td class="py_td">
-        - \c elem : \e Child object (such as an Element object
+        - \c elem : \e A child object (such as an Element object
           containing data for atoms).
         - \c child_name_ : A string for naming the above child object.
       </td>

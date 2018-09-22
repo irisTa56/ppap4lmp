@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This file is for binding <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> class to Python.  
+<p>This file is for binding <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class to Python.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="pro__data_8h_source.html">processors/pro_data.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="py__processor_8h_source.html">pybind/processors/py_processor.h</a>&gt;</code><br />
@@ -98,31 +98,35 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:a2d5380058190899a8b0b623e077991a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file is for binding <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> class to Python. </p>
+<div class="textblock"><p>This file is for binding <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/08/17</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2018/06/22</dd></dl>
 <a class="anchor" id=""></a>
 <table class="py_table">
-<caption>Python-side constructor of <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> </caption>
+<caption>Python-side constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> </caption>
 <tr class="py_tr">
 <th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><code>AddRename</code>  </td><td class="py_td"><a class="el" href="classAddRename.html#a3119359de9028c40ed5fbf24b5fc3a46" title="Constructor of AddRename class. ">AddRename::AddRename</a> </td><td class="py_td">Constructor of <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> class.  </td><td class="py_td"><ul>
-<li><code>key_old_</code> : A string key for an existing property to be renamed.</li>
-<li><code>key_new_</code> : A string key by which the old key for the existing property is renamed.  </li>
+<td class="py_td"><code>ProData</code>  </td><td class="py_td"><a class="el" href="classProData.html#afcff6bc44862d6f5a42877d1623606b2" title="Constructor of ProData class for one Element object. ">ProData::ProData</a> </td><td class="py_td">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class for one <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
+<li><code>elem</code> : An <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object to be copied.  </li>
 </ul>
-</td><td class="py_td">Constructed <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> object.   </td></tr>
+</td><td class="py_td">Constructed <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> object.   </td></tr>
+<tr class="py_tr">
+<td class="py_td"><code>ProData</code>  </td><td class="py_td"><a class="el" href="classProData.html#afcff6bc44862d6f5a42877d1623606b2" title="Constructor of ProData class for one Element object. ">ProData::ProData</a> </td><td class="py_td">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class for a trajectory of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects.  </td><td class="py_td"><ul>
+<li><code>elems</code> : List of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects to be copied.  </li>
+</ul>
+</td><td class="py_td">Constructed <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> object.   </td></tr>
 </table>
 <a class="anchor" id=""></a>
 <table class="py_table">
-<caption>Python-side methods of <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> </caption>
+<caption>Python-side methods of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> </caption>
 <tr class="py_tr">
 <th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><code>overwrite</code>  </td><td class="py_td"><a class="el" href="classAddRename.html#a600c0c6383de7ed16387f5be064dac8f" title="Switch do_overwrite (to true by default). ">AddRename::overwrite</a> </td><td class="py_td">Allow overwriting an existing property by a renamed property (another existing property) with the same name.  </td><td class="py_td"><ul>
+<td class="py_td"><code>select</code>  </td><td class="py_td"><a class="el" href="classProData.html#a15154c6692dda916207fa21316794474" title="Specify string keys for properties to be copied. ">ProData::select</a> </td><td class="py_td">Specify string keys for properties to be copied.  </td><td class="py_td"><ul>
 <li><code>do_overwrite_</code> : A boolean, whether overwriting is allowed or not. No argument leads to allowing overwriting.  </li>
 </ul>
-</td><td class="py_td">This <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> object.   </td></tr>
+</td><td class="py_td">This <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> object.   </td></tr>
 </table>
 </div></div><!-- contents -->
 <!-- start footer part -->

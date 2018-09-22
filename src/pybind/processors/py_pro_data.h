@@ -1,13 +1,13 @@
 /*!
   @file src/pybind/processors/py_pro_data.h
-  @brief This file is for binding AddRename class to Python.
+  @brief This file is for binding ProData class to Python.
   @author Takayuki Kobayashi
-  @date 2018/08/17
+  @date 2018/06/22
   @details
 
   <table class="py_table">
     <caption>
-      Python-side constructor of AddRename
+      Python-side constructor of ProData
     </caption>
     <tr class="py_tr">
       <th class="py_th">Name</th>
@@ -17,26 +17,37 @@
       <th class="py_th">Return</th>
     </tr>
     <tr class="py_tr">
-      <td class="py_td">\c %AddRename</td>
-      <td class="py_td">AddRename::AddRename</td>
+      <td class="py_td">\c %ProData</td>
+      <td class="py_td">ProData::ProData</td>
       <td class="py_td">
-        Constructor of AddRename class.
+        Constructor of ProData class for one Element object.
       </td>
       <td class="py_td">
-        - \c key_old_ : A string key for an existing property to be
-          renamed.
-        - \c key_new_ : A string key by which the old key
-          for the existing property is renamed.
+        - \c elem : An Element object to be copied.
       </td>
       <td class="py_td">
-        Constructed AddRename object.
+        Constructed ProData object.
+      </td>
+    </tr>
+    <tr class="py_tr">
+      <td class="py_td">\c %ProData</td>
+      <td class="py_td">ProData::ProData</td>
+      <td class="py_td">
+        Constructor of ProData class for a trajectory
+        of Element objects.
+      </td>
+      <td class="py_td">
+        - \c elems : List of Element objects to be copied.
+      </td>
+      <td class="py_td">
+        Constructed ProData object.
       </td>
     </tr>
   </table>
 
   <table class="py_table">
     <caption>
-      Python-side methods of AddRename
+      Python-side methods of ProData
     </caption>
     <tr class="py_tr">
       <th class="py_th">Name</th>
@@ -46,18 +57,17 @@
       <th class="py_th">Return</th>
     </tr>
     <tr class="py_tr">
-      <td class="py_td">\c overwrite</td>
-      <td class="py_td">AddRename::overwrite</td>
+      <td class="py_td">\c select</td>
+      <td class="py_td">ProData::select</td>
       <td class="py_td">
-        Allow overwriting an existing property by a renamed property
-        (another existing property) with the same name.
+        Specify string keys for properties to be copied.
       </td>
       <td class="py_td">
         - \c do_overwrite_ : A boolean, whether overwriting is
           allowed or not. No argument leads to allowing overwriting.
       </td>
       <td class="py_td">
-        This AddRename object.
+        This ProData object.
       </td>
     </tr>
   </table>
