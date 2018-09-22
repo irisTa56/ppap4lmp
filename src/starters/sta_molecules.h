@@ -22,19 +22,36 @@
 
   About usage in Python,
   please see src/pybind/starters/py_sta_molecules.h.
-
-  Key of property to be added:
-    - \c id (integer)
-    - \c atom-ids (array of integers)
-
-  Key of required property in #ext_generator:
-    - \c id (integer)
-    - \c mol (integer)
 */
 class StaMolecules : public Starter {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+
+    <table class="py_table2">
+      <caption>
+        StaMolecules related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be set</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - \c id : integer
+          - \c atom-ids : array of integers
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+        <td class="py_td">
+          - \c id : integer
+          - \c mol : integer
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

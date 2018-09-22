@@ -4,8 +4,6 @@
   which is a subclass of Invoker class.
   @author Takayuki Kobayashi
   @date 2018/06/23
-  @details For more details, please see the header file,
-  src/invokers/inv_omp.h.
 */
 
 #include "inv_omp.h"

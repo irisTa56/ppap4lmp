@@ -24,11 +24,7 @@
         Constructor of AddMolecularOrientation class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            None.
-          </li>
-        </ul>
+        None.
       </td>
       <td class="py_td">
         Constructed AddMolecularOrientation object.

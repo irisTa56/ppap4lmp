@@ -4,8 +4,6 @@
   which executes one or more analysis.
   @author Takayuki Kobayashi
   @date 2018/06/23
-  @details For more details, please see the header file,
-  src/invokers/invoker.h.
 */
 
 #include "invoker.h"

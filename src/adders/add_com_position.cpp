@@ -4,8 +4,6 @@
   which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/13
-  @details For more details, please see the header file,
-  src/adders/add_com_position.h.
 */
 
 #include "add_com_position.h"

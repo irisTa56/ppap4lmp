@@ -20,10 +20,6 @@
 
   About usage in Python,
   please see src/pybind/starters/py_sta_dump_atoms.h.
-
-  Keys to be set are names of dumped Lammps' atom property.
-  In a Lammps' dump file, the names are printed in a line
-  beginning with <c>ITEM: ATOMS</c>.
 */
 class StaDumpAtoms : public StaDump {
   /*!
@@ -39,6 +35,30 @@ class StaDumpAtoms : public StaDump {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        StaDumpAtoms related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be set</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          Keys to be set are names of dumped Lammps' atom property.
+          In a Lammps' dump file, the names are printed in a line
+          beginning with <c>ITEM: ATOMS</c>.
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

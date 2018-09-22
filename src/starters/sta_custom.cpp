@@ -4,8 +4,6 @@
   which is a subclass of Starter class.
   @author Takayuki Kobayashi
   @date 2018/08/16
-  @details For more details, please see the header file,
-  src/starters/sta_custom.h.
 */
 
 #include "sta_custom.h"

@@ -3,8 +3,6 @@
   @brief This file has an implementation of GenList class.
   @author Takayuki Kobayashi
   @date 2018/07/03
-  @details For more details, please see the header file,
-  src/core/gen_list.h.
 */
 
 #include "gen_list.h"

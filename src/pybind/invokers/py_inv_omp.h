@@ -23,12 +23,8 @@
         Constructor of InvOMP class for one Processor object.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c proc : A Processor object to be executed
-            by the constructed object.
-          </li>
-        </ul>
+        - \c proc : A Processor object to be executed
+          by the constructed object.
       </td>
       <td class="py_td">
         Constructed InvOMP object.
@@ -41,12 +37,8 @@
         Constructor of InvOMP class for multiple Processor objects.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c procs : List of Processor objects to be executed
-            by the constructed object.
-          </li>
-        </ul>
+        - \c procs : List of Processor objects to be executed
+          by the constructed object.
       </td>
       <td class="py_td">
         Constructed InvOMP object.
@@ -73,11 +65,7 @@
         owned by this object.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            None.
-          </li>
-        </ul>
+        None.
       </td>
       <td class="py_td">
         None.

@@ -23,27 +23,44 @@
 
   About usage in Python,
   please see src/pybind/adders/py_add_molecular_orientation.h.
-
-  Key of property to be added:
-    - \c I_values (array of floats; eigenvalues of inertia moment)
-    - \c I_vectors (array of array of floats; eigenvectors of inertia
-    moment)
-    - \c S_x (float)
-    - \c S_y (float)
-    - \c S_z (float)
-
-  Key of required property:
-    - \c I_xx (float)
-    - \c I_yy (float)
-    - \c I_zz (float)
-    - \c I_xy (float)
-    - \c I_xz (float)
-    - \c I_yz (float)
 */
 class AddMolecularOrientation : public Adder {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddMolecularOrientation related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - \c I_values : array of floats
+          (eigenvalues of inertia moment)
+          - \c I_vectors : array of arrays of floats
+          (eigenvectors of inertia moment)
+          - \c S_x : float
+          - \c S_y : float
+          - \c S_z : float
+        </td>
+        <td class="py_td">
+          - \c I_xx : float
+          - \c I_yy : float
+          - \c I_zz : float
+          - \c I_xy : float
+          - \c I_xz : float
+          - \c I_yz : float
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

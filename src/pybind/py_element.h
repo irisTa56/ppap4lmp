@@ -24,11 +24,7 @@
         Element object.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c upd : An object of Adder's or Filter's subclass.
-          </li>
-        </ul>
+        - \c upd : An object of Adder's or Filter's subclass.
       </td>
       <td class="py_td">
         This Element object.
@@ -42,11 +38,7 @@
         \e list.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            None.
-          </li>
-        </ul>
+        None.
       </td>
       <td class="py_td">
         JSON-like object consisting of \e dict and \e list.
@@ -59,11 +51,7 @@
         Get Element::datakeys of this object as a set of strings.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            None.
-          </li>
-        </ul>
+        None.
       </td>
       <td class="py_td">
         Set of strings.
@@ -77,11 +65,7 @@
         this object as an one-dimensional Numpy-Array.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c key : A string key specifying a property to be extracted.
-          </li>
-        </ul>
+        - \c key : A string key specifying a property to be extracted.
       </td>
       <td class="py_td">
         One-dimensional Numpy-Array whose elements are integers.
@@ -95,11 +79,7 @@
         this object as an one-dimensional Numpy-Array.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c key : A string key specifying a property to be extracted.
-          </li>
-        </ul>
+        - \c key : A string key specifying a property to be extracted.
       </td>
       <td class="py_td">
         One-dimensional Numpy-Array whose elements are floats.
@@ -113,12 +93,8 @@
         Element::data of this object as a two-dimensional Numpy-Array.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c *args : A variable number of string keys specifying
-            properties to be extracted.
-          </li>
-        </ul>
+        - \c *args : A variable number of string keys specifying
+          properties to be extracted.
       </td>
       <td class="py_td">
         Two-dimensional Numpy-Array whose elements are integers.
@@ -132,12 +108,8 @@
         Element::data of this object as a two-dimensional Numpy-Array.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c *args : A variable number of string keys specifying
-            properties to be extracted.
-          </li>
-        </ul>
+        - \c *args : A variable number of string keys specifying
+          properties to be extracted.
       </td>
       <td class="py_td">
         Two-dimensional Numpy-Array whose elements are floats.
@@ -166,11 +138,7 @@
         empty Element::data of the created Element object.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c upd : An object of Starter's subclass.
-          </li>
-        </ul>
+        - \c upd : An object of Starter's subclass.
       </td>
       <td class="py_td">
         An object of Element class.

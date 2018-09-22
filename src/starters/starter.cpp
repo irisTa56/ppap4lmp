@@ -4,8 +4,6 @@
   which is a subclass of Updater class.
   @author Takayuki Kobayashi
   @date 2018/06/29
-  @details For more details, please see the header file,
-  src/starters/starter.h.
 */
 
 #include "starter.h"

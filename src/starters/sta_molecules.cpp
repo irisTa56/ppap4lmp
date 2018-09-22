@@ -4,8 +4,6 @@
   which is a subclass of Starter class.
   @author Takayuki Kobayashi
   @date 2018/07/07
-  @details For more details, please see the header file,
-  src/starters/sta_molecules.h.
 */
 
 #include "sta_molecules.h"

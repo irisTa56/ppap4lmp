@@ -130,25 +130,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddWrappedPosition.html" title="AddWrappedPosition adds wrapped positions of an Element object. ">AddWrappedPosition</a> adds wrapped positions of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
 <p>Wrapping is a process to resolve periodic boundary condition; wrapped positions are in the original simulation box.</p>
-<p>About usage in Python, please see <a class="el" href="py__add__wrapped__position_8h.html" title="This file is for binding AddWrappedPosition class to Python. ">src/pybind/adders/py_add_wrapped_position.h</a>.</p>
-<p>Key of property to be added:</p><ul>
-<li><code>x</code> (float)</li>
-<li><code>y</code> (float)</li>
-<li><code>z</code> (float)</li>
-</ul>
-<p>Key of required property:</p><ul>
-<li><code>xu</code> (float)</li>
-<li><code>yu</code> (float)</li>
-<li><code>zu</code> (float)</li>
-</ul>
-<p>Key of required property in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>:</p><ul>
-<li><code>lo_x</code> (float)</li>
-<li><code>lo_y</code> (float)</li>
-<li><code>lo_z</code> (float)</li>
-<li><code>hi_x</code> (float)</li>
-<li><code>hi_y</code> (float)</li>
-<li><code>hi_z</code> (float) </li>
-</ul>
+<p>About usage in Python, please see <a class="el" href="py__add__wrapped__position_8h.html" title="This file is for binding AddWrappedPosition class to Python. ">src/pybind/adders/py_add_wrapped_position.h</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af82c7e41a330a37a9cdcf6ee51a646a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af82c7e41a330a37a9cdcf6ee51a646a0">&#9670;&nbsp;</a></span>AddWrappedPosition()</h2>
@@ -215,12 +197,37 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>I'm sorry to say that source code is the best documentation for this method... </p>
+<a class="anchor" id=""></a>
+<table class="py_table2">
+<caption><a class="el" href="classAddWrappedPosition.html" title="AddWrappedPosition adds wrapped positions of an Element object. ">AddWrappedPosition</a> related properties </caption>
+<tr class="py_tr">
+<th class="py_th2">Key for property to be added </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><ul>
+<li><code>x</code> : float</li>
+<li><code>y</code> : float</li>
+<li><code>z</code> : float  </li>
+</ul>
+</td><td class="py_td"><ul>
+<li><code>xu</code> : float</li>
+<li><code>yu</code> : float</li>
+<li><code>zu</code> : float  </li>
+</ul>
+</td><td class="py_td"><ul>
+<li><code>lo_x</code> : float</li>
+<li><code>lo_y</code> : float</li>
+<li><code>lo_z</code> : float</li>
+<li><code>hi_x</code> : float</li>
+<li><code>hi_y</code> : float</li>
+<li><code>hi_z</code> : float   </li>
+</ul>
+</td></tr>
+</table>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 <div class="dynheader">

@@ -4,8 +4,6 @@
   where an analysis process is programmed.
   @author Takayuki Kobayashi
   @date 2018/06/22
-  @details For more details, please see the header file,
-  src/processors/processor.h.
 */
 
 #include "processor.h"

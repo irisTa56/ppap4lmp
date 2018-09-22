@@ -1,8 +1,10 @@
-/* ---------------------------------------------------------------------
-ProData: stands for Processor which returns Data itself.
-
-create: 2018/06/22 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/pro_data.cpp
+  @brief This file has an implementation of ProData class,
+  which is a subclass of Processor class.
+  @author Takayuki Kobayashi
+  @date 2018/06/22
+*/
 
 #include <alias/pybind.h>
 
@@ -75,6 +77,7 @@ void ProData::run_impl(
 
 void ProData::prepare()
 {
+  results.clear();
   results.resize(n_generators);
 }
 
@@ -92,3 +95,5 @@ const Vec<Json> &ProData::get_results()
 {
   return results;
 }
+
+/* ------------------------------------------------------------------ */

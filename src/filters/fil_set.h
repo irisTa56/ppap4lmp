@@ -16,7 +16,7 @@
   @details An object of this class has a filter defined by #value_sets,
   which is a dictionary consisting of pairs of a string key
   and a set of acceptable values. An element of Element::data can pass
-  this filter only if every value for every key of #value_sets is
+  this filter only if every value for every key for #value_sets is
   included in the corresponding set (a value of #value_sets).
 
   About usage in Python,
@@ -40,7 +40,7 @@ class FilSet : public Filter {
  public:
   /*!
     @brief Constructor of FilSet class.
-    @param value_sets_ : ::Map from a string key of property to
+    @param value_sets_ : ::Map from a string key for property to
     acceptable values of that property.
     This argument is assigned to #value_sets.
     @details Note that keys in the \c value_sets_ must be included

@@ -23,20 +23,12 @@
         Constructor of AddChildIDs class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c elem : \e Child object (such as an Element object
-            containing data for atoms).
-          </li>
-          <li>
-            \c child_name_ : A string for naming the above child object.
-          </li>
-          <li>
-            \c key_for_parent_id_ : A string for key in the child
-            object corresponding to \c id property of parent object
-            (such as an Element object containing data for molecules).
-          </li>
-        </ul>
+        - \c elem : \e Child object (such as an Element object
+          containing data for atoms).
+        - \c child_name_ : A string for naming the above child object.
+        - \c key_for_parent_id_ : A string for key in the child
+          object corresponding to \c id property of parent object
+          (such as an Element object containing data for molecules).
       </td>
       <td class="py_td">
         Constructed AddChildIDs object, which is appended to

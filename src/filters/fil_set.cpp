@@ -4,8 +4,6 @@
   which is a subclass of Filter class.
   @author Takayuki Kobayashi
   @date 2018/07/01
-  @details For more details, please see the header file,
-  src/filters/fil_set.h.
 */
 
 #include "fil_set.h"

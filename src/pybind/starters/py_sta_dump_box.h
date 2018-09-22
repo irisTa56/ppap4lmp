@@ -23,15 +23,9 @@
         Constructor of StaDumpBox class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c filepath_ : A string for path to a Lammps' dump file.
-          </li>
-          <li>
-            \c timestep_ : An integer specifying
-            a timestep of simulation to be parsed.
-          </li>
-        </ul>
+        - \c filepath_ : A string for path to a Lammps' dump file.
+        - \c timestep_ : An integer specifying
+          a timestep of simulation to be parsed.
       </td>
       <td class="py_td">
         Constructed StaDumpBox object.

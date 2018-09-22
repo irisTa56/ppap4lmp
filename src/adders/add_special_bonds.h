@@ -27,12 +27,6 @@
 
   About usage in Python,
   please see src/pybind/adders/py_add_special_bonds.h.
-
-  Key of property to be added:
-    - <c>special-bonds</c> (array of integers)
-
-  Key of required property:
-    - \c atom-ids (array of integers)
 */
 class AddSpecialBonds : public Adder {
   /*!
@@ -47,6 +41,28 @@ class AddSpecialBonds : public Adder {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddSpecialBonds related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - <c>special-bonds</c> : array of integers
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+        <td class="py_td">
+          - \c atom-ids : array of integers
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

@@ -149,7 +149,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> applies a filter defined by comparison operators. </p>
-<p>An object of this class has a filter defined by <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>, which is a list consisting of tuples where the first element is a string key, the second element is a comparison operator and the third element is a right side value of an inequality (or equation). An item of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> can pass this filter only if every value for every key of <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a> satisfies an inequality consisting of the corresponding comparison operator and right side value (the second and third elements of <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>). Note that value(s) of the item is taken as left side value of the inequality.</p>
+<p>An object of this class has a filter defined by <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>, which is a list consisting of tuples where the first element is a string key, the second element is a comparison operator and the third element is a right side value of an inequality (or equation). An item of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> can pass this filter only if every value for every key for <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a> satisfies an inequality consisting of the corresponding comparison operator and right side value (the second and third elements of <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>). Note that value(s) of the item is taken as left side value of the inequality.</p>
 <p>About usage in Python, please see <a class="el" href="py__fil__comparison_8h.html" title="This file is for binding FilComparison class to Python. ">src/pybind/filters/py_fil_comparison.h</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8745e2f1f5e800300ee23cad73ad4ddf"></a>
@@ -245,12 +245,11 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>I'm sorry to say that source code is the best documentation for this method... </p>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 <div class="dynheader">

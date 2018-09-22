@@ -4,8 +4,6 @@
   class, which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/16
-  @details For more details, please see the header file,
-  src/adders/add_molecular_orientation.h.
 */
 
 #include <Eigen/Eigenvalues>

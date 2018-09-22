@@ -23,12 +23,8 @@
         Constructor of StaMolecules class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c el_atoms : An Element object for atoms
-            forming molecules to be computed.
-          </li>
-        </ul>
+        - \c el_atoms : An Element object for atoms
+          forming molecules to be computed.
       </td>
       <td class="py_td">
         Constructed StaMolecules object.

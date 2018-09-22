@@ -23,13 +23,9 @@
         Constructor of FilComparison class for one criterion.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c comparison_ : A 3-elements tuple consisting of
-            a string key, and comparison operator and right side value
-            of an inequality (or equation) used as a criterion.
-          </li>
-        </ul>
+        - \c comparison_ : A 3-elements tuple consisting of
+          a string key, and comparison operator and right side value
+          of an inequality (or equation) used as a criterion.
       </td>
       <td class="py_td">
         Constructed FilComparison object.
@@ -42,12 +38,8 @@
         Constructor of FilComparison class for multiple criteria.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c comparisons_ : List of 3-elements tuples. Contents of
-            each tuple is the same as for the case of one criterion.
-          </li>
-        </ul>
+        - \c comparisons_ : List of 3-elements tuples. Contents of
+          each tuple is the same as for the case of one criterion.
       </td>
       <td class="py_td">
         Constructed FilComparison object.

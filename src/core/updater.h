@@ -58,10 +58,8 @@ class Updater {
     @param data : Mutable reference to Element::data
     where computed properties are added to.
     @param datakeys : Mutable reference to Element::datakeys
-    where keys of computed properties are added to.
+    where keys for computed properties are added to.
     @return None.
-    @details I'm sorry to say that source code is the best
-    documentation for this method...
   */
   virtual void compute_impl(Json &, DataKeys &) = 0;
   /*!
@@ -89,7 +87,7 @@ class Updater {
     @param data : Mutable reference to Element::data where computed
     properties are added to.
     @param datakeys : Mutable reference to Element::datakeys where keys
-    of computed properties are added to.
+    for computed properties are added to.
     @param dataid : Constant integer copied from Element::dataid.
     @return None.
     @details This is a pure virtual function, please see the subclasses

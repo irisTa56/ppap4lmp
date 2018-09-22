@@ -4,8 +4,6 @@
   which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/07/07
-  @details For more details, please see the header file,
-  src/adders/add_wrapped_position.h.
 */
 
 #include "add_wrapped_position.h"

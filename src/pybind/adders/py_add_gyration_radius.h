@@ -23,11 +23,7 @@
         Constructor of AddGyrationRadius class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            None.
-          </li>
-        </ul>
+        None.
       </td>
       <td class="py_td">
         Constructed AddGyrationRadius object, which is appended to
@@ -57,13 +53,9 @@
         radius itself.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c add_squared_ : A boolean, whether squared gyration
-            radius is computed or not. No argument leads to enabling
-            the computation.
-          </li>
-        </ul>
+        - \c add_squared_ : A boolean, whether squared gyration
+          radius is computed or not. No argument leads to enabling
+          the computation.
       </td>
       <td class="py_td">
         This AddGyrationRadius object.
@@ -76,13 +68,9 @@
         Disable to compute gyration radius (skipping root-squaring).
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c without_sqrted_ : A boolean, whether computing gyration
-            radius is skipped or not. No argument leads to skipping
-            the computation.
-          </li>
-        </ul>
+        - \c without_sqrted_ : A boolean, whether computing gyration
+          radius is skipped or not. No argument leads to skipping
+          the computation.
       </td>
       <td class="py_td">
         This AddGyrationRadius object.

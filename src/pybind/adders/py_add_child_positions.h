@@ -23,15 +23,9 @@
         Constructor of AddChildPositions class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c elem : \e Child object (such as an Element object
-            containing data for atoms).
-          </li>
-          <li>
-            \c child_name_ : A string for naming the above child object.
-          </li>
-        </ul>
+        - \c elem : \e Child object (such as an Element object
+          containing data for atoms).
+        - \c child_name_ : A string for naming the above child object.
       </td>
       <td class="py_td">
         Constructed AddChildPositions object, which is appended to

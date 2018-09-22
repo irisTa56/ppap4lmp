@@ -3,8 +3,6 @@
   @brief This file has an implementation of GenDict class.
   @author Takayuki Kobayashi
   @date 2018/07/03
-  @details For more details, please see the header file,
-  src/core/gen_dict.h.
 */
 
 #include "gen_dict.h"

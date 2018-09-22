@@ -2,11 +2,17 @@
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
-  table-layout: fixed;
   margin-top: 20px;
 }
 
-.py_table, .py_td, .py_th {
+.py_table2 {
+  width: 60%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.py_table, .py_table2, .py_td, .py_th, .py_th2 {
   border: 1px solid black;
 }
 
@@ -17,10 +23,13 @@
   word-wrap: break-word;
 }
 
-.py_tr:hover {background-color: #f5f5f5;}
-
 .py_th {
-  background-color: rgb(61, 88, 207);
+  background-color: rgb(20, 160, 160);
+  color: white;
+}
+
+.py_th2 {
+  background-color: rgb(120, 80, 160);
   color: white;
 }
 
@@ -35,4 +44,9 @@
 
 .main_page_h2 {
   margin-top: 40px;
+}
+
+.section_note {
+  background-color: #ffffcc;
+  border-left: 6px solid #ffeb3b;
 }

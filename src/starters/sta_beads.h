@@ -23,18 +23,6 @@
 
   About usage in Python,
   please see src/pybind/starters/py_sta_beads.h.
-
-  Key of property to be added:
-    - \c id (integer)
-    - \c mol (integer)
-    - \c atom-ids (array of integers)
-
-  Key of property to be added (optional):
-    - \c type (integer)
-    - \c atom-weights (array of floats)
-
-  Key of required property in #ext_generator:
-    - \c atom-ids (array of integers)
 */
 class StaBeads : public Starter {
   /*!
@@ -63,6 +51,34 @@ class StaBeads : public Starter {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        StaBeads related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be set</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - \c id : integer
+          - \c mol : integer
+          - \c atom-ids : array of integers
+
+          [optional]
+          - \c type : integer
+          - \c atom-weights : array of floats
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+        <td class="py_td">
+          - \c atom-ids : array of integers
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

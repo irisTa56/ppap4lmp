@@ -143,18 +143,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classStaDumpBox.html" title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. ">StaDumpBox</a> reads a Lammps' dump file and sets properties for simulation box. </p>
 <p>An object of this class reads properties of simulation box from a Lammps' dump file specified by <a class="el" href="classStaDump.html#a17cb48666fa24479e4afbc8107164a80" title="A path to a Lammps&#39; dump file to be read. ">filepath</a>. Note that only properties at a time specified by <a class="el" href="classStaDump.html#ac6418b4fefd459b4846d8c3c0ae225b8" title="A timestep of simulation to be read. ">timestep</a> are read.</p>
-<p>About usage in Python, please see <a class="el" href="py__sta__dump__box_8h.html" title="This file is for binding StaDumpBox class to Python. ">src/pybind/starters/py_sta_dump_box.h</a>.</p>
-<p>Key of property to be added:</p><ul>
-<li><code>periodic_x</code> (boolean)</li>
-<li><code>periodic_y</code> (boolean)</li>
-<li><code>periodic_z</code> (boolean)</li>
-<li><code>lo_x</code> (float)</li>
-<li><code>lo_y</code> (float)</li>
-<li><code>lo_z</code> (float)</li>
-<li><code>hi_x</code> (float)</li>
-<li><code>hi_y</code> (float)</li>
-<li><code>hi_z</code> (float) </li>
-</ul>
+<p>About usage in Python, please see <a class="el" href="py__sta__dump__box_8h.html" title="This file is for binding StaDumpBox class to Python. ">src/pybind/starters/py_sta_dump_box.h</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af25a2a80d9607d892b78d78cd725692e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af25a2a80d9607d892b78d78cd725692e">&#9670;&nbsp;</a></span>compute_impl()</h2>
@@ -194,12 +183,30 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>I'm sorry to say that source code is the best documentation for this method... </p>
+<a class="anchor" id=""></a>
+<table class="py_table2">
+<caption><a class="el" href="classStaDumpBox.html" title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. ">StaDumpBox</a> related properties </caption>
+<tr class="py_tr">
+<th class="py_th2">Key for property to be set </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><ul>
+<li><code>periodic_x</code> : boolean</li>
+<li><code>periodic_y</code> : boolean</li>
+<li><code>periodic_z</code> : boolean</li>
+<li><code>lo_x</code> : float</li>
+<li><code>lo_y</code> : float</li>
+<li><code>lo_z</code> : float</li>
+<li><code>hi_x</code> : float</li>
+<li><code>hi_y</code> : float</li>
+<li><code>hi_z</code> : float  </li>
+</ul>
+</td><td class="py_td">None.  </td><td class="py_td">None.   </td></tr>
+</table>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 <div class="dynheader">

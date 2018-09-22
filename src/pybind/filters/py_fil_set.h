@@ -23,12 +23,8 @@
         Constructor of FilSet class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c value_sets_ : Dictionary from a string key of property
-            to acceptable values of that property.
-          </li>
-        </ul>
+        - \c value_sets_ : Dictionary from a string key for property
+          to acceptable values of that property.
       </td>
       <td class="py_td">
         Constructed FilSet object.

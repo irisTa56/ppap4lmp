@@ -23,19 +23,13 @@
         Constructor of AddSpecialBonds class for one molecular type.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c el_mols : A molecular Element object consisting of
-            an atomic (or bead) Element object where the constructed
-            object is appended to.
-          </li>
-          <li>
-            \c scheme : List of lists of zero-based index of atoms in a
-            molecule. For example, \e i th atom has \e j th atom as
-            one of the special bonds when \e i th list of the \c scheme
-            contains \e j.
-          </li>
-        </ul>
+        - \c el_mols : A molecular Element object consisting of
+          an atomic (or bead) Element object where the constructed
+          object is appended to.
+        - \c scheme : List of lists of zero-based index of atoms in a
+          molecule. For example, \e i th atom has \e j th atom as
+          one of the special bonds when \e i th list of the \c scheme
+          contains \e j.
       </td>
       <td class="py_td">
         Constructed AddSpecialBonds object.
@@ -49,19 +43,13 @@
         types.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c el_mols : A molecular Element object consisting of
-            an atomic (or bead) Element object where the constructed
-            object is appended to.
-          </li>
-          <li>
-            \c schemes : Dictionary where the keys are molecular types
-            and the values are lists of lists of zero-based index of
-            atoms in a molecule. Description of each list is the same
-            as for the case of one molecular type.
-          </li>
-        </ul>
+        - \c el_mols : A molecular Element object consisting of
+          an atomic (or bead) Element object where the constructed
+          object is appended to.
+        - \c schemes : Dictionary where the keys are molecular types
+          and the values are lists of lists of zero-based index of
+          atoms in a molecule. Description of each list is the same
+          as for the case of one molecular type.
       </td>
       <td class="py_td">
         Constructed AddSpecialBonds object.

@@ -28,21 +28,11 @@
 
   About usage in Python,
   please see src/pybind/adders/py_add_child_ids.h.
-
-  Key of property to be added:
-    - <c>[child_name]-ids</c> (array of integers)
-
-  Key of required property:
-    - \c id (integer)
-
-  Key of required property in #ext_generator:
-    - \c id (integer)
-    - <c>[key_for_parent_id]</c> (integer)
 */
 class AddChildIDs : public Adder {
   /*!
     @brief Name of \e child object stored as #ext_generator.
-    @details The key of property added by this class is named as
+    @details The key for property added by this class is named as
     <c>[child_name]-ids</c>.
   */
   Str child_name;
@@ -54,6 +44,29 @@ class AddChildIDs : public Adder {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddChildIDs related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - <c>[child_name]-ids</c> : array of integers
+        </td>
+        <td class="py_td">
+          - \c id : integer
+        </td>
+        <td class="py_td">
+          - \c id : integer
+          - <c>[key_for_parent_id]</c> : integer
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

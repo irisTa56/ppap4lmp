@@ -23,11 +23,7 @@
         Switch on/off logging (logging is disabled by default).
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c input : Boolean whether enable the logging or not.
-          </li>
-        </ul>
+        - \c input : Boolean whether enable the logging or not.
       </td>
       <td class="py_td">
         None.

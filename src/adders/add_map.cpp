@@ -4,8 +4,6 @@
   which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/06/24
-  @details For more details, please see the header file,
-  src/adders/add_map.h.
 */
 
 #include "add_map.h"

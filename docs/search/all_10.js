@@ -5,6 +5,7 @@ var searchData=
   ['remove',['remove',['../classDataKeys.html#ac06bc8ecc2ff5a774c358f85df959b19',1,'DataKeys']]],
   ['remove_5ffrom_5fblacklist',['remove_from_blacklist',['../classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b',1,'Updater']]],
   ['required',['required',['../classDataKeys.html#a03517cffe825c983c3582ffb55318a7b',1,'DataKeys::required()'],['../classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517',1,'Element::required()']]],
+  ['results',['results',['../classProData.html#a63c6941d4165d627e28f899d94a7225a',1,'ProData']]],
   ['rowarrayxd',['RowArrayXd',['../eigen_8h.html#a2ae603ffa373fd61ce314f3ec601e858',1,'eigen.h']]],
   ['rowarrayxi',['RowArrayXi',['../eigen_8h.html#a4876d7a9fae00369a2ea3926288d1743',1,'eigen.h']]],
   ['rowvector3d',['RowVector3d',['../eigen_8h.html#a3f795fff7442e68a6adcd937ef1972a3',1,'eigen.h']]],

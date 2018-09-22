@@ -23,7 +23,7 @@
 
   Element class is different from Generator, GenDict and GenList by
   owning data \e element (or \e entity). The data is stored as #data,
-  and a set of keys of property in the data is stored as #datakeys.
+  and a set of keys for properties in the data is stored as #datakeys.
   Note that #data can be either an array ::Json object or
   a non-array ::Json object. A non-array ::Json object consists of
   items: pairs of a string key and int/bool/double/string/array value.
@@ -173,7 +173,7 @@ class Element : public Generator, public EnShThis<Element> {
     @return ::Json (not a reference).
     @details One can get the partial data stored in this object by
     this method. To select which property is included in returned
-    ::Json, pass a string key of the property as \c key_.
+    ::Json, pass a string key for the property as \c key_.
   */
   Json get_data(
     const Json &key_);
@@ -188,7 +188,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief Extract values of a property in #data as an one-dimensional
     Eigen-Array.
     @param array : Mutable reference to ::ArrayXi or ::ArrayXd.
-    @param key : A string key of a property to be extracted.
+    @param key : A string key for a property to be extracted.
     @return None.
     @details If one passed ::ArrayXi or ::ArrayXd as a reference, this
     method fills it by values of a property specified by \c key.
@@ -201,7 +201,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief Extract values of properties in #data as a two-dimensional
     Eigen-Array.
     @param array : Mutable reference to ::ArrayXXi or ::ArrayXXd.
-    @param keys : ::Vec of string keys of properties to be extracted.
+    @param keys : ::Vec of string keys for properties to be extracted.
     @return None.
     @details If one passed ::ArrayXXi or ::ArrayXXd as a reference,
     this method fills it by values of some properties specified by \c

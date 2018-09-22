@@ -23,11 +23,7 @@
         Constructor of StaCopy class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c elem : An Element object to be copied.
-          </li>
-        </ul>
+        - \c elem : An Element object to be copied.
       </td>
       <td class="py_td">
         Constructed StaCopy object.

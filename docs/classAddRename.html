@@ -132,7 +132,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a0fa3d1975fec055f7c3be137f514025a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cee8b024b290bc2ffa86cf8b91fc92b"><td class="memItemLeft" align="right" valign="top"><a id="a9cee8b024b290bc2ffa86cf8b91fc92b"></a>
 <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddRename.html#a9cee8b024b290bc2ffa86cf8b91fc92b">key_old</a></td></tr>
-<tr class="memdesc:a9cee8b024b290bc2ffa86cf8b91fc92b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key of an existing property to be renamed. <br /></td></tr>
+<tr class="memdesc:a9cee8b024b290bc2ffa86cf8b91fc92b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key for an existing property to be renamed. <br /></td></tr>
 <tr class="separator:a9cee8b024b290bc2ffa86cf8b91fc92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fcdc6a29437bbccfd265972e7fc50ec"><td class="memItemLeft" align="right" valign="top"><a id="a9fcdc6a29437bbccfd265972e7fc50ec"></a>
 <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddRename.html#a9fcdc6a29437bbccfd265972e7fc50ec">key_new</a></td></tr>
@@ -149,13 +149,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> renames an existing property. </p>
 <p>An object of this class simply renames an existing property; that is, copies values of the existing property, names the values as a new user-defined name, and then deletes the old property.</p>
-<p>About usage in Python, please see <a class="el" href="py__add__rename_8h.html" title="This file is for binding AddRename class to Python. ">src/pybind/adders/py_add_rename.h</a>.</p>
-<p>Key of property to be added:</p><ul>
-<li><code>[key_new]</code> (any type)</li>
-</ul>
-<p>Key of required property:</p><ul>
-<li><code>[key_old]</code> (any type) </li>
-</ul>
+<p>About usage in Python, please see <a class="el" href="py__add__rename_8h.html" title="This file is for binding AddRename class to Python. ">src/pybind/adders/py_add_rename.h</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3119359de9028c40ed5fbf24b5fc3a46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3119359de9028c40ed5fbf24b5fc3a46">&#9670;&nbsp;</a></span>AddRename()</h2>
@@ -186,8 +180,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor of <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key_old_</td><td>: A string key of an existing property to be renamed. This argument is assigned to <a class="el" href="classAddRename.html#a9cee8b024b290bc2ffa86cf8b91fc92b" title="Key of an existing property to be renamed. ">key_old</a>. </td></tr>
-    <tr><td class="paramname">key_new_</td><td>: A string key by which the old key of the existing property is renamed. This argument is assigned to <a class="el" href="classAddRename.html#a9fcdc6a29437bbccfd265972e7fc50ec" title="New key by which the existing property is renamed. ">key_new</a>. </td></tr>
+    <tr><td class="paramname">key_old_</td><td>: A string key for an existing property to be renamed. This argument is assigned to <a class="el" href="classAddRename.html#a9cee8b024b290bc2ffa86cf8b91fc92b" title="Key for an existing property to be renamed. ">key_old</a>. </td></tr>
+    <tr><td class="paramname">key_new_</td><td>: A string key by which the old key for the existing property is renamed. This argument is assigned to <a class="el" href="classAddRename.html#a9fcdc6a29437bbccfd265972e7fc50ec" title="New key by which the existing property is renamed. ">key_new</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -233,12 +227,25 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>I'm sorry to say that source code is the best documentation for this method... </p>
+<a class="anchor" id=""></a>
+<table class="py_table2">
+<caption><a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> related properties </caption>
+<tr class="py_tr">
+<th class="py_th2">Key for property to be added </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><ul>
+<li><code>[key_new]</code> : any type  </li>
+</ul>
+</td><td class="py_td"><ul>
+<li><code>[key_old]</code> : any type  </li>
+</ul>
+</td><td class="py_td">None.   </td></tr>
+</table>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 <div class="dynheader">

@@ -22,13 +22,6 @@
 
   About usage in Python,
   please see src/pybind/adders/py_add_map.h.
-
-  Key of property to be added:
-    - <c>[key_new]</c> (any type)
-
-  Key of required property:
-    - <c>[key_ref]</c> (any type; but, in most cases, integer or
-    strings)
 */
 class AddMap : public Adder, public EnShThis<AddMap> {
   /*!
@@ -37,12 +30,12 @@ class AddMap : public Adder, public EnShThis<AddMap> {
   */
   bool do_overwrite = false;
   /*!
-    @brief Key of an existing property (domain of the mapping).
+    @brief Key for an existing property (domain of the mapping).
     @details \c key_ref stands for key referenced from the mapping.
   */
   Str key_ref;
   /*!
-    @brief Key of a new property to be added (codomain of the mapping).
+    @brief Key for a new property to be added (codomain of the mapping).
   */
   Str key_new;
   /*!
@@ -59,6 +52,29 @@ class AddMap : public Adder, public EnShThis<AddMap> {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddMap related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - <c>[key_new]</c> : any type
+        </td>
+        <td class="py_td">
+          - <c>[key_ref]</c> : any type
+          (but, in most cases, integer or strings)
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

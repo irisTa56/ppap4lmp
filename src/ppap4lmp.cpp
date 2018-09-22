@@ -17,8 +17,7 @@
   which stands for PostProcess and Analysis Program for LAMMPS.
 
   GitHub repository is
-  <a href="https://github.com/irisTa56/ppap4lmp">
-    here</a>.
+  <a href="https://github.com/irisTa56/ppap4lmp">here</a>.
 
   @section install_sec Installation
 
@@ -29,8 +28,7 @@
   @endcode
 
   For more details, please see
-  <a href="https://github.com/irisTa56/ppap4lmp#installation">
-  GitHub repository</a>.
+  <a href="https://github.com/irisTa56/ppap4lmp#installation">GitHub repository</a>.
 
   @section feat_sec Features
 
@@ -127,17 +125,31 @@
   @copydetails src/pybind/filters/py_fil_comparison.h
   @copydetails src/pybind/filters/py_fil_set.h
 
+  @section property_sec List of Properties
+
+  @note Key for externally required property means that the key must be in Element::datakeys of Updater::ext_generator.
+
+  @copydetails StaBeads::compute_impl
+  @copydetails StaDumpAtoms::compute_impl
+  @copydetails StaDumpBox::compute_impl
+  @copydetails StaMolecules::compute_impl
+  <br/>
+  @copydetails AddChildIDs::compute_impl
+  @copydetails AddChildPositions::compute_impl
+  @copydetails AddCoMPosition::compute_impl
+  @copydetails AddGyrationRadius::compute_impl
+  @copydetails AddInertiaMoment::compute_impl
+  @copydetails AddMap::compute_impl
+  @copydetails AddMolecularOrientation::compute_impl
+  @copydetails AddRename::compute_impl
+  @copydetails AddSpecialBonds::compute_impl
+  @copydetails AddWrappedPosition::compute_impl
+
   @section acknowledge_sec Acknowledgement
 
   This project would not be possible without the following great open-source projects.
 
-  - <a href="https://github.com/pybind/pybind11">
-      pybind11
-    </a>
-  - <a href="https://github.com/nlohmann/json">
-      nlohmann/json
-    </a>
-  - <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">
-      Eigen
-    </a>
+  - <a href="https://github.com/pybind/pybind11">pybind11</a>
+  - <a href="https://github.com/nlohmann/json">nlohmann/json</a>
+  - <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>
  */

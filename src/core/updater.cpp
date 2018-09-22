@@ -4,8 +4,6 @@
   which is one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/29
-  @details For more details, please see the header file,
-  src/core/updater.h.
 */
 
 #include "updater.h"

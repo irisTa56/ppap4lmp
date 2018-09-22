@@ -23,12 +23,8 @@
         Constructor of AddInertiaMoment class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c elem : \e Child object (such as an Element object
-            containing data for atoms).
-          </li>
-        </ul>
+        - \c elem : \e Child object (such as an Element object
+          containing data for atoms).
       </td>
       <td class="py_td">
         Constructed AddInertiaMoment object, which is appended to

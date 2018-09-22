@@ -71,6 +71,11 @@ $(function() {
 <div class="title">ProData Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> copies <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> from <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>.  
+ <a href="classProData.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pro__data_8h_source.html">pro_data.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ProData:</div>
 <div class="dyncontent">
@@ -84,20 +89,20 @@ Collaboration diagram for ProData:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afcff6bc44862d6f5a42877d1623606b2"><td class="memItemLeft" align="right" valign="top"><a id="afcff6bc44862d6f5a42877d1623606b2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ProData</b> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memitem:afcff6bc44862d6f5a42877d1623606b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProData.html#afcff6bc44862d6f5a42877d1623606b2">ProData</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:afcff6bc44862d6f5a42877d1623606b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class for one <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  <a href="#afcff6bc44862d6f5a42877d1623606b2">More...</a><br /></td></tr>
 <tr class="separator:afcff6bc44862d6f5a42877d1623606b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea831016a9ba366a8e352a19f0808e65"><td class="memItemLeft" align="right" valign="top"><a id="aea831016a9ba366a8e352a19f0808e65"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ProData</b> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &gt; &amp;elems)</td></tr>
+<tr class="memitem:aea831016a9ba366a8e352a19f0808e65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProData.html#aea831016a9ba366a8e352a19f0808e65">ProData</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &gt; &amp;elems)</td></tr>
+<tr class="memdesc:aea831016a9ba366a8e352a19f0808e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class for a trajectory of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects.  <a href="#aea831016a9ba366a8e352a19f0808e65">More...</a><br /></td></tr>
 <tr class="separator:aea831016a9ba366a8e352a19f0808e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9e7c6519093995de3132d4bca7e7b1f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProData.html#ad9e7c6519093995de3132d4bca7e7b1f">prepare</a> () override</td></tr>
-<tr class="memdesc:ad9e7c6519093995de3132d4bca7e7b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare analysis.  <a href="#ad9e7c6519093995de3132d4bca7e7b1f">More...</a><br /></td></tr>
+<tr class="memdesc:ad9e7c6519093995de3132d4bca7e7b1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear and resize <a class="el" href="classProData.html#a63c6941d4165d627e28f899d94a7225a" title="List in which Json objects consisting of copied properties are stored. ">results</a>.  <a href="#ad9e7c6519093995de3132d4bca7e7b1f">More...</a><br /></td></tr>
 <tr class="separator:ad9e7c6519093995de3132d4bca7e7b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15154c6692dda916207fa21316794474"><td class="memItemLeft" align="right" valign="top"><a id="a15154c6692dda916207fa21316794474"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>select</b> (const py::args &amp;args)</td></tr>
+<tr class="memitem:a15154c6692dda916207fa21316794474"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProData.html#a15154c6692dda916207fa21316794474">select</a> (const py::args &amp;args)</td></tr>
+<tr class="memdesc:a15154c6692dda916207fa21316794474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify string keys for properties to be copied.  <a href="#a15154c6692dda916207fa21316794474">More...</a><br /></td></tr>
 <tr class="separator:a15154c6692dda916207fa21316794474"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1451afb048021490fedb426701485eae"><td class="memItemLeft" align="right" valign="top"><a id="a1451afb048021490fedb426701485eae"></a>
-const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_results</b> ()</td></tr>
+<tr class="memitem:a1451afb048021490fedb426701485eae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProData.html#a1451afb048021490fedb426701485eae">get_results</a> ()</td></tr>
+<tr class="memdesc:a1451afb048021490fedb426701485eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classProData.html#a63c6941d4165d627e28f899d94a7225a" title="List in which Json objects consisting of copied properties are stored. ">results</a>.  <a href="#a1451afb048021490fedb426701485eae">More...</a><br /></td></tr>
 <tr class="separator:a1451afb048021490fedb426701485eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classProcessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classProcessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classProcessor.html">Processor</a></td></tr>
 <tr class="memitem:a8cf3818c9a256c5acc8e7f21b8d76240 inherit pub_methods_classProcessor"><td class="memItemLeft" align="right" valign="top"><a id="a8cf3818c9a256c5acc8e7f21b8d76240"></a>
@@ -131,11 +136,11 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a4fef67f454d09a9a5ce89f069dd6d0a3"><td class="memItemLeft" align="right" valign="top"><a id="a4fef67f454d09a9a5ce89f069dd6d0a3"></a>
-<a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>selected_keys</b></td></tr>
+<tr class="memitem:a4fef67f454d09a9a5ce89f069dd6d0a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProData.html#a4fef67f454d09a9a5ce89f069dd6d0a3">selected_keys</a></td></tr>
+<tr class="memdesc:a4fef67f454d09a9a5ce89f069dd6d0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of string keys for properties to be copied.  <a href="#a4fef67f454d09a9a5ce89f069dd6d0a3">More...</a><br /></td></tr>
 <tr class="separator:a4fef67f454d09a9a5ce89f069dd6d0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c6941d4165d627e28f899d94a7225a"><td class="memItemLeft" align="right" valign="top"><a id="a63c6941d4165d627e28f899d94a7225a"></a>
-<a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>results</b></td></tr>
+<tr class="memitem:a63c6941d4165d627e28f899d94a7225a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProData.html#a63c6941d4165d627e28f899d94a7225a">results</a></td></tr>
+<tr class="memdesc:a63c6941d4165d627e28f899d94a7225a"><td class="mdescLeft">&#160;</td><td class="mdescRight">List in which <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects consisting of copied properties are stored.  <a href="#a63c6941d4165d627e28f899d94a7225a">More...</a><br /></td></tr>
 <tr class="separator:a63c6941d4165d627e28f899d94a7225a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -148,7 +153,99 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:a4ba2563ea3dd3e700e4a9e1e6cee524c inherit pro_attribs_classProcessor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generators objects to be used for analysis.  <a href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">More...</a><br /></td></tr>
 <tr class="separator:a4ba2563ea3dd3e700e4a9e1e6cee524c inherit pro_attribs_classProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> copies <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> from <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </p>
+<p>An object of this class makes a list of <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects by copying all or some properties of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects stored in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>.</p>
+<p>About usage in Python, please see <a class="el" href="py__pro__data_8h.html" title="This file is for binding AddRename class to Python. ">src/pybind/processors/py_pro_data.h</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afcff6bc44862d6f5a42877d1623606b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcff6bc44862d6f5a42877d1623606b2">&#9670;&nbsp;</a></span>ProData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProData::ProData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>elem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class for one <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elem</td><td>: Shared pointer to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. This argument is registered with <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> by <a class="el" href="classProcessor.html#a62bfda67b126ce2ab18014037aec5c0b" title="Store an object of Element, GenDict or GenList class in generators. ">register_generator</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classProData_afcff6bc44862d6f5a42877d1623606b2_cgraph.svg" width="315" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aea831016a9ba366a8e352a19f0808e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea831016a9ba366a8e352a19f0808e65">&#9670;&nbsp;</a></span>ProData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProData::ProData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>elems</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects in generators. ">ProData</a> class for a trajectory of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elems</td><td>: <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of Shared pointers to <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects. This argument is registered with <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> by <a class="el" href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350" title="Store objects of Element, GenDict or GenList class in generators. ">register_generators</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classProData_aea831016a9ba366a8e352a19f0808e65_cgraph.svg" width="315" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1451afb048021490fedb426701485eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1451afb048021490fedb426701485eae">&#9670;&nbsp;</a></span>get_results()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &gt; &amp; ProData::get_results </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get <a class="el" href="classProData.html#a63c6941d4165d627e28f899d94a7225a" title="List in which Json objects consisting of copied properties are stored. ">results</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A private member of this class, <a class="el" href="classProData.html#a63c6941d4165d627e28f899d94a7225a" title="List in which Json objects consisting of copied properties are stored. ">results</a>. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classProData_a1451afb048021490fedb426701485eae_icgraph.svg" width="318" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="ad9e7c6519093995de3132d4bca7e7b1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9e7c6519093995de3132d4bca7e7b1f">&#9670;&nbsp;</a></span>prepare()</h2>
 
@@ -172,9 +269,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Prepare analysis. </p>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This method is called in <a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c" title="Execute analysis defined by elements of processors. ">Invoker::execute</a>. Please see the subclasses for more details. Note that some subclasses do nothing by this method. </p>
+<p>Clear and resize <a class="el" href="classProData.html#a63c6941d4165d627e28f899d94a7225a" title="List in which Json objects consisting of copied properties are stored. ">results</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classProcessor.html#ae402da6f2bad22f074987a9d15fffc73">Processor</a>.</p>
 
@@ -212,15 +308,103 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This is a pure virtual function, please see the subclasses for more details. </p>
+<p>I'm sorry to say that source code is the best documentation for this method... </p>
 
 <p>Implements <a class="el" href="classProcessor.html#a46c873071eb6309273eb330b6b837a40">Processor</a>.</p>
 
 </div>
 </div>
+<a id="a15154c6692dda916207fa21316794474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15154c6692dda916207fa21316794474">&#9670;&nbsp;</a></span>select()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProData::select </td>
+          <td>(</td>
+          <td class="paramtype">const py::args &amp;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specify string keys for properties to be copied. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>: An ordered list of string keys (<code>*args</code> in Python). This argument is converted to be stored as <a class="el" href="classProData.html#a4fef67f454d09a9a5ce89f069dd6d0a3" title="List of string keys for properties to be copied. ">selected_keys</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classProData_a15154c6692dda916207fa21316794474_cgraph.svg" width="310" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classProData_a15154c6692dda916207fa21316794474_icgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a63c6941d4165d627e28f899d94a7225a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c6941d4165d627e28f899d94a7225a">&#9670;&nbsp;</a></span>results</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>&gt; ProData::results</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List in which <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects consisting of copied properties are stored. </p>
+<p>Index in this member corresponds that in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </p>
+
+</div>
+</div>
+<a id="a4fef67f454d09a9a5ce89f069dd6d0a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fef67f454d09a9a5ce89f069dd6d0a3">&#9670;&nbsp;</a></span>selected_keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&gt; ProData::selected_keys</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of string keys for properties to be copied. </p>
+<p>If this member is empty, all properties of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects are copied. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/processors/<a class="el" href="pro__data_8h_source.html">pro_data.h</a></li>
-<li>src/processors/pro_data.cpp</li>
+<li>src/processors/<a class="el" href="pro__data_8cpp.html">pro_data.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

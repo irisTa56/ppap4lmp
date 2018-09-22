@@ -32,7 +32,7 @@ class Adder : public Updater {
     @param data : Mutable reference to Element::data where computed
     properties are added to.
     @param datakeys : Mutable reference to Element::datakeys where keys
-    of computed properties are added to.
+    for computed properties are added to.
     @param dataid : Constant integer copied from Element::dataid.
     @return None.
     @details This method checks if \c dataid is in #dataid_blacklist.

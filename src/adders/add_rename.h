@@ -19,12 +19,6 @@
 
   About usage in Python,
   please see src/pybind/adders/py_add_rename.h.
-
-  Key of property to be added:
-    - <c>[key_new]</c> (any type)
-
-  Key of required property:
-    - <c>[key_old]</c> (any type)
 */
 class AddRename : public Adder, public EnShThis<AddRename> {
   /*!
@@ -33,7 +27,7 @@ class AddRename : public Adder, public EnShThis<AddRename> {
   */
   bool do_overwrite = false;
   /*!
-    @brief Key of an existing property to be renamed.
+    @brief Key for an existing property to be renamed.
   */
   Str key_old;
   /*!
@@ -43,6 +37,28 @@ class AddRename : public Adder, public EnShThis<AddRename> {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddRename related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - <c>[key_new]</c> : any type
+        </td>
+        <td class="py_td">
+          - <c>[key_old]</c> : any type
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,
@@ -50,11 +66,11 @@ class AddRename : public Adder, public EnShThis<AddRename> {
  public:
   /*!
     @brief Constructor of AddRename class.
-    @param key_old_ : A string key of an existing property to be
+    @param key_old_ : A string key for an existing property to be
     renamed.
     This argument is assigned to #key_old.
-    @param key_new_ : A string key by which the old key of the existing
-    property is renamed.
+    @param key_new_ : A string key by which the old key
+    for the existing property is renamed.
     This argument is assigned to #key_new.
   */
   AddRename(

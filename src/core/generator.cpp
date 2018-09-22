@@ -4,8 +4,6 @@
   is one of the cores of this program.
   @author Takayuki Kobayashi
   @date 2018/06/21
-  @details For more details, please see the header file,
-  src/core/generator.h.
 */
 
 #include "generator.h"

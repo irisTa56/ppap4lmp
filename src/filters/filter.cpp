@@ -4,8 +4,6 @@
   which is a subclass of Updater class.
   @author Takayuki Kobayashi
   @date 2018/06/30
-  @details For more details, please see the header file,
-  src/filters/filter.h.
 */
 
 #include "filter.h"

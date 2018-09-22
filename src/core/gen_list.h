@@ -26,7 +26,7 @@ class GenList : public Generator {
  public:
   /*!
     @brief Constructor of GenList class.
-    @param generator_list_ : A list of shared pointers of
+    @param generator_list_ : List of shared pointers of
     Generator class.
     This argument is assigned to #generator_list.
     @details This constructor is thread-unsafe because it accesses

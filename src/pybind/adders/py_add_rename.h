@@ -23,16 +23,10 @@
         Constructor of AddRename class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c key_old_ : A string key for an existing property to be
-            renamed.
-          </li>
-          <li>
-            \c key_new_ : A string key by which the old key of the
-            existing property is renamed.
-          </li>
-        </ul>
+        - \c key_old_ : A string key for an existing property to be
+          renamed.
+        - \c key_new_ : A string key by which the old key
+          for the existing property is renamed.
       </td>
       <td class="py_td">
         Constructed AddRename object.
@@ -59,12 +53,8 @@
         (another existing property) with the same name.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c do_overwrite_ : A boolean, whether overwriting is
-            allowed or not. No argument leads to allowing overwriting.
-          </li>
-        </ul>
+        - c do_overwrite_ : A boolean, whether overwriting is
+          allowed or not. No argument leads to allowing overwriting.
       </td>
       <td class="py_td">
         This AddRename object.

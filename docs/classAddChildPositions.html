@@ -138,24 +138,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a> adds relative positions of a child <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object to a parent <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
 <p>An object of this class owns a <em>child</em> object as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>, and is appended to a <em>parent</em> object using its <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a>. An example of <em>child</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for atoms, and an example of <em>parent</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules. Positions of a <em>child</em> is computed relative to a position of a <em>parent</em> and appended to an array belonging to the <em>parent</em>.</p>
 <p>The terms <em>child</em> and <em>parent</em> are used because a <em>parent</em> object consists of a <em>child</em> object. In terms of time series, however, the <em>child</em> is created earlier than the <em>parent</em>.</p>
-<p>About usage in Python, please see <a class="el" href="py__add__child__positions_8h.html" title="This file is for binding AddChildPositions class to Python. ">src/pybind/adders/py_add_child_positions.h</a>.</p>
-<p>Key of property to be added:</p><ul>
-<li><code>[child_name]-xs</code> (array of floats)</li>
-<li><code>[child_name]-ys</code> (array of floats)</li>
-<li><code>[child_name]-zs</code> (array of floats)</li>
-</ul>
-<p>Key of required property:</p><ul>
-<li><code>[child_name]-ids</code> (array of integers)</li>
-<li><code>xu</code> (float)</li>
-<li><code>yu</code> (float)</li>
-<li><code>zu</code> (float)</li>
-</ul>
-<p>Key of required property in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>:</p><ul>
-<li><code>id</code> (integer)</li>
-<li><code>xu</code> (float)</li>
-<li><code>yu</code> (float)</li>
-<li><code>zu</code> (float) </li>
-</ul>
+<p>About usage in Python, please see <a class="el" href="py__add__child__positions_8h.html" title="This file is for binding AddChildPositions class to Python. ">src/pybind/adders/py_add_child_positions.h</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4db976f729aaf211154e36d47ee97f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4db976f729aaf211154e36d47ee97f2">&#9670;&nbsp;</a></span>AddChildPositions()</h2>
@@ -233,12 +216,36 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>I'm sorry to say that source code is the best documentation for this method... </p>
+<a class="anchor" id=""></a>
+<table class="py_table2">
+<caption><a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a> related properties </caption>
+<tr class="py_tr">
+<th class="py_th2">Key for property to be added </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><ul>
+<li><code>[child_name]-xs</code> : array of floats</li>
+<li><code>[child_name]-ys</code> : array of floats</li>
+<li><code>[child_name]-zs</code> : array of floats  </li>
+</ul>
+</td><td class="py_td"><ul>
+<li><code>[child_name]-ids</code> : array of integers</li>
+<li><code>xu</code> : float</li>
+<li><code>yu</code> : float</li>
+<li><code>zu</code> : float  </li>
+</ul>
+</td><td class="py_td"><ul>
+<li><code>id</code> : integer</li>
+<li><code>xu</code> : float</li>
+<li><code>yu</code> : float</li>
+<li><code>zu</code> : float   </li>
+</ul>
+</td></tr>
+</table>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 <div class="dynheader">
@@ -271,7 +278,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Name of <em>child</em> object stored as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </p>
-<p>The key of property added to a <em>parent</em> object by this class is named as <code>[child_name]-xs</code>, <code>[child_name]-ys</code> and <code>[child_name]-zs</code>. The <em>parent</em> object is also required to have <code>[child_name]-ids</code> property. </p>
+<p>The key for property added to a <em>parent</em> object by this class is named as <code>[child_name]-xs</code>, <code>[child_name]-ys</code> and <code>[child_name]-zs</code>. The <em>parent</em> object is also required to have <code>[child_name]-ids</code> property. </p>
 
 </div>
 </div>

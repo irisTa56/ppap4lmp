@@ -4,8 +4,6 @@
   which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/08/19
-  @details For more details, please see the header file,
-  src/adders/add_special_bonds.h.
 */
 
 #include "add_special_bonds.h"

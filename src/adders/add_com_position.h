@@ -29,22 +29,6 @@
 
   About usage in Python,
   please see src/pybind/adders/py_add_com_position.h.
-
-  Key of property to be added:
-    - \c mass (float)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
-
-  Key of required property:
-    - <c>atom-ids</c> (array of integers)
-
-  Key of required property in #ext_generator:
-    - \c id (integer)
-    - \c mass (float)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
 */
 class AddCoMPosition : public Adder {
   /*!
@@ -73,6 +57,35 @@ class AddCoMPosition : public Adder {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddCoMPosition related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - \c mass : float
+          - \c xu : float
+          - \c yu : float
+          - \c zu : float
+        </td>
+        <td class="py_td">
+          - <c>atom-ids</c> : array of integers
+        </td>
+        <td class="py_td">
+          - \c id : integer
+          - \c mass : float
+          - \c xu : float
+          - \c yu : float
+          - \c zu : float
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

@@ -18,30 +18,6 @@
 
   About usage in Python, please see
   src/pybind/adders/py_add_gyration_radius.h.
-
-  Key of property to be added (default):
-    - \c Rg (float)
-    - \c Rg(y+z) (float)
-    - \c Rg(z+x) (float)
-    - \c Rg(x+y) (float)
-    - \c Rg(x) (float)
-    - \c Rg(y) (float)
-    - \c Rg(z) (float)
-
-  Key of property to be added (optional):
-    - \c Rg^2 (float)
-    - \c Rg^2(y+z) (float)
-    - \c Rg^2(z+x) (float)
-    - \c Rg^2(x+y) (float)
-    - \c Rg^2(x) (float)
-    - \c Rg^2(y) (float)
-    - \c Rg^2(z) (float)
-
-  Key of required property:
-    - \c mass (float)
-    - \c I_xx (float)
-    - \c I_yy (float)
-    - \c I_zz (float)
 */
 class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
   /*!
@@ -63,6 +39,48 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddGyrationRadius related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+
+          [default]
+          - \c Rg : float
+          - \c Rg(y+z) : float
+          - \c Rg(z+x) : float
+          - \c Rg(x+y) : float
+          - \c Rg(x) : float
+          - \c Rg(y) : float
+          - \c Rg(z) : float
+
+          [option]
+          - \c Rg^2 : float
+          - \c Rg^2(y+z) : float
+          - \c Rg^2(z+x) : float
+          - \c Rg^2(x+y) : float
+          - \c Rg^2(x) : float
+          - \c Rg^2(y) : float
+          - \c Rg^2(z) : float
+        </td>
+        <td class="py_td">
+          - \c mass : float
+          - \c I_xx : float
+          - \c I_yy : float
+          - \c I_zz : float
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

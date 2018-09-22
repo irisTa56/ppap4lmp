@@ -23,13 +23,9 @@
         Constructor of StaCustom class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c json_ : A JSON-like object (complex of \e dict
-            and \e list) to be set as Element::data of
-            a new Element object.
-          </li>
-        </ul>
+        - \c json_ : A JSON-like object (complex of \e dict
+          and \e list) to be set as Element::data of
+          a new Element object.
       </td>
       <td class="py_td">
         Constructed StaCustom object.

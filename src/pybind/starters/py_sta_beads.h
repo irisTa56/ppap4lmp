@@ -23,22 +23,16 @@
         Constructor of StaBeads class for one molecular type.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c el_mols : A molecular Element object consisting of
-            a bead Element object where the constructed object is
-            appended to.
-          </li>
-          <li>
-            \c scheme : List of dictionaries describing
-            coarse-grain mapping scheme. Each dictionary corresponds to
-            each bead in a molecule, and contains three items:
-            \c indices-in-mol is an array of zero-based index of atoms
-            in a molecule, \c type is type of the bead, and \c weights
-            is an array of floats for weighting factors of the atoms.
-            The last two items are optional.
-          </li>
-        </ul>
+        - \c el_mols : A molecular Element object consisting of
+          a bead Element object where the constructed object is
+          appended to.
+        - \c scheme : List of dictionaries describing
+          coarse-grain mapping scheme. Each dictionary corresponds to
+          each bead in a molecule, and contains three items:
+          \c indices-in-mol is an array of zero-based index of atoms
+          in a molecule, \c type is type of the bead, and \c weights
+          is an array of floats for weighting factors of the atoms.
+          The last two items are optional.
       </td>
       <td class="py_td">
         Constructed StaBeads object.
@@ -51,19 +45,13 @@
         Constructor of StaBeads class for multiple molecular types.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c el_mols : A molecular Element object consisting of
-            a bead Element object where the constructed object is
-            appended to.
-          </li>
-          <li>
-            \c schemes : Dictionary from molecular type to list of
-            dictionaries describing coarse-grain scheme for a molecule
-            of that type. Description of each list is the same
-            as for the case of one molecular type.
-          </li>
-        </ul>
+        - \c el_mols : A molecular Element object consisting of
+          a bead Element object where the constructed object is
+          appended to.
+        - \c schemes : Dictionary from molecular type to list of
+          dictionaries describing coarse-grain scheme for a molecule
+          of that type. Description of each list is the same
+          as for the case of one molecular type.
       </td>
       <td class="py_td">
         Constructed StaBeads object.

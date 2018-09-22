@@ -113,45 +113,32 @@ Functions</h2></td></tr>
 <tr class="py_tr">
 <th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><code>append_updater</code>  </td><td class="py_td"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a> </td><td class="py_td">Append an object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass to this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul class="py_ul">
-<li>
-<code>upd</code> : An object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass.  </li>
+<td class="py_td"><code>append_updater</code>  </td><td class="py_td"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a> </td><td class="py_td">Append an object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass to this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
+<li><code>upd</code> : An object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass.  </li>
 </ul>
 </td><td class="py_td">This <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.   </td></tr>
 <tr class="py_tr">
-<td class="py_td"><code>get_data</code>  </td><td class="py_td"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388" title="Wrapper for get_data method, which returns a reference. ">Element::get_data_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a complex of <em>dict</em> and <em>list</em>.  </td><td class="py_td"><ul class="py_ul">
-<li>
-None.  </li>
-</ul>
-</td><td class="py_td">JSON-like object consisting of <em>dict</em> and <em>list</em>.   </td></tr>
+<td class="py_td"><code>get_data</code>  </td><td class="py_td"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388" title="Wrapper for get_data method, which returns a reference. ">Element::get_data_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a complex of <em>dict</em> and <em>list</em>.  </td><td class="py_td">None.  </td><td class="py_td">JSON-like object consisting of <em>dict</em> and <em>list</em>.   </td></tr>
 <tr class="py_tr">
-<td class="py_td"><code>get_keys</code>  </td><td class="py_td"><a class="el" href="classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Wrapper for get_keys method. ">Element::get_keys_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> of this object as a set of strings.  </td><td class="py_td"><ul class="py_ul">
-<li>
-None.  </li>
-</ul>
-</td><td class="py_td">Set of strings.   </td></tr>
+<td class="py_td"><code>get_keys</code>  </td><td class="py_td"><a class="el" href="classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Wrapper for get_keys method. ">Element::get_keys_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> of this object as a set of strings.  </td><td class="py_td">None.  </td><td class="py_td">Set of strings.   </td></tr>
 <tr class="py_tr">
-<td class="py_td"><code>get_1d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Wrapper for array1d method for integer values. ">Element::get_1d_int_py</a> </td><td class="py_td">Get values of an integer property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
-<li>
-<code>key</code> : A string key specifying a property to be extracted.  </li>
+<td class="py_td"><code>get_1d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Wrapper for array1d method for integer values. ">Element::get_1d_int_py</a> </td><td class="py_td">Get values of an integer property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul>
+<li><code>key</code> : A string key specifying a property to be extracted.  </li>
 </ul>
 </td><td class="py_td">One-dimensional Numpy-Array whose elements are integers.   </td></tr>
 <tr class="py_tr">
-<td class="py_td"><code>get_1d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a3f11848589faad4cbca8119385887713" title="Wrapper for array1d method for float (double in C++) values. ">Element::get_1d_float_py</a> </td><td class="py_td">Get values of a float property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
-<li>
-<code>key</code> : A string key specifying a property to be extracted.  </li>
+<td class="py_td"><code>get_1d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a3f11848589faad4cbca8119385887713" title="Wrapper for array1d method for float (double in C++) values. ">Element::get_1d_float_py</a> </td><td class="py_td">Get values of a float property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul>
+<li><code>key</code> : A string key specifying a property to be extracted.  </li>
 </ul>
 </td><td class="py_td">One-dimensional Numpy-Array whose elements are floats.   </td></tr>
 <tr class="py_tr">
-<td class="py_td"><code>get_2d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Wrapper for array2d method for integer values. ">Element::get_2d_int_py</a> </td><td class="py_td">Get values of multiple integer properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
-<li>
-<code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
+<td class="py_td"><code>get_2d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Wrapper for array2d method for integer values. ">Element::get_2d_int_py</a> </td><td class="py_td">Get values of multiple integer properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul>
+<li><code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
 </ul>
 </td><td class="py_td">Two-dimensional Numpy-Array whose elements are integers.   </td></tr>
 <tr class="py_tr">
-<td class="py_td"><code>get_2d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Wrapper for array2d method for float (double in C++) values. ">Element::get_2d_float_py</a> </td><td class="py_td">Get values of multiple float properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul class="py_ul">
-<li>
-<code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
+<td class="py_td"><code>get_2d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Wrapper for array2d method for float (double in C++) values. ">Element::get_2d_float_py</a> </td><td class="py_td">Get values of multiple float properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul>
+<li><code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
 </ul>
 </td><td class="py_td">Two-dimensional Numpy-Array whose elements are floats.   </td></tr>
 </table>
@@ -161,9 +148,8 @@ None.  </li>
 <tr class="py_tr">
 <th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
 <tr class="py_tr">
-<td class="py_td"><code>create</code>  </td><td class="py_td">Lambda. </td><td class="py_td">Factory function for <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. This function takes one argument, an object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass (such class is prefixed by <code>Sta</code>) which adds some properties to empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul class="py_ul">
-<li>
-<code>upd</code> : An object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass.  </li>
+<td class="py_td"><code>create</code>  </td><td class="py_td">Lambda. </td><td class="py_td">Factory function for <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. This function takes one argument, an object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass (such class is prefixed by <code>Sta</code>) which adds some properties to empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
+<li><code>upd</code> : An object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass.  </li>
 </ul>
 </td><td class="py_td">An object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.   </td></tr>
 </table>

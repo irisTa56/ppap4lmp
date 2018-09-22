@@ -29,27 +29,6 @@
 
   About usage in Python, please see
   src/pybind/adders/py_add_inertia_moment.h.
-
-  Key of property to be added:
-    - \c I_xx (float)
-    - \c I_yy (float)
-    - \c I_zz (float)
-    - \c I_xy (float)
-    - \c I_xz (float)
-    - \c I_yz (float)
-
-  Key of required property:
-    - <c>atom-ids</c> (array of integers)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
-
-  Key of required property in #ext_generator:
-    - \c id (int)
-    - \c mass (float)
-    - \c xu (float)
-    - \c yu (float)
-    - \c zu (float)
 */
 class AddInertiaMoment : public Adder {
   /*!
@@ -78,6 +57,40 @@ class AddInertiaMoment : public Adder {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        AddInertiaMoment related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be added</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - \c I_xx : float
+          - \c I_yy : float
+          - \c I_zz : float
+          - \c I_xy : float
+          - \c I_xz : float
+          - \c I_yz : float
+        </td>
+        <td class="py_td">
+          - <c>atom-ids</c> : array of integers
+          - \c xu : float
+          - \c yu : float
+          - \c zu : float
+        </td>
+        <td class="py_td">
+          - \c id : int
+          - \c mass : float
+          - \c xu : float
+          - \c yu : float
+          - \c zu : float
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,

@@ -23,12 +23,8 @@
         Constructor of AddWrappedPosition class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c elem : An Element object containing data for
-            the simulation box.
-          </li>
-        </ul>
+        - \c elem : An Element object containing data for
+          the simulation box.
       </td>
       <td class="py_td">
         Constructed AddWrappedPosition object.

@@ -4,8 +4,6 @@
   which is a subclass of Adder class.
   @author Takayuki Kobayashi
   @date 2018/08/17
-  @details For more details, please see the header file,
-  src/adders/add_rename.h.
 */
 
 #include "add_rename.h"

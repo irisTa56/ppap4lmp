@@ -23,27 +23,19 @@
         Constructor of AddMap class.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c key_ref_ : A string key for a reference property: an
-            existing property to be used as domain of mapping (see also
-            the 3rd argument).
-          </li>
-          <li>
-            \c key_new_ : A string key for a new property to be added.
-            Values of the new property are determined by mapping (see
-            also the 3rd argument).
-          </li>
-          <li>
-            \c mapping_ : Dictionary defining mapping from values of
-            the reference property to values for the new property. Keys
-            of the dictionary corresponds to domain of the mapping and
-            values of the dictionary corresponds to codomain of the
-            mapping. Note that the keys must cover all values of the
-            reference property in an Element object where
-            the constructed object is appended to.
-          </li>
-        </ul>
+        - \c key_ref_ : A string key for a reference property: an
+          existing property to be used as domain of mapping (see also
+          the 3rd argument).
+        - \c key_new_ : A string key for a new property to be added.
+          Values of the new property are determined by mapping (see
+          also the 3rd argument).
+        - \c mapping_ : Dictionary defining mapping from values of
+          the reference property to values for the new property. Keys
+          of the dictionary corresponds to domain of the mapping and
+          values of the dictionary corresponds to codomain of the
+          mapping. Note that the keys must cover all values of the
+          reference property in an Element object where
+          the constructed object is appended to.
       </td>
       <td class="py_td">
         Constructed AddMap object.
@@ -84,12 +76,8 @@
         the same name.
       </td>
       <td class="py_td">
-        <ul class="py_ul">
-          <li>
-            \c do_overwrite_ : A boolean, whether overwriting is
-            allowed or not. No argument leads to allowing overwriting.
-          </li>
-        </ul>
+        - \c do_overwrite_ : A boolean, whether overwriting is
+          allowed or not. No argument leads to allowing overwriting.
       </td>
       <td class="py_td">
         This AddMap object.

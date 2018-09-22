@@ -26,6 +26,7 @@ var searchData=
   ['get_5fkeys',['get_keys',['../classElement.html#a060b21b533cc1deb92e666653a89f229',1,'Element::get_keys()'],['../classGenDict.html#a8df53852721a959db2d8136cf9e86246',1,'GenDict::get_keys()']]],
   ['get_5fkeys_5fpy',['get_keys_py',['../classElement.html#ae253cbec6307a157902d7f25867ded2b',1,'Element']]],
   ['get_5flength',['get_length',['../classGenList.html#a3d90767ee64acbd33d7432c47dd6abf5',1,'GenList']]],
+  ['get_5fresults',['get_results',['../classProData.html#a1451afb048021490fedb426701485eae',1,'ProData']]],
   ['get_5fupdate_5fchain',['get_update_chain',['../classGenerator.html#aac65fc48a12c0ea6e7f87717d1779d1a',1,'Generator']]],
   ['goodbye',['goodbye',['../classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02',1,'Generator']]]
 ];

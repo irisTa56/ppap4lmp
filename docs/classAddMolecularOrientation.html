@@ -123,22 +123,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> adds molecular orientation (order parameter) to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
 <p>This class computes orientation (a.k.a. order parameter) of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object (such as one containing data for molecules) from its inertia moment. To compute the orientation, a direction of eigenvector corresponding the minimum eigenvalue of the inertia moment (that is, long axis of the molecule) is used for each molecule.</p>
-<p>About usage in Python, please see <a class="el" href="py__add__molecular__orientation_8h.html" title="This file is for binding AddMolecularOrientation class to Python. ">src/pybind/adders/py_add_molecular_orientation.h</a>.</p>
-<p>Key of property to be added:</p><ul>
-<li><code>I_values</code> (array of floats; eigenvalues of inertia moment)</li>
-<li><code>I_vectors</code> (array of array of floats; eigenvectors of inertia moment)</li>
-<li><code>S_x</code> (float)</li>
-<li><code>S_y</code> (float)</li>
-<li><code>S_z</code> (float)</li>
-</ul>
-<p>Key of required property:</p><ul>
-<li><code>I_xx</code> (float)</li>
-<li><code>I_yy</code> (float)</li>
-<li><code>I_zz</code> (float)</li>
-<li><code>I_xy</code> (float)</li>
-<li><code>I_xz</code> (float)</li>
-<li><code>I_yz</code> (float) </li>
-</ul>
+<p>About usage in Python, please see <a class="el" href="py__add__molecular__orientation_8h.html" title="This file is for binding AddMolecularOrientation class to Python. ">src/pybind/adders/py_add_molecular_orientation.h</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a886b802585d1dfa299dd9f42e3eef29e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a886b802585d1dfa299dd9f42e3eef29e">&#9670;&nbsp;</a></span>compute_impl()</h2>
@@ -178,12 +163,34 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys of computed properties are added to. </td></tr>
+    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>I'm sorry to say that source code is the best documentation for this method... </p>
+<a class="anchor" id=""></a>
+<table class="py_table2">
+<caption><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> related properties </caption>
+<tr class="py_tr">
+<th class="py_th2">Key for property to be added </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
+<tr class="py_tr">
+<td class="py_td"><ul>
+<li><code>I_values</code> : array of floats (eigenvalues of inertia moment)</li>
+<li><code>I_vectors</code> : array of arrays of floats (eigenvectors of inertia moment)</li>
+<li><code>S_x</code> : float</li>
+<li><code>S_y</code> : float</li>
+<li><code>S_z</code> : float  </li>
+</ul>
+</td><td class="py_td"><ul>
+<li><code>I_xx</code> : float</li>
+<li><code>I_yy</code> : float</li>
+<li><code>I_zz</code> : float</li>
+<li><code>I_xy</code> : float</li>
+<li><code>I_xz</code> : float</li>
+<li><code>I_yz</code> : float  </li>
+</ul>
+</td><td class="py_td">None.   </td></tr>
+</table>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 <div class="dynheader">

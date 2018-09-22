@@ -20,22 +20,41 @@
 
   About usage in Python,
   please see src/pybind/starters/py_sta_dump_box.h.
-
-  Key of property to be added:
-    - \c periodic_x (boolean)
-    - \c periodic_y (boolean)
-    - \c periodic_z (boolean)
-    - \c lo_x (float)
-    - \c lo_y (float)
-    - \c lo_z (float)
-    - \c hi_x (float)
-    - \c hi_y (float)
-    - \c hi_z (float)
 */
 class StaDumpBox : public StaDump {
  protected:
   /*!
     @copydoc Updater::compute_impl
+    @details
+    <table class="py_table2">
+      <caption>
+        StaDumpBox related properties
+      </caption>
+      <tr class="py_tr">
+        <th class="py_th2">Key for property to be set</th>
+        <th class="py_th2">Key for required property</th>
+        <th class="py_th2">Key for externally required property</th>
+      </tr>
+      <tr class="py_tr">
+        <td class="py_td">
+          - \c periodic_x : boolean
+          - \c periodic_y : boolean
+          - \c periodic_z : boolean
+          - \c lo_x : float
+          - \c lo_y : float
+          - \c lo_z : float
+          - \c hi_x : float
+          - \c hi_y : float
+          - \c hi_z : float
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+        <td class="py_td">
+          None.
+        </td>
+      </tr>
+    </table>
   */
   virtual void compute_impl(
     Json &data,
