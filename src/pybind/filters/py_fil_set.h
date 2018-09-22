@@ -39,22 +39,22 @@
   Usage example of the constructor for a filter removing atoms
   whose \c type property is not 1, 2, or 3.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     atoms.append_updater(FilSet({"type": {1, 2, 3}}))
-  \endcode
+  @endcode
 
   Usage example of the constructor for a filter removing atoms
   whose \c type property is not 1, 2, or 3, and whose \c id property
   is not a multiple of 3 less than 1000.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     atoms.append_updater(FilSet({
       "type": {1, 2, 3},
       "id": set(range(3, 1000, 3))
     }))
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_FIL_SET_H

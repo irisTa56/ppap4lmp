@@ -29,16 +29,17 @@ class Updater {
     @brief Set of Element::dataid updated by this Updater object.
     @details If this Updater object is called from an Element
     object for the first time, this object stores Element::dataid in
-    the #dataid_blacklist and updates Element::data. From the second
+    #dataid_blacklist and updates Element::data. From the second
     time on, this object can skip the updating computation.
   */
   Set<int> dataid_blacklist;
   /*!
     @brief A variable used for OpenMP.
-    @details In this program, #dataid_blacklist is modified in
-    a multithread context. To prevent the #dataid_blacklist from being
-    modified from multiple threads at the same time, this member
-    must be locked in the #check_blacklist and #remove_from_blacklist.
+    @details In this program, #dataid_blacklist is modified
+    in a multithreading context. To prevent #dataid_blacklist
+    from being modified from multiple threads at the same time,
+    this member must be locked in #check_blacklist
+    and #remove_from_blacklist.
   */
   omp_lock_t omp_lock;
  protected:
@@ -54,8 +55,13 @@ class Updater {
   ShPtr<Generator> ext_generator;
   /*!
     @brief Implementation of computation to update Element::data.
-    @details This is a pure virtual function, please see the subclasses
-    for more details.
+    @param data : Mutable reference to Element::data
+    where computed properties are added to.
+    @param datakeys : Mutable reference to Element::datakeys
+    where keys of computed properties are added to.
+    @return None.
+    @details I'm sorry to say that source code is the best
+    documentation for this method...
   */
   virtual void compute_impl(Json &, DataKeys &) = 0;
   /*!
@@ -73,13 +79,19 @@ class Updater {
     @brief Constructor of Updater class.
     @details This constructor is thread-unsafe because it accesses its
     members thread-globally. Ensure this constructor is not called in
-    a multithreads context. Please be careful that constructors of
+    a multithreading context. Please be careful that constructors of
     subclasses of this class are also thread-unsafe.
   */
   Updater();
   virtual ~Updater() = default;
   /*!
     @brief Managing computation to update Element::data.
+    @param data : Mutable reference to Element::data where computed
+    properties are added to.
+    @param datakeys : Mutable reference to Element::datakeys where keys
+    of computed properties are added to.
+    @param dataid : Constant integer copied from Element::dataid.
+    @return None.
     @details This is a pure virtual function, please see the subclasses
     for more details.
   */

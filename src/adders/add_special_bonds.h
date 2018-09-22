@@ -13,19 +13,17 @@
 
 /*!
   @brief AddSpecialBonds adds special bonds.
-  @details This class inherits Adder class and overrides
-  Adder::compute_impl.
-
-  Special bonds is a property for atoms (or beads) belonging to
-  the same molecule; if an atom has another atom as one of its special
-  bonds, the two atoms are considered to interact with each other
-  through bonded potential(s) (bond-length, bond-angle ...).
+  @details The term <i>special bonds</i> is somewhat confusing
+  because one of special bonds is not a bond but, for example,
+  an atom connected with special bond. If an atom has another atom as
+  one of its special bonds, the two atoms are considered to
+  interact with each other  through some kind of bonded potential(s).
 
   An object of this class has a molecular Element object as
-  the #ext_generator, and is appended to an atomic (or bead) Element
-  object. That object owns schemes for special bonds for each type of
-  molecule; a scheme is something like a list of special bonds of
-  atoms in one molecule.
+  #ext_generator, and is appended to an atomic (or bead) Element
+  object. The object of this class owns schemes for special bonds
+  for each type of molecule; a scheme is something like a list of
+  special bonds of atoms in one molecule.
 
   About usage in Python,
   please see src/pybind/adders/py_add_special_bonds.h.
@@ -48,7 +46,7 @@ class AddSpecialBonds : public Adder {
   Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol;
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

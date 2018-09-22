@@ -39,14 +39,14 @@
   Usage example of the constructor to add molecular orientation to
   an Element object for molecules.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
     molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(AddMolecularOrientation())
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_ADD_MOLECULAR_ORIENTATION_H

@@ -13,11 +13,8 @@
 
 /*!
   @brief AddRename renames an existing property.
-  @details This class inherits Adder class
-  and ::EnShThis<#AddRename>, and overrides Adder::compute_impl.
-
-  An object of this class simply renames an existing property; that is,
-  copies values of the existing property, names the values as
+  @details An object of this class simply renames an existing property;
+  that is, copies values of the existing property, names the values as
   a new user-defined name, and then deletes the old property.
 
   About usage in Python,
@@ -45,7 +42,7 @@ class AddRename : public Adder, public EnShThis<AddRename> {
   Str key_new;
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,
@@ -69,7 +66,7 @@ class AddRename : public Adder, public EnShThis<AddRename> {
     @param do_overwrite_ : A boolean to be assigned to #do_overwrite.
     @return Shared pointer to this object.
     @details Please be careful not to call this method in
-    a multithreads context because it is thread-unsafe.
+    a multithreading context because it is thread-unsafe.
   */
   ShPtr<AddRename> overwrite(
     bool do_overwrite_ = true);

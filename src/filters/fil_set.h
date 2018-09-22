@@ -1,7 +1,7 @@
 /*!
   @file src/filters/fil_set.h
   @brief This file has a definition of FilSet class,
-  which is a subclass of the Filter class.
+  which is a subclass of Filter class.
   @author Takayuki Kobayashi
   @date 2018/07/01
 */
@@ -13,10 +13,7 @@
 
 /*!
   @brief FilSet applies a filter defined by sets of acceptable values.
-  @details This class inherits Filter class and overrides
-  Filter::compute_impl.
-
-  An object of this class has a filter defined by #value_sets,
+  @details An object of this class has a filter defined by #value_sets,
   which is a dictionary consisting of pairs of a string key
   and a set of acceptable values. An element of Element::data can pass
   this filter only if every value for every key of #value_sets is
@@ -35,13 +32,7 @@ class FilSet : public Filter {
   Map<Str,Set<Json>> value_sets;
  protected:
   /*!
-    @brief Filter elements from array Element::data given
-    as a mutable reference.
-    @param data : Mutable reference to Element::data to be filtered.
-    @param datakeys : Mutable reference to Element::datakeys.
-    @return None.
-    @details I'm sorry to say that source code is the best
-    documentation for this method...
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

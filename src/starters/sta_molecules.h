@@ -14,10 +14,7 @@
 /*!
   @brief StaMolecules sets properties for molecules
   using atoms forming the molecules.
-  @details This class inherits Starter class and overrides
-  Starter::compute_impl.
-
-  An object of this class owns an Element object for atoms
+  @details An object of this class owns an Element object for atoms
   forming molecules to be computed.
   Note that if molecular types are required elsewhere,
   one needs to add \c type property using an Adder object,
@@ -37,7 +34,7 @@
 class StaMolecules : public Starter {
  protected:
   /*!
-    @copydoc StaCopy::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

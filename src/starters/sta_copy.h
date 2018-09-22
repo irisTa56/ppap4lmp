@@ -14,10 +14,7 @@
 /*!
   @brief StaCopy copies Element::data of an existing Element object
   and sets it to a new Element object.
-  @details This class inherits Starter class and overrides
-  Starter::compute and Starter::compute_impl.
-
-  An object of this class owns an existing Element object as
+  @details An object of this class owns an existing Element object as
   #ext_generator and copies Element::data and Element::datakeys
   of the existing object, and then sets the copies to a new Element
   object.
@@ -28,15 +25,7 @@
 class StaCopy : public Starter {
  protected:
   /*!
-    @brief Compute properties and set them to Element::data given
-    as a mutable reference.
-    @param data : Mutable reference to Element::data
-    where computed properties are set to.
-    @param datakeys : Mutable reference to Element::datakeys
-    where keys of computed properties are set to.
-    @return None.
-    @details I'm sorry to say that source code is the best
-    documentation for this method...
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

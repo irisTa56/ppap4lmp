@@ -13,14 +13,11 @@
 
 /*!
   @brief AddInertiaMoment adds inertia moment to an Element object.
-  @details This class inherits Adder class and overrides
-  Adder::compute_impl.
-
-  An object of this class computes elements of 3x3 matrix of
+  @details An object of this class computes elements of 3x3 matrix of
   inertia moment (a.k.a. inertia matrix, inertia tensor) of a parent
   Element object from masses and positions of a child Element object,
-  and adds it to the parent object. That object owns
-  the \e child object as the #ext_generator, and is appended to
+  and adds it to the parent object. The object of this class owns
+  the \e child object as #ext_generator, and is appended to
   the \e parent object using its Element::append_updater.
   An example of \e child is an Element object containing data for atoms,
   and an example of \e parent is an Element object containing data
@@ -80,7 +77,7 @@ class AddInertiaMoment : public Adder {
     const ElPtr &el_atoms);
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

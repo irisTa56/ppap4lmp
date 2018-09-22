@@ -58,23 +58,23 @@
   Usage example of the constructor for a filter removing atoms
   whose \c xu property is less than 10.0.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     atoms.append_updater(FilComparison(("xu", ">=", 10.0)))
-  \endcode
+  @endcode
 
   Usage example of the constructor for a filter removing atoms
   whose \c xu property is less than 10.0 or greater than 20.0,
   and whose \c charge property is not equal to -1.0.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     atoms.append_updater(FilComparison([
       ("xu", ">=", 10.0),
       ("xu", "<=", 20.0),
       ("charge", "==", -1.0)
     ]))
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_FIL_COMPARISON_H

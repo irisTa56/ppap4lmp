@@ -53,9 +53,9 @@ void AddMolecularOrientation::compute_impl(
     evals.minCoeff(&index);
 
     RowArrayXd orientation = evecs.row(index).square().unaryExpr(
-      [](double x)
+      [](double cos2)
       {
-        return 0.5 * (3.0*x - 1.0);
+        return 0.5 * (3.0*cos2 - 1.0);
       });
 
     d["S_x"] = orientation(0);

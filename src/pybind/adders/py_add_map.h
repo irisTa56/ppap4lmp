@@ -54,7 +54,7 @@
   Usage example of the constructor for mapping from <c>atomic-number</c> to
   \c mass.
 
-  \code{.python}
+  @code{.python}
     my_mapping = AddMap(
       "atomic-number", "mass",
       {
@@ -63,7 +63,7 @@
         9: 18.998
       }
     )
-  \endcode
+  @endcode
 
   <table class="py_table">
     <caption>

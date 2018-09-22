@@ -104,17 +104,6 @@ pip install .
 * Data stored in Json structure
 * Extensible without editing existing codes
 
-## Sequence diagram
-
-<img src="images/mermaid_sequence.svg" width="100%"><br/>
-
-* Actually, Generator stored as an item of UpdatePair is its subclass Element. An Element class instance has data (Json) as its member.
-* Updater has some subclasses: Starter, Adder. Starter updates empty data (initializing data) and Adder updates non-empty data (adding new properties to existing data).
-
-## Usage example
-
-Coming soon...
-
 ## Acknowledgement
 
 This project would not be possible without the following great open-source projects.

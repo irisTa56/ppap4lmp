@@ -1,5 +1,5 @@
 /*!
-  @file src/starters/sta_dump.h
+  @file src/starters/sta_dump_box.h
   @brief This file has a definition of StaDumpBox class,
   which is a subclass of Starter class.
   @author Takayuki Kobayashi
@@ -14,10 +14,7 @@
 /*!
   @brief StaDumpBox reads a Lammps' dump file
   and sets properties for simulation box.
-  @details This class inherits StaDump class and overrides
-  StaDump::compute_impl.
-
-  An object of this class reads properties of simulation box
+  @details An object of this class reads properties of simulation box
   from a Lammps' dump file specified by #filepath.
   Note that only properties at a time specified by #timestep are read.
 
@@ -38,7 +35,7 @@
 class StaDumpBox : public StaDump {
  protected:
   /*!
-    @copydoc StaCopy::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

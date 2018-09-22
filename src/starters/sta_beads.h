@@ -14,13 +14,11 @@
 /*!
   @brief StaBeads sets properties for beads using mapping
   (coarse-graining) scheme for each molecule.
-  @details This class inherits Starter class and overrides
-  Starter::compute_impl.
-
-  An object of this class owns mapping(s) representing coarse-graining
-  scheme(s). Each mapping describes how atoms in a molecule are
-  allocated to beads. Different mapping schemes are acceptable for
-  different molecular types. For each bead, its type
+  @details An object of this class owns mapping(s) representing
+  coarse-graining scheme(s). Each mapping describes
+  how atoms in a molecule are allocated to beads.
+  Different mapping schemes are acceptable
+  for different molecular types. For each bead, its type
   and weighting factors of atoms belonging to the bead can be set.
 
   About usage in Python,
@@ -64,7 +62,7 @@ class StaBeads : public Starter {
   std::pair<bool,bool> check_mol_type_to_abst_beads();
  protected:
   /*!
-    @copydoc StaCopy::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-Processor: is an abstract class to process data.
-
-create: 2018/06/22 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/processor.cpp
+  @brief This file has an implementation of Processor class,
+  where an analysis process is programmed.
+  @author Takayuki Kobayashi
+  @date 2018/06/22
+  @details For more details, please see the header file,
+  src/processors/processor.h.
+*/
 
 #include "processor.h"
 
@@ -78,10 +82,15 @@ bool Processor::run()
 
 void Processor::startup()
 {
-  i_generator = 0;
+  #pragma omp critical (processor)
+  {
+    i_generator = 0;
+  }
 
   for (const auto &g : generators)
   {
     g->appoint();
   }
 }
+
+/* ------------------------------------------------------------------ */

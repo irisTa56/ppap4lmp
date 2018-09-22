@@ -41,13 +41,13 @@
   Usage example of the constructor to add elements of inertia moment
   to an Element object for molecules.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
     molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_ADD_INERTIA_MOMENT_H

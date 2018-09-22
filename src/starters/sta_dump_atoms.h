@@ -14,10 +14,7 @@
 /*!
   @brief StaDumpAtoms reads a Lammps' dump file
   and sets properties for atoms.
-  @details This class inherits StaDump class and overrides
-  StaDump::compute_impl.
-
-  An object of this class reads properties of atoms
+  @details An object of this class reads properties of atoms
   from a Lammps' dump file specified by #filepath.
   Note that only properties at a time specified by #timestep are read.
 
@@ -41,7 +38,7 @@ class StaDumpAtoms : public StaDump {
     const Str &line);
  protected:
   /*!
-    @copydoc StaCopy::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

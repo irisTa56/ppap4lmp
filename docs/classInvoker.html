@@ -71,47 +71,200 @@ $(function() {
 <div class="title">Invoker Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classInvoker.html" title="Invoker is an abstract class to execute analysis defined by one or more Processor objects...">Invoker</a> is an abstract class to execute analysis defined by one or more <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects.  
+ <a href="classInvoker.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="invoker_8h_source.html">invoker.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Invoker:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker__inherit__graph.svg" width="130" height="331"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker__inherit__graph.svg" width="130" height="316"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Invoker:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker__coll__graph.svg" width="130" height="162"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker__coll__graph.svg" width="130" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a155c803d4e88b7541fb5a281d3c52bba"><td class="memItemLeft" align="right" valign="top"><a id="a155c803d4e88b7541fb5a281d3c52bba"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Invoker</b> (const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt; &amp;proc)</td></tr>
+<tr class="memitem:a155c803d4e88b7541fb5a281d3c52bba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba">Invoker</a> (const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt; &amp;proc)</td></tr>
+<tr class="memdesc:a155c803d4e88b7541fb5a281d3c52bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classInvoker.html" title="Invoker is an abstract class to execute analysis defined by one or more Processor objects...">Invoker</a> class, which uses one <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object.  <a href="#a155c803d4e88b7541fb5a281d3c52bba">More...</a><br /></td></tr>
 <tr class="separator:a155c803d4e88b7541fb5a281d3c52bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65dcfefac2fce6198fc5f5dec5fad858"><td class="memItemLeft" align="right" valign="top"><a id="a65dcfefac2fce6198fc5f5dec5fad858"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Invoker</b> (const std::vector&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt;&gt; &amp;procs)</td></tr>
-<tr class="separator:a65dcfefac2fce6198fc5f5dec5fad858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e473312201d41ea0711cea5346476c"><td class="memItemLeft" align="right" valign="top"><a id="a72e473312201d41ea0711cea5346476c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> ()</td></tr>
+<tr class="memitem:ad63da9c120d3efa6e2827f75a1e17caf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvoker.html#ad63da9c120d3efa6e2827f75a1e17caf">Invoker</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt;&gt; &amp;procs)</td></tr>
+<tr class="memdesc:ad63da9c120d3efa6e2827f75a1e17caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classInvoker.html" title="Invoker is an abstract class to execute analysis defined by one or more Processor objects...">Invoker</a> class, which uses multiple <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects.  <a href="#ad63da9c120d3efa6e2827f75a1e17caf">More...</a><br /></td></tr>
+<tr class="separator:ad63da9c120d3efa6e2827f75a1e17caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e473312201d41ea0711cea5346476c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c">execute</a> ()</td></tr>
+<tr class="memdesc:a72e473312201d41ea0711cea5346476c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute analysis defined by elements of <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>.  <a href="#a72e473312201d41ea0711cea5346476c">More...</a><br /></td></tr>
 <tr class="separator:a72e473312201d41ea0711cea5346476c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9a45f01fd7b3dae7a54e0a0fff94dff5"><td class="memItemLeft" align="right" valign="top"><a id="a9a45f01fd7b3dae7a54e0a0fff94dff5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>execute_impl</b> ()=0</td></tr>
+<tr class="memitem:a9a45f01fd7b3dae7a54e0a0fff94dff5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvoker.html#a9a45f01fd7b3dae7a54e0a0fff94dff5">execute_impl</a> ()=0</td></tr>
+<tr class="memdesc:a9a45f01fd7b3dae7a54e0a0fff94dff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation how to execute a computationally expensive part of analysis.  <a href="#a9a45f01fd7b3dae7a54e0a0fff94dff5">More...</a><br /></td></tr>
 <tr class="separator:a9a45f01fd7b3dae7a54e0a0fff94dff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ae817c862992f58c58f307302ba07eff5"><td class="memItemLeft" align="right" valign="top"><a id="ae817c862992f58c58f307302ba07eff5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>n_processors</b></td></tr>
-<tr class="separator:ae817c862992f58c58f307302ba07eff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa45c265edef94fc17cdde9d4a356d4a8"><td class="memItemLeft" align="right" valign="top"><a id="aa45c265edef94fc17cdde9d4a356d4a8"></a>
-<a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>processors</b></td></tr>
+<tr class="memitem:aa45c265edef94fc17cdde9d4a356d4a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8">processors</a></td></tr>
+<tr class="memdesc:aa45c265edef94fc17cdde9d4a356d4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects to be executed.  <a href="#aa45c265edef94fc17cdde9d4a356d4a8">More...</a><br /></td></tr>
 <tr class="separator:aa45c265edef94fc17cdde9d4a356d4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classInvoker.html" title="Invoker is an abstract class to execute analysis defined by one or more Processor objects...">Invoker</a> is an abstract class to execute analysis defined by one or more <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a155c803d4e88b7541fb5a281d3c52bba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a155c803d4e88b7541fb5a281d3c52bba">&#9670;&nbsp;</a></span>Invoker() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Invoker::Invoker </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>proc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor of <a class="el" href="classInvoker.html" title="Invoker is an abstract class to execute analysis defined by one or more Processor objects...">Invoker</a> class, which uses one <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">proc</td><td>: Shared pointer to a <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object. This argument is used for initializing <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreading context. Please be careful that constructors of subclasses of this class are also thread-unsafe. </p>
+
+</div>
+</div>
+<a id="ad63da9c120d3efa6e2827f75a1e17caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63da9c120d3efa6e2827f75a1e17caf">&#9670;&nbsp;</a></span>Invoker() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Invoker::Invoker </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>procs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor of <a class="el" href="classInvoker.html" title="Invoker is an abstract class to execute analysis defined by one or more Processor objects...">Invoker</a> class, which uses multiple <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">procs</td><td>: <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of shared pointers to a <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object. This argument is assigned to <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreading context. Please be careful that constructors of subclasses of this class are also thread-unsafe. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a72e473312201d41ea0711cea5346476c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e473312201d41ea0711cea5346476c">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Invoker::execute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Execute analysis defined by elements of <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<p>First, this method calls <a class="el" href="classProcessor.html#a74fe912a6d9216d9b531ff58491889a9" title="Startup this Processor object. ">Processor::startup</a> of each object in <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>. Next, this method calls <a class="el" href="classProcessor.html#ae402da6f2bad22f074987a9d15fffc73" title="Prepare analysis. ">Processor::prepare</a> of each object in <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>, and then calls <a class="el" href="classInvoker.html#a9a45f01fd7b3dae7a54e0a0fff94dff5" title="Implementation how to execute a computationally expensive part of analysis. ">execute_impl</a> where computationally expensive calculations are conducted. Finally, this method calls <a class="el" href="classProcessor.html#a3731212e329a563ee79f1bd2e7c0a512" title="Finish analysis. ">Processor::finish</a> of each object in <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a72e473312201d41ea0711cea5346476c_cgraph.svg" width="328" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a72e473312201d41ea0711cea5346476c_icgraph.svg" width="287" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9a45f01fd7b3dae7a54e0a0fff94dff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a45f01fd7b3dae7a54e0a0fff94dff5">&#9670;&nbsp;</a></span>execute_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Invoker::execute_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementation how to execute a computationally expensive part of analysis. </p>
+<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<p>This is a pure virtual function, please see the subclasses for more details. </p>
+
+<p>Implemented in <a class="el" href="classInvOMP.html#a6d30ee44e69355e633855773a4d8cfef">InvOMP</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a9a45f01fd7b3dae7a54e0a0fff94dff5_icgraph.svg" width="486" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa45c265edef94fc17cdde9d4a356d4a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45c265edef94fc17cdde9d4a356d4a8">&#9670;&nbsp;</a></span>processors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;<a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt;<a class="el" href="classProcessor.html">Processor</a>&gt; &gt; Invoker::processors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects to be executed. </p>
+<p>This member can be set only in the constructor. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/invokers/<a class="el" href="invoker_8h_source.html">invoker.h</a></li>
-<li>src/invokers/invoker.cpp</li>
+<li>src/invokers/<a class="el" href="invoker_8cpp.html">invoker.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

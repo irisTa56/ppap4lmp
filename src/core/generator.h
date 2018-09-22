@@ -41,11 +41,10 @@ class Generator {
     @brief Chain (sequence) of ::UpdatePair objects. It describes
     a process how Element::data is generated and updated.
     @details This chain of ::UpdatePair objects is executed one by
-    one by calling the #hello. In this updating process,
-    the Element objects (the first items of ::UpdatePair) uses
-    the Updater objects (the second items of ::UpdatePair) to update
-    their Element::data. An element of this sequence is added
-    only in Element::append_updater.
+    one using #hello. In this updating process, the Element objects
+    (the first items of ::UpdatePair) uses the Updater objects
+    (the second items of ::UpdatePair) to update their Element::data.
+    This member can be extended only in Element::append_updater.
   */
   Vec<UpdatePair> update_chain;
   /*!
@@ -54,13 +53,13 @@ class Generator {
     @return None.
     @details In merging a chain of ::UpdatePair objects, relative
     orders of ::UpdatePair objects in the \c new_chain and
-    the #update_chain are retained so that dependency order of
+    #update_chain are retained so that dependency order of
     the updating process will be preserved. During the merging,
     duplication of ::UpdatePair objects will be removed. If there is
     no explicit preference, elements in the \c new_chain will be
     appended to the end of #update_chain. This method is thread-unsafe
-    because it accesses the #update_chain thread-globally. Ensure this
-    method is not called in a multithreads context.
+    because it accesses #update_chain thread-globally. Ensure this
+    method is not called in a multithreading context.
   */
   void merge_update_chain(
     const Vec<UpdatePair> &new_chain);
@@ -85,14 +84,14 @@ class Generator {
     @brief Appoint to this object.
     @return None.
     @details Appointing means calling Element::increment_remain of all
-    the Element objects contained in the #update_chain.
+    the Element objects contained in #update_chain.
   */
   void appoint();
   /*!
     @brief Hello to this object.
     @return None.
     @details Greeting means calling Element::update_data for all
-    the ::UpdatePair objects in the #update_chain, that is, executing
+    the ::UpdatePair objects in #update_chain, that is, executing
     the updating process associated with this object. By executing
     this method, Element::data in this Element object (or Element
     objects in this GenDict or GenList object) is ready to be used
@@ -103,7 +102,7 @@ class Generator {
     @brief Goodbye to this object.
     @return None.
     @details Saying goodbye means calling Element::decrement_remain of
-    all the Element objects contained in the #update_chain.
+    all the Element objects contained in #update_chain.
   */
   void goodbye();
   /*!

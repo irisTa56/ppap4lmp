@@ -40,7 +40,7 @@
   The number of molecules is 100; molecules with odd \c id are type 1
   and the others are type 2.
 
-  \code{.python}
+  @code{.python}
     atoms_traj = [
       create(...) for i in range(0, 1000000, 1000)]
 
@@ -52,7 +52,7 @@
       create(StaMolecules(atoms))
         .append_updater(AddMap("id", "type", map_from_id_to_type))
       for atoms in atoms_traj]
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_STA_MOLECULES_H

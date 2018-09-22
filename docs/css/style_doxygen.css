@@ -3,6 +3,7 @@
   table-layout: fixed;
   border-collapse: collapse;
   table-layout: fixed;
+  margin-top: 20px;
 }
 
 .py_table, .py_td, .py_th {
@@ -26,4 +27,12 @@
 .py_ul {
   margin-left: -20px;
   text-align: left;
+}
+
+.main_page_h1 {
+  margin-top: 50px;
+}
+
+.main_page_h2 {
+  margin-top: 40px;
 }

@@ -75,7 +75,7 @@
   in a molecule; the molecule consists of four beads,
   and all the beads are type 1.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
@@ -90,7 +90,7 @@
     )
 
     beads = create(my_beads)
-  \endcode
+  @endcode
 
   Example of the constructor; some beads belong to molecules
   whose type is 1 and the others belong to molecules whose type is 2.
@@ -99,7 +99,7 @@
   consist of five atoms and their types are 1. All the beads
   for molecular type 2 consist of four atoms and their types are 2.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
@@ -129,7 +129,7 @@
     )
 
     beads = create(my_beads)
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_STA_BEADS_H

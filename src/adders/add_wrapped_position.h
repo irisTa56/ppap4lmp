@@ -13,10 +13,7 @@
 
 /*!
   @brief AddWrappedPosition adds wrapped positions of an Element object.
-  @details This class inherits Adder class and overrides
-  Adder::compute_impl.
-
-  Wrapping is a process to resolve periodic boundary condition;
+  @details Wrapping is a process to resolve periodic boundary condition;
   wrapped positions are in the original simulation box.
 
   About usage in Python,
@@ -43,7 +40,7 @@
 class AddWrappedPosition : public Adder {
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

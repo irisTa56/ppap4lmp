@@ -41,12 +41,12 @@
   Usage example of the constructor to add \c xu, \c yu and \c zu
   property to an Element object for molecules.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
     molecules.append_updater(AddCoMPosition(atoms))
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_ADD_COM_POSITION_H

@@ -14,11 +14,8 @@
 /*!
   @brief AddChildIDs adds \c id property of a child Element object to
   a parent Element object.
-  @details This class inherits Adder class and overrides
-  Adder::compute_impl.
-
-  An object of this class owns a \e child Element object
-  as the #ext_generator, and is appended to a \e parent object
+  @details An object of this class owns a \e child Element object
+  as #ext_generator, and is appended to a \e parent object
   using its Element::append_updater. An example of \e child is
   an Element object containing data for atoms, and an example of
   \e parent is an Element object containing data for molecules.
@@ -56,7 +53,7 @@ class AddChildIDs : public Adder {
   Str key_for_parent_id;
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

@@ -13,11 +13,8 @@
 
 /*!
   @brief AddGyrationRadius adds gyration radius to an Element object.
-  @details This class inherits Adder class
-  and ::EnShThis<#AddGyrationRadius>, and overrides Adder::compute_impl.
-
-  This class computes radius of gyration of an Element object (such as
-  one containing data for molecules) from its inertia moment.
+  @details This class computes radius of gyration of an Element object
+  (such as one containing data for molecules) from its inertia moment.
 
   About usage in Python, please see
   src/pybind/adders/py_add_gyration_radius.h.
@@ -65,7 +62,7 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
   bool add_sqrted = true;
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,
@@ -79,7 +76,7 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     @param add_squared_ : A boolean to be assigned to #add_squared.
     @return Shared pointer to this object.
     @details Please be careful not to call this method in
-    a multithreads context because it is thread-unsafe.
+    a multithreading context because it is thread-unsafe.
   */
   ShPtr<AddGyrationRadius> with_squared(
     bool add_squared_ = true);
@@ -89,7 +86,7 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     #add_sqrted.
     @return Shared pointer to this object.
     @details Please be careful not to call this method in
-    a multithreads context because it is thread-unsafe.
+    a multithreading context because it is thread-unsafe.
   */
   ShPtr<AddGyrationRadius> without_sqrted(
     bool without_sqrted_ = true);

@@ -14,14 +14,11 @@
 /*!
   @brief AddMap adds a new property by mapping from
   an existing property.
-  @details This class inherits Adder class
-  and ::EnShThis<#AddMap>, and overrides Adder::compute_impl.
-
-  An object of this class owns a mapping. Domain of the mapping
-  consists of values of an existing property of an Element object where
-  that object is appended to. Codomain of the mapping consists of
-  values of a new property. Note that the domain must cover all values
-  of the existing property.
+  @details An object of this class owns a mapping.
+  Domain of the mapping consists of values of an existing property of
+  an Element object where the object of this class is appended to.
+  Codomain of the mapping consists of values of a new property.
+  Note that the domain must cover all values of the existing property.
 
   About usage in Python,
   please see src/pybind/adders/py_add_map.h.
@@ -61,15 +58,7 @@ class AddMap : public Adder, public EnShThis<AddMap> {
   Map<Json,Json> mapping;
  protected:
   /*!
-    @brief Compute properties and add them to Element::data given
-    as a mutable reference.
-    @param data : Mutable reference to Element::data
-    where computed properties are added to.
-    @param datakeys : Mutable reference to Element::datakeys
-    where keys of computed properties are added to.
-    @return None.
-    @details I'm sorry to say that source code is the best
-    documentation for this method...
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,
@@ -99,7 +88,7 @@ class AddMap : public Adder, public EnShThis<AddMap> {
     @param do_overwrite_ : A boolean to be assigned to #do_overwrite.
     @return Shared pointer to this object.
     @details Please be careful not to call this method in
-    a multithreads context because it is thread-unsafe.
+    a multithreading context because it is thread-unsafe.
   */
   ShPtr<AddMap> overwrite(
     bool do_overwrite_ = true);

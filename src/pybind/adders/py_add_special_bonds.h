@@ -5,13 +5,6 @@
   @date 2018/08/19
   @details
 
-  The term <i>special bonds</i> is somewhat confusing because one of
-  special bonds is not a bond but, for example, an atom connected with
-  special bond. That is, \e i th atom has \e j th atom as one of
-  the special bonds when the two atoms interact with each other through
-  some kind of bonded potential(s). AddSpecialBonds uses zero-based
-  index of atom in a molecule to determine special bonds.
-
   <table class="py_table">
     <caption>
       Python-side constructor of AddSpecialBonds
@@ -80,7 +73,7 @@
   connected four atoms. Bond-length and bond-angle potentials are
   considered.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
@@ -95,14 +88,14 @@
     )
 
     atoms.append_updater(my_sbonds)
-  \endcode
+  @endcode
 
   Example of the constructor for two types of molecule: the first one
   consists of linearly connected four atoms, and the second one
   consists of linearly connected five atoms. Bond-length and
   bond-angle potentials are considered.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
@@ -126,7 +119,7 @@
     )
 
     atoms.append_updater(my_sbonds)
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_ADD_SPECIAL_BONDS_H

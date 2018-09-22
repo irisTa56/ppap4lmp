@@ -14,10 +14,7 @@
 /*!
   @brief AddMolecularOrientation adds molecular orientation (order
   parameter) to an Element object.
-  @details This class inherits Adder class and overrides
-  Adder::compute_impl.
-
-  This class computes orientation (a.k.a. order parameter) of
+  @details This class computes orientation (a.k.a. order parameter) of
   an Element object (such as one containing data for molecules) from
   its inertia moment. To compute the orientation, a direction of
   eigenvector corresponding the minimum eigenvalue of
@@ -46,7 +43,7 @@
 class AddMolecularOrientation : public Adder {
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

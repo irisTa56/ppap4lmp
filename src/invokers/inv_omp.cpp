@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-InvOMP: stands for Invoker using OpenMP.
-
-create: 2018/06/23 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/invokers/inv_omp.cpp
+  @brief This file has an implementation of InvOMP class,
+  which is a subclass of Invoker class.
+  @author Takayuki Kobayashi
+  @date 2018/06/23
+  @details For more details, please see the header file,
+  src/invokers/inv_omp.h.
+*/
 
 #include "inv_omp.h"
 #include "../utils/message.h"
@@ -28,19 +32,22 @@ void InvOMP::execute_impl()
     {
       end = true;
 
-      try  // Exception must be catched in the OpenMP scope
+      try
       {
         for (const auto &p : processors)
         {
           end = end && p->run();
         }
       }
+      // Exception must be catched in the same scope.
       catch (std::runtime_error &e)
       {
-        /* NOTE:
-          Older error messages will be overwritten by newer one.
-        */
-        error_msg = e.what();
+        #pragma omp critical (inv_omp)
+        {
+          // Older error messages will be overwritten by newer one.
+          error_msg = e.what();
+        }
+
         break;
       }
     }
@@ -51,3 +58,5 @@ void InvOMP::execute_impl()
     throw std::runtime_error(error_msg);
   }
 }
+
+/* ------------------------------------------------------------------ */

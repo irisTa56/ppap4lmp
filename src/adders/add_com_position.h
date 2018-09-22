@@ -14,17 +14,14 @@
 /*!
   @brief AddCoMPosition adds center of mass to an Element object
   as its unwrapped position.
-  @details This class inherits Adder class and overrides
-  Adder::compute_impl.
-
-  An object of this class computes center of mass of a parent
+  @details An object of this class computes center of mass of a parent
   Element object from unwrapped positions of a child Element object,
   and adds it to the parent object as its unwrapped position.
-  That object owns the \e child object as the #ext_generator, and is
-  appended to the \e parent object using its Element::append_updater.
-  An example of \e child is an Element object containing data for atoms,
-  and an example of \e parent is an Element object containing data
-  for molecules.
+  The object of this class owns the \e child object
+  as #ext_generator, and is appended to the \e parent object
+  using its Element::append_updater. An example of \e child is
+  an Element object containing data for atoms, and an example of
+  \e parent is an Element object containing data for molecules.
 
   The terms \e child and \e parent are used because a \e parent object
   consists of a \e child object. In terms of time series, however,
@@ -75,7 +72,7 @@ class AddCoMPosition : public Adder {
     const ElPtr &el_atoms);
  protected:
   /*!
-    @copydoc AddMap::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

@@ -33,19 +33,19 @@ class DataKeys {
   DataKeys() = default;
   virtual ~DataKeys() = default;
   /*!
-    @brief Clear the #_keys.
+    @brief Clear #_keys.
     @return None.
   */
   void clear();
   /*!
-    @brief Set a given set of keys as the #_keys.
+    @brief Set a given set of keys as #_keys.
     @param keys : ::Set of string keys to be assigned to #_keys.
     @return None.
   */
   void set(
     const Set<Str> &keys);
   /*!
-    @brief Add key(s) in an array to the #_keys.
+    @brief Add key(s) in an array to #_keys.
     @param key_ : ::Json for either a key or an array of keys to be
     added.
     @return None.
@@ -53,7 +53,7 @@ class DataKeys {
   void add(
     const Json &key_);
   /*!
-    @brief Remove key(s) in an array from the #_keys.
+    @brief Remove key(s) in an array from #_keys.
     @param key_ : ::Json for either a key or an array of keys to be
     removed.
     @return None.
@@ -81,7 +81,7 @@ class DataKeys {
   bool optional(
     const Json &key_);
   /*!
-    @brief Get a constant reference to the #_keys.
+    @brief Get a constant reference to #_keys.
     @return A constant reference to ::Set<#Str>.
   */
   const Set<Str> &get();

@@ -1,21 +1,5 @@
 var searchData=
 [
-  ['split_2ecpp',['split.cpp',['../split_8cpp.html',1,'']]],
-  ['split_2eh',['split.h',['../split_8h.html',1,'']]],
-  ['sta_5fbeads_2ecpp',['sta_beads.cpp',['../sta__beads_8cpp.html',1,'']]],
-  ['sta_5fbeads_2eh',['sta_beads.h',['../sta__beads_8h.html',1,'']]],
-  ['sta_5fcopy_2ecpp',['sta_copy.cpp',['../sta__copy_8cpp.html',1,'']]],
-  ['sta_5fcopy_2eh',['sta_copy.h',['../sta__copy_8h.html',1,'']]],
-  ['sta_5fcustom_2ecpp',['sta_custom.cpp',['../sta__custom_8cpp.html',1,'']]],
-  ['sta_5fcustom_2eh',['sta_custom.h',['../sta__custom_8h.html',1,'']]],
-  ['sta_5fdump_2ecpp',['sta_dump.cpp',['../sta__dump_8cpp.html',1,'']]],
-  ['sta_5fdump_2eh',['sta_dump.h',['../sta__dump_8h.html',1,'']]],
-  ['sta_5fdump_5fatoms_2ecpp',['sta_dump_atoms.cpp',['../sta__dump__atoms_8cpp.html',1,'']]],
-  ['sta_5fdump_5fatoms_2eh',['sta_dump_atoms.h',['../sta__dump__atoms_8h.html',1,'']]],
-  ['sta_5fdump_5fbox_2ecpp',['sta_dump_box.cpp',['../sta__dump__box_8cpp.html',1,'']]],
-  ['sta_5fmolecules_2ecpp',['sta_molecules.cpp',['../sta__molecules_8cpp.html',1,'']]],
-  ['sta_5fmolecules_2eh',['sta_molecules.h',['../sta__molecules_8h.html',1,'']]],
-  ['starter_2ecpp',['starter.cpp',['../starter_8cpp.html',1,'']]],
-  ['starter_2eh',['starter.h',['../starter_8h.html',1,'']]],
-  ['std_2eh',['std.h',['../std_8h.html',1,'']]]
+  ['runtime_5ferror_2ecpp',['runtime_error.cpp',['../runtime__error_8cpp.html',1,'']]],
+  ['runtime_5ferror_2eh',['runtime_error.h',['../runtime__error_8h.html',1,'']]]
 ];

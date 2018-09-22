@@ -41,11 +41,11 @@
 
   Example of the constructor for a trajectory.
 
-  \code{.python}
+  @code{.python}
     atoms_traj = [
       create(StaDumpBox("path/to/dump", i))
       for i in range(0, 1000000, 1000)]
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_STA_DUMP_BOX_H

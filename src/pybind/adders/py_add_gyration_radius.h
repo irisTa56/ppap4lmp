@@ -35,7 +35,7 @@
       </td>
     </tr>
   </table>
-  <br/>
+
   <table class="py_table">
     <caption>
       Python-side methods of AddGyrationRadius
@@ -93,14 +93,14 @@
   Usage example of the constructor and method to add square of
   gyration radius to an Element object for molecules.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
 
     molecules.append_updater(AddCoMPosition(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
     molecules.append_updater(AddGyrationRadius().with_squared())
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_ADD_GYRATION_RADIUS_H

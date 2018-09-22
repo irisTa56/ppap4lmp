@@ -1,8 +1,12 @@
-/* ---------------------------------------------------------------------
-Invoker: is an abstract class to execute processes.
-
-create: 2018/06/23 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/invokers/invoker.cpp
+  @brief This file has an implementation of Invoker class,
+  which executes one or more analysis.
+  @author Takayuki Kobayashi
+  @date 2018/06/23
+  @details For more details, please see the header file,
+  src/invokers/invoker.h.
+*/
 
 #include "invoker.h"
 #include "../utils/message.h"
@@ -15,16 +19,14 @@ Invoker::Invoker(
   const ShPtr<Processor> &proc)
 {
   processors = {proc};
-  n_processors = processors.size();
 }
 
 /* ------------------------------------------------------------------ */
 
 Invoker::Invoker(
-  const std::vector<ShPtr<Processor>> &procs)
+  const Vec<ShPtr<Processor>> &procs)
 {
   processors = procs;
-  n_processors = processors.size();
 }
 
 /* ------------------------------------------------------------------ */
@@ -55,3 +57,5 @@ void Invoker::execute()
     ut::log("ERROR - " + Str(e.what()));
   }
 }
+
+/* ------------------------------------------------------------------ */

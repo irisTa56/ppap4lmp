@@ -49,13 +49,13 @@
   Usage example of the constructor to add \c bead-ids property to
   an Element object for molecules.
 
-  \code{.python}
+  @code{.python}
     atoms = create(...)
     molecules = create(StaMolecules(atoms))
     beads = create(StaBeads(molecules, ...))
 
     molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
-  \endcode
+  @endcode
 */
 
 #ifndef PYBIND_ADD_CHILD_IDS_H

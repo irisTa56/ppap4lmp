@@ -14,10 +14,7 @@
 /*!
   @brief StaCustom sets an user-defined ::Json object to
   a new Element object as its Element::data.
-  @details This class inherits Starter class and overrides
-  Starter::compute_impl.
-
-  An object of this class takes an user-defined ::Json object
+  @details An object of this class takes an user-defined ::Json object
   to be set as Element::data.
 
   About usage in Python,
@@ -28,7 +25,7 @@ class StaCustom : public Starter {
   Json json;
  protected:
   /*!
-    @copydoc StaCopy::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

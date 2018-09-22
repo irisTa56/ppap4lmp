@@ -50,13 +50,13 @@ class Element : public Generator, public EnShThis<Element> {
     future.
     @details This member can be incremented by #increment_remain and
     decremented by #decrement_remain. If this member becomes 0 in
-    #decrement_remain, the #data is cleared to save memory.
+    #decrement_remain, #data is cleared to save memory.
   */
   int n_remain = 0;
   /*!
     @brief Unique ID for an object of Element class.
     @details This member is used to prevent duplication of updating
-    process of the #data. For more details, please see Updater class.
+    process of #data. For more details, please see Updater class.
   */
   int dataid;
   /*!
@@ -70,7 +70,7 @@ class Element : public Generator, public EnShThis<Element> {
   Json data;
   /*!
     @brief Set of keys of the data.
-    @details This member stores string keys the #data has. For more
+    @details This member stores string keys #data has. For more
     details, please see DataKeys class. Note that after updating the
     data, the set of keys must be manually updated (add/remove keys)
     in Updater or its subclasses.
@@ -78,9 +78,10 @@ class Element : public Generator, public EnShThis<Element> {
   DataKeys datakeys;
   /*!
     @brief A variable used by OpenMP.
-    @details In this program, #data is updated in a multithread context.
+    @details In this program,
+    #data is updated in a multithreading context.
     To prevent the #data from being updated from multiple threads
-    at the same time, this member must be locked in the #update_data,
+    at the same time, this member must be locked in #update_data,
     #increment_remain and #decrement_remain.
   */
   omp_lock_t omp_lock;
@@ -94,7 +95,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief This method decrements #n_remain.
     @return None.
     @details If one increments #n_remain of this object before using
-    the #data and then decrements it after using it, the #data is
+    #data and then decrements it after using it, the #data is
     cleared to save memory. This system is convenient to access #data
     multiple times while saving memory.
   */
@@ -104,7 +105,7 @@ class Element : public Generator, public EnShThis<Element> {
     @param upd : Shared pointer to an Updater object updating the
     #data.
     @return None.
-    @details This method updates the #data using an object of Updater
+    @details This method updates #data using an object of Updater
     taken as \c upd. This object and the Updater object are paired
     as ::UpdatePair by #append_updater in advance. In this method,
     mutable references of the #data and #datakeys are passed to
@@ -114,7 +115,7 @@ class Element : public Generator, public EnShThis<Element> {
   void update_data(
     const ShPtr<Updater> &upd);
   /*!
-    @brief To use the #increment_remain, #decrement_remain and
+    @brief To use #increment_remain, #decrement_remain and
     #update_data, Generator needs to be a friend class.
   */
   friend class Generator;
@@ -123,7 +124,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief Constructor of Element class.
     @details This constructor is thread-unsafe because it accesses its
     members thread-globally. Ensure this constructor is not called
-    in a multithreads context.
+    in a multithreading context.
   */
   Element();
   virtual ~Element() = default;
@@ -231,64 +232,64 @@ class Element : public Generator, public EnShThis<Element> {
   bool optional(
     const Json &key_);
   /*!
-    @brief Wrapper for the #get_data method, which returns a reference.
+    @brief Wrapper for #get_data method, which returns a reference.
     @return Constant reference to ::Json.
-    @details This method provides a functionality to access the #data
+    @details This method provides a functionality to access #data
     directly from Python. An updating process associated with this
     object is executed before getting the data.
   */
   const Json &get_data_py();
   /*!
-    @brief Wrapper for the #get_keys method.
+    @brief Wrapper for #get_keys method.
     @return Constant reference to ::Set<#Str>.
     @details This method provides a functionality to access
-    the #datakeys directly from Python. An updating process associated
+    #datakeys directly from Python. An updating process associated
     with this object is executed before getting the set of keys.
   */
   const Set<Str> &get_keys_py();
   /*!
-    @brief Wrapper for the #array1d method for integer values.
+    @brief Wrapper for #array1d method for integer values.
     @param key : A string key specifying a property.
     @return ::ArrayXi (Numpy-Array in Python).
     @details This method provides a functionality to access values
-    stored in the #data directly from Python as
+    stored in #data directly from Python as
     an one-dimensional array. An updating process associated with
     this object is executed before getting the array.
   */
   ArrayXi get_1d_int_py(
     const Str &key);
   /*!
-    @brief Wrapper for the #array1d method for float (double in C++)
+    @brief Wrapper for #array1d method for float (double in C++)
     values.
     @param key : A string key specifying a property.
     @return ::ArrayXd (Numpy-Array in Python).
     @details This method provides a functionality to access values
-    stored in the #data directly from Python as
+    stored in #data directly from Python as
     an one-dimensional array. An updating process associated with
     this object is executed before getting the array.
   */
   ArrayXd get_1d_float_py(
     const Str &key);
   /*!
-    @brief Wrapper for the #array2d method for integer values.
+    @brief Wrapper for #array2d method for integer values.
     @param args : An ordered list of keys specifying properties
     (\c *args in Python).
     @return ::ArrayXXi (Numpy-Array in Python).
     @details This method provides a functionality to access values
-    stored in the #data directly from Python as a two-dimensional array.
+    stored in #data directly from Python as a two-dimensional array.
     An updating process associated with this object is executed
     before getting the array.
   */
   ArrayXXi get_2d_int_py(
     const py::args &args);
   /*!
-    @brief Wrapper for the #array2d method for float (double in C++)
+    @brief Wrapper for #array2d method for float (double in C++)
     values.
     @param args : An ordered list of keys specifying properties
     (\c *args in Python).
     @return ::ArrayXXd (Numpy-Array in Python).
     @details This method provides a functionality to access values
-    stored in the #data directly from Python as a two-dimensional array.
+    stored in #data directly from Python as a two-dimensional array.
     An updating process associated with this object is executed
     before getting the array.
   */

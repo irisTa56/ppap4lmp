@@ -1,7 +1,7 @@
 /*!
   @file src/filters/fil_comparison.h
   @brief This file has a definition of FilComparison class,
-  which is a subclass of the Filter class.
+  which is a subclass of Filter class.
   @author Takayuki Kobayashi
   @date 2018/07/02
 */
@@ -19,10 +19,7 @@ using CompareFunc = std::function<bool(const Json &)>;
 
 /*!
   @brief FilComparison applies a filter defined by comparison operators.
-  @details This class inherits Filter class and overrides
-  Filter::compute_impl.
-
-  An object of this class has a filter defined by #comparisons,
+  @details An object of this class has a filter defined by #comparisons,
   which is a list consisting of tuples where the first element is
   a string key, the second element is a comparison operator and
   the third element is a right side value of an inequality
@@ -75,7 +72,7 @@ class FilComparison : public Filter {
     const Vec<std::tuple<Str,Str,Json>> &comps);
  protected:
   /*!
-    @copydoc FilSet::compute_impl
+    @copydoc Updater::compute_impl
   */
   virtual void compute_impl(
     Json &data,

@@ -144,7 +144,7 @@
       </td>
     </tr>
   </table>
-  <br/>
+
   <table class="py_table">
     <caption>
       Python-side functions
