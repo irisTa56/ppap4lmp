@@ -15,6 +15,5 @@ sed -i \
   -e "s/<h2>/<h2 class=\"main_page_h2\">/g" \
   -e "s/class=\"py_th\"/class=\"py_th_main\"/g" \
   -e "s/class=\"py_th2\"/class=\"py_th2_main\"/g" \
-  -e "s/class=\"section note\"/class=\"section_note\"/g" \
   -e "s/<td class=\"py_td\"><ul>/<td class=\"py_td\"><ul class=\"py_ul\">/g" \
   ~/_github/ppap4lmp/docs/index.html

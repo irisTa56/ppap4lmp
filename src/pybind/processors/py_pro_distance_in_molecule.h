@@ -4,19 +4,10 @@
 #include <processors/pro_distance_in_molecule.h>
 #include <pybind/processors/py_processor.h>
 
-static void pybind_pro_distance_in_molecule(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<ProDistanceInMolecule,PyProcessor<ProDistanceInMolecule>,Processor,ShPtr<ProDistanceInMolecule>>(m, "ProDistanceInMolecule")
-    .def(py::init<const ElPtr &,const ElPtr &>())
-    .def(py::init<const Vec<std::pair<ElPtr,ElPtr>> &>())
-    .def("set_indices", &ProDistanceInMolecule::set_indices)
-    .def("set_moltype", &ProDistanceInMolecule::set_moltype)
-    .def(
-      "get_distance_array",
-      &ProDistanceInMolecule::get_distance_array)
-    .def(
-      "get_distance2_array",
-      &ProDistanceInMolecule::get_distance2_array);
+  void py_pro_distance_in_molecule(py::module &m);
 }
 
 #endif

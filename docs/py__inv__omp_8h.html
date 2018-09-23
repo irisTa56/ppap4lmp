@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">py_inv_omp.h File Reference</div>  </div>
@@ -85,46 +86,30 @@ Include dependency graph for py_inv_omp.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="py__inv__omp_8h__dep__incl.svg" width="146" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="py__inv__omp_8h__dep__incl.svg" width="280" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="py__inv__omp_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacepybind"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html">pybind</a></td></tr>
+<tr class="memdesc:namespacepybind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for functions to bind C++ classes to Python. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1fb79eeeb95fbb4ae7555f5a9ff0f20b"><td class="memItemLeft" align="right" valign="top"><a id="a1fb79eeeb95fbb4ae7555f5a9ff0f20b"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="py__inv__omp_8h.html#a1fb79eeeb95fbb4ae7555f5a9ff0f20b">pybind_inv_omp</a> (py::module &amp;m)</td></tr>
-<tr class="memdesc:a1fb79eeeb95fbb4ae7555f5a9ff0f20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class to Python. <br /></td></tr>
-<tr class="separator:a1fb79eeeb95fbb4ae7555f5a9ff0f20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f4ad874cc52ba2877cc6ca3a917596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#ac6f4ad874cc52ba2877cc6ca3a917596">pybind::py_inv_omp</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:ac6f4ad874cc52ba2877cc6ca3a917596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class to Python.  <a href="namespacepybind.html#ac6f4ad874cc52ba2877cc6ca3a917596">More...</a><br /></td></tr>
+<tr class="separator:ac6f4ad874cc52ba2877cc6ca3a917596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is for binding <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/06/23</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>InvOMP</code>  </td><td class="py_td"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_td">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class for one <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object.  </td><td class="py_td"><ul>
-<li><code>proc</code> : A <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object to be executed by the constructed object.  </li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>InvOMP</code>  </td><td class="py_td"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_td">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class for multiple <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects.  </td><td class="py_td"><ul>
-<li><code>procs</code> : List of <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects to be executed by the constructed object.  </li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object.   </td></tr>
-</table>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side methods of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>execute</code>  </td><td class="py_td"><a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c" title="Execute analysis defined by elements of processors. ">InvOMP::execute</a> </td><td class="py_td">Execute analysis programmed in the <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object(s) owned by this object.  </td><td class="py_td">None.  </td><td class="py_td">None.   </td></tr>
-</table>
+<dl class="section date"><dt>Date</dt><dd>2018/06/23 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="py__inv__omp_8h_source.html">py_inv_omp.h</a>.</p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

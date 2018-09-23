@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">py_add_molecular_orientation.h File Reference</div>  </div>
@@ -85,32 +86,30 @@ Include dependency graph for py_add_molecular_orientation.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="py__add__molecular__orientation_8h__dep__incl.svg" width="202" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="py__add__molecular__orientation_8h__dep__incl.svg" width="350" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="py__add__molecular__orientation_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacepybind"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html">pybind</a></td></tr>
+<tr class="memdesc:namespacepybind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for functions to bind C++ classes to Python. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a460e6f216ef33f5937b630746102cbc1"><td class="memItemLeft" align="right" valign="top"><a id="a460e6f216ef33f5937b630746102cbc1"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="py__add__molecular__orientation_8h.html#a460e6f216ef33f5937b630746102cbc1">pybind_add_molecular_orientation</a> (py::module &amp;m)</td></tr>
-<tr class="memdesc:a460e6f216ef33f5937b630746102cbc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> class to Python. <br /></td></tr>
-<tr class="separator:a460e6f216ef33f5937b630746102cbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f47935c03f49a00ea2c55ab95caf1e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#a6f47935c03f49a00ea2c55ab95caf1e9">pybind::py_add_molecular_orientation</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:a6f47935c03f49a00ea2c55ab95caf1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind <a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> class to Python.  <a href="namespacepybind.html#a6f47935c03f49a00ea2c55ab95caf1e9">More...</a><br /></td></tr>
+<tr class="separator:a6f47935c03f49a00ea2c55ab95caf1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is for binding <a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/07/16</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side constructor of <a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>AddMolecularOrientation</code>  </td><td class="py_td"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549" title="Constructor of Updater class. ">AddMolecularOrientation::Updater</a> </td><td class="py_td">Constructor of <a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> class.  </td><td class="py_td">None.  </td><td class="py_td">Constructed <a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> object.   </td></tr>
-</table>
-<p>Usage example of the constructor to add molecular orientation to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
-<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">molecules = create(StaMolecules(atoms))</div><div class="line"></div><div class="line">molecules.append_updater(AddCoMPosition(atoms))</div><div class="line">molecules.append_updater(AddInertiaMoment(atoms))</div><div class="line">molecules.append_updater(AddMolecularOrientation())</div></div><!-- fragment --> </div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2018/07/16 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="py__add__molecular__orientation_8h_source.html">py_add_molecular_orientation.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

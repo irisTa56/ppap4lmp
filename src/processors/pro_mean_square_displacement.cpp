@@ -1,9 +1,10 @@
-/* ---------------------------------------------------------------------
-ProMeanSquareDisplacement: stands for Processor which computes Mean
-Square Displacement.
-
-create: 2018/08/26 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/pro_mean_square_displacement.cpp
+  @brief This file has an implementation of ProMeanSquareDisplacement class,
+  which is a subclass of Processor class.
+  @author Takayuki Kobayashi
+  @date 2018/08/26
+*/
 
 #include "pro_mean_square_displacement.h"
 #include "../utils/runtime_error.h"
@@ -25,7 +26,7 @@ void ProMeanSquareDisplacement::run_impl(
 {
   auto el_points = generators[index]->get_element();
 
-  // if atoms have 'id', they are already sorted by 'id'
+  // NOTE: `id` property is required to ensure data is sorted.
   el_points->required({"xu", "yu", "zu", "id"});
 
   ArrayXXd rs;
@@ -147,3 +148,5 @@ const ArrayXd &ProMeanSquareDisplacement::get_mean_square_displacement()
 {
   return mean_square_displacement;
 }
+
+/* ------------------------------------------------------------------ */

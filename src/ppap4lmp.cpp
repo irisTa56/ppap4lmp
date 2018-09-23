@@ -94,40 +94,53 @@
 
   @section python_sec Functions accessible from Python
 
-  @subsection python_sec_element For Element
+  @subsection python_sec_element Element
 
-  @copydetails src/pybind/py_element.h
+  @copydetails pybind::py_element
 
-  @subsection python_sec_starter For Starter: Updater for initializing an Element object
+  @subsection python_sec_starter Starter: Updater for initializing an Element object
 
-  @copydetails src/pybind/starters/py_sta_beads.h
-  @copydetails src/pybind/starters/py_sta_copy.h
-  @copydetails src/pybind/starters/py_sta_custom.h
-  @copydetails src/pybind/starters/py_sta_dump_atoms.h
-  @copydetails src/pybind/starters/py_sta_dump_box.h
-  @copydetails src/pybind/starters/py_sta_molecules.h
+  @copydetails pybind::py_sta_beads
+  @copydetails pybind::py_sta_copy
+  @copydetails pybind::py_sta_custom
+  @copydetails pybind::py_sta_dump_atoms
+  @copydetails pybind::py_sta_dump_box
+  @copydetails pybind::py_sta_molecules
 
-  @subsection python_sec_adder For Adder: Updater for adding new properties to an Element object
+  @subsection python_sec_adder Adder: Updater for adding new properties to an Element object
 
-  @copydetails src/pybind/adders/py_add_child_ids.h
-  @copydetails src/pybind/adders/py_add_child_positions.h
-  @copydetails src/pybind/adders/py_add_com_position.h
-  @copydetails src/pybind/adders/py_add_gyration_radius.h
-  @copydetails src/pybind/adders/py_add_inertia_moment.h
-  @copydetails src/pybind/adders/py_add_map.h
-  @copydetails src/pybind/adders/py_add_molecular_orientation.h
-  @copydetails src/pybind/adders/py_add_rename.h
-  @copydetails src/pybind/adders/py_add_special_bonds.h
-  @copydetails src/pybind/adders/py_add_wrapped_position.h
+  @copydetails pybind::py_add_child_ids
+  @copydetails pybind::py_add_child_positions
+  @copydetails pybind::py_add_com_position
+  @copydetails pybind::py_add_gyration_radius
+  @copydetails pybind::py_add_inertia_moment
+  @copydetails pybind::py_add_map
+  @copydetails pybind::py_add_molecular_orientation
+  @copydetails pybind::py_add_rename
+  @copydetails pybind::py_add_special_bonds
+  @copydetails pybind::py_add_wrapped_position
 
-  @subsection python_sec_adder For Filter: Updater for filtering against an Element object
+  @subsection python_sec_filter Filter: Updater for filtering against an Element object
 
-  @copydetails src/pybind/filters/py_fil_comparison.h
-  @copydetails src/pybind/filters/py_fil_set.h
+  @copydetails pybind::py_fil_comparison
+  @copydetails pybind::py_fil_set
+
+  @subsection python_sec_proc Processor
+
+  @copydetails pybind::py_pro_data
+
+  @subsection python_sec_invo Invoker
+
+  @copydetails pybind::py_inv_omp
+
+  @subsection python_sec_utils Utility functions
+
+  @copydetails pybind::py_utils
 
   @section property_sec List of Properties
 
-  @note Key for externally required property means that the key must be in Element::datakeys of Updater::ext_generator.
+  Key for externally required property means that
+  the key must be in Element::datakeys of Updater::ext_generator.
 
   @copydetails StaBeads::compute_impl
   @copydetails StaDumpAtoms::compute_impl
@@ -147,7 +160,8 @@
 
   @section acknowledge_sec Acknowledgement
 
-  This project would not be possible without the following great open-source projects.
+  This project would not be possible
+  without the following great open-source projects.
 
   - <a href="https://github.com/pybind/pybind11">pybind11</a>
   - <a href="https://github.com/nlohmann/json">nlohmann/json</a>

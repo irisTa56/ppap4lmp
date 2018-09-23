@@ -1,9 +1,10 @@
-/* ---------------------------------------------------------------------
-ProThicknessProfile: stands for Processor which computes Thickness
-Profile from positions.
-
-create: 2018/07/08 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/pro_thickness_profile.cpp
+  @brief This file has an implementation of ProThicknessProfile class,
+  which is a subclass of Processor class.
+  @author Takayuki Kobayashi
+  @date 2018/07/08
+*/
 
 #include "pro_thickness_profile.h"
 
@@ -38,6 +39,10 @@ ProThicknessProfile::ProThicknessProfile(
 void ProThicknessProfile::run_impl(
   const int index)
 {
+  /* NOTE:
+    Although 'atom' is used for variable names,
+    profile thickness of something other than atoms can be computed too.
+  */
   auto el_atoms = generators[index]->get_element("Atoms");
 
   el_atoms->required({"x", "y", "z", "radius"});
@@ -66,14 +71,18 @@ void ProThicknessProfile::run_impl(
     {"delta_x", delta_x}, {"delta_y", delta_y},
     {"nx", nx}, {"ny", ny}};
 
-  // computation body
-
+  /* NOTE:
+    Sorting atoms in descending order of height (coordinate in z
+    direction) can speed up this analysis significantly.
+  */
   std::sort(
     mini_atoms.begin(), mini_atoms.end(),
     [](auto &a, auto &b)
     {
       return a["z"] > b["z"];
-    });  // to improve speed
+    });
+
+  // loop over all atoms
 
   profiles[index] = ArrayXXd::Zero(nx, ny);
   auto &profile_tmp = profiles[index];
@@ -176,3 +185,5 @@ const Vec<ArrayXXd> &ProThicknessProfile::get_profiles()
 {
   return profiles;
 }
+
+/* ------------------------------------------------------------------ */

@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 592;
+var viewWidth = 608;
 var viewHeight = 494;
 var sectionId = 'dynsection-7';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-7';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>DataKeys::required</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-490 588,-490 588,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-490 604,-490 604,4 -4,4"/>
 <!-- Node40 -->
 <g id="node1" class="node">
 <title>Node40</title>
@@ -308,35 +308,35 @@ var sectionId = 'dynsection-7';
 <!-- Node52 -->
 <g id="node13" class="node">
 <title>Node52</title>
-<g id="a_node13"><a xlink:href="py__element_8h.html#a32471b3cace9ede01900bfbdaca5e16a" target="_top" xlink:title="Function to bind Element class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="499,-76.5 499,-95.5 584,-95.5 584,-76.5 499,-76.5"/>
-<text text-anchor="middle" x="541.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pybind_element</text>
+<g id="a_node13"><a xlink:href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" target="_top" xlink:title="Bind Element class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="499,-76.5 499,-95.5 600,-95.5 600,-76.5 499,-76.5"/>
+<text text-anchor="middle" x="549.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pybind::py_element</text>
 </a>
 </g>
 </g>
 <!-- Node51&#45;&gt;Node52 -->
 <g id="edge12" class="edge">
 <title>Node51&#45;&gt;Node52</title>
-<path fill="none" stroke="#191970" d="M444.5966,-130.4556C450.8345,-128.4518 457.1134,-126.2812 463,-124 484.4597,-115.6838 508.1103,-103.8466 523.7848,-95.6014"/>
-<polygon fill="#191970" stroke="#191970" points="443.4089,-127.1593 434.8904,-133.4591 445.4782,-133.8465 443.4089,-127.1593"/>
+<path fill="none" stroke="#191970" d="M444.0686,-130.3954C450.4658,-128.3818 456.9295,-126.2246 463,-124 486.2556,-115.4779 512.1716,-103.7884 529.5185,-95.6331"/>
+<polygon fill="#191970" stroke="#191970" points="442.6771,-127.1607 434.1364,-133.4304 444.7228,-133.8552 442.6771,-127.1607"/>
 </g>
 <!-- Node53&#45;&gt;Node52 -->
 <g id="edge14" class="edge">
 <title>Node53&#45;&gt;Node52</title>
-<path fill="none" stroke="#191970" d="M473.1344,-95.1154C481.9695,-93.9374 490.7453,-92.7673 498.9172,-91.6777"/>
-<polygon fill="#191970" stroke="#191970" points="472.6129,-91.6539 463.1633,-96.4449 473.5381,-98.5925 472.6129,-91.6539"/>
+<path fill="none" stroke="#191970" d="M473.2998,-95.62C481.8797,-94.5368 490.4761,-93.4515 498.6427,-92.4205"/>
+<polygon fill="#191970" stroke="#191970" points="472.7449,-92.1621 463.2621,-96.8872 473.6218,-99.107 472.7449,-92.1621"/>
 </g>
 <!-- Node54&#45;&gt;Node52 -->
 <g id="edge16" class="edge">
 <title>Node54&#45;&gt;Node52</title>
-<path fill="none" stroke="#191970" d="M468.7498,-76.3C478.9369,-77.6583 489.1649,-79.022 498.6004,-80.2801"/>
-<polygon fill="#191970" stroke="#191970" points="468.982,-72.8 458.6072,-74.9476 468.0568,-79.7386 468.982,-72.8"/>
+<path fill="none" stroke="#191970" d="M468.971,-75.8336C479.0981,-77.1121 489.3533,-78.4067 498.9981,-79.6243"/>
+<polygon fill="#191970" stroke="#191970" points="469.2737,-72.3441 458.914,-74.5639 468.3969,-79.2889 469.2737,-72.3441"/>
 </g>
 <!-- Node55&#45;&gt;Node52 -->
 <g id="edge18" class="edge">
 <title>Node55&#45;&gt;Node52</title>
-<path fill="none" stroke="#191970" d="M444.5966,-41.5444C450.8345,-43.5482 457.1134,-45.7188 463,-48 484.4597,-56.3162 508.1103,-68.1534 523.7848,-76.3986"/>
-<polygon fill="#191970" stroke="#191970" points="445.4782,-38.1535 434.8904,-38.5409 443.4089,-44.8407 445.4782,-38.1535"/>
+<path fill="none" stroke="#191970" d="M444.0686,-41.6046C450.4658,-43.6182 456.9295,-45.7754 463,-48 486.2556,-56.5221 512.1716,-68.2116 529.5185,-76.3669"/>
+<polygon fill="#191970" stroke="#191970" points="444.7228,-38.1448 434.1364,-38.5696 442.6771,-44.8393 444.7228,-38.1448"/>
 </g>
 </g>
 </svg>

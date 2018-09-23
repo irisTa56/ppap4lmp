@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">py_fil_set.h File Reference</div>  </div>
@@ -85,36 +86,30 @@ Include dependency graph for py_fil_set.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="py__fil__set_8h__dep__incl.svg" width="136" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="py__fil__set_8h__dep__incl.svg" width="264" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="py__fil__set_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacepybind"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html">pybind</a></td></tr>
+<tr class="memdesc:namespacepybind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for functions to bind C++ classes to Python. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a517238d4393e7efe5026a8c08fb4e3ae"><td class="memItemLeft" align="right" valign="top"><a id="a517238d4393e7efe5026a8c08fb4e3ae"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="py__fil__set_8h.html#a517238d4393e7efe5026a8c08fb4e3ae">pybind_fil_set</a> (py::module &amp;m)</td></tr>
-<tr class="memdesc:a517238d4393e7efe5026a8c08fb4e3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. ">FilSet</a> class to Python. <br /></td></tr>
-<tr class="separator:a517238d4393e7efe5026a8c08fb4e3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2909bc45920af104fe4076fc835a99ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#a2909bc45920af104fe4076fc835a99ae">pybind::py_fil_set</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:a2909bc45920af104fe4076fc835a99ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind <a class="el" href="classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. ">FilSet</a> class to Python.  <a href="namespacepybind.html#a2909bc45920af104fe4076fc835a99ae">More...</a><br /></td></tr>
+<tr class="separator:a2909bc45920af104fe4076fc835a99ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is for binding <a class="el" href="classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. ">FilSet</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/07/01</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side constructor of <a class="el" href="classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. ">FilSet</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>FilSet</code>  </td><td class="py_td"><a class="el" href="classFilSet.html#a03110c742aa93891c4e3fdb59499bb8a" title="Constructor of FilSet class. ">FilSet::FilSet</a> </td><td class="py_td">Constructor of <a class="el" href="classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. ">FilSet</a> class.  </td><td class="py_td"><ul>
-<li><code>value_sets_</code> : Dictionary from a string key for property to acceptable values of that property.  </li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. ">FilSet</a> object.   </td></tr>
-</table>
-<p>Usage example of the constructor for a filter removing atoms whose <code>type</code> property is not 1, 2, or 3.</p>
-<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">atoms.append_updater(FilSet({&quot;type&quot;: {1, 2, 3}}))</div></div><!-- fragment --><p>Usage example of the constructor for a filter removing atoms whose <code>type</code> property is not 1, 2, or 3, and whose <code>id</code> property is not a multiple of 3 less than 1000.</p>
-<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">atoms.append_updater(FilSet({</div><div class="line">  &quot;type&quot;: {1, 2, 3},</div><div class="line">  &quot;id&quot;: set(range(3, 1000, 3))</div><div class="line">}))</div></div><!-- fragment --> </div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2018/07/01 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="py__fil__set_8h_source.html">py_fil_set.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

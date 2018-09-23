@@ -31,7 +31,7 @@ class Processor {
   */
   int n_generators;
    /*!
-    @brief Generators objects to be used for analysis.
+    @brief A sequence of Generators objects to be used for analysis.
     @details This member can be set only by #register_generator
     or #register_generators.
   */
@@ -41,8 +41,8 @@ class Processor {
     @param index : Index in #generators for a Generator object
     to be analyzed.
     @return None.
-    @details This is a pure virtual function, please see the subclasses
-    for more details.
+    @details I'm sorry to say that
+    source code is the best documentation for this method...
   */
   virtual void run_impl(const int index) = 0;
   /*!

@@ -18,6 +18,6 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 
 include_directories(src)
 
-FILE(GLOB CPPFILES src/*.cpp src/*/*.cpp)
+FILE(GLOB CPPFILES src/*.cpp src/*/*.cpp src/*/*/*.cpp)
 
 pybind11_add_module(_ppap4lmp ${CPPFILES})

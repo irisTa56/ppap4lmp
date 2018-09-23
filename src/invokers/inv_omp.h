@@ -35,7 +35,7 @@ class InvOMP : public Invoker {
     @return None.
     @details This method calls Processor::run in parallel.
     Note that exceptions (runtime errors)
-    thrown inside the parallel scope must be catched in the same scope.
+    thrown inside the parallel scope must be caught in the same scope.
     Since error messages thrown in the parallel scope are assigned to
     a thread-global variable, older error messages are overwritten
     by newer one thrown in another thread.

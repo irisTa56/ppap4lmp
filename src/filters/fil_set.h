@@ -15,8 +15,10 @@
   @brief FilSet applies a filter defined by sets of acceptable values.
   @details An object of this class has a filter defined by #value_sets,
   which is a dictionary consisting of pairs of a string key
-  and a set of acceptable values. An element of Element::data can pass
-  this filter only if every value for every key for #value_sets is
+  and a set of acceptable values.
+
+  An element of Element::data can pass this filter
+  only if every value for every key for #value_sets is
   included in the corresponding set (a value of #value_sets).
 
   About usage in Python,

@@ -11,16 +11,18 @@
 #include <adders/adder.h>
 #include <pybind/py_updater.h>
 
-/*!
-  @brief Function to bind Adder class to Python.
-  @details Constructor of Adder class is hidden from Python,
-  because the class is an abstract one.
-*/
-static void pybind_adder(py::module &m)
+
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<
-    Adder,PyUpdater<Adder>,Updater,ShPtr<Adder>>(m, "Adder")
-    .def(py::init<>());
+  /*!
+    @brief Bind Adder class to Python.
+    @param m : A mutable reference to Python module.
+    @return None.
+    @details Constructor of Adder class is hidden from Python,
+    because the class is an abstract one.
+  */
+  void py_adder(py::module &m);
 }
 
 #endif

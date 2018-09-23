@@ -1,10 +1,10 @@
-/* ---------------------------------------------------------------------
-ProDistanceInMolecule: stands for Processor which computes
-point to point Distance In each Molecule (also computes squared
-distance).
-
-create: 2018/08/25 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/pro_distance_in_molecule.cpp
+  @brief This file has an implementation of ProDistanceInMolecule class,
+  which is a subclass of Processor class.
+  @author Takayuki Kobayashi
+  @date 2018/08/25
+*/
 
 #include "pro_distance_in_molecule.h"
 #include "../utils/map_to_index.h"
@@ -51,7 +51,7 @@ void ProDistanceInMolecule::run_impl(
 
   auto el_atoms = generators[index]->get_element("Atoms");
 
-  // if atoms have 'id', they are already sorted by 'id'
+  // NOTE: `id` property is required to ensure data is sorted.
   el_atoms->required({"xu", "yu", "zu", "id"});
 
   auto &atoms = el_atoms->get_data();
@@ -62,7 +62,7 @@ void ProDistanceInMolecule::run_impl(
 
   for (const auto &mol : mols)
   {
-    // If molecular type is not set, default value (1) is used
+    // NOTE: If molecular type is not set, 1 is used.
     if (mol.value("type", 1) != target_moltype) continue;
 
     auto &atom_ids = mol["atom-ids"];
@@ -144,3 +144,5 @@ const ArrayXXd &ProDistanceInMolecule::get_distance2_array()
 {
   return distance2_array;
 }
+
+/* ------------------------------------------------------------------ */

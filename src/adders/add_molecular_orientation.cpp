@@ -29,7 +29,7 @@ void AddMolecularOrientation::compute_impl(
 
     Eigen::EigenSolver<Matrix3d> solver(inertia_moment);
 
-    // eigens are real since inertia moment is symmetric
+    // NOTE: Eigenvalues are real since inertia moment is symmetric.
     ArrayXd evals = solver.eigenvalues().real();
     ArrayXXd evecs = solver.eigenvectors().real().transpose();
 

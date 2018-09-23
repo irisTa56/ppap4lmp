@@ -37,12 +37,12 @@ void InvOMP::execute_impl()
           end = end && p->run();
         }
       }
-      // Exception must be catched in the same scope.
+      // NOTE: Exception must be caught in the same scope.
       catch (std::runtime_error &e)
       {
         #pragma omp critical (inv_omp)
         {
-          // Older error messages will be overwritten by newer one.
+          // NOTE: Older error messages are overwritten by newer one.
           error_msg = e.what();
         }
 

@@ -4,20 +4,10 @@
 #include <processors/pro_thickness_profile.h>
 #include <pybind/processors/py_processor.h>
 
-static void pybind_pro_thickness_profile(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<ProThicknessProfile,PyProcessor<ProThicknessProfile>,Processor,ShPtr<ProThicknessProfile>>(m, "ProThicknessProfile")
-    .def(py::init<const ElPtr &,const ElPtr &>())
-    .def(py::init<const Vec<std::pair<ElPtr,ElPtr>> &>())
-    .def("set_grid", &ProThicknessProfile::set_grid)
-    .def("set_offset", &ProThicknessProfile::set_offset)
-    .def(
-      "shift_half_delta", &ProThicknessProfile::shift_half_delta,
-      py::arg("shift_half_") = true)
-    .def(
-      "get_conditions", &ProThicknessProfile::get_conditions)
-    .def(
-      "get_profiles", &ProThicknessProfile::get_profiles);
+  void py_pro_thickness_profile(py::module &m);
 }
 
 #endif

@@ -1,11 +1,10 @@
-/* ---------------------------------------------------------------------
-ProRadialDistributionFunctionWithDeformation: stands for Processor
-which computes Radial Distribution Function (RDF) taking Deformation
-into consideration; Deformation is guessed using gyration radius in
-perpendicular and parallel directions of the point-to-point vector.
-
-create: 2018/09/03 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/pro_radial_distribution_function_with_deformation.cpp
+  @brief This file has an implementation of ProRadialDistributionFunctionWithDeformation class,
+  which is a subclass of Processor class.
+  @author Takayuki Kobayashi
+  @date 2018/09/03
+*/
 
 #include "pro_radial_distribution_function_with_deformation.h"
 #include "../utils/message.h"
@@ -19,8 +18,8 @@ void ProRDFWD::run_impl(
   const int index)
 {
   /* NOTE:
-    Although 'bead' is used in variable names, you can compute RDF of
-    molecules.
+    Although 'bead' is used for variable names,
+    RDF of something other than beads can be computed too.
   */
   auto el_beads = generators[index]->get_element("Targets");
 
@@ -38,7 +37,7 @@ void ProRDFWD::run_impl(
 
   auto &box = el_box->get_data();
 
-  // preparation
+  // prepare
 
   auto n_beads = beads.size();
 
@@ -88,7 +87,7 @@ void ProRDFWD::run_impl(
 
   double two_thirds = 2.0 / 3.0;
 
-  // computation body
+  // loop over all pairs of beads
 
   number_traj[index] = n_beads;
   volume_traj[index] = length.prod();
@@ -184,7 +183,7 @@ void ProRDFWD::run_impl(
               (sqrt(Rg2_j) - sqrt(Rg2_para_j)));
 
             /* NOTE:
-              The below lines check if the mergin is efficiently large;
+              The below lines check if the margin is efficiently large;
               no distance becomes out of range by the modification.
               This somewhat ensure that every modified distance smaller
               than `r_max` is counted (I made an assumption: if no
@@ -210,7 +209,11 @@ void ProRDFWD::run_impl(
               floor(r_modified*reciprocal_width) :
               round(r_modified*reciprocal_width);
 
-            counts(r_index) += 2;  // i -> j & j -> i
+            /* NOTE:
+              Adding 2 (not 1) is for taking both directions
+              (i -> j & j -> i) into consideration at once.
+            */
+            counts(r_index) += 2;
           }
         }
       }
@@ -240,7 +243,7 @@ void ProRDFWD::finish()
   Rg2_para_array_traj.resize(n_generators);
   Rg2_perp_array_traj.resize(n_generators);
 
-  // DO NOT USE `auto` to initialize using Eigen's Zero()
+  // NOTE: Do not use `auto` for initialization using Eigen's Zero().
   ArrayXi counts_sum = ArrayXi::Zero(n_bins);
   ArrayXd Rg2_sum = ArrayXd::Zero(n_bins);
   ArrayXd Rg2_para_sum = ArrayXd::Zero(n_bins);
@@ -356,3 +359,5 @@ Map<Str,Vec<ArrayXd>> ProRDFWD::get_squared_gyration_radius_traj()
     {"parallel", Rg2_para_array_traj},
     {"perpendicular", Rg2_perp_array_traj}};
 }
+
+/* ------------------------------------------------------------------ */

@@ -26,8 +26,24 @@ var menudata={children:[
 {text:"Namespaces",url:"namespaces.html",children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Namespace Members",url:"namespacemembers.html",children:[
-{text:"All",url:"namespacemembers.html"},
-{text:"Functions",url:"namespacemembers_func.html"}]}]},
+{text:"All",url:"namespacemembers.html",children:[
+{text:"_",url:"namespacemembers.html#index__"},
+{text:"j",url:"namespacemembers.html#index_j"},
+{text:"l",url:"namespacemembers.html#index_l"},
+{text:"m",url:"namespacemembers.html#index_m"},
+{text:"p",url:"namespacemembers.html#index_p"},
+{text:"r",url:"namespacemembers.html#index_r"},
+{text:"s",url:"namespacemembers.html#index_s"},
+{text:"w",url:"namespacemembers.html#index_w"}]},
+{text:"Functions",url:"namespacemembers_func.html",children:[
+{text:"_",url:"namespacemembers_func.html#index__"},
+{text:"j",url:"namespacemembers_func.html#index_j"},
+{text:"l",url:"namespacemembers_func.html#index_l"},
+{text:"m",url:"namespacemembers_func.html#index_m"},
+{text:"p",url:"namespacemembers_func.html#index_p"},
+{text:"r",url:"namespacemembers_func.html#index_r"},
+{text:"s",url:"namespacemembers_func.html#index_s"},
+{text:"w",url:"namespacemembers_func.html#index_w"}]}]}]},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},
@@ -97,16 +113,6 @@ var menudata={children:[
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html",children:[
-{text:"a",url:"globals.html#index_a"},
-{text:"c",url:"globals.html#index_c"},
-{text:"e",url:"globals.html#index_e"},
-{text:"j",url:"globals.html#index_j"},
-{text:"m",url:"globals.html#index_m"},
-{text:"p",url:"globals.html#index_p"},
-{text:"r",url:"globals.html#index_r"},
-{text:"s",url:"globals.html#index_s"},
-{text:"u",url:"globals.html#index_u"},
-{text:"v",url:"globals.html#index_v"}]},
+{text:"All",url:"globals.html"},
 {text:"Functions",url:"globals_func.html"},
 {text:"Typedefs",url:"globals_type.html"}]}]}]}

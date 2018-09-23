@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">py_fil_comparison.h File Reference</div>  </div>
@@ -85,41 +86,30 @@ Include dependency graph for py_fil_comparison.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="py__fil__comparison_8h__dep__incl.svg" width="154" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="py__fil__comparison_8h__dep__incl.svg" width="302" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="py__fil__comparison_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacepybind"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html">pybind</a></td></tr>
+<tr class="memdesc:namespacepybind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for functions to bind C++ classes to Python. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a377795ed98f6a4402df0ca28e92f2898"><td class="memItemLeft" align="right" valign="top"><a id="a377795ed98f6a4402df0ca28e92f2898"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="py__fil__comparison_8h.html#a377795ed98f6a4402df0ca28e92f2898">pybind_fil_comparison</a> (py::module &amp;m)</td></tr>
-<tr class="memdesc:a377795ed98f6a4402df0ca28e92f2898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> class to Python. <br /></td></tr>
-<tr class="separator:a377795ed98f6a4402df0ca28e92f2898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d676f7ed576b04efbd2405a890e747"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#a48d676f7ed576b04efbd2405a890e747">pybind::py_fil_comparison</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:a48d676f7ed576b04efbd2405a890e747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> class to Python.  <a href="namespacepybind.html#a48d676f7ed576b04efbd2405a890e747">More...</a><br /></td></tr>
+<tr class="separator:a48d676f7ed576b04efbd2405a890e747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is for binding <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/07/02</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side constructor of <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>FilComparison</code>  </td><td class="py_td"><a class="el" href="classFilComparison.html#a8745e2f1f5e800300ee23cad73ad4ddf" title="Constructor of FilComparison class. ">FilComparison::FilComparison</a> </td><td class="py_td">Constructor of <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> class for one criterion.  </td><td class="py_td"><ul>
-<li><code>comparison_</code> : A 3-elements tuple consisting of a string key, and comparison operator and right side value of an inequality (or equation) used as a criterion.  </li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> object.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>FilComparison</code>  </td><td class="py_td"><a class="el" href="classFilComparison.html#a8745e2f1f5e800300ee23cad73ad4ddf" title="Constructor of FilComparison class. ">FilComparison::FilComparison</a> </td><td class="py_td">Constructor of <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> class for multiple criteria.  </td><td class="py_td"><ul>
-<li><code>comparisons_</code> : List of 3-elements tuples. Contents of each tuple is the same as for the case of one criterion.  </li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> object.   </td></tr>
-</table>
-<p>Usage example of the constructor for a filter removing atoms whose <code>xu</code> property is less than 10.0.</p>
-<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">atoms.append_updater(FilComparison((&quot;xu&quot;, &quot;&gt;=&quot;, 10.0)))</div></div><!-- fragment --><p>Usage example of the constructor for a filter removing atoms whose <code>xu</code> property is less than 10.0 or greater than 20.0, and whose <code>charge</code> property is not equal to -1.0.</p>
-<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">atoms.append_updater(FilComparison([</div><div class="line">  (&quot;xu&quot;, &quot;&gt;=&quot;, 10.0),</div><div class="line">  (&quot;xu&quot;, &quot;&lt;=&quot;, 20.0),</div><div class="line">  (&quot;charge&quot;, &quot;==&quot;, -1.0)</div><div class="line">]))</div></div><!-- fragment --> </div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2018/07/02 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="py__fil__comparison_8h_source.html">py_fil_comparison.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

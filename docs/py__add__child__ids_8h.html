@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">py_add_child_ids.h File Reference</div>  </div>
@@ -85,37 +86,30 @@ Include dependency graph for py_add_child_ids.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="py__add__child__ids_8h__dep__incl.svg" width="154" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="py__add__child__ids_8h__dep__incl.svg" width="288" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="py__add__child__ids_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacepybind"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html">pybind</a></td></tr>
+<tr class="memdesc:namespacepybind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for functions to bind C++ classes to Python. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad2342686c1a05d6776d6eb852c0c961f"><td class="memItemLeft" align="right" valign="top"><a id="ad2342686c1a05d6776d6eb852c0c961f"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="py__add__child__ids_8h.html#ad2342686c1a05d6776d6eb852c0c961f">pybind_add_child_ids</a> (py::module &amp;m)</td></tr>
-<tr class="memdesc:ad2342686c1a05d6776d6eb852c0c961f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> class to Python. <br /></td></tr>
-<tr class="separator:ad2342686c1a05d6776d6eb852c0c961f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282d3c032ad9ada4a068f117f42406f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#a282d3c032ad9ada4a068f117f42406f9">pybind::py_add_child_ids</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:a282d3c032ad9ada4a068f117f42406f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> class to Python.  <a href="namespacepybind.html#a282d3c032ad9ada4a068f117f42406f9">More...</a><br /></td></tr>
+<tr class="separator:a282d3c032ad9ada4a068f117f42406f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is for binding <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/08/19</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side constructor of <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>AddChildIDs</code>  </td><td class="py_td"><a class="el" href="classAddChildIDs.html#a7278a3244f0a6d52e7f30491f2154a70" title="Constructor of AddChildIDs class. ">AddChildIDs::AddChildIDs</a> </td><td class="py_td">Constructor of <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> class.  </td><td class="py_td"><ul>
-<li><code>elem</code> : <em>A</em> child object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for atoms).</li>
-<li><code>child_name_</code> : A string for naming the above child object.</li>
-<li><code>key_for_parent_id_</code> : A string for key in the child object corresponding to <code>id</code> property of parent object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules).  </li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> object, which is appended to a <em>parent</em> object (such as an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules).   </td></tr>
-</table>
-<p>Usage example of the constructor to add <code>bead-ids</code> property to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
-<div class="fragment"><div class="line">atoms = create(...)</div><div class="line">molecules = create(StaMolecules(atoms))</div><div class="line">beads = create(StaBeads(molecules, ...))</div><div class="line"></div><div class="line">molecules.append_updater(AddChildIDs(beads, &quot;bead&quot;, &quot;mol&quot;))</div></div><!-- fragment --> </div></div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2018/08/19 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="py__add__child__ids_8h_source.html">py_add_child_ids.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

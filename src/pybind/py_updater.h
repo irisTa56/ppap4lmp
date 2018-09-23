@@ -39,16 +39,17 @@ class PyUpdater : public UPD {
   }
 };
 
-/*!
-  @brief Function to bind Updater class to Python.
-  @details Constructor of Updater class is hidden from Python,
-  because the class is an abstract one.
-*/
-static void pybind_updater(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<
-    Updater,PyUpdater<>,ShPtr<Updater>>(m, "Updater")
-    .def(py::init<>());
+  /*!
+    @brief Bind Updater class to Python.
+    @param m : A mutable reference to Python module.
+    @return None.
+    @details Constructor of Updater class is hidden from Python,
+    because the class is an abstract one.
+  */
+  void py_updater(py::module &m);
 }
 
 #endif

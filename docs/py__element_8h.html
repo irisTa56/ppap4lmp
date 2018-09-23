@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">py_element.h File Reference</div>  </div>
@@ -86,7 +87,7 @@ Include dependency graph for py_element.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="py__element_8h__dep__incl.svg" width="175" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="py__element_8h__dep__incl.svg" width="323" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="py__element_8h_source.html">Go to the source code of this file.</a></p>
@@ -97,98 +98,25 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trampoline class to bind <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class to Python.  <a href="classPyElement.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacepybind"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html">pybind</a></td></tr>
+<tr class="memdesc:namespacepybind"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for functions to bind C++ classes to Python. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a32471b3cace9ede01900bfbdaca5e16a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="py__element_8h.html#a32471b3cace9ede01900bfbdaca5e16a">pybind_element</a> (py::module &amp;m)</td></tr>
-<tr class="memdesc:a32471b3cace9ede01900bfbdaca5e16a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bind <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class to Python.  <a href="#a32471b3cace9ede01900bfbdaca5e16a">More...</a><br /></td></tr>
-<tr class="separator:a32471b3cace9ede01900bfbdaca5e16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa960fe0db10e19d7b7b60784a7e81be0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0">pybind::py_element</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:aa960fe0db10e19d7b7b60784a7e81be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class to Python.  <a href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0">More...</a><br /></td></tr>
+<tr class="separator:aa960fe0db10e19d7b7b60784a7e81be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file is for binding <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class to Python. </p>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2018/07/01</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side methods of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>append_updater</code>  </td><td class="py_td"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a> </td><td class="py_td">Append an object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass to this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
-<li><code>upd</code> : An object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass.  </li>
-</ul>
-</td><td class="py_td">This <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_data</code>  </td><td class="py_td"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388" title="Wrapper for get_data method, which returns a reference. ">Element::get_data_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a complex of <em>dict</em> and <em>list</em>.  </td><td class="py_td">None.  </td><td class="py_td">JSON-like object consisting of <em>dict</em> and <em>list</em>.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_keys</code>  </td><td class="py_td"><a class="el" href="classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Wrapper for get_keys method. ">Element::get_keys_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> of this object as a set of strings.  </td><td class="py_td">None.  </td><td class="py_td">Set of strings.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_1d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Wrapper for array1d method for integer values. ">Element::get_1d_int_py</a> </td><td class="py_td">Get values of an integer property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>key</code> : A string key specifying a property to be extracted.  </li>
-</ul>
-</td><td class="py_td">One-dimensional Numpy-Array whose elements are integers.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_1d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a3f11848589faad4cbca8119385887713" title="Wrapper for array1d method for float (double in C++) values. ">Element::get_1d_float_py</a> </td><td class="py_td">Get values of a float property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>key</code> : A string key specifying a property to be extracted.  </li>
-</ul>
-</td><td class="py_td">One-dimensional Numpy-Array whose elements are floats.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_2d_int</code>  </td><td class="py_td"><a class="el" href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Wrapper for array2d method for integer values. ">Element::get_2d_int_py</a> </td><td class="py_td">Get values of multiple integer properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
-</ul>
-</td><td class="py_td">Two-dimensional Numpy-Array whose elements are integers.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_2d_float</code>  </td><td class="py_td"><a class="el" href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Wrapper for array2d method for float (double in C++) values. ">Element::get_2d_float_py</a> </td><td class="py_td">Get values of multiple float properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
-</ul>
-</td><td class="py_td">Two-dimensional Numpy-Array whose elements are floats.   </td></tr>
-</table>
-<a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side functions </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>create</code>  </td><td class="py_td">Lambda. </td><td class="py_td">Factory function for <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. This function takes one argument, an object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass (such class is prefixed by <code>Sta</code>) which adds some properties to empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
-<li><code>upd</code> : An object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass.  </li>
-</ul>
-</td><td class="py_td">An object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.   </td></tr>
-</table>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a32471b3cace9ede01900bfbdaca5e16a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32471b3cace9ede01900bfbdaca5e16a">&#9670;&nbsp;</a></span>pybind_element()</h2>
+<dl class="section date"><dt>Date</dt><dd>2018/07/01 </dd></dl>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void pybind_element </td>
-          <td>(</td>
-          <td class="paramtype">py::module &amp;&#160;</td>
-          <td class="paramname"><em>m</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Function to bind <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class to Python. </p>
-<p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class is hidden from Python. A Python-side function <b>create</b> provides functionality to create an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object taking an object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass as argument. This function is required to make <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a> from shared pointers of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object and the taken <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass object; because constructor cannot call <code>shared_from_this()</code> and therefore cannot make <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a>. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="py__element_8h_a32471b3cace9ede01900bfbdaca5e16a_cgraph.svg" width="100%" height="587"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+<p class="definition">Definition in file <a class="el" href="py__element_8h_source.html">py_element.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

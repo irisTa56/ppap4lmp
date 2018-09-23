@@ -11,16 +11,17 @@
 #include <starters/starter.h>
 #include <pybind/py_updater.h>
 
-/*!
-  @brief Function to bind Starter class to Python.
-  @details Constructor of Starter class is hidden from Python,
-  because the class is an abstract one.
-*/
-static void pybind_starter(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<
-    Starter,PyUpdater<Starter>,Updater,ShPtr<Starter>>(m, "Starter")
-    .def(py::init<>());
+  /*!
+    @brief Bind Starter class to Python.
+    @param m : A mutable reference to Python module.
+    @return None.
+    @details Constructor of Starter class is hidden from Python,
+    because the class is an abstract one.
+  */
+  void py_starter(py::module &m);
 }
 
 #endif

@@ -12,8 +12,7 @@
 #include <processors/processor.h>
 
 /*!
-  @brief ProData copies Element::data
-  from Element objects in #generators.
+  @brief ProData copies Element::data from Element objects.
   @details An object of this class makes a list of ::Json objects
   by copying all or some properties of Element objects
   stored in #generators.
@@ -35,14 +34,7 @@ class ProData : public Processor {
   */
   Vec<Json> results;
  protected:
-  /*!
-    @brief Implementation of analysis using an element of #generators.
-    @param index : Index in #generators for a Generator object
-    to be analyzed.
-    @return None.
-    @details I'm sorry to say that source code is the best
-    documentation for this method...
-  */
+  //! @copydoc Processor::run_impl
   virtual void run_impl(
     const int index) override;
  public:
@@ -55,7 +47,7 @@ class ProData : public Processor {
   ProData(
     const ElPtr &elem);
   /*!
-    @brief Constructor of ProData class for a trajectory
+    @brief Constructor of ProData class for a sequence
     of Element objects.
     @param elems : ::Vec of Shared pointers to Element objects.
     This argument is registered with #generators

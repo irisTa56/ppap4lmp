@@ -134,6 +134,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> is a dictionary (or map) of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects. </p>
 <p>This class is a subclass of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and stores an arbitrary number of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects as a dictionary (map) of shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. </p>
+
+<p class="definition">Definition at line <a class="el" href="gen__dict_8h_source.html#l00019">19</a> of file <a class="el" href="gen__dict_8h_source.html">gen_dict.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a658c404044ae2dbf9bfe1564a6f2977c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a658c404044ae2dbf9bfe1564a6f2977c">&#9670;&nbsp;</a></span>GenDict()</h2>
@@ -159,6 +161,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreading context. </p>
+
+<p class="definition">Definition at line <a class="el" href="gen__dict_8cpp_source.html#l00015">15</a> of file <a class="el" href="gen__dict_8cpp_source.html">gen_dict.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -203,6 +207,8 @@ Here is the call graph for this function:</div>
 <p>One needs to get a value of <a class="el" href="classGenDict.html#ad9aa3218f199683f3193b770148638ab" title="Dictionary of shared pointers of Generator class (keys are strings and values are shared pointers)...">generator_dict</a> as <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> when using its <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. The argument <code>name</code> must be a string, which is a key for the value in <a class="el" href="classGenDict.html#ad9aa3218f199683f3193b770148638ab" title="Dictionary of shared pointers of Generator class (keys are strings and values are shared pointers)...">generator_dict</a>. </p>
 
 <p>Implements <a class="el" href="classGenerator.html#a81a0f591e4d004c5f8937807a7573497">Generator</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="gen__dict_8cpp_source.html#l00028">28</a> of file <a class="el" href="gen__dict_8cpp_source.html">gen_dict.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -246,6 +252,8 @@ Here is the call graph for this function:</div>
 <p>One needs to get a value of <a class="el" href="classGenDict.html#ad9aa3218f199683f3193b770148638ab" title="Dictionary of shared pointers of Generator class (keys are strings and values are shared pointers)...">generator_dict</a> as <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> when storing that object. The argument <code>name</code> must be a string, which is a key for the value in <a class="el" href="classGenDict.html#ad9aa3218f199683f3193b770148638ab" title="Dictionary of shared pointers of Generator class (keys are strings and values are shared pointers)...">generator_dict</a>. </p>
 
 <p>Implements <a class="el" href="classGenerator.html#a76231ee9835f9b21951630e7909816e1">Generator</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="gen__dict_8cpp_source.html#l00042">42</a> of file <a class="el" href="gen__dict_8cpp_source.html">gen_dict.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -271,6 +279,8 @@ Here is the call graph for this function:</div>
 
 <p>Get a set of the keys of <a class="el" href="classGenDict.html#ad9aa3218f199683f3193b770148638ab" title="Dictionary of shared pointers of Generator class (keys are strings and values are shared pointers)...">generator_dict</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Set of strings. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="gen__dict_8cpp_source.html#l00055">55</a> of file <a class="el" href="gen__dict_8cpp_source.html">gen_dict.cpp</a>.</p>
 
 </div>
 </div>
@@ -298,11 +308,13 @@ Here is the call graph for this function:</div>
 <p>Dictionary of shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class (keys are strings and values are shared pointers). </p>
 <p>The values can be a pointer to <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> up-casted to a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class . </p>
 
+<p class="definition">Definition at line <a class="el" href="gen__dict_8h_source.html#l00026">26</a> of file <a class="el" href="gen__dict_8h_source.html">gen_dict.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/<a class="el" href="gen__dict_8h_source.html">gen_dict.h</a></li>
-<li>src/core/<a class="el" href="gen__dict_8cpp.html">gen_dict.cpp</a></li>
+<li>src/core/<a class="el" href="gen__dict_8cpp_source.html">gen_dict.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

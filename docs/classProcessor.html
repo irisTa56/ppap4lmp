@@ -101,7 +101,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3731212e329a563ee79f1bd2e7c0a512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finish analysis.  <a href="#a3731212e329a563ee79f1bd2e7c0a512">More...</a><br /></td></tr>
 <tr class="separator:a3731212e329a563ee79f1bd2e7c0a512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a929cbeccc7a4120da4a58ef7f7a609b1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessor.html#a929cbeccc7a4120da4a58ef7f7a609b1">run</a> ()</td></tr>
-<tr class="memdesc:a929cbeccc7a4120da4a58ef7f7a609b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run analysis using <em>i</em> th <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>, where <em>i</em> = <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a>.  <a href="#a929cbeccc7a4120da4a58ef7f7a609b1">More...</a><br /></td></tr>
+<tr class="memdesc:a929cbeccc7a4120da4a58ef7f7a609b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run analysis using <em>i</em> th <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>, where <em>i</em> = <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a>.  <a href="#a929cbeccc7a4120da4a58ef7f7a609b1">More...</a><br /></td></tr>
 <tr class="separator:a929cbeccc7a4120da4a58ef7f7a609b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74fe912a6d9216d9b531ff58491889a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessor.html#a74fe912a6d9216d9b531ff58491889a9">startup</a> ()</td></tr>
 <tr class="memdesc:a74fe912a6d9216d9b531ff58491889a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startup this <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object.  <a href="#a74fe912a6d9216d9b531ff58491889a9">More...</a><br /></td></tr>
@@ -110,34 +110,36 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a46c873071eb6309273eb330b6b837a40"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessor.html#a46c873071eb6309273eb330b6b837a40">run_impl</a> (const int index)=0</td></tr>
-<tr class="memdesc:a46c873071eb6309273eb330b6b837a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of analysis using an element of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>.  <a href="#a46c873071eb6309273eb330b6b837a40">More...</a><br /></td></tr>
+<tr class="memdesc:a46c873071eb6309273eb330b6b837a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of analysis using an element of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>.  <a href="#a46c873071eb6309273eb330b6b837a40">More...</a><br /></td></tr>
 <tr class="separator:a46c873071eb6309273eb330b6b837a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62bfda67b126ce2ab18014037aec5c0b"><td class="memTemplParams" colspan="2">template&lt;class GEN &gt; </td></tr>
 <tr class="memitem:a62bfda67b126ce2ab18014037aec5c0b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classProcessor.html#a62bfda67b126ce2ab18014037aec5c0b">register_generator</a> (const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; GEN &gt; &amp;gen)</td></tr>
-<tr class="memdesc:a62bfda67b126ce2ab18014037aec5c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>.  <a href="#a62bfda67b126ce2ab18014037aec5c0b">More...</a><br /></td></tr>
+<tr class="memdesc:a62bfda67b126ce2ab18014037aec5c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>.  <a href="#a62bfda67b126ce2ab18014037aec5c0b">More...</a><br /></td></tr>
 <tr class="separator:a62bfda67b126ce2ab18014037aec5c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcf04231ed598d17e888eaf3216c9350"><td class="memTemplParams" colspan="2">template&lt;class GEN &gt; </td></tr>
 <tr class="memitem:abcf04231ed598d17e888eaf3216c9350"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350">register_generators</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; GEN &gt;&gt; &amp;gens)</td></tr>
-<tr class="memdesc:abcf04231ed598d17e888eaf3216c9350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store objects of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>.  <a href="#abcf04231ed598d17e888eaf3216c9350">More...</a><br /></td></tr>
+<tr class="memdesc:abcf04231ed598d17e888eaf3216c9350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store objects of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>.  <a href="#abcf04231ed598d17e888eaf3216c9350">More...</a><br /></td></tr>
 <tr class="separator:abcf04231ed598d17e888eaf3216c9350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a8eb44a97cb6b609d3816b43a4c39e9d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessor.html#a8eb44a97cb6b609d3816b43a4c39e9d1">n_generators</a></td></tr>
-<tr class="memdesc:a8eb44a97cb6b609d3816b43a4c39e9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>.  <a href="#a8eb44a97cb6b609d3816b43a4c39e9d1">More...</a><br /></td></tr>
+<tr class="memdesc:a8eb44a97cb6b609d3816b43a4c39e9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>.  <a href="#a8eb44a97cb6b609d3816b43a4c39e9d1">More...</a><br /></td></tr>
 <tr class="separator:a8eb44a97cb6b609d3816b43a4c39e9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ba2563ea3dd3e700e4a9e1e6cee524c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a></td></tr>
-<tr class="memdesc:a4ba2563ea3dd3e700e4a9e1e6cee524c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generators objects to be used for analysis.  <a href="#a4ba2563ea3dd3e700e4a9e1e6cee524c">More...</a><br /></td></tr>
+<tr class="memdesc:a4ba2563ea3dd3e700e4a9e1e6cee524c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A sequence of Generators objects to be used for analysis.  <a href="#a4ba2563ea3dd3e700e4a9e1e6cee524c">More...</a><br /></td></tr>
 <tr class="separator:a4ba2563ea3dd3e700e4a9e1e6cee524c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a91f79c0fff7211d2979a8bb3da54788a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a">i_generator</a></td></tr>
-<tr class="memdesc:a91f79c0fff7211d2979a8bb3da54788a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object currently conducting analysis.  <a href="#a91f79c0fff7211d2979a8bb3da54788a">More...</a><br /></td></tr>
+<tr class="memdesc:a91f79c0fff7211d2979a8bb3da54788a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object currently conducting analysis.  <a href="#a91f79c0fff7211d2979a8bb3da54788a">More...</a><br /></td></tr>
 <tr class="separator:a91f79c0fff7211d2979a8bb3da54788a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> is an abstract class to analyze data contained in one or more <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8h_source.html#l00018">18</a> of file <a class="el" href="processor_8h_source.html">processor.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3731212e329a563ee79f1bd2e7c0a512"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3731212e329a563ee79f1bd2e7c0a512">&#9670;&nbsp;</a></span>finish()</h2>
@@ -166,7 +168,9 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>This method is called in <a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c" title="Execute analysis defined by elements of processors. ">Invoker::execute</a>. Please see the subclasses for more details. Note that some subclasses do nothing by this method. </p>
 
-<p>Reimplemented in <a class="el" href="classProRadialDistributionFunctionWithDeformation.html#a8569ffa1250a7c4f5a948ab6c99af7c9">ProRadialDistributionFunctionWithDeformation</a>, <a class="el" href="classProRadialDistributionFunction.html#af96964b660a1b590ba81c5e65b688f83">ProRadialDistributionFunction</a>, <a class="el" href="classProDistanceInMolecule.html#a4a9f2ed013fa811cc433090aaa989b54">ProDistanceInMolecule</a>, <a class="el" href="classProMeanSquareDisplacement.html#a5d6b2865d9a2960bc5aa0771c5a17e4f">ProMeanSquareDisplacement</a>, and <a class="el" href="classProValueArray.html#a2e139ceae6529456c1f0d6587192edc9">ProValueArray</a>.</p>
+<p>Reimplemented in <a class="el" href="classProDistanceInMolecule.html#a4a9f2ed013fa811cc433090aaa989b54">ProDistanceInMolecule</a>, <a class="el" href="classProRadialDistributionFunctionWithDeformation.html#a8569ffa1250a7c4f5a948ab6c99af7c9">ProRadialDistributionFunctionWithDeformation</a>, <a class="el" href="classProRadialDistributionFunction.html#af96964b660a1b590ba81c5e65b688f83">ProRadialDistributionFunction</a>, <a class="el" href="classProMeanSquareDisplacement.html#a5d6b2865d9a2960bc5aa0771c5a17e4f">ProMeanSquareDisplacement</a>, and <a class="el" href="classProValueArray.html#a2e139ceae6529456c1f0d6587192edc9">ProValueArray</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8h_source.html#l00097">97</a> of file <a class="el" href="processor_8h_source.html">processor.h</a>.</p>
 
 </div>
 </div>
@@ -197,7 +201,9 @@ Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>This method is called in <a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c" title="Execute analysis defined by elements of processors. ">Invoker::execute</a>. Please see the subclasses for more details. Note that some subclasses do nothing by this method. </p>
 
-<p>Reimplemented in <a class="el" href="classProData.html#ad9e7c6519093995de3132d4bca7e7b1f">ProData</a>, <a class="el" href="classProRadialDistributionFunctionWithDeformation.html#a331166aa3f9c52ec358e0147c09cc4dd">ProRadialDistributionFunctionWithDeformation</a>, <a class="el" href="classProRadialDistributionFunction.html#a7368a271b187a98b4285a1b5a5915ea5">ProRadialDistributionFunction</a>, <a class="el" href="classProDistanceInMolecule.html#a49ee325e78c914b941508c9052e53d42">ProDistanceInMolecule</a>, <a class="el" href="classProThicknessProfile.html#ac5bcd2d7098696d1aea0a24f3b6410a5">ProThicknessProfile</a>, <a class="el" href="classProMeanSquareDisplacement.html#a712c0f5baedaaf562fdb16d5645837d5">ProMeanSquareDisplacement</a>, and <a class="el" href="classProValueArray.html#ae1d28ebe663aae763fd2f4b2cf02e9f8">ProValueArray</a>.</p>
+<p>Reimplemented in <a class="el" href="classProDistanceInMolecule.html#a49ee325e78c914b941508c9052e53d42">ProDistanceInMolecule</a>, <a class="el" href="classProData.html#ad9e7c6519093995de3132d4bca7e7b1f">ProData</a>, <a class="el" href="classProRadialDistributionFunctionWithDeformation.html#a331166aa3f9c52ec358e0147c09cc4dd">ProRadialDistributionFunctionWithDeformation</a>, <a class="el" href="classProRadialDistributionFunction.html#a7368a271b187a98b4285a1b5a5915ea5">ProRadialDistributionFunction</a>, <a class="el" href="classProThicknessProfile.html#ac5bcd2d7098696d1aea0a24f3b6410a5">ProThicknessProfile</a>, <a class="el" href="classProMeanSquareDisplacement.html#a712c0f5baedaaf562fdb16d5645837d5">ProMeanSquareDisplacement</a>, and <a class="el" href="classProValueArray.html#ae1d28ebe663aae763fd2f4b2cf02e9f8">ProValueArray</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8h_source.html#l00089">89</a> of file <a class="el" href="processor_8h_source.html">processor.h</a>.</p>
 
 </div>
 </div>
@@ -227,15 +233,17 @@ template&lt;class GEN &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Store an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </p>
+<p>Store an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gen</td><td>: Shared pointer to an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class. This pointer is up-casted to a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class when being stored in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </td></tr>
+    <tr><td class="paramname">gen</td><td>: Shared pointer to an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class. This pointer is up-casted to a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class when being stored in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>Note that this method is thread-unsafe because it accesses its members thread-globally. It is recommended to call this method only from constructors of subclasses of this class. Please ensure that these constructors are used outside a multithreading context. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8cpp_source.html#l00014">14</a> of file <a class="el" href="processor_8cpp_source.html">processor.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -270,15 +278,17 @@ template&lt;class GEN &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Store objects of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </p>
+<p>Store objects of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">gens</td><td>: <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of shared pointers to objects of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class. These pointers are up-casted to shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class when being stored in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </td></tr>
+    <tr><td class="paramname">gens</td><td>: <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of shared pointers to objects of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class. These pointers are up-casted to shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class when being stored in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>Note that this method is thread-unsafe because it accesses its members thread-globally. It is recommended to call this method only from constructors of subclasses of this class. Please ensure that these constructors are used outside a multithreading context. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8cpp_source.html#l00034">34</a> of file <a class="el" href="processor_8cpp_source.html">processor.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -310,9 +320,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Run analysis using <em>i</em> th <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>, where <em>i</em> = <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>Boolean whether all <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> are used for analysis conducted by this object.</dd></dl>
-<p>First, this method copies <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a> as an index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object to be analyzed. This method then calls <a class="el" href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222" title="Hello to this object. ">Generator::hello</a> to execute update processes associated with the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object, and calls <a class="el" href="classProcessor.html#a46c873071eb6309273eb330b6b837a40" title="Implementation of analysis using an element of generators. ">run_impl</a> taking the copied index, and finally calls <a class="el" href="classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02" title="Goodbye to this object. ">Generator::goodbye</a> to clears <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> if it is no longer to be used. </p>
+<p>Run analysis using <em>i</em> th <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>, where <em>i</em> = <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>Boolean whether all <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a> are used for analysis conducted by this object.</dd></dl>
+<p>First, this method copies <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a> as an index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object to be analyzed. This method then calls <a class="el" href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222" title="Hello to this object. ">Generator::hello</a> to execute update processes associated with the <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object, and calls <a class="el" href="classProcessor.html#a46c873071eb6309273eb330b6b837a40" title="Implementation of analysis using an element of generators. ">run_impl</a> taking the copied index, and finally calls <a class="el" href="classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02" title="Goodbye to this object. ">Generator::goodbye</a> to clears <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> if it is no longer to be used. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8cpp_source.html#l00056">56</a> of file <a class="el" href="processor_8cpp_source.html">processor.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -345,17 +357,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of analysis using an element of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </p>
+<p>Implementation of analysis using an element of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>: Index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object to be analyzed. </td></tr>
+    <tr><td class="paramname">index</td><td>: Index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object to be analyzed. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This is a pure virtual function, please see the subclasses for more details. </p>
+<p>I'm sorry to say that source code is the best documentation for this method... </p>
 
-<p>Implemented in <a class="el" href="classProData.html#aaf9fee230986f25cb6fe1100f9f8a3e2">ProData</a>, <a class="el" href="classProRadialDistributionFunctionWithDeformation.html#a30f40581903736b31e5d242ae499c32f">ProRadialDistributionFunctionWithDeformation</a>, <a class="el" href="classProRadialDistributionFunction.html#ab57365923a1645429f9c471df2f84c84">ProRadialDistributionFunction</a>, <a class="el" href="classProDistanceInMolecule.html#a57443f2cc857b09d3bca11d4e9122de1">ProDistanceInMolecule</a>, <a class="el" href="classProMeanSquareDisplacement.html#aa92be1431f803b85b2c89a34b69528d2">ProMeanSquareDisplacement</a>, <a class="el" href="classProThicknessProfile.html#a3d541569b2b4a1d102737cef44c3357d">ProThicknessProfile</a>, and <a class="el" href="classProValueArray.html#a5d8cfc64225015a7dd8b244e66bf0c3f">ProValueArray</a>.</p>
+<p>Implemented in <a class="el" href="classProDistanceInMolecule.html#a57443f2cc857b09d3bca11d4e9122de1">ProDistanceInMolecule</a>, <a class="el" href="classProData.html#aaf9fee230986f25cb6fe1100f9f8a3e2">ProData</a>, <a class="el" href="classProRadialDistributionFunctionWithDeformation.html#a30f40581903736b31e5d242ae499c32f">ProRadialDistributionFunctionWithDeformation</a>, <a class="el" href="classProRadialDistributionFunction.html#ab57365923a1645429f9c471df2f84c84">ProRadialDistributionFunction</a>, <a class="el" href="classProMeanSquareDisplacement.html#aa92be1431f803b85b2c89a34b69528d2">ProMeanSquareDisplacement</a>, <a class="el" href="classProThicknessProfile.html#a3d541569b2b4a1d102737cef44c3357d">ProThicknessProfile</a>, and <a class="el" href="classProValueArray.html#a5d8cfc64225015a7dd8b244e66bf0c3f">ProValueArray</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -381,7 +393,9 @@ Here is the caller graph for this function:</div>
 
 <p>Startup this <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object. </p>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This method (re)sets <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a> to 0, and then calls <a class="el" href="classGenerator.html#a26b5fae1411adc475d862e1c35dffae0" title="Appoint to this object. ">Generator::appoint</a> of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </p>
+<p>This method (re)sets <a class="el" href="classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a" title="Index in generators for a Generator object currently conducting analysis. ">i_generator</a> to 0, and then calls <a class="el" href="classGenerator.html#a26b5fae1411adc475d862e1c35dffae0" title="Appoint to this object. ">Generator::appoint</a> of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8cpp_source.html#l00081">81</a> of file <a class="el" href="processor_8cpp_source.html">processor.cpp</a>.</p>
 
 </div>
 </div>
@@ -406,8 +420,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Generators objects to be used for analysis. </p>
+<p>A sequence of Generators objects to be used for analysis. </p>
 <p>This member can be set only by <a class="el" href="classProcessor.html#a62bfda67b126ce2ab18014037aec5c0b" title="Store an object of Element, GenDict or GenList class in generators. ">register_generator</a> or <a class="el" href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350" title="Store objects of Element, GenDict or GenList class in generators. ">register_generators</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8h_source.html#l00038">38</a> of file <a class="el" href="processor_8h_source.html">processor.h</a>.</p>
 
 </div>
 </div>
@@ -431,8 +447,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object currently conducting analysis. </p>
+<p>Index in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a> for a <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object currently conducting analysis. </p>
 <p>This member is set to 0 in <a class="el" href="classProcessor.html#a74fe912a6d9216d9b531ff58491889a9" title="Startup this Processor object. ">startup</a>, and updated in <a class="el" href="classProcessor.html#a929cbeccc7a4120da4a58ef7f7a609b1" title="Run analysis using i th Generator object in generators, where i = i_generator. ">run</a>. Both the modifications are thread-safe. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8h_source.html#l00025">25</a> of file <a class="el" href="processor_8h_source.html">processor.h</a>.</p>
 
 </div>
 </div>
@@ -456,14 +474,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Length of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a>. </p>
-<p>For a dynamics simulation, a length of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="Generators objects to be used for analysis. ">generators</a> is equal to a length of trajectory of the simulation. </p>
+<p>Length of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a>. </p>
+<p>For a dynamics simulation, a length of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c" title="A sequence of Generators objects to be used for analysis. ">generators</a> is equal to a length of trajectory of the simulation. </p>
+
+<p class="definition">Definition at line <a class="el" href="processor_8h_source.html#l00032">32</a> of file <a class="el" href="processor_8h_source.html">processor.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/processors/<a class="el" href="processor_8h_source.html">processor.h</a></li>
-<li>src/processors/<a class="el" href="processor_8cpp.html">processor.cpp</a></li>
+<li>src/processors/<a class="el" href="processor_8cpp_source.html">processor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

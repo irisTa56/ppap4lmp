@@ -23,7 +23,10 @@ using CompareFunc = std::function<bool(const Json &)>;
   which is a list consisting of tuples where the first element is
   a string key, the second element is a comparison operator and
   the third element is a right side value of an inequality
-  (or equation). An item of Element::data can pass this filter
+  (or equation). Currently supported operators are
+  \c <, \c >, \c <=, \c >=, \c ==, and \c !=.
+
+  An item of Element::data can pass this filter
   only if every value for every key for #comparisons satisfies
   an inequality consisting of the corresponding comparison operator
   and right side value (the second and third elements of #comparisons).

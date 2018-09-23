@@ -29,18 +29,17 @@ class PyInvoker : public INVO {
   using INVO::INVO;
 };
 
-/*!
-  @brief Function to bind Invoker class to Python.
-  @details Constructor of Invoker class is hidden from Python,
-  because the class is an abstract one.
-*/
-static void pybind_invoker(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<
-    Invoker,PyInvoker<>,ShPtr<Invoker>>(m, "Invoker")
-    .def(py::init<const ShPtr<Processor> &>())
-    .def(py::init<const Vec<ShPtr<Processor>> &>())
-    .def("execute", &Invoker::execute);
+  /*!
+    @brief Bind Invoker class to Python.
+    @param m : A mutable reference to Python module.
+    @return None.
+    @details Constructor of Invoker class is hidden from Python,
+    because the class is an abstract one.
+  */
+  void py_invoker(py::module &m);
 }
 
 #endif

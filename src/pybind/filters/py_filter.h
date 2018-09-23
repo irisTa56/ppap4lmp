@@ -11,16 +11,17 @@
 #include <filters/filter.h>
 #include <pybind/py_updater.h>
 
-/*!
-  @brief Function to bind Filter class to Python.
-  @details Constructor of Filter class is hidden from Python,
-  because the class is an abstract one.
-*/
-static void pybind_filter(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<
-    Filter,PyUpdater<Filter>,Updater,ShPtr<Filter>>(m, "Filter")
-    .def(py::init<>());
+  /*!
+    @brief Bind Filter class to Python.
+    @param m : A mutable reference to Python module.
+    @return None.
+    @details Constructor of Filter class is hidden from Python,
+    because the class is an abstract one.
+  */
+  void py_filter(py::module &m);
 }
 
 #endif

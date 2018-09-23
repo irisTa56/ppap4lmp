@@ -122,6 +122,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a> removes elements from array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> if the elements fail user-defined criteria. </p>
 <p>This class inherits <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class and overrides <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57" title="Managing computation to update Element::data. ">Updater::compute</a>. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Filter::compute_impl</a>. Name of subclass of this class should be prefixed by <em>Fil</em>. Note that <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a> do nothing for non-array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="filter_8h_source.html#l00023">23</a> of file <a class="el" href="filter_8h_source.html">filter.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acd658aa335c8b5215242737aabcf5155"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acd658aa335c8b5215242737aabcf5155">&#9670;&nbsp;</a></span>compute()</h2>
@@ -176,6 +178,8 @@ Additional Inherited Members</h2></td></tr>
 <p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb" title="Set of Element::dataid updated by this Updater object. ">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> and <code>datakeys</code> to <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Filter::compute_impl</a>. Due to the nature of filtering, where each element is not be modified, <code>datakeys</code> remains unchanged. Note that actual filtering process is conducted by <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Filter::compute_impl</a> orveridden in subclasses of this class. </p>
 
 <p>Implements <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57">Updater</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="filter_8cpp_source.html#l00016">16</a> of file <a class="el" href="filter_8cpp_source.html">filter.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -186,7 +190,7 @@ Here is the call graph for this function:</div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/filters/<a class="el" href="filter_8h_source.html">filter.h</a></li>
-<li>src/filters/<a class="el" href="filter_8cpp.html">filter.cpp</a></li>
+<li>src/filters/<a class="el" href="filter_8cpp_source.html">filter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

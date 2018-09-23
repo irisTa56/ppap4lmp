@@ -148,6 +148,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p><a class="el" href="classStaBeads.html" title="StaBeads sets properties for beads using mapping (coarse-graining) scheme for each molecule...">StaBeads</a> sets properties for beads using mapping (coarse-graining) scheme for each molecule. </p>
 <p>An object of this class owns mapping(s) representing coarse-graining scheme(s). Each mapping describes how atoms in a molecule are allocated to beads. Different mapping schemes are acceptable for different molecular types. For each bead, its type and weighting factors of atoms belonging to the bead can be set.</p>
 <p>About usage in Python, please see <a class="el" href="py__sta__beads_8h.html" title="This file is for binding StaBeads class to Python. ">src/pybind/starters/py_sta_beads.h</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="sta__beads_8h_source.html#l00027">27</a> of file <a class="el" href="sta__beads_8h_source.html">sta_beads.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af07217a64532ce39d34e8ef11c5cd477"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af07217a64532ce39d34e8ef11c5cd477">&#9670;&nbsp;</a></span>StaBeads() <span class="overload">[1/2]</span></h2>
@@ -183,6 +185,8 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="sta__beads_8cpp_source.html#l00016">16</a> of file <a class="el" href="sta__beads_8cpp_source.html">sta_beads.cpp</a>.</p>
 
 </div>
 </div>
@@ -221,6 +225,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="sta__beads_8cpp_source.html#l00026">26</a> of file <a class="el" href="sta__beads_8cpp_source.html">sta_beads.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -249,6 +255,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Check if <a class="el" href="classStaBeads.html#a8d8d3bb67d63dfb94fbac254c1291309" title="Coarse-grain mapping schemes for each molecular type. ">mol_type_to_abst_beads</a> correctly describes coarse-grain mapping schemes. </p>
 <dl class="section return"><dt>Returns</dt><dd>A pair of booleans: the first is whether <code>type</code> exists or not, the second is whether <code>weights</code> exists or not. Note that if at least one of <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects in <a class="el" href="classStaBeads.html#a8d8d3bb67d63dfb94fbac254c1291309" title="Coarse-grain mapping schemes for each molecular type. ">mol_type_to_abst_beads</a> has <code>type</code> (or <code>weights</code>) property, all the other objects must have that property. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="sta__beads_8cpp_source.html#l00036">36</a> of file <a class="el" href="sta__beads_8cpp_source.html">sta_beads.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -327,6 +335,8 @@ Here is the caller graph for this function:</div>
 </table>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="sta__beads_8cpp_source.html#l00103">103</a> of file <a class="el" href="sta__beads_8cpp_source.html">sta_beads.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -359,11 +369,13 @@ Here is the call graph for this function:</div>
 <p>Coarse-grain mapping schemes for each molecular type. </p>
 <p>Description of coarse-graining is stored as a map (dictionary) from molecular type to vector (list) of <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects. Each <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object corresponds to each bead in a molecule of that type, and contains three items: <code>indices-in-mol</code> is an array of zero-based index of atoms in the molecule, <code>type</code> is type of the bead, and <code>weights</code> is an array of floats for weighting factors of atoms. The last two items are optional. Length of the two arrays, <code>indices-in-mol</code> and <code>weights</code>, should be the same with the number of atoms belonging to the bead. </p>
 
+<p class="definition">Definition at line <a class="el" href="sta__beads_8h_source.html#l00040">40</a> of file <a class="el" href="sta__beads_8h_source.html">sta_beads.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/starters/<a class="el" href="sta__beads_8h_source.html">sta_beads.h</a></li>
-<li>src/starters/<a class="el" href="sta__beads_8cpp.html">sta_beads.cpp</a></li>
+<li>src/starters/<a class="el" href="sta__beads_8cpp_source.html">sta_beads.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,9 +1,10 @@
-/* ---------------------------------------------------------------------
-ProRadialDistributionFunction: stands for Processor which computes
-Radial Distribution Function (RDF) from wrapped positions.
-
-create: 2018/08/19 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/pro_distance_radial_distribution_function.cpp
+  @brief This file has an implementation of ProRadialDistributionFunction class,
+  which is a subclass of Processor class.
+  @author Takayuki Kobayashi
+  @date 2018/08/19
+*/
 
 #define _USE_MATH_DEFINES
 
@@ -46,8 +47,8 @@ void ProRadialDistributionFunction::run_impl(
   const int index)
 {
   /* NOTE:
-    Although 'atom' is used in variable names, you can compute RDF of
-    beads and molecules.
+    Although 'atom' is used for variable names,
+    RDF of something other than atoms can be computed too.
   */
   auto el_atoms = generators[index]->get_element("Targets");
 
@@ -144,7 +145,13 @@ void ProRadialDistributionFunction::run_impl(
             auto r_index = bin_from_r ?
               floor(r*reciprocal_width) : round(r*reciprocal_width);
 
-            counts(r_index) += 2;  // i -> j & j -> i
+
+            /* NOTE:
+              Adding 2 (not 1) is for taking both directions
+              (i -> j & j -> i) into consideration at once.
+            */
+            counts(r_index) += 2;
+
           }
         }
       }
@@ -270,3 +277,5 @@ const Vec<ArrayXd> &ProRadialDistributionFunction::get_rdf_traj()
 {
   return rdf_traj;
 }
+
+/* ------------------------------------------------------------------ */

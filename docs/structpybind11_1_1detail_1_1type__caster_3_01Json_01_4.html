@@ -105,6 +105,8 @@ Static Public Member Functions</h2></td></tr>
 struct pybind11::detail::type_caster&lt; Json &gt;</h3>
 
 <p>A type caster of <em>pybind11</em> for <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="pybind__json_8h_source.html#l00020">20</a> of file <a class="el" href="pybind__json_8h_source.html">pybind_json.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a82b29161b566ed468e576e0f894ad206"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82b29161b566ed468e576e0f894ad206">&#9670;&nbsp;</a></span>cast()</h2>
@@ -149,6 +151,8 @@ struct pybind11::detail::type_caster&lt; Json &gt;</h3>
 <p>Casting <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> from C++ to Python. </p>
 <p>First, a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object is serialized to a string by its <code>dump</code> method. Then the string is loaded by <code>loads</code> attribute of Python's <code>json</code> module and released as a complex of dictionary and list. Since this conversion process might take a long time, using other containers is preferable (if you can). </p>
 
+<p class="definition">Definition at line <a class="el" href="pybind__json_8h_source.html#l00057">57</a> of file <a class="el" href="pybind__json_8h_source.html">pybind_json.h</a>.</p>
+
 </div>
 </div>
 <a id="ac34d1e821aa93ab9a74e3303f714160b"></a>
@@ -187,6 +191,8 @@ struct pybind11::detail::type_caster&lt; Json &gt;</h3>
 
 <p>Loading <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> from Python and assigning it to C++. </p>
 <p>First, a JSON-like object in Python (complex of dict and list) is dumped as a string by <code>dumps</code> attribute of Python's <code>json</code> module (serialization). Then the string is parsed by <code>parse</code> function of <em>nlohmann/json</em> and converted to a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. Since this conversion process might take a long time, using other containers is preferable (if you can). </p>
+
+<p class="definition">Definition at line <a class="el" href="pybind__json_8h_source.html#l00034">34</a> of file <a class="el" href="pybind__json_8h_source.html">pybind_json.h</a>.</p>
 
 </div>
 </div>

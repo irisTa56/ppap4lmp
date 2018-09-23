@@ -50,11 +50,10 @@ class PyProcessor : public PRO {
   @details Constructor of Processor class is hidden from Python,
   because the class is an abstract one.
 */
-static void pybind_processor(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<
-    Processor,PyProcessor<>,ShPtr<Processor>>(m, "Processor")
-    .def(py::init<>());
+  void py_processor(py::module &m);
 }
 
 #endif

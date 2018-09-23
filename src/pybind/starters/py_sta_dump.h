@@ -11,16 +11,17 @@
 #include <starters/sta_dump.h>
 #include <pybind/starters/py_starter.h>
 
-/*!
-  @brief Function to bind StaDump class to Python.
-  @details Constructor of StaDump class is hidden from Python,
-  because the class is an abstract one.
-*/
-static void pybind_sta_dump(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<
-    StaDump,PyUpdater<StaDump>,Starter,Updater,ShPtr<StaDump>>(m, "StaDump")
-    .def(py::init<const Str &, int>());
+  /*!
+    @brief Bind StaDump class to Python.
+    @param m : A mutable reference to Python module.
+    @return None.
+    @details Constructor of StaDump class is hidden from Python,
+    because the class is an abstract one.
+  */
+  void py_sta_dump(py::module &m);
 }
 
 #endif

@@ -76,7 +76,7 @@ functions = []
 
 for header in headers:
 
-  with open(header, "r") as f:
+  with open(header[:-2]+".cpp", "r") as f:
 
     lines = f.readlines()
 
@@ -84,8 +84,8 @@ for header in headers:
 
       line_ = line.lstrip()
 
-      if line_.startswith("static void pybind_"):
-        pybinds.append("  {}(m);".format(line_[12:].split("(")[0]))
+      if line_.startswith("void pybind::py_"):
+        pybinds.append("  {}(m);".format(line_[5:].split("(")[0]))
       elif line_.startswith("py::class_<") and 12 < len(line_):
         classes.append(re.split("[,<>]", line_[11:])[0])
       elif line_.startswith("m.def("):

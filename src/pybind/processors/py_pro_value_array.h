@@ -4,13 +4,10 @@
 #include <processors/pro_value_array.h>
 #include <pybind/processors/py_processor.h>
 
-static void pybind_pro_value_array(py::module &m)
+//! Namespace for functions to bind C++ classes to Python.
+namespace pybind
 {
-  py::class_<ProValueArray,PyProcessor<ProValueArray>,Processor,ShPtr<ProValueArray>>(m, "ProValueArray")
-    .def(py::init<const ElPtr &>())
-    .def(py::init<const Vec<ElPtr> &>())
-    .def("select", &ProValueArray::select)
-    .def("get_results", &ProValueArray::get_results);
+  void py_pro_value_array(py::module &m);
 }
 
 #endif

@@ -1,9 +1,10 @@
-/* ---------------------------------------------------------------------
-ProValueArray: stands for Processor returning selected (double) Values
-contained in Arrays.
-
-create: 2018/07/16 by Takayuki Kobayashi
---------------------------------------------------------------------- */
+/*!
+  @file src/processors/pro_value_array.cpp
+  @brief This file has an implementation of ProValueArray class,
+  which is a subclass of Processor class.
+  @author Takayuki Kobayashi
+  @date 2018/07/16
+*/
 
 #include <functional>
 #include <alias/pybind.h>
@@ -43,7 +44,8 @@ void ProValueArray::run_impl(
   auto elem = generators[index]->get_element();
   auto &data = elem->get_data();
 
-  elem->required("id");  // ensure data is sorted
+  // NOTE: `id` property is required to ensure data is sorted.
+  elem->required("id");
   elem->required(selected_keys);
 
   auto &rows = results_trajs[index];
@@ -122,3 +124,5 @@ const Map<Str,ArrayXXd> &ProValueArray::get_results()
 {
   return results;
 }
+
+/* ------------------------------------------------------------------ */

@@ -149,8 +149,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> applies a filter defined by comparison operators. </p>
-<p>An object of this class has a filter defined by <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>, which is a list consisting of tuples where the first element is a string key, the second element is a comparison operator and the third element is a right side value of an inequality (or equation). An item of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> can pass this filter only if every value for every key for <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a> satisfies an inequality consisting of the corresponding comparison operator and right side value (the second and third elements of <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>). Note that value(s) of the item is taken as left side value of the inequality.</p>
+<p>An object of this class has a filter defined by <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>, which is a list consisting of tuples where the first element is a string key, the second element is a comparison operator and the third element is a right side value of an inequality (or equation). Currently supported operators are <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>, and <code>!=</code>.</p>
+<p>An item of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> can pass this filter only if every value for every key for <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a> satisfies an inequality consisting of the corresponding comparison operator and right side value (the second and third elements of <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>). Note that value(s) of the item is taken as left side value of the inequality.</p>
 <p>About usage in Python, please see <a class="el" href="py__fil__comparison_8h.html" title="This file is for binding FilComparison class to Python. ">src/pybind/filters/py_fil_comparison.h</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="fil__comparison_8h_source.html#l00039">39</a> of file <a class="el" href="fil__comparison_8h_source.html">fil_comparison.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8745e2f1f5e800300ee23cad73ad4ddf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8745e2f1f5e800300ee23cad73ad4ddf">&#9670;&nbsp;</a></span>FilComparison() <span class="overload">[1/2]</span></h2>
@@ -176,6 +179,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>Note that the first element of <code>comparison_</code> (string key) must be included in <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where this object appended to. </p>
+
+<p class="definition">Definition at line <a class="el" href="fil__comparison_8cpp_source.html#l00016">16</a> of file <a class="el" href="fil__comparison_8cpp_source.html">fil_comparison.cpp</a>.</p>
 
 </div>
 </div>
@@ -203,6 +208,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>Note that the first element of each tuple in <code>comparisons_</code> must be included in <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where this object appended to. </p>
+
+<p class="definition">Definition at line <a class="el" href="fil__comparison_8cpp_source.html#l00024">24</a> of file <a class="el" href="fil__comparison_8cpp_source.html">fil_comparison.cpp</a>.</p>
 
 </div>
 </div>
@@ -252,6 +259,8 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="fil__comparison_8cpp_source.html#l00099">99</a> of file <a class="el" href="fil__comparison_8cpp_source.html">fil_comparison.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -293,6 +302,8 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Constant <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a>&lt;std::pair&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6" title="Str is an alias for string. ">Str</a>,<a class="el" href="fil__comparison_8h.html#ab9615306db45e5984ebc1b3090f30303" title="CompareFunc is an alias for a function taking a Json and returning a boolean. ">CompareFunc</a>&gt;&gt;, which describes criteria of this filter.</dd></dl>
 <p>Returned value of this method is used for evaluating inequalities consisting of the second and third elements of tuples contained in <a class="el" href="classFilComparison.html#a71516c6421c11b202c15f1699723bbc1" title="Vec (list) describing criteria of this filter. ">comparisons</a>. Note that this method should not be called from constructor because of possibility of throwing (and raising) a runtime error. </p>
+
+<p class="definition">Definition at line <a class="el" href="fil__comparison_8cpp_source.html#l00082">82</a> of file <a class="el" href="fil__comparison_8cpp_source.html">fil_comparison.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -349,6 +360,8 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="fil__comparison_8h.html#ab9615306db45e5984ebc1b3090f30303" title="CompareFunc is an alias for a function taking a Json and returning a boolean. ">CompareFunc</a>, a function evaluating an inequality (or equation). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="fil__comparison_8cpp_source.html#l00032">32</a> of file <a class="el" href="fil__comparison_8cpp_source.html">fil_comparison.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -386,11 +399,13 @@ Here is the caller graph for this function:</div>
 <p><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> (list) describing criteria of this filter. </p>
 <p>Elements of the list are 3-elements tuples. Note that the first element of each tuple is a key; and the key must be contained in <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where this object appended to. Note that the reason not using <a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6" title="Map is an alias for unordered map (same as dict in Python). ">Map</a> is to allow duplicate keys. </p>
 
+<p class="definition">Definition at line <a class="el" href="fil__comparison_8h_source.html#l00048">48</a> of file <a class="el" href="fil__comparison_8h_source.html">fil_comparison.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/filters/<a class="el" href="fil__comparison_8h_source.html">fil_comparison.h</a></li>
-<li>src/filters/<a class="el" href="fil__comparison_8cpp.html">fil_comparison.cpp</a></li>
+<li>src/filters/<a class="el" href="fil__comparison_8cpp_source.html">fil_comparison.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

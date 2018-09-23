@@ -221,6 +221,8 @@ Additional Inherited Members</h2></td></tr>
 <p><a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class is different from <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> and <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> by owning data <em>element</em> (or <em>entity</em>). The data is stored as <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a>, and a set of keys for properties in the data is stored as <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">datakeys</a>. Note that <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> can be either an array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object or a non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. A non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object consists of items: pairs of a string key and int/bool/double/string/array value. The key represents a property name. For array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a>, it contains non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects. Each non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object should have the same set of keys; this set is the one stored as <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">datakeys</a>.</p>
 <p>An object of this class can update its own <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> and <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">datakeys</a> by calling its <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73" title="This method updates data of this object. ">update_data</a> where mutable references of the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> and <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">datakeys</a> are passed to an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a>.</p>
 <p>About usage in Python, please see <a class="el" href="py__element_8h.html" title="This file is for binding Element class to Python. ">src/pybind/py_element.h</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00041">41</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab0d0e20be9a36ae676202db753faeec9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0d0e20be9a36ae676202db753faeec9">&#9670;&nbsp;</a></span>Element()</h2>
@@ -239,6 +241,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. </p>
 <p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreading context. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00021">21</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -268,6 +272,8 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Shared pointer of this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.</dd></dl>
 <p>To update the data, one needs to create an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object and then appends it to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object using this method. In this method, <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair objects. It describes a process how Element::data is generated and upd...">Generator::update_chain</a> stored in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">Updater::ext_generator</a> of the <code>upd</code> is merged to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair objects. It describes a process how Element::data is generated and upd...">Generator::update_chain</a> of this object; then an <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a> consisting of this object and the <code>upd</code> is appended to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf" title="Chain (sequence) of UpdatePair objects. It describes a process how Element::data is generated and upd...">Generator::update_chain</a> of this object. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00121">121</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -276,7 +282,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_adc43106f0ea5e11d03105c40df1fe0a8_icgraph.svg" width="343" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_adc43106f0ea5e11d03105c40df1fe0a8_icgraph.svg" width="364" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -319,10 +325,12 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one passed <a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98" title="ArrayXi is an alias for a column array of Eigen where the values are integer. ">ArrayXi</a> or <a class="el" href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220" title="ArrayXd is an alias for a column array of Eigen where the values are double. ">ArrayXd</a> as a reference, this method fills it by values of a property specified by <code>key</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00188">188</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a576395d61902a76979ffd336afa714b3_icgraph.svg" width="512" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a576395d61902a76979ffd336afa714b3_icgraph.svg" width="534" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -365,10 +373,12 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one passed <a class="el" href="eigen_8h.html#a187c541a6423e8b13a361d39799a2bac" title="ArrayXXi is an alias for a two-dimensional array of Eigen where the values are integer. ">ArrayXXi</a> or <a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9" title="ArrayXXd is an alias for a two-dimensional array of Eigen where the values are double. ">ArrayXXd</a> as a reference, this method fills it by values of some properties specified by <code>keys</code>. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00212">212</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a4c2fcdb60e23dedce2b54b9deeadc469_icgraph.svg" width="512" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a4c2fcdb60e23dedce2b54b9deeadc469_icgraph.svg" width="534" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -399,6 +409,8 @@ Here is the caller graph for this function:</div>
 <p>This method decrements <a class="el" href="classElement.html#a678d35749bc335254f3fd4a4cc135d83" title="The number of times this object will be used in the future. ">n_remain</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one increments <a class="el" href="classElement.html#a678d35749bc335254f3fd4a4cc135d83" title="The number of times this object will be used in the future. ">n_remain</a> of this object before using <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> and then decrements it after using it, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> is cleared to save memory. This system is convenient to access <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> multiple times while saving memory. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00038">38</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -432,6 +444,8 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220" title="ArrayXd is an alias for a column array of Eigen where the values are double. ">ArrayXd</a> (Numpy-Array in Python).</dd></dl>
 <p>This method provides a functionality to access values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> directly from Python as an one-dimensional array. An updating process associated with this object is executed before getting the array. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00296">296</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -440,7 +454,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a3f11848589faad4cbca8119385887713_icgraph.svg" width="343" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a3f11848589faad4cbca8119385887713_icgraph.svg" width="364" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -470,6 +484,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98" title="ArrayXi is an alias for a column array of Eigen where the values are integer. ">ArrayXi</a> (Numpy-Array in Python).</dd></dl>
 <p>This method provides a functionality to access values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> directly from Python as an one-dimensional array. An updating process associated with this object is executed before getting the array. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00281">281</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -478,7 +494,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8257b02b1e3b208f193b35d5d47b9af8_icgraph.svg" width="331" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8257b02b1e3b208f193b35d5d47b9af8_icgraph.svg" width="352" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -508,6 +524,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9" title="ArrayXXd is an alias for a two-dimensional array of Eigen where the values are double. ">ArrayXXd</a> (Numpy-Array in Python).</dd></dl>
 <p>This method provides a functionality to access values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> directly from Python as a two-dimensional array. An updating process associated with this object is executed before getting the array. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00329">329</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -516,7 +534,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a6a62280eadd3d4e6bfe8c43082797733_icgraph.svg" width="343" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a6a62280eadd3d4e6bfe8c43082797733_icgraph.svg" width="364" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -546,6 +564,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a187c541a6423e8b13a361d39799a2bac" title="ArrayXXi is an alias for a two-dimensional array of Eigen where the values are integer. ">ArrayXXi</a> (Numpy-Array in Python).</dd></dl>
 <p>This method provides a functionality to access values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> directly from Python as a two-dimensional array. An updating process associated with this object is executed before getting the array. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00311">311</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -554,7 +574,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8e8245fb94b6417e3e804e6bfdf2f906_icgraph.svg" width="331" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8e8245fb94b6417e3e804e6bfdf2f906_icgraph.svg" width="352" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -577,6 +597,8 @@ Here is the caller graph for this function:</div>
 <p>Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> of this object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a>.</dd></dl>
 <p>One can refer the whole data stored in this object by this method. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00173">173</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -606,6 +628,8 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> (not a reference).</dd></dl>
 <p>One can get the partial data stored in this object by this method. To select which property is included in returned <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a>, pass a string key for the property as <code>key_</code>. </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00138">138</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a62989090a40d237e617bc6e5f5087388"></a>
@@ -626,6 +650,8 @@ Here is the caller graph for this function:</div>
 <p>Wrapper for <a class="el" href="classElement.html#a47096a22005245db075143ff1ee1981c" title="Get the reference to data of this object. ">get_data</a> method, which returns a reference. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a>.</dd></dl>
 <p>This method provides a functionality to access <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> directly from Python. An updating process associated with this object is executed before getting the data. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00263">263</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -634,7 +660,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a62989090a40d237e617bc6e5f5087388_icgraph.svg" width="322" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a62989090a40d237e617bc6e5f5087388_icgraph.svg" width="343" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -676,6 +702,8 @@ Here is the caller graph for this function:</div>
 <p>Implements <a class="el" href="classGenerator.html#a81a0f591e4d004c5f8937807a7573497">Generator</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classPyElement.html#a249fb6a35941b5fb0cc129c33a5574eb">PyElement</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00095">95</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -721,6 +749,8 @@ Here is the call graph for this function:</div>
 <p>Implements <a class="el" href="classGenerator.html#a76231ee9835f9b21951630e7909816e1">Generator</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classPyElement.html#a27c414aa8d4316702b812b0d624714da">PyElement</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00108">108</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -748,6 +778,8 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a>.</dd></dl>
 <p>One can refer the keys (property names) in the data by this method. </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00180">180</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+
 </div>
 </div>
 <a id="ae253cbec6307a157902d7f25867ded2b"></a>
@@ -768,6 +800,8 @@ Here is the call graph for this function:</div>
 <p>Wrapper for <a class="el" href="classElement.html#a060b21b533cc1deb92e666653a89f229" title="Get keys of the data of this object. ">get_keys</a> method. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307" title="Set is an alias for unordered set (same as set in Python). ">Set</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6" title="Str is an alias for string. ">Str</a>&gt;.</dd></dl>
 <p>This method provides a functionality to access <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">datakeys</a> directly from Python. An updating process associated with this object is executed before getting the set of keys. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00272">272</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -776,7 +810,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ae253cbec6307a157902d7f25867ded2b_icgraph.svg" width="324" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ae253cbec6307a157902d7f25867ded2b_icgraph.svg" width="346" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -808,6 +842,8 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>Please see <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00030">30</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a1fdb9455f49d2c66a0276925f7246cad"></a>
@@ -836,6 +872,8 @@ Here is the caller graph for this function:</div>
 <p>Routines to be conducted when a wrapper of getter is called from Python. </p>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>This method runs updating process associated with this object so that a wrapper of getter can access the filled <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00347">347</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -844,7 +882,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_icgraph.svg" width="554" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_icgraph.svg" width="575" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -874,6 +912,8 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool.</dd></dl>
 <p>It is convenient if <a class="el" href="classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2" title="Check if this object has optional key(s). ">DataKeys::optional</a> can be called without getting <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> object from this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00255">255</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -907,6 +947,8 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>It is convenient if <a class="el" href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" title="Check if this object has required key(s). ">DataKeys::required</a> can be called without getting <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> object from this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00247">247</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -915,7 +957,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a2dd2b3ed6f76878ae6cc1c1a36183517_icgraph.svg" width="515" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a2dd2b3ed6f76878ae6cc1c1a36183517_icgraph.svg" width="536" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -954,6 +996,8 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>This method updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> using an object of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> taken as <code>upd</code>. This object and the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object are paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. The Updater object updates...">UpdatePair</a> by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">append_updater</a> in advance. In this method, mutable references of the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> and <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">datakeys</a> are passed to <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57" title="Managing computation to update Element::data. ">Updater::compute</a> of the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. The <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">dataid</a> is also passed to the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00083">83</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -980,6 +1024,8 @@ Here is the caller graph for this function:</div>
 <p>Data <em>element</em> (or <em>entity</em>) itself. </p>
 <p>This member is a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object, which is a very flexible data container consisting of hierarchically organized items: pairs of a string key and int/bool/double/string/array value. Thanks to this flexibility, this class can store data for box, atoms, molecules, beads, cube, ... and more!! </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00070">70</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+
 </div>
 </div>
 <a id="a644085ed8d59a6835d218b7651ceb4c3"></a>
@@ -1004,6 +1050,8 @@ Here is the caller graph for this function:</div>
 
 <p>Unique ID for an object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. </p>
 <p>This member is used to prevent duplication of updating process of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a>. For more details, please see <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00061">61</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1030,6 +1078,8 @@ Here is the caller graph for this function:</div>
 <p>Set of keys of the data. </p>
 <p>This member stores string keys <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> has. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. Note that after updating the data, the set of keys must be manually updated (add/remove keys) in <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> or its subclasses. </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00078">78</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+
 </div>
 </div>
 <a id="a814393093779993a8ecbc961e16fdd32"></a>
@@ -1054,6 +1104,8 @@ Here is the caller graph for this function:</div>
 
 <p>The number of created objects (a.k.a. instances) of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. </p>
 <p>This member is only used for setting <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3" title="Unique ID for an object of Element class. ">dataid</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00047">47</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1080,6 +1132,8 @@ Here is the caller graph for this function:</div>
 <p>The number of times this object will be used in the future. </p>
 <p>This member can be incremented by <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e" title="This method increments n_remain. ">increment_remain</a> and decremented by <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>. If this member becomes 0 in <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> is cleared to save memory. </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00055">55</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+
 </div>
 </div>
 <a id="a6899e560e3f3c1fefcf44d37e4e99522"></a>
@@ -1105,11 +1159,13 @@ Here is the caller graph for this function:</div>
 <p>A variable used by OpenMP. </p>
 <p>In this program, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> is updated in a multithreading context. To prevent the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">data</a> from being updated from multiple threads at the same time, this member must be locked in <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73" title="This method updates data of this object. ">update_data</a>, <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e" title="This method increments n_remain. ">increment_remain</a> and <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. ">decrement_remain</a>. </p>
 
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00087">87</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/<a class="el" href="element_8h_source.html">element.h</a></li>
-<li>src/core/<a class="el" href="element_8cpp.html">element.cpp</a></li>
+<li>src/core/<a class="el" href="element_8cpp_source.html">element.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

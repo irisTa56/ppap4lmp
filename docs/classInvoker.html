@@ -113,6 +113,8 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classInvoker.html" title="Invoker is an abstract class to execute analysis defined by one or more Processor objects...">Invoker</a> is an abstract class to execute analysis defined by one or more <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects. </p>
+
+<p class="definition">Definition at line <a class="el" href="invoker_8h_source.html#l00018">18</a> of file <a class="el" href="invoker_8h_source.html">invoker.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a155c803d4e88b7541fb5a281d3c52bba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a155c803d4e88b7541fb5a281d3c52bba">&#9670;&nbsp;</a></span>Invoker() <span class="overload">[1/2]</span></h2>
@@ -138,6 +140,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreading context. Please be careful that constructors of subclasses of this class are also thread-unsafe. </p>
+
+<p class="definition">Definition at line <a class="el" href="invoker_8cpp_source.html#l00016">16</a> of file <a class="el" href="invoker_8cpp_source.html">invoker.cpp</a>.</p>
 
 </div>
 </div>
@@ -166,6 +170,8 @@ Protected Attributes</h2></td></tr>
 </dl>
 <p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreading context. Please be careful that constructors of subclasses of this class are also thread-unsafe. </p>
 
+<p class="definition">Definition at line <a class="el" href="invoker_8cpp_source.html#l00024">24</a> of file <a class="el" href="invoker_8cpp_source.html">invoker.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -187,6 +193,8 @@ Protected Attributes</h2></td></tr>
 <p>Execute analysis defined by elements of <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>First, this method calls <a class="el" href="classProcessor.html#a74fe912a6d9216d9b531ff58491889a9" title="Startup this Processor object. ">Processor::startup</a> of each object in <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>. Next, this method calls <a class="el" href="classProcessor.html#ae402da6f2bad22f074987a9d15fffc73" title="Prepare analysis. ">Processor::prepare</a> of each object in <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>, and then calls <a class="el" href="classInvoker.html#a9a45f01fd7b3dae7a54e0a0fff94dff5" title="Implementation how to execute a computationally expensive part of analysis. ">execute_impl</a> where computationally expensive calculations are conducted. Finally, this method calls <a class="el" href="classProcessor.html#a3731212e329a563ee79f1bd2e7c0a512" title="Finish analysis. ">Processor::finish</a> of each object in <a class="el" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8" title="Processor objects to be executed. ">processors</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="invoker_8cpp_source.html#l00032">32</a> of file <a class="el" href="invoker_8cpp_source.html">invoker.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -195,7 +203,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a72e473312201d41ea0711cea5346476c_icgraph.svg" width="287" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a72e473312201d41ea0711cea5346476c_icgraph.svg" width="308" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -231,7 +240,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a9a45f01fd7b3dae7a54e0a0fff94dff5_icgraph.svg" width="486" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a9a45f01fd7b3dae7a54e0a0fff94dff5_icgraph.svg" width="507" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -260,11 +270,13 @@ Here is the caller graph for this function:</div>
 <p><a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects to be executed. </p>
 <p>This member can be set only in the constructor. </p>
 
+<p class="definition">Definition at line <a class="el" href="invoker_8h_source.html#l00024">24</a> of file <a class="el" href="invoker_8h_source.html">invoker.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/invokers/<a class="el" href="invoker_8h_source.html">invoker.h</a></li>
-<li>src/invokers/<a class="el" href="invoker_8cpp.html">invoker.cpp</a></li>
+<li>src/invokers/<a class="el" href="invoker_8cpp_source.html">invoker.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
