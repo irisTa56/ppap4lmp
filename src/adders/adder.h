@@ -12,8 +12,7 @@
 #include <core/updater.h>
 
 /*!
-  @brief Adder adds new properties (keys and values) to
-  a non-empty Element object.
+  @brief Adder adds new properties to a non-empty Element object.
 
   This class inherits Updater class and overrides Updater::compute.
   This class is an abstract class and has a pure virtual function,

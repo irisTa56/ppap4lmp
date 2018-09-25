@@ -17,8 +17,8 @@
 #include <class/data_keys.h>
 
 /*!
-  @brief Element is a Generator containing data \e element (or
-  \e entity) as a ::Json object.
+  @brief Element inherits Generator class and contains data \e element
+  (or \e entity) as a ::Json object.
 
   This class inherits Generator class and ::EnShThis<#Element>.
 

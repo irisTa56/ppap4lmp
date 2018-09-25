@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a52312e9310f32ffe141e661409ab3a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class.  <a href="#a52312e9310f32ffe141e661409ab3a59">More...</a><br /></td></tr>
 <tr class="separator:a52312e9310f32ffe141e661409ab3a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#aca8f4c0c3ff7e95f74864afb5ddc1888">get_element</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
-<tr class="memdesc:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.  <a href="#aca8f4c0c3ff7e95f74864afb5ddc1888">More...</a><br /></td></tr>
+<tr class="memdesc:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as a shared pointer of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class.  <a href="#aca8f4c0c3ff7e95f74864afb5ddc1888">More...</a><br /></td></tr>
 <tr class="separator:aca8f4c0c3ff7e95f74864afb5ddc1888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a415cfc1b9b18024ba9f20fa94caacb39"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a415cfc1b9b18024ba9f20fa94caacb39">get_generator</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
 <tr class="memdesc:a415cfc1b9b18024ba9f20fa94caacb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class.  <a href="#a415cfc1b9b18024ba9f20fa94caacb39">More...</a><br /></td></tr>
@@ -217,15 +217,15 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as a shared pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. </p>
+<p>Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as a shared pointer of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>An index in <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> up-casted to <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.</dd></dl>
-<p>One needs to get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> when using its <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>An element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> up-casted to <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class.</dd></dl>
+<p>One needs to get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> when using its <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. </p>
 
 <p>Implements <a class="el" href="classGenerator.html#a81a0f591e4d004c5f8937807a7573497">Generator</a>.</p>
 
@@ -325,7 +325,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>List of shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. The element can be a pointer of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class up-casted to a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. </p>
+<p>List of shared pointers of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. The element can be a pointer of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> or <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> class up-casted to a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. </p>
 
 <p class="definition">Definition at line <a class="el" href="gen__list_8h_source.html#l00026">26</a> of file <a class="el" href="gen__list_8h_source.html">gen_list.h</a>.</p>
 

@@ -29,16 +29,41 @@ var NAVTREE =
       [ "Installation", "index.html#install_sec", null ],
       [ "Features", "index.html#feat_sec", null ],
       [ "Schematic Sequence Diagram", "index.html#diagram_sec", null ],
-      [ "Functions accessible from Python", "index.html#python_sec", [
+      [ "Acknowledgement", "index.html#acknowledge_sec", null ],
+      [ "Class accessible from Python", "index.html#python_sec", [
         [ "Element", "index.html#python_sec_element", null ],
-        [ "Starter", "index.html#python_sec_starter", null ],
-        [ "Adder", "index.html#python_sec_adder", null ],
-        [ "Filter", "index.html#python_sec_filter", null ],
-        [ "Processor", "index.html#python_sec_proc", null ],
-        [ "Invoker", "index.html#python_sec_invo", null ],
-        [ "Utility functions", "index.html#python_sec_utils", null ]
-      ] ],
-      [ "Acknowledgement", "index.html#acknowledge_sec", null ]
+        [ "Starter", "index.html#python_sec_starter", [
+          [ "StaBeads", "index.html#python_sec_sta_beads", null ],
+          [ "StaCopy", "index.html#python_sec_sta_copy", null ],
+          [ "StaCustom", "index.html#python_sec_sta_custom", null ],
+          [ "StaDumpAtoms", "index.html#python_sec_sta_dump_atoms", null ],
+          [ "StaDumpBox", "index.html#python_sec_sta_dump_box", null ],
+          [ "StaMolecules", "index.html#python_sec_sta_molecules", null ]
+        ] ],
+        [ "Adder", "index.html#python_sec_adder", [
+          [ "AddChildIDs", "index.html#python_py_add_child_ids", null ],
+          [ "AddChildPositions", "index.html#python_py_add_child_positions", null ],
+          [ "AddCoMPosition", "index.html#python_py_add_com_position", null ],
+          [ "AddGyrationRadius", "index.html#python_py_add_gyration_radius", null ],
+          [ "AddInertiaMoment", "index.html#python_py_add_inertia_moment", null ],
+          [ "AddMap", "index.html#python_py_add_map", null ],
+          [ "AddMolecularOrientation", "index.html#python_py_add_molecular_orientation", null ],
+          [ "AddRename", "index.html#python_py_add_rename", null ],
+          [ "AddSpecialBonds", "index.html#python_py_add_special_bonds", null ],
+          [ "AddWrappedPosition", "index.html#python_py_add_wrapped_position", null ]
+        ] ],
+        [ "Filter", "index.html#python_sec_filter", [
+          [ "FilComparison", "index.html#python_py_fil_comparison", null ],
+          [ "FilSet", "index.html#python_py_fil_set", null ]
+        ] ],
+        [ "Processor", "index.html#python_sec_proc", [
+          [ "ProData", "index.html#python_py_pro_data", null ]
+        ] ],
+        [ "Invoker", "index.html#python_sec_invo", [
+          [ "InvOMP", "index.html#python_py_inv_omp", null ]
+        ] ],
+        [ "Utilities", "index.html#python_sec_utils", null ]
+      ] ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -72,8 +97,8 @@ var NAVTREEINDEX =
 [
 ".html",
 "classProRadialDistributionFunction.html#a2c9c40d3245fdcfa95321696235d8523",
-"invoker_8cpp_source.html",
-"sta__beads_8cpp.html"
+"index.html#python_py_pro_data",
+"pybind_8h.html#a4714c4a855ebb82892410d5254e9ccdc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

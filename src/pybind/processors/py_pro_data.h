@@ -18,84 +18,75 @@ namespace pybind
     @brief Bind ProData class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of ProData
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %ProData</td>
-        <td class="py_td">ProData::ProData</td>
-        <td class="py_td">
-          Constructor of ProData class for one Element object.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          ProData::ProData
         </td>
-        <td class="py_td">
-          - \c elem : An Element object to be copied.
-          @note this is a note
+        <td class="py_constructor" colspan="2">
+          @copybrief ProData::ProData(const ElPtr &)
         </td>
-        <td class="py_td">
-          Constructed ProData object.
+        <td class="py_constructor" colspan="2">
+          @copydetails ProData::ProData(const ElPtr &)
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %ProData</td>
-        <td class="py_td">ProData::ProData</td>
-        <td class="py_td">
-          Constructor of ProData class for a sequence
-          of Element objects.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          ProData::ProData
         </td>
-        <td class="py_td">
-          - \c elems : List of Element objects to be copied.
+        <td class="py_constructor" colspan="2">
+          @copybrief ProData::ProData(const Vec<ElPtr> &)
         </td>
-        <td class="py_td">
-          Constructed ProData object.
+        <td class="py_constructor" colspan="2">
+          @copydetails ProData::ProData(const Vec<ElPtr> &)
         </td>
       </tr>
     </table>
 
-    <table class="py_table">
-      <caption>
+    <table class="py_method">
+      <caption class="py_method">
         Python-side methods of ProData
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_method">
+        <th class="py_method">Name</th>
+        <th class="py_method">C++</th>
+        <th class="py_method">Description</th>
+        <th class="py_method">Parameters</th>
+        <th class="py_method">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c select</td>
-        <td class="py_td">ProData::select</td>
-        <td class="py_td">
+      <tr class="py_method">
+        <td class="py_method">\c select</td>
+        <td class="py_method">ProData::select</td>
+        <td class="py_method">
           @copybrief ProData::select
         </td>
-        <td class="py_td">
-          - \c *args : A variable number of string keys specifying
-            properties to be copied.
+        <td class="py_method">
+          @copydetails ProData::select
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_results</td>
-        <td class="py_td">ProData::get_results</td>
-        <td class="py_td">
+      <tr class="py_method">
+        <td class="py_method">\c get_results</td>
+        <td class="py_method">ProData::get_results</td>
+        <td class="py_method">
           @copybrief ProData::get_results
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
-        <td class="py_td">
-          List of JSON-like object consisting of copied properties.
+        <td class="py_method">
+          List of ::Json objects (complex of dictionary and list).
         </td>
       </tr>
     </table>

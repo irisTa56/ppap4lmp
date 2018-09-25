@@ -12,8 +12,8 @@
 #include <processors/processor.h>
 
 /*!
-  @brief Invoker is an abstract class to execute analysis
-  defined by one or more Processor objects.
+  @brief Invoker executes analysis programmed
+  in one or more Processor objects.
 */
 class Invoker {
  protected:
@@ -23,7 +23,7 @@ class Invoker {
   */
   Vec<ShPtr<Processor>> processors;
   /*!
-    @brief Implementation how to execute a main part of analysis.
+    @brief Implementation how to execute a main part of analysis.s
     @return None.
   */
   virtual void execute_impl() = 0;

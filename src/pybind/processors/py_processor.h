@@ -46,15 +46,17 @@ class PyProcessor : public PRO {
   }
 };
 
-/*!
-  @brief Function to bind Processor class to Python.
-
-  Constructor of Processor class is hidden from Python,
-  because the class is an abstract one.
-*/
 //! Namespace for functions to bind C++ classes to Python.
 namespace pybind
 {
+  /*!
+    @brief Bind Processor class to Python.
+    @param m : A mutable reference to Python module.
+    @return None.
+
+    Constructor of Processor class is hidden from Python,
+    because the class is an abstract one.
+  */
   void py_processor(py::module &m);
 }
 

@@ -102,97 +102,105 @@ conda install -c irista56 ppap4lmp
 <h1 class="main_page"><a class="anchor" id="feat_sec"></a>
 Features</h1>
 <ul>
-<li>Implemented by C++, Used from Python</li>
-<li>Data stored in Json structure</li>
-<li>Extensible without editing existing codes</li>
+<li>Implemented by C++, Used from Python.</li>
+<li>Data stored in JSON structure.</li>
+<li>Extensible without editing existing codes.</li>
 </ul>
 <h1 class="main_page"><a class="anchor" id="diagram_sec"></a>
 Schematic Sequence Diagram</h1>
 <p>
 <div class="mermaid">
-    sequenceDiagram
+  sequenceDiagram
 
-    participant user as User (Python)
-    participant ele as Element
-    participant upd as Updater's subclass
-    participant pro as Processor's subclass
-    participant inv as Invoker's subclass
+  participant user as User (Python)
+  participant ele as Element
+  participant upd as Updater's subclass
+  participant pro as Processor's subclass
+  participant inv as Invoker's subclass
 
-    user -&gt;&gt; upd : create Starter (Uptater for initialization)
+  user -&gt;&gt; upd : create Starter (Uptater for initialization)
+  upd --&gt;&gt; user : object
+  user -&gt;&gt; ele : create with the Starter object
+
+  note over ele,upd : UpdatePair (pair of Element and Updater) is stored in the Element object.
+
+  ele --&gt;&gt; user : object
+
+  loop additional properties
+    user -&gt;&gt; upd : create Adder (Uptater for adding new properties)
     upd --&gt;&gt; user : object
-    user -&gt;&gt; ele : create with the Starter object
+    user -&gt;&gt; ele : append the Adder object
+    note over ele,upd : UpdatePair (pair of Element and Updater) is stored the Element object.
+  end
 
-    note over ele,upd : UpdatePair (pair of Element and Updater) is stored in the Element object.
+  user -&gt;&gt; pro : create with Generator objects
 
-    ele --&gt;&gt; user : object
+  note over pro : Store the Generator objects
 
-    loop additional properties
-      user -&gt;&gt; upd : create Adder (Uptater for adding new properties)
-      upd --&gt;&gt; user : object
-      user -&gt;&gt; ele : append the Adder object
-      note over ele,upd : UpdatePair (pair of Element and Updater) is stored the Element object.
-    end
+  pro --&gt;&gt; user : object
 
-    user -&gt;&gt; pro : create with Generator objects
+  user -&gt;&gt; inv : create with Processor objects
 
-    note over pro : Store the Generator objects
+  note over inv : Store the Processor objects
 
-    pro --&gt;&gt; user : object
+  inv --&gt;&gt; user : object
 
-    user -&gt;&gt; inv : create with Processor objects
+  user -&gt;&gt; inv : execute
 
-    note over inv : Store the Processor objects
+  loop over Generator objects
+    inv -&gt;&gt; pro : run
+    pro -&gt;&gt; ele : execute updating process
+    note over ele,upd : Chain of UpdatePair objects is executed one by one (the Element objects updates their data using the paired Updater objects).
+    ele --&gt;&gt; pro : updated data can be accessed
+    note over pro : Run analysis process for each Generator object using the data.
+  end
 
-    inv --&gt;&gt; user : object
-
-    user -&gt;&gt; inv : execute
-
-    loop over Generator objects
-      inv -&gt;&gt; pro : run
-      pro -&gt;&gt; ele : execute updating process
-      note over ele,upd : Chain of UpdatePair objects is executed one by one (the Element objects updates their data using the paired Updater objects).
-      ele --&gt;&gt; pro : updated data can be accessed
-      note over pro : Run analysis process for each Generator object using the data.
-    end
-
-    pro --&gt;&gt; user : get results
-  </div>
+  pro --&gt;&gt; user : get results
+</div>
 </p>
+<h1 class="main_page"><a class="anchor" id="acknowledge_sec"></a>
+Acknowledgement</h1>
+<p>This project would not be possible without the following great open-source projects.</p>
+<ul>
+<li><a href="https://github.com/pybind/pybind11">pybind11</a></li>
+<li><a href="https://github.com/nlohmann/json">nlohmann/json</a></li>
+<li><a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a></li>
+</ul>
 <h1 class="main_page"><a class="anchor" id="python_sec"></a>
-Functions accessible from Python</h1>
+Class accessible from Python</h1>
 <h2 class="main_page"><a class="anchor" id="python_sec_element"></a>
 Element</h2>
+<p><a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and contains data <em>element</em> (or <em>entity</em>) as a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. </p>
 
-
-<p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class is hidden from Python. A Python-side function <b>create</b> provides functionality to create an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object taking a <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass object as its parameter.</p>
+<p>Constructor of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class is hidden from Python. A Python-side function <b>create</b> provides functionality to create an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object taking a <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>'s subclass object as its parameter.</p>
 <a class="anchor" id=""></a>
 <table class="py_constructor">
 <caption class="py_constructor">Python-side functions </caption>
 <tr class="py_constructor">
 <th class="py_constructor">Name </th><th class="py_constructor">C++ </th><th class="py_constructor">Description </th><th class="py_constructor">Parameters </th><th class="py_constructor">Return  </th></tr>
 <tr class="py_constructor">
-<td class="py_constructor"><code>create</code> </td><td class="py_constructor">Lambda function defined in <a class="el" href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" title="Bind Element class to Python. ">pybind::py_element</a> </td><td class="py_constructor">Factory function for <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.  </td><td class="py_constructor">
+<td class="py_constructor"><code>create</code> </td><td class="py_constructor">Lambda function defined in <a class="el" href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" title="Bind Element class to Python. ">pybind::py_element</a> </td><td class="py_constructor">Factory function for <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class.  </td><td class="py_constructor">
 <dl class="parameters">
 <dt>upd</dt>
-<dd>An object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass, which sets some properties to empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </dd>
+<dd>An object of <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>'s subclass, which sets some properties to empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of the created <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.  </dd>
 </dl>
 
-</td><td class="py_constructor">An object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.   </td></tr>
+</td><td class="py_constructor">An object of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class.   </td></tr>
 </table>
 <a class="anchor" id=""></a>
 <table class="py_method">
-<caption class="py_method">Python-side methods of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> </caption>
+<caption class="py_method">Python-side methods of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> </caption>
 <tr class="py_method">
 <th class="py_method">Name </th><th class="py_method">C++ </th><th class="py_method">Description </th><th class="py_method">Parameters </th><th class="py_method">Return  </th></tr>
 <tr class="py_method">
-<td class="py_method"><code>append_updater</code> </td><td class="py_method"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object: the only way to extend an updating process associate...">Element::append_updater</a> </td><td class="py_method">Append an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object to this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object: the only way to extend an updating process associated with this object.  </td><td class="py_method">
+<td class="py_method"><code>append_updater</code> </td><td class="py_method"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object: the only way to extend an updating process associate...">Element::append_updater</a> </td><td class="py_method">Append an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object to this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object: the only way to extend an updating process associated with this object.  </td><td class="py_method">
 <dl class="parameters">
 <dt>upd</dt>
-<dd>An <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a> object to be paired with this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object as an <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> object, which is appended to a sequence of <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> objects describing the updating process of this object.</dd>
+<dd>An <a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a> object to be paired with this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object as an <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> object, which is appended to a sequence of <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> objects describing the updating process of this object.</dd>
 </dl>
 
 
- </td><td class="py_method">This <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.   </td></tr>
+ </td><td class="py_method">This <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.   </td></tr>
 <tr class="py_method">
 <td class="py_method"><code>get_data</code> </td><td class="py_method"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388" title="Get Element::data of this object. ">Element::get_data_py</a> </td><td class="py_method">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object.  </td><td class="py_method">None.  </td><td class="py_method">A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object (complex of dictionary and list).   </td></tr>
 <tr class="py_method">
@@ -236,8 +244,10 @@ Element</h2>
 </table>
 <h2 class="main_page"><a class="anchor" id="python_sec_starter"></a>
 Starter</h2>
-<p><a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a> is an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a>'s subclass for initializing an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.</p>
-
+<p><a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a> sets some properties to an empty <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.</p>
+<h3 class="main_page"><a class="anchor" id="python_sec_sta_beads"></a>
+StaBeads</h3>
+<p><a class="el" href="classStaBeads.html" title="StaBeads sets properties for beads using mapping (coarse-graining) scheme for each molecule...">StaBeads</a> sets properties for beads using mapping (coarse-graining) scheme for each molecule. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -259,7 +269,7 @@ Starter</h2>
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>el_mols</dt>
-<dd>A molecular <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object consisting of beads for which an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object is created with this constructed object. 
+<dd>A molecular <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object consisting of beads for which an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is created with this constructed object. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -290,7 +300,7 @@ Starter</h2>
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>el_mols</dt>
-<dd>A molecular <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object consisting of beads for which an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object is created with this constructed object. 
+<dd>A molecular <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object consisting of beads for which an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is created with this constructed object. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -362,6 +372,9 @@ my_beads = StaBeads(
 beads = create(my_beads)
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_sec_sta_copy"></a>
+StaCopy</h3>
+<p><a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a> copies <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of an existing <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object and sets it to a new <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -374,12 +387,14 @@ beads = create(my_beads)
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elem</dt>
-<dd>An <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object to be copied.  </dd>
+<dd>An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object to be copied.  </dd>
 </dl>
 
 </td></tr>
 </table>
-
+<h3 class="main_page"><a class="anchor" id="python_sec_sta_custom"></a>
+StaCustom</h3>
+<p><a class="el" href="classStaCustom.html" title="StaCustom sets an user-defined Json object to a new Element object as its Element::data. ">StaCustom</a> sets an user-defined <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object to a new <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object as its <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -397,7 +412,9 @@ beads = create(my_beads)
 
 </td></tr>
 </table>
-
+<h3 class="main_page"><a class="anchor" id="python_sec_sta_dump_atoms"></a>
+StaDumpAtoms</h3>
+<p><a class="el" href="classStaDumpAtoms.html" title="StaDumpAtoms reads a Lammps' dump file and sets properties for atoms. ">StaDumpAtoms</a> reads a Lammps' dump file and sets properties for atoms. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -433,6 +450,9 @@ atoms_traj = [
   for i in range(0, 1000000, 1000)]
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_sec_sta_dump_box"></a>
+StaDumpBox</h3>
+<p><a class="el" href="classStaDumpBox.html" title="StaDumpBox reads a Lammps' dump file and sets properties for simulation box. ">StaDumpBox</a> reads a Lammps' dump file and sets properties for simulation box. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -476,6 +496,9 @@ atoms_traj = [
   for i in range(0, 1000000, 1000)]
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_sec_sta_molecules"></a>
+StaMolecules</h3>
+<p><a class="el" href="classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. ">StaMolecules</a> sets properties for molecules using atoms forming the molecules. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -494,7 +517,7 @@ atoms_traj = [
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>el_atoms</dt>
-<dd>An <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for atoms forming molecules to be created. 
+<dd>An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for atoms forming molecules to be created. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -530,8 +553,10 @@ molecules_traj = [
 </p>
 <h2 class="main_page"><a class="anchor" id="python_sec_adder"></a>
 Adder</h2>
-<p><a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> is an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a>'s subclass for adding new properties to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.</p>
-
+<p><a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> adds new properties to a non-empty <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.</p>
+<h3 class="main_page"><a class="anchor" id="python_py_add_child_ids"></a>
+AddChildIDs</h3>
+<p><a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a> adds <code>id</code> property of a child <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object to a parent <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -556,7 +581,7 @@ Adder</h2>
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elem</dt>
-<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. 
+<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -578,7 +603,7 @@ Adder</h2>
 
 </td></tr>
 </table>
-<p>Usage example of the constructor to add <code>bead-ids</code> property to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
+<p>Usage example of the constructor to add <code>bead-ids</code> property to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
 <p>
 <pre class="prettyprint"><code class="lang-py"># python
 
@@ -589,6 +614,9 @@ beads = create(StaBeads(molecules, mapping))
 molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_py_add_child_positions"></a>
+AddChildPositions</h3>
+<p><a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a> adds relative positions of a child <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object to a parent <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -618,7 +646,7 @@ molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elem</dt>
-<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. 
+<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -638,7 +666,9 @@ molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
 
 </td></tr>
 </table>
-
+<h3 class="main_page"><a class="anchor" id="python_py_add_com_position"></a>
+AddCoMPosition</h3>
+<p><a class="el" href="classAddCoMPosition.html" title="AddCoMPosition adds center of mass to an Element object as its unwrapped position. ">AddCoMPosition</a> adds center of mass to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object as its unwrapped position. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -666,7 +696,7 @@ molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elem</dt>
-<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. 
+<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -683,7 +713,7 @@ molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
 
 </td></tr>
 </table>
-<p>Usage example of the constructor to add <code>xu</code>, <code>yu</code> and <code>zu</code> property to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
+<p>Usage example of the constructor to add <code>xu</code>, <code>yu</code> and <code>zu</code> property to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
 <p>
 <pre class="prettyprint"><code class="lang-py"># python
 
@@ -693,6 +723,9 @@ molecules = create(StaMolecules(atoms))
 molecules.append_updater(AddCoMPosition(atoms))
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_py_add_gyration_radius"></a>
+AddGyrationRadius</h3>
+<p><a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> adds gyration radius to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -732,7 +765,7 @@ molecules.append_updater(AddCoMPosition(atoms))
 </dl>
 </td><td class="py_constructor" colspan="2">None.   </td></tr>
 </table>
-<p>Usage example of the constructor to add square of gyration radius to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
+<p>Usage example of the constructor to add square of gyration radius to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
 <p>
 <pre class="prettyprint"><code class="lang-py"># python
 
@@ -759,7 +792,9 @@ molecules.append_updater(AddGyrationRadius())
 
  </td><td class="py_method">This <a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a> object.   </td></tr>
 </table>
-
+<h3 class="main_page"><a class="anchor" id="python_py_add_inertia_moment"></a>
+AddInertiaMoment</h3>
+<p><a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a> adds inertia moment to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -792,7 +827,7 @@ molecules.append_updater(AddGyrationRadius())
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elem</dt>
-<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. 
+<dd>A <em>child</em> <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -809,7 +844,7 @@ molecules.append_updater(AddGyrationRadius())
 
 </td></tr>
 </table>
-<p>Usage example of the constructor to add elements of inertia moment to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
+<p>Usage example of the constructor to add elements of inertia moment to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
 <p>
 <pre class="prettyprint"><code class="lang-py"># python
 
@@ -820,6 +855,9 @@ molecules.append_updater(AddCoMPosition(atoms))
 molecules.append_updater(AddInertiaMoment(atoms))
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_py_add_map"></a>
+AddMap</h3>
+<p><a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a> adds a new property by mapping from an existing property. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -854,7 +892,7 @@ molecules.append_updater(AddInertiaMoment(atoms))
 </dl>
 <dl class="parameters">
 <dt>mapping_</dt>
-<dd>Dictionary defining a mapping from values for the reference property to values for the new property. Keys of the dictionary corresponds to domain of the mapping, and values of the dictionary corresponds to codomain of the mapping. Note that the keys must cover all values of the reference property in an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to.  </dd>
+<dd>Dictionary defining a mapping from values for the reference property to values for the new property. Keys of the dictionary corresponds to domain of the mapping, and values of the dictionary corresponds to codomain of the mapping. Note that the keys must cover all values of the reference property in an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to.  </dd>
 </dl>
 
 </td></tr>
@@ -888,7 +926,9 @@ my_mapping = AddMap(
 
  </td><td class="py_method">This <a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a> object.   </td></tr>
 </table>
-
+<h3 class="main_page"><a class="anchor" id="python_py_add_molecular_orientation"></a>
+AddMolecularOrientation</h3>
+<p><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> adds molecular orientation (order parameter) to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -919,7 +959,7 @@ my_mapping = AddMap(
 </dl>
 </td><td class="py_constructor" colspan="2">None.   </td></tr>
 </table>
-<p>Usage example of the constructor to add molecular orientation to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
+<p>Usage example of the constructor to add molecular orientation to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules.</p>
 <p>
 <pre class="prettyprint"><code class="lang-py"># python
 
@@ -931,6 +971,9 @@ molecules.append_updater(AddInertiaMoment(atoms))
 molecules.append_updater(AddMolecularOrientation())
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_py_add_rename"></a>
+AddRename</h3>
+<p><a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> renames an existing property. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -969,7 +1012,9 @@ molecules.append_updater(AddMolecularOrientation())
 
  </td><td class="py_method">This <a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a> object.   </td></tr>
 </table>
-
+<h3 class="main_page"><a class="anchor" id="python_py_add_special_bonds"></a>
+AddSpecialBonds</h3>
+<p><a class="el" href="classAddSpecialBonds.html" title="AddSpecialBonds adds special bonds. ">AddSpecialBonds</a> adds <em>special bonds</em>. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -987,7 +1032,7 @@ molecules.append_updater(AddMolecularOrientation())
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>el_mols</dt>
-<dd>A molecular <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object consisting of an atomic (or bead) <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to. 
+<dd>A molecular <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object consisting of an atomic (or bead) <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -1014,7 +1059,7 @@ molecules.append_updater(AddMolecularOrientation())
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>el_mols</dt>
-<dd>A molecular <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object consisting of an atomic (or bead) <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to. 
+<dd>A molecular <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object consisting of an atomic (or bead) <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -1080,6 +1125,9 @@ my_sbonds = AddSpecialBonds(
 atoms.append_updater(my_sbonds)
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_py_add_wrapped_position"></a>
+AddWrappedPosition</h3>
+<p><a class="el" href="classAddWrappedPosition.html" title="AddWrappedPosition adds wrapped positions for an Element object. ">AddWrappedPosition</a> adds wrapped positions for an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -1108,7 +1156,7 @@ atoms.append_updater(my_sbonds)
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elem</dt>
-<dd>An <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for a simulation box. 
+<dd>An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for a simulation box. 
 <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
@@ -1128,8 +1176,10 @@ atoms.append_updater(my_sbonds)
 </table>
 <h2 class="main_page"><a class="anchor" id="python_sec_filter"></a>
 Filter</h2>
-<p><a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a> is an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a>'s subclass for filtering against an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.</p>
-
+<p><a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a> removes elements from array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> if the elements fail user-defined criteria.</p>
+<h3 class="main_page"><a class="anchor" id="python_py_fil_comparison"></a>
+FilComparison</h3>
+<p><a class="el" href="classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. ">FilComparison</a> applies a filter defined by comparison operators. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -1142,7 +1192,7 @@ Filter</h2>
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>comparison_</dt>
-<dd>A 3-elements tuple consisting of a string key, comparison operator and right side value of an inequality (or equation). Note that an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object, where the constructed object is appended to, must has a property corresponding to the first element of this parameter (string key).  </dd>
+<dd>A 3-elements tuple consisting of a string key, comparison operator and right side value of an inequality (or equation). Note that an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object, where the constructed object is appended to, must has a property corresponding to the first element of this parameter (string key).  </dd>
 </dl>
 
 </td></tr>
@@ -1152,7 +1202,7 @@ Filter</h2>
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>comparisons_</dt>
-<dd>List of 3-elements tuples consisting of a string key, comparison operator and right side value of an inequality (or equation). Note that an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object, where the constructed object is appended to, must has properties corresponding to the first elements of this parameter (string key).  </dd>
+<dd>List of 3-elements tuples consisting of a string key, comparison operator and right side value of an inequality (or equation). Note that an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object, where the constructed object is appended to, must has properties corresponding to the first elements of this parameter (string key).  </dd>
 </dl>
 
 </td></tr>
@@ -1177,6 +1227,9 @@ atoms.append_updater(FilComparison([
 ]))
 </code></pre>
 </p>
+<h3 class="main_page"><a class="anchor" id="python_py_fil_set"></a>
+FilSet</h3>
+<p><a class="el" href="classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. ">FilSet</a> applies a filter defined by sets of acceptable values. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -1189,7 +1242,7 @@ atoms.append_updater(FilComparison([
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>value_sets_</dt>
-<dd>Dictionary from a string key for property to acceptable values of that property. Note that an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object, where the constructed object is appended to, must has properties corresponding to keys in this parameter.  </dd>
+<dd>Dictionary from a string key for property to acceptable values of that property. Note that an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object, where the constructed object is appended to, must has properties corresponding to keys in this parameter.  </dd>
 </dl>
 
 </td></tr>
@@ -1215,41 +1268,56 @@ atoms.append_updater(FilSet({
 </p>
 <h2 class="main_page"><a class="anchor" id="python_sec_proc"></a>
 Processor</h2>
-
+<p><a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> analyzes data contained in one or more <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> objects.</p>
+<h3 class="main_page"><a class="anchor" id="python_py_pro_data"></a>
+ProData</h3>
+<p><a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> copies <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> from <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects. </p>
 
 <a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>ProData</code> </td><td class="py_td"><a class="el" href="classProData.html#afcff6bc44862d6f5a42877d1623606b2" title="Constructor of ProData class for one Element object. ">ProData::ProData</a> </td><td class="py_td">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> class for one <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
-<li><code>elem</code> : An <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object to be copied. <dl class="section note"><dt>Note</dt><dd>this is a note  </dd></dl>
-</li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> object.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>ProData</code> </td><td class="py_td"><a class="el" href="classProData.html#afcff6bc44862d6f5a42877d1623606b2" title="Constructor of ProData class for one Element object. ">ProData::ProData</a> </td><td class="py_td">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> class for a sequence of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects.  </td><td class="py_td"><ul>
-<li><code>elems</code> : List of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> objects to be copied.  </li>
-</ul>
-</td><td class="py_td">Constructed <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> object.   </td></tr>
+<table class="py_constructor">
+<caption class="py_constructor">Python-side constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> </caption>
+<tr class="py_constructor">
+<th class="py_constructor">C++ </th><th class="py_constructor" colspan="2">Description </th><th class="py_constructor" colspan="2">Parameters  </th></tr>
+<tr class="py_constructor">
+<td class="py_constructor"><a class="el" href="classProData.html#afcff6bc44862d6f5a42877d1623606b2" title="Constructor of ProData class for one Element object. ">ProData::ProData</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> class for one <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_constructor" colspan="2">
+<dl class="parameters">
+<dt>elem</dt>
+<dd>An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object to be copied.  </dd>
+</dl>
+
+</td></tr>
+<tr class="py_constructor">
+<td class="py_constructor"><a class="el" href="classProData.html#afcff6bc44862d6f5a42877d1623606b2" title="Constructor of ProData class for one Element object. ">ProData::ProData</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> class for a sequence of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects.  </td><td class="py_constructor" colspan="2">
+<dl class="parameters">
+<dt>elems</dt>
+<dd>List of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects to be copied.  </dd>
+</dl>
+
+</td></tr>
 </table>
 <a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side methods of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>select</code> </td><td class="py_td"><a class="el" href="classProData.html#a15154c6692dda916207fa21316794474" title="Specify string keys for properties to be copied. ">ProData::select</a> </td><td class="py_td">Specify string keys for properties to be copied.  </td><td class="py_td"><ul>
-<li><code>*args</code> : A variable number of string keys specifying properties to be copied.  </li>
-</ul>
-</td><td class="py_td">None.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_results</code> </td><td class="py_td"><a class="el" href="classProData.html#a1451afb048021490fedb426701485eae" title="Get copied data. ">ProData::get_results</a> </td><td class="py_td">Get copied data.  </td><td class="py_td">None.  </td><td class="py_td">List of JSON-like object consisting of copied properties.   </td></tr>
+<table class="py_method">
+<caption class="py_method">Python-side methods of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> </caption>
+<tr class="py_method">
+<th class="py_method">Name </th><th class="py_method">C++ </th><th class="py_method">Description </th><th class="py_method">Parameters </th><th class="py_method">Return  </th></tr>
+<tr class="py_method">
+<td class="py_method"><code>select</code> </td><td class="py_method"><a class="el" href="classProData.html#a15154c6692dda916207fa21316794474" title="Specify string keys for properties to be copied. ">ProData::select</a> </td><td class="py_method">Specify string keys for properties to be copied.  </td><td class="py_method">
+<dl class="parameters">
+<dt>*args</dt>
+<dd>An ordered list of string keys for properties to be copied. (Python's variable number arguments). </dd>
+</dl>
+
+
+</td><td class="py_method">None.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_results</code> </td><td class="py_method"><a class="el" href="classProData.html#a1451afb048021490fedb426701485eae" title="Get list of Json objects consisting of all or some properties of Element objects stored in this objec...">ProData::get_results</a> </td><td class="py_method">Get list of <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects consisting of all or some properties of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects stored in this object.  </td><td class="py_method">None.  </td><td class="py_method">List of <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects (complex of dictionary and list).   </td></tr>
 </table>
 <h2 class="main_page"><a class="anchor" id="python_sec_invo"></a>
 Invoker</h2>
-
+<p><a class="el" href="classInvoker.html" title="Invoker executes analysis programmed in one or more Processor objects. ">Invoker</a> executes analysis programmed in one or more <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects.</p>
+<h3 class="main_page"><a class="anchor" id="python_py_inv_omp"></a>
+InvOMP</h3>
+<p><a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> is an <a class="el" href="classInvoker.html" title="Invoker executes analysis programmed in one or more Processor objects. ">Invoker</a>'s subclass using OpenMP to execute a computationally expensive part of analysis. </p>
 
 <a class="anchor" id=""></a>
 <table class="py_constructor">
@@ -1257,18 +1325,18 @@ Invoker</h2>
 <tr class="py_constructor">
 <th class="py_constructor">C++ </th><th class="py_constructor" colspan="2">Description </th><th class="py_constructor" colspan="2">Parameters  </th></tr>
 <tr class="py_constructor">
-<td class="py_constructor"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class, which uses one <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object.  </td><td class="py_constructor" colspan="2">
+<td class="py_constructor"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class, which uses one <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> object.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>proc</dt>
-<dd>A <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> object to be executed.</dd>
+<dd>A <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> object to be executed.</dd>
 </dl>
 
  </td></tr>
 <tr class="py_constructor">
-<td class="py_constructor"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class, which uses multiple <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects.  </td><td class="py_constructor" colspan="2">
+<td class="py_constructor"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class, which uses multiple <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>procs</dt>
-<dd>List of <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects to be executed.</dd>
+<dd>List of <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects to be executed.</dd>
 </dl>
 
  </td></tr>
@@ -1279,10 +1347,10 @@ Invoker</h2>
 <tr class="py_method">
 <th class="py_method">Name </th><th class="py_method">C++ </th><th class="py_method">Description </th><th class="py_method">Parameters </th><th class="py_method">Return  </th></tr>
 <tr class="py_method">
-<td class="py_method"><code>execute</code> </td><td class="py_method"><a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c" title="Execute analysis programmed in Processor objects owned by this object. ">InvOMP::execute</a> </td><td class="py_method">Execute analysis programmed in <a class="el" href="classProcessor.html" title="Processor is an abstract class to analyze data contained in one or more Generator objects...">Processor</a> objects owned by this object.  </td><td class="py_method">None.  </td><td class="py_method">None.   </td></tr>
+<td class="py_method"><code>execute</code> </td><td class="py_method"><a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c" title="Execute analysis programmed in Processor objects owned by this object. ">InvOMP::execute</a> </td><td class="py_method">Execute analysis programmed in <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects owned by this object.  </td><td class="py_method">None.  </td><td class="py_method">None.   </td></tr>
 </table>
 <h2 class="main_page"><a class="anchor" id="python_sec_utils"></a>
-Utility functions</h2>
+Utilities</h2>
 
 
 <a class="anchor" id=""></a>
@@ -1300,14 +1368,6 @@ Utility functions</h2>
 
  </td><td class="py_method">None.   </td></tr>
 </table>
-<h1 class="main_page"><a class="anchor" id="acknowledge_sec"></a>
-Acknowledgement</h1>
-<p>This project would not be possible without the following great open-source projects.</p>
-<ul>
-<li><a href="https://github.com/pybind/pybind11">pybind11</a></li>
-<li><a href="https://github.com/nlohmann/json">nlohmann/json</a></li>
-<li><a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a></li>
-</ul>
 <hr/>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>MIT License </dd></dl>

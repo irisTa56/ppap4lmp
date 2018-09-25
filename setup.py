@@ -85,9 +85,9 @@ for header in headers:
       line_ = line.lstrip()
 
       if line_.startswith("void pybind::py_"):
-        pybinds.append("  {}(m);".format(line_[5:].split("(")[0]))
+        pybinds.append("  {}(m);".format(re.split("[ (]", line_)[1]))
       elif line_.startswith("py::class_<") and 12 < len(line_):
-        classes.append(re.split("[,<>]", line_[11:])[0])
+        classes.append(re.split("[,<>]", line_)[1])
       elif line_.startswith("m.def("):
         if 7 < len(line_):
           functions.append(line_[6:].split("\"")[1])

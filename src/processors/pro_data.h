@@ -13,45 +13,56 @@
 
 /*!
   @brief ProData copies Element::data from Element objects.
-  @details An object of this class makes a list of ::Json objects
-  by copying all or some properties of Element objects
-  stored in #generators.
+
+  An object of this class makes a list of ::Json objects by copying all
+  or some properties of Element objects stored in #generators.
 
   About usage in Python,
-  please see src/pybind/processors/py_pro_data.h.
+  please see pybind::py_pro_data.
 */
 class ProData : public Processor {
   /*!
-    @brief List of string keys for properties to be copied.
-    @details If this member is empty, all properties of Element objects
-    are copied.
+    List of string keys for properties to be copied. If this member is
+    empty, all properties of Element objects are copied.
   */
   Vec<Str> selected_keys;
   /*!
-    @brief List in which ::Json objects consisting of copied properties
+    List in which ::Json objects consisting of copied properties
     are stored.
-    @details Index in this member corresponds that in #generators.
+    Indices in this member corresponds to those in #generators.
   */
   Vec<Json> results;
  protected:
-  //! @copydoc Processor::run_impl
+  /*!
+    @copydoc Processor::run_impl
+
+    I am sorry to say that the best documentation for this method
+    is its source code...
+  */
   virtual void run_impl(
     const int index) override;
  public:
   /*!
     @brief Constructor of ProData class for one Element object.
-    @param elem : An Element object to be copied.
-    @details The \c elems is put into #generators
-    by #register_generator.
+
+    @param elem
+      An Element object to be copied.
+      <span class="remove_in_table">
+        The parameter is put into #generators by #register_generator.
+      </span>
   */
   ProData(
     const ElPtr &elem);
   /*!
     @brief Constructor of ProData class for a sequence
     of Element objects.
-    @param elems : ::Vec of Element objects to be copied.
-    @details Elements of the \c elems are put into #generators
-    by #register_generators.
+
+    @param elems
+      List of Element objects to be copied.
+      <span class="remove_in_table">
+        Elements of the parameter is put into #generators
+        by #register_generators.
+      </span>
   */
   ProData(
     const Vec<ElPtr> &elems);
@@ -63,14 +74,22 @@ class ProData : public Processor {
   virtual void prepare() override;
   /*!
     @brief Specify string keys for properties to be copied.
-    @param args : An ordered list of string keys (\c *args in Python).
-    This parameter is converted to be stored as #selected_keys.
+
+    @param *args
+      An ordered list of string keys for properties to be copied.
+      (Python's variable number arguments).
+      <span class="remove_in_table">
+        This parameter is converted to be stored as #selected_keys.
+      </span>
+
     @return None.
   */
   void select(
     const py::args &args);
   /*!
-    @brief Get copied data.
+    @brief Get list of ::Json objects consisting of all
+    or some properties of Element objects stored in this object.
+
     @return #results.
   */
   const Vec<Json> &get_results();

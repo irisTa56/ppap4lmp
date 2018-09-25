@@ -34,113 +34,62 @@
 
   @section feat_sec Features
 
-  - Implemented by C++, Used from Python
-  - Data stored in Json structure
-  - Extensible without editing existing codes
+  - Implemented by C++, Used from Python.
+  - Data stored in JSON structure.
+  - Extensible without editing existing codes.
 
   @section diagram_sec Schematic Sequence Diagram
 
   @htmlonly
-    <div class="mermaid">
-      sequenceDiagram
+  <div class="mermaid">
+    sequenceDiagram
 
-      participant user as User (Python)
-      participant ele as Element
-      participant upd as Updater's subclass
-      participant pro as Processor's subclass
-      participant inv as Invoker's subclass
+    participant user as User (Python)
+    participant ele as Element
+    participant upd as Updater's subclass
+    participant pro as Processor's subclass
+    participant inv as Invoker's subclass
 
-      user ->> upd : create Starter (Uptater for initialization)
+    user ->> upd : create Starter (Uptater for initialization)
+    upd -->> user : object
+    user ->> ele : create with the Starter object
+
+    note over ele,upd : UpdatePair (pair of Element and Updater) is stored in the Element object.
+
+    ele -->> user : object
+
+    loop additional properties
+      user ->> upd : create Adder (Uptater for adding new properties)
       upd -->> user : object
-      user ->> ele : create with the Starter object
+      user ->> ele : append the Adder object
+      note over ele,upd : UpdatePair (pair of Element and Updater) is stored the Element object.
+    end
 
-      note over ele,upd : UpdatePair (pair of Element and Updater) is stored in the Element object.
+    user ->> pro : create with Generator objects
 
-      ele -->> user : object
+    note over pro : Store the Generator objects
 
-      loop additional properties
-        user ->> upd : create Adder (Uptater for adding new properties)
-        upd -->> user : object
-        user ->> ele : append the Adder object
-        note over ele,upd : UpdatePair (pair of Element and Updater) is stored the Element object.
-      end
+    pro -->> user : object
 
-      user ->> pro : create with Generator objects
+    user ->> inv : create with Processor objects
 
-      note over pro : Store the Generator objects
+    note over inv : Store the Processor objects
 
-      pro -->> user : object
+    inv -->> user : object
 
-      user ->> inv : create with Processor objects
+    user ->> inv : execute
 
-      note over inv : Store the Processor objects
+    loop over Generator objects
+      inv ->> pro : run
+      pro ->> ele : execute updating process
+      note over ele,upd : Chain of UpdatePair objects is executed one by one (the Element objects updates their data using the paired Updater objects).
+      ele -->> pro : updated data can be accessed
+      note over pro : Run analysis process for each Generator object using the data.
+    end
 
-      inv -->> user : object
-
-      user ->> inv : execute
-
-      loop over Generator objects
-        inv ->> pro : run
-        pro ->> ele : execute updating process
-        note over ele,upd : Chain of UpdatePair objects is executed one by one (the Element objects updates their data using the paired Updater objects).
-        ele -->> pro : updated data can be accessed
-        note over pro : Run analysis process for each Generator object using the data.
-      end
-
-      pro -->> user : get results
-    </div>
+    pro -->> user : get results
+  </div>
   @endhtmlonly
-
-  @section python_sec Functions accessible from Python
-
-  @subsection python_sec_element Element
-
-  @copydetails pybind::py_element
-
-  @subsection python_sec_starter Starter
-
-  Starter is an Updater's subclass for initializing an Element object.
-
-  @copydetails pybind::py_sta_beads
-  @copydetails pybind::py_sta_copy
-  @copydetails pybind::py_sta_custom
-  @copydetails pybind::py_sta_dump_atoms
-  @copydetails pybind::py_sta_dump_box
-  @copydetails pybind::py_sta_molecules
-
-  @subsection python_sec_adder Adder
-
-  Adder is an Updater's subclass for adding new properties to an Element object.
-
-  @copydetails pybind::py_add_child_ids
-  @copydetails pybind::py_add_child_positions
-  @copydetails pybind::py_add_com_position
-  @copydetails pybind::py_add_gyration_radius
-  @copydetails pybind::py_add_inertia_moment
-  @copydetails pybind::py_add_map
-  @copydetails pybind::py_add_molecular_orientation
-  @copydetails pybind::py_add_rename
-  @copydetails pybind::py_add_special_bonds
-  @copydetails pybind::py_add_wrapped_position
-
-  @subsection python_sec_filter Filter
-
-  Filter is an Updater's subclass for filtering against an Element object.
-
-  @copydetails pybind::py_fil_comparison
-  @copydetails pybind::py_fil_set
-
-  @subsection python_sec_proc Processor
-
-  @copydetails pybind::py_pro_data
-
-  @subsection python_sec_invo Invoker
-
-  @copydetails pybind::py_inv_omp
-
-  @subsection python_sec_utils Utility functions
-
-  @copydetails pybind::py_utils
 
   @section acknowledge_sec Acknowledgement
 
@@ -150,6 +99,123 @@
   - <a href="https://github.com/pybind/pybind11">pybind11</a>
   - <a href="https://github.com/nlohmann/json">nlohmann/json</a>
   - <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>
+
+  @section python_sec Class accessible from Python
+
+  @subsection python_sec_element Element
+  @copybrief Element
+  @copydetails pybind::py_element
+
+
+
+  @subsection python_sec_starter Starter
+  @copybrief Starter
+
+  @subsubsection python_sec_sta_beads StaBeads
+  @copybrief StaBeads
+  @copydetails pybind::py_sta_beads
+
+  @subsubsection python_sec_sta_copy StaCopy
+  @copybrief StaCopy
+  @copydetails pybind::py_sta_copy
+
+  @subsubsection python_sec_sta_custom StaCustom
+  @copybrief StaCustom
+  @copydetails pybind::py_sta_custom
+
+  @subsubsection python_sec_sta_dump_atoms StaDumpAtoms
+  @copybrief StaDumpAtoms
+  @copydetails pybind::py_sta_dump_atoms
+
+  @subsubsection python_sec_sta_dump_box StaDumpBox
+  @copybrief StaDumpBox
+  @copydetails pybind::py_sta_dump_box
+
+  @subsubsection python_sec_sta_molecules StaMolecules
+  @copybrief StaMolecules
+  @copydetails pybind::py_sta_molecules
+
+
+
+  @subsection python_sec_adder Adder
+  @copybrief Adder
+
+  @subsubsection python_py_add_child_ids AddChildIDs
+  @copybrief AddChildIDs
+  @copydetails pybind::py_add_child_ids
+
+  @subsubsection python_py_add_child_positions AddChildPositions
+  @copybrief AddChildPositions
+  @copydetails pybind::py_add_child_positions
+
+  @subsubsection python_py_add_com_position AddCoMPosition
+  @copybrief AddCoMPosition
+  @copydetails pybind::py_add_com_position
+
+  @subsubsection python_py_add_gyration_radius AddGyrationRadius
+  @copybrief AddGyrationRadius
+  @copydetails pybind::py_add_gyration_radius
+
+  @subsubsection python_py_add_inertia_moment AddInertiaMoment
+  @copybrief AddInertiaMoment
+  @copydetails pybind::py_add_inertia_moment
+
+  @subsubsection python_py_add_map AddMap
+  @copybrief AddMap
+  @copydetails pybind::py_add_map
+
+  @subsubsection python_py_add_molecular_orientation AddMolecularOrientation
+  @copybrief AddMolecularOrientation
+  @copydetails pybind::py_add_molecular_orientation
+
+  @subsubsection python_py_add_rename AddRename
+  @copybrief AddRename
+  @copydetails pybind::py_add_rename
+
+  @subsubsection python_py_add_special_bonds AddSpecialBonds
+  @copybrief AddSpecialBonds
+  @copydetails pybind::py_add_special_bonds
+
+  @subsubsection python_py_add_wrapped_position AddWrappedPosition
+  @copybrief AddWrappedPosition
+  @copydetails pybind::py_add_wrapped_position
+
+
+
+  @subsection python_sec_filter Filter
+  @copybrief Filter
+
+  @subsubsection python_py_fil_comparison FilComparison
+  @copybrief FilComparison
+  @copydetails pybind::py_fil_comparison
+
+  @subsubsection python_py_fil_set FilSet
+  @copybrief FilSet
+  @copydetails pybind::py_fil_set
+
+
+
+  @subsection python_sec_proc Processor
+  @copybrief Processor
+
+  @subsubsection python_py_pro_data ProData
+  @copybrief ProData
+  @copydetails pybind::py_pro_data
+
+
+
+  @subsection python_sec_invo Invoker
+  @copybrief Invoker
+
+  @subsubsection python_py_inv_omp InvOMP
+  @copybrief InvOMP
+  @copydetails pybind::py_inv_omp
+
+
+
+  @subsection python_sec_utils Utilities
+
+  @copydetails pybind::py_utils
 
   <hr/>
 

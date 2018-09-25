@@ -28,6 +28,9 @@ def modify_table(soup):
   for h2 in soup.find_all("h2"):
     h2["class"] = "main_page"
 
+  for h3 in soup.find_all("h3"):
+    h3["class"] = "main_page"
+
   for span in soup.find_all("span", class_="remove_in_table"):
     span.extract()
 

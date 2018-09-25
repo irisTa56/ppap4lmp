@@ -12,8 +12,7 @@
 #include <core/updater.h>
 
 /*!
-  @brief Starter sets some properties (keys and values) to
-  an empty Element object.
+  @brief Starter sets some properties to an empty Element object.
 
   This class inherits Updater class and overrides Updater::compute.
   This class is an abstract class and has a pure virtual function,

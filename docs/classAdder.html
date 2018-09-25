@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('classAdder.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> adds new properties (keys and values) to a non-empty <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  
+<p><a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> adds new properties to a non-empty <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.  
  <a href="classAdder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="adder_8h_source.html">adder.h</a>&gt;</code></p>
@@ -141,11 +141,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> adds new properties (keys and values) to a non-empty <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
+<div class="textblock"><p><a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> adds new properties to a non-empty <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
 <p>This class inherits <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class and overrides <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57" title="Managing computation to update Element::data. ">Updater::compute</a>. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>.</p>
-<p>Name of subclass of this class should be prefixed by <em>Add</em>. Unlike <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> accepts only non-empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. </p>
+<p>Name of subclass of this class should be prefixed by <em>Add</em>. Unlike <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> accepts only non-empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="adder_8h_source.html#l00025">25</a> of file <a class="el" href="adder_8h_source.html">adder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="adder_8h_source.html#l00024">24</a> of file <a class="el" href="adder_8h_source.html">adder.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac4de42742fffbb58ac8ab71a1eb17100"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac4de42742fffbb58ac8ab71a1eb17100">&#9670;&nbsp;</a></span>compute()</h2>
@@ -197,7 +197,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> and <code>datakeys</code> to <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>. Note that actual computation and addition of properties is conducted by <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a> orveridden in subclasses of this class. In addition, this method ensures that a new property whose name is <em>id</em> is not added; <code>id</code> property must be set at initialization (done by <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>) only. </p>
+<p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> and <code>datakeys</code> to <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>. Note that actual computation and addition of properties is conducted by <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a> orveridden in subclasses of this class. In addition, this method ensures that a new property whose name is <em>id</em> is not added; <code>id</code> property must be set at initialization (done by <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>) only. </p>
 
 <p>Implements <a class="el" href="classUpdater.html#af16520931c56ec6b8af28cf13c174c57">Updater</a>.</p>
 
