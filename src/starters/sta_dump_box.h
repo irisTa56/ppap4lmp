@@ -14,53 +14,38 @@
 /*!
   @brief StaDumpBox reads a Lammps' dump file
   and sets properties for simulation box.
-  @details An object of this class reads properties of simulation box
+
+  An object of this class reads properties of simulation box
   from a Lammps' dump file specified by #filepath.
   Note that only properties at a time specified by #timestep are read.
 
   About usage in Python,
-  please see src/pybind/starters/py_sta_dump_box.h.
+  please see pybind::py_sta_dump_box.
 */
 class StaDumpBox : public StaDump {
  protected:
   /*!
-    @copydoc Updater::compute_impl
-    @details
-    <table class="py_table2">
-      <caption>
-        StaDumpBox related properties
-      </caption>
-      <tr class="py_tr">
-        <th class="py_th2">Key for property to be set</th>
-        <th class="py_th2">Key for required property</th>
-        <th class="py_th2">Key for externally required property</th>
-      </tr>
-      <tr class="py_tr">
-        <td class="py_td">
-          - \c periodic_x : boolean
-          - \c periodic_y : boolean
-          - \c periodic_z : boolean
-          - \c lo_x : float
-          - \c lo_y : float
-          - \c lo_z : float
-          - \c hi_x : float
-          - \c hi_y : float
-          - \c hi_z : float
-        </td>
-        <td class="py_td">
-          None.
-        </td>
-        <td class="py_td">
-          None.
-        </td>
-      </tr>
-    </table>
+    @brief This method overrides Updater::compute_impl.
+
+    <dl class="property added">
+      <dt class="property added">Property to be added</dt>
+      <dd class="property added">
+        - \c periodic_x : boolean
+        - \c periodic_y : boolean
+        - \c periodic_z : boolean
+        - \c lo_x : float
+        - \c lo_y : float
+        - \c lo_z : float
+        - \c hi_x : float
+        - \c hi_y : float
+        - \c hi_z : float
+      </dd>
+    </dl>
   */
   virtual void compute_impl(
     Json &data,
     DataKeys &datakeys) override;
  public:
-  //! Constructor of StaDumpBox class (inherited).
   using StaDump::StaDump;
   virtual ~StaDumpBox() = default;
 };

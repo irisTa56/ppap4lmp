@@ -14,57 +14,45 @@
 /*!
   @brief StaDumpAtoms reads a Lammps' dump file
   and sets properties for atoms.
-  @details An object of this class reads properties of atoms
+
+  An object of this class reads properties of atoms
   from a Lammps' dump file specified by #filepath.
   Note that only properties at a time specified by #timestep are read.
 
   About usage in Python,
-  please see src/pybind/starters/py_sta_dump_atoms.h.
+  please see pybind::py_sta_dump_atoms.
 */
 class StaDumpAtoms : public StaDump {
   /*!
-    @brief Make a list whether each value printed in a line of
+    Make a list whether each value printed in a line of
     a Lammps' dump file is an integer or not.
-    @param line : The first line in a body of a Lammps' dump file:
-    a line below the line beginning with <c>ITEM: ATOMS</c>.
-    @return ::Vec of booleans whether each value in the \c line is
-    an integer or not.
+
+    @param line
+      The first line in a body of a Lammps' dump file:
+      a line below the line beginning with <c>ITEM: ATOMS</c>.
+
+    @return ::Vec containing booleans
+    whether each value in the \c line is an integer or not.
   */
   const Vec<bool> make_is_int_vector(
     const Str &line);
  protected:
   /*!
-    @copydoc Updater::compute_impl
-    @details
-    <table class="py_table2">
-      <caption>
-        StaDumpAtoms related properties
-      </caption>
-      <tr class="py_tr">
-        <th class="py_th2">Key for property to be set</th>
-        <th class="py_th2">Key for required property</th>
-        <th class="py_th2">Key for externally required property</th>
-      </tr>
-      <tr class="py_tr">
-        <td class="py_td">
-          Keys to be set are names of dumped Lammps' atom property.
+    @brief This method overrides Updater::compute_impl.
+
+    <dl class="property added">
+      <dt class="property added">Property to be added</dt>
+      <dd class="property added">
+        - Keys to be set are names of dumped Lammps' atom property.
           In a Lammps' dump file, the names are printed in a line
           beginning with <c>ITEM: ATOMS</c>.
-        </td>
-        <td class="py_td">
-          None.
-        </td>
-        <td class="py_td">
-          None.
-        </td>
-      </tr>
-    </table>
+      </dd>
+    </dl>
   */
   virtual void compute_impl(
     Json &data,
     DataKeys &datakeys) override;
  public:
-  //! Constructor of StaDumpAtoms class (inherited).
   using StaDump::StaDump;
   virtual ~StaDumpAtoms() = default;
 };

@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('py__pro__radial__distribution__function__with__deformation_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,27 +85,23 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f55f6dc9e21b09a12acc690b19f5e964.html">pybind</a></li><li class="navelem"><a class="el" href="dir_aac6e0aba0e20504ae3255a4c4142454.html">processors</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">py_pro_radial_distribution_function_with_deformation.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PYBIND_PRO_RADIAL_DISTRIBUTION_FUNCTION_WITH_DEFORMATION_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PYBIND_PRO_RADIAL_DISTRIBUTION_FUNCTION_WITH_DEFORMATION_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;processors/pro_radial_distribution_function_with_deformation.h&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="py__processor_8h.html">pybind/processors/py_processor.h</a>&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> pybind_pro_radial_distribution_function_with_deformation(py::module &amp;m)</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  py::class_&lt;ProRadialDistributionFunctionWithDeformation,PyProcessor&lt;ProRDFWD&gt;,<a class="code" href="classProRadialDistributionFunction.html">ProRDF</a>,<a class="code" href="classProcessor.html">Processor</a>,<a class="code" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr&lt;ProRDFWD&gt;</a>&gt;(m, <span class="stringliteral">&quot;ProRadialDistributionFunctionWithDeformation&quot;</span>)</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    .def(py::init&lt;const ElPtr &amp;,const ElPtr &amp;&gt;())</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    .def(py::init&lt;<span class="keyword">const</span> <a class="code" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;std::pair&lt;ElPtr,ElPtr&gt;&gt; &amp;&gt;())</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    .def(<span class="stringliteral">&quot;set_margin&quot;</span>, &amp;ProRDFWD::set_margin)</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    .def(<span class="stringliteral">&quot;get_gyration_radius&quot;</span>, &amp;ProRDFWD::get_gyration_radius)</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    .def(<span class="stringliteral">&quot;get_gyration_radius_traj&quot;</span>,&amp;ProRDFWD::get_gyration_radius_traj)</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    .def(</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <span class="stringliteral">&quot;get_squared_gyration_radius&quot;</span>,</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      &amp;ProRDFWD::get_squared_gyration_radius)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    .def(</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="stringliteral">&quot;get_squared_gyration_radius_traj&quot;</span>,</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      &amp;ProRDFWD::get_squared_gyration_radius_traj);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="py__processor_8h_html"><div class="ttname"><a href="py__processor_8h.html">py_processor.h</a></div><div class="ttdoc">This file is for binding Processor class to Python. </div></div>
-<div class="ttc" id="std_8h_html_a1b01c504448c96cd2191a5184dd31acf"><div class="ttname"><a href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a></div><div class="ttdeci">std::vector&lt; T &gt; Vec</div><div class="ttdoc">Vec is an alias for vector (same as list in Python). </div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00034">std.h:34</a></div></div>
-<div class="ttc" id="classProcessor_html"><div class="ttname"><a href="classProcessor.html">Processor</a></div><div class="ttdoc">Processor is an abstract class to analyze data contained in one or more Generator objects...</div><div class="ttdef"><b>Definition:</b> <a href="processor_8h_source.html#l00018">processor.h:18</a></div></div>
-<div class="ttc" id="classProRadialDistributionFunction_html"><div class="ttname"><a href="classProRadialDistributionFunction.html">ProRadialDistributionFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="pro__radial__distribution__function_8h_source.html#l00013">pro_radial_distribution_function.h:13</a></div></div>
-<div class="ttc" id="std_8h_html_acdc005cb83114401121fe9980eaf1395"><div class="ttname"><a href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; ShPtr</div><div class="ttdoc">ShPtr is an alias for shared pointer. </div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00016">std.h:16</a></div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PYBIND_PRO_RADIAL_DISTRIBUTION_FUNCTION_WITH_DEFORMATION_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PYBIND_PRO_RADIAL_DISTRIBUTION_FUNCTION_WITH_DEFORMATION_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;processors/pro_radial_distribution_function_with_deformation.h&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="py__processor_8h.html">pybind/processors/py_processor.h</a>&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacepybind.html">pybind</a></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">void</span> py_pro_radial_distribution_function_with_deformation(py::module &amp;m);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="namespacepybind_html"><div class="ttname"><a href="namespacepybind.html">pybind</a></div><div class="ttdoc">Namespace for functions to bind C++ classes to Python. </div><div class="ttdef"><b>Definition:</b> <a href="py__add__child__ids_8h_source.html#l00015">py_add_child_ids.h:15</a></div></div>
+<div class="ttc" id="py__processor_8h_html"><div class="ttname"><a href="py__processor_8h.html">py_processor.h</a></div><div class="ttdoc">This file is for binding Processor class to Python. </div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f55f6dc9e21b09a12acc690b19f5e964.html">pybind</a></li><li class="navelem"><a class="el" href="dir_aac6e0aba0e20504ae3255a4c4142454.html">processors</a></li><li class="navelem"><b>py_pro_radial_distribution_function_with_deformation.h</b></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

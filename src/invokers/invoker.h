@@ -18,48 +18,56 @@
 class Invoker {
  protected:
    /*!
-    @brief Processor objects to be executed.
-    @details This member can be set only in the constructor.
+    Processor objects to be executed.
+    This member can be set only in the constructor.
   */
   Vec<ShPtr<Processor>> processors;
   /*!
-    @brief Implementation how to execute
-    a computationally expensive part of analysis.
+    @brief Implementation how to execute a main part of analysis.
     @return None.
-    @details This is a pure virtual function, please see the subclasses
-    for more details.
   */
   virtual void execute_impl() = 0;
  public:
   /*!
     @brief Constructor of Invoker class,
     which uses one Processor object.
-    @param proc : Shared pointer to a Processor object.
-    This argument is used for initializing #processors.
-    @details This constructor is thread-unsafe because it accesses its
-    members thread-globally. Ensure this constructor is not called in
-    a multithreading context. Please be careful that constructors of
-    subclasses of this class are also thread-unsafe.
+
+    @param proc
+      A Processor object to be executed.
+
+    <span class="remove_in_table">
+      This constructor is thread-unsafe because it accesses its
+      members thread-globally. Ensure this constructor is not called in
+      a multithreading context. Please be careful that constructors of
+      subclasses of this class are also thread-unsafe.
+    </span>
   */
   Invoker(
     const ShPtr<Processor> &proc);
   /*!
     @brief Constructor of Invoker class,
     which uses multiple Processor objects.
-    @param procs : ::Vec of shared pointers to a Processor object.
-    This argument is assigned to #processors.
-    @details This constructor is thread-unsafe because it accesses its
-    members thread-globally. Ensure this constructor is not called in
-    a multithreading context. Please be careful that constructors of
-    subclasses of this class are also thread-unsafe.
+
+    @param procs
+      List of Processor objects to be executed.
+
+    <span class="remove_in_table">
+      This constructor is thread-unsafe because it accesses its
+      members thread-globally. Ensure this constructor is not called in
+      a multithreading context. Please be careful that constructors of
+      subclasses of this class are also thread-unsafe.
+    </span>
   */
   Invoker(
     const Vec<ShPtr<Processor>> &procs);
   virtual ~Invoker() = default;
   /*!
-    @brief Execute analysis defined by elements of #processors.
+    @brief Execute analysis programmed in Processor objects
+    owned by this object.
+
     @return None.
-    @details First, this method calls Processor::startup
+
+    First, this method calls Processor::startup
     of each object in #processors. Next, this method calls
     Processor::prepare of each object in #processors, and then calls
     #execute_impl where computationally expensive calculations are

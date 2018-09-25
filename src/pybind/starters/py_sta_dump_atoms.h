@@ -18,42 +18,40 @@ namespace pybind
     @brief Bind StaDumpAtoms class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of StaDumpAtoms
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %StaDumpAtoms</td>
-        <td class="py_td">StaDumpAtoms::StaDump</td>
-        <td class="py_td">
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          StaDumpAtoms::StaDump
+        </td>
+        <td class="py_constructor" colspan="2">
           Constructor of StaDumpAtoms class.
+          @copydetails StaDumpAtoms::compute_impl
         </td>
-        <td class="py_td">
-          - \c filepath_ : A string for path to a Lammps' dump file.
-          - \c timestep_ : An integer specifying
-            a timestep of simulation to be parsed.
-        </td>
-        <td class="py_td">
-          Constructed StaDumpAtoms object.
+        <td class="py_constructor" colspan="2">
+          @copydetails StaDumpAtoms::StaDump
         </td>
       </tr>
     </table>
 
     Example of the constructor for a sequence of Lammps' dump files.
 
-    @code{.python}
-      atoms_traj = [
-        create(StaDumpAtoms("path/to/dump", i))
-        for i in range(0, 1000000, 1000)]
-    @endcode
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
+
+    atoms_traj = [
+      create(StaDumpAtoms("path/to/dump", i))
+      for i in range(0, 1000000, 1000)]
+    </code></pre>
+    @endhtmlonly
   */
   void py_sta_dump_atoms(py::module &m);
 }

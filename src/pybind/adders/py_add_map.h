@@ -18,41 +18,26 @@ namespace pybind
     @brief Bind AddMap class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddMap
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddMap</td>
-        <td class="py_td">AddMap::AddMap</td>
-        <td class="py_td">
-          Constructor of AddMap class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddMap::AddMap
         </td>
-        <td class="py_td">
-          - \c key_ref_ : A string key for a reference property: an
-            existing property to be used as domain of mapping (see also
-            the 3rd argument).
-          - \c key_new_ : A string key for a new property to be added.
-            Values of the new property are determined by mapping (see
-            also the 3rd argument).
-          - \c mapping_ : Dictionary defining mapping from values of
-            the reference property to values for the new property. Keys
-            of the dictionary corresponds to domain of the mapping and
-            values of the dictionary corresponds to codomain of the
-            mapping. Note that the keys must cover all values of the
-            reference property in an Element object where
-            the constructed object is appended to.
+        <td class="py_constructor" colspan="2">
+          @copybrief AddMap::AddMap
+          @copydetails AddMap::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddMap object.
+        <td class="py_constructor" colspan="2">
+          @copydetails AddMap::AddMap
         </td>
       </tr>
     </table>
@@ -60,39 +45,41 @@ namespace pybind
     Usage example of the constructor for mapping
     from <c>atomic-number</c> to \c mass.
 
-    @code{.python}
-      my_mapping = AddMap(
-        "atomic-number", "mass",
-        {
-          6: 12.011,
-          8: 15.999,
-          9: 18.998
-        }
-      )
-    @endcode
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
 
-    <table class="py_table">
-      <caption>
+    my_mapping = AddMap(
+      "atomic-number", "mass",
+      {
+        6: 12.011,
+        8: 15.999,
+        9: 18.998
+      }
+    )
+    </code></pre>
+    @endhtmlonly
+
+    <table class="py_method">
+      <caption class="py_method">
         Python-side methods of AddMap
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_method">
+        <th class="py_method">Name</th>
+        <th class="py_method">C++</th>
+        <th class="py_method">Description</th>
+        <th class="py_method">Parameters</th>
+        <th class="py_method">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c overwrite</td>
-        <td class="py_td">AddMap::overwrite</td>
-        <td class="py_td">
+      <tr class="py_method">
+        <td class="py_method">\c overwrite</td>
+        <td class="py_method">AddMap::overwrite</td>
+        <td class="py_method">
           @copybrief AddMap::overwrite
         </td>
-        <td class="py_td">
-          - \c do_overwrite_ : A boolean, whether overwriting is
-            allowed or not (default is \c True).
+        <td class="py_method">
+          @copydetails AddMap::overwrite
         </td>
-        <td class="py_td">
+        <td class="py_method">
           This AddMap object.
         </td>
       </tr>

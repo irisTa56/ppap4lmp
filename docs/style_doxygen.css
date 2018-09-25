@@ -1,12 +1,14 @@
 .py_table {
   width: 100%;
+  min-width: 1200px;
   table-layout: fixed;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
 .py_table2 {
-  width: 100%;
+  width: 60%;
+  min-width: 720px;
   table-layout: fixed;
   border-collapse: collapse;
   margin-top: 20px;
@@ -55,10 +57,90 @@
   text-align: left;
 }
 
-.main_page_h1 {
+/* Heading */
+
+h1.main_page {
   margin-top: 50px;
+  padding-bottom: 10px;
 }
 
-.main_page_h2 {
+h2.main_page {
   margin-top: 40px;
+}
+
+/* Table */
+
+table.py_constructor {
+  width: 100%;
+  min-width: 1200px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.py_constructor, th.py_constructor, td.py_constructor {
+  border: 1px solid black;
+}
+
+th.py_constructor {
+  background-color: rgb(60, 120, 240);
+  color: white;
+}
+
+td.py_constructor {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+caption.py_constructor {
+  text-align: left;
+  padding: 5px;
+}
+
+/* Property */
+
+dl.property {
+  display: table;
+}
+
+dl.added {
+  background-color: #ddffff;
+  border-left: 5px solid #88dddd;
+}
+
+dl.required {
+  background-color: #ffffdd;
+  border-left: 5px solid #eecc88;
+}
+
+dl.required_ext {
+  background-color: #ffeeff;
+  border-left: 5px solid #eeaacc;
+}
+
+dt.property {
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+dt.property.main {
+  margin-left: 10px;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+dd.property {
+  margin-left: -10px;
+  margin-top: -2px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+dd.property.main {
+  margin-left: 0px;
+  margin-top: -2px;
+  padding-right: 20px;
+  padding-bottom: 5px;
 }

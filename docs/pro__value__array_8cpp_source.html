@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('pro__value__array_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">pro_value_array.cpp</div>  </div>
@@ -74,7 +94,7 @@ $(function() {
 <div class="ttc" id="element_8h_html_ae7eed80b2509599cc9301188e51f57d8"><div class="ttname"><a href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a></div><div class="ttdeci">ShPtr&lt; Element &gt; ElPtr</div><div class="ttdoc">ElPtr is an alias for a shared pointer of Element class. </div><div class="ttdef"><b>Definition:</b> <a href="element_8h_source.html#l00310">element.h:310</a></div></div>
 <div class="ttc" id="classProValueArray_html_a5d8cfc64225015a7dd8b244e66bf0c3f"><div class="ttname"><a href="classProValueArray.html#a5d8cfc64225015a7dd8b244e66bf0c3f">ProValueArray::run_impl</a></div><div class="ttdeci">virtual void run_impl(const int index) override</div><div class="ttdoc">Implementation of analysis using an element of generators. </div><div class="ttdef"><b>Definition:</b> <a href="pro__value__array_8cpp_source.html#l00036">pro_value_array.cpp:36</a></div></div>
 <div class="ttc" id="classProcessor_html_a8eb44a97cb6b609d3816b43a4c39e9d1"><div class="ttname"><a href="classProcessor.html#a8eb44a97cb6b609d3816b43a4c39e9d1">Processor::n_generators</a></div><div class="ttdeci">int n_generators</div><div class="ttdoc">Length of generators. </div><div class="ttdef"><b>Definition:</b> <a href="processor_8h_source.html#l00032">processor.h:32</a></div></div>
-<div class="ttc" id="namespaceutils_html_a9fdbb91c9e48ca033fca642b6e73d850"><div class="ttname"><a href="namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850">utils::pyargs_to_vec</a></div><div class="ttdeci">void pyargs_to_vec(const py::args &amp;args, Vec&lt; T &gt; &amp;vec)</div><div class="ttdoc">Convert py::args (a variable number arguments) to Vec. </div><div class="ttdef"><b>Definition:</b> <a href="pyargs__to__vec_8cpp_source.html#l00015">pyargs_to_vec.cpp:15</a></div></div>
+<div class="ttc" id="namespaceutils_html_a9fdbb91c9e48ca033fca642b6e73d850"><div class="ttname"><a href="namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850">utils::pyargs_to_vec</a></div><div class="ttdeci">void pyargs_to_vec(const py::args &amp;args, Vec&lt; T &gt; &amp;vec)</div><div class="ttdoc">Convert a py::args (a variable number arguments) object to a Vec object. </div><div class="ttdef"><b>Definition:</b> <a href="pyargs__to__vec_8cpp_source.html#l00015">pyargs_to_vec.cpp:15</a></div></div>
 <div class="ttc" id="classProValueArray_html_a2e139ceae6529456c1f0d6587192edc9"><div class="ttname"><a href="classProValueArray.html#a2e139ceae6529456c1f0d6587192edc9">ProValueArray::finish</a></div><div class="ttdeci">virtual void finish() override</div><div class="ttdoc">Finish analysis. </div><div class="ttdef"><b>Definition:</b> <a href="pro__value__array_8cpp_source.html#l00082">pro_value_array.cpp:82</a></div></div>
 <div class="ttc" id="std_8h_html_a1b01c504448c96cd2191a5184dd31acf"><div class="ttname"><a href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a></div><div class="ttdeci">std::vector&lt; T &gt; Vec</div><div class="ttdoc">Vec is an alias for vector (same as list in Python). </div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00034">std.h:34</a></div></div>
 <div class="ttc" id="classProcessor_html_a62bfda67b126ce2ab18014037aec5c0b"><div class="ttname"><a href="classProcessor.html#a62bfda67b126ce2ab18014037aec5c0b">Processor::register_generator</a></div><div class="ttdeci">void register_generator(const ShPtr&lt; GEN &gt; &amp;gen)</div><div class="ttdoc">Store an object of Element, GenDict or GenList class in generators. </div><div class="ttdef"><b>Definition:</b> <a href="processor_8cpp_source.html#l00014">processor.cpp:14</a></div></div>
@@ -85,11 +105,15 @@ $(function() {
 <div class="ttc" id="classProcessor_html_abcf04231ed598d17e888eaf3216c9350"><div class="ttname"><a href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350">Processor::register_generators</a></div><div class="ttdeci">void register_generators(const Vec&lt; ShPtr&lt; GEN &gt;&gt; &amp;gens)</div><div class="ttdoc">Store objects of Element, GenDict or GenList class in generators. </div><div class="ttdef"><b>Definition:</b> <a href="processor_8cpp_source.html#l00034">processor.cpp:34</a></div></div>
 <div class="ttc" id="alias_2pybind_8h_html"><div class="ttname"><a href="alias_2pybind_8h.html">pybind.h</a></div><div class="ttdoc">This file includes pybind11 and defines an alias for the namespace pybind11. </div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8235a0e1c388cdad0e3f2a0adaa9e0ee.html">processors</a></li><li class="navelem"><a class="el" href="pro__value__array_8cpp.html">pro_value_array.cpp</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

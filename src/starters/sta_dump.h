@@ -14,29 +14,38 @@
 /*!
   @brief StaDump is an abstract class whose subclasses read
   a Lammps' dump file.
-  @details This class inherits Starter class.
-  This class is an abstract class and has a pure virtual function,
-  StaDump::compute_impl.
+
+  This class inherits Starter class. This class is an abstract class
+  and has a pure virtual function, StaDump::compute_impl.
 */
 class StaDump : public Starter {
  protected:
   /*!
-    @brief A timestep of simulation to be read.
-    @details In a Lammps' dump file, this value is printed
-    below the line saying <c>ITEM: TIMESTEP</c>. This member is
-    useful to read one timestep from a Lammps' dump file containing
-    multiple timesteps.
+    A timestep of simulation to be read. In a Lammps' dump file,
+    this value is printed below the line saying <c>ITEM: TIMESTEP</c>.
+    This member is useful to read one timestep from a Lammps' dump file
+    containing multiple timesteps.
   */
   int timestep;
-  //! A path to a Lammps' dump file to be read.
+  /*!
+    A path to a Lammps' dump file to be read.
+  */
   Str filepath;
  public:
   /*!
     @brief Constructor of StaDump class.
-    @param filepath_ : A path to a Lammps' dump file to be read.
-    This argument is assigned to #filepath.
-    @param timestep_ : A timestep of simulation to be read.
-    This argument is assigned to #timestep.
+
+    @param filepath_
+      A path to a Lammps' dump file to be read.
+      <span class="remove_in_table">
+        This parameter is assigned to #filepath.
+      </span>
+
+    @param timestep_
+      A timestep of simulation to be read.
+      <span class="remove_in_table">
+        This parameter is assigned to #timestep.
+      </span>
   */
   StaDump(
     const Str &filepath_,

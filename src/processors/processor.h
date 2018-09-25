@@ -41,8 +41,6 @@ class Processor {
     @param index : Index in #generators for a Generator object
     to be analyzed.
     @return None.
-    @details I'm sorry to say that
-    source code is the best documentation for this method...
   */
   virtual void run_impl(const int index) = 0;
   /*!

@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('invoker_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,30 +85,29 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f8cc41312865e1289a0b78825bfdc325.html">invokers</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">invoker.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="invoker_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef INVOKER_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define INVOKER_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="processor_8h.html">processors/processor.h</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classInvoker.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classInvoker.html">Invoker</a> {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="keyword">protected</span>:</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8">   24</a></span>&#160;  <a class="code" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec&lt;ShPtr&lt;Processor&gt;</a>&gt; <a class="code" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8">processors</a>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classInvoker.html#a9a45f01fd7b3dae7a54e0a0fff94dff5">execute_impl</a>() = 0;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba">Invoker</a>(</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <a class="code" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr&lt;Processor&gt;</a> &amp;proc);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba">Invoker</a>(</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">const</span> <a class="code" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;<a class="code" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr&lt;Processor&gt;</a>&gt; &amp;procs);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classInvoker.html">Invoker</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classInvoker.html#a72e473312201d41ea0711cea5346476c">execute</a>();</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classInvoker_html_a155c803d4e88b7541fb5a281d3c52bba"><div class="ttname"><a href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba">Invoker::Invoker</a></div><div class="ttdeci">Invoker(const ShPtr&lt; Processor &gt; &amp;proc)</div><div class="ttdoc">Constructor of Invoker class, which uses one Processor object. </div><div class="ttdef"><b>Definition:</b> <a href="invoker_8cpp_source.html#l00016">invoker.cpp:16</a></div></div>
-<div class="ttc" id="classInvoker_html_a72e473312201d41ea0711cea5346476c"><div class="ttname"><a href="classInvoker.html#a72e473312201d41ea0711cea5346476c">Invoker::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">Execute analysis defined by elements of processors. </div><div class="ttdef"><b>Definition:</b> <a href="invoker_8cpp_source.html#l00032">invoker.cpp:32</a></div></div>
+<a href="invoker_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef INVOKER_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define INVOKER_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="processor_8h.html">processors/processor.h</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classInvoker.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classInvoker.html">Invoker</a> {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="keyword">protected</span>:</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8">   24</a></span>&#160;  <a class="code" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec&lt;ShPtr&lt;Processor&gt;</a>&gt; <a class="code" href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8">processors</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classInvoker.html#a9a45f01fd7b3dae7a54e0a0fff94dff5">execute_impl</a>() = 0;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba">Invoker</a>(</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">const</span> <a class="code" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr&lt;Processor&gt;</a> &amp;proc);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba">Invoker</a>(</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> <a class="code" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;<a class="code" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr&lt;Processor&gt;</a>&gt; &amp;procs);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classInvoker.html">Invoker</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classInvoker.html#a72e473312201d41ea0711cea5346476c">execute</a>();</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classInvoker_html_a155c803d4e88b7541fb5a281d3c52bba"><div class="ttname"><a href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba">Invoker::Invoker</a></div><div class="ttdeci">Invoker(const ShPtr&lt; Processor &gt; &amp;proc)</div><div class="ttdoc">Constructor of Invoker class, which uses one Processor object. </div><div class="ttdef"><b>Definition:</b> <a href="invoker_8cpp_source.html#l00016">invoker.cpp:16</a></div></div>
+<div class="ttc" id="classInvoker_html_a72e473312201d41ea0711cea5346476c"><div class="ttname"><a href="classInvoker.html#a72e473312201d41ea0711cea5346476c">Invoker::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdoc">Execute analysis programmed in Processor objects owned by this object. </div><div class="ttdef"><b>Definition:</b> <a href="invoker_8cpp_source.html#l00032">invoker.cpp:32</a></div></div>
 <div class="ttc" id="std_8h_html_a1b01c504448c96cd2191a5184dd31acf"><div class="ttname"><a href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a></div><div class="ttdeci">std::vector&lt; T &gt; Vec</div><div class="ttdoc">Vec is an alias for vector (same as list in Python). </div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00034">std.h:34</a></div></div>
-<div class="ttc" id="classInvoker_html_aa45c265edef94fc17cdde9d4a356d4a8"><div class="ttname"><a href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8">Invoker::processors</a></div><div class="ttdeci">Vec&lt; ShPtr&lt; Processor &gt; &gt; processors</div><div class="ttdoc">Processor objects to be executed. </div><div class="ttdef"><b>Definition:</b> <a href="invoker_8h_source.html#l00024">invoker.h:24</a></div></div>
+<div class="ttc" id="classInvoker_html_aa45c265edef94fc17cdde9d4a356d4a8"><div class="ttname"><a href="classInvoker.html#aa45c265edef94fc17cdde9d4a356d4a8">Invoker::processors</a></div><div class="ttdeci">Vec&lt; ShPtr&lt; Processor &gt; &gt; processors</div><div class="ttdef"><b>Definition:</b> <a href="invoker_8h_source.html#l00024">invoker.h:24</a></div></div>
 <div class="ttc" id="classInvoker_html"><div class="ttname"><a href="classInvoker.html">Invoker</a></div><div class="ttdoc">Invoker is an abstract class to execute analysis defined by one or more Processor objects...</div><div class="ttdef"><b>Definition:</b> <a href="invoker_8h_source.html#l00018">invoker.h:18</a></div></div>
 <div class="ttc" id="processor_8h_html"><div class="ttname"><a href="processor_8h.html">processor.h</a></div><div class="ttdoc">This file has a definition of Processor class, where an analysis process is programmed. </div></div>
-<div class="ttc" id="classInvoker_html_a9a45f01fd7b3dae7a54e0a0fff94dff5"><div class="ttname"><a href="classInvoker.html#a9a45f01fd7b3dae7a54e0a0fff94dff5">Invoker::execute_impl</a></div><div class="ttdeci">virtual void execute_impl()=0</div><div class="ttdoc">Implementation how to execute a computationally expensive part of analysis. </div></div>
+<div class="ttc" id="classInvoker_html_a9a45f01fd7b3dae7a54e0a0fff94dff5"><div class="ttname"><a href="classInvoker.html#a9a45f01fd7b3dae7a54e0a0fff94dff5">Invoker::execute_impl</a></div><div class="ttdeci">virtual void execute_impl()=0</div><div class="ttdoc">Implementation how to execute a main part of analysis. </div></div>
 <div class="ttc" id="std_8h_html_acdc005cb83114401121fe9980eaf1395"><div class="ttname"><a href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; ShPtr</div><div class="ttdoc">ShPtr is an alias for shared pointer. </div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00016">std.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f8cc41312865e1289a0b78825bfdc325.html">invokers</a></li><li class="navelem"><a class="el" href="invoker_8h.html">invoker.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

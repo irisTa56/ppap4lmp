@@ -15,7 +15,10 @@ namespace utils
 {
   /*!
     @brief Raise (for Python) and throw (for C++) a runtime error.
-    @param msg : A string message for the runtime error.
+
+    @param msg
+      A string message for the runtime error.
+
     @return None.
   */
   void runtime_error(

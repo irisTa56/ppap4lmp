@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classStaMolecules.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -95,9 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
 <tr class="memdesc:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference.  <a href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">More...</a><br /></td></tr>
 <tr class="separator:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a> class (inherited). <br /></td></tr>
+<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -113,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a6e43cdfdce04105ab20a5f93584aabec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaMolecules.html#a6e43cdfdce04105ab20a5f93584aabec">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:a6e43cdfdce04105ab20a5f93584aabec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  <a href="#a6e43cdfdce04105ab20a5f93584aabec">More...</a><br /></td></tr>
+<tr class="memdesc:a6e43cdfdce04105ab20a5f93584aabec"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>.  <a href="#a6e43cdfdce04105ab20a5f93584aabec">More...</a><br /></td></tr>
 <tr class="separator:a6e43cdfdce04105ab20a5f93584aabec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
@@ -129,10 +152,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. ">StaMolecules</a> sets properties for molecules using atoms forming the molecules. </p>
-<p>An object of this class owns an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for atoms forming molecules to be computed. Note that if molecular types are required elsewhere, one needs to add <code>type</code> property using an <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> object, such as an <a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a> object.</p>
-<p>About usage in Python, please see <a class="el" href="py__sta__molecules_8h.html" title="This file is for binding StaMolecules class to Python. ">src/pybind/starters/py_sta_molecules.h</a>. </p>
+<p>An object of this class owns an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for atoms forming molecules to be computed. Note that if molecular types are required elsewhere, you need to add <code>type</code> property using an <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s subclass object, such as an <a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a> object.</p>
+<p>About usage in Python, please see <a class="el" href="namespacepybind.html#a62493625dc349fa262494fc04cbc25d0" title="Bind StaMolecules class to Python. ">pybind::py_sta_molecules</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="sta__molecules_8h_source.html#l00026">26</a> of file <a class="el" href="sta__molecules_8h_source.html">sta_molecules.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sta__molecules_8h_source.html#l00027">27</a> of file <a class="el" href="sta__molecules_8h_source.html">sta_molecules.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9b83d7e7df5a1a364d784e395621dc40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b83d7e7df5a1a364d784e395621dc40">&#9670;&nbsp;</a></span>StaMolecules()</h2>
@@ -153,7 +176,16 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor of <a class="el" href="classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. ">StaMolecules</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">el_atoms</td><td>: Shared pointer to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for atoms forming molecules to be computed. This argument is assigned to <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </td></tr>
+    <tr><td class="paramname">el_atoms</td><td><p class="starttd">An <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object for atoms forming molecules to be created. <span class="remove_in_table"> This parameter is assigned to <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </span></p>
+<dl class="property required_ext">
+<dt class="property required_ext">Required property </dt>
+<dd class="property required_ext"><ul>
+<li><code>id</code> : integer</li>
+<li><code>mol</code> : integer  </li>
+</ul>
+</dd>
+</dl>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -197,31 +229,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table2">
-<caption><a class="el" href="classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. ">StaMolecules</a> related properties </caption>
-<tr class="py_tr">
-<th class="py_th2">Key for property to be set </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><ul>
+<p>This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>. </p>
+<dl class="property added">
+<dt class="property added">Property to be added </dt>
+<dd class="property added"><ul>
 <li><code>id</code> : integer</li>
 <li><code>atom-ids</code> : array of integers  </li>
 </ul>
-</td><td class="py_td">None.  </td><td class="py_td"><ul>
-<li><code>id</code> : integer</li>
-<li><code>mol</code> : integer   </li>
-</ul>
-</td></tr>
-</table>
+</dd>
+</dl>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 
@@ -239,11 +255,15 @@ Here is the call graph for this function:</div>
 <li>src/starters/<a class="el" href="sta__molecules_8cpp_source.html">sta_molecules.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classStaMolecules.html">StaMolecules</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -12,48 +12,37 @@
 #include <adders/adder.h>
 
 /*!
-  @brief AddWrappedPosition adds wrapped positions of an Element object.
-  @details Wrapping is a process to resolve periodic boundary condition;
+  @brief AddWrappedPosition adds wrapped positions for
+  an Element object.
+
+  Wrapping is a process to resolve periodic boundary condition;
   wrapped positions are in the original simulation box.
 
   About usage in Python,
-  please see src/pybind/adders/py_add_wrapped_position.h.
+  please see pybind::py_add_wrapped_position.
 */
 class AddWrappedPosition : public Adder {
  protected:
   /*!
-    @copydoc Updater::compute_impl
-    @details
-    <table class="py_table2">
-      <caption>
-        AddWrappedPosition related properties
-      </caption>
-      <tr class="py_tr">
-        <th class="py_th2">Key for property to be added</th>
-        <th class="py_th2">Key for required property</th>
-        <th class="py_th2">Key for externally required property</th>
-      </tr>
-      <tr class="py_tr">
-        <td class="py_td">
-          - \c x : float
-          - \c y : float
-          - \c z : float
-        </td>
-        <td class="py_td">
-          - \c xu : float
-          - \c yu : float
-          - \c zu : float
-        </td>
-        <td class="py_td">
-          - \c lo_x : float
-          - \c lo_y : float
-          - \c lo_z : float
-          - \c hi_x : float
-          - \c hi_y : float
-          - \c hi_z : float
-        </td>
-      </tr>
-    </table>
+    @brief This method overrides Updater::compute_impl.
+
+    <dl class="property added">
+      <dt class="property added">Property to be added</dt>
+      <dd class="property added">
+        - \c x : float
+        - \c y : float
+        - \c z : float
+      </dd>
+    </dl>
+
+    <dl class="property required">
+      <dt class="property required">Required property</dt>
+      <dd class="property required">
+        - \c xu : float
+        - \c yu : float
+        - \c zu : float
+      </dd>
+    </dl>
   */
   virtual void compute_impl(
     Json &data,
@@ -61,9 +50,26 @@ class AddWrappedPosition : public Adder {
  public:
   /*!
     @brief Constructor of AddWrappedPosition class.
-    @param elem : Shared pointer to an Element object representing
-    the simulation box.
-    This argument is assigned to #ext_generator.
+
+    @param elem
+    @parblock
+       An Element object for a simulation box.
+      <span class="remove_in_table">
+        This parameter is assigned to #ext_generator.
+      </span>
+
+      <dl class="property required_ext">
+        <dt class="property required_ext">Required property</dt>
+        <dd class="property required_ext">
+          - \c lo_x : float
+          - \c lo_y : float
+          - \c lo_z : float
+          - \c hi_x : float
+          - \c hi_y : float
+          - \c hi_z : float
+        </dd>
+      </dl>
+    @endparblock
   */
   AddWrappedPosition(
     const ElPtr &elem);

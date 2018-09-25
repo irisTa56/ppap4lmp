@@ -3,6 +3,8 @@ var searchData=
   ['select',['select',['../classProData.html#a15154c6692dda916207fa21316794474',1,'ProData']]],
   ['selected_5fkeys',['selected_keys',['../classProData.html#a4fef67f454d09a9a5ce89f069dd6d0a3',1,'ProData']]],
   ['set',['set',['../classDataKeys.html#a302caba902c11e18d4bccb1006284763',1,'DataKeys::set()'],['../std_8h.html#a09b917d71c14ba8ae2d896e2af192307',1,'Set():&#160;std.h']]],
+  ['set_5findices',['set_indices',['../classProDistanceInMolecule.html#a06d5c42a8721a818fd6200b5bd6c58d6',1,'ProDistanceInMolecule']]],
+  ['set_5fmoltype',['set_moltype',['../classProDistanceInMolecule.html#a923e3aea3e771534f4066ee16a3805ee',1,'ProDistanceInMolecule']]],
   ['shptr',['ShPtr',['../std_8h.html#acdc005cb83114401121fe9980eaf1395',1,'std.h']]],
   ['sort_5fby_5fid',['sort_by_id',['../classStarter.html#a112a95fc261365ba92609db3fa907939',1,'Starter']]],
   ['split',['split',['../namespaceutils.html#a96d358b93c453a686f65db462e2be70f',1,'utils']]],

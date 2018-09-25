@@ -18,30 +18,26 @@ namespace pybind
     @brief Bind AddWrappedPosition class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddWrappedPosition
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddWrappedPosition</td>
-        <td class="py_td">AddWrappedPosition::AddWrappedPosition</td>
-        <td class="py_td">
-          Constructor of AddWrappedPosition class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddWrappedPosition::AddWrappedPosition
         </td>
-        <td class="py_td">
-          - \c elem : An Element object containing data for
-            the simulation box.
+        <td class="py_constructor" colspan="2">
+          @copybrief AddWrappedPosition::AddWrappedPosition
+          @copydetails AddWrappedPosition::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddWrappedPosition object.
+        <td class="py_constructor" colspan="2">
+          @copydetails AddWrappedPosition::AddWrappedPosition
         </td>
       </tr>
     </table>

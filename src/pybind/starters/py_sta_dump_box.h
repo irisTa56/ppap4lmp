@@ -18,42 +18,40 @@ namespace pybind
     @brief Bind StaDumpBox class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of StaDumpBox
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %StaDumpBox</td>
-        <td class="py_td">StaDumpBox::StaDump</td>
-        <td class="py_td">
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          StaDumpBox::StaDump
+        </td>
+        <td class="py_constructor" colspan="2">
           Constructor of StaDumpBox class.
+          @copydetails StaDumpBox::compute_impl
         </td>
-        <td class="py_td">
-          - \c filepath_ : A string for path to a Lammps' dump file.
-          - \c timestep_ : An integer specifying
-            a timestep of simulation to be parsed.
-        </td>
-        <td class="py_td">
-          Constructed StaDumpBox object.
+        <td class="py_constructor" colspan="2">
+          @copydetails StaDumpBox::StaDump
         </td>
       </tr>
     </table>
 
     Example of the constructor for a sequence of Lammps' dump files.
 
-    @code{.python}
-      atoms_traj = [
-        create(StaDumpBox("path/to/dump", i))
-        for i in range(0, 1000000, 1000)]
-    @endcode
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
+
+    atoms_traj = [
+      create(StaDumpBox("path/to/dump", i))
+      for i in range(0, 1000000, 1000)]
+    </code></pre>
+    @endhtmlonly
   */
   void py_sta_dump_box(py::module &m);
 }

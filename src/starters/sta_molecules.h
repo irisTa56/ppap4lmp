@@ -14,44 +14,28 @@
 /*!
   @brief StaMolecules sets properties for molecules
   using atoms forming the molecules.
-  @details An object of this class owns an Element object for atoms
+
+  An object of this class owns an Element object for atoms
   forming molecules to be computed.
   Note that if molecular types are required elsewhere,
-  one needs to add \c type property using an Adder object,
+  you need to add \c type property using an Adder's subclass object,
   such as an AddMap object.
 
   About usage in Python,
-  please see src/pybind/starters/py_sta_molecules.h.
+  please see pybind::py_sta_molecules.
 */
 class StaMolecules : public Starter {
  protected:
   /*!
-    @copydoc Updater::compute_impl
-    @details
+    @brief This method overrides Updater::compute_impl.
 
-    <table class="py_table2">
-      <caption>
-        StaMolecules related properties
-      </caption>
-      <tr class="py_tr">
-        <th class="py_th2">Key for property to be set</th>
-        <th class="py_th2">Key for required property</th>
-        <th class="py_th2">Key for externally required property</th>
-      </tr>
-      <tr class="py_tr">
-        <td class="py_td">
-          - \c id : integer
-          - \c atom-ids : array of integers
-        </td>
-        <td class="py_td">
-          None.
-        </td>
-        <td class="py_td">
-          - \c id : integer
-          - \c mol : integer
-        </td>
-      </tr>
-    </table>
+    <dl class="property added">
+      <dt class="property added">Property to be added</dt>
+      <dd class="property added">
+        - \c id : integer
+        - \c atom-ids : array of integers
+      </dd>
+    </dl>
   */
   virtual void compute_impl(
     Json &data,
@@ -59,9 +43,22 @@ class StaMolecules : public Starter {
  public:
   /*!
     @brief Constructor of StaMolecules class.
-    @param el_atoms : Shared pointer to an Element object for atoms
-    forming molecules to be computed.
-    This argument is assigned to #ext_generator.
+
+    @param el_atoms
+    @parblock
+      An Element object for atoms forming molecules to be created.
+      <span class="remove_in_table">
+        This parameter is assigned to #ext_generator.
+      </span>
+
+      <dl class="property required_ext">
+        <dt class="property required_ext">Required property</dt>
+        <dd class="property required_ext">
+          - \c id : integer
+          - \c mol : integer
+        </dd>
+      </dl>
+    @endparblock
   */
   StaMolecules(
     const ElPtr &el_atoms);

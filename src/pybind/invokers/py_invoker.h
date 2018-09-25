@@ -36,7 +36,8 @@ namespace pybind
     @brief Bind Invoker class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details Constructor of Invoker class is hidden from Python,
+
+    Constructor of Invoker class is hidden from Python,
     because the class is an abstract one.
   */
   void py_invoker(py::module &m);

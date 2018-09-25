@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classAddInertiaMoment.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -96,9 +120,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
 <tr class="memdesc:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference.  <a href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">More...</a><br /></td></tr>
 <tr class="separator:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class (inherited). <br /></td></tr>
+<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -114,7 +137,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a50d3efa11e6c2a8d12c397224679d259"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:a50d3efa11e6c2a8d12c397224679d259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  <a href="#a50d3efa11e6c2a8d12c397224679d259">More...</a><br /></td></tr>
+<tr class="memdesc:a50d3efa11e6c2a8d12c397224679d259"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>.  <a href="#a50d3efa11e6c2a8d12c397224679d259">More...</a><br /></td></tr>
 <tr class="separator:a50d3efa11e6c2a8d12c397224679d259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
@@ -124,10 +147,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a2565ab562dac3c15368e86b88b666bd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6">compute_with_weights</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;el_atoms)</td></tr>
-<tr class="memdesc:a2565ab562dac3c15368e86b88b666bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the inertia moment with weighting factors.  <a href="#a2565ab562dac3c15368e86b88b666bd6">More...</a><br /></td></tr>
 <tr class="separator:a2565ab562dac3c15368e86b88b666bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b71b7cb75a8b76585a38938bb8ae0a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddInertiaMoment.html#a6b71b7cb75a8b76585a38938bb8ae0a8">compute_without_weights</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;el_atoms)</td></tr>
-<tr class="memdesc:a6b71b7cb75a8b76585a38938bb8ae0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the inertia moment.  <a href="#a6b71b7cb75a8b76585a38938bb8ae0a8">More...</a><br /></td></tr>
 <tr class="separator:a6b71b7cb75a8b76585a38938bb8ae0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -139,11 +160,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a> adds inertia moment to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
-<p>An object of this class computes elements of 3x3 matrix of inertia moment (a.k.a. inertia matrix, inertia tensor) of a parent <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object from masses and positions of a child <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object, and adds it to the parent object. The object of this class owns the <em>child</em> object as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>, and is appended to the <em>parent</em> object using its <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a>. An example of <em>child</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for atoms, and an example of <em>parent</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules.</p>
+<p>An object of this class computes elements of 3x3 matrix of inertia moment (a.k.a. inertia matrix, inertia tensor) of a <em>parent</em> <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object from masses and positions of a <em>child</em> <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object, and adds it to the <em>parent</em> object. The object of this class owns the <em>child</em> object as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>, and is appended to the <em>parent</em> object using its <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a>. An example of <em>child</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for atoms, and an example of <em>parent</em> is an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object containing data for molecules.</p>
 <p>The terms <em>child</em> and <em>parent</em> are used because a <em>parent</em> object consists of a <em>child</em> object. In terms of time series, however, the <em>child</em> is created earlier than the <em>parent</em>.</p>
-<p>About usage in Python, please see <a class="el" href="py__add__inertia__moment_8h.html" title="This file is for binding AddInertiaMoment class to Python. ">src/pybind/adders/py_add_inertia_moment.h</a>. </p>
+<p>About usage in Python, please see <a class="el" href="namespacepybind.html#a7a363042e0a65a52adeb27cac31a22cc" title="Bind AddInertiaMoment class to Python. ">pybind::py_add_inertia_moment</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="add__inertia__moment_8h_source.html#l00033">33</a> of file <a class="el" href="add__inertia__moment_8h_source.html">add_inertia_moment.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="add__inertia__moment_8h_source.html#l00034">34</a> of file <a class="el" href="add__inertia__moment_8h_source.html">add_inertia_moment.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7772bb782144b8dab59ea65dffdba6b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7772bb782144b8dab59ea65dffdba6b6">&#9670;&nbsp;</a></span>AddInertiaMoment()</h2>
@@ -164,7 +185,19 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor of <a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a> class. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">elem</td><td>: Shared pointer to a <em>child</em> object. This argument is assigned to <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </td></tr>
+    <tr><td class="paramname">elem</td><td><p class="starttd">A <em>child</em> <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. <span class="remove_in_table"> This parameter is assigned to <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </span></p>
+<dl class="property required_ext">
+<dt class="property required_ext">Required property </dt>
+<dd class="property required_ext"><ul>
+<li><code>id</code> : int</li>
+<li><code>mass</code> : float</li>
+<li><code>xu</code> : float</li>
+<li><code>yu</code> : float</li>
+<li><code>zu</code> : float  </li>
+</ul>
+</dd>
+</dl>
+</td></tr>
   </table>
   </dd>
 </dl>
@@ -208,22 +241,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table2">
-<caption><a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a> related properties </caption>
-<tr class="py_tr">
-<th class="py_th2">Key for property to be added </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><ul>
+<p>This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>. </p>
+<dl class="property added">
+<dt class="property added">Property to be added </dt>
+<dd class="property added"><ul>
 <li><code>I_xx</code> : float</li>
 <li><code>I_yy</code> : float</li>
 <li><code>I_zz</code> : float</li>
@@ -231,21 +252,18 @@ Additional Inherited Members</h2></td></tr>
 <li><code>I_xz</code> : float</li>
 <li><code>I_yz</code> : float  </li>
 </ul>
-</td><td class="py_td"><ul>
+</dd>
+</dl>
+<dl class="property required">
+<dt class="property required">Required property </dt>
+<dd class="property required"><ul>
 <li><code>atom-ids</code> : array of integers</li>
 <li><code>xu</code> : float</li>
 <li><code>yu</code> : float</li>
 <li><code>zu</code> : float  </li>
 </ul>
-</td><td class="py_td"><ul>
-<li><code>id</code> : int</li>
-<li><code>mass</code> : float</li>
-<li><code>xu</code> : float</li>
-<li><code>yu</code> : float</li>
-<li><code>zu</code> : float   </li>
-</ul>
-</td></tr>
-</table>
+</dd>
+</dl>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 
@@ -291,17 +309,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Compute the inertia moment with weighting factors. </p>
+<p>Compute the inertia moment with weighting factors. Note that the weighting factors are different from something like mass of atoms. Weighting factors are artificial values defined with some reason.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">el_atoms</td><td>: Shared pointer of up-casted <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </td></tr>
+    <tr><td class="paramname">data</td><td>Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to.</td></tr>
+    <tr><td class="paramname">el_atoms</td><td>Shared pointer of up-casted <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>Note that the weighting factors are different from something like mass of atoms. Weighting factors are artificial values defined with some reason. </p>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="add__inertia__moment_8cpp_source.html#l00024">24</a> of file <a class="el" href="add__inertia__moment_8cpp_source.html">add_inertia_moment.cpp</a>.</p>
 <div class="dynheader">
@@ -350,12 +366,11 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Compute the inertia moment. </p>
+<p>Compute the inertia moment.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">el_atoms</td><td>: Shared pointer of up-casted <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>. </td></tr>
+    <tr><td class="paramname">data</td><td>Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to.</td></tr>
+    <tr><td class="paramname">el_atoms</td><td>Shared pointer of up-casted <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868" title="Shared pointer to a Generator object used in update process. ">ext_generator</a>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -380,11 +395,15 @@ Here is the caller graph for this function:</div>
 <li>src/adders/<a class="el" href="add__inertia__moment_8cpp_source.html">add_inertia_moment.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAddInertiaMoment.html">AddInertiaMoment</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

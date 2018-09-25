@@ -18,33 +18,26 @@ namespace pybind
     @brief Bind AddChildPositions class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddChildPositions
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddChildPositions</td>
-        <td class="py_td">AddChildPositions::AddChildPositions</td>
-        <td class="py_td">
-          Constructor of AddChildPositions class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddChildPositions::AddChildPositions
         </td>
-        <td class="py_td">
-          - \c elem : \e A child object (such as an Element object
-            containing data for atoms).
-          - \c child_name_ : A string for naming the above child object.
+        <td class="py_constructor" colspan="2">
+          @copybrief AddChildPositions::AddChildPositions
+          @copydetails AddChildPositions::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddChildPositions object, which is appended to
-          a \e parent object (such as an Element object containing data
-          for molecules).
+        <td class="py_constructor" colspan="2">
+          @copydetails AddChildPositions::AddChildPositions
         </td>
       </tr>
     </table>

@@ -15,10 +15,16 @@
 namespace utils
 {
   /*!
-    @brief Convert py::args (a variable number arguments) to ::Vec.
-    @param args : Python's variable number arguments.
-    @param vec : Mutable reference to ::Vec where elements of the
-    \c args are appended to.
+    @brief Convert a py::args (a variable number arguments) object
+    to a ::Vec object.
+
+    @param args
+      Python's variable number arguments.
+
+    @param vec
+      Mutable reference to a ::Vec object where elements of the
+      \c args are appended to.
+
     @return None.
   */
   template<typename T>

@@ -38,6 +38,7 @@ namespace pybind
         </td>
         <td class="py_td">
           - \c elem : An Element object to be copied.
+          @note this is a note
         </td>
         <td class="py_td">
           Constructed ProData object.
@@ -88,7 +89,7 @@ namespace pybind
         <td class="py_td">\c get_results</td>
         <td class="py_td">ProData::get_results</td>
         <td class="py_td">
-          Get copied data.
+          @copybrief ProData::get_results
         </td>
         <td class="py_td">
           None.

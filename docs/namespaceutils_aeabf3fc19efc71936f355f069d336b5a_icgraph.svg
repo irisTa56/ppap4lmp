@@ -64,7 +64,7 @@ var sectionId = 'dynsection-5';
 <!-- Node46 -->
 <g id="node2" class="node">
 <title>Node46</title>
-<g id="a_node2"><a xlink:href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node2"><a xlink:href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="149,-372.5 149,-391.5 286,-391.5 286,-372.5 149,-372.5"/>
 <text text-anchor="middle" x="217.5" y="-379.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildIDs::compute_impl</text>
 </a>
@@ -79,7 +79,7 @@ var sectionId = 'dynsection-5';
 <!-- Node47 -->
 <g id="node3" class="node">
 <title>Node47</title>
-<g id="a_node3"><a xlink:href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node3"><a xlink:href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="166.5,-323 166.5,-353 268.5,-353 268.5,-323 166.5,-323"/>
 <text text-anchor="start" x="174.5" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildPositions::</text>
 <text text-anchor="middle" x="217.5" y="-330" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">compute_impl</text>
@@ -95,7 +95,7 @@ var sectionId = 'dynsection-5';
 <!-- Node48 -->
 <g id="node4" class="node">
 <title>Node48</title>
-<g id="a_node4"><a xlink:href="classAddCoMPosition.html#a4f11bc044daa8afbe8223d9e4098a499" target="_top" xlink:title="Compute the center of mass with weighting factors. ">
+<g id="a_node4"><a xlink:href="classAddCoMPosition.html#a4f11bc044daa8afbe8223d9e4098a499" target="_top" xlink:title="AddCoMPosition::compute\l_with_weights">
 <polygon fill="#ffffff" stroke="#000000" points="151,-274 151,-304 284,-304 284,-274 151,-274"/>
 <text text-anchor="start" x="159" y="-292" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute</text>
 <text text-anchor="middle" x="217.5" y="-281" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>
@@ -111,7 +111,7 @@ var sectionId = 'dynsection-5';
 <!-- Node50 -->
 <g id="node6" class="node">
 <title>Node50</title>
-<g id="a_node6"><a xlink:href="classAddCoMPosition.html#a2c583d3b5139a8e8437979a432631c2e" target="_top" xlink:title="Compute the center of mass. ">
+<g id="a_node6"><a xlink:href="classAddCoMPosition.html#a2c583d3b5139a8e8437979a432631c2e" target="_top" xlink:title="AddCoMPosition::compute\l_without_weights">
 <polygon fill="#ffffff" stroke="#000000" points="151,-225 151,-255 284,-255 284,-225 151,-225"/>
 <text text-anchor="start" x="159" y="-243" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute</text>
 <text text-anchor="middle" x="217.5" y="-232" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_without_weights</text>
@@ -127,7 +127,7 @@ var sectionId = 'dynsection-5';
 <!-- Node51 -->
 <g id="node7" class="node">
 <title>Node51</title>
-<g id="a_node7"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="Compute the inertia moment with weighting factors. ">
+<g id="a_node7"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="AddInertiaMoment::compute\l_with_weights">
 <polygon fill="#ffffff" stroke="#000000" points="147.5,-176 147.5,-206 287.5,-206 287.5,-176 147.5,-176"/>
 <text text-anchor="start" x="155.5" y="-194" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute</text>
 <text text-anchor="middle" x="217.5" y="-183" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>
@@ -143,7 +143,7 @@ var sectionId = 'dynsection-5';
 <!-- Node53 -->
 <g id="node9" class="node">
 <title>Node53</title>
-<g id="a_node9"><a xlink:href="classAddInertiaMoment.html#a6b71b7cb75a8b76585a38938bb8ae0a8" target="_top" xlink:title="Compute the inertia moment. ">
+<g id="a_node9"><a xlink:href="classAddInertiaMoment.html#a6b71b7cb75a8b76585a38938bb8ae0a8" target="_top" xlink:title="AddInertiaMoment::compute\l_without_weights">
 <polygon fill="#ffffff" stroke="#000000" points="147.5,-127 147.5,-157 287.5,-157 287.5,-127 147.5,-127"/>
 <text text-anchor="start" x="155.5" y="-145" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute</text>
 <text text-anchor="middle" x="217.5" y="-134" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_without_weights</text>
@@ -159,7 +159,7 @@ var sectionId = 'dynsection-5';
 <!-- Node54 -->
 <g id="node10" class="node">
 <title>Node54</title>
-<g id="a_node10"><a xlink:href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node10"><a xlink:href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="137,-88.5 137,-107.5 298,-107.5 298,-88.5 137,-88.5"/>
 <text text-anchor="middle" x="217.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddSpecialBonds::compute_impl</text>
 </a>
@@ -190,7 +190,7 @@ var sectionId = 'dynsection-5';
 <!-- Node56 -->
 <g id="node12" class="node">
 <title>Node56</title>
-<g id="a_node12"><a xlink:href="classStarter.html#a112a95fc261365ba92609db3fa907939" target="_top" xlink:title="Sort elements of a array Json object by its id property. ">
+<g id="a_node12"><a xlink:href="classStarter.html#a112a95fc261365ba92609db3fa907939" target="_top" xlink:title="Starter::sort_by_id">
 <polygon fill="#ffffff" stroke="#000000" points="169,-.5 169,-19.5 266,-19.5 266,-.5 169,-.5"/>
 <text text-anchor="middle" x="217.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter::sort_by_id</text>
 </a>
@@ -205,7 +205,7 @@ var sectionId = 'dynsection-5';
 <!-- Node49 -->
 <g id="node5" class="node">
 <title>Node49</title>
-<g id="a_node5"><a xlink:href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node5"><a xlink:href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="337.5,-254.5 337.5,-273.5 493.5,-273.5 493.5,-254.5 337.5,-254.5"/>
 <text text-anchor="middle" x="415.5" y="-261.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute_impl</text>
 </a>
@@ -226,7 +226,7 @@ var sectionId = 'dynsection-5';
 <!-- Node52 -->
 <g id="node8" class="node">
 <title>Node52</title>
-<g id="a_node8"><a xlink:href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node8"><a xlink:href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="334,-156.5 334,-175.5 497,-175.5 497,-156.5 334,-156.5"/>
 <text text-anchor="middle" x="415.5" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute_impl</text>
 </a>

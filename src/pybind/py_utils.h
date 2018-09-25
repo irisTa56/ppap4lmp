@@ -18,28 +18,28 @@ namespace pybind
     @brief Bind utility functions to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
-        Python-side functions
+
+    <table class="py_method">
+      <caption class="py_method">
+        Python-side utility functions
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_method">
+        <th class="py_method">Name</th>
+        <th class="py_method">C++</th>
+        <th class="py_method">Description</th>
+        <th class="py_method">Parameters</th>
+        <th class="py_method">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c log_switch</td>
-        <td class="py_td">utils::log_switch</td>
-        <td class="py_td">
-          Switch on/off logging (logging is disabled by default).
+      <tr class="py_method">
+        <td class="py_method">\c log_switch</td>
+        <td class="py_method">utils::log_switch</td>
+        <td class="py_method">
+          @copybrief utils::log_switch
         </td>
-        <td class="py_td">
-          - \c input : Boolean whether enable the logging or not.
+        <td class="py_method">
+          @copydetails utils::log_switch
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
       </tr>

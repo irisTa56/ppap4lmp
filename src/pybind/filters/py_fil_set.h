@@ -18,30 +18,26 @@ namespace pybind
     @brief Bind FilSet class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of FilSet
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %FilSet</td>
-        <td class="py_td">FilSet::FilSet</td>
-        <td class="py_td">
-          Constructor of FilSet class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          FilSet::FilSet
         </td>
-        <td class="py_td">
-          - \c value_sets_ : Dictionary from a string key for property
-            to acceptable values of that property.
+        <td class="py_constructor" colspan="2">
+          @copybrief FilSet::FilSet
+          @copydetails FilSet::compute_impl
         </td>
-        <td class="py_td">
-          Constructed FilSet object.
+        <td class="py_constructor" colspan="2">
+          @copydetails FilSet::FilSet
         </td>
       </tr>
     </table>
@@ -49,22 +45,28 @@ namespace pybind
     Usage example of the constructor for a filter removing atoms
     whose \c type property is not 1, 2, or 3.
 
-    @code{.python}
-      atoms = create(...)
-      atoms.append_updater(FilSet({"type": {1, 2, 3}}))
-    @endcode
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
+
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    atoms.append_updater(FilSet({"type": {1, 2, 3}}))
+    </code></pre>
+    @endhtmlonly
 
     Usage example of the constructor for a filter removing atoms
-    whose \c type property is not 1, 2, or 3, and whose \c id property
-    is not a multiple of 3 less than 1000.
+    except for those of which \c type property is 1, 2, or 3,
+    and \c id property is a multiple of 3 less than 1000.
 
-    @code{.python}
-      atoms = create(...)
-      atoms.append_updater(FilSet({
-        "type": {1, 2, 3},
-        "id": set(range(3, 1000, 3))
-      }))
-    @endcode
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
+
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    atoms.append_updater(FilSet({
+      "type": {1, 2, 3},
+      "id": set(range(3, 1000, 3))
+    }))
+    </code></pre>
+    @endhtmlonly
   */
   void py_fil_set(py::module &m);
 }

@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classAddMolecularOrientation.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -88,7 +112,7 @@ Collaboration diagram for AddMolecularOrientation:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a886b802585d1dfa299dd9f42e3eef29e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:a886b802585d1dfa299dd9f42e3eef29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  <a href="#a886b802585d1dfa299dd9f42e3eef29e">More...</a><br /></td></tr>
+<tr class="memdesc:a886b802585d1dfa299dd9f42e3eef29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>.  <a href="#a886b802585d1dfa299dd9f42e3eef29e">More...</a><br /></td></tr>
 <tr class="separator:a886b802585d1dfa299dd9f42e3eef29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
@@ -101,9 +125,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
 <tr class="memdesc:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference.  <a href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">More...</a><br /></td></tr>
 <tr class="separator:ac4de42742fffbb58ac8ab71a1eb17100 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> class (inherited). <br /></td></tr>
+<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classAdder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -123,9 +146,9 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> adds molecular orientation (order parameter) to an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object. </p>
 <p>This class computes orientation (a.k.a. order parameter) of an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object (such as one containing data for molecules) from its inertia moment. To compute the orientation, a direction of eigenvector corresponding the minimum eigenvalue of the inertia moment (that is, long axis of the molecule) is used for each molecule.</p>
-<p>About usage in Python, please see <a class="el" href="py__add__molecular__orientation_8h.html" title="This file is for binding AddMolecularOrientation class to Python. ">src/pybind/adders/py_add_molecular_orientation.h</a>. </p>
+<p>About usage in Python, please see <a class="el" href="namespacepybind.html#a6f47935c03f49a00ea2c55ab95caf1e9" title="Bind AddMolecularOrientation class to Python. ">pybind::py_add_molecular_orientation</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="add__molecular__orientation_8h_source.html#l00027">27</a> of file <a class="el" href="add__molecular__orientation_8h_source.html">add_molecular_orientation.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="add__molecular__orientation_8h_source.html#l00028">28</a> of file <a class="el" href="add__molecular__orientation_8h_source.html">add_molecular_orientation.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a886b802585d1dfa299dd9f42e3eef29e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a886b802585d1dfa299dd9f42e3eef29e">&#9670;&nbsp;</a></span>compute_impl()</h2>
@@ -161,38 +184,28 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table2">
-<caption><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a> related properties </caption>
-<tr class="py_tr">
-<th class="py_th2">Key for property to be added </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><ul>
+<p>This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>. </p>
+<dl class="property added">
+<dt class="property added">Property to be added </dt>
+<dd class="property added"><ul>
 <li><code>I_values</code> : array of floats (eigenvalues of inertia moment)</li>
 <li><code>I_vectors</code> : array of arrays of floats (eigenvectors of inertia moment)</li>
 <li><code>S_x</code> : float</li>
 <li><code>S_y</code> : float</li>
 <li><code>S_z</code> : float  </li>
 </ul>
-</td><td class="py_td"><ul>
+</dd>
+</dl>
+<dl class="property required">
+<dt class="property required">Required property </dt>
+<dd class="property required"><ul>
+<li><code>mass</code> : float</li>
 <li><code>I_xx</code> : float</li>
 <li><code>I_yy</code> : float</li>
-<li><code>I_zz</code> : float</li>
-<li><code>I_xy</code> : float</li>
-<li><code>I_xz</code> : float</li>
-<li><code>I_yz</code> : float  </li>
+<li><code>I_zz</code> : float  </li>
 </ul>
-</td><td class="py_td">None.   </td></tr>
-</table>
+</dd>
+</dl>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 
@@ -210,11 +223,15 @@ Here is the call graph for this function:</div>
 <li>src/adders/<a class="el" href="add__molecular__orientation_8cpp_source.html">add_molecular_orientation.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAddMolecularOrientation.html">AddMolecularOrientation</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

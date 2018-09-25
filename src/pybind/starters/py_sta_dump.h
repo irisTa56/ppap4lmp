@@ -18,7 +18,8 @@ namespace pybind
     @brief Bind StaDump class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details Constructor of StaDump class is hidden from Python,
+
+    Constructor of StaDump class is hidden from Python,
     because the class is an abstract one.
   */
   void py_sta_dump(py::module &m);

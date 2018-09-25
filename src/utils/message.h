@@ -15,7 +15,10 @@ namespace utils
 {
   /*!
     @brief Print to standard output.
-    @param msg : A string to be printed.
+
+    @param msg
+      A string to be printed.
+
     @return None.
   */
   void _message(
@@ -23,7 +26,10 @@ namespace utils
 
   /*!
     @brief Logging a message.
-    @param msg : A string to be printed.
+
+    @param msg
+      A string to be printed.
+
     @return None.
   */
   void log(
@@ -31,7 +37,10 @@ namespace utils
 
   /*!
     @brief Waning with a message.
-    @param msg : A string to be printed.
+
+    @param msg
+      A string to be printed.
+
     @return None.
   */
   void warning(
@@ -39,9 +48,15 @@ namespace utils
 
   /*!
     @brief Switch on/off logging.
-    @param input : Whether enable the logging or not.
+
+    @param input
+      A boolean, whether take log or not.
+
     @return None.
-    @details Note that logging is disabled by default.
+
+    <span class="remove_in_table">
+      Note that logging is disabled by default.
+    </span>
   */
   void log_switch(
     bool input);

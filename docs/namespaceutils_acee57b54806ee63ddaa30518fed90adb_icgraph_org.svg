@@ -18,7 +18,7 @@
 <!-- Node67 -->
 <g id="node2" class="node">
 <title>Node67</title>
-<g id="a_node2"><a xlink:href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node2"><a xlink:href="classAddChildIDs.html#a44a0b778c9c4b17c9ce9051b990af73d" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="334,-1011.5 334,-1030.5 471,-1030.5 471,-1011.5 334,-1011.5"/>
 <text text-anchor="middle" x="402.5" y="-1018.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildIDs::compute_impl</text>
 </a>
@@ -33,7 +33,7 @@
 <!-- Node68 -->
 <g id="node3" class="node">
 <title>Node68</title>
-<g id="a_node3"><a xlink:href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node3"><a xlink:href="classAddMap.html#a43e6a1d41af46c02ac2ad813075466cf" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="343,-1526.5 343,-1545.5 462,-1545.5 462,-1526.5 343,-1526.5"/>
 <text text-anchor="middle" x="402.5" y="-1533.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMap::compute_impl</text>
 </a>
@@ -48,7 +48,7 @@
 <!-- Node69 -->
 <g id="node4" class="node">
 <title>Node69</title>
-<g id="a_node4"><a xlink:href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node4"><a xlink:href="classAddRename.html#a34e997ee2632a7ef703810ebfbf1aa8d" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="334,-1488.5 334,-1507.5 471,-1507.5 471,-1488.5 334,-1488.5"/>
 <text text-anchor="middle" x="402.5" y="-1495.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddRename::compute_impl</text>
 </a>
@@ -63,7 +63,7 @@
 <!-- Node70 -->
 <g id="node5" class="node">
 <title>Node70</title>
-<g id="a_node5"><a xlink:href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node5"><a xlink:href="classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="322,-689.5 322,-708.5 483,-708.5 483,-689.5 322,-689.5"/>
 <text text-anchor="middle" x="402.5" y="-696.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddSpecialBonds::compute_impl</text>
 </a>
@@ -229,7 +229,7 @@
 <!-- Node97 -->
 <g id="node32" class="node">
 <title>Node97</title>
-<g id="a_node32"><a xlink:href="classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e" target="_top" xlink:title="Make a CompareFunc object from a comparison operator and a right side value. ">
+<g id="a_node32"><a xlink:href="classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e" target="_top" xlink:title="FilComparison::make\l_lambda">
 <polygon fill="#ffffff" stroke="#000000" points="155.5,-1081 155.5,-1111 264.5,-1111 264.5,-1081 155.5,-1081"/>
 <text text-anchor="start" x="163.5" y="-1099" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::make</text>
 <text text-anchor="middle" x="210" y="-1088" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_lambda</text>
@@ -245,7 +245,7 @@
 <!-- Node99 -->
 <g id="node34" class="node">
 <title>Node99</title>
-<g id="a_node34"><a xlink:href="classInvOMP.html#a6d30ee44e69355e633855773a4d8cfef" target="_top" xlink:title="Implementation how to execute a computationally expensive part of analysis. ">
+<g id="a_node34"><a xlink:href="classInvOMP.html#a6d30ee44e69355e633855773a4d8cfef" target="_top" xlink:title="This method overrides Invoker::execute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="152,-464.5 152,-483.5 268,-483.5 268,-464.5 152,-464.5"/>
 <text text-anchor="middle" x="210" y="-471.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">InvOMP::execute_impl</text>
 </a>
@@ -260,7 +260,7 @@
 <!-- Node100 -->
 <g id="node35" class="node">
 <title>Node100</title>
-<g id="a_node35"><a xlink:href="classInvoker.html#a72e473312201d41ea0711cea5346476c" target="_top" xlink:title="Execute analysis defined by elements of processors. ">
+<g id="a_node35"><a xlink:href="classInvoker.html#a72e473312201d41ea0711cea5346476c" target="_top" xlink:title="Execute analysis programmed in Processor objects owned by this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="165.5,-426.5 165.5,-445.5 254.5,-445.5 254.5,-426.5 165.5,-426.5"/>
 <text text-anchor="middle" x="210" y="-433.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Invoker::execute</text>
 </a>
@@ -275,7 +275,7 @@
 <!-- Node102 -->
 <g id="node37" class="node">
 <title>Node102</title>
-<g id="a_node37"><a xlink:href="classProDistanceInMolecule.html#a4a9f2ed013fa811cc433090aaa989b54" target="_top" xlink:title="Finish analysis. ">
+<g id="a_node37"><a xlink:href="classProDistanceInMolecule.html#a4a9f2ed013fa811cc433090aaa989b54" target="_top" xlink:title="Fill distance2_array with values of distance2_traj. ">
 <polygon fill="#ffffff" stroke="#000000" points="151.5,-377 151.5,-407 268.5,-407 268.5,-377 151.5,-377"/>
 <text text-anchor="start" x="159.5" y="-395" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ProDistanceInMolecule</text>
 <text text-anchor="middle" x="210" y="-384" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::finish</text>
@@ -353,7 +353,7 @@
 <!-- Node107 -->
 <g id="node42" class="node">
 <title>Node107</title>
-<g id="a_node42"><a xlink:href="classStaBeads.html#a4234e0f85caf2a8987d8fb98f0d6ec87" target="_top" xlink:title="Check if mol_type_to_abst_beads correctly describes coarse&#45;grain mapping schemes. ...">
+<g id="a_node42"><a xlink:href="classStaBeads.html#a4234e0f85caf2a8987d8fb98f0d6ec87" target="_top" xlink:title="StaBeads::check_mol\l_type_to_abst_beads">
 <polygon fill="#ffffff" stroke="#000000" points="153.5,-153 153.5,-183 266.5,-183 266.5,-153 153.5,-153"/>
 <text text-anchor="start" x="161.5" y="-171" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaBeads::check_mol</text>
 <text text-anchor="middle" x="210" y="-160" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_type_to_abst_beads</text>
@@ -384,7 +384,7 @@
 <!-- Node110 -->
 <g id="node45" class="node">
 <title>Node110</title>
-<g id="a_node45"><a xlink:href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node45"><a xlink:href="classStaCustom.html#a1b63820efb40845049d87ed3e5e7caab" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="144,-76.5 144,-95.5 276,-95.5 276,-76.5 144,-76.5"/>
 <text text-anchor="middle" x="210" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom::compute_impl</text>
 </a>
@@ -399,7 +399,7 @@
 <!-- Node111 -->
 <g id="node46" class="node">
 <title>Node111</title>
-<g id="a_node46"><a xlink:href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node46"><a xlink:href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="134,-38.5 134,-57.5 286,-57.5 286,-38.5 134,-38.5"/>
 <text text-anchor="middle" x="210" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms::compute_impl</text>
 </a>
@@ -414,7 +414,7 @@
 <!-- Node112 -->
 <g id="node47" class="node">
 <title>Node112</title>
-<g id="a_node47"><a xlink:href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node47"><a xlink:href="classStaDumpBox.html#af25a2a80d9607d892b78d78cd725692e" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="139.5,-.5 139.5,-19.5 280.5,-19.5 280.5,-.5 139.5,-.5"/>
 <text text-anchor="middle" x="210" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox::compute_impl</text>
 </a>
@@ -444,7 +444,7 @@
 <!-- Node114 -->
 <g id="node49" class="node">
 <title>Node114</title>
-<g id="a_node49"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="Create a map from values of selected property in an array Json to corresponding index in the array Js...">
+<g id="a_node49"><a xlink:href="namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a" target="_top" xlink:title="Create a Map object from values of selected property in an array Json object to corresponding index i...">
 <polygon fill="#ffffff" stroke="#000000" points="159.5,-894.5 159.5,-913.5 260.5,-913.5 260.5,-894.5 159.5,-894.5"/>
 <text text-anchor="middle" x="210" y="-901.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::map_to_index</text>
 </a>
@@ -477,7 +477,7 @@
 <!-- Node73 -->
 <g id="node8" class="node">
 <title>Node73</title>
-<g id="a_node8"><a xlink:href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node8"><a xlink:href="classAddChildPositions.html#ab200c619009c1db1deefb92c68010f9a" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="351.5,-1050 351.5,-1080 453.5,-1080 453.5,-1050 351.5,-1050"/>
 <text text-anchor="start" x="359.5" y="-1068" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildPositions::</text>
 <text text-anchor="middle" x="402.5" y="-1057" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">compute_impl</text>
@@ -493,7 +493,7 @@
 <!-- Node74 -->
 <g id="node9" class="node">
 <title>Node74</title>
-<g id="a_node9"><a xlink:href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node9"><a xlink:href="classAddCoMPosition.html#a8769c07c61840444ad80bf7e20acdbf2" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="522.5,-967.5 522.5,-986.5 678.5,-986.5 678.5,-967.5 522.5,-967.5"/>
 <text text-anchor="middle" x="600.5" y="-974.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute_impl</text>
 </a>
@@ -508,7 +508,7 @@
 <!-- Node75 -->
 <g id="node10" class="node">
 <title>Node75</title>
-<g id="a_node10"><a xlink:href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node10"><a xlink:href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="349,-1275 349,-1305 456,-1305 456,-1275 349,-1275"/>
 <text text-anchor="start" x="357" y="-1293" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddGyrationRadius::</text>
 <text text-anchor="middle" x="402.5" y="-1282" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">compute_impl</text>
@@ -524,7 +524,7 @@
 <!-- Node76 -->
 <g id="node11" class="node">
 <title>Node76</title>
-<g id="a_node11"><a xlink:href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node11"><a xlink:href="classAddInertiaMoment.html#a50d3efa11e6c2a8d12c397224679d259" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="519,-869.5 519,-888.5 682,-888.5 682,-869.5 519,-869.5"/>
 <text text-anchor="middle" x="600.5" y="-876.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute_impl</text>
 </a>
@@ -539,7 +539,7 @@
 <!-- Node77 -->
 <g id="node12" class="node">
 <title>Node77</title>
-<g id="a_node12"><a xlink:href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node12"><a xlink:href="classAddMolecularOrientation.html#a886b802585d1dfa299dd9f42e3eef29e" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="341,-1226 341,-1256 464,-1256 464,-1226 341,-1226"/>
 <text text-anchor="start" x="349" y="-1244" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMolecularOrientation</text>
 <text text-anchor="middle" x="402.5" y="-1233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::compute_impl</text>
@@ -555,7 +555,7 @@
 <!-- Node78 -->
 <g id="node13" class="node">
 <title>Node78</title>
-<g id="a_node13"><a xlink:href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node13"><a xlink:href="classAddWrappedPosition.html#af5ea4e6203dc8db97b8a8f73b2d83822" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="349,-1363 349,-1393 456,-1393 456,-1363 349,-1363"/>
 <text text-anchor="start" x="357" y="-1381" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddWrappedPosition</text>
 <text text-anchor="middle" x="402.5" y="-1370" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">::compute_impl</text>
@@ -586,7 +586,7 @@
 <!-- Node85 -->
 <g id="node20" class="node">
 <title>Node85</title>
-<g id="a_node20"><a xlink:href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node20"><a xlink:href="classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="527.5,-1268.5 527.5,-1287.5 673.5,-1287.5 673.5,-1268.5 527.5,-1268.5"/>
 <text text-anchor="middle" x="600.5" y="-1275.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::compute_impl</text>
 </a>
@@ -601,7 +601,7 @@
 <!-- Node86 -->
 <g id="node21" class="node">
 <title>Node86</title>
-<g id="a_node21"><a xlink:href="classFilSet.html#a0335614b1856870777ab1af370406fd2" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node21"><a xlink:href="classFilSet.html#a0335614b1856870777ab1af370406fd2" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="348,-1324.5 348,-1343.5 457,-1343.5 457,-1324.5 348,-1324.5"/>
 <text text-anchor="middle" x="402.5" y="-1331.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilSet::compute_impl</text>
 </a>
@@ -775,7 +775,7 @@
 <!-- Node98 -->
 <g id="node33" class="node">
 <title>Node98</title>
-<g id="a_node33"><a xlink:href="classFilComparison.html#a7300b226ef91df3cdabf2799129a979d" target="_top" xlink:title="Convert tuples in comparisons to pairs of a string key and CompareFunc. ">
+<g id="a_node33"><a xlink:href="classFilComparison.html#a7300b226ef91df3cdabf2799129a979d" target="_top" xlink:title="FilComparison::convert\l_to_funcs">
 <polygon fill="#ffffff" stroke="#000000" points="344,-1138 344,-1168 461,-1168 461,-1138 344,-1138"/>
 <text text-anchor="start" x="352" y="-1156" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::convert</text>
 <text text-anchor="middle" x="402.5" y="-1145" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_to_funcs</text>
@@ -812,7 +812,7 @@
 <!-- Node108 -->
 <g id="node43" class="node">
 <title>Node108</title>
-<g id="a_node43"><a xlink:href="classStaBeads.html#a28dd7a99528b0c892dc3ab85b131ed85" target="_top" xlink:title="Implementation of computation to update Element::data. ">
+<g id="a_node43"><a xlink:href="classStaBeads.html#a28dd7a99528b0c892dc3ab85b131ed85" target="_top" xlink:title="This method overrides Updater::compute_impl. ">
 <polygon fill="#ffffff" stroke="#000000" points="339.5,-158.5 339.5,-177.5 465.5,-177.5 465.5,-158.5 339.5,-158.5"/>
 <text text-anchor="middle" x="402.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaBeads::compute_impl</text>
 </a>
@@ -845,7 +845,7 @@
 <!-- Node115 -->
 <g id="node50" class="node">
 <title>Node115</title>
-<g id="a_node50"><a xlink:href="classAddCoMPosition.html#a4f11bc044daa8afbe8223d9e4098a499" target="_top" xlink:title="Compute the center of mass with weighting factors. ">
+<g id="a_node50"><a xlink:href="classAddCoMPosition.html#a4f11bc044daa8afbe8223d9e4098a499" target="_top" xlink:title="AddCoMPosition::compute\l_with_weights">
 <polygon fill="#ffffff" stroke="#000000" points="336,-913 336,-943 469,-943 469,-913 336,-913"/>
 <text text-anchor="start" x="344" y="-931" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute</text>
 <text text-anchor="middle" x="402.5" y="-920" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>
@@ -861,7 +861,7 @@
 <!-- Node116 -->
 <g id="node51" class="node">
 <title>Node116</title>
-<g id="a_node51"><a xlink:href="classAddCoMPosition.html#a2c583d3b5139a8e8437979a432631c2e" target="_top" xlink:title="Compute the center of mass. ">
+<g id="a_node51"><a xlink:href="classAddCoMPosition.html#a2c583d3b5139a8e8437979a432631c2e" target="_top" xlink:title="AddCoMPosition::compute\l_without_weights">
 <polygon fill="#ffffff" stroke="#000000" points="336,-962 336,-992 469,-992 469,-962 336,-962"/>
 <text text-anchor="start" x="344" y="-980" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition::compute</text>
 <text text-anchor="middle" x="402.5" y="-969" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_without_weights</text>
@@ -877,7 +877,7 @@
 <!-- Node117 -->
 <g id="node52" class="node">
 <title>Node117</title>
-<g id="a_node52"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="Compute the inertia moment with weighting factors. ">
+<g id="a_node52"><a xlink:href="classAddInertiaMoment.html#a2565ab562dac3c15368e86b88b666bd6" target="_top" xlink:title="AddInertiaMoment::compute\l_with_weights">
 <polygon fill="#ffffff" stroke="#000000" points="332.5,-864 332.5,-894 472.5,-894 472.5,-864 332.5,-864"/>
 <text text-anchor="start" x="340.5" y="-882" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute</text>
 <text text-anchor="middle" x="402.5" y="-871" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_with_weights</text>
@@ -893,7 +893,7 @@
 <!-- Node118 -->
 <g id="node53" class="node">
 <title>Node118</title>
-<g id="a_node53"><a xlink:href="classAddInertiaMoment.html#a6b71b7cb75a8b76585a38938bb8ae0a8" target="_top" xlink:title="Compute the inertia moment. ">
+<g id="a_node53"><a xlink:href="classAddInertiaMoment.html#a6b71b7cb75a8b76585a38938bb8ae0a8" target="_top" xlink:title="AddInertiaMoment::compute\l_without_weights">
 <polygon fill="#ffffff" stroke="#000000" points="332.5,-766 332.5,-796 472.5,-796 472.5,-766 332.5,-766"/>
 <text text-anchor="start" x="340.5" y="-784" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment::compute</text>
 <text text-anchor="middle" x="402.5" y="-773" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_without_weights</text>
@@ -925,7 +925,7 @@
 <!-- Node120 -->
 <g id="node55" class="node">
 <title>Node120</title>
-<g id="a_node55"><a xlink:href="classStarter.html#a112a95fc261365ba92609db3fa907939" target="_top" xlink:title="Sort elements of a array Json object by its id property. ">
+<g id="a_node55"><a xlink:href="classStarter.html#a112a95fc261365ba92609db3fa907939" target="_top" xlink:title="Starter::sort_by_id">
 <polygon fill="#ffffff" stroke="#000000" points="354,-727.5 354,-746.5 451,-746.5 451,-727.5 354,-727.5"/>
 <text text-anchor="middle" x="402.5" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter::sort_by_id</text>
 </a>

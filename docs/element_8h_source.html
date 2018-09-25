@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('element_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">element.h</div>  </div>
@@ -108,18 +128,22 @@ $(function() {
 <div class="ttc" id="classGenerator_html"><div class="ttname"><a href="classGenerator.html">Generator</a></div><div class="ttdoc">Generator is an abstract class to generate data. </div><div class="ttdef"><b>Definition:</b> <a href="generator_8h_source.html#l00038">generator.h:38</a></div></div>
 <div class="ttc" id="eigen_8h_html_aaf26741e06a5b5d4eb28cb1cc53ba220"><div class="ttname"><a href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220">ArrayXd</a></div><div class="ttdeci">Eigen::Array&lt; double, Eigen::Dynamic, 1 &gt; ArrayXd</div><div class="ttdoc">ArrayXd is an alias for a column array of Eigen where the values are double. </div><div class="ttdef"><b>Definition:</b> <a href="eigen_8h_source.html#l00043">eigen.h:43</a></div></div>
 <div class="ttc" id="classElement_html_a576395d61902a76979ffd336afa714b3"><div class="ttname"><a href="classElement.html#a576395d61902a76979ffd336afa714b3">Element::array1d</a></div><div class="ttdeci">void array1d(T &amp;array, const Str &amp;key)</div><div class="ttdoc">Extract values of a property in data as an one-dimensional Eigen-Array. </div><div class="ttdef"><b>Definition:</b> <a href="element_8cpp_source.html#l00188">element.cpp:188</a></div></div>
-<div class="ttc" id="classDataKeys_html"><div class="ttname"><a href="classDataKeys.html">DataKeys</a></div><div class="ttdoc">DataKeys is a small class owning a set of string keys in Element::data. </div><div class="ttdef"><b>Definition:</b> <a href="data__keys_8h_source.html#l00024">data_keys.h:24</a></div></div>
+<div class="ttc" id="classDataKeys_html"><div class="ttname"><a href="classDataKeys.html">DataKeys</a></div><div class="ttdoc">DataKeys is a small class owning a set of string keys in Element::data. </div><div class="ttdef"><b>Definition:</b> <a href="data__keys_8h_source.html#l00025">data_keys.h:25</a></div></div>
 <div class="ttc" id="classElement_html_ae253cbec6307a157902d7f25867ded2b"><div class="ttname"><a href="classElement.html#ae253cbec6307a157902d7f25867ded2b">Element::get_keys_py</a></div><div class="ttdeci">const Set&lt; Str &gt; &amp; get_keys_py()</div><div class="ttdoc">Wrapper for get_keys method. </div><div class="ttdef"><b>Definition:</b> <a href="element_8cpp_source.html#l00272">element.cpp:272</a></div></div>
 <div class="ttc" id="std_8h_html_acdc005cb83114401121fe9980eaf1395"><div class="ttname"><a href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; ShPtr</div><div class="ttdoc">ShPtr is an alias for shared pointer. </div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00016">std.h:16</a></div></div>
 <div class="ttc" id="data__keys_8h_html"><div class="ttname"><a href="data__keys_8h.html">data_keys.h</a></div><div class="ttdoc">This file has a definition of DataKeys class, which is owned by Element class. </div></div>
 <div class="ttc" id="classElement_html_a8257b02b1e3b208f193b35d5d47b9af8"><div class="ttname"><a href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8">Element::get_1d_int_py</a></div><div class="ttdeci">ArrayXi get_1d_int_py(const Str &amp;key)</div><div class="ttdoc">Wrapper for array1d method for integer values. </div><div class="ttdef"><b>Definition:</b> <a href="element_8cpp_source.html#l00281">element.cpp:281</a></div></div>
 <div class="ttc" id="alias_2pybind_8h_html"><div class="ttname"><a href="alias_2pybind_8h.html">pybind.h</a></div><div class="ttdoc">This file includes pybind11 and defines an alias for the namespace pybind11. </div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a class="el" href="element_8h.html">element.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

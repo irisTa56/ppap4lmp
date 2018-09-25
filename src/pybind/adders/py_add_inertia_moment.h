@@ -18,32 +18,26 @@ namespace pybind
     @brief Bind AddInertiaMoment class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddInertiaMoment
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddInertiaMoment</td>
-        <td class="py_td">AddInertiaMoment::AddInertiaMoment</td>
-        <td class="py_td">
-          Constructor of AddInertiaMoment class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddInertiaMoment::AddInertiaMoment
         </td>
-        <td class="py_td">
-          - \c elem : \e A child object (such as an Element object
-            containing data for atoms).
+        <td class="py_constructor" colspan="2">
+          @copybrief AddInertiaMoment::AddInertiaMoment
+          @copydetails AddInertiaMoment::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddInertiaMoment object, which is appended to
-          a \e parent object (such as an Element object containing data
-          for molecules).
+        <td class="py_constructor" colspan="2">
+          @copydetails AddInertiaMoment::AddInertiaMoment
         </td>
       </tr>
     </table>
@@ -51,13 +45,16 @@ namespace pybind
     Usage example of the constructor to add elements of inertia moment
     to an Element object for molecules.
 
-    @code{.python}
-      atoms = create(...)
-      molecules = create(StaMolecules(atoms))
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
 
-      molecules.append_updater(AddCoMPosition(atoms))
-      molecules.append_updater(AddInertiaMoment(atoms))
-    @endcode
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    molecules = create(StaMolecules(atoms))
+
+    molecules.append_updater(AddCoMPosition(atoms))
+    molecules.append_updater(AddInertiaMoment(atoms))
+    </code></pre>
+    @endhtmlonly
   */
   void py_add_inertia_moment(py::module &m);
 }

@@ -19,7 +19,8 @@ namespace pybind
     @brief Bind Adder class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details Constructor of Adder class is hidden from Python,
+
+    Constructor of Adder class is hidden from Python,
     because the class is an abstract one.
   */
   void py_adder(py::module &m);

@@ -18,55 +18,46 @@ namespace pybind
     @brief Bind AddSpecialBonds class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddSpecialBonds
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddSpecialBonds</td>
-        <td class="py_td">AddSpecialBonds::AddSpecialBonds</td>
-        <td class="py_td">
-          Constructor of AddSpecialBonds class for one molecular type.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddSpecialBonds::AddSpecialBonds
         </td>
-        <td class="py_td">
-          - \c el_mols : A molecular Element object consisting of
-            an atomic (or bead) Element object where the constructed
-            object is appended to.
-          - \c scheme : List of lists of zero-based index of atoms in a
-            molecule. For example, \e i th atom has \e j th atom as
-            one of the special bonds when \e i th list of the \c scheme
-            contains \e j.
+        <td class="py_constructor" colspan="2">
+          @copybrief AddSpecialBonds::AddSpecialBonds(
+            const ElPtr &,
+            const Vec<Vec<int>> &)
+          @copydetails AddSpecialBonds::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddSpecialBonds object.
+        <td class="py_constructor" colspan="2">
+          @copydetails AddSpecialBonds::AddSpecialBonds(
+            const ElPtr &,
+            const Vec<Vec<int>> &)
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddSpecialBonds</td>
-        <td class="py_td">AddSpecialBonds::AddSpecialBonds</td>
-        <td class="py_td">
-          Constructor of AddSpecialBonds class for multiple molecular
-          types.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddSpecialBonds::AddSpecialBonds
         </td>
-        <td class="py_td">
-          - \c el_mols : A molecular Element object consisting of
-            an atomic (or bead) Element object where the constructed
-            object is appended to.
-          - \c schemes : Dictionary where the keys are molecular types
-            and the values are lists of lists of zero-based index of
-            atoms in a molecule. Description of each list is the same
-            as for the case of one molecular type.
+        <td class="py_constructor" colspan="2">
+          @copybrief AddSpecialBonds::AddSpecialBonds(
+            const ElPtr &,
+            const Map<int,Vec<Vec<int>>> &)
+          @copydetails AddSpecialBonds::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddSpecialBonds object.
+        <td class="py_constructor" colspan="2">
+          @copydetails AddSpecialBonds::AddSpecialBonds(
+            const ElPtr &,
+            const Map<int,Vec<Vec<int>>> &)
         </td>
       </tr>
     </table>
@@ -75,53 +66,59 @@ namespace pybind
     connected four atoms. Bond-length and bond-angle potentials are
     considered.
 
-    @code{.python}
-      atoms = create(...)
-      molecules = create(StaMolecules(atoms))
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
 
-      my_sbonds = AddSpecialBonds(
-        molecules,
-        [
-          [1, 2],
-          [0, 2, 3],
-          [0, 1, 3],
-          [1, 2]
-        ]
-      )
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    molecules = create(StaMolecules(atoms))
 
-      atoms.append_updater(my_sbonds)
-    @endcode
+    my_sbonds = AddSpecialBonds(
+      molecules,
+      [
+        [1, 2],
+        [0, 2, 3],
+        [0, 1, 3],
+        [1, 2]
+      ]
+    )
+
+    atoms.append_updater(my_sbonds)
+    </code></pre>
+    @endhtmlonly
 
     Example of the constructor for two types of molecule: the first one
     consists of linearly connected four atoms, and the second one
     consists of linearly connected five atoms. Bond-length and
     bond-angle potentials are considered.
 
-    @code{.python}
-      atoms = create(...)
-      molecules = create(StaMolecules(atoms))
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
 
-      my_sbonds = AddSpecialBonds(
-        molecules,
-        {
-          1: [
-            [1, 2],
-            [0, 2, 3],
-            [0, 1, 3],
-            [1, 2]
-          ],
-          2: [
-            [1, 2],
-            [0, 2, 3],
-            [0, 1, 3, 4],
-            [1, 2, 4],
-            [2, 3]
-          ]
-        }
-      )
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    molecules = create(StaMolecules(atoms))
 
-      atoms.append_updater(my_sbonds)
-    @endcode
+    my_sbonds = AddSpecialBonds(
+      molecules,
+      {
+        1: [
+          [1, 2],
+          [0, 2, 3],
+          [0, 1, 3],
+          [1, 2]
+        ],
+        2: [
+          [1, 2],
+          [0, 2, 3],
+          [0, 1, 3, 4],
+          [1, 2, 4],
+          [2, 3]
+        ]
+      }
+    )
+
+    atoms.append_updater(my_sbonds)
+    </code></pre>
+    @endhtmlonly
   */
   void py_add_special_bonds(py::module &m);
 }

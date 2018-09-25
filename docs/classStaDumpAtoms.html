@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classStaDumpAtoms.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -89,9 +113,8 @@ Collaboration diagram for StaDumpAtoms:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac237195b46542e1db67eff0235832a8b"><td class="memItemLeft" align="right" valign="top"><a id="ac237195b46542e1db67eff0235832a8b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDumpAtoms.html#ac237195b46542e1db67eff0235832a8b">StaDump</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;filepath_, const int timestep_)</td></tr>
-<tr class="memdesc:ac237195b46542e1db67eff0235832a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStaDumpAtoms.html" title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. ">StaDumpAtoms</a> class (inherited). <br /></td></tr>
+<tr class="memitem:ac237195b46542e1db67eff0235832a8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDumpAtoms.html#ac237195b46542e1db67eff0235832a8b">StaDump</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;filepath_, const int timestep_)</td></tr>
+<tr class="memdesc:ac237195b46542e1db67eff0235832a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStaDump.html" title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">StaDump</a> class.  <a href="#ac237195b46542e1db67eff0235832a8b">More...</a><br /></td></tr>
 <tr class="separator:ac237195b46542e1db67eff0235832a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStaDump"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStaDump')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStaDump.html">StaDump</a></td></tr>
 <tr class="memitem:ac237195b46542e1db67eff0235832a8b inherit pub_methods_classStaDump"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDump.html#ac237195b46542e1db67eff0235832a8b">StaDump</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;filepath_, const int timestep_)</td></tr>
@@ -101,9 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
 <tr class="memdesc:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> given as a mutable reference.  <a href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">More...</a><br /></td></tr>
 <tr class="separator:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top"><a id="ae5e87ea9ea0f6f31de04f93cd1819549"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
-<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a> class (inherited). <br /></td></tr>
+<tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
+<tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
@@ -119,7 +141,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a258c7068bcc6b3d071f0acff027e2561"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDumpAtoms.html#a258c7068bcc6b3d071f0acff027e2561">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:a258c7068bcc6b3d071f0acff027e2561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  <a href="#a258c7068bcc6b3d071f0acff027e2561">More...</a><br /></td></tr>
+<tr class="memdesc:a258c7068bcc6b3d071f0acff027e2561"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>.  <a href="#a258c7068bcc6b3d071f0acff027e2561">More...</a><br /></td></tr>
 <tr class="separator:a258c7068bcc6b3d071f0acff027e2561"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
@@ -129,18 +151,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a8a507beb5e12cb6e306f05e87f42e7bf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDumpAtoms.html#a8a507beb5e12cb6e306f05e87f42e7bf">make_is_int_vector</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;line)</td></tr>
-<tr class="memdesc:a8a507beb5e12cb6e306f05e87f42e7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a list whether each value printed in a line of a Lammps' dump file is an integer or not.  <a href="#a8a507beb5e12cb6e306f05e87f42e7bf">More...</a><br /></td></tr>
 <tr class="separator:a8a507beb5e12cb6e306f05e87f42e7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classStaDump"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classStaDump')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classStaDump.html">StaDump</a></td></tr>
 <tr class="memitem:ac6418b4fefd459b4846d8c3c0ae225b8 inherit pro_attribs_classStaDump"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDump.html#ac6418b4fefd459b4846d8c3c0ae225b8">timestep</a></td></tr>
-<tr class="memdesc:ac6418b4fefd459b4846d8c3c0ae225b8 inherit pro_attribs_classStaDump"><td class="mdescLeft">&#160;</td><td class="mdescRight">A timestep of simulation to be read.  <a href="classStaDump.html#ac6418b4fefd459b4846d8c3c0ae225b8">More...</a><br /></td></tr>
 <tr class="separator:ac6418b4fefd459b4846d8c3c0ae225b8 inherit pro_attribs_classStaDump"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17cb48666fa24479e4afbc8107164a80 inherit pro_attribs_classStaDump"><td class="memItemLeft" align="right" valign="top"><a id="a17cb48666fa24479e4afbc8107164a80"></a>
-<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDump.html#a17cb48666fa24479e4afbc8107164a80">filepath</a></td></tr>
-<tr class="memdesc:a17cb48666fa24479e4afbc8107164a80 inherit pro_attribs_classStaDump"><td class="mdescLeft">&#160;</td><td class="mdescRight">A path to a Lammps' dump file to be read. <br /></td></tr>
+<tr class="memitem:a17cb48666fa24479e4afbc8107164a80 inherit pro_attribs_classStaDump"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaDump.html#a17cb48666fa24479e4afbc8107164a80">filepath</a></td></tr>
 <tr class="separator:a17cb48666fa24479e4afbc8107164a80 inherit pro_attribs_classStaDump"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a></td></tr>
@@ -149,10 +167,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classStaDumpAtoms.html" title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. ">StaDumpAtoms</a> reads a Lammps' dump file and sets properties for atoms. </p>
-<p>An object of this class reads properties of atoms from a Lammps' dump file specified by <a class="el" href="classStaDump.html#a17cb48666fa24479e4afbc8107164a80" title="A path to a Lammps&#39; dump file to be read. ">filepath</a>. Note that only properties at a time specified by <a class="el" href="classStaDump.html#ac6418b4fefd459b4846d8c3c0ae225b8" title="A timestep of simulation to be read. ">timestep</a> are read.</p>
-<p>About usage in Python, please see <a class="el" href="py__sta__dump__atoms_8h.html" title="This file is for binding StaDumpAtoms class to Python. ">src/pybind/starters/py_sta_dump_atoms.h</a>. </p>
+<p>An object of this class reads properties of atoms from a Lammps' dump file specified by <a class="el" href="classStaDump.html#a17cb48666fa24479e4afbc8107164a80">filepath</a>. Note that only properties at a time specified by <a class="el" href="classStaDump.html#ac6418b4fefd459b4846d8c3c0ae225b8">timestep</a> are read.</p>
+<p>About usage in Python, please see <a class="el" href="namespacepybind.html#ae1d10044dd3c9775b03dd57cfd47d07b" title="Bind StaDumpAtoms class to Python. ">pybind::py_sta_dump_atoms</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="sta__dump__atoms_8h_source.html#l00024">24</a> of file <a class="el" href="sta__dump__atoms_8h_source.html">sta_dump_atoms.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sta__dump__atoms_8h_source.html#l00025">25</a> of file <a class="el" href="sta__dump__atoms_8h_source.html">sta_dump_atoms.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a258c7068bcc6b3d071f0acff027e2561"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a258c7068bcc6b3d071f0acff027e2561">&#9670;&nbsp;</a></span>compute_impl()</h2>
@@ -188,23 +206,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation of computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>: Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> where computed properties are added to. </td></tr>
-    <tr><td class="paramname">datakeys</td><td>: Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> where keys for computed properties are added to. </td></tr>
-  </table>
-  </dd>
+<p>This method overrides <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f" title="Implementation of computation to update Element::data. ">Updater::compute_impl</a>. </p>
+<dl class="property added">
+<dt class="property added">Property to be added </dt>
+<dd class="property added"><ul>
+<li>Keys to be set are names of dumped Lammps' atom property. In a Lammps' dump file, the names are printed in a line beginning with <code>ITEM: ATOMS</code>.  </li>
+</ul>
+</dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table2">
-<caption><a class="el" href="classStaDumpAtoms.html" title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. ">StaDumpAtoms</a> related properties </caption>
-<tr class="py_tr">
-<th class="py_th2">Key for property to be set </th><th class="py_th2">Key for required property </th><th class="py_th2">Key for externally required property  </th></tr>
-<tr class="py_tr">
-<td class="py_td">Keys to be set are names of dumped Lammps' atom property. In a Lammps' dump file, the names are printed in a line beginning with <code>ITEM: ATOMS</code>.  </td><td class="py_td">None.  </td><td class="py_td">None.   </td></tr>
-</table>
 
 <p>Implements <a class="el" href="classUpdater.html#a91e7bdd1442c19e682ec9b3154ee910f">Updater</a>.</p>
 
@@ -240,15 +249,14 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Make a list whether each value printed in a line of a Lammps' dump file is an integer or not. </p>
+<p>Make a list whether each value printed in a line of a Lammps' dump file is an integer or not.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">line</td><td>: The first line in a body of a Lammps' dump file: a line below the line beginning with <code>ITEM: ATOMS</code>. </td></tr>
+    <tr><td class="paramname">line</td><td>The first line in a body of a Lammps' dump file: a line below the line beginning with <code>ITEM: ATOMS</code>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of booleans whether each value in the <code>line</code> is an integer or not. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> containing booleans whether each value in the <code>line</code> is an integer or not. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="sta__dump__atoms_8cpp_source.html#l00103">103</a> of file <a class="el" href="sta__dump__atoms_8cpp_source.html">sta_dump_atoms.cpp</a>.</p>
 <div class="dynheader">
@@ -264,16 +272,45 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ac237195b46542e1db67eff0235832a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac237195b46542e1db67eff0235832a8b">&#9670;&nbsp;</a></span>StaDump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StaDump::StaDump</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor of <a class="el" href="classStaDump.html" title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">StaDump</a> class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath_</td><td>A path to a Lammps' dump file to be read. <span class="remove_in_table"> This parameter is assigned to <a class="el" href="classStaDump.html#a17cb48666fa24479e4afbc8107164a80">filepath</a>. </span></td></tr>
+    <tr><td class="paramname">timestep_</td><td>A timestep of simulation to be read. <span class="remove_in_table"> This parameter is assigned to <a class="el" href="classStaDump.html#ac6418b4fefd459b4846d8c3c0ae225b8">timestep</a>. </span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="sta__dump_8cpp_source.html#l00013">13</a> of file <a class="el" href="sta__dump_8cpp_source.html">sta_dump.cpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/starters/<a class="el" href="sta__dump__atoms_8h_source.html">sta_dump_atoms.h</a></li>
 <li>src/starters/<a class="el" href="sta__dump__atoms_8cpp_source.html">sta_dump_atoms.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classStaDumpAtoms.html">StaDumpAtoms</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

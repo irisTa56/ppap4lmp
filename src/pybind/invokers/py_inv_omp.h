@@ -18,70 +18,63 @@ namespace pybind
     @brief Bind InvOMP class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
-        Python-side constructor of InvOMP
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
+        Python-side constructor of InvOMP.
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %InvOMP</td>
-        <td class="py_td">InvOMP::Invoker</td>
-        <td class="py_td">
-          Constructor of InvOMP class for one Processor object.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          InvOMP::Invoker
         </td>
-        <td class="py_td">
-          - \c proc : A Processor object to be executed
-            by the constructed object.
+        <td class="py_constructor" colspan="2">
+          Constructor of InvOMP class,
+          which uses one Processor object.
         </td>
-        <td class="py_td">
-          Constructed InvOMP object.
+        <td class="py_constructor" colspan="2">
+          @copydetails InvOMP::Invoker(const ShPtr<Processor> &)
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %InvOMP</td>
-        <td class="py_td">InvOMP::Invoker</td>
-        <td class="py_td">
-          Constructor of InvOMP class for multiple Processor objects.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          InvOMP::Invoker
         </td>
-        <td class="py_td">
-          - \c procs : List of Processor objects to be executed
-            by the constructed object.
+        <td class="py_constructor" colspan="2">
+          Constructor of InvOMP class,
+          which uses multiple Processor objects.
         </td>
-        <td class="py_td">
-          Constructed InvOMP object.
+        <td class="py_constructor" colspan="2">
+          @copydetails InvOMP::Invoker(const Vec<ShPtr<Processor>> &)
         </td>
       </tr>
     </table>
 
-    <table class="py_table">
-      <caption>
+    <table class="py_method">
+      <caption class="py_method">
         Python-side methods of InvOMP
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_method">
+        <th class="py_method">Name</th>
+        <th class="py_method">C++</th>
+        <th class="py_method">Description</th>
+        <th class="py_method">Parameters</th>
+        <th class="py_method">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c execute</td>
-        <td class="py_td">InvOMP::execute</td>
-        <td class="py_td">
-          Execute analysis programmed in the Processor object(s)
-          owned by this object.
+      <tr class="py_method">
+        <td class="py_method">\c execute</td>
+        <td class="py_method">InvOMP::execute</td>
+        <td class="py_method">
+          @copybrief InvOMP::execute
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
       </tr>

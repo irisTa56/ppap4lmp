@@ -15,14 +15,20 @@
 namespace utils
 {
   /*!
-    @brief Create a map from values of selected property
-    in an array ::Json to corresponding index in the array ::Json.
-    @param data : Array ::Json.
-    @param key : A string key specifying a property used as domain of
-    the mapping.
-    @return ::Map from elements of an array ::Json to corresponding
-    index in the array ::Json.
-    @details Note that the mapping must be bijection.
+    @brief Create a ::Map object from values of selected property
+    in an array ::Json object to corresponding index
+    in the ::Json object.
+
+    @param data
+      Array ::Json object.
+
+    @param key
+      A string key specifying a property used as domain of the mapping.
+
+    @return ::Map from elements of the \c data to corresponding index
+    in the \c data.
+
+    Note that the mapping must be bijection.
   */
   Map<Json,int> map_to_index(
     const Json &data,

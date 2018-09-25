@@ -18,7 +18,8 @@ namespace pybind
     @brief Bind Filter class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details Constructor of Filter class is hidden from Python,
+
+    Constructor of Filter class is hidden from Python,
     because the class is an abstract one.
   */
   void py_filter(py::module &m);

@@ -15,10 +15,14 @@ namespace utils
 {
   /*!
     @brief Mimicking Python's \c split.
-    @param str : A string to be splitted.
-    @param delim : A character by which the \c str is splitted. Default
-    delimiter is a whitespace.
-    @return ::Vec of strings.
+
+    @param str
+      A string to be splitted.
+    @param delim
+      A character by which the \c str is splitted.
+      Default delimiter is a whitespace.
+
+    @return ::Vec containing each part of splitted strings.
   */
   Vec<Str> split(
     const Str &str,

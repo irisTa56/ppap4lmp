@@ -15,9 +15,14 @@ namespace utils
 {
   /*!
     @brief Mimicking Python's \c join.
-    @param strs : Vector (list) of strings to be joined.
-    @param jointer : A string used for jointing elements of the \c strs.
-    @return String.
+
+    @param strs
+      Vector (list) of strings to be joined.
+
+    @param jointer
+      A string used for jointing elements of the \c strs.
+
+    @return A string.
   */
   Str join(
     const Vec<Str> &strs,

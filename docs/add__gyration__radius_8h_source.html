@@ -9,11 +9,19 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
-<link href="style_doxygen.css" rel="stylesheet" type="text/css"/>
+<link href="ppap4lmp.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('add__gyration__radius_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,32 +85,31 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_efedc0399e0892fcf242707c3ddb185f.html">adders</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">add_gyration_radius.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="add__gyration__radius_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef ADD_GYRATION_RADIUS_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define ADD_GYRATION_RADIUS_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="adder_8h.html">adders/adder.h</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classAddGyrationRadius.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAddGyrationRadius.html">AddGyrationRadius</a> : <span class="keyword">public</span> <a class="code" href="classAdder.html">Adder</a>, <span class="keyword">public</span> <a class="code" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa">EnShThis</a>&lt;AddGyrationRadius&gt; {</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classAddGyrationRadius.html#a582e3a06805ca0f63119ec3cd1d7fc94">   30</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classAddGyrationRadius.html#a582e3a06805ca0f63119ec3cd1d7fc94">add_sqrted</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">protected</span>:</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">compute_impl</a>(</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data,</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classDataKeys.html">DataKeys</a> &amp;datakeys) <span class="keyword">override</span>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">using</span> Adder::Adder;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classAddGyrationRadius.html">AddGyrationRadius</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr&lt;AddGyrationRadius&gt;</a> <a class="code" href="classAddGyrationRadius.html#a27daed4b7f0e5685ef67fe527bdbcd52">with_sqrted</a>(</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> add_sqrted_ = <span class="keyword">true</span>);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classAdder_html"><div class="ttname"><a href="classAdder.html">Adder</a></div><div class="ttdoc">Adder adds new properties (keys and values) to a non-empty Element object. </div><div class="ttdef"><b>Definition:</b> <a href="adder_8h_source.html#l00024">adder.h:24</a></div></div>
+<a href="add__gyration__radius_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef ADD_GYRATION_RADIUS_H</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define ADD_GYRATION_RADIUS_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="adder_8h.html">adders/adder.h</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classAddGyrationRadius.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAddGyrationRadius.html">AddGyrationRadius</a> : <span class="keyword">public</span> <a class="code" href="classAdder.html">Adder</a>, <span class="keyword">public</span> <a class="code" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa">EnShThis</a>&lt;AddGyrationRadius&gt; {</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classAddGyrationRadius.html#a582e3a06805ca0f63119ec3cd1d7fc94">   30</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classAddGyrationRadius.html#a582e3a06805ca0f63119ec3cd1d7fc94">add_sqrted</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">protected</span>:</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">compute_impl</a>(</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data,</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classDataKeys.html">DataKeys</a> &amp;datakeys) <span class="keyword">override</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">using</span> Adder::Adder;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classAddGyrationRadius.html">AddGyrationRadius</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr&lt;AddGyrationRadius&gt;</a> <a class="code" href="classAddGyrationRadius.html#a27daed4b7f0e5685ef67fe527bdbcd52">with_sqrted</a>(</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> add_sqrted_ = <span class="keyword">true</span>);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classAdder_html"><div class="ttname"><a href="classAdder.html">Adder</a></div><div class="ttdoc">Adder adds new properties (keys and values) to a non-empty Element object. </div><div class="ttdef"><b>Definition:</b> <a href="adder_8h_source.html#l00025">adder.h:25</a></div></div>
 <div class="ttc" id="classAddGyrationRadius_html_a27daed4b7f0e5685ef67fe527bdbcd52"><div class="ttname"><a href="classAddGyrationRadius.html#a27daed4b7f0e5685ef67fe527bdbcd52">AddGyrationRadius::with_sqrted</a></div><div class="ttdeci">ShPtr&lt; AddGyrationRadius &gt; with_sqrted(bool add_sqrted_=true)</div><div class="ttdoc">Enable to compute gyration radius (by default, only square of gyration radius is computed). </div><div class="ttdef"><b>Definition:</b> <a href="add__gyration__radius_8cpp_source.html#l00064">add_gyration_radius.cpp:64</a></div></div>
-<div class="ttc" id="classAddGyrationRadius_html_a53d9c62c9dbf976b815cb715a9f18a36"><div class="ttname"><a href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">AddGyrationRadius::compute_impl</a></div><div class="ttdeci">virtual void compute_impl(Json &amp;data, DataKeys &amp;datakeys) override</div><div class="ttdoc">Implementation of computation to update Element::data. </div><div class="ttdef"><b>Definition:</b> <a href="add__gyration__radius_8cpp_source.html#l00013">add_gyration_radius.cpp:13</a></div></div>
+<div class="ttc" id="classAddGyrationRadius_html_a53d9c62c9dbf976b815cb715a9f18a36"><div class="ttname"><a href="classAddGyrationRadius.html#a53d9c62c9dbf976b815cb715a9f18a36">AddGyrationRadius::compute_impl</a></div><div class="ttdeci">virtual void compute_impl(Json &amp;data, DataKeys &amp;datakeys) override</div><div class="ttdoc">This method overrides Updater::compute_impl. </div><div class="ttdef"><b>Definition:</b> <a href="add__gyration__radius_8cpp_source.html#l00013">add_gyration_radius.cpp:13</a></div></div>
 <div class="ttc" id="json_8h_html_af13a1979f9e8f62c101433fac6511cc6"><div class="ttname"><a href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a></div><div class="ttdeci">nlohmann::json Json</div><div class="ttdoc">Json is an alias for a JSON class. </div><div class="ttdef"><b>Definition:</b> <a href="json_8h_source.html#l00021">json.h:21</a></div></div>
 <div class="ttc" id="std_8h_html_a7f19b9462968832a5e38e8e4286a5afa"><div class="ttname"><a href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa">EnShThis</a></div><div class="ttdeci">std::enable_shared_from_this&lt; T &gt; EnShThis</div><div class="ttdoc">EnShThis is an alias for a class which can create shared pointer of itself by calling shared_from_thi...</div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00023">std.h:23</a></div></div>
-<div class="ttc" id="classAddGyrationRadius_html"><div class="ttname"><a href="classAddGyrationRadius.html">AddGyrationRadius</a></div><div class="ttdoc">AddGyrationRadius adds gyration radius to an Element object. </div><div class="ttdef"><b>Definition:</b> <a href="add__gyration__radius_8h_source.html#l00022">add_gyration_radius.h:22</a></div></div>
-<div class="ttc" id="classAddGyrationRadius_html_a582e3a06805ca0f63119ec3cd1d7fc94"><div class="ttname"><a href="classAddGyrationRadius.html#a582e3a06805ca0f63119ec3cd1d7fc94">AddGyrationRadius::add_sqrted</a></div><div class="ttdeci">bool add_sqrted</div><div class="ttdoc">Whether gyration radius (not squared) is computed (default is false). </div><div class="ttdef"><b>Definition:</b> <a href="add__gyration__radius_8h_source.html#l00030">add_gyration_radius.h:30</a></div></div>
+<div class="ttc" id="classAddGyrationRadius_html"><div class="ttname"><a href="classAddGyrationRadius.html">AddGyrationRadius</a></div><div class="ttdoc">AddGyrationRadius adds gyration radius to an Element object. </div><div class="ttdef"><b>Definition:</b> <a href="add__gyration__radius_8h_source.html#l00023">add_gyration_radius.h:23</a></div></div>
+<div class="ttc" id="classAddGyrationRadius_html_a582e3a06805ca0f63119ec3cd1d7fc94"><div class="ttname"><a href="classAddGyrationRadius.html#a582e3a06805ca0f63119ec3cd1d7fc94">AddGyrationRadius::add_sqrted</a></div><div class="ttdeci">bool add_sqrted</div><div class="ttdef"><b>Definition:</b> <a href="add__gyration__radius_8h_source.html#l00030">add_gyration_radius.h:30</a></div></div>
 <div class="ttc" id="adder_8h_html"><div class="ttname"><a href="adder_8h.html">adder.h</a></div><div class="ttdoc">This file has a definition of Adder class, which is a subclass of Updater class. </div></div>
-<div class="ttc" id="classDataKeys_html"><div class="ttname"><a href="classDataKeys.html">DataKeys</a></div><div class="ttdoc">DataKeys is a small class owning a set of string keys in Element::data. </div><div class="ttdef"><b>Definition:</b> <a href="data__keys_8h_source.html#l00024">data_keys.h:24</a></div></div>
+<div class="ttc" id="classDataKeys_html"><div class="ttname"><a href="classDataKeys.html">DataKeys</a></div><div class="ttdoc">DataKeys is a small class owning a set of string keys in Element::data. </div><div class="ttdef"><b>Definition:</b> <a href="data__keys_8h_source.html#l00025">data_keys.h:25</a></div></div>
 <div class="ttc" id="std_8h_html_acdc005cb83114401121fe9980eaf1395"><div class="ttname"><a href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; ShPtr</div><div class="ttdoc">ShPtr is an alias for shared pointer. </div><div class="ttdef"><b>Definition:</b> <a href="std_8h_source.html#l00016">std.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_efedc0399e0892fcf242707c3ddb185f.html">adders</a></li><li class="navelem"><a class="el" href="add__gyration__radius_8h.html">add_gyration_radius.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

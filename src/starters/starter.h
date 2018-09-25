@@ -14,40 +14,51 @@
 /*!
   @brief Starter sets some properties (keys and values) to
   an empty Element object.
-  @details This class inherits Updater class and overrides
-  Updater::compute. This class is an abstract class and has
-  a pure virtual function, Starter::compute_impl.
+
+  This class inherits Updater class and overrides Updater::compute.
+  This class is an abstract class and has a pure virtual function,
+  Starter::compute_impl.
 
   Name of subclass of this class should be prefixed by \e Sta.
   Unlike Adder, Starter accepts only empty Element::data.
 */
 class Starter : public Updater {
 /*!
-  @brief Sort elements of a array ::Json object by its \c id property.
-  @param data : Mutable reference to a ::Json object.
+  Sort elements of a array ::Json object by its \c id property.
+
+  @param data
+    Mutable reference to a ::Json object.
+
   @return None.
 */
   void sort_by_id(
     Json &data);
  public:
-  //! Constructor of Starter class (inherited).
   using Updater::Updater;
   virtual ~Starter() = default;
   /*!
     @brief Compute or parse properties and set them to Element::data
     given as a mutable reference.
-    @param data : Mutable reference to Element::data where computed
-    properties are set to.
-    @param datakeys : Mutable reference to Element::datakeys where keys
-    for computed properties are set to.
-    @param dataid : Constant integer copied from Element::dataid.
+
+    @param data
+      Mutable reference to Element::data where computed
+      properties are set to.
+
+    @param datakeys
+      Mutable reference to Element::datakeys where keys
+      for computed properties are set to.
+
+    @param dataid
+      Constant integer copied from Element::dataid.
+
     @return None.
-    @details This method checks if \c dataid is in #dataid_blacklist.
-    If it is not in the blacklist, this method passes \c data and
-    \c datakeys to Starter::compute_impl. Note that actual computation
-    and setting of properties is conducted by Starter::compute_impl
-    orveridden in subclasses of this class. In addition, this method
-    sorts elements of the \c data by \c id property, if the \c data
+
+    This method checks if \c dataid is in #dataid_blacklist. If it is
+    not in the blacklist, this method passes \c data and \c datakeys
+    to Starter::compute_impl. Note that actual computation and setting
+    of properties is conducted by Starter::compute_impl orveridden
+    in subclasses of this class. In addition, this method sorts
+    elements of the \c data by \c id property, if the \c data
     is an array and \c id property is set.
   */
   virtual void compute(

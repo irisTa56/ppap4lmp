@@ -75,10 +75,12 @@ class Updater {
  public:
   /*!
     @brief Constructor of Updater class.
-    @details This constructor is thread-unsafe because it accesses its
-    members thread-globally. Ensure this constructor is not called in
-    a multithreading context. Please be careful that constructors of
-    subclasses of this class are also thread-unsafe.
+
+    This constructor is thread-unsafe because it accesses
+    its members thread-globally. Ensure this constructor is
+    not called in a multithreading context. Please be careful
+    that constructors of subclasses of this class are
+    also thread-unsafe.
   */
   Updater();
   virtual ~Updater() = default;

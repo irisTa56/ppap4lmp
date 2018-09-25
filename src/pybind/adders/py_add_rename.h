@@ -18,58 +18,51 @@ namespace pybind
     @brief Bind AddRename class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddRename
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddRename</td>
-        <td class="py_td">AddRename::AddRename</td>
-        <td class="py_td">
-          Constructor of AddRename class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddRename::AddRename
         </td>
-        <td class="py_td">
-          - \c key_old_ : A string key for an existing property to be
-            renamed.
-          - \c key_new_ : A string key by which the old key
-            for the existing property is renamed.
+        <td class="py_constructor" colspan="2">
+          @copybrief AddRename::AddRename
+          @copydetails AddRename::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddRename object.
+        <td class="py_constructor" colspan="2">
+          @copydetails AddRename::AddRename
         </td>
       </tr>
     </table>
 
-    <table class="py_table">
-      <caption>
+    <table class="py_method">
+      <caption class="py_method">
         Python-side methods of AddRename
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_method">
+        <th class="py_method">Name</th>
+        <th class="py_method">C++</th>
+        <th class="py_method">Description</th>
+        <th class="py_method">Parameters</th>
+        <th class="py_method">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c overwrite</td>
-        <td class="py_td">AddRename::overwrite</td>
-        <td class="py_td">
+      <tr class="py_method">
+        <td class="py_method">\c overwrite</td>
+        <td class="py_method">AddRename::overwrite</td>
+        <td class="py_method">
           @copybrief AddRename::overwrite
         </td>
-        <td class="py_td">
-          - c do_overwrite_ : A boolean, whether overwriting is
-            allowed or not (default is \c True).
+        <td class="py_method">
+          @copydetails AddRename::overwrite
         </td>
-        <td class="py_td">
+        <td class="py_method">
           This AddRename object.
         </td>
       </tr>

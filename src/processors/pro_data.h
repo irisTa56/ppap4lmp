@@ -40,8 +40,8 @@ class ProData : public Processor {
  public:
   /*!
     @brief Constructor of ProData class for one Element object.
-    @param elem : Shared pointer to an Element object.
-    This argument is registered with #generators
+    @param elem : An Element object to be copied.
+    @details The \c elems is put into #generators
     by #register_generator.
   */
   ProData(
@@ -49,8 +49,8 @@ class ProData : public Processor {
   /*!
     @brief Constructor of ProData class for a sequence
     of Element objects.
-    @param elems : ::Vec of Shared pointers to Element objects.
-    This argument is registered with #generators
+    @param elems : ::Vec of Element objects to be copied.
+    @details Elements of the \c elems are put into #generators
     by #register_generators.
   */
   ProData(
@@ -64,14 +64,14 @@ class ProData : public Processor {
   /*!
     @brief Specify string keys for properties to be copied.
     @param args : An ordered list of string keys (\c *args in Python).
-    This argument is converted to be stored as #selected_keys.
+    This parameter is converted to be stored as #selected_keys.
     @return None.
   */
   void select(
     const py::args &args);
   /*!
-    @brief Get #results.
-    @return A private member of this class, #results.
+    @brief Get copied data.
+    @return #results.
   */
   const Vec<Json> &get_results();
 };

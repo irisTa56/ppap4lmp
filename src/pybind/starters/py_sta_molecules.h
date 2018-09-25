@@ -18,30 +18,26 @@ namespace pybind
     @brief Bind StaMolecules class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of StaMolecules
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %StaMolecules</td>
-        <td class="py_td">StaMolecules::StaMolecules</td>
-        <td class="py_td">
-          Constructor of StaMolecules class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          StaMolecules::StaMolecules
         </td>
-        <td class="py_td">
-          - \c el_atoms : An Element object for atoms
-            forming molecules to be computed.
+        <td class="py_constructor" colspan="2">
+          @copybrief StaMolecules::StaMolecules
+          @copydetails StaMolecules::compute_impl
         </td>
-        <td class="py_td">
-          Constructed StaMolecules object.
+        <td class="py_constructor" colspan="2">
+          @copydetails StaMolecules::StaMolecules
         </td>
       </tr>
     </table>
@@ -50,19 +46,25 @@ namespace pybind
     The number of molecules is 100; molecules with odd \c id are type 1
     and the others are type 2.
 
-    @code{.python}
-      atoms_traj = [
-        create(...) for i in range(0, 1000000, 1000)]
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
 
-      map_from_id_to_type = {
-        i + 1 : i%2 + 1 for i in range(100)
-      }
+    atoms_traj = [
+      create(StaDumpAtoms("path/to/dump", i))
+      for i in range(0, 1000000, 1000))
+    ]
 
-      molecules_traj = [
-        create(StaMolecules(atoms))
-          .append_updater(AddMap("id", "type", map_from_id_to_type))
-        for atoms in atoms_traj]
-    @endcode
+    map_from_id_to_type = {
+      i + 1 : i%2 + 1 for i in range(100)
+    }
+
+    molecules_traj = [
+      create(StaMolecules(atoms))
+        .append_updater(AddMap("id", "type", map_from_id_to_type))
+      for atoms in atoms_traj
+    ]
+    </code></pre>
+    @endhtmlonly
   */
   void py_sta_molecules(py::module &m);
 }

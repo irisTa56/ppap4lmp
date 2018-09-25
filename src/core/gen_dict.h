@@ -29,7 +29,7 @@ class GenDict : public Generator {
     @brief Constructor of GenDict class.
     @param generator_dict_ : Dictionary of shared pointers of
     Generator class.
-    This argument is assigned to #generator_dict.
+    This parameter is assigned to #generator_dict.
     @details This constructor is thread-unsafe because it accesses
     its members thread-globally. Ensure this constructor is not called
     in a multithreading context.

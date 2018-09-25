@@ -1,0 +1,127 @@
+
+/* Heading */
+
+h1.main_page {
+  margin-top: 50px;
+  padding-bottom: 10px;
+}
+
+h2.main_page {
+  margin-top: 40px;
+}
+
+/* Table */
+
+table.py_constructor, table.py_method {
+  width: 100%;
+  min-width: 1000px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table.py_constructor, th.py_constructor, td.py_constructor,
+table.py_method, th.py_method, td.py_method {
+  border: 1px solid black;
+}
+
+th.py_constructor {
+  background-color: rgb(50, 100, 200);
+  color: white;
+}
+
+th.py_method {
+  background-color: rgb(40, 160, 80);
+  color: white;
+}
+
+td.py_constructor, td.py_method {
+  padding: 10px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+caption.py_constructor, caption.py_method {
+  text-align: left;
+  padding: 5px;
+}
+
+/* Property */
+
+dl.property {
+  display: table;
+}
+
+dl.added {
+  background-color: #ddffff;
+  border-left: 5px solid #88dddd;
+}
+
+dl.required {
+  background-color: #ffeedd;
+  border-left: 5px solid #eecc44;
+}
+
+dl.required_ext {
+  background-color: #ffeaff;
+  border-left: 5px solid #eeaacc;
+}
+
+dt.property {
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+dt.property.main_page {
+  margin-left: 10px;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+dd.property {
+  margin-left: -10px;
+  margin-top: -2px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+dd.property.main_page {
+  margin-left: 0px;
+  margin-top: -2px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+/* Code */
+
+pre.prettyprint {
+  display: table;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+code.lang-py, code.lang-sh {
+  display: table;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+}
+
+/* Misc. */
+
+.none_in_main {
+  display: none;
+}
+
+dl.parameters {
+  margin: 0px;
+}
+
+dl.parameters > dt {
+  color: #602020;
+}
+
+dl.parameters > dd {
+  margin-left: 12px;
+}

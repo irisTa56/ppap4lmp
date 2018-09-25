@@ -18,45 +18,42 @@ namespace pybind
     @brief Bind FilComparison class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of FilComparison
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %FilComparison</td>
-        <td class="py_td">FilComparison::FilComparison</td>
-        <td class="py_td">
-          Constructor of FilComparison class for one criterion.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          FilComparison::FilComparison
         </td>
-        <td class="py_td">
-          - \c comparison_ : A 3-elements tuple consisting of
-            a string key, and comparison operator and right side value
-            of an inequality (or equation) used as a criterion.
+        <td class="py_constructor" colspan="2">
+          @copybrief FilComparison::FilComparison(
+            const std::tuple<Str,Str,Json> &)
+          @copydetails FilComparison::compute_impl
         </td>
-        <td class="py_td">
-          Constructed FilComparison object.
+        <td class="py_constructor" colspan="2">
+          @copydetails FilComparison::FilComparison(
+            const std::tuple<Str,Str,Json> &)
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %FilComparison</td>
-        <td class="py_td">FilComparison::FilComparison</td>
-        <td class="py_td">
-          Constructor of FilComparison class for multiple criteria.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          FilComparison::FilComparison
         </td>
-        <td class="py_td">
-          - \c comparisons_ : List of 3-elements tuples. Contents of
-            each tuple is the same as for the case of one criterion.
+        <td class="py_constructor" colspan="2">
+          @copybrief FilComparison::FilComparison(
+            const Vec<std::tuple<Str,Str,Json>> &)
+          @copydetails FilComparison::compute_impl
         </td>
-        <td class="py_td">
-          Constructed FilComparison object.
+        <td class="py_constructor" colspan="2">
+          @copydetails FilComparison::FilComparison(
+            const Vec<std::tuple<Str,Str,Json>> &)
         </td>
       </tr>
     </table>
@@ -64,23 +61,29 @@ namespace pybind
     Usage example of the constructor for a filter removing atoms
     whose \c xu property is less than 10.0.
 
-    @code{.python}
-      atoms = create(...)
-      atoms.append_updater(FilComparison(("xu", ">=", 10.0)))
-    @endcode
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
+
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    atoms.append_updater(FilComparison(("xu", ">=", 10.0)))
+    </code></pre>
+    @endhtmlonly
 
     Usage example of the constructor for a filter removing atoms
-    whose \c xu property is less than 10.0 or greater than 20.0,
-    and whose \c charge property is not equal to -1.0.
+    except for those of which \c xu property is greater than 10.0
+    and less than 20.0, and \c charge property is equal to -1.0.
 
-    @code{.python}
-      atoms = create(...)
-      atoms.append_updater(FilComparison([
-        ("xu", ">=", 10.0),
-        ("xu", "<=", 20.0),
-        ("charge", "==", -1.0)
-      ]))
-    @endcode
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
+
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    atoms.append_updater(FilComparison([
+      ("xu", ">", 10.0),
+      ("xu", "<", 20.0),
+      ("charge", "==", -1.0)
+    ]))
+    </code></pre>
+    @endhtmlonly
   */
   void py_fil_comparison(py::module &m);
 }

@@ -18,32 +18,26 @@ namespace pybind
     @brief Bind AddCoMPosition class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddCoMPosition
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddCoMPosition</td>
-        <td class="py_td">AddCoMPosition::AddCoMPosition</td>
-        <td class="py_td">
-          Constructor of AddCoMPosition class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddCoMPosition::AddCoMPosition
         </td>
-        <td class="py_td">
-          - \c elem : \e A child object (such as an Element object
-            containing data for atoms).
+        <td class="py_constructor" colspan="2">
+          @copybrief AddCoMPosition::AddCoMPosition
+          @copydetails AddCoMPosition::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddCoMPosition object, which is appended to
-          a \e parent object (such as an Element object containing data
-          for molecules).
+        <td class="py_constructor" colspan="2">
+          @copydetails AddCoMPosition::AddCoMPosition
         </td>
       </tr>
     </table>
@@ -51,12 +45,15 @@ namespace pybind
     Usage example of the constructor to add \c xu, \c yu and \c zu
     property to an Element object for molecules.
 
-    @code{.python}
-      atoms = create(...)
-      molecules = create(StaMolecules(atoms))
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
 
-      molecules.append_updater(AddCoMPosition(atoms))
-    @endcode
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    molecules = create(StaMolecules(atoms))
+
+    molecules.append_updater(AddCoMPosition(atoms))
+    </code></pre>
+    @endhtmlonly
   */
   void py_add_com_position(py::module &m);
 }

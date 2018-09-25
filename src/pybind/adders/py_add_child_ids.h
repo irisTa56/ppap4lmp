@@ -18,36 +18,26 @@ namespace pybind
     @brief Bind AddChildIDs class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of AddChildIDs
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %AddChildIDs</td>
-        <td class="py_td">AddChildIDs::AddChildIDs</td>
-        <td class="py_td">
-          Constructor of AddChildIDs class.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          AddChildIDs::AddChildIDs
         </td>
-        <td class="py_td">
-          - \c elem : \e A child object (such as an Element object
-            containing data for atoms).
-          - \c child_name_ : A string for naming the above child object.
-          - \c key_for_parent_id_ : A string for key in the child
-            object corresponding to \c id property of parent object
-            (such as an Element object containing data for molecules).
+        <td class="py_constructor" colspan="2">
+          @copybrief AddChildIDs::AddChildIDs
+          @copydetails AddChildIDs::compute_impl
         </td>
-        <td class="py_td">
-          Constructed AddChildIDs object, which is appended to
-          a \e parent object (such as an Element object containing data
-          for molecules).
+        <td class="py_constructor" colspan="2">
+          @copydetails AddChildIDs::AddChildIDs
         </td>
       </tr>
     </table>
@@ -55,13 +45,16 @@ namespace pybind
     Usage example of the constructor to add \c bead-ids property to
     an Element object for molecules.
 
-    @code{.python}
-      atoms = create(...)
-      molecules = create(StaMolecules(atoms))
-      beads = create(StaBeads(molecules, ...))
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
 
-      molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
-    @endcode
+    atoms = create(StaDumpAtoms("path/to/dump", 0))
+    molecules = create(StaMolecules(atoms))
+    beads = create(StaBeads(molecules, mapping))
+
+    molecules.append_updater(AddChildIDs(beads, "bead", "mol"))
+    </code></pre>
+    @endhtmlonly
   */
   void py_add_child_ids(py::module &m);
 }
