@@ -23,8 +23,9 @@ namespace pybind11
       PYBIND11_TYPE_CASTER(Json, _("json"));
 
       /*!
-        @brief Loading ::Json from Python and assigning it to C++.
-        @details First, a JSON-like object in Python (complex of dict
+        @brief Loading a ::Json object from Python to C++.
+
+        First, a JSON-like object in Python (complex of dictionary
         and list) is dumped as a string by \c dumps attribute of
         Python's \c json module (serialization). Then the string is
         parsed by \c parse function of \e nlohmann/json and converted
@@ -47,8 +48,9 @@ namespace pybind11
       }
 
       /*!
-        @brief Casting ::Json from C++ to Python.
-        @details First, a ::Json object is serialized to a string by
+        @brief Casting a ::Json object from C++ to Python.
+
+        First, a ::Json object is serialized to a string by
         its \c dump  method. Then the string is loaded by \c loads
         attribute of Python's \c json module and released as a complex
         of dictionary and list. Since this conversion process might take

@@ -22,7 +22,7 @@ namespace utils
       A character by which the \c str is splitted.
       Default delimiter is a whitespace.
 
-    @return ::Vec containing each part of splitted strings.
+    @return A ::Vec object containing each part of splitted strings.
   */
   Vec<Str> split(
     const Str &str,

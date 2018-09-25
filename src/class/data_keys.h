@@ -20,7 +20,7 @@
   and used for checking existence of keys for properties in
   the Element::data quickly. Note that checking keys against
   the Element::data itself is a time consuming process if it is
-  a large array ::Json.
+  a large array ::Json object.
 */
 class DataKeys {
   /*!
@@ -42,7 +42,7 @@ class DataKeys {
     @brief Set a given set of keys as #_keys.
 
     @param keys
-      ::Set of string keys to be assigned to #_keys.
+      Set of string keys to be assigned to #_keys.
 
     @return None.
   */
@@ -52,7 +52,7 @@ class DataKeys {
     @brief Add key(s) in an array to #_keys.
 
     @param key_
-      ::Json for either a key or an array of keys to be added.
+      A ::Json object for either a key or an array of keys to be added.
 
     @return None.
   */
@@ -62,7 +62,8 @@ class DataKeys {
     @brief Remove key(s) in an array from #_keys.
 
     @param key_
-      ::Json for either a key or an array of keys to be removed.
+      A ::Json object for either a key or an array of keys
+      to be removed.
 
     @return None.
   */
@@ -72,7 +73,7 @@ class DataKeys {
     @brief Check if this object has required key(s).
 
     @param key_
-      ::Json for either a key or an array of keys
+      A ::Json object for either a key or an array of keys
       for required property.
 
     @return None.
@@ -86,7 +87,7 @@ class DataKeys {
     @brief Check if this object has optional key(s).
 
     @param key_
-      ::Json for either a key or an array of keys
+      A ::Json object for either a key or an array of keys
       for optional property.
 
     @return A boolean.

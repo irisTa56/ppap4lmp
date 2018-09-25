@@ -5,10 +5,10 @@
 <area shape="rect" id="node5" href="$classAddSpecialBonds.html#ac8f026ec0d609bf9bbc98d5c7899a13b" title="This method overrides Updater::compute_impl. " alt="" coords="435,1248,649,1275"/>
 <area shape="rect" id="node6" href="$classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100" title="Compute properties and add them to Element::data given as a mutable reference. " alt="" coords="228,1127,343,1153"/>
 <area shape="rect" id="node7" href="$classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" title="Check if this object has required key(s). " alt="" coords="219,460,352,487"/>
-<area shape="rect" id="node22" href="$classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="This method decrements n_remain. " alt="" coords="216,1178,355,1219"/>
+<area shape="rect" id="node22" href="$classElement.html#a9ff7a4e19165faa6da26635d9145b46b" title="Element::decrement\l_remain" alt="" coords="216,1178,355,1219"/>
 <area shape="rect" id="node23" href="$classElement.html#ab12675e00173496f85052d82f334f395" title="Get this object as a shared pointer of Element class. " alt="" coords="211,1244,360,1271"/>
 <area shape="rect" id="node24" href="$classElement.html#a5474cb60706c92e37268ac4c3ff2c46b" title="Get this object as a shared pointer of Generator class. " alt="" coords="207,1295,364,1321"/>
-<area shape="rect" id="node25" href="$classElement.html#a1fdb9455f49d2c66a0276925f7246cad" title="Routines to be conducted when a wrapper of getter is called from Python. " alt="" coords="461,81,623,108"/>
+<area shape="rect" id="node25" href="$classElement.html#a1fdb9455f49d2c66a0276925f7246cad" title="Element::init_for_python" alt="" coords="461,81,623,108"/>
 <area shape="rect" id="node28" href="$classGenDict.html#ae1c5bb525375ebba3427367a9b98fd7e" title="Get a value in generator_dict as a shared pointer of Element class. " alt="" coords="211,1345,359,1372"/>
 <area shape="rect" id="node29" href="$classGenDict.html#a8762308e25e392c38e4c3672ee5cd2eb" title="Get a value in generator_dict as a shared pointer of Generator class. " alt="" coords="207,1396,363,1423"/>
 <area shape="rect" id="node30" href="$classGenList.html#aca8f4c0c3ff7e95f74864afb5ddc1888" title="Get an element of generator_list as a shared pointer of Element class. " alt="" coords="212,1447,359,1473"/>
@@ -37,14 +37,14 @@
 <area shape="rect" id="node14" href="$classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517" title="Wrapper for DataKeys::required. " alt="" coords="480,233,604,260"/>
 <area shape="rect" id="node20" href="$classFilComparison.html#af7dc169cdedf15e6b8dc355cc973e90f" title="This method overrides Updater::compute_impl. " alt="" coords="709,476,903,503"/>
 <area shape="rect" id="node21" href="$classFilSet.html#a0335614b1856870777ab1af370406fd2" title="This method overrides Updater::compute_impl. " alt="" coords="469,401,615,428"/>
-<area shape="rect" id="node15" href="$classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Wrapper for array1d method for integer values. " alt="" coords="727,208,885,235"/>
-<area shape="rect" id="node17" href="$classElement.html#a3f11848589faad4cbca8119385887713" title="Wrapper for array1d method for float (double in C++) values. " alt="" coords="721,259,891,285"/>
-<area shape="rect" id="node18" href="$classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Wrapper for array2d method for integer values. " alt="" coords="727,107,885,133"/>
-<area shape="rect" id="node19" href="$classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Wrapper for array2d method for float (double in C++) values. " alt="" coords="721,157,891,184"/>
+<area shape="rect" id="node15" href="$classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Get integer values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. " alt="" coords="727,208,885,235"/>
+<area shape="rect" id="node17" href="$classElement.html#a3f11848589faad4cbca8119385887713" title="Get float values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. " alt="" coords="721,259,891,285"/>
+<area shape="rect" id="node18" href="$classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Get integer values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. " alt="" coords="727,107,885,133"/>
+<area shape="rect" id="node19" href="$classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Get float values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. " alt="" coords="721,157,891,184"/>
 <area shape="rect" id="node16" href="$namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" title="Bind Element class to Python. " alt="" coords="963,132,1097,159"/>
-<area shape="rect" id="node26" href="$classElement.html#a62989090a40d237e617bc6e5f5087388" title="Wrapper for get_data method, which returns a reference. " alt="" coords="731,56,881,83"/>
-<area shape="rect" id="node27" href="$classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Wrapper for get_keys method. " alt="" coords="730,5,882,32"/>
-<area shape="rect" id="node33" href="$classFilComparison.html#a7300b226ef91df3cdabf2799129a979d" title="FilComparison::convert\l_to_funcs" alt="" coords="464,635,620,677"/>
+<area shape="rect" id="node26" href="$classElement.html#a62989090a40d237e617bc6e5f5087388" title="Get Element::data of this object. " alt="" coords="731,56,881,83"/>
+<area shape="rect" id="node27" href="$classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Get contents of Element::datakeys of this object. " alt="" coords="730,5,882,32"/>
+<area shape="rect" id="node33" href="$classFilComparison.html#accbd8d97e175b70c61b603999b944565" title="FilComparison::convert\l_to_funcs" alt="" coords="464,635,620,677"/>
 <area shape="rect" id="node36" href="$namespacepybind.html#abed3a52f6c96fc1ece01e46b05bc127b" title="Bind Invoker class to Python. " alt="" coords="477,1599,607,1625"/>
 <area shape="rect" id="node43" href="$classStaBeads.html#a28dd7a99528b0c892dc3ab85b131ed85" title="This method overrides Updater::compute_impl. " alt="" coords="458,1956,626,1983"/>
 <area shape="rect" id="node50" href="$classAddCoMPosition.html#a4f11bc044daa8afbe8223d9e4098a499" title="AddCoMPosition::compute\l_with_weights" alt="" coords="453,935,631,977"/>

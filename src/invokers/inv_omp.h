@@ -16,7 +16,7 @@
   a computationally expensive part of analysis.
 
   This class executes a computationally expensive calculation,
-  such as an update process defined by Generator::update_chain
+  such as an updating process defined by Generator::update_chain
   or analytical computations conducted in Processor::run_impl,
   under multithread environment using OpenMP.
   All threads are used if \c OMP_NUM_THREADS environment variable is

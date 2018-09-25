@@ -154,7 +154,7 @@ var sectionId = 'dynsection-7';
 <!-- Node87 -->
 <g id="node22" class="node">
 <title>Node87</title>
-<g id="a_node22"><a xlink:href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" target="_top" xlink:title="This method decrements n_remain. ">
+<g id="a_node22"><a xlink:href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" target="_top" xlink:title="Element::decrement\l_remain">
 <polygon fill="#ffffff" stroke="#000000" points="158,-731 158,-761 262,-761 262,-731 158,-731"/>
 <text text-anchor="start" x="166" y="-749" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::decrement</text>
 <text text-anchor="middle" x="210" y="-738" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_remain</text>
@@ -200,7 +200,7 @@ var sectionId = 'dynsection-7';
 <!-- Node90 -->
 <g id="node25" class="node">
 <title>Node90</title>
-<g id="a_node25"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Routines to be conducted when a wrapper of getter is called from Python. ">
+<g id="a_node25"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Element::init_for_python">
 <polygon fill="#ffffff" stroke="#000000" points="341.5,-1564.5 341.5,-1583.5 463.5,-1583.5 463.5,-1564.5 341.5,-1564.5"/>
 <text text-anchor="middle" x="402.5" y="-1571.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::init_for_python</text>
 </a>
@@ -662,7 +662,7 @@ var sectionId = 'dynsection-7';
 <!-- Node80 -->
 <g id="node15" class="node">
 <title>Node80</title>
-<g id="a_node15"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Wrapper for array1d method for integer values. ">
+<g id="a_node15"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Get integer values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="541,-1469.5 541,-1488.5 660,-1488.5 660,-1469.5 541,-1469.5"/>
 <text text-anchor="middle" x="600.5" y="-1476.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_int_py</text>
 </a>
@@ -677,7 +677,7 @@ var sectionId = 'dynsection-7';
 <!-- Node82 -->
 <g id="node17" class="node">
 <title>Node82</title>
-<g id="a_node17"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Wrapper for array1d method for float (double in C++) values. ">
+<g id="a_node17"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Get float values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="536.5,-1431.5 536.5,-1450.5 664.5,-1450.5 664.5,-1431.5 536.5,-1431.5"/>
 <text text-anchor="middle" x="600.5" y="-1438.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_float_py</text>
 </a>
@@ -692,7 +692,7 @@ var sectionId = 'dynsection-7';
 <!-- Node83 -->
 <g id="node18" class="node">
 <title>Node83</title>
-<g id="a_node18"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for array2d method for integer values. ">
+<g id="a_node18"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Get integer values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="541,-1545.5 541,-1564.5 660,-1564.5 660,-1545.5 541,-1545.5"/>
 <text text-anchor="middle" x="600.5" y="-1552.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_int_py</text>
 </a>
@@ -707,7 +707,7 @@ var sectionId = 'dynsection-7';
 <!-- Node84 -->
 <g id="node19" class="node">
 <title>Node84</title>
-<g id="a_node19"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for array2d method for float (double in C++) values. ">
+<g id="a_node19"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Get float values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="536.5,-1507.5 536.5,-1526.5 664.5,-1526.5 664.5,-1507.5 536.5,-1507.5"/>
 <text text-anchor="middle" x="600.5" y="-1514.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </a>
@@ -779,7 +779,7 @@ var sectionId = 'dynsection-7';
 <!-- Node91 -->
 <g id="node26" class="node">
 <title>Node91</title>
-<g id="a_node26"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Wrapper for get_data method, which returns a reference. ">
+<g id="a_node26"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Get Element::data of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="544.5,-1583.5 544.5,-1602.5 656.5,-1602.5 656.5,-1583.5 544.5,-1583.5"/>
 <text text-anchor="middle" x="600.5" y="-1590.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_data_py</text>
 </a>
@@ -794,7 +794,7 @@ var sectionId = 'dynsection-7';
 <!-- Node92 -->
 <g id="node27" class="node">
 <title>Node92</title>
-<g id="a_node27"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Wrapper for get_keys method. ">
+<g id="a_node27"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Get contents of Element::datakeys of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="543.5,-1621.5 543.5,-1640.5 657.5,-1640.5 657.5,-1621.5 543.5,-1621.5"/>
 <text text-anchor="middle" x="600.5" y="-1628.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys_py</text>
 </a>
@@ -821,7 +821,7 @@ var sectionId = 'dynsection-7';
 <!-- Node98 -->
 <g id="node33" class="node">
 <title>Node98</title>
-<g id="a_node33"><a xlink:href="classFilComparison.html#a7300b226ef91df3cdabf2799129a979d" target="_top" xlink:title="FilComparison::convert\l_to_funcs">
+<g id="a_node33"><a xlink:href="classFilComparison.html#accbd8d97e175b70c61b603999b944565" target="_top" xlink:title="FilComparison::convert\l_to_funcs">
 <polygon fill="#ffffff" stroke="#000000" points="344,-1138 344,-1168 461,-1168 461,-1138 344,-1138"/>
 <text text-anchor="start" x="352" y="-1156" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::convert</text>
 <text text-anchor="middle" x="402.5" y="-1145" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_to_funcs</text>

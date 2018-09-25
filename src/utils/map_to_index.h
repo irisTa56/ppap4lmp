@@ -20,13 +20,13 @@ namespace utils
     in the ::Json object.
 
     @param data
-      Array ::Json object.
+      An array ::Json object.
 
     @param key
       A string key specifying a property used as domain of the mapping.
 
-    @return ::Map from elements of the \c data to corresponding index
-    in the \c data.
+    @return A ::Map object from elements of the \c data
+    to corresponding index in the \c data.
 
     Note that the mapping must be bijection.
   */

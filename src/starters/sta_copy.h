@@ -54,7 +54,7 @@ class StaCopy : public Starter {
       where keys for copied properties are set to.
 
     @param dataid
-      Constant integer copied from Element::dataid.
+      A constant integer copied from Element::dataid.
 
     @return None.
 

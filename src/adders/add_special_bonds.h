@@ -33,10 +33,10 @@ class AddSpecialBonds : public Adder {
   /*!
     Schemes of special bonds for each molecular type contained
     in a ::Map (dictionary) object from molecular type
-    to a ::Vec object of ::Vec objects (list of lists) of
-    zero-based indices of atoms in a molecule of that type.
-    The first list corresponds atoms in a molecule,
-    and the second lists corresponds special bonds of each atom.
+    to a list of lists of zero-based indices of atoms
+    in a molecule of that type. The first list corresponds atoms
+    in a molecule, and the second lists corresponds special bonds
+    of each atom.
   */
   Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol;
  protected:

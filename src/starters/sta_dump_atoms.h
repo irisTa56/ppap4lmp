@@ -31,7 +31,7 @@ class StaDumpAtoms : public StaDump {
       The first line in a body of a Lammps' dump file:
       a line below the line beginning with <c>ITEM: ATOMS</c>.
 
-    @return ::Vec containing booleans
+    @return A constant ::Vec object containing booleans
     whether each value in the \c line is an integer or not.
   */
   const Vec<bool> make_is_int_vector(

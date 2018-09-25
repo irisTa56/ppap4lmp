@@ -52,13 +52,15 @@ class FilComparison : public Filter {
     Make a ::CompareFunc object from a comparison operator
     and a right side value.
 
-    @param oper : A string representing a comparison operator.
-    One of \c <, \c >, \c <=, \c >=, \c ==, and \c !=.
+    @param oper
+      A string representing a comparison operator.
+      One of \c <, \c >, \c <=, \c >=, \c ==, and \c !=.
 
-    @param rval : A right side value. Since it is ::Json,
-    it can be either an integer or a float.
+    @param rval
+      A right side value. Since it is ::Json,
+      it can be either an integer or a float.
 
-    @return ::CompareFunc, a function evaluating an inequality
+    @return A ::CompareFunc object, a function evaluating an inequality
     (or equation).
   */
   const CompareFunc make_lambda(
@@ -68,19 +70,16 @@ class FilComparison : public Filter {
     Convert tuples in #comparisons to pairs of a string key
     and ::CompareFunc.
 
-    @param comps : #comparisons.
-
-    @return Constant ::Vec<std::pair<#Str,#CompareFunc>>,
+    @return A constant ::Vec<std::pair<#Str,#CompareFunc>> object,
     which describes criteria of this filter.
 
     Returned value of this method is used for evaluating inequalities
     consisting of the second and third elements of tuples contained
-    in #comparisons. Note that this method should not be called
-    from constructor because of possibility of throwing
-    (and raising) a runtime error.
+    in #comparisons. Note that this conversion from tuples to pairs
+    should not be conducted in constructor because of possibility
+    of throwing (and raising) a runtime error.
   */
-  const Vec<std::pair<Str,CompareFunc>> convert_to_funcs(
-    const Vec<std::tuple<Str,Str,Json>> &comps);
+  const Vec<std::pair<Str,CompareFunc>> convert_to_funcs();
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(

@@ -9,159 +9,159 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 214)">
 <title>Generator::hello</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-214 549,-214 549,4 -4,4"/>
-<!-- Node11 -->
+<!-- Node7 -->
 <g id="node1" class="node">
-<title>Node11</title>
+<title>Node7</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-95.5 0,-114.5 86,-114.5 86,-95.5 0,-95.5"/>
 <text text-anchor="middle" x="43" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Generator::hello</text>
 </g>
-<!-- Node12 -->
+<!-- Node8 -->
 <g id="node2" class="node">
-<title>Node12</title>
-<g id="a_node2"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Routines to be conducted when a wrapper of getter is called from Python. ">
+<title>Node8</title>
+<g id="a_node2"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Element::init_for_python">
 <polygon fill="#ffffff" stroke="#000000" points="122,-95.5 122,-114.5 244,-114.5 244,-95.5 122,-95.5"/>
 <text text-anchor="middle" x="183" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::init_for_python</text>
 </a>
 </g>
 </g>
-<!-- Node11&#45;&gt;Node12 -->
+<!-- Node7&#45;&gt;Node8 -->
 <g id="edge1" class="edge">
-<title>Node11&#45;&gt;Node12</title>
+<title>Node7&#45;&gt;Node8</title>
 <path fill="none" stroke="#191970" d="M96.2125,-105C104.6335,-105 113.399,-105 121.9813,-105"/>
 <polygon fill="#191970" stroke="#191970" points="96.147,-101.5001 86.147,-105 96.1469,-108.5001 96.147,-101.5001"/>
 </g>
-<!-- Node13 -->
+<!-- Node9 -->
 <g id="node3" class="node">
-<title>Node13</title>
-<g id="a_node3"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Wrapper for get_data method, which returns a reference. ">
+<title>Node9</title>
+<g id="a_node3"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Get Element::data of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="288,-190.5 288,-209.5 400,-209.5 400,-190.5 288,-190.5"/>
 <text text-anchor="middle" x="344" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_data_py</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node13 -->
+<!-- Node8&#45;&gt;Node9 -->
 <g id="edge2" class="edge">
-<title>Node12&#45;&gt;Node13</title>
+<title>Node8&#45;&gt;Node9</title>
 <path fill="none" stroke="#191970" d="M200.1183,-121.7325C218.4786,-138.8364 249.1733,-165.0845 280,-181 287.3121,-184.7752 295.4912,-187.9178 303.4938,-190.4883"/>
 <polygon fill="#191970" stroke="#191970" points="202.2558,-118.9356 192.5943,-114.5874 197.4355,-124.0115 202.2558,-118.9356"/>
 </g>
-<!-- Node15 -->
+<!-- Node11 -->
 <g id="node5" class="node">
-<title>Node15</title>
-<g id="a_node5"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Wrapper for get_keys method. ">
+<title>Node11</title>
+<g id="a_node5"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Get contents of Element::datakeys of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="287,-152.5 287,-171.5 401,-171.5 401,-152.5 287,-152.5"/>
 <text text-anchor="middle" x="344" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys_py</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node15 -->
+<!-- Node8&#45;&gt;Node11 -->
 <g id="edge4" class="edge">
-<title>Node12&#45;&gt;Node15</title>
+<title>Node8&#45;&gt;Node11</title>
 <path fill="none" stroke="#191970" d="M215.1964,-118.405C233.9566,-126.0161 258.1514,-135.4923 280,-143 289.646,-146.3146 300.2228,-149.5955 309.9508,-152.4742"/>
 <polygon fill="#191970" stroke="#191970" points="216.5036,-115.1582 205.9227,-114.6152 213.8555,-121.6381 216.5036,-115.1582"/>
 </g>
-<!-- Node16 -->
+<!-- Node12 -->
 <g id="node6" class="node">
-<title>Node16</title>
-<g id="a_node6"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Wrapper for array1d method for integer values. ">
+<title>Node12</title>
+<g id="a_node6"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Get integer values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="284.5,-114.5 284.5,-133.5 403.5,-133.5 403.5,-114.5 284.5,-114.5"/>
 <text text-anchor="middle" x="344" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_int_py</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node16 -->
+<!-- Node8&#45;&gt;Node12 -->
 <g id="edge6" class="edge">
-<title>Node12&#45;&gt;Node16</title>
+<title>Node8&#45;&gt;Node12</title>
 <path fill="none" stroke="#191970" d="M254.3026,-113.4146C264.3673,-114.6023 274.6263,-115.813 284.4391,-116.9711"/>
 <polygon fill="#191970" stroke="#191970" points="254.6678,-109.9335 244.3265,-112.2373 253.8473,-116.8852 254.6678,-109.9335"/>
 </g>
-<!-- Node17 -->
+<!-- Node13 -->
 <g id="node7" class="node">
-<title>Node17</title>
-<g id="a_node7"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Wrapper for array1d method for float (double in C++) values. ">
+<title>Node13</title>
+<g id="a_node7"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Get float values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="280,-76.5 280,-95.5 408,-95.5 408,-76.5 280,-76.5"/>
 <text text-anchor="middle" x="344" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_float_py</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node17 -->
+<!-- Node8&#45;&gt;Node13 -->
 <g id="edge8" class="edge">
-<title>Node12&#45;&gt;Node17</title>
+<title>Node8&#45;&gt;Node13</title>
 <path fill="none" stroke="#191970" d="M254.2601,-96.5904C262.797,-95.583 271.4744,-94.5589 279.9014,-93.5644"/>
 <polygon fill="#191970" stroke="#191970" points="253.8473,-93.1148 244.3265,-97.7627 254.6678,-100.0665 253.8473,-93.1148"/>
 </g>
-<!-- Node18 -->
+<!-- Node14 -->
 <g id="node8" class="node">
-<title>Node18</title>
-<g id="a_node8"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for array2d method for integer values. ">
+<title>Node14</title>
+<g id="a_node8"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Get integer values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="284.5,-38.5 284.5,-57.5 403.5,-57.5 403.5,-38.5 284.5,-38.5"/>
 <text text-anchor="middle" x="344" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_int_py</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node18 -->
+<!-- Node8&#45;&gt;Node14 -->
 <g id="edge10" class="edge">
-<title>Node12&#45;&gt;Node18</title>
+<title>Node8&#45;&gt;Node14</title>
 <path fill="none" stroke="#191970" d="M215.1964,-91.595C233.9566,-83.9839 258.1514,-74.5077 280,-67 289.646,-63.6854 300.2228,-60.4045 309.9508,-57.5258"/>
 <polygon fill="#191970" stroke="#191970" points="213.8555,-88.3619 205.9227,-95.3848 216.5036,-94.8418 213.8555,-88.3619"/>
 </g>
-<!-- Node19 -->
+<!-- Node15 -->
 <g id="node9" class="node">
-<title>Node19</title>
-<g id="a_node9"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for array2d method for float (double in C++) values. ">
+<title>Node15</title>
+<g id="a_node9"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Get float values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="280,-.5 280,-19.5 408,-19.5 408,-.5 280,-.5"/>
 <text text-anchor="middle" x="344" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </a>
 </g>
 </g>
-<!-- Node12&#45;&gt;Node19 -->
+<!-- Node8&#45;&gt;Node15 -->
 <g id="edge12" class="edge">
-<title>Node12&#45;&gt;Node19</title>
+<title>Node8&#45;&gt;Node15</title>
 <path fill="none" stroke="#191970" d="M200.1183,-88.2675C218.4786,-71.1636 249.1733,-44.9155 280,-29 287.3121,-25.2248 295.4912,-22.0822 303.4938,-19.5117"/>
 <polygon fill="#191970" stroke="#191970" points="197.4355,-85.9885 192.5943,-95.4126 202.2558,-91.0644 197.4355,-85.9885"/>
 </g>
-<!-- Node14 -->
+<!-- Node10 -->
 <g id="node4" class="node">
-<title>Node14</title>
+<title>Node10</title>
 <g id="a_node4"><a xlink:href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" target="_top" xlink:title="Bind Element class to Python. ">
 <polygon fill="#ffffff" stroke="#000000" points="444,-95.5 444,-114.5 545,-114.5 545,-95.5 444,-95.5"/>
 <text text-anchor="middle" x="494.5" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">pybind::py_element</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node14 -->
+<!-- Node9&#45;&gt;Node10 -->
 <g id="edge3" class="edge">
-<title>Node13&#45;&gt;Node14</title>
+<title>Node9&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M395.3635,-186.9424C399.7391,-185.1781 404.0117,-183.2034 408,-181 440.7206,-162.9232 471.7935,-130.703 486.1667,-114.6476"/>
 <polygon fill="#191970" stroke="#191970" points="393.8825,-183.7571 385.6905,-190.4759 396.2844,-190.3322 393.8825,-183.7571"/>
 </g>
-<!-- Node15&#45;&gt;Node14 -->
+<!-- Node11&#45;&gt;Node10 -->
 <g id="edge5" class="edge">
-<title>Node15&#45;&gt;Node14</title>
+<title>Node11&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M389.0686,-149.3954C395.4658,-147.3818 401.9295,-145.2246 408,-143 431.2556,-134.4779 457.1716,-122.7884 474.5185,-114.6331"/>
 <polygon fill="#191970" stroke="#191970" points="387.6771,-146.1607 379.1364,-152.4304 389.7228,-152.8552 387.6771,-146.1607"/>
 </g>
-<!-- Node16&#45;&gt;Node14 -->
+<!-- Node12&#45;&gt;Node10 -->
 <g id="edge7" class="edge">
-<title>Node16&#45;&gt;Node14</title>
+<title>Node12&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M413.971,-115.1664C424.0981,-113.8879 434.3533,-112.5933 443.9981,-111.3757"/>
 <polygon fill="#191970" stroke="#191970" points="413.3969,-111.7111 403.914,-116.4361 414.2737,-118.6559 413.3969,-111.7111"/>
 </g>
-<!-- Node17&#45;&gt;Node14 -->
+<!-- Node13&#45;&gt;Node10 -->
 <g id="edge9" class="edge">
-<title>Node17&#45;&gt;Node14</title>
+<title>Node13&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M418.2998,-95.38C426.8797,-96.4632 435.4761,-97.5485 443.6427,-98.5795"/>
 <polygon fill="#191970" stroke="#191970" points="418.6218,-91.893 408.2621,-94.1128 417.7449,-98.8379 418.6218,-91.893"/>
 </g>
-<!-- Node18&#45;&gt;Node14 -->
+<!-- Node14&#45;&gt;Node10 -->
 <g id="edge11" class="edge">
-<title>Node18&#45;&gt;Node14</title>
+<title>Node14&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M389.0686,-60.6046C395.4658,-62.6182 401.9295,-64.7754 408,-67 431.2556,-75.5221 457.1716,-87.2116 474.5185,-95.3669"/>
 <polygon fill="#191970" stroke="#191970" points="389.7228,-57.1448 379.1364,-57.5696 387.6771,-63.8393 389.7228,-57.1448"/>
 </g>
-<!-- Node19&#45;&gt;Node14 -->
+<!-- Node15&#45;&gt;Node10 -->
 <g id="edge13" class="edge">
-<title>Node19&#45;&gt;Node14</title>
+<title>Node15&#45;&gt;Node10</title>
 <path fill="none" stroke="#191970" d="M395.3635,-23.0576C399.7391,-24.8219 404.0117,-26.7966 408,-29 440.7206,-47.0768 471.7935,-79.297 486.1667,-95.3524"/>
 <polygon fill="#191970" stroke="#191970" points="396.2844,-19.6678 385.6905,-19.5241 393.8825,-26.2429 396.2844,-19.6678"/>
 </g>

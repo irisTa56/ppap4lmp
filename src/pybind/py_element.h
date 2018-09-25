@@ -13,7 +13,8 @@
 
 /*!
   @brief Trampoline class to bind Element class to Python.
-  @details For more details, please see pybind11 documentation:
+
+  For more details, please see pybind11 documentation:
   https://pybind11.readthedocs.io/en/stable/advanced/classes.html.
 */
 class PyElement : public Element {
@@ -40,148 +41,142 @@ namespace pybind
     @brief Bind Element class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details Constructor of Element class is hidden from Python.
+
+    Constructor of Element class is hidden from Python.
     A Python-side function \b create provides functionality
     to create an Element object taking a Starter's subclass object
-    as its argument.
+    as its parameter.
 
-    <table class="py_table">
-      <caption>
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side functions
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">Name</th>
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor">Description</th>
+        <th class="py_constructor">Parameters</th>
+        <th class="py_constructor">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c create</td>
-        <td class="py_td">Lambda.</td>
-        <td class="py_td">
-          Factory function for Element class. This function takes one
-          argument, an object of Starter's subclass (such class is
-          prefixed by \c Sta) which adds some properties to
-          empty Element::data of the created Element object.
+      <tr class="py_constructor">
+        <td class="py_constructor">\c create</td>
+        <td class="py_constructor">
+          Lambda function defined in pybind::py_element
         </td>
-        <td class="py_td">
-          - \c upd : An object of Starter's subclass.
+        <td class="py_constructor">
+          Factory function for Element class.
         </td>
-        <td class="py_td">
+        <td class="py_constructor">
+          @param upd
+            An object of Starter's subclass, which sets some properties
+            to empty Element::data of the created Element object.
+        </td>
+        <td class="py_constructor">
           An object of Element class.
         </td>
       </tr>
     </table>
 
-    <table class="py_table">
-      <caption>
+    <table class="py_method">
+      <caption class="py_method">
         Python-side methods of Element
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_method">
+        <th class="py_method">Name</th>
+        <th class="py_method">C++</th>
+        <th class="py_method">Description</th>
+        <th class="py_method">Parameters</th>
+        <th class="py_method">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c append_updater</td>
-        <td class="py_td">Element::append_updater</td>
-        <td class="py_td">
-          Append an object of Adder's or Filter's subclass to this
-          Element object.
+      <tr class="py_method">
+        <td class="py_method">\c append_updater</td>
+        <td class="py_method">Element::append_updater</td>
+        <td class="py_method">
+          @copybrief Element::append_updater
         </td>
-        <td class="py_td">
-          - \c upd : An object of Adder's or Filter's subclass.
+        <td class="py_method">
+          @copydetails Element::append_updater
         </td>
-        <td class="py_td">
+        <td class="py_method">
           This Element object.
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_data</td>
-        <td class="py_td">Element::get_data_py</td>
-        <td class="py_td">
-          Get Element::data of this object as a complex of \e dict and
-          \e list.
+      <tr class="py_method">
+        <td class="py_method">\c get_data</td>
+        <td class="py_method">Element::get_data_py</td>
+        <td class="py_method">
+          @copybrief Element::get_data_py
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
-        <td class="py_td">
-          JSON-like object consisting of \e dict and \e list.
+        <td class="py_method">
+          A ::Json object (complex of dictionary and list).
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_keys</td>
-        <td class="py_td">Element::get_keys_py</td>
-        <td class="py_td">
-          Get Element::datakeys of this object as a set of strings.
+      <tr class="py_method">
+        <td class="py_method">\c get_keys</td>
+        <td class="py_method">Element::get_keys_py</td>
+        <td class="py_method">
+          @copybrief Element::get_keys_py
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
-        <td class="py_td">
+        <td class="py_method">
           Set of strings.
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_1d_int</td>
-        <td class="py_td">Element::get_1d_int_py</td>
-        <td class="py_td">
-          Get values of an integer property contained in Element::data of
-          this object as an one-dimensional Numpy-Array.
+      <tr class="py_method">
+        <td class="py_method">\c get_1d_int</td>
+        <td class="py_method">Element::get_1d_int_py</td>
+        <td class="py_method">
+          @copybrief Element::get_1d_int_py
         </td>
-        <td class="py_td">
-          - \c key : A string key specifying a property to be extracted.
+        <td class="py_method">
+          @copydetails Element::get_1d_int_py
         </td>
-        <td class="py_td">
-          One-dimensional Numpy-Array whose elements are integers.
-        </td>
-      </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_1d_float</td>
-        <td class="py_td">Element::get_1d_float_py</td>
-        <td class="py_td">
-          Get values of a float property contained in Element::data of
-          this object as an one-dimensional Numpy-Array.
-        </td>
-        <td class="py_td">
-          - \c key : A string key specifying a property to be extracted.
-        </td>
-        <td class="py_td">
-          One-dimensional Numpy-Array whose elements are floats.
+        <td class="py_method">
+          One-dimensional Numpy-Array of which elements are integers.
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_2d_int</td>
-        <td class="py_td">Element::get_2d_int_py</td>
-        <td class="py_td">
-          Get values of multiple integer properties contained in
-          Element::data of this object as a two-dimensional Numpy-Array.
+      <tr class="py_method">
+        <td class="py_method">\c get_1d_float</td>
+        <td class="py_method">Element::get_1d_float_py</td>
+        <td class="py_method">
+          @copybrief Element::get_1d_float_py
         </td>
-        <td class="py_td">
-          - \c *args : A variable number of string keys specifying
-            properties to be extracted.
+        <td class="py_method">
+          @copydetails Element::get_1d_float_py
         </td>
-        <td class="py_td">
-          Two-dimensional Numpy-Array whose elements are integers.
+        <td class="py_method">
+          One-dimensional Numpy-Array of which elements are floats.
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_2d_float</td>
-        <td class="py_td">Element::get_2d_float_py</td>
-        <td class="py_td">
-          Get values of multiple float properties contained in
-          Element::data of this object as a two-dimensional Numpy-Array.
+      <tr class="py_method">
+        <td class="py_method">\c get_2d_int</td>
+        <td class="py_method">Element::get_2d_int_py</td>
+        <td class="py_method">
+          @copybrief Element::get_2d_int_py
         </td>
-        <td class="py_td">
-          - \c *args : A variable number of string keys specifying
-            properties to be extracted.
+        <td class="py_method">
+          @copydetails Element::get_2d_int_py
         </td>
-        <td class="py_td">
-          Two-dimensional Numpy-Array whose elements are floats.
+        <td class="py_method">
+          Two-dimensional Numpy-Array of which elements are integers.
+        </td>
+      </tr>
+      <tr class="py_method">
+        <td class="py_method">\c get_2d_float</td>
+        <td class="py_method">Element::get_2d_float_py</td>
+        <td class="py_method">
+          @copybrief Element::get_2d_float_py
+        </td>
+        <td class="py_method">
+          @copydetails Element::get_2d_float_py
+        </td>
+        <td class="py_method">
+          Tow-dimensional Numpy-Array of which elements are floats.
         </td>
       </tr>
     </table>

@@ -90,12 +90,12 @@ class AddMap : public Adder, public EnShThis<AddMap> {
 
     @param mapping_
       Dictionary defining a mapping from values for
-      the reference property to values for the new property (::Map
-      from ::Json to ::Json). Keys of the dictionary corresponds to
-      domain of the mapping, and values of the dictionary corresponds
-      to codomain of the mapping. Note that the keys must cover
-      all values of the reference property in an Element object where
-      the constructed object is appended to.
+      the reference property to values for the new property.
+      Keys of the dictionary corresponds to domain of the mapping,
+      and values of the dictionary corresponds to codomain
+      of the mapping. Note that the keys must cover all values
+      of the reference property in an Element object
+      where the constructed object is appended to.
       <span class="remove_in_table">
         This parameter is assigned to #mapping.
       </span>

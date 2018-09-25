@@ -37,7 +37,8 @@ using Vec = std::vector<T>;
 
 /*!
   @brief \e Map is an alias for unordered map (same as dict in Python).
-  @details Searching an item from unordered map takes shorter time
+
+  Searching an item from unordered map takes shorter time
   than doing the same thing with ordered map (\c std::map).
 */
 template <typename T, typename U>
@@ -47,7 +48,8 @@ using Map = std::unordered_map<T,U>;
 
 /*!
   @brief \e Set is an alias for unordered set (same as set in Python).
-  @details Searching an element from unordered set takes shorter time
+
+  Searching an element from unordered set takes shorter time
   than doing the same thing with ordered set (\c std::set).
 */
 template <typename T>

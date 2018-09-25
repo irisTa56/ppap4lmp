@@ -14,7 +14,8 @@
 /*!
   @brief Trampoline class to bind Updater class and its subclasses
   to Python.
-  @details For more details, please see pybind11 documentation:
+
+  For more details, please see pybind11 documentation:
   https://pybind11.readthedocs.io/en/stable/advanced/classes.html.
 */
 template <class UPD = Updater>
@@ -46,7 +47,8 @@ namespace pybind
     @brief Bind Updater class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details Constructor of Updater class is hidden from Python,
+
+    Constructor of Updater class is hidden from Python,
     because the class is an abstract one.
   */
   void py_updater(py::module &m);

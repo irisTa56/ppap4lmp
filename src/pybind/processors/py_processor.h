@@ -14,7 +14,8 @@
 /*!
   @brief Trampoline class to bind Processor class and its subclasses
   to Python.
-  @details For more details, please see pybind11 documentation:
+
+  For more details, please see pybind11 documentation:
   https://pybind11.readthedocs.io/en/stable/advanced/classes.html.
 */
 template <class PRO = Processor>
@@ -47,7 +48,8 @@ class PyProcessor : public PRO {
 
 /*!
   @brief Function to bind Processor class to Python.
-  @details Constructor of Processor class is hidden from Python,
+
+  Constructor of Processor class is hidden from Python,
   because the class is an abstract one.
 */
 //! Namespace for functions to bind C++ classes to Python.

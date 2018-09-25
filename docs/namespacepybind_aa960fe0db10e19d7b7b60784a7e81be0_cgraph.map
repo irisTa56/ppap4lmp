@@ -1,14 +1,14 @@
 <map id="pybind::py_element" name="pybind::py_element">
-<area shape="rect" id="node2" href="$classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. " alt="" coords="188,15,359,42"/>
-<area shape="rect" id="node4" href="$classElement.html#a62989090a40d237e617bc6e5f5087388" title="Wrapper for get_data method, which returns a reference. " alt="" coords="199,121,348,147"/>
-<area shape="rect" id="node9" href="$classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Wrapper for get_keys method. " alt="" coords="197,70,349,97"/>
-<area shape="rect" id="node11" href="$classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Wrapper for array1d method for integer values. " alt="" coords="194,171,353,198"/>
-<area shape="rect" id="node16" href="$classElement.html#a3f11848589faad4cbca8119385887713" title="Wrapper for array1d method for float (double in C++) values. " alt="" coords="188,222,359,249"/>
-<area shape="rect" id="node17" href="$classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Wrapper for array2d method for integer values. " alt="" coords="194,323,353,350"/>
-<area shape="rect" id="node20" href="$classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Wrapper for array2d method for float (double in C++) values. " alt="" coords="188,273,359,299"/>
-<area shape="rect" id="node3" href="$classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc" title="Merge a given chain of UpdatePair objects to update_chain. " alt="" coords="407,5,576,47"/>
-<area shape="rect" id="node5" href="$classElement.html#a1fdb9455f49d2c66a0276925f7246cad" title="Routines to be conducted when a wrapper of getter is called from Python. " alt="" coords="410,147,573,174"/>
-<area shape="rect" id="node6" href="$classGenerator.html#ac4648b055ee0e51c1e68ea084156c222" title="Hello to this object. " alt="" coords="633,97,748,123"/>
+<area shape="rect" id="node2" href="$classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object: the only way to extend an updating process associate..." alt="" coords="188,15,359,42"/>
+<area shape="rect" id="node4" href="$classElement.html#a62989090a40d237e617bc6e5f5087388" title="Get Element::data of this object. " alt="" coords="199,121,348,147"/>
+<area shape="rect" id="node9" href="$classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Get contents of Element::datakeys of this object. " alt="" coords="197,70,349,97"/>
+<area shape="rect" id="node11" href="$classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Get integer values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. " alt="" coords="194,171,353,198"/>
+<area shape="rect" id="node16" href="$classElement.html#a3f11848589faad4cbca8119385887713" title="Get float values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. " alt="" coords="188,222,359,249"/>
+<area shape="rect" id="node17" href="$classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Get integer values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. " alt="" coords="194,323,353,350"/>
+<area shape="rect" id="node20" href="$classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Get float values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. " alt="" coords="188,273,359,299"/>
+<area shape="rect" id="node3" href="$classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc" title="Generator::merge_update\l_chain" alt="" coords="407,5,576,47"/>
+<area shape="rect" id="node5" href="$classElement.html#a1fdb9455f49d2c66a0276925f7246cad" title="Element::init_for_python" alt="" coords="410,147,573,174"/>
+<area shape="rect" id="node6" href="$classGenerator.html#ac4648b055ee0e51c1e68ea084156c222" title="Hello to this Generator object. " alt="" coords="633,97,748,123"/>
 <area shape="rect" id="node7" href="$namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" title="Raise (for Python) and throw (for C++) a runtime error. " alt="" coords="805,173,936,199"/>
 <area shape="rect" id="node8" href="$namespaceutils.html#a26267fe7371b6215c5d61374d716527b" title="Logging a message. " alt="" coords="655,198,726,225"/>
 <area shape="rect" id="node10" href="$classDataKeys.html#ab29d313282fe7c52adfa35b8335f3ca6" title="Get a constant reference to _keys. " alt="" coords="439,71,544,98"/>

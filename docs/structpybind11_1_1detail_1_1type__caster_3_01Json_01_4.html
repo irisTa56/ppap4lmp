@@ -111,13 +111,13 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PYBIND11_TYPE_CASTER</b> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>, _(&quot;json&quot;))</td></tr>
 <tr class="separator:a8b05081a9e3926bff7567d613e8eba50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34d1e821aa93ab9a74e3303f714160b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpybind11_1_1detail_1_1type__caster_3_01Json_01_4.html#ac34d1e821aa93ab9a74e3303f714160b">load</a> (handle src, bool)</td></tr>
-<tr class="memdesc:ac34d1e821aa93ab9a74e3303f714160b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loading <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> from Python and assigning it to C++.  <a href="#ac34d1e821aa93ab9a74e3303f714160b">More...</a><br /></td></tr>
+<tr class="memdesc:ac34d1e821aa93ab9a74e3303f714160b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loading a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object from Python to C++.  <a href="#ac34d1e821aa93ab9a74e3303f714160b">More...</a><br /></td></tr>
 <tr class="separator:ac34d1e821aa93ab9a74e3303f714160b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a82b29161b566ed468e576e0f894ad206"><td class="memItemLeft" align="right" valign="top">static handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpybind11_1_1detail_1_1type__caster_3_01Json_01_4.html#a82b29161b566ed468e576e0f894ad206">cast</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> src, return_value_policy, handle)</td></tr>
-<tr class="memdesc:a82b29161b566ed468e576e0f894ad206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casting <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> from C++ to Python.  <a href="#a82b29161b566ed468e576e0f894ad206">More...</a><br /></td></tr>
+<tr class="memdesc:a82b29161b566ed468e576e0f894ad206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casting a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object from C++ to Python.  <a href="#a82b29161b566ed468e576e0f894ad206">More...</a><br /></td></tr>
 <tr class="separator:a82b29161b566ed468e576e0f894ad206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -168,10 +168,10 @@ struct pybind11::detail::type_caster&lt; Json &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Casting <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> from C++ to Python. </p>
+<p>Casting a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object from C++ to Python. </p>
 <p>First, a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object is serialized to a string by its <code>dump</code> method. Then the string is loaded by <code>loads</code> attribute of Python's <code>json</code> module and released as a complex of dictionary and list. Since this conversion process might take a long time, using other containers is preferable (if you can). </p>
 
-<p class="definition">Definition at line <a class="el" href="pybind__json_8h_source.html#l00057">57</a> of file <a class="el" href="pybind__json_8h_source.html">pybind_json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pybind__json_8h_source.html#l00059">59</a> of file <a class="el" href="pybind__json_8h_source.html">pybind_json.h</a>.</p>
 
 </div>
 </div>
@@ -209,10 +209,10 @@ struct pybind11::detail::type_caster&lt; Json &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Loading <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> from Python and assigning it to C++. </p>
-<p>First, a JSON-like object in Python (complex of dict and list) is dumped as a string by <code>dumps</code> attribute of Python's <code>json</code> module (serialization). Then the string is parsed by <code>parse</code> function of <em>nlohmann/json</em> and converted to a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. Since this conversion process might take a long time, using other containers is preferable (if you can). </p>
+<p>Loading a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object from Python to C++. </p>
+<p>First, a JSON-like object in Python (complex of dictionary and list) is dumped as a string by <code>dumps</code> attribute of Python's <code>json</code> module (serialization). Then the string is parsed by <code>parse</code> function of <em>nlohmann/json</em> and converted to a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. Since this conversion process might take a long time, using other containers is preferable (if you can). </p>
 
-<p class="definition">Definition at line <a class="el" href="pybind__json_8h_source.html#l00034">34</a> of file <a class="el" href="pybind__json_8h_source.html">pybind_json.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pybind__json_8h_source.html#l00035">35</a> of file <a class="el" href="pybind__json_8h_source.html">pybind_json.h</a>.</p>
 
 </div>
 </div>

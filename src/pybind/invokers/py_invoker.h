@@ -14,7 +14,8 @@
 /*!
   @brief Trampoline class to bind Invoker class and its subclasses
   to Python.
-  @details For more details, please see pybind11 documentation:
+
+  For more details, please see pybind11 documentation:
   https://pybind11.readthedocs.io/en/stable/advanced/classes.html.
 */
 template <class INVO = Invoker>

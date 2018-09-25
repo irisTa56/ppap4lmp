@@ -79,12 +79,11 @@ const CompareFunc FilComparison::make_lambda(
 
 /* ------------------------------------------------------------------ */
 
-const Vec<std::pair<Str,CompareFunc>> FilComparison::convert_to_funcs(
-    const Vec<std::tuple<Str,Str,Json>> &comps)
+const Vec<std::pair<Str,CompareFunc>> FilComparison::convert_to_funcs()
 {
   Vec<std::pair<Str,CompareFunc>> tmp;
 
-  for (const auto &item : comps)
+  for (const auto &item : comparisons)
   {
     tmp.push_back(std::make_pair(
       std::get<0>(item),
@@ -100,7 +99,7 @@ void FilComparison::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  auto compare_funcs = convert_to_funcs(comparisons);
+  auto compare_funcs = convert_to_funcs();
 
   for (const auto &item : compare_funcs)
   {

@@ -117,9 +117,11 @@ with open("src/pybind.h", "w") as f:
   of functions to bind C++ and Python.
   @author Takayuki Kobayashi
   @date 2018/09/08
-  @details This file is not included in the GitHub repository. It will
-  be created at installation time. To find the way how this file is
-  written, please see \c setup.py in the root directory of this project.
+
+  This file is not included in the GitHub repository.
+  It will be created at installation time.
+  To find the way how this file is written,
+  please see \c setup.py in the root directory of this project.
 */
 
 #ifndef PYBIND_H

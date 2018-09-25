@@ -14,8 +14,9 @@
 /*!
   @brief \e ArrayXXi is an alias for a two-dimensional array of Eigen
   where the values are integer.
-  @details Although \e ArrayXXi is column major by default, in this
-  program, row major is preferable so that the array can be passed to
+
+  Although \e ArrayXXi is column major by default, in this program,
+  row major is preferable so that the array can be passed to
   Python as Numpy-Array, which is row major, without confusing.
 */
 using ArrayXXi
@@ -23,8 +24,9 @@ using ArrayXXi
 /*!
   @brief \e ArrayXXd is an alias for a two-dimensional array of Eigen
   where the values are double.
-  @details Although \e ArrayXXd is column major by default, in this
-  program, row major is preferable so that the array can be passed to
+
+  Although \e ArrayXXd is column major by default, in this program,
+  row major is preferable so that the array can be passed to
   Python as Numpy-Array, which is row major, without confusing.
 */
 using ArrayXXd

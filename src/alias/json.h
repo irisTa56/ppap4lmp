@@ -13,7 +13,8 @@
 
 /*!
   @brief \e Json is an alias for a JSON class.
-  @details For more details, please see the
+
+  For more details, please see the
   <a href="https://github.com/nlohmann/json">repository</a> and
   <a href="https://nlohmann.github.io/json/">documents</a> of
   \e nlohmann/json.

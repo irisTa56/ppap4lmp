@@ -4,7 +4,6 @@
   Generator class.
   @author Takayuki Kobayashi
   @date 2018/09/08
-  @details For convenience only.
 */
 
 #include <core/element.h>

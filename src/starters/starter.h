@@ -49,7 +49,7 @@ class Starter : public Updater {
       for computed properties are set to.
 
     @param dataid
-      Constant integer copied from Element::dataid.
+      A constant integer copied from Element::dataid.
 
     @return None.
 

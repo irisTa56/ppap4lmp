@@ -37,7 +37,7 @@ class Filter : public Updater {
       Mutable reference to Element::datakeys.
 
     @param dataid
-      Constant integer copied from Element::dataid.
+      A constant integer copied from Element::dataid.
 
     @return None.
 

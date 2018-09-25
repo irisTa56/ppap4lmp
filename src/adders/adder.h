@@ -39,7 +39,7 @@ class Adder : public Updater {
       for computed properties are added to.
 
     @param dataid
-      Constant integer copied from Element::dataid.
+      A constant integer copied from Element::dataid.
 
     @return None.
 

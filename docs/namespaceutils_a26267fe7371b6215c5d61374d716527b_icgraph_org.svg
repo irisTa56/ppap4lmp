@@ -18,7 +18,7 @@
 <!-- Node28 -->
 <g id="node2" class="node">
 <title>Node28</title>
-<g id="a_node2"><a xlink:href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" target="_top" xlink:title="This method decrements n_remain. ">
+<g id="a_node2"><a xlink:href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" target="_top" xlink:title="Element::decrement\l_remain">
 <polygon fill="#ffffff" stroke="#000000" points="98,-153 98,-183 202,-183 202,-153 98,-153"/>
 <text text-anchor="start" x="106" y="-171" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::decrement</text>
 <text text-anchor="middle" x="150" y="-160" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_remain</text>
@@ -34,7 +34,7 @@
 <!-- Node29 -->
 <g id="node3" class="node">
 <title>Node29</title>
-<g id="a_node3"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Routines to be conducted when a wrapper of getter is called from Python. ">
+<g id="a_node3"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Element::init_for_python">
 <polygon fill="#ffffff" stroke="#000000" points="89,-114.5 89,-133.5 211,-133.5 211,-114.5 89,-114.5"/>
 <text text-anchor="middle" x="150" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::init_for_python</text>
 </a>
@@ -79,7 +79,7 @@
 <!-- Node30 -->
 <g id="node4" class="node">
 <title>Node30</title>
-<g id="a_node4"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Wrapper for get_data method, which returns a reference. ">
+<g id="a_node4"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Get Element::data of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="255,-228.5 255,-247.5 367,-247.5 367,-228.5 255,-228.5"/>
 <text text-anchor="middle" x="311" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_data_py</text>
 </a>
@@ -94,7 +94,7 @@
 <!-- Node32 -->
 <g id="node6" class="node">
 <title>Node32</title>
-<g id="a_node6"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Wrapper for get_keys method. ">
+<g id="a_node6"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Get contents of Element::datakeys of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="254,-190.5 254,-209.5 368,-209.5 368,-190.5 254,-190.5"/>
 <text text-anchor="middle" x="311" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys_py</text>
 </a>
@@ -109,7 +109,7 @@
 <!-- Node33 -->
 <g id="node7" class="node">
 <title>Node33</title>
-<g id="a_node7"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Wrapper for array1d method for integer values. ">
+<g id="a_node7"><a xlink:href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" target="_top" xlink:title="Get integer values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="251.5,-152.5 251.5,-171.5 370.5,-171.5 370.5,-152.5 251.5,-152.5"/>
 <text text-anchor="middle" x="311" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_int_py</text>
 </a>
@@ -124,7 +124,7 @@
 <!-- Node34 -->
 <g id="node8" class="node">
 <title>Node34</title>
-<g id="a_node8"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Wrapper for array1d method for float (double in C++) values. ">
+<g id="a_node8"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Get float values stored in Element::data of this object as an one&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="247,-114.5 247,-133.5 375,-133.5 375,-114.5 247,-114.5"/>
 <text text-anchor="middle" x="311" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_float_py</text>
 </a>
@@ -139,7 +139,7 @@
 <!-- Node35 -->
 <g id="node9" class="node">
 <title>Node35</title>
-<g id="a_node9"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Wrapper for array2d method for integer values. ">
+<g id="a_node9"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Get integer values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="251.5,-76.5 251.5,-95.5 370.5,-95.5 370.5,-76.5 251.5,-76.5"/>
 <text text-anchor="middle" x="311" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_int_py</text>
 </a>
@@ -154,7 +154,7 @@
 <!-- Node36 -->
 <g id="node10" class="node">
 <title>Node36</title>
-<g id="a_node10"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Wrapper for array2d method for float (double in C++) values. ">
+<g id="a_node10"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Get float values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="247,-38.5 247,-57.5 375,-57.5 375,-38.5 247,-38.5"/>
 <text text-anchor="middle" x="311" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </a>

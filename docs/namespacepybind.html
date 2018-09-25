@@ -670,7 +670,7 @@ molecules.append_updater(AddInertiaMoment(atoms))
 </dl>
 <dl class="parameters">
 <dt>mapping_</dt>
-<dd>Dictionary defining a mapping from values for the reference property to values for the new property (<a class="el" href="std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6" title="Map is an alias for unordered map (same as dict in Python). ">Map</a> from <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> to <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a>). Keys of the dictionary corresponds to domain of the mapping, and values of the dictionary corresponds to codomain of the mapping. Note that the keys must cover all values of the reference property in an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to.  </dd>
+<dd>Dictionary defining a mapping from values for the reference property to values for the new property. Keys of the dictionary corresponds to domain of the mapping, and values of the dictionary corresponds to codomain of the mapping. Note that the keys must cover all values of the reference property in an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to.  </dd>
 </dl>
 
 </td></tr>
@@ -1097,52 +1097,75 @@ atoms.append_updater(my_sbonds)
 </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class is hidden from Python. A Python-side function <b>create</b> provides functionality to create an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object taking a <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass object as its argument.</p>
+<p>Constructor of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class is hidden from Python. A Python-side function <b>create</b> provides functionality to create an <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object taking a <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass object as its parameter.</p>
 <a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side functions </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>create</code> </td><td class="py_td">Lambda. </td><td class="py_td">Factory function for <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class. This function takes one argument, an object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass (such class is prefixed by <code>Sta</code>) which adds some properties to empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
-<li><code>upd</code> : An object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass.  </li>
-</ul>
-</td><td class="py_td">An object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.   </td></tr>
+<table class="py_constructor">
+<caption class="py_constructor">Python-side functions </caption>
+<tr class="py_constructor">
+<th class="py_constructor">Name </th><th class="py_constructor">C++ </th><th class="py_constructor">Description </th><th class="py_constructor">Parameters </th><th class="py_constructor">Return  </th></tr>
+<tr class="py_constructor">
+<td class="py_constructor"><code>create</code> </td><td class="py_constructor">Lambda function defined in <a class="el" href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" title="Bind Element class to Python. ">pybind::py_element</a> </td><td class="py_constructor">Factory function for <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.  </td><td class="py_constructor">
+<dl class="parameters">
+<dt>upd</dt>
+<dd>An object of <a class="el" href="classStarter.html" title="Starter sets some properties (keys and values) to an empty Element object. ">Starter</a>'s subclass, which sets some properties to empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of the created <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </dd>
+</dl>
+
+</td><td class="py_constructor">An object of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> class.   </td></tr>
 </table>
 <a class="anchor" id=""></a>
-<table class="py_table">
-<caption>Python-side methods of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> </caption>
-<tr class="py_tr">
-<th class="py_th">Name </th><th class="py_th">C++-side </th><th class="py_th">Description </th><th class="py_th">Argument </th><th class="py_th">Return  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><code>append_updater</code> </td><td class="py_td"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object. ">Element::append_updater</a> </td><td class="py_td">Append an object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass to this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.  </td><td class="py_td"><ul>
-<li><code>upd</code> : An object of <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a>'s or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a>'s subclass.  </li>
-</ul>
-</td><td class="py_td">This <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_data</code> </td><td class="py_td"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388" title="Wrapper for get_data method, which returns a reference. ">Element::get_data_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a complex of <em>dict</em> and <em>list</em>.  </td><td class="py_td">None.  </td><td class="py_td">JSON-like object consisting of <em>dict</em> and <em>list</em>.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_keys</code> </td><td class="py_td"><a class="el" href="classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Wrapper for get_keys method. ">Element::get_keys_py</a> </td><td class="py_td">Get <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4" title="Set of keys of the data. ">Element::datakeys</a> of this object as a set of strings.  </td><td class="py_td">None.  </td><td class="py_td">Set of strings.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_1d_int</code> </td><td class="py_td"><a class="el" href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Wrapper for array1d method for integer values. ">Element::get_1d_int_py</a> </td><td class="py_td">Get values of an integer property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>key</code> : A string key specifying a property to be extracted.  </li>
-</ul>
-</td><td class="py_td">One-dimensional Numpy-Array whose elements are integers.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_1d_float</code> </td><td class="py_td"><a class="el" href="classElement.html#a3f11848589faad4cbca8119385887713" title="Wrapper for array1d method for float (double in C++) values. ">Element::get_1d_float_py</a> </td><td class="py_td">Get values of a float property contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>key</code> : A string key specifying a property to be extracted.  </li>
-</ul>
-</td><td class="py_td">One-dimensional Numpy-Array whose elements are floats.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_2d_int</code> </td><td class="py_td"><a class="el" href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Wrapper for array2d method for integer values. ">Element::get_2d_int_py</a> </td><td class="py_td">Get values of multiple integer properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
-</ul>
-</td><td class="py_td">Two-dimensional Numpy-Array whose elements are integers.   </td></tr>
-<tr class="py_tr">
-<td class="py_td"><code>get_2d_float</code> </td><td class="py_td"><a class="el" href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Wrapper for array2d method for float (double in C++) values. ">Element::get_2d_float_py</a> </td><td class="py_td">Get values of multiple float properties contained in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_td"><ul>
-<li><code>*args</code> : A variable number of string keys specifying properties to be extracted.  </li>
-</ul>
-</td><td class="py_td">Two-dimensional Numpy-Array whose elements are floats.   </td></tr>
+<table class="py_method">
+<caption class="py_method">Python-side methods of <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> </caption>
+<tr class="py_method">
+<th class="py_method">Name </th><th class="py_method">C++ </th><th class="py_method">Description </th><th class="py_method">Parameters </th><th class="py_method">Return  </th></tr>
+<tr class="py_method">
+<td class="py_method"><code>append_updater</code> </td><td class="py_method"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object: the only way to extend an updating process associate...">Element::append_updater</a> </td><td class="py_method">Append an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object to this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object: the only way to extend an updating process associated with this object.  </td><td class="py_method">
+<dl class="parameters">
+<dt>upd</dt>
+<dd>An <a class="el" href="classAdder.html" title="Adder adds new properties (keys and values) to a non-empty Element object. ">Adder</a> or <a class="el" href="classFilter.html" title="Filter removes elements from array Element::data if the elements fail user-defined criteria...">Filter</a> object to be paired with this <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object as an <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> object, which is appended to a sequence of <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> objects describing the updating process of this object.</dd>
+</dl>
+
+
+ </td><td class="py_method">This <a class="el" href="classElement.html" title="Element is a Generator containing data element (or entity) as a Json object. ">Element</a> object.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_data</code> </td><td class="py_method"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388" title="Get Element::data of this object. ">Element::get_data_py</a> </td><td class="py_method">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object.  </td><td class="py_method">None.  </td><td class="py_method">A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object (complex of dictionary and list).   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_keys</code> </td><td class="py_method"><a class="el" href="classElement.html#ae253cbec6307a157902d7f25867ded2b" title="Get contents of Element::datakeys of this object. ">Element::get_keys_py</a> </td><td class="py_method">Get contents of <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a> of this object.  </td><td class="py_method">None.  </td><td class="py_method">Set of strings.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_1d_int</code> </td><td class="py_method"><a class="el" href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8" title="Get integer values stored in Element::data of this object as an one-dimensional Numpy-Array. ">Element::get_1d_int_py</a> </td><td class="py_method">Get integer values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_method">
+<dl class="parameters">
+<dt>key</dt>
+<dd>A string key specifying a property.</dd>
+</dl>
+
+
+</td><td class="py_method">One-dimensional Numpy-Array of which elements are integers.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_1d_float</code> </td><td class="py_method"><a class="el" href="classElement.html#a3f11848589faad4cbca8119385887713" title="Get float values stored in Element::data of this object as an one-dimensional Numpy-Array. ">Element::get_1d_float_py</a> </td><td class="py_method">Get float values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object as an one-dimensional Numpy-Array.  </td><td class="py_method">
+<dl class="parameters">
+<dt>key</dt>
+<dd>A string key specifying a property.</dd>
+</dl>
+
+
+</td><td class="py_method">One-dimensional Numpy-Array of which elements are floats.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_2d_int</code> </td><td class="py_method"><a class="el" href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" title="Get integer values stored in Element::data of this object as a two-dimensional Numpy-Array. ">Element::get_2d_int_py</a> </td><td class="py_method">Get integer values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_method">
+<dl class="parameters">
+<dt>*args</dt>
+<dd>An ordered list of keys specifying properties (Python's variable number arguments).</dd>
+</dl>
+
+
+</td><td class="py_method">Two-dimensional Numpy-Array of which elements are integers.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_2d_float</code> </td><td class="py_method"><a class="el" href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" title="Get float values stored in Element::data of this object as a two-dimensional Numpy-Array. ">Element::get_2d_float_py</a> </td><td class="py_method">Get float values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object as a two-dimensional Numpy-Array.  </td><td class="py_method">
+<dl class="parameters">
+<dt>*args</dt>
+<dd>An ordered list of keys specifying properties (Python's variable number arguments).</dd>
+</dl>
+
+
+</td><td class="py_method">Tow-dimensional Numpy-Array of which elements are floats.   </td></tr>
 </table>
 <p class="definition">Definition at line <a class="el" href="py__element_8cpp_source.html#l00011">11</a> of file <a class="el" href="py__element_8cpp_source.html">py_element.cpp</a>.</p>
 <div class="dynheader">
@@ -1742,7 +1765,7 @@ beads = create(my_beads)
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>json_</dt>
-<dd>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> (complex of dictionary and list) object to be set as <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5" title="Data element (or entity) itself. ">Element::data</a>.  </dd>
+<dd>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> (complex of dictionary and list) object to be set as <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  </dd>
 </dl>
 
 </td></tr>
