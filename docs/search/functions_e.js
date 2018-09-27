@@ -43,5 +43,7 @@ var searchData=
   ['py_5fstarter',['py_starter',['../namespacepybind.html#a0ee1c37f12f502a9cbfff253fffa1115',1,'pybind']]],
   ['py_5fupdater',['py_updater',['../namespacepybind.html#ab5249636f4527a2df3a6bf1fe140c9c8',1,'pybind']]],
   ['py_5futils',['py_utils',['../namespacepybind.html#ad2fd8badca6f7690e8bf3580159a4aac',1,'pybind']]],
-  ['pyargs_5fto_5fvec',['pyargs_to_vec',['../namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850',1,'utils']]]
+  ['pyargs_5fto_5fvec',['pyargs_to_vec',['../namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850',1,'utils']]],
+  ['pybind11_5fmodule',['PYBIND11_MODULE',['../pybind_8h.html#a4714c4a855ebb82892410d5254e9ccdc',1,'pybind.h']]],
+  ['pybind11_5ftype_5fcaster',['PYBIND11_TYPE_CASTER',['../structpybind11_1_1detail_1_1type__caster_3_01Json_01_4.html#a8b05081a9e3926bff7567d613e8eba50',1,'pybind11::detail::type_caster&lt; Json &gt;']]]
 ];

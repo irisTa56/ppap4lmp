@@ -1,7 +1,9 @@
 var NAVTREEINDEX2 =
 {
 "globals.html":[3,1,0],
-"globals_type.html":[3,1,1],
+"globals_func.html":[3,1,1],
+"globals_type.html":[3,1,3],
+"globals_vars.html":[3,1,2],
 "hierarchy.html":[2,2],
 "index.html":[],
 "index.html":[0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "py__sta__beads_8h_source.html":[3,0,0,7,4,1],
 "py__sta__copy_8cpp.html":[3,0,0,7,4,2],
 "py__sta__copy_8cpp_source.html":[3,0,0,7,4,2],
-"py__sta__copy_8h.html":[3,0,0,7,4,3],
-"py__sta__copy_8h.html#a7169ceefca09ffb95769b42e317f8eea":[3,0,0,7,4,3,0],
-"py__sta__copy_8h_source.html":[3,0,0,7,4,3]
+"py__sta__copy_8h.html":[3,0,0,7,4,3]
 };

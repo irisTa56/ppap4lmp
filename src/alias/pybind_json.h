@@ -9,7 +9,9 @@
 #ifndef ALIAS_PYBIND_JSON_H
 #define ALIAS_PYBIND_JSON_H
 
+//! \c dumps attribute of Python's \c json module
 static py::object json_dumps = py::module::import("json").attr("dumps");
+//! \c loads attribute of Python's \c json module
 static py::object json_loads = py::module::import("json").attr("loads");
 
 namespace pybind11
@@ -20,6 +22,7 @@ namespace pybind11
     template <> struct type_caster<Json> {
      public:
 
+      //! Macro for casting ::Json.
       PYBIND11_TYPE_CASTER(Json, _("json"));
 
       /*!

@@ -93,6 +93,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
@@ -104,7 +106,7 @@ var NAVTREEINDEX =
 ".html",
 "classProRadialDistributionFunction.html#a2c9c40d3245fdcfa95321696235d8523",
 "globals.html",
-"py__sta__custom_8cpp.html"
+"py__sta__copy_8h.html#a7169ceefca09ffb95769b42e317f8eea"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

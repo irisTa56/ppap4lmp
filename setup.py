@@ -131,6 +131,7 @@ with open("src/pybind.h", "w") as f:
 
 {}
 
+//! Macro for generating Python module named \c _ppap4lmp.
 PYBIND11_MODULE(_ppap4lmp, m)
 {{
 {}
