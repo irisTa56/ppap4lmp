@@ -66,7 +66,6 @@ class AddSpecialBonds : public Adder {
       <span class="remove_in_table">
         This parameter is assigned to #ext_generator.
       </span>
-
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
@@ -98,7 +97,6 @@ class AddSpecialBonds : public Adder {
       <span class="remove_in_table">
         This parameter is assigned to #ext_generator.
       </span>
-
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">

@@ -42,7 +42,7 @@ namespace pybind
       </tr>
     </table>
 
-    Example of the constructor for a sequence of Lammps' dump files.
+    Usage example of the constructor for a sequence of Lammps' dump files.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python

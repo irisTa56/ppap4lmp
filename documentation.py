@@ -80,6 +80,17 @@ def modify_table(soup):
     dl.insert_after(BeautifulSoup("".join(param_html), "html.parser"))
     dl.extract()
 
+  # remove specific span in list
+
+  for table in soup.find_all("table", class_="py_constructor"):
+    if table.a.text == "ProRadialDistributionFunction":
+      for li in table.find_all("li"):
+        try:
+          if li.find("span", class_="remove_in_rdf").text:
+            li.extract()
+        except AttributeError:
+          pass
+
 modify_table(mainpage)
 
 mainpage.body.append(BeautifulSoup("""

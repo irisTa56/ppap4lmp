@@ -62,7 +62,6 @@ void ProDistanceInMolecule::run_impl(
 
   for (const auto &mol : mols)
   {
-    // NOTE: If molecular type is not set, 1 is used.
     if (mol.value("type", 1) != target_moltype) continue;
 
     auto &atom_ids = mol["atom-ids"];

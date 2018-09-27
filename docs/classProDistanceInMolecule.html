@@ -114,28 +114,28 @@ Collaboration diagram for ProDistanceInMolecule:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6ce74799e397e16310818529d2d1df3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#ac6ce74799e397e16310818529d2d1df3">ProDistanceInMolecule</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;mols, const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;atoms)</td></tr>
-<tr class="memdesc:ac6ce74799e397e16310818529d2d1df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for a pair of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects.  <a href="#ac6ce74799e397e16310818529d2d1df3">More...</a><br /></td></tr>
+<tr class="memdesc:ac6ce74799e397e16310818529d2d1df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for a snapshot of simulation.  <a href="#ac6ce74799e397e16310818529d2d1df3">More...</a><br /></td></tr>
 <tr class="separator:ac6ce74799e397e16310818529d2d1df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48295b7fcd5c13e60c0fdee579e0cfbf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a48295b7fcd5c13e60c0fdee579e0cfbf">ProDistanceInMolecule</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; std::pair&lt; <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a>, <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &gt;&gt; &amp;pairs)</td></tr>
-<tr class="memdesc:a48295b7fcd5c13e60c0fdee579e0cfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for multiple pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects.  <a href="#a48295b7fcd5c13e60c0fdee579e0cfbf">More...</a><br /></td></tr>
+<tr class="memdesc:a48295b7fcd5c13e60c0fdee579e0cfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for multiple snapshots of simulation.  <a href="#a48295b7fcd5c13e60c0fdee579e0cfbf">More...</a><br /></td></tr>
 <tr class="separator:a48295b7fcd5c13e60c0fdee579e0cfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49ee325e78c914b941508c9052e53d42"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a49ee325e78c914b941508c9052e53d42">prepare</a> () override</td></tr>
-<tr class="memdesc:a49ee325e78c914b941508c9052e53d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e" title="List in which RowArrayXd of computed distances are stored. ">distance2_traj</a>.  <a href="#a49ee325e78c914b941508c9052e53d42">More...</a><br /></td></tr>
+<tr class="memdesc:a49ee325e78c914b941508c9052e53d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e">distance2_traj</a>.  <a href="#a49ee325e78c914b941508c9052e53d42">More...</a><br /></td></tr>
 <tr class="separator:a49ee325e78c914b941508c9052e53d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a9f2ed013fa811cc433090aaa989b54"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a4a9f2ed013fa811cc433090aaa989b54">finish</a> () override</td></tr>
-<tr class="memdesc:a4a9f2ed013fa811cc433090aaa989b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4" title="Array of computed distances. ">distance2_array</a> with values of <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e" title="List in which RowArrayXd of computed distances are stored. ">distance2_traj</a>.  <a href="#a4a9f2ed013fa811cc433090aaa989b54">More...</a><br /></td></tr>
+<tr class="memdesc:a4a9f2ed013fa811cc433090aaa989b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4">distance2_array</a> with values of <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e">distance2_traj</a>.  <a href="#a4a9f2ed013fa811cc433090aaa989b54">More...</a><br /></td></tr>
 <tr class="separator:a4a9f2ed013fa811cc433090aaa989b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06d5c42a8721a818fd6200b5bd6c58d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a06d5c42a8721a818fd6200b5bd6c58d6">set_indices</a> (int index1_in_mol_, int index2_in_mol_)</td></tr>
 <tr class="memdesc:a06d5c42a8721a818fd6200b5bd6c58d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify two atoms in a molecule by zero-based index. Distance between the two atoms is computed for each molecule.  <a href="#a06d5c42a8721a818fd6200b5bd6c58d6">More...</a><br /></td></tr>
 <tr class="separator:a06d5c42a8721a818fd6200b5bd6c58d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923e3aea3e771534f4066ee16a3805ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a923e3aea3e771534f4066ee16a3805ee">set_moltype</a> (int target_moltype_)</td></tr>
-<tr class="memdesc:a923e3aea3e771534f4066ee16a3805ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a molecular type. Only molecules whose <code>type</code> property is the specified type are analyzed.  <a href="#a923e3aea3e771534f4066ee16a3805ee">More...</a><br /></td></tr>
+<tr class="memdesc:a923e3aea3e771534f4066ee16a3805ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a molecular type. Only molecules whose <code>type</code> property is the specified type are analyzed. If molecules have no <code>type</code> property, you do not need to use this method.  <a href="#a923e3aea3e771534f4066ee16a3805ee">More...</a><br /></td></tr>
 <tr class="separator:a923e3aea3e771534f4066ee16a3805ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a8da153bf301183340caca73ca7cec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9">ArrayXXd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a58a8da153bf301183340caca73ca7cec">get_distance_array</a> ()</td></tr>
-<tr class="memdesc:a58a8da153bf301183340caca73ca7cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computed distances as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule.  <a href="#a58a8da153bf301183340caca73ca7cec">More...</a><br /></td></tr>
+<tr class="memdesc:a58a8da153bf301183340caca73ca7cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computed distances between two atoms in each molecule as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule.  <a href="#a58a8da153bf301183340caca73ca7cec">More...</a><br /></td></tr>
 <tr class="separator:a58a8da153bf301183340caca73ca7cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a4be653186e429e08b9154fe41297ff"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9">ArrayXXd</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a3a4be653186e429e08b9154fe41297ff">get_distance2_array</a> ()</td></tr>
-<tr class="memdesc:a3a4be653186e429e08b9154fe41297ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computed squared distances as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule.  <a href="#a3a4be653186e429e08b9154fe41297ff">More...</a><br /></td></tr>
+<tr class="memdesc:a3a4be653186e429e08b9154fe41297ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get computed squared distances between two atoms in each molecule as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule.  <a href="#a3a4be653186e429e08b9154fe41297ff">More...</a><br /></td></tr>
 <tr class="separator:a3a4be653186e429e08b9154fe41297ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classProcessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classProcessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classProcessor.html">Processor</a></td></tr>
 <tr class="memitem:a8cf3818c9a256c5acc8e7f21b8d76240 inherit pub_methods_classProcessor"><td class="memItemLeft" align="right" valign="top"><a id="a8cf3818c9a256c5acc8e7f21b8d76240"></a>
@@ -165,19 +165,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:af1441c6e56e1dd9efc18423f720dc230"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#af1441c6e56e1dd9efc18423f720dc230">index1_in_mol</a> = 0</td></tr>
-<tr class="memdesc:af1441c6e56e1dd9efc18423f720dc230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero-based index for an atom in a molecule.  <a href="#af1441c6e56e1dd9efc18423f720dc230">More...</a><br /></td></tr>
 <tr class="separator:af1441c6e56e1dd9efc18423f720dc230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96b415fe06cb0d0e6e1241724725dfed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a96b415fe06cb0d0e6e1241724725dfed">index2_in_mol</a> = 0</td></tr>
-<tr class="memdesc:a96b415fe06cb0d0e6e1241724725dfed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zero-based index for an atom in a molecule.  <a href="#a96b415fe06cb0d0e6e1241724725dfed">More...</a><br /></td></tr>
 <tr class="separator:a96b415fe06cb0d0e6e1241724725dfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a408c559b815a4100a9be995f36cb6a22"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a408c559b815a4100a9be995f36cb6a22">target_moltype</a> = 1</td></tr>
-<tr class="memdesc:a408c559b815a4100a9be995f36cb6a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a type of molecules to be analyzed.  <a href="#a408c559b815a4100a9be995f36cb6a22">More...</a><br /></td></tr>
 <tr class="separator:a408c559b815a4100a9be995f36cb6a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa49341c6da022d0e0129405a1c834f2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="eigen_8h.html#a2ae603ffa373fd61ce314f3ec601e858">RowArrayXd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e">distance2_traj</a></td></tr>
-<tr class="memdesc:aa49341c6da022d0e0129405a1c834f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">List in which <a class="el" href="eigen_8h.html#a2ae603ffa373fd61ce314f3ec601e858" title="RowArrayXd is an alias for a row array of Eigen where the values are double. ">RowArrayXd</a> of computed distances are stored.  <a href="#aa49341c6da022d0e0129405a1c834f2e">More...</a><br /></td></tr>
 <tr class="separator:aa49341c6da022d0e0129405a1c834f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f35251f565058a538a675f1d975f0e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9">ArrayXXd</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4">distance2_array</a></td></tr>
-<tr class="memdesc:a9f35251f565058a538a675f1d975f0e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of computed distances.  <a href="#a9f35251f565058a538a675f1d975f0e4">More...</a><br /></td></tr>
 <tr class="separator:a9f35251f565058a538a675f1d975f0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -190,10 +185,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> computes atom-to-atom distance in each molecule (also computes square of the distance). </p>
-<p>An object of this class makes an array of distances between two atoms belonging to the same molecule. Each row of the array corresponds to each snapshot of a simulation, and each column of the array corresponds to each molecule.</p>
-<p>About usage in Python, please see <a class="el" href="py__pro__distance__in__molecule_8h.html" title="This file is for binding ProDistanceInMolecule class to Python. ">src/pybind/processors/py_pro_distance_in_molecule.h</a> </p>
+<p>An object of this class makes a two-dimensional array of distances between two atoms belonging to the same molecule. Each row of the array corresponds to each snapshot of a simulation, and each column of the array corresponds to each molecule.</p>
+<p>About usage in Python, please see <a class="el" href="namespacepybind.html#aa42bdd32f15bf677a9c9a3a4cfc8703d" title="Bind ProDistanceInMolecule class to Python. ">pybind::py_pro_distance_in_molecule</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00025">25</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00026">26</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac6ce74799e397e16310818529d2d1df3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6ce74799e397e16310818529d2d1df3">&#9670;&nbsp;</a></span>ProDistanceInMolecule() <span class="overload">[1/2]</span></h2>
@@ -221,15 +216,33 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for a pair of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects. </p>
+<p>Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for a snapshot of simulation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mols</td><td>: An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules. </td></tr>
-    <tr><td class="paramname">atoms</td><td>: An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for atoms.</td></tr>
+    <tr><td class="paramname">mols</td><td><p class="starttd">An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules. </p><dl class="property required_ext">
+<dt class="property required_ext">Required property </dt>
+<dd class="property required_ext"><ul>
+<li><code>atom-ids</code> : array of integers  </li>
+</ul>
+</dd>
+</dl>
+<p class="endtd"></p>
+</td></tr>
+    <tr><td class="paramname">atoms</td><td>An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for atoms. <dl class="property required_ext">
+<dt class="property required_ext">Required property </dt>
+<dd class="property required_ext"><ul>
+<li><code>id</code> : integer</li>
+<li><code>xu</code> : float</li>
+<li><code>yu</code> : float</li>
+<li><code>zu</code> : float  </li>
+</ul>
+</dd>
+</dl>
+</td></tr>
   </table>
   </dd>
 </dl>
-<p>A <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> object is constructed taking the <code>mols</code> and <code>atoms</code>, and then put into <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a> by <a class="el" href="classProcessor.html#a62bfda67b126ce2ab18014037aec5c0b">register_generator</a>. </p>
+<p><span class="remove_in_table"> A <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> object is constructed taking the <code>mols</code> and <code>atoms</code>, and then put into <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a> by <a class="el" href="classProcessor.html#a62bfda67b126ce2ab18014037aec5c0b">register_generator</a>. </span> </p>
 
 <p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00017">17</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 <div class="dynheader">
@@ -256,14 +269,31 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for multiple pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects. </p>
+<p>Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for multiple snapshots of simulation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pairs</td><td>: <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a> of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for molecules and the second object is for atoms.</td></tr>
+    <tr><td class="paramname">pairs</td><td>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for molecules and the second object is for atoms. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is an array, all the array should have the same length. <dl class="property required_ext">
+<dt class="property required_ext">Required property (first) </dt>
+<dd class="property required_ext"><ul>
+<li><code>atom-ids</code> : array of integers  </li>
+</ul>
+</dd>
+</dl>
+<dl class="property required_ext">
+<dt class="property required_ext">Required property (second) </dt>
+<dd class="property required_ext"><ul>
+<li><code>id</code> : integer</li>
+<li><code>xu</code> : float</li>
+<li><code>yu</code> : float</li>
+<li><code>zu</code> : float  </li>
+</ul>
+</dd>
+</dl>
+</td></tr>
   </table>
   </dd>
 </dl>
-<p><a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> objects are constructed taking each element of the <code>pairs</code>, and then put into <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a> by <a class="el" href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350">register_generators</a>. </p>
+<p><span class="remove_in_table"> <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> objects are constructed taking each element of the <code>pairs</code>, and then put into <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a> by <a class="el" href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350">register_generators</a>. </span> </p>
 
 <p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00027">27</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 <div class="dynheader">
@@ -298,13 +328,13 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Fill <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4" title="Array of computed distances. ">distance2_array</a> with values of <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e" title="List in which RowArrayXd of computed distances are stored. ">distance2_traj</a>. </p>
+<p>Fill <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4">distance2_array</a> with values of <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e">distance2_traj</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>Each row of <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4" title="Array of computed distances. ">distance2_array</a> corresponds to each element of <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e" title="List in which RowArrayXd of computed distances are stored. ">distance2_traj</a>. </p>
+<p>Each row of <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4">distance2_array</a> corresponds to each element of <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e">distance2_traj</a>. </p>
 
 <p>Reimplemented from <a class="el" href="classProcessor.html#a3731212e329a563ee79f1bd2e7c0a512">Processor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00093">93</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00092">92</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -328,10 +358,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get computed squared distances as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4" title="Array of computed distances. ">distance2_array</a>. </dd></dl>
+<p>Get computed squared distances between two atoms in each molecule as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4">distance2_array</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00143">143</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00142">142</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -355,10 +385,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get computed distances as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule. </p>
-<dl class="section return"><dt>Returns</dt><dd>Square rooted <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4" title="Array of computed distances. ">distance2_array</a>. </dd></dl>
+<p>Get computed distances between two atoms in each molecule as a two-dimensional array: each row corresponds to each snapshot of a simulation and each column corresponds to each molecule. </p>
+<dl class="section return"><dt>Returns</dt><dd>Square rooted <a class="el" href="classProDistanceInMolecule.html#a9f35251f565058a538a675f1d975f0e4">distance2_array</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00136">136</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00135">135</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -390,12 +420,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Resize <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e" title="List in which RowArrayXd of computed distances are stored. ">distance2_traj</a>. </p>
+<p>Resize <a class="el" href="classProDistanceInMolecule.html#aa49341c6da022d0e0129405a1c834f2e">distance2_traj</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classProcessor.html#ae402da6f2bad22f074987a9d15fffc73">Processor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00086">86</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00085">85</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 
 </div>
 </div>
@@ -431,20 +461,8 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_table3">
-<caption>Properties required by <a class="el" href="classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. ">StaMolecules</a> </caption>
-<tr class="py_tr">
-<th class="py_th3"><a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> </th><th class="py_th3">Key for required property  </th></tr>
-<tr class="py_tr">
-<td class="py_td"><p class="starttd"></p>
-<p class="endtd"></p>
-</td><td class="py_td">None.  </td><td class="py_td"><ul>
-<li><code>id</code> : integer</li>
-<li><code>mol</code> : integer   </li>
-</ul>
-</td></tr>
-</table>
+<p>To be compatible with multithreading computation, class members should not be modified in this method. If modification of some members is necessary, please consider defining them as <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a>, and modifying only their <em>i</em> th element, where <em>i</em> = <code>index</code>.</p>
+<p>I am sorry to say that the best documentation for this method is its source code... </p>
 
 <p>Implements <a class="el" href="classProcessor.html#a46c873071eb6309273eb330b6b837a40">Processor</a>.</p>
 
@@ -486,14 +504,14 @@ Here is the call graph for this function:</div>
 <p>Specify two atoms in a molecule by zero-based index. Distance between the two atoms is computed for each molecule. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index1_in_mol_</td><td>: A zero-based index in a molecule specifying a target atom. </td></tr>
-    <tr><td class="paramname">index2_in_mol_</td><td>: A zero-based index in a molecule specifying the other target atom. </td></tr>
+    <tr><td class="paramname">index1_in_mol_</td><td>A zero-based index in a molecule specifying a target atom. <span class="remove_in_table"> This parameter is assigned to <a class="el" href="classProDistanceInMolecule.html#af1441c6e56e1dd9efc18423f720dc230">index1_in_mol</a>. </span></td></tr>
+    <tr><td class="paramname">index2_in_mol_</td><td>A zero-based index in a molecule specifying the other target atom. <span class="remove_in_table"> This parameter is assigned to <a class="el" href="classProDistanceInMolecule.html#a96b415fe06cb0d0e6e1241724725dfed">index2_in_mol</a>. </span></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00118">118</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00117">117</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -518,16 +536,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Specify a molecular type. Only molecules whose <code>type</code> property is the specified type are analyzed. </p>
+<p>Specify a molecular type. Only molecules whose <code>type</code> property is the specified type are analyzed. If molecules have no <code>type</code> property, you do not need to use this method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target_moltype_</td><td>: An integer for molecular type. </td></tr>
+    <tr><td class="paramname">target_moltype_</td><td>An integer for molecular type. <span class="remove_in_table"> This parameter is assigned to <a class="el" href="classProDistanceInMolecule.html#a408c559b815a4100a9be995f36cb6a22">target_moltype</a>. </span></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00128">128</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8cpp_source.html#l00127">127</a> of file <a class="el" href="pro__distance__in__molecule_8cpp_source.html">pro_distance_in_molecule.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -556,11 +574,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>A two-dimensional array of computed distances. Each column corresponds to a sequence of the distance for each molecule, and each row corresponds to each element of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a>. </p>
 
-<p>Array of computed distances. </p>
-<p>Each column corresponds to a sequence of computed distance of one molecule, and each rows corresponds to each element of <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00050">50</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00057">57</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
 
 </div>
 </div>
@@ -583,11 +599,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>List in which <a class="el" href="eigen_8h.html#a2ae603ffa373fd61ce314f3ec601e858" title="RowArrayXd is an alias for a row array of Eigen where the values are double. ">RowArrayXd</a> objects of computed distances of each molecule are stored. Indices in this list corresponds those in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a>. </p>
 
-<p>List in which <a class="el" href="eigen_8h.html#a2ae603ffa373fd61ce314f3ec601e858" title="RowArrayXd is an alias for a row array of Eigen where the values are double. ">RowArrayXd</a> of computed distances are stored. </p>
-<p>Index in this member corresponds that in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a>. </p>
-
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00043">43</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00051">51</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
 
 </div>
 </div>
@@ -610,11 +624,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Zero-based index for an atom in a molecule. Distance between two atoms specified by <a class="el" href="classProDistanceInMolecule.html#af1441c6e56e1dd9efc18423f720dc230">index1_in_mol</a> and <a class="el" href="classProDistanceInMolecule.html#a96b415fe06cb0d0e6e1241724725dfed">index2_in_mol</a> is calculated for each molecule. </p>
 
-<p>Zero-based index for an atom in a molecule. </p>
-<p>Distance between two atoms specified by <a class="el" href="classProDistanceInMolecule.html#af1441c6e56e1dd9efc18423f720dc230" title="Zero-based index for an atom in a molecule. ">index1_in_mol</a> and <a class="el" href="classProDistanceInMolecule.html#a96b415fe06cb0d0e6e1241724725dfed" title="Zero-based index for an atom in a molecule. ">index2_in_mol</a> is calculated for each molecule. </p>
-
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00031">31</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00032">32</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
 
 </div>
 </div>
@@ -637,11 +649,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Zero-based index for an atom in a molecule. Distance between two atoms specified by <a class="el" href="classProDistanceInMolecule.html#af1441c6e56e1dd9efc18423f720dc230">index1_in_mol</a> and <a class="el" href="classProDistanceInMolecule.html#a96b415fe06cb0d0e6e1241724725dfed">index2_in_mol</a> is calculated for each molecule. </p>
 
-<p>Zero-based index for an atom in a molecule. </p>
-<p>Distance between two atoms specified by <a class="el" href="classProDistanceInMolecule.html#af1441c6e56e1dd9efc18423f720dc230" title="Zero-based index for an atom in a molecule. ">index1_in_mol</a> and <a class="el" href="classProDistanceInMolecule.html#a96b415fe06cb0d0e6e1241724725dfed" title="Zero-based index for an atom in a molecule. ">index2_in_mol</a> is calculated for each molecule. </p>
-
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00033">33</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00038">38</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
 
 </div>
 </div>
@@ -664,11 +674,9 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Specify a type of molecules to be analyzed (default is 1). Only molecules whose type is <a class="el" href="classProDistanceInMolecule.html#a408c559b815a4100a9be995f36cb6a22">target_moltype</a> are analyzed. Note that if molecules do not have <code>type</code> property, 1 is used as their types. </p>
 
-<p>Specify a type of molecules to be analyzed. </p>
-<p>Only molecules whose type is <a class="el" href="classProDistanceInMolecule.html#a408c559b815a4100a9be995f36cb6a22" title="Specify a type of molecules to be analyzed. ">target_moltype</a> are analyzed. </p>
-
-<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00038">38</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pro__distance__in__molecule_8h_source.html#l00045">45</a> of file <a class="el" href="pro__distance__in__molecule_8h_source.html">pro_distance_in_molecule.h</a>.</p>
 
 </div>
 </div>

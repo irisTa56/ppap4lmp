@@ -46,10 +46,12 @@ class AddMolecularOrientation : public Adder {
     <dl class="property required">
       <dt class="property required">Required property</dt>
       <dd class="property required">
-        - \c mass : float
         - \c I_xx : float
         - \c I_yy : float
         - \c I_zz : float
+        - \c I_xy : float
+        - \c I_xz : float
+        - \c I_yz : float
       </dd>
     </dl>
   */

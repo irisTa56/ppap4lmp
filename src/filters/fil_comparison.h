@@ -41,7 +41,7 @@ using CompareFunc = std::function<bool(const Json &)>;
 class FilComparison : public Filter {
   /*!
     Criteria of this filter stored in a ::Vec (list) object.
-    Elements of the list are 3-elements tuples. The first element
+    Elements of the list are three-elements tuples. The first element
     of each tuple is a key; and the key must be contained in
     Element::datakeys of an Element object where this object is
     appended to. Note that the reason not using ::Map is to allow
@@ -90,7 +90,7 @@ class FilComparison : public Filter {
     @brief Constructor of FilComparison class with one criterion.
 
     @param comparison_
-      A 3-elements tuple consisting of a string key,
+      A three-elements tuple consisting of a string key,
       comparison operator and right side value of an inequality
       (or equation). Note that an Element object, where the constructed
       object is appended to, must has a property corresponding to
@@ -106,7 +106,7 @@ class FilComparison : public Filter {
     @brief Constructor of FilComparison class with multiple criteria.
 
     @param comparisons_
-      List of 3-elements tuples consisting of a string key,
+      List of three-elements tuples consisting of a string key,
       comparison operator and right side value of an inequality
       (or equation). Note that an Element object, where the constructed
       object is appended to, must has properties corresponding to

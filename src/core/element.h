@@ -217,7 +217,7 @@ class Element : public Generator, public EnShThis<Element> {
   */
   const DataKeys &get_keys();
   /*!
-    @brief Extract values of a property in #data as an one-dimensional
+    @brief Extract values of a property in #data as a one-dimensional
     Eigen-Array.
 
     @param array
@@ -296,7 +296,7 @@ class Element : public Generator, public EnShThis<Element> {
   const Set<Str> &get_keys_py();
   /*!
     @brief Get integer values stored in Element::data of this object
-    as an one-dimensional Numpy-Array.
+    as a one-dimensional Numpy-Array.
 
     @param key
       A string key specifying a property.
@@ -307,7 +307,7 @@ class Element : public Generator, public EnShThis<Element> {
     const Str &key);
   /*!
     @brief Get float values stored in Element::data of this object
-    as an one-dimensional Numpy-Array.
+    as a one-dimensional Numpy-Array.
 
     @param key
       A string key specifying a property.

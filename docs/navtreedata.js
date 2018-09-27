@@ -57,7 +57,13 @@ var NAVTREE =
           [ "FilSet", "index.html#python_py_fil_set", null ]
         ] ],
         [ "Processor", "index.html#python_sec_proc", [
-          [ "ProData", "index.html#python_py_pro_data", null ]
+          [ "ProData", "index.html#python_py_pro_data", null ],
+          [ "ProDistanceInMolecule", "index.html#python_py_pro_distance_in_molecule", null ],
+          [ "ProMeanSquareDisplacement", "index.html#python_py_pro_mean_square_displacement", null ],
+          [ "ProRadialDistributionFunction", "index.html#python_py_pro_radial_distribution_function", null ],
+          [ "ProRadialDistributionFunctionWithDeformation", "index.html#python_py_pro_radial_distribution_function_with_deformation", null ],
+          [ "ProThicknessProfile", "index.html#python_py_pro_thickness_profile", null ],
+          [ "ProValueArray", "index.html#python_py_pro_value_array", null ]
         ] ],
         [ "Invoker", "index.html#python_sec_invo", [
           [ "InvOMP", "index.html#python_py_inv_omp", null ]
@@ -77,7 +83,7 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
@@ -97,8 +103,8 @@ var NAVTREEINDEX =
 [
 ".html",
 "classProRadialDistributionFunction.html#a2c9c40d3245fdcfa95321696235d8523",
-"index.html#python_py_pro_data",
-"pybind_8h.html#a4714c4a855ebb82892410d5254e9ccdc"
+"globals.html",
+"py__sta__custom_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

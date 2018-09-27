@@ -230,7 +230,7 @@ Here is the call graph for this function:</div>
 <p>Constructor of <a class="el" href="classProData.html" title="ProData copies Element::data from Element objects. ">ProData</a> class for a sequence of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">elems</td><td>List of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects to be copied. <span class="remove_in_table"> Elements of the parameter is put into <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a> by <a class="el" href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350">register_generators</a>. </span> </td></tr>
+    <tr><td class="paramname">elems</td><td>List of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects to be copied. <span class="remove_in_table"> Elements of this parameter is put into <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a> by <a class="el" href="classProcessor.html#abcf04231ed598d17e888eaf3216c9350">register_generators</a>. </span> </td></tr>
   </table>
   </dd>
 </dl>
@@ -336,6 +336,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<p>To be compatible with multithreading computation, class members should not be modified in this method. If modification of some members is necessary, please consider defining them as <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf" title="Vec is an alias for vector (same as list in Python). ">Vec</a>, and modifying only their <em>i</em> th element, where <em>i</em> = <code>index</code>.</p>
 <p>I am sorry to say that the best documentation for this method is its source code... </p>
 
 <p>Implements <a class="el" href="classProcessor.html#a46c873071eb6309273eb330b6b837a40">Processor</a>.</p>
@@ -363,7 +364,7 @@ Here is the caller graph for this function:</div>
 <p>Specify string keys for properties to be copied. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*args</td><td>An ordered list of string keys for properties to be copied. (Python's variable number arguments). <span class="remove_in_table"> This parameter is converted to be stored as <a class="el" href="classProData.html#a4fef67f454d09a9a5ce89f069dd6d0a3">selected_keys</a>. </span></td></tr>
+    <tr><td class="paramname">*args</td><td>An ordered list of string keys for properties to be copied (Python's variable number arguments). <span class="remove_in_table"> This parameter is converted to be stored as <a class="el" href="classProData.html#a4fef67f454d09a9a5ce89f069dd6d0a3">selected_keys</a>. </span></td></tr>
   </table>
   </dd>
 </dl>
@@ -403,7 +404,7 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>List in which <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects consisting of copied properties are stored. Indices in this member corresponds to those in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a>. </p>
+<p>List in which <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects consisting of copied properties are stored. Indices in this list corresponds to those in <a class="el" href="classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c">generators</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="pro__data_8h_source.html#l00034">34</a> of file <a class="el" href="pro__data_8h_source.html">pro_data.h</a>.</p>
 

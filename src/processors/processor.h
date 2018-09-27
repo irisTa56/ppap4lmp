@@ -42,6 +42,12 @@ class Processor {
       An index in #generators for a Generator object to be analyzed.
 
     @return None.
+
+    To be compatible with multithreading computation, class members
+    should not be modified in this method.
+    If modification of some members is necessary,
+    please consider defining them as ::Vec,
+    and modifying only their \e i th element, where \e i = \c index.
   */
   virtual void run_impl(const int index) = 0;
   /*!

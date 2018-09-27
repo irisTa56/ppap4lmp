@@ -29,7 +29,7 @@ class ProData : public Processor {
   /*!
     List in which ::Json objects consisting of copied properties
     are stored.
-    Indices in this member corresponds to those in #generators.
+    Indices in this list corresponds to those in #generators.
   */
   Vec<Json> results;
  protected:
@@ -60,7 +60,7 @@ class ProData : public Processor {
     @param elems
       List of Element objects to be copied.
       <span class="remove_in_table">
-        Elements of the parameter is put into #generators
+        Elements of this parameter is put into #generators
         by #register_generators.
       </span>
   */
@@ -76,7 +76,7 @@ class ProData : public Processor {
     @brief Specify string keys for properties to be copied.
 
     @param *args
-      An ordered list of string keys for properties to be copied.
+      An ordered list of string keys for properties to be copied
       (Python's variable number arguments).
       <span class="remove_in_table">
         This parameter is converted to be stored as #selected_keys.

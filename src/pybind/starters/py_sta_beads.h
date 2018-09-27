@@ -62,7 +62,7 @@ namespace pybind
       </tr>
     </table>
 
-    Example of the constructor for beads consisting of five atoms
+    Usage example of the constructor for beads consisting of five atoms
     in a molecule; the molecule consists of four beads,
     and all the beads are type 1.
 
@@ -86,7 +86,7 @@ namespace pybind
     </code></pre>
     @endhtmlonly
 
-    Example of the constructor; some beads belong to molecules
+    Usage example of the constructor; some beads belong to molecules
     whose type is 1 and the others belong to molecules whose type is 2.
     The number of molecules is 100; molecules with odd \c id are type 1
     and the others are type 2. All the beads for molecular type 1

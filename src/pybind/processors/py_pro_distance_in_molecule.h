@@ -18,115 +18,135 @@ namespace pybind
     @brief Bind ProDistanceInMolecule class to Python.
     @param m : A mutable reference to Python module.
     @return None.
-    @details
-    <table class="py_table">
-      <caption>
+
+    <table class="py_constructor">
+      <caption class="py_constructor">
         Python-side constructor of ProDistanceInMolecule
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_constructor">
+        <th class="py_constructor">C++</th>
+        <th class="py_constructor" colspan="2">Description</th>
+        <th class="py_constructor" colspan="2">Parameters</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %ProDistanceInMolecule</td>
-        <td class="py_td">ProDistanceInMolecule::ProDistanceInMolecule</td>
-        <td class="py_td">
-          Constructor of ProDistanceInMolecule class
-          for a snapshot of a simulation.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          ProDistanceInMolecule::ProDistanceInMolecule
         </td>
-        <td class="py_td">
-          - \c mols : An Element object for molecules.
-          - \c atoms : An Element object for atoms.
+        <td class="py_constructor" colspan="2">
+          @copybrief ProDistanceInMolecule::ProDistanceInMolecule(
+            const ElPtr &,
+            const ElPtr &)
         </td>
-        <td class="py_td">
-          Constructed ProDistanceInMolecule object.
+        <td class="py_constructor" colspan="2">
+          @copydetails ProDistanceInMolecule::ProDistanceInMolecule(
+            const ElPtr &,
+            const ElPtr &)
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c %ProDistanceInMolecule</td>
-        <td class="py_td">ProDistanceInMolecule::ProDistanceInMolecule</td>
-        <td class="py_td">
-          Constructor of ProDistanceInMolecule class
-          for a trajectory of a simulation.
+      <tr class="py_constructor">
+        <td class="py_constructor">
+          ProDistanceInMolecule::ProDistanceInMolecule
         </td>
-        <td class="py_td">
-          - \c pairs : List of pairs of two Element objects:
-            the first object is for molecules
-            and the second object is for atoms.
+        <td class="py_constructor" colspan="2">
+          @copybrief ProDistanceInMolecule::ProDistanceInMolecule(
+            const Vec<std::pair<ElPtr,ElPtr>> &)
         </td>
-        <td class="py_td">
-          Constructed ProDistanceInMolecule object.
+        <td class="py_constructor" colspan="2">
+          @copydetails ProDistanceInMolecule::ProDistanceInMolecule(
+            const Vec<std::pair<ElPtr,ElPtr>> &)
         </td>
       </tr>
     </table>
 
-    Usage example of the constructor for a simulation trajectory.
-
-    @code{.python}
-
-      atoms_traj = [
-        create(...) for i in range(0, 1000000, 1000)]
-
-
-
-
-      molecules_traj = [
-        create(StaMolecules(atoms))
-          .append_updater(AddMap("id", "type", map_from_id_to_type))
-        for atoms in atoms_traj]
-
-      my_mapping = AddMap(
-        "atomic-number", "mass",
-        {
-          6: 12.011,
-          8: 15.999,
-          9: 18.998
-        }
-      )
-    @endcode
-
-    <table class="py_table">
-      <caption>
+    <table class="py_method">
+      <caption class="py_method">
         Python-side methods of ProDistanceInMolecule
       </caption>
-      <tr class="py_tr">
-        <th class="py_th">Name</th>
-        <th class="py_th">C++-side</th>
-        <th class="py_th">Description</th>
-        <th class="py_th">Argument</th>
-        <th class="py_th">Return</th>
+      <tr class="py_method">
+        <th class="py_method">Name</th>
+        <th class="py_method">C++</th>
+        <th class="py_method">Description</th>
+        <th class="py_method">Parameters</th>
+        <th class="py_method">Return</th>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c select</td>
-        <td class="py_td">ProDistanceInMolecule::select</td>
-        <td class="py_td">
-          @copybrief ProDistanceInMolecule::select
+      <tr class="py_method">
+        <td class="py_method">\c set_indices</td>
+        <td class="py_method">ProDistanceInMolecule::set_indices</td>
+        <td class="py_method">
+          @copybrief ProDistanceInMolecule::set_indices
         </td>
-        <td class="py_td">
-          - \c *args : A variable number of string keys specifying
-            properties to be copied.
+        <td class="py_method">
+          @copydetails ProDistanceInMolecule::set_indices
         </td>
-        <td class="py_td">
+        <td class="py_method">
           None.
         </td>
       </tr>
-      <tr class="py_tr">
-        <td class="py_td">\c get_results</td>
-        <td class="py_td">ProDistanceInMolecule::get_results</td>
-        <td class="py_td">
-          @copybrief ProDistanceInMolecule::get_results
+      <tr class="py_method">
+        <td class="py_method">\c set_moltype</td>
+        <td class="py_method">ProDistanceInMolecule::set_moltype</td>
+        <td class="py_method">
+          @copybrief ProDistanceInMolecule::set_moltype
         </td>
-        <td class="py_td">
+        <td class="py_method">
+          @copydetails ProDistanceInMolecule::set_moltype
+        </td>
+        <td class="py_method">
           None.
         </td>
-        <td class="py_td">
-          List of JSON-like object consisting of copied properties.
+      </tr>
+      <tr class="py_method">
+        <td class="py_method">\c get_distance_array</td>
+        <td class="py_method">ProDistanceInMolecule::get_distance_array</td>
+        <td class="py_method">
+          @copybrief ProDistanceInMolecule::get_distance_array
+        </td>
+        <td class="py_method">
+          None.
+        </td>
+        <td class="py_method">
+          Two-dimensional Numpy-Array.
+        </td>
+      </tr>
+      <tr class="py_method">
+        <td class="py_method">\c get_distance2_array</td>
+        <td class="py_method">ProDistanceInMolecule::get_distance2_array</td>
+        <td class="py_method">
+          @copybrief ProDistanceInMolecule::get_distance2_array
+        </td>
+        <td class="py_method">
+          None.
+        </td>
+        <td class="py_method">
+          Two-dimensional Numpy-Array.
         </td>
       </tr>
     </table>
+
+    Usage example of ProDistanceInMolecule class for a trajectory of
+    molecules without \c type property.
+    Distance between the \e 0 th atom and \e 100 th atom is computed.
+
+    @htmlonly
+    <pre class="prettyprint"><code class="lang-py"># python
+
+    atoms_traj = [
+      create(StaDumpAtoms("path/to/dump", i))
+      for i in range(0, 1000000, 1000))
+    ]
+
+    molecules_traj = [
+      create(StaMolecules(atoms)) for atoms in atoms_traj
+    ]
+
+    pro = ProDistanceInMolecule(list(zip(atoms_traj, molecules_traj)))
+    pro.set_indices(0, 100)
+
+    InvOMP(pro).execute()
+
+    average_r2 = pro.get_distance2_array().mean()
+    </code></pre>
+    @endhtmlonly
   */
   void py_pro_distance_in_molecule(py::module &m);
 }

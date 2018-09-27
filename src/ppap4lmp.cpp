@@ -202,6 +202,29 @@
   @copybrief ProData
   @copydetails pybind::py_pro_data
 
+  @subsubsection python_py_pro_distance_in_molecule ProDistanceInMolecule
+  @copybrief ProDistanceInMolecule
+  @copydetails pybind::py_pro_distance_in_molecule
+
+  @subsubsection python_py_pro_mean_square_displacement ProMeanSquareDisplacement
+  @copybrief ProMeanSquareDisplacement
+  @copydetails pybind::py_pro_mean_square_displacement
+
+  @subsubsection python_py_pro_radial_distribution_function ProRadialDistributionFunction
+  @copybrief ProRadialDistributionFunction
+  @copydetails pybind::py_pro_radial_distribution_function
+
+  @subsubsection python_py_pro_radial_distribution_function_with_deformation ProRadialDistributionFunctionWithDeformation
+  @copybrief ProRadialDistributionFunctionWithDeformation
+  @copydetails pybind::py_pro_radial_distribution_function_with_deformation
+
+  @subsubsection python_py_pro_thickness_profile ProThicknessProfile
+  @copybrief ProThicknessProfile
+  @copydetails pybind::py_pro_thickness_profile
+
+  @subsubsection python_py_pro_value_array ProValueArray
+  @copybrief ProValueArray
+  @copydetails pybind::py_pro_value_array
 
 
   @subsection python_sec_invo Invoker

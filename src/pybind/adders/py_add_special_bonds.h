@@ -62,7 +62,7 @@ namespace pybind
       </tr>
     </table>
 
-    Example of the constructor for molecules consisting of linearly
+    Usage example of the constructor for molecules consisting of linearly
     connected four atoms. Bond-length and bond-angle potentials are
     considered.
 
@@ -86,7 +86,7 @@ namespace pybind
     </code></pre>
     @endhtmlonly
 
-    Example of the constructor for two types of molecule: the first one
+    Usage example of the constructor for two types of molecule: the first one
     consists of linearly connected four atoms, and the second one
     consists of linearly connected five atoms. Bond-length and
     bond-angle potentials are considered.
