@@ -51,8 +51,7 @@ void ProThicknessProfile::run_impl(
 
   auto el_box = generators[index]->get_element("Box");
 
-  el_box->required({"lo_x", "lo_y", "hi_x", "
-  "});
+  el_box->required({"lo_x", "lo_y", "hi_x", "hi_y"});
 
   auto &box = el_box->get_data();
 
