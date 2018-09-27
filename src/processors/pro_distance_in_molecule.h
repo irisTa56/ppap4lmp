@@ -124,7 +124,6 @@ class ProDistanceInMolecule : public Processor {
           - \c zu : float
         </dd>
       </dl>
-    @endparblock
 
     <span class="remove_in_table">
       GenDict objects are constructed

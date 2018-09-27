@@ -67,7 +67,7 @@ class Updater {
 
     @return None.
   */
-  virtual void compute_impl(Json &, DataKeys &) = 0;
+  virtual void compute_impl(Json &data, DataKeys &datakeys) = 0;
   /*!
     Look for Element::dataid in #dataid_blacklist.
 
@@ -108,7 +108,8 @@ class Updater {
 
     @return None.
   */
-  virtual void compute(Json &, DataKeys &, const int) = 0;
+  virtual void compute(
+    Json &data, DataKeys &datakeys, const int dataid) = 0;
   /*!
     @brief Remove Element::dataid from #dataid_blacklist.
 

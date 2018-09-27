@@ -1,5 +1,5 @@
 /*!
-  @file src/processors/pro_distance_radial_distribution_function.cpp
+  @file src/processors/pro_radial_distribution_function.cpp
   @brief This file has an implementation of ProRadialDistributionFunction class,
   which is a subclass of Processor class.
   @author Takayuki Kobayashi

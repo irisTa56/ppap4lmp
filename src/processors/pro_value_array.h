@@ -93,7 +93,7 @@ class ProValueArray : public Processor {
     @return None.
 
     Each row of a value of #results corresponds to a value
-    for the corresponding key in each element of #distance2_traj.
+    for the corresponding key in each element of #results_trajs.
   */
   virtual void finish() override;
   /*!

@@ -12,7 +12,7 @@ var dir_8235a0e1c388cdad0e3f2a0adaa9e0ee =
     [ "pro_mean_square_displacement.h", "pro__mean__square__displacement_8h.html", [
       [ "ProMeanSquareDisplacement", "classProMeanSquareDisplacement.html", "classProMeanSquareDisplacement" ]
     ] ],
-    [ "pro_radial_distribution_function.cpp", "pro__radial__distribution__function_8cpp_source.html", null ],
+    [ "pro_radial_distribution_function.cpp", "pro__radial__distribution__function_8cpp.html", "pro__radial__distribution__function_8cpp" ],
     [ "pro_radial_distribution_function.h", "pro__radial__distribution__function_8h.html", [
       [ "ProRadialDistributionFunction", "classProRadialDistributionFunction.html", "classProRadialDistributionFunction" ]
     ] ],

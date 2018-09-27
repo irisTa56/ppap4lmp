@@ -191,7 +191,6 @@ class ProRadialDistributionFunction : public Processor {
           - \c hi_z : float
         </dd>
       </dl>
-    @endparblock
 
     <span class="remove_in_table">
       GenDict objects are constructed

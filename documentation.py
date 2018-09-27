@@ -7,6 +7,18 @@ p = subprocess.run(
   ['doxygen', 'Doxyfile'],
   stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
+lines = p.stderr.decode().split("\n")
+
+for line in lines:
+
+  if not (
+    ("src/pybind" in line or "src/ppap4lmp.cpp" in line)
+    and (
+      "could not be resolved" in line
+      or "override (function) of class Py" in line)
+      or "@param is not found in the argument list of pybind::" in line):
+    print(line)
+
 
 from bs4 import BeautifulSoup
 

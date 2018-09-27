@@ -144,7 +144,6 @@ class ProThicknessProfile : public Processor {
           - \c hi_y : float
         </dd>
       </dl>
-    @endparblock
 
     <span class="remove_in_table">
       GenDict objects are constructed
@@ -183,7 +182,7 @@ class ProThicknessProfile : public Processor {
   /*!
     @brief Specify the offset for thickness (height).
 
-    @param offset
+    @param offset_
       Film thickness is calculated after subtracting this value
       from \e z coordinate of particles.
       <span class="remove_in_table">

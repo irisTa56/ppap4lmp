@@ -104,7 +104,7 @@ var NAVTREEINDEX =
 ".html",
 "classProRadialDistributionFunction.html#a2c9c40d3245fdcfa95321696235d8523",
 "globals.html",
-"py__sta__custom_8h.html"
+"py__sta__custom_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

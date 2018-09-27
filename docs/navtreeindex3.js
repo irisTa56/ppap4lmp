@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"py__sta__custom_8cpp.html":[3,0,0,7,4,4],
+"py__sta__custom_8cpp_source.html":[3,0,0,7,4,4],
 "py__sta__custom_8h.html":[3,0,0,7,4,5],
 "py__sta__custom_8h.html#a75e3992153569517303d37e784919c25":[3,0,0,7,4,5,0],
 "py__sta__custom_8h_source.html":[3,0,0,7,4,5],
