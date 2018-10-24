@@ -5,6 +5,8 @@ var searchData=
   ['check_5fmol_5ftype_5fto_5fabst_5fbeads',['check_mol_type_to_abst_beads',['../classStaBeads.html#a4234e0f85caf2a8987d8fb98f0d6ec87',1,'StaBeads']]],
   ['child_5fname',['child_name',['../classAddChildIDs.html#a7f1aa53a67c5f2cee99a238d8e41c100',1,'AddChildIDs::child_name()'],['../classAddChildPositions.html#acde97085231187792667e1ce2ed46955',1,'AddChildPositions::child_name()']]],
   ['clear',['clear',['../classDataKeys.html#a4d5c1a42ff2828801167098e658fa578',1,'DataKeys']]],
+  ['coefficients_5farray',['coefficients_array',['../classProTimeCorrelationInMolecule.html#a70aefbb81a2fa815ddf5c61e7dff10a8',1,'ProTimeCorrelationInMolecule']]],
+  ['coefficients_5ftraj',['coefficients_traj',['../classProTimeCorrelationInMolecule.html#a1142ac19b509b12481f1d4f43451cc5a',1,'ProTimeCorrelationInMolecule']]],
   ['comparefunc',['CompareFunc',['../fil__comparison_8h.html#ab9615306db45e5984ebc1b3090f30303',1,'fil_comparison.h']]],
   ['comparisons',['comparisons',['../classFilComparison.html#a71516c6421c11b202c15f1699723bbc1',1,'FilComparison']]],
   ['compute',['compute',['../classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100',1,'Adder::compute()'],['../classUpdater.html#a85d3e869ce4536fdf8f7a74623218649',1,'Updater::compute()'],['../classFilter.html#acd658aa335c8b5215242737aabcf5155',1,'Filter::compute()'],['../classStaCopy.html#a50e7868dc364e6a21b9c6ab4604deee5',1,'StaCopy::compute()'],['../classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a',1,'Starter::compute()']]],

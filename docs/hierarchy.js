@@ -31,6 +31,7 @@ var hierarchy =
         [ "ProRadialDistributionFunctionWithDeformation", "classProRadialDistributionFunctionWithDeformation.html", null ]
       ] ],
       [ "ProThicknessProfile", "classProThicknessProfile.html", null ],
+      [ "ProTimeCorrelationInMolecule", "classProTimeCorrelationInMolecule.html", null ],
       [ "ProValueArray", "classProValueArray.html", null ]
     ] ],
     [ "pybind11::detail::type_caster< Json >", "structpybind11_1_1detail_1_1type__caster_3_01Json_01_4.html", null ],

@@ -60,12 +60,13 @@ class ProMeanSquareDisplacement : public Processor {
     from initial position for each target over a simulation trajectory.
     Each column corresponds to time series of the squared displacement
     for each target, and each row corresponds to each element
-    of #generators.
+    of #generators (snapshot of simulation).
   */
   ArrayXXd displacement2_array;
   /*!
-    A one-dimensional array containing the mean square displacement.
-    Each element corresponds to each element of #generators.
+    The mean square displacement.
+    Each element corresponds to each element of #generators
+    (snapshot of simulation).
   */
   ArrayXd mean_square_displacement;
  protected:
@@ -79,8 +80,7 @@ class ProMeanSquareDisplacement : public Processor {
     const int index) override;
  public:
   /*!
-    @brief Constructor of ProMeanSquareDisplacement class
-    for a pair of two Element objects.
+    @brief Constructor of ProMeanSquareDisplacement class.
 
     @param elems
       List of Element objects for atoms, beads, molecules...
@@ -113,7 +113,7 @@ class ProMeanSquareDisplacement : public Processor {
   /*!
     @brief Fill #displacement2_array with values
     of #displacement2_traj, and calculate #mean_square_displacement
-    by averaging over columns of #displacement2_array
+    by averaging over columns of #displacement2_array.
 
     @return None.
 

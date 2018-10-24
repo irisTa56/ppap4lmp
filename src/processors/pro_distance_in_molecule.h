@@ -75,6 +75,7 @@ class ProDistanceInMolecule : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
+          - \c id : integer
           - \c atom-ids : array of integers
         </dd>
       </dl>

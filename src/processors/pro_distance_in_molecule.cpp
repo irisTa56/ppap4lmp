@@ -45,13 +45,13 @@ void ProDistanceInMolecule::run_impl(
 {
   auto el_mols = generators[index]->get_element("Mols");
 
-  el_mols->required("atom-ids");
+  // NOTE: `id` property is required to ensure data is sorted.
+  el_mols->required({"id", "atom-ids"});
 
   auto &mols = el_mols->get_data();
 
   auto el_atoms = generators[index]->get_element("Atoms");
 
-  // NOTE: `id` property is required to ensure data is sorted.
   el_atoms->required({"xu", "yu", "zu", "id"});
 
   auto &atoms = el_atoms->get_data();

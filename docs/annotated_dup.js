@@ -33,6 +33,7 @@ var annotated_dup =
     [ "ProRadialDistributionFunction", "classProRadialDistributionFunction.html", "classProRadialDistributionFunction" ],
     [ "ProRadialDistributionFunctionWithDeformation", "classProRadialDistributionFunctionWithDeformation.html", "classProRadialDistributionFunctionWithDeformation" ],
     [ "ProThicknessProfile", "classProThicknessProfile.html", "classProThicknessProfile" ],
+    [ "ProTimeCorrelationInMolecule", "classProTimeCorrelationInMolecule.html", "classProTimeCorrelationInMolecule" ],
     [ "ProValueArray", "classProValueArray.html", "classProValueArray" ],
     [ "PyElement", "classPyElement.html", "classPyElement" ],
     [ "PyInvoker", "classPyInvoker.html", "classPyInvoker" ],
