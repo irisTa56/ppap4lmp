@@ -91,7 +91,7 @@ class ProTimeCorrelationInMolecule : public Processor {
     @param pairs
       List of pairs of two Element objects: the first object is
       for molecules and the second object is for atoms.
-      If each Element object is an array, all the array should have
+      If each Element object has an array data, all the array should have
       the same length.
       <dl class="property required_ext">
         <dt class="property required_ext">Required property (first)</dt>
@@ -174,9 +174,9 @@ class ProTimeCorrelationInMolecule : public Processor {
   void set_moltype(
     int target_moltype_);
   /*!
-    @brief Get computed time correlation coefficients
-    of vectors between pairs of atoms in the same molecule
-    as a two-dimensional array:
+    @brief Get a two-dimensional array containing
+    computed time correlation coefficients of vectors
+    connecting two atoms in the same molecule:
     each column is a time correlation function of atom-to-atom vector
     in each molecule.
 

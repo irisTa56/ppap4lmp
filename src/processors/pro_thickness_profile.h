@@ -124,7 +124,7 @@ class ProThicknessProfile : public Processor {
       List of pairs of two Element objects: the first object is
       for particles forming a film and the second object is
       for a simulation box.
-      If each Element object is an array, all the array should have
+      If each Element object has an array data, all the array should have
       the same length.
       <dl class="property required_ext">
         <dt class="property required_ext">Required property (first)</dt>

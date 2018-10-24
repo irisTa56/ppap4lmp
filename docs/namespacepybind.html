@@ -159,6 +159,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a271e1aac090a96d8c266472f24dd3222"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#a271e1aac090a96d8c266472f24dd3222">py_pro_thickness_profile</a> (py::module &amp;m)</td></tr>
 <tr class="memdesc:a271e1aac090a96d8c266472f24dd3222"><td class="mdescLeft"> </td><td class="mdescRight">Bind <a class="el" href="classProThicknessProfile.html" title="ProThicknessProfile computes thickness profile of a film consisting of particles (can be atoms...">ProThicknessProfile</a> class to Python.  <a href="#a271e1aac090a96d8c266472f24dd3222">More...</a><br/></td></tr>
 <tr class="separator:a271e1aac090a96d8c266472f24dd3222"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad22055de15e4e0a2591d8364dc9c89fb"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#ad22055de15e4e0a2591d8364dc9c89fb">py_pro_time_correlation_in_molecule</a> (py::module &amp;m)</td></tr>
+<tr class="memdesc:ad22055de15e4e0a2591d8364dc9c89fb"><td class="mdescLeft"> </td><td class="mdescRight">Bind <a class="el" href="classProTimeCorrelationInMolecule.html" title="ProTimeCorrelationInMolecule computes time correlation function of atom-to-atom vector in each molecu...">ProTimeCorrelationInMolecule</a> class to Python.  <a href="#ad22055de15e4e0a2591d8364dc9c89fb">More...</a><br/></td></tr>
+<tr class="separator:ad22055de15e4e0a2591d8364dc9c89fb"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:add61b945c113693f0cda98d72f111525"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#add61b945c113693f0cda98d72f111525">py_pro_value_array</a> (py::module &amp;m)</td></tr>
 <tr class="memdesc:add61b945c113693f0cda98d72f111525"><td class="mdescLeft"> </td><td class="mdescRight">Bind <a class="el" href="classProValueArray.html" title="ProValueArray makes one or more arrays consisting of values for property in a sequence of Element obj...">ProValueArray</a> class to Python.  <a href="#add61b945c113693f0cda98d72f111525">More...</a><br/></td></tr>
 <tr class="separator:add61b945c113693f0cda98d72f111525"><td class="memSeparator" colspan="2"> </td></tr>
@@ -1604,6 +1607,7 @@ Here is the caller graph for this function:</div>
 <dd>An <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for molecules. <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
+<li><code>id</code> : integer</li>
 <li><code>atom-ids</code> : array of integers  </li>
 </ul>
 </dd>
@@ -1631,7 +1635,7 @@ Here is the caller graph for this function:</div>
 <td class="py_constructor"><a class="el" href="classProDistanceInMolecule.html#ac6ce74799e397e16310818529d2d1df3" title="Constructor of ProDistanceInMolecule class for a snapshot of simulation. ">ProDistanceInMolecule::ProDistanceInMolecule</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProDistanceInMolecule.html" title="ProDistanceInMolecule computes atom-to-atom distance in each molecule (also computes square of the di...">ProDistanceInMolecule</a> class for multiple snapshots of simulation.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>pairs</dt>
-<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for molecules and the second object is for atoms. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is an array, all the array should have the same length. <dl class="property required_ext">
+<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for molecules and the second object is for atoms. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object has an array data, all the array should have the same length. <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property (first) </dt>
 <dd class="property required_ext main_page"><ul>
 <li><code>atom-ids</code> : array of integers  </li>
@@ -1750,7 +1754,7 @@ Here is the caller graph for this function:</div>
 <td class="py_constructor"><a class="el" href="classProMeanSquareDisplacement.html#a950046a0badb23515b3a3ad346de50a4" title="Constructor of ProMeanSquareDisplacement class. ">ProMeanSquareDisplacement::ProMeanSquareDisplacement</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProMeanSquareDisplacement.html" title="ProMeanSquareDisplacement computes mean square displacement (MSD). ">ProMeanSquareDisplacement</a> class.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elems</dt>
-<dd>List of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects for atoms, beads, molecules... If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is an array, all the array should have the same length. <dl class="property required_ext">
+<dd>List of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects for atoms, beads, molecules... If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object has an array data, all the array should have the same length. <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
 <dd class="property required_ext main_page"><ul>
 <li><code>id</code> : integer</li>
@@ -1911,7 +1915,7 @@ Here is the caller graph for this function:</div>
 <td class="py_constructor"><a class="el" href="classProRadialDistributionFunction.html#a7721bce6ef774785881d3cf2e6ac02ad" title="Constructor of ProRadialDistributionFunction class for a snapshot of simulation. ">ProRadialDistributionFunction::ProRadialDistributionFunction</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProThicknessProfile.html" title="ProThicknessProfile computes thickness profile of a film consisting of particles (can be atoms...">ProThicknessProfile</a> class for multiple snapshots of simulation.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>pairs</dt>
-<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for particles and the second object is for a simulation box. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is an array, all the array should have the same length. <dl class="property required_ext">
+<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for particles and the second object is for a simulation box. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object has an array data, all the array should have the same length. <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property (first) </dt>
 <dd class="property required_ext main_page"><ul>
 <li><code>id</code> : integer</li>
@@ -2107,7 +2111,7 @@ Here is the caller graph for this function:</div>
 <td class="py_constructor"><a class="el" href="classProRadialDistributionFunction.html#a7721bce6ef774785881d3cf2e6ac02ad" title="Constructor of ProRadialDistributionFunction class for a snapshot of simulation. ">ProRadialDistributionFunctionWithDeformation::ProRadialDistributionFunction</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProRadialDistributionFunctionWithDeformation.html" title="ProRadialDistributionFunctionWithDeformation computes radial distribution function (RDF) taking defor...">ProRadialDistributionFunctionWithDeformation</a> class for multiple snapshots of simulation.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>pairs</dt>
-<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for particles and the second object is for a simulation box. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is an array, all the array should have the same length. <dl class="property required_ext">
+<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for particles and the second object is for a simulation box. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object has an array data, all the array should have the same length. <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property (first) </dt>
 <dd class="property required_ext main_page"><ul>
 <li><code>id</code> : integer</li>
@@ -2340,7 +2344,7 @@ Here is the caller graph for this function:</div>
 <td class="py_constructor"><a class="el" href="classProThicknessProfile.html#a2c0c2465604bcef71909fc19d3d688ae" title="Constructor of ProThicknessProfile class for a snapshot of simulation. ">ProThicknessProfile::ProThicknessProfile</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProThicknessProfile.html" title="ProThicknessProfile computes thickness profile of a film consisting of particles (can be atoms...">ProThicknessProfile</a> class for multiple snapshots of simulation.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>pairs</dt>
-<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for particles forming a film and the second object is for a simulation box. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is an array, all the array should have the same length. <dl class="property required_ext">
+<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for particles forming a film and the second object is for a simulation box. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object has an array data, all the array should have the same length. <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property (first) </dt>
 <dd class="property required_ext main_page"><ul>
 <li><code>x</code> : float</li>
@@ -2445,6 +2449,127 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 </div>
+<a id="ad22055de15e4e0a2591d8364dc9c89fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22055de15e4e0a2591d8364dc9c89fb">◆ </a></span>py_pro_time_correlation_in_molecule()</h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void pybind::py_pro_time_correlation_in_molecule </td>
+<td>(</td>
+<td class="paramtype">py::module &amp; </td>
+<td class="paramname"><em>m</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Bind <a class="el" href="classProTimeCorrelationInMolecule.html" title="ProTimeCorrelationInMolecule computes time correlation function of atom-to-atom vector in each molecu...">ProTimeCorrelationInMolecule</a> class to Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">m</td><td>: A mutable reference to Python module. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<a class="anchor" id=""></a>
+<table class="py_constructor">
+<caption class="py_constructor">Python-side constructor of <a class="el" href="classProTimeCorrelationInMolecule.html" title="ProTimeCorrelationInMolecule computes time correlation function of atom-to-atom vector in each molecu...">ProTimeCorrelationInMolecule</a> </caption>
+<tr class="py_constructor">
+<th class="py_constructor">C++ </th><th class="py_constructor" colspan="2">Description </th><th class="py_constructor" colspan="2">Parameters  </th></tr>
+<tr class="py_constructor">
+<td class="py_constructor"><a class="el" href="classProTimeCorrelationInMolecule.html#ac5257ab07382fba8535db9c4fb32f350" title="Constructor of ProTimeCorrelationInMolecule class. ">ProTimeCorrelationInMolecule::ProTimeCorrelationInMolecule</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProTimeCorrelationInMolecule.html" title="ProTimeCorrelationInMolecule computes time correlation function of atom-to-atom vector in each molecu...">ProTimeCorrelationInMolecule</a> class.  </td><td class="py_constructor" colspan="2">
+<dl class="parameters">
+<dt>pairs</dt>
+<dd>List of pairs of two <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects: the first object is for molecules and the second object is for atoms. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object has an array data, all the array should have the same length. <dl class="property required_ext">
+<dt class="property required_ext main_page">Required property (first) </dt>
+<dd class="property required_ext main_page"><ul>
+<li><code>id</code> : integer</li>
+<li><code>atom-ids</code> : array of integers  </li>
+</ul>
+</dd>
+</dl>
+<dl class="property required_ext">
+<dt class="property required_ext main_page">Required property (second) </dt>
+<dd class="property required_ext main_page"><ul>
+<li><code>id</code> : integer</li>
+<li><code>xu</code> : float</li>
+<li><code>yu</code> : float</li>
+<li><code>zu</code> : float  </li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+
+ </td></tr>
+</table>
+<a class="anchor" id=""></a>
+<table class="py_method">
+<caption class="py_method">Python-side methods of <a class="el" href="classProTimeCorrelationInMolecule.html" title="ProTimeCorrelationInMolecule computes time correlation function of atom-to-atom vector in each molecu...">ProTimeCorrelationInMolecule</a> </caption>
+<tr class="py_method">
+<th class="py_method">Name </th><th class="py_method">C++ </th><th class="py_method">Description </th><th class="py_method">Parameters </th><th class="py_method">Return  </th></tr>
+<tr class="py_method">
+<td class="py_method"><code>set_indices</code> </td><td class="py_method"><a class="el" href="classProTimeCorrelationInMolecule.html#a054423496c2775838aba9a3d03886ca7" title="Specify two atoms in a molecule by zero-based index. Time correlation function of a vector between th...">ProTimeCorrelationInMolecule::set_indices</a> </td><td class="py_method">Specify two atoms in a molecule by zero-based index. Time correlation function of a vector between the two atoms is computed for each molecule.  </td><td class="py_method">
+<dl class="parameters">
+<dt>index1_in_mol_</dt>
+<dd>A zero-based index in a molecule specifying a target atom. </dd>
+</dl>
+<dl class="parameters">
+<dt>index2_in_mol_</dt>
+<dd>A zero-based index in a molecule specifying the other target atom. </dd>
+</dl>
+
+
+</td><td class="py_method">None.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>set_moltype</code> </td><td class="py_method"><a class="el" href="classProTimeCorrelationInMolecule.html#a72d05d8d8f76c8c5780653a9d7d2039b" title="Specify a molecular type. Only molecules whose type property is the specified type are analyzed...">ProTimeCorrelationInMolecule::set_moltype</a> </td><td class="py_method">Specify a molecular type. Only molecules whose <code>type</code> property is the specified type are analyzed. If molecules have no <code>type</code> property, you do not need to use this method.  </td><td class="py_method">
+<dl class="parameters">
+<dt>target_moltype_</dt>
+<dd>An integer for molecular type. </dd>
+</dl>
+
+
+</td><td class="py_method">None.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_coefficients_array</code> </td><td class="py_method"><a class="el" href="classProTimeCorrelationInMolecule.html#ae71fec8ee0fad42c92a6a0ca83416567" title="Get a two-dimensional array containing computed time correlation coefficients of vectors connecting t...">ProTimeCorrelationInMolecule::get_coefficients_array</a> </td><td class="py_method">Get a two-dimensional array containing computed time correlation coefficients of vectors connecting two atoms in the same molecule: each column is a time correlation function of atom-to-atom vector in each molecule.  </td><td class="py_method">None.  </td><td class="py_method">Two-dimensional Numpy-Array.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>get_time_correlation</code> </td><td class="py_method"><a class="el" href="classProTimeCorrelationInMolecule.html#ae9ac42144d8be2fd4063a07c871994d1" title="Get an averaged time correlation function of atom-to-atom vector; each pair of atoms is in the same m...">ProTimeCorrelationInMolecule::get_time_correlation</a> </td><td class="py_method">Get an <em>averaged</em> time correlation function of atom-to-atom vector; each pair of atoms is in the same molecule.  </td><td class="py_method">None.  </td><td class="py_method">One-dimensional Numpy-Array.   </td></tr>
+</table>
+<p>Usage example of <a class="el" href="classProTimeCorrelationInMolecule.html" title="ProTimeCorrelationInMolecule computes time correlation function of atom-to-atom vector in each molecu...">ProTimeCorrelationInMolecule</a> class for a trajectory of molecules without <code>type</code> property. Time correlation function for a vector between the <em>0</em> th atom and <em>100</em> th atom is computed.</p>
+<p>
+<pre class="prettyprint"><code class="lang-py"># python
+
+atoms_traj = [
+  create(StaDumpAtoms("path/to/dump", i))
+  for i in range(0, 1000000, 1000))
+]
+
+molecules_traj = [
+  create(StaMolecules(atoms)) for atoms in atoms_traj
+]
+
+pro = ProTimeCorrelationInMolecule(list(zip(atoms_traj, molecules_traj)))
+pro.set_indices(0, 100)
+
+InvOMP(pro).execute()
+
+tcf = pro.get_time_correlation()
+</code></pre>
+</p>
+<p class="definition">Definition at line <a class="el" href="py__pro__time__correlation__in__molecule_8cpp_source.html#l00010">10</a> of file <a class="el" href="py__pro__time__correlation__in__molecule_8cpp_source.html">py_pro_time_correlation_in_molecule.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="248" scrolling="no" src="namespacepybind_ad22055de15e4e0a2591d8364dc9c89fb_cgraph.svg" width="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="52" scrolling="no" src="namespacepybind_ad22055de15e4e0a2591d8364dc9c89fb_icgraph.svg" width="371"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
 <a id="add61b945c113693f0cda98d72f111525"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add61b945c113693f0cda98d72f111525">◆ </a></span>py_pro_value_array()</h2>
 <div class="memitem">
@@ -2484,7 +2609,7 @@ Here is the caller graph for this function:</div>
 <td class="py_constructor"><a class="el" href="classProValueArray.html#a61336d1a34c34cdaef5845a244fbc5ed" title="Constructor of ProValueArray class for one Element object. ">ProValueArray::ProValueArray</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classProValueArray.html" title="ProValueArray makes one or more arrays consisting of values for property in a sequence of Element obj...">ProValueArray</a> class for a sequence of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects.  </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
 <dt>elems</dt>
-<dd>List of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object is an array, all the array should have the same length.  </dd>
+<dd>List of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> objects. If each <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object has an array data, all the array should have the same length.  </dd>
 </dl>
 
 </td></tr>

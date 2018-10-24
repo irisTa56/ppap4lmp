@@ -84,7 +84,7 @@ class ProMeanSquareDisplacement : public Processor {
 
     @param elems
       List of Element objects for atoms, beads, molecules...
-      If each Element object is an array, all the array should have
+      If each Element object has an array data, all the array should have
       the same length.
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>

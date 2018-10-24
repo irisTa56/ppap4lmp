@@ -222,6 +222,10 @@
   @copybrief ProThicknessProfile
   @copydetails pybind::py_pro_thickness_profile
 
+  @subsubsection python_py_pro_time_correlation_in_molecule ProTimeCorrelationInMolecule
+  @copybrief ProTimeCorrelationInMolecule
+  @copydetails pybind::py_pro_time_correlation_in_molecule
+
   @subsubsection python_py_pro_value_array ProValueArray
   @copybrief ProValueArray
   @copydetails pybind::py_pro_value_array

@@ -63,6 +63,7 @@ var NAVTREE =
           [ "ProRadialDistributionFunction", "index.html#python_py_pro_radial_distribution_function", null ],
           [ "ProRadialDistributionFunctionWithDeformation", "index.html#python_py_pro_radial_distribution_function_with_deformation", null ],
           [ "ProThicknessProfile", "index.html#python_py_pro_thickness_profile", null ],
+          [ "ProTimeCorrelationInMolecule", "index.html#python_py_pro_time_correlation_in_molecule", null ],
           [ "ProValueArray", "index.html#python_py_pro_value_array", null ]
         ] ],
         [ "Invoker", "index.html#python_sec_invo", [
@@ -105,8 +106,8 @@ var NAVTREEINDEX =
 [
 ".html",
 "classProRadialDistributionFunction.html#a2c9c40d3245fdcfa95321696235d8523",
-"functions_vars.html",
-"py__pro__thickness__profile_8h_source.html"
+"functions_v.html",
+"py__pro__thickness__profile_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

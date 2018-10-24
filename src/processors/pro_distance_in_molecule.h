@@ -108,7 +108,7 @@ class ProDistanceInMolecule : public Processor {
     @param pairs
       List of pairs of two Element objects: the first object is
       for molecules and the second object is for atoms.
-      If each Element object is an array, all the array should have
+      If each Element object has an array data, all the array should have
       the same length.
       <dl class="property required_ext">
         <dt class="property required_ext">Required property (first)</dt>

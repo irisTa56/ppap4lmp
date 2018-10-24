@@ -240,34 +240,35 @@ var sectionId = 'dynsection-0';
 <g id="node8" class="node">
 <title>Node7</title>
 <g id="a_node8"><a xlink:href="classProTimeCorrelationInMolecule.html" target="_top" xlink:title="ProTimeCorrelationInMolecule computes time correlation function of atom&#45;to&#45;atom vector in each molecu...">
-<polygon fill="#ffffff" stroke="#000000" points="778,-358.5 778,-580.5 946,-580.5 946,-358.5 778,-358.5"/>
-<text text-anchor="middle" x="862" y="-568.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ProTimeCorrelationInMolecule</text>
-<polyline fill="none" stroke="#000000" points="778,-561.5 946,-561.5 "/>
-<text text-anchor="start" x="786" y="-549.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; index1_in_mol</text>
-<text text-anchor="start" x="786" y="-538.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; index2_in_mol</text>
-<text text-anchor="start" x="786" y="-527.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; target_moltype</text>
-<text text-anchor="start" x="786" y="-516.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; initial_vectors</text>
-<text text-anchor="start" x="786" y="-505.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; coefficients_traj</text>
-<text text-anchor="start" x="786" y="-494.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; coefficients_array</text>
-<text text-anchor="start" x="786" y="-483.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; time_correlation_function</text>
-<polyline fill="none" stroke="#000000" points="778,-476.5 946,-476.5 "/>
-<text text-anchor="start" x="786" y="-464.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ProTimeCorrelationInMolecule()</text>
-<text text-anchor="start" x="786" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~ProTimeCorrelationInMolecule()</text>
-<text text-anchor="start" x="786" y="-442.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ prepare()</text>
-<text text-anchor="start" x="786" y="-431.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ finish()</text>
-<text text-anchor="start" x="786" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_indices()</text>
-<text text-anchor="start" x="786" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_moltype()</text>
-<text text-anchor="start" x="786" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_coefficients_array()</text>
-<text text-anchor="start" x="786" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_time_correlation</text>
-<text text-anchor="start" x="786" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_function()</text>
-<text text-anchor="start" x="786" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># run_impl()</text>
+<polygon fill="#ffffff" stroke="#000000" points="778,-353 778,-586 946,-586 946,-353 778,-353"/>
+<text text-anchor="middle" x="862" y="-574" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">ProTimeCorrelationInMolecule</text>
+<polyline fill="none" stroke="#000000" points="778,-567 946,-567 "/>
+<text text-anchor="start" x="786" y="-555" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; index1_in_mol</text>
+<text text-anchor="start" x="786" y="-544" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; index2_in_mol</text>
+<text text-anchor="start" x="786" y="-533" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; target_moltype</text>
+<text text-anchor="start" x="786" y="-522" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; initial_vectors</text>
+<text text-anchor="start" x="786" y="-511" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; initial_reciprocal</text>
+<text text-anchor="start" x="786" y="-500" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_norm2</text>
+<text text-anchor="start" x="786" y="-489" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; coefficients_traj</text>
+<text text-anchor="start" x="786" y="-478" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; coefficients_array</text>
+<text text-anchor="start" x="786" y="-467" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; time_correlation_function</text>
+<polyline fill="none" stroke="#000000" points="778,-460 946,-460 "/>
+<text text-anchor="start" x="786" y="-448" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ProTimeCorrelationInMolecule()</text>
+<text text-anchor="start" x="786" y="-437" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~ProTimeCorrelationInMolecule()</text>
+<text text-anchor="start" x="786" y="-426" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ prepare()</text>
+<text text-anchor="start" x="786" y="-415" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ finish()</text>
+<text text-anchor="start" x="786" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_indices()</text>
+<text text-anchor="start" x="786" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_moltype()</text>
+<text text-anchor="start" x="786" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_coefficients_array()</text>
+<text text-anchor="start" x="786" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_time_correlation()</text>
+<text text-anchor="start" x="786" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># run_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node0&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M599.6183,-699.4316C650.0059,-679.3042 718.8463,-646.6672 769,-603 776.7757,-596.2299 784.2247,-588.6765 791.282,-580.7008"/>
+<path fill="none" stroke="#191970" d="M599.6183,-699.4316C650.0059,-679.3042 718.8463,-646.6672 769,-603 774.9649,-597.8065 780.7376,-592.1521 786.2887,-586.1996"/>
 <polygon fill="none" stroke="#191970" points="598.1422,-696.2511 590.1158,-703.167 600.7031,-702.7659 598.1422,-696.2511"/>
 </g>
 <!-- Node8 -->

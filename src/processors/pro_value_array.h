@@ -72,7 +72,7 @@ class ProValueArray : public Processor {
 
     @param elems
       List of Element objects.
-      If each Element object is an array, all the array should have
+      If each Element object has an array data, all the array should have
       the same length.
       <span class="remove_in_table">
         Elements of this parameter is put into #generators

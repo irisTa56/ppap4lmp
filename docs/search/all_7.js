@@ -18,7 +18,7 @@ var searchData=
   ['get_5f1d_5fint_5fpy',['get_1d_int_py',['../classElement.html#a8257b02b1e3b208f193b35d5d47b9af8',1,'Element']]],
   ['get_5f2d_5ffloat_5fpy',['get_2d_float_py',['../classElement.html#a6a62280eadd3d4e6bfe8c43082797733',1,'Element']]],
   ['get_5f2d_5fint_5fpy',['get_2d_int_py',['../classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906',1,'Element']]],
-  ['get_5fcoefficients_5farray',['get_coefficients_array',['../classProTimeCorrelationInMolecule.html#ae8270dfbd5bef7e63163c18b4b96360e',1,'ProTimeCorrelationInMolecule']]],
+  ['get_5fcoefficients_5farray',['get_coefficients_array',['../classProTimeCorrelationInMolecule.html#ae71fec8ee0fad42c92a6a0ca83416567',1,'ProTimeCorrelationInMolecule']]],
   ['get_5fconditions',['get_conditions',['../classProThicknessProfile.html#a0c97249e3399b2807fb70d2907c4e63e',1,'ProThicknessProfile']]],
   ['get_5fdata',['get_data',['../classElement.html#a47096a22005245db075143ff1ee1981c',1,'Element::get_data()'],['../classElement.html#a5881587aff2e2425e3110f35241e5ce8',1,'Element::get_data(const Json &amp;key_)']]],
   ['get_5fdata_5fpy',['get_data_py',['../classElement.html#a62989090a40d237e617bc6e5f5087388',1,'Element']]],
@@ -41,7 +41,7 @@ var searchData=
   ['get_5fresults',['get_results',['../classProData.html#a1451afb048021490fedb426701485eae',1,'ProData::get_results()'],['../classProValueArray.html#aff3bfffb4da42786dd43f470d4c605da',1,'ProValueArray::get_results()']]],
   ['get_5fsquared_5fgyration_5fradius',['get_squared_gyration_radius',['../classProRadialDistributionFunctionWithDeformation.html#a119eb9ea698ce90829fd2e0ab199d4fd',1,'ProRadialDistributionFunctionWithDeformation']]],
   ['get_5fsquared_5fgyration_5fradius_5ftraj',['get_squared_gyration_radius_traj',['../classProRadialDistributionFunctionWithDeformation.html#ad2105ca9bfcc3626bf8ecaa3b499cc6e',1,'ProRadialDistributionFunctionWithDeformation']]],
-  ['get_5ftime_5fcorrelation_5ffunction',['get_time_correlation_function',['../classProTimeCorrelationInMolecule.html#a4902d0c536403e63946d26e1e5002a2b',1,'ProTimeCorrelationInMolecule']]],
+  ['get_5ftime_5fcorrelation',['get_time_correlation',['../classProTimeCorrelationInMolecule.html#ae9ac42144d8be2fd4063a07c871994d1',1,'ProTimeCorrelationInMolecule']]],
   ['get_5fupdate_5fchain',['get_update_chain',['../classGenerator.html#aac65fc48a12c0ea6e7f87717d1779d1a',1,'Generator']]],
   ['goodbye',['goodbye',['../classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02',1,'Generator']]]
 ];
