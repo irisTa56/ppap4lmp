@@ -7,6 +7,7 @@ from test_ProRadialDistributionFunction import TestProRadialDistributionFunction
 from test_ProRadialDistributionFunctionWithDeformation import TestProRadialDistributionFunctionWithDeformation
 from test_ProDistanceInMolecule import TestProDistanceInMolecule
 from test_ProMeanSquareDisplacement import TestProMeanSquareDisplacement
+from test_ProTimeCorrelationInMolecule import TestProTimeCorrelationInMolecule
 
 suite = unittest.TestSuite()
 
@@ -47,3 +48,8 @@ suite.addTest(TestProDistanceInMolecule("test_square_rooted_distance"))
 suite.addTest(TestProMeanSquareDisplacement("test_error01"))
 suite.addTest(TestProMeanSquareDisplacement("test_dimension_3d"))
 suite.addTest(TestProMeanSquareDisplacement("test_dimension_2d"))
+
+suite.addTest(TestProTimeCorrelationInMolecule("test_error01"))
+suite.addTest(TestProTimeCorrelationInMolecule("test_error02"))
+suite.addTest(TestProTimeCorrelationInMolecule("test_error03"))
+suite.addTest(TestProTimeCorrelationInMolecule("test_rotate_stick"))
