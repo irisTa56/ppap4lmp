@@ -3,7 +3,7 @@ import traceback
 
 from random import shuffle
 
-from ppap4lmp import create, StaCustom, ProValueArray, InvOMP
+from ppap4lmp import create, StaCustom, ProValueArray, execute_omp
 
 class TestProValueArray(unittest.TestCase):
 
@@ -15,7 +15,7 @@ class TestProValueArray(unittest.TestCase):
     pro = ProValueArray(elems)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -31,7 +31,7 @@ class TestProValueArray(unittest.TestCase):
     pro.select("B")
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -48,7 +48,7 @@ class TestProValueArray(unittest.TestCase):
     pro.select("A")
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -65,7 +65,7 @@ class TestProValueArray(unittest.TestCase):
     pro = ProValueArray(elems)
     pro.select("A")
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     arr_A = pro.get_results()["A"]
 
@@ -90,7 +90,7 @@ class TestProValueArray(unittest.TestCase):
     pro = ProValueArray(elems)
     pro.select("A", "B")
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     arrs = pro.get_results()
 

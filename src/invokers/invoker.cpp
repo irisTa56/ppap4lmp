@@ -13,39 +13,23 @@ namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
 
-Invoker::Invoker(
-  const ShPtr<Processor> &proc)
+void Invoker::execute(const Vec<ShPtr<Processor>> &procs)
 {
-  processors = {proc};
-}
-
-/* ------------------------------------------------------------------ */
-
-Invoker::Invoker(
-  const Vec<ShPtr<Processor>> &procs)
-{
-  processors = procs;
-}
-
-/* ------------------------------------------------------------------ */
-
-void Invoker::execute()
-{
-  for (const auto &p : processors)
+  for (const auto &p : procs)
   {
     p->startup();
   }
 
   try
   {
-    for (const auto &p : processors)
+    for (const auto &p : procs)
     {
       p->prepare();
     }
 
-    execute_impl();
+    execute_impl(procs);
 
-    for (const auto &p : processors)
+    for (const auto &p : procs)
     {
       p->finish();
     }

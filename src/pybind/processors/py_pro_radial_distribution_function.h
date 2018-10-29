@@ -180,7 +180,7 @@ namespace pybind
     pro = ProRadialDistributionFunction(list(zip(atoms_traj, box_traj)))
     pro.set_bin(0.1, 200)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     rdf = pro.get_rdf()
     </code></pre>

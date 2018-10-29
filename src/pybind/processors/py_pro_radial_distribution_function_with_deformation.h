@@ -271,7 +271,7 @@ namespace pybind
     pro.set_bin(0.1, 200)
     pro.set_margin(2.0)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     print(pro.get_rdf())
     </code></pre>

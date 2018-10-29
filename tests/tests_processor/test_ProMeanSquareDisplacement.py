@@ -7,7 +7,7 @@ from random import uniform
 import numpy as np
 
 from ppap4lmp import \
-  create, StaCustom, ProMeanSquareDisplacement, InvOMP
+  create, StaCustom, ProMeanSquareDisplacement, execute_omp
 
 class TestProMeanSquareDisplacement(unittest.TestCase):
 
@@ -36,7 +36,7 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
     pro = ProMeanSquareDisplacement([atoms])
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -72,7 +72,7 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
 
     pro = ProMeanSquareDisplacement(atomses)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     expect = np.array([2.0*i*i for i in range(10)])
 
@@ -134,7 +134,7 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
     pro_xz = ProMeanSquareDisplacement(atomses)
     pro_xz.set_dimension(True, False, True)
 
-    InvOMP([pro_xyz, pro_xy, pro_yz, pro_xz]).execute()
+    execute_omp([pro_xyz, pro_xy, pro_yz, pro_xz])
 
     self.assertTrue(np.allclose(
       pro_xy.get_mean_square_displacement(),

@@ -125,7 +125,7 @@ namespace pybind
 
     pro = ProMeanSquareDisplacement(molecules_traj)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     msd = pro.get_distance2_array().mean()
     </code></pre>

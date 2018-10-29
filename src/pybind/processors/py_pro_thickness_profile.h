@@ -160,7 +160,7 @@ namespace pybind
     pro = ProThicknessProfile(list(zip(atoms_traj, box_traj)))
     pro.set_grid(100, 100)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     profiles = pro.get_profiles()
     </code></pre>

@@ -128,7 +128,7 @@ namespace pybind
     pro = ProTimeCorrelationInMolecule(list(zip(atoms_traj, molecules_traj)))
     pro.set_indices(0, 100)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     tcf = pro.get_time_correlation()
     </code></pre>

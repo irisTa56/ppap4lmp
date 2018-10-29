@@ -7,7 +7,7 @@ import numpy as np
 from random import uniform
 
 from ppap4lmp import \
-  create, StaCustom, ProRadialDistributionFunction, InvOMP
+  create, StaCustom, ProRadialDistributionFunction, execute_omp
 
 class TestProRadialDistributionFunction(unittest.TestCase):
 
@@ -21,7 +21,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
     pro = ProRadialDistributionFunction(atoms, box)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -38,7 +38,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
     pro = ProRadialDistributionFunction(atoms, box)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -74,7 +74,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro.set_bin(bin_width, num_bins)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertTrue(np.allclose(
       pro.get_r_axis(), np.arange(0.0, num_bins*bin_width, bin_width)))
@@ -128,7 +128,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro.bin_from_r_to_r_plus_dr()
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertTrue(np.allclose(
       pro.get_r_axis(), np.arange(0.0, num_bins*bin_width, bin_width)))
@@ -182,7 +182,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro.beyond_half_box_length()
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertTrue(np.allclose(
       pro.get_r_axis(), np.arange(0.0, num_bins*bin_width, bin_width)))
@@ -242,7 +242,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro.set_bin(bin_width, num_bins)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     expected_rdf = np.zeros(num_bins)
 

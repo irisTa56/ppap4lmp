@@ -153,8 +153,8 @@ __all__ = [
   "{}"
 ]
 """.format(
-  ", ".join(classes + functions),
-  "\", \n  \"".join(classes + functions)))
+  ", ".join(classes + list(set(functions))),
+  "\", \n  \"".join(classes + list(set(functions)))))
 
 #-----------------------------------------------------------------------
 

@@ -9,7 +9,7 @@ from scipy.stats import special_ortho_group
 from random import uniform
 
 from ppap4lmp import create, StaCustom, StaMolecules, \
-  AddCoMPosition, AddWrappedPosition, AddInertiaMoment, InvOMP, \
+  AddCoMPosition, AddWrappedPosition, AddInertiaMoment, execute_omp, \
   ProRadialDistributionFunctionWithDeformation, \
   ProRadialDistributionFunction, \
   StaDumpAtoms, StaDumpBox, StaBeads
@@ -49,7 +49,7 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
     pro = ProRDFWD(atoms, box)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -93,7 +93,7 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
 
     pro.set_bin(bin_width, num_bins)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertTrue(np.allclose(
       pro.get_r_axis(), np.arange(0.0, num_bins*bin_width, bin_width)))
@@ -153,7 +153,7 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
 
     pro.set_bin(bin_width, num_bins)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertTrue(np.allclose(
       pro.get_r_axis(), np.arange(0.0, num_bins*bin_width, bin_width)))
@@ -237,7 +237,7 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
     pro_with_modify.set_bin(bin_width, num_bins)
     pro_without_modify.set_bin(bin_width, num_bins)
 
-    InvOMP([pro_with_modify, pro_without_modify]).execute()
+    execute_omp([pro_with_modify, pro_without_modify])
 
     self.assertTrue(np.allclose(
       pro_with_modify.get_rdf(), pro_without_modify.get_rdf()))
@@ -281,7 +281,7 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
     pro.set_bin(bin_width, num_bins)
     pro.set_margin(2.0)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     Rg2s = pro.get_squared_gyration_radius()
 

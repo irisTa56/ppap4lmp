@@ -7,7 +7,7 @@ from random import uniform
 import numpy as np
 
 from ppap4lmp import \
-  create, StaCustom, StaMolecules, ProTimeCorrelationInMolecule, InvOMP
+  create, StaCustom, StaMolecules, ProTimeCorrelationInMolecule, execute_omp
 
 class TestProTimeCorrelationInMolecule(unittest.TestCase):
 
@@ -33,7 +33,7 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -48,7 +48,7 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -79,7 +79,7 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
     pro = ProTimeCorrelationInMolecule(list(zip(mols_traj, atoms_traj)))
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -136,7 +136,7 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
     pro = ProTimeCorrelationInMolecule(list(zip(mols_traj, atoms_traj)))
     pro.set_indices(0, 1)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     expects = np.array([np.cos(i*np.pi/180) for i in range(181)])
 

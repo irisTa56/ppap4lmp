@@ -19,44 +19,13 @@ namespace pybind
     @param m : A mutable reference to Python module.
     @return None.
 
-    <table class="py_constructor">
-      <caption class="py_constructor">
-        Python-side constructor of InvOMP.
-      </caption>
-      <tr class="py_constructor">
-        <th class="py_constructor">C++</th>
-        <th class="py_constructor" colspan="2">Description</th>
-        <th class="py_constructor" colspan="2">Parameters</th>
-      </tr>
-      <tr class="py_constructor">
-        <td class="py_constructor">
-          InvOMP::Invoker
-        </td>
-        <td class="py_constructor" colspan="2">
-          Constructor of InvOMP class,
-          which uses one Processor object.
-        </td>
-        <td class="py_constructor" colspan="2">
-          @copydetails InvOMP::Invoker(const ShPtr<Processor> &)
-        </td>
-      </tr>
-      <tr class="py_constructor">
-        <td class="py_constructor">
-          InvOMP::Invoker
-        </td>
-        <td class="py_constructor" colspan="2">
-          Constructor of InvOMP class,
-          which uses multiple Processor objects.
-        </td>
-        <td class="py_constructor" colspan="2">
-          @copydetails InvOMP::Invoker(const Vec<ShPtr<Processor>> &)
-        </td>
-      </tr>
-    </table>
+    Constructor of InvOMP class is hidden from Python.
+    A Python-side function \b execute_omp provides functionality
+    to create an InvOMP object and execute analysis using it.
 
     <table class="py_method">
       <caption class="py_method">
-        Python-side methods of InvOMP
+        Python-side functions
       </caption>
       <tr class="py_method">
         <th class="py_method">Name</th>
@@ -66,13 +35,26 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c execute</td>
-        <td class="py_method">InvOMP::execute</td>
+        <td class="py_method">\c execute_omp</td>
+        <td class="py_method">pybind::execute_omp</td>
         <td class="py_method">
-          @copybrief InvOMP::execute
+          @copybrief pybind::execute_omp(const ShPtr<Processor> &)
+        </td>
+        <td class="py_method">
+          @copydetails pybind::execute_omp(const ShPtr<Processor> &)
         </td>
         <td class="py_method">
           None.
+        </td>
+      </tr>
+        <tr class="py_method">
+        <td class="py_method">\c execute_omp</td>
+        <td class="py_method">pybind::execute_omp</td>
+        <td class="py_method">
+          @copybrief pybind::execute_omp(const Vec<ShPtr<Processor>> &)
+        </td>
+        <td class="py_method">
+          @copydetails pybind::execute_omp(const Vec<ShPtr<Processor>> &)
         </td>
         <td class="py_method">
           None.
@@ -81,6 +63,22 @@ namespace pybind
     </table>
   */
   void py_inv_omp(py::module &m);
+  /*!
+    @brief Create and use an InvOMP object to conduct analysis
+    programmed in a Processor's subclass object.
+    @param proc
+      A Processor object to be executed.
+    @return None.
+  */
+  void execute_omp(const ShPtr<Processor> &proc);
+  /*!
+    @brief Create and use an InvOMP object to conduct analysis
+    programmed in Processor's subclass objects.
+    @param procs
+      List of Processor objects to be executed.
+    @return None.
+  */
+  void execute_omp(const Vec<ShPtr<Processor>> &procs);
 }
 
 #endif

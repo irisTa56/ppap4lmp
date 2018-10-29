@@ -11,7 +11,5 @@ void pybind::py_invoker(py::module &m)
 {
   py::class_<
     Invoker,PyInvoker<>,ShPtr<Invoker>>(m, "Invoker")
-    .def(py::init<const ShPtr<Processor> &>())
-    .def(py::init<const Vec<ShPtr<Processor>> &>())
-    .def("execute", &Invoker::execute);
+    .def(py::init<>());
 }

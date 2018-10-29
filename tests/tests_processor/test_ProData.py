@@ -1,7 +1,7 @@
 import unittest
 import traceback
 
-from ppap4lmp import create, StaCustom, ProData, InvOMP
+from ppap4lmp import create, StaCustom, ProData, execute_omp
 
 class TestProData(unittest.TestCase):
 
@@ -13,7 +13,7 @@ class TestProData(unittest.TestCase):
     pro.select("C")
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -27,7 +27,7 @@ class TestProData(unittest.TestCase):
 
     pro = ProData(elems)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertEqual(pro.get_results(), data)
 
@@ -38,7 +38,7 @@ class TestProData(unittest.TestCase):
 
     pro = ProData(elems)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertEqual(pro.get_results(), data)
 
@@ -52,7 +52,7 @@ class TestProData(unittest.TestCase):
     pro = ProData(elems)
     pro.select("A", "B")
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertEqual(pro.get_results(), data)
 
@@ -67,6 +67,6 @@ class TestProData(unittest.TestCase):
     pro = ProData(elems)
     pro.select("A", "B")
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     self.assertEqual(pro.get_results(), data)

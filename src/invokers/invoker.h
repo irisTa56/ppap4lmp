@@ -17,64 +17,31 @@
 */
 class Invoker {
  protected:
-   /*!
-    Processor objects to be executed.
-    This member can be set only in the constructor.
-  */
-  Vec<ShPtr<Processor>> processors;
   /*!
     @brief Implementation how to execute a main part of analysis.s
     @return None.
   */
-  virtual void execute_impl() = 0;
+  virtual void execute_impl(
+    const Vec<ShPtr<Processor>> &procs) = 0;
  public:
+  //! Constructor of Invoker class (default).
+  Invoker() = default;
+  virtual ~Invoker() = default;
   /*!
-    @brief Constructor of Invoker class,
-    which uses one Processor object.
-
-    @param proc
-      A Processor object to be executed.
-
-    <span class="remove_in_table">
-      This constructor is thread-unsafe because it accesses its
-      members thread-globally. Ensure this constructor is not called in
-      a multithreading context. Please be careful that constructors of
-      subclasses of this class are also thread-unsafe.
-    </span>
-  */
-  Invoker(
-    const ShPtr<Processor> &proc);
-  /*!
-    @brief Constructor of Invoker class,
-    which uses multiple Processor objects.
+    @brief Execute analysis programmed in given Processor objects.
 
     @param procs
       List of Processor objects to be executed.
 
-    <span class="remove_in_table">
-      This constructor is thread-unsafe because it accesses its
-      members thread-globally. Ensure this constructor is not called in
-      a multithreading context. Please be careful that constructors of
-      subclasses of this class are also thread-unsafe.
-    </span>
-  */
-  Invoker(
-    const Vec<ShPtr<Processor>> &procs);
-  virtual ~Invoker() = default;
-  /*!
-    @brief Execute analysis programmed in Processor objects
-    owned by this object.
-
     @return None.
 
-    First, this method calls Processor::startup
-    of each object in #processors. Next, this method calls
-    Processor::prepare of each object in #processors, and then calls
+    First, this method calls Processor::startup.
+    Next, this method calls Processor::prepare, and then calls
     #execute_impl where computationally expensive calculations are
-    conducted. Finally, this method calls Processor::finish
-    of each object in #processors.
+    conducted. Finally, this method calls Processor::finish.
   */
-  void execute();
+  void execute(
+    const Vec<ShPtr<Processor>> &procs);
 };
 
 #endif

@@ -13,7 +13,7 @@ namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
 
-void InvOMP::execute_impl()
+void InvOMP::execute_impl(const Vec<ShPtr<Processor>> &procs)
 {
   #ifdef _OPENMP
   ut::log(
@@ -32,7 +32,7 @@ void InvOMP::execute_impl()
 
       try
       {
-        for (const auto &p : processors)
+        for (const auto &p : procs)
         {
           end = end && p->run();
         }

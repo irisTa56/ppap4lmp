@@ -138,6 +138,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac6f4ad874cc52ba2877cc6ca3a917596"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#ac6f4ad874cc52ba2877cc6ca3a917596">py_inv_omp</a> (py::module &amp;m)</td></tr>
 <tr class="memdesc:ac6f4ad874cc52ba2877cc6ca3a917596"><td class="mdescLeft"> </td><td class="mdescRight">Bind <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class to Python.  <a href="#ac6f4ad874cc52ba2877cc6ca3a917596">More...</a><br/></td></tr>
 <tr class="separator:ac6f4ad874cc52ba2877cc6ca3a917596"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a02afeaf0047e215f51d5a77f534cae93"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#a02afeaf0047e215f51d5a77f534cae93">execute_omp</a> (const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt; &amp;proc)</td></tr>
+<tr class="memdesc:a02afeaf0047e215f51d5a77f534cae93"><td class="mdescLeft"> </td><td class="mdescRight">Create and use an <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object to conduct analysis programmed in a <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a>'s subclass object.  <a href="#a02afeaf0047e215f51d5a77f534cae93">More...</a><br/></td></tr>
+<tr class="separator:a02afeaf0047e215f51d5a77f534cae93"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a06788a049bd228264419c3fd6b3c4a34"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#a06788a049bd228264419c3fd6b3c4a34">execute_omp</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt;&gt; &amp;procs)</td></tr>
+<tr class="memdesc:a06788a049bd228264419c3fd6b3c4a34"><td class="mdescLeft"> </td><td class="mdescRight">Create and use an <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object to conduct analysis programmed in <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a>'s subclass objects.  <a href="#a06788a049bd228264419c3fd6b3c4a34">More...</a><br/></td></tr>
+<tr class="separator:a06788a049bd228264419c3fd6b3c4a34"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:abed3a52f6c96fc1ece01e46b05bc127b"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepybind.html#abed3a52f6c96fc1ece01e46b05bc127b">py_invoker</a> (py::module &amp;m)</td></tr>
 <tr class="memdesc:abed3a52f6c96fc1ece01e46b05bc127b"><td class="mdescLeft"> </td><td class="mdescRight">Bind <a class="el" href="classInvoker.html" title="Invoker executes analysis programmed in one or more Processor objects. ">Invoker</a> class to Python.  <a href="#abed3a52f6c96fc1ece01e46b05bc127b">More...</a><br/></td></tr>
 <tr class="separator:abed3a52f6c96fc1ece01e46b05bc127b"><td class="memSeparator" colspan="2"> </td></tr>
@@ -205,6 +211,61 @@ Functions</h2></td></tr>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace for functions to bind C++ classes to Python. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a02afeaf0047e215f51d5a77f534cae93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02afeaf0047e215f51d5a77f534cae93">◆ </a></span>execute_omp() <span class="overload">[1/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void pybind::execute_omp </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt; &amp; </td>
+<td class="paramname"><em>proc</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create and use an <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object to conduct analysis programmed in a <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a>'s subclass object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">proc</td><td>A <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> object to be executed. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
+<p class="definition">Definition at line <a class="el" href="py__inv__omp_8cpp_source.html#l00027">27</a> of file <a class="el" href="py__inv__omp_8cpp_source.html">py_inv_omp.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="38" scrolling="no" src="namespacepybind_a02afeaf0047e215f51d5a77f534cae93_icgraph.svg" width="539"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</div>
+<a id="a06788a049bd228264419c3fd6b3c4a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06788a049bd228264419c3fd6b3c4a34">◆ </a></span>execute_omp() <span class="overload">[2/2]</span></h2>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void pybind::execute_omp </td>
+<td>(</td>
+<td class="paramtype">const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt;&gt; &amp; </td>
+<td class="paramname"><em>procs</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Create and use an <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object to conduct analysis programmed in <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a>'s subclass objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">procs</td><td>List of <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects to be executed. </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
+<p class="definition">Definition at line <a class="el" href="py__inv__omp_8cpp_source.html#l00032">32</a> of file <a class="el" href="py__inv__omp_8cpp_source.html">py_inv_omp.cpp</a>.</p>
+</div>
+</div>
 <a id="a282d3c032ad9ada4a068f117f42406f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a282d3c032ad9ada4a068f117f42406f9">◆ </a></span>py_add_child_ids()</h2>
 <div class="memitem">
@@ -1425,37 +1486,37 @@ Here is the caller graph for this function:</div>
 </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<a class="anchor" id=""></a>
-<table class="py_constructor">
-<caption class="py_constructor">Python-side constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a>. </caption>
-<tr class="py_constructor">
-<th class="py_constructor">C++ </th><th class="py_constructor" colspan="2">Description </th><th class="py_constructor" colspan="2">Parameters  </th></tr>
-<tr class="py_constructor">
-<td class="py_constructor"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class, which uses one <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> object.  </td><td class="py_constructor" colspan="2">
-<dl class="parameters">
-<dt>proc</dt>
-<dd>A <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> object to be executed.</dd>
-</dl>
-
- </td></tr>
-<tr class="py_constructor">
-<td class="py_constructor"><a class="el" href="classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba" title="Constructor of Invoker class, which uses one Processor object. ">InvOMP::Invoker</a> </td><td class="py_constructor" colspan="2">Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class, which uses multiple <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects.  </td><td class="py_constructor" colspan="2">
-<dl class="parameters">
-<dt>procs</dt>
-<dd>List of <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects to be executed.</dd>
-</dl>
-
- </td></tr>
-</table>
+<p>Constructor of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> class is hidden from Python. A Python-side function <b>execute_omp</b> provides functionality to create an <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object and execute analysis using it.</p>
 <a class="anchor" id=""></a>
 <table class="py_method">
-<caption class="py_method">Python-side methods of <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> </caption>
+<caption class="py_method">Python-side functions </caption>
 <tr class="py_method">
 <th class="py_method">Name </th><th class="py_method">C++ </th><th class="py_method">Description </th><th class="py_method">Parameters </th><th class="py_method">Return  </th></tr>
 <tr class="py_method">
-<td class="py_method"><code>execute</code> </td><td class="py_method"><a class="el" href="classInvoker.html#a72e473312201d41ea0711cea5346476c" title="Execute analysis programmed in Processor objects owned by this object. ">InvOMP::execute</a> </td><td class="py_method">Execute analysis programmed in <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects owned by this object.  </td><td class="py_method">None.  </td><td class="py_method">None.   </td></tr>
+<td class="py_method"><code>execute_omp</code> </td><td class="py_method"><a class="el" href="namespacepybind.html#a02afeaf0047e215f51d5a77f534cae93" title="Create and use an InvOMP object to conduct analysis programmed in a Processor's subclass object...">pybind::execute_omp</a> </td><td class="py_method">Create and use an <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object to conduct analysis programmed in a <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a>'s subclass object.  </td><td class="py_method">
+<dl class="parameters">
+<dt>proc</dt>
+<dd>A <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> object to be executed. </dd>
+</dl>
+
+
+</td><td class="py_method">None.   </td></tr>
+<tr class="py_method">
+<td class="py_method"><code>execute_omp</code> </td><td class="py_method"><a class="el" href="namespacepybind.html#a02afeaf0047e215f51d5a77f534cae93" title="Create and use an InvOMP object to conduct analysis programmed in a Processor's subclass object...">pybind::execute_omp</a> </td><td class="py_method">Create and use an <a class="el" href="classInvOMP.html" title="InvOMP is an Invoker's subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> object to conduct analysis programmed in <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a>'s subclass objects.  </td><td class="py_method">
+<dl class="parameters">
+<dt>procs</dt>
+<dd>List of <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects to be executed. </dd>
+</dl>
+
+
+</td><td class="py_method">None.   </td></tr>
 </table>
 <p class="definition">Definition at line <a class="el" href="py__inv__omp_8cpp_source.html#l00010">10</a> of file <a class="el" href="py__inv__omp_8cpp_source.html">py_inv_omp.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe frameborder="0" height="38" scrolling="no" src="namespacepybind_ac6f4ad874cc52ba2877cc6ca3a917596_cgraph.svg" width="344"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1487,11 +1548,6 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>Constructor of <a class="el" href="classInvoker.html" title="Invoker executes analysis programmed in one or more Processor objects. ">Invoker</a> class is hidden from Python, because the class is an abstract one. </p>
 <p class="definition">Definition at line <a class="el" href="py__invoker_8cpp_source.html#l00010">10</a> of file <a class="el" href="py__invoker_8cpp_source.html">py_invoker.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe frameborder="0" height="139" scrolling="no" src="namespacepybind_abed3a52f6c96fc1ece01e46b05bc127b_cgraph.svg" width="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1705,7 +1761,7 @@ molecules_traj = [
 pro = ProDistanceInMolecule(list(zip(atoms_traj, molecules_traj)))
 pro.set_indices(0, 100)
 
-InvOMP(pro).execute()
+execute_omp(pro)
 
 average_r2 = pro.get_distance2_array().mean()
 </code></pre>
@@ -1823,7 +1879,7 @@ molecules_traj = [
 
 pro = ProMeanSquareDisplacement(molecules_traj)
 
-InvOMP(pro).execute()
+execute_omp(pro)
 
 msd = pro.get_distance2_array().mean()
 </code></pre>
@@ -2019,7 +2075,7 @@ for atoms, box in zip(atoms_traj, box_traj):
 pro = ProRadialDistributionFunction(list(zip(atoms_traj, box_traj)))
 pro.set_bin(0.1, 200)
 
-InvOMP(pro).execute()
+execute_omp(pro)
 
 rdf = pro.get_rdf()
 </code></pre>
@@ -2262,7 +2318,7 @@ pro = ProRDFWD(list(zip(beads_traj, box_traj)))
 pro.set_bin(0.1, 200)
 pro.set_margin(2.0)
 
-InvOMP(pro).execute()
+execute_omp(pro)
 
 print(pro.get_rdf())
 </code></pre>
@@ -2431,7 +2487,7 @@ for atoms, box in zip(atoms_traj, box_traj):
 pro = ProThicknessProfile(list(zip(atoms_traj, box_traj)))
 pro.set_grid(100, 100)
 
-InvOMP(pro).execute()
+execute_omp(pro)
 
 profiles = pro.get_profiles()
 </code></pre>
@@ -2551,7 +2607,7 @@ molecules_traj = [
 pro = ProTimeCorrelationInMolecule(list(zip(atoms_traj, molecules_traj)))
 pro.set_indices(0, 100)
 
-InvOMP(pro).execute()
+execute_omp(pro)
 
 tcf = pro.get_time_correlation()
 </code></pre>
@@ -2650,7 +2706,7 @@ molecules_traj = [
 pro = ProValueArray(molecules_traj)
 pro.select("Rg^2")
 
-InvOMP(pro).execute()
+execute_omp(pro)
 
 Rg = sqrt(pro.get_results()["Rg^2"].mean())
 </code></pre>

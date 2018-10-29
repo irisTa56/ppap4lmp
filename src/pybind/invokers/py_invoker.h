@@ -21,10 +21,11 @@
 template <class INVO = Invoker>
 class PyInvoker : public INVO {
  protected:
-  void execute_impl() override
+  void execute_impl(
+    const Vec<ShPtr<Processor>> &procs) override
   {
     PYBIND11_OVERLOAD_PURE(
-      void, INVO, execute_impl, );
+      void, INVO, execute_impl, procs);
   }
  public:
   using INVO::INVO;

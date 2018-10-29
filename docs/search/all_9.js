@@ -11,7 +11,7 @@ var searchData=
   ['instance_5fcount',['instance_count',['../classElement.html#a814393093779993a8ecbc961e16fdd32',1,'Element']]],
   ['inv_5fomp_2ecpp',['inv_omp.cpp',['../inv__omp_8cpp.html',1,'']]],
   ['inv_5fomp_2eh',['inv_omp.h',['../inv__omp_8h.html',1,'']]],
-  ['invoker',['Invoker',['../classInvoker.html',1,'Invoker'],['../classInvoker.html#a155c803d4e88b7541fb5a281d3c52bba',1,'Invoker::Invoker(const ShPtr&lt; Processor &gt; &amp;proc)'],['../classInvoker.html#ad63da9c120d3efa6e2827f75a1e17caf',1,'Invoker::Invoker(const Vec&lt; ShPtr&lt; Processor &gt;&gt; &amp;procs)']]],
+  ['invoker',['Invoker',['../classInvoker.html',1,'Invoker'],['../classInvoker.html#a87690eb25f4d1d16899232b088021d83',1,'Invoker::Invoker()']]],
   ['invoker_2ecpp',['invoker.cpp',['../invoker_8cpp.html',1,'']]],
   ['invoker_2eh',['invoker.h',['../invoker_8h.html',1,'']]],
   ['invomp',['InvOMP',['../classInvOMP.html',1,'']]]

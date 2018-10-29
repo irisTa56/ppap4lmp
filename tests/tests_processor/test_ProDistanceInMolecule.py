@@ -8,7 +8,7 @@ from random import uniform
 import numpy as np
 
 from ppap4lmp import \
-  create, StaCustom, StaMolecules, ProDistanceInMolecule, InvOMP
+  create, StaCustom, StaMolecules, ProDistanceInMolecule, execute_omp
 
 class TestProDistanceInMolecule(unittest.TestCase):
 
@@ -34,7 +34,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
     pro = ProDistanceInMolecule(mols, atoms)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -49,7 +49,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
     pro = ProDistanceInMolecule(mols, atoms)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -100,7 +100,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
     pro = ProDistanceInMolecule(list(zip(molses, atomses)))
     pro.set_indices(0, 5)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     expects = np.array(
       [[20.0*(i+1)*(i+1)] * 10 for i in range(10)])
@@ -151,7 +151,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
     pro = ProDistanceInMolecule(list(zip(molses, atomses)))
     pro.set_indices(1, 5)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     expects = np.array(
       [[sqrt(12.0)*(i+1)] * 10 for i in range(10)])

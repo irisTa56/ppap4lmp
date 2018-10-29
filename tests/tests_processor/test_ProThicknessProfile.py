@@ -5,7 +5,7 @@ import numpy as np
 
 from math import sqrt
 
-from ppap4lmp import create, StaCustom, ProThicknessProfile, InvOMP
+from ppap4lmp import create, StaCustom, ProThicknessProfile, execute_omp
 
 class TestProThicknessProfile(unittest.TestCase):
 
@@ -19,7 +19,7 @@ class TestProThicknessProfile(unittest.TestCase):
     pro = ProThicknessProfile(atoms, box)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -36,7 +36,7 @@ class TestProThicknessProfile(unittest.TestCase):
     pro = ProThicknessProfile(atoms, box)
 
     try:
-      InvOMP(pro).execute()
+      execute_omp(pro)
     except SystemError:
       msg = traceback.format_exc()
       self.assertEqual(
@@ -58,7 +58,7 @@ class TestProThicknessProfile(unittest.TestCase):
     pro = ProThicknessProfile(list(zip(atoms, box)))
     pro.set_grid(20, 30)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     conditions = pro.get_conditions()
 
@@ -90,7 +90,7 @@ class TestProThicknessProfile(unittest.TestCase):
     pro.set_grid(20, 30)
     pro.set_offset(20.0)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     conditions = pro.get_conditions()
 
@@ -122,7 +122,7 @@ class TestProThicknessProfile(unittest.TestCase):
     pro.set_grid(20, 30)
     pro.shift_half_delta()
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     conditions = pro.get_conditions()
 

@@ -9,7 +9,27 @@
 
 void pybind::py_inv_omp(py::module &m)
 {
-  py::class_<InvOMP,PyInvoker<InvOMP>,Invoker,ShPtr<InvOMP>>(m, "InvOMP")
-    .def(py::init<ShPtr<Processor>>())
-    .def(py::init<Vec<ShPtr<Processor>>>());
+  m.def(
+    "execute_omp",
+    py::overload_cast<const ShPtr<Processor> &>(&pybind::execute_omp)
+  );
+
+  m.def(
+    "execute_omp",
+    py::overload_cast<const Vec<ShPtr<Processor>> &>(&pybind::execute_omp)
+  );
+
+  py::class_<
+    InvOMP,PyInvoker<InvOMP>,Invoker,ShPtr<InvOMP>>(m, "InvOMP")
+    .def(py::init<>());
+}
+
+void pybind::execute_omp(const ShPtr<Processor> &proc)
+{
+  ShPtr<Invoker>(new InvOMP())->execute({proc});
+}
+
+void pybind::execute_omp(const Vec<ShPtr<Processor>> &procs)
+{
+  ShPtr<Invoker>(new InvOMP())->execute(procs);
 }

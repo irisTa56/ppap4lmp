@@ -33,6 +33,9 @@ class InvOMP : public Invoker {
   /*!
     @brief This method overrides Invoker::execute_impl.
 
+    @param procs
+      List of Processor objects to be executed.
+
     This method calls Processor::run in parallel. Note that exceptions
     (runtime errors) thrown inside the parallel scope must be caught
     in the same scope.
@@ -40,7 +43,8 @@ class InvOMP : public Invoker {
     to a thread-global variable, older error messages are overwritten
     by newer one thrown in another thread.
   */
-  virtual void execute_impl() override;
+  virtual void execute_impl(
+    const Vec<ShPtr<Processor>> &procs) override;
  public:
   using Invoker::Invoker;
   virtual ~InvOMP() = default;

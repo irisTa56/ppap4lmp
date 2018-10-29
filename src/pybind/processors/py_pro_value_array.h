@@ -113,7 +113,7 @@ namespace pybind
     pro = ProValueArray(molecules_traj)
     pro.select("Rg^2")
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     Rg = sqrt(pro.get_results()["Rg^2"].mean())
     </code></pre>

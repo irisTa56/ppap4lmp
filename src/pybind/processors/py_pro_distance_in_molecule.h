@@ -142,7 +142,7 @@ namespace pybind
     pro = ProDistanceInMolecule(list(zip(atoms_traj, molecules_traj)))
     pro.set_indices(0, 100)
 
-    InvOMP(pro).execute()
+    execute_omp(pro)
 
     average_r2 = pro.get_distance2_array().mean()
     </code></pre>
