@@ -71,13 +71,7 @@
 
     pro -->> user : object
 
-    user ->> inv : create with Processor objects
-
-    note over inv : Store the Processor objects
-
-    inv -->> user : object
-
-    user ->> inv : execute
+    user ->> inv : execute with Processor objects
 
     loop over Generator objects
       inv ->> pro : run

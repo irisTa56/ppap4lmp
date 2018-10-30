@@ -139,13 +139,7 @@ Schematic Sequence Diagram</h1>
 
   pro --&gt;&gt; user : object
 
-  user -&gt;&gt; inv : create with Processor objects
-
-  note over inv : Store the Processor objects
-
-  inv --&gt;&gt; user : object
-
-  user -&gt;&gt; inv : execute
+  user -&gt;&gt; inv : execute with Processor objects
 
   loop over Generator objects
     inv -&gt;&gt; pro : run
