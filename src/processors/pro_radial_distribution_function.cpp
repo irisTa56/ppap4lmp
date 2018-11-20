@@ -130,7 +130,7 @@ void ProRadialDistributionFunction::run_impl(
 
           if (limits(1) < abs(dy)) continue;
 
-          for (int iz = shift_z.first; iz <= shift_x.second; ++iz)
+          for (int iz = shift_z.first; iz <= shift_z.second; ++iz)
           {
             auto dz = dr_original(2) + iz*length(2);
 
@@ -144,7 +144,6 @@ void ProRadialDistributionFunction::run_impl(
 
             auto r_index = bin_from_r ?
               floor(r*reciprocal_width) : round(r*reciprocal_width);
-
 
             /* NOTE:
               Adding 2 (not 1) is for taking both directions

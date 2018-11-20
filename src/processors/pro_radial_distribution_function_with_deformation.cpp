@@ -138,7 +138,7 @@ void ProRDFWD::run_impl(
 
           if (limits(1) < abs(dy)) continue;
 
-          for (int iz = shift_z.first; iz <= shift_x.second; ++iz)
+          for (int iz = shift_z.first; iz <= shift_z.second; ++iz)
           {
             auto dz = dr_original(2) + iz*length(2);
 
