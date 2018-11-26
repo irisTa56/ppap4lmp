@@ -85,6 +85,7 @@ void ProRDFWD::run_impl(
 
   auto reciprocal_width = 1.0 / bin_width;
 
+  double one_third = 1.0 / 3.0;
   double two_thirds = 2.0 / 3.0;
 
   // loop over all pairs of beads
@@ -179,8 +180,8 @@ void ProRDFWD::run_impl(
             }
 
             auto r_modified = r + (
-              (sqrt(Rg2_i) - sqrt(Rg2_para_i)) +
-              (sqrt(Rg2_j) - sqrt(Rg2_para_j)));
+              (sqrt(one_third*Rg2_i) - sqrt(one_third*Rg2_para_i)) +
+              (sqrt(one_third*Rg2_j) - sqrt(one_third*Rg2_para_j)));
 
             /* NOTE:
               The below lines check if the margin is efficiently large;
