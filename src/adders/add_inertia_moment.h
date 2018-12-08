@@ -88,6 +88,7 @@ class AddInertiaMoment : public Adder {
         - \c xu : float
         - \c yu : float
         - \c zu : float
+        - <c>atom-weights</c> : array of floats (optional)
       </dd>
     </dl>
   */

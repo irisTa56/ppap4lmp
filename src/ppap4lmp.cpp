@@ -238,6 +238,17 @@
 
   @copydetails pybind::py_utils
 
+
+
+  @section property_list_sec Properties To Be Added
+
+  <table class="properties_list">
+    <tr>
+      <th class="properties_list">Class</th>
+      <th class="properties_list" colspan="5">Property Names</th>
+    </tr>
+  </table>
+
   <hr/>
 
   @author Takayuki Kobayashi

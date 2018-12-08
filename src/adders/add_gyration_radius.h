@@ -35,20 +35,20 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - \c Rg^2 : float
-        - \c Rg^2(y+z) : float
-        - \c Rg^2(z+x) : float
-        - \c Rg^2(x+y) : float
-        - \c Rg^2(x) : float
-        - \c Rg^2(y) : float
-        - \c Rg^2(z) : float
-        - \c Rg : float (optional)
-        - \c Rg(y+z) : float (optional)
-        - \c Rg(z+x) : float (optional)
-        - \c Rg(x+y) : float (optional)
-        - \c Rg(x) : float (optional)
-        - \c Rg(y) : float (optional)
-        - \c Rg(z) : float (optional)
+        - <c>Rg^2</c> : float
+        - <c>Rg^2(y+z)</c> : float
+        - <c>Rg^2(z+x)</c> : float
+        - <c>Rg^2(x+y)</c> : float
+        - <c>Rg^2(x)</c> : float
+        - <c>Rg^2(y)</c> : float
+        - <c>Rg^2(z)</c> : float
+        - <c>Rg</c> : float (optional)
+        - <c>Rg(y+z)</c> : float (optional)
+        - <c>Rg(z+x)</c> : float (optional)
+        - <c>Rg(x+y)</c> : float (optional)
+        - <c>Rg(x)</c> : float (optional)
+        - <c>Rg(y)</c> : float (optional)
+        - <c>Rg(z)</c> : float (optional)
       </dd>
     </dl>
 

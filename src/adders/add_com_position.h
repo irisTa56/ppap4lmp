@@ -84,6 +84,7 @@ class AddCoMPosition : public Adder {
       <dt class="property required">Required property</dt>
       <dd class="property required">
         - <c>atom-ids</c> : array of integers
+        - <c>atom-weights</c> : array of floats (optional)
       </dd>
     </dl>
   */

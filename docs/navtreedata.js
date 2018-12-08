@@ -70,7 +70,8 @@ var NAVTREE =
           [ "InvOMP", "index.html#python_py_inv_omp", null ]
         ] ],
         [ "Utilities", "index.html#python_sec_utils", null ]
-      ] ]
+      ] ],
+      [ "Properties To Be Added", "index.html#property_list_sec", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -107,7 +108,7 @@ var NAVTREEINDEX =
 ".html",
 "classProRadialDistributionFunction.html#a55a0157cec820775d58a7beae942e90c",
 "gen__dict_8cpp.html",
-"py__pro__thickness__profile_8cpp_source.html"
+"py__pro__thickness__profile_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

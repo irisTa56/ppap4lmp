@@ -54,7 +54,7 @@ h3.main_page::after {
 
 /* Table */
 
-table.py_constructor, table.py_method {
+table.py_constructor, table.py_method, table.properties_list {
   width: 100%;
   min-width: 1000px;
   table-layout: fixed;
@@ -65,6 +65,11 @@ table.py_constructor, table.py_method {
 table.py_constructor, th.py_constructor, td.py_constructor,
 table.py_method, th.py_method, td.py_method {
   border: 1px solid black;
+}
+
+table.properties_list, th.properties_list, td.properties_list {
+  border: 1px solid black;
+  padding: 10px;
 }
 
 th.py_constructor {

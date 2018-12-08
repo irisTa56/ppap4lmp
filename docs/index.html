@@ -678,7 +678,8 @@ AddCoMPosition</h3>
 <dl class="property required">
 <dt class="property required main_page">Required property </dt>
 <dd class="property required main_page"><ul>
-<li><code>atom-ids</code> : array of integers  </li>
+<li><code>atom-ids</code> : array of integers</li>
+<li><code>atom-weights</code> : array of floats (optional)  </li>
 </ul>
 </dd>
 </dl>
@@ -725,16 +726,16 @@ AddGyrationRadius</h3>
 <dt class="property added main_page">Property to be added </dt>
 <dd class="property added main_page"><ul>
 <li><code>Rg^2</code> : float</li>
-<li><code>Rg^2</code>(y+z) : float</li>
-<li><code>Rg^2</code>(z+x) : float</li>
-<li><code>Rg^2</code>(x+y) : float</li>
-<li><code>Rg^2</code>(x) : float</li>
-<li><code>Rg^2</code>(y) : float</li>
-<li><code>Rg^2</code>(z) : float</li>
+<li><code>Rg^2(y+z)</code> : float</li>
+<li><code>Rg^2(z+x)</code> : float</li>
+<li><code>Rg^2(x+y)</code> : float</li>
+<li><code>Rg^2(x)</code> : float</li>
+<li><code>Rg^2(y)</code> : float</li>
+<li><code>Rg^2(z)</code> : float</li>
 <li><code>Rg</code> : float (optional)</li>
-<li><code>Rg</code>(y+z) : float (optional)</li>
-<li><code>Rg</code>(z+x) : float (optional)</li>
-<li><code>Rg</code>(x+y) : float (optional)</li>
+<li><code>Rg(y+z)</code> : float (optional)</li>
+<li><code>Rg(z+x)</code> : float (optional)</li>
+<li><code>Rg(x+y)</code> : float (optional)</li>
 <li><code>Rg(x)</code> : float (optional)</li>
 <li><code>Rg(y)</code> : float (optional)</li>
 <li><code>Rg(z)</code> : float (optional)  </li>
@@ -808,7 +809,8 @@ AddInertiaMoment</h3>
 <li><code>atom-ids</code> : array of integers</li>
 <li><code>xu</code> : float</li>
 <li><code>yu</code> : float</li>
-<li><code>zu</code> : float  </li>
+<li><code>zu</code> : float</li>
+<li><code>atom-weights</code> : array of floats (optional)  </li>
 </ul>
 </dd>
 </dl>
@@ -1689,13 +1691,13 @@ ProRadialDistributionFunctionWithDeformation</h3>
 <li><code>x</code> : float</li>
 <li><code>y</code> : float</li>
 <li><code>z</code> : float <span class="remove_in_rdf"></span></li>
-<li><span class="remove_in_rdf"><code>mass</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_xx</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_yy</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_zz</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_xy</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_xz</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_yz</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>mass</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_xx</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_yy</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_zz</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_xy</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_xz</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_yz</code> : float  </span></li>
 <li><code>special-bonds</code> : array of integers (optional)  </li>
 </ul>
 </dd>
@@ -1732,13 +1734,13 @@ ProRadialDistributionFunctionWithDeformation</h3>
 <li><code>x</code> : float</li>
 <li><code>y</code> : float</li>
 <li><code>z</code> : float <span class="remove_in_rdf"></span></li>
-<li><span class="remove_in_rdf"><code>mass</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_xx</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_yy</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_zz</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_xy</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_xz</code> : float</span></li>
-<li><span class="remove_in_rdf"><code>I_yz</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>mass</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_xx</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_yy</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_zz</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_xy</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_xz</code> : float </span></li>
+<li><span class="remove_in_rdf"><code>I_yz</code> : float  </span></li>
 <li><code>special-bonds</code> : array of integers (optional)  </li>
 </ul>
 </dd>
@@ -2226,6 +2228,76 @@ Utilities</h2>
 
 
  </td><td class="py_method">None.   </td></tr>
+</table>
+<h1 class="main_page"><a class="anchor" id="property_list_sec"></a>
+Properties To Be Added</h1>
+<table class="properties_list">
+<tr>
+<th class="properties_list">Class </th><th class="properties_list" colspan="5">Property Names  </th></tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classStaBeads.html" title="StaBeads sets properties for beads using mapping (coarse-graining) scheme for each molecule...">StaBeads</a></td>
+<td class="properties_list" colspan="5"><code>id</code>, <code>mol</code>, <code>atom-ids</code>, <code>type</code>, <code>atom-weights</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a></td>
+<td class="properties_list" colspan="5"></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classStaCustom.html" title="StaCustom sets an user-defined Json object to a new Element object as its Element::data. ">StaCustom</a></td>
+<td class="properties_list" colspan="5"></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classStaDumpAtoms.html" title="StaDumpAtoms reads a Lammps' dump file and sets properties for atoms. ">StaDumpAtoms</a></td>
+<td class="properties_list" colspan="5"><code>ITEM: ATOMS</code> — in Lammps DUMP file</td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classStaDumpBox.html" title="StaDumpBox reads a Lammps' dump file and sets properties for simulation box. ">StaDumpBox</a></td>
+<td class="properties_list" colspan="5"><code>lo_z</code>, <code>hi_z</code>, <code>periodic_y</code>, <code>lo_x</code>, <code>lo_y</code>, <code>hi_x</code>, <code>periodic_x</code>, <code>hi_y</code>, <code>periodic_z</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. ">StaMolecules</a></td>
+<td class="properties_list" colspan="5"><code>id</code>, <code>atom-ids</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a></td>
+<td class="properties_list" colspan="5"><code>[child_name]-ids</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a></td>
+<td class="properties_list" colspan="5"><code>[child_name]-ys</code>, <code>[child_name]-xs</code>, <code>[child_name]-zs</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddCoMPosition.html" title="AddCoMPosition adds center of mass to an Element object as its unwrapped position. ">AddCoMPosition</a></td>
+<td class="properties_list" colspan="5"><code>xu</code>, <code>mass</code>, <code>yu</code>, <code>zu</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a></td>
+<td class="properties_list" colspan="5"><code>Rg^2(x+y)</code>, <code>Rg(x+y)</code>, <code>Rg^2(y+z)</code>, <code>Rg^2(y)</code>, <code>Rg(z)</code>, <code>Rg^2(x)</code>, <code>Rg</code>, <code>Rg^2</code>, <code>Rg^2(z)</code>, <code>Rg(x)</code>, <code>Rg(y+z)</code>, <code>Rg^2(z+x)</code>, <code>Rg(z+x)</code>, <code>Rg(y)</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a></td>
+<td class="properties_list" colspan="5"><code>I_xy</code>, <code>I_xx</code>, <code>I_yy</code>, <code>I_zz</code>, <code>I_yz</code>, <code>I_xz</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a></td>
+<td class="properties_list" colspan="5"><code>[key_new]</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a></td>
+<td class="properties_list" colspan="5"><code>I_values</code>, <code>S_z</code>, <code>I_vectors</code>, <code>S_y</code>, <code>S_x</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a></td>
+<td class="properties_list" colspan="5"></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddSpecialBonds.html" title="AddSpecialBonds adds special bonds. ">AddSpecialBonds</a></td>
+<td class="properties_list" colspan="5"><code>special-bonds</code></td>
+</tr>
+ <tr>
+<td class="properties_list"><a class="el" href="classAddWrappedPosition.html" title="AddWrappedPosition adds wrapped positions for an Element object. ">AddWrappedPosition</a></td>
+<td class="properties_list" colspan="5"><code>x</code>, <code>z</code>, <code>y</code></td>
+</tr>
 </table>
 <hr/>
 <dl class="section author"><dt>Author</dt><dd>Takayuki Kobayashi </dd></dl>

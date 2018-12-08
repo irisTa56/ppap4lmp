@@ -103,7 +103,33 @@ def modify_table(soup):
         except AttributeError:
           pass
 
+def get_properties_to_be_adde(soup):
+
+  name_alias = {
+    "<code>ITEM: ATOMS</code>": "<code>ITEM: ATOMS</code> &mdash in Lammps DUMP file"
+  }
+
+  target_table = soup.find("table", class_="properties_list")
+
+  for table in soup.find_all("table", class_="py_constructor"):
+
+    class_name = table.a.text
+
+    if class_name.startswith("Sta") or class_name.startswith("Add"):
+
+      target_table.contents.append(BeautifulSoup("""  <tr>
+    <td class="properties_list">{}</td>
+    <td class="properties_list" colspan="5">{}</td>
+  </tr>
+""".format(str(table.a), ", ".join(list(set([
+        name_alias[str(code)] if str(code) in name_alias else str(code)
+        for dd in table.find_all("dd", class_="added")
+        for code in dd.find_all("code")
+      ])))), "html.parser"))
+
 modify_table(mainpage)
+
+get_properties_to_be_adde(mainpage)
 
 mainpage.body.append(BeautifulSoup("""
   <script src="js/mermaid.min.js"></script>

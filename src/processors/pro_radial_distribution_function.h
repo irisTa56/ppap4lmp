@@ -117,15 +117,15 @@ class ProRadialDistributionFunction : public Processor {
           - \c y : float
           - \c z : float
           <span class="remove_in_rdf">
-          - \c mass : float
-          - \c I_xx : float
-          - \c I_yy : float
-          - \c I_zz : float
-          - \c I_xy : float
-          - \c I_xz : float
-          - \c I_yz : float
+          - \c mass : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_xx : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_yy : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_zz : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_xy : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_xz : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_yz : float <span class="remove_in_table">(for deformation)</span>
           </span>
-          - \c special-bonds : array of integers (optional)
+          - <c>special-bonds</c> : array of integers (optional)
         </dd>
       </dl>
 
@@ -169,15 +169,15 @@ class ProRadialDistributionFunction : public Processor {
           - \c y : float
           - \c z : float
           <span class="remove_in_rdf">
-          - \c mass : float
-          - \c I_xx : float
-          - \c I_yy : float
-          - \c I_zz : float
-          - \c I_xy : float
-          - \c I_xz : float
-          - \c I_yz : float
+          - \c mass : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_xx : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_yy : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_zz : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_xy : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_xz : float <span class="remove_in_table">(for deformation)</span>
+          - \c I_yz : float <span class="remove_in_table">(for deformation)</span>
           </span>
-          - \c special-bonds : array of integers (optional)
+          - <c>special-bonds</c> : array of integers (optional)
         </dd>
       </dl>
       <dl class="property required_ext">

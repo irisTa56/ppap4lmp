@@ -69,7 +69,7 @@ class AddSpecialBonds : public Adder {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c atom-ids : array of integers
+          - <c>atom-ids</c> : array of integers
         </dd>
       </dl>
 
@@ -100,7 +100,7 @@ class AddSpecialBonds : public Adder {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c atom-ids : array of integers
+          - <c>atom-ids</c> : array of integers
         </dd>
       </dl>
 

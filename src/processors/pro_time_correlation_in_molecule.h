@@ -97,7 +97,7 @@ class ProTimeCorrelationInMolecule : public Processor {
         <dt class="property required_ext">Required property (first)</dt>
         <dd class="property required_ext">
           - \c id : integer
-          - \c atom-ids : array of integers
+          - <c>atom-ids</c> : array of integers
         </dd>
       </dl>
       <dl class="property required_ext">

@@ -59,9 +59,9 @@ class StaBeads : public Starter {
       <dd class="property added">
         - \c id : integer
         - \c mol : integer
-        - \c atom-ids : array of integers
+        - <c>atom-ids</c> : array of integers
         - \c type : integer (optional)
-        - \c atom-weights : array of floats (optional)
+        - <c>atom-weights</c> : array of floats (optional)
       </dd>
     </dl>
   */
@@ -84,7 +84,7 @@ class StaBeads : public Starter {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c atom-ids : array of integers
+          - <c>atom-ids</c> : array of integers
         </dd>
       </dl>
 
@@ -117,7 +117,7 @@ class StaBeads : public Starter {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c atom-ids : array of integers
+          - <c>atom-ids</c> : array of integers
         </dd>
       </dl>
 

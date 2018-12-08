@@ -33,7 +33,7 @@ class StaMolecules : public Starter {
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
         - \c id : integer
-        - \c atom-ids : array of integers
+        - <c>atom-ids</c> : array of integers
       </dd>
     </dl>
   */
