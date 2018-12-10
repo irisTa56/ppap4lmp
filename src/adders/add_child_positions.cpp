@@ -54,7 +54,7 @@ void AddChildPositions::compute_impl(
     auto tmp_y = Json::array();
     auto tmp_z = Json::array();
 
-    for (const auto &child_id : d[key_for_child_ids])
+    for (const int &child_id : d[key_for_child_ids])
     {
       auto &child = children[id2index_child[child_id]];
 

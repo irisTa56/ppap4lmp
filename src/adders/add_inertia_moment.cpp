@@ -91,7 +91,7 @@ void AddInertiaMoment::compute_without_weights(
 
     Matrix3d sum = Matrix3d::Zero();
 
-    for (const auto &id : d["atom-ids"])
+    for (const int &id : d["atom-ids"])
     {
       auto index = id2index_atom[id];
       auto mass = ms_atom(index);

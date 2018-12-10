@@ -84,7 +84,7 @@ void AddCoMPosition::compute_without_weights(
     double m_tmp = 0.0;
     RowArrayXd r_tmp = RowArrayXd::Zero(3);
 
-    for (const auto &id : d["atom-ids"])
+    for (const int &id : d["atom-ids"])
     {
       auto index = id2index_atom[id];
       auto mass = ms_atom(index);
