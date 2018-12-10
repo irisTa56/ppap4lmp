@@ -56,7 +56,7 @@ void ProRadialDistributionFunction::run_impl(
 
   auto &atoms = el_atoms->get_data();
 
-  bool special_bonds_exist = el_atoms->optional("special-bonds");
+  auto special_bonds_exist = el_atoms->optional("special-bonds");
 
   auto el_box = generators[index]->get_element("Box");
 

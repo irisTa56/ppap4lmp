@@ -127,7 +127,7 @@ void StaBeads::compute_impl(
 
       auto &ids_tmp = back["atom-ids"];
 
-      for (const int index : abst_bead["indices-in-mol"])
+      for (const int &index : abst_bead["indices-in-mol"])
       {
         ids_tmp.push_back(atom_ids.at(index));
       }

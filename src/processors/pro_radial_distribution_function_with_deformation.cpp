@@ -29,7 +29,7 @@ void ProRDFWD::run_impl(
 
   auto &beads = el_beads->get_data();
 
-  bool special_bonds_exist = el_beads->optional("special-bonds");
+  auto special_bonds_exist = el_beads->optional("special-bonds");
 
   auto el_box = generators[index]->get_element("Box");
 

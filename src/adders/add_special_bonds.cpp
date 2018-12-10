@@ -69,7 +69,7 @@ void AddSpecialBonds::compute_impl(
     {
       auto tmp = Json::array();
 
-      for (const int index: sbondses_in_mol[i])
+      for (const int &index: sbondses_in_mol[i])
       {
         tmp.push_back(atom_ids.at(index));
       }
