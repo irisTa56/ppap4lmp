@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -15,14 +20,8 @@ class TestAddWrappedPosition(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(AddWrappedPosition(box))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', "
-        + "'lo_x', 'lo_y', 'lo_z'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z'", atoms.get_data)
 
   def test_error02(self):
 
@@ -31,13 +30,8 @@ class TestAddWrappedPosition(unittest.TestCase):
       StaCustom([{"A": i, "B": i*i} for i in range(1000)]))
     atoms.append_updater(AddWrappedPosition(box))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'xu', 'yu', 'zu'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'xu', 'yu', 'zu'", atoms.get_data)
 
   def test_wrapping(self):
 
@@ -63,3 +57,14 @@ class TestAddWrappedPosition(unittest.TestCase):
     self.assertTrue(np.all(diff_x.round() == diff_x))
     self.assertTrue(np.all(diff_y.round() == diff_y))
     self.assertTrue(np.all(diff_z.round() == diff_z))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddWrappedPosition("test_error01"))
+  suite.addTest(TestAddWrappedPosition("test_error02"))
+  suite.addTest(TestAddWrappedPosition("test_wrapping"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

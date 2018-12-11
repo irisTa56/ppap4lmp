@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaCustom, StaMolecules, AddSpecialBonds
 
@@ -17,13 +22,8 @@ class TestAddSpecialBonds(unittest.TestCase):
 
     atoms.append_updater(AddSpecialBonds(moles, abst_special_bonds))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'atom-ids'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'atom-ids'", atoms.get_data)
 
   def test_error02(self):
 
@@ -38,14 +38,8 @@ class TestAddSpecialBonds(unittest.TestCase):
     atoms.append_updater(AddSpecialBonds(
       moles, {1: abst_special_bonds + [[0]], 2: abst_special_bonds }))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: The numbers of atoms in a molecule are "
-        + "inconsistent")
+    check_error_msg(
+      self, "RuntimeError: The numbers of atoms in a molecule are inconsistent", atoms.get_data)
 
   def test_exclude_angle(self):
 
@@ -80,3 +74,14 @@ class TestAddSpecialBonds(unittest.TestCase):
       else:
         self.assertEqual(
           d["special-bonds"], [myid+j for j in [-2, -1, 1, 2]])
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddSpecialBonds("test_error01"))
+  suite.addTest(TestAddSpecialBonds("test_error02"))
+  suite.addTest(TestAddSpecialBonds("test_exclude_angle"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

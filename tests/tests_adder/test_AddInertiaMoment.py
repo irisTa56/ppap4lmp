@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import \
   create, StaCustom, StaMolecules, AddCoMPosition, AddInertiaMoment
@@ -24,13 +29,8 @@ class TestAddInertiaMoment(unittest.TestCase):
     molecules.append_updater(
       AddInertiaMoment(create(StaCustom({"foo": 0, "bar": 1}))))
 
-    try:
-      molecules.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'id', 'mass', 'xu', 'yu', 'zu'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'id', 'mass', 'xu', 'yu', 'zu'", molecules.get_data)
 
   def test_error02(self):
 
@@ -38,13 +38,8 @@ class TestAddInertiaMoment(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
 
-    try:
-      molecules.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'xu', 'yu', 'zu'")
+    check_error_msg(
+      self,  "RuntimeError: Missing key(s) 'xu', 'yu', 'zu'", molecules.get_data)
 
   def test_isotropic(self):
 
@@ -59,3 +54,14 @@ class TestAddInertiaMoment(unittest.TestCase):
     self.assertEqual(data["I_yy"], data["I_zz"])
     self.assertEqual(data["I_xy"], data["I_xz"])
     self.assertEqual(data["I_xy"], data["I_yz"])
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddInertiaMoment("test_error01"))
+  suite.addTest(TestAddInertiaMoment("test_error02"))
+  suite.addTest(TestAddInertiaMoment("test_isotropic"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from copy import deepcopy
 from math import sqrt
@@ -25,13 +30,8 @@ class TestAddGyrationRadius(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddGyrationRadius())
 
-    try:
-      molecules.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'I_xx', 'I_yy', 'I_zz', 'mass'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'I_xx', 'I_yy', 'I_zz', 'mass'", molecules.get_data)
 
   def test_sqrted(self):
 
@@ -91,3 +91,14 @@ class TestAddGyrationRadius(unittest.TestCase):
         "I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz",
         "Rg^2", "Rg^2(y+z)", "Rg^2(z+x)", "Rg^2(x+y)",
         "Rg^2(x)", "Rg^2(y)", "Rg^2(z)"})
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddGyrationRadius("test_error01"))
+  suite.addTest(TestAddGyrationRadius("test_sqrted"))
+  suite.addTest(TestAddGyrationRadius("test_squared"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -20,13 +25,8 @@ class TestAddChildPositions(unittest.TestCase):
     moles = create(StaMolecules(atoms))
     moles.append_updater(AddChildPositions(atoms, "child"))
 
-    try:
-      moles.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'child-ids', 'xu', 'yu', 'zu'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'child-ids', 'xu', 'yu', 'zu'", moles.get_data)
 
   def test_random(self):
 
@@ -114,3 +114,14 @@ class TestAddChildPositions(unittest.TestCase):
 
       self.assertAlmostEqual(
         d["Rg^2"], sum([a*a for a in xyzs])/len(d["atom-ids"]))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddChildPositions("test_error01"))
+  suite.addTest(TestAddChildPositions("test_random"))
+  suite.addTest(TestAddChildPositions("test_gyration_radius"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

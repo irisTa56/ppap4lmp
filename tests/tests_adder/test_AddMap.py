@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaCustom, AddMap
 
@@ -10,26 +15,16 @@ class TestAddMap(unittest.TestCase):
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("dummy", "new", {1: 0}))
 
-    try:
-      elem.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'dummy'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'dummy'", elem.get_data)
 
   def test_error02(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("foo", "bar", {0: 1}))
 
-    try:
-      elem.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Key 'bar' already exists")
+    check_error_msg(
+      self, "RuntimeError: Key 'bar' already exists", elem.get_data)
 
   def test_nonarray(self):
 
@@ -67,3 +62,16 @@ class TestAddMap(unittest.TestCase):
 
     self.assertEqual(data_new, elem.get_data())
     self.assertEqual({"A", "B"}, elem.get_keys())
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddMap("test_error01"))
+  suite.addTest(TestAddMap("test_error02"))
+  suite.addTest(TestAddMap("test_nonarray"))
+  suite.addTest(TestAddMap("test_array"))
+  suite.addTest(TestAddMap("test_overwrite"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)
