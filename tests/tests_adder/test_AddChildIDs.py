@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import \
   create, StaCustom, StaDumpAtoms, StaMolecules, AddChildIDs
@@ -14,13 +19,8 @@ class TestAddChildIDs(unittest.TestCase):
     moles = create(StaCustom([{"id": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "molecule-id"))
 
-    try:
-      moles.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'molecule-id'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'molecule-id'", moles.get_data)
 
   def test_error02(self):
 
@@ -30,13 +30,8 @@ class TestAddChildIDs(unittest.TestCase):
     moles = create(StaCustom([{"index": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "mol"))
 
-    try:
-      moles.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'id'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'id'", moles.get_data)
 
   def test_2way_molecules(self):
 
@@ -58,3 +53,14 @@ class TestAddChildIDs(unittest.TestCase):
     mols2.append_updater(AddChildIDs(atoms, "atom", "mol"))
 
     self.assertEqual(mols1.get_data(), mols2.get_data())
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddChildIDs("test_error01"))
+  suite.addTest(TestAddChildIDs("test_error02"))
+  suite.addTest(TestAddChildIDs("test_2way_molecules"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

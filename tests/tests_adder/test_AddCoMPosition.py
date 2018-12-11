@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -19,13 +24,8 @@ class TestAddCoMPosition(unittest.TestCase):
 
     molecules.append_updater(AddCoMPosition(atoms))
 
-    try:
-      molecules.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'mass'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'mass'", molecules.get_data)
 
   def test_positions(self):
 
@@ -123,3 +123,14 @@ class TestAddCoMPosition(unittest.TestCase):
         expected_rs.append([float(ibead), 0.0, 10.0*imol])
 
     self.assertTrue(np.allclose(rs, np.array(expected_rs)))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddCoMPosition("test_error01"))
+  suite.addTest(TestAddCoMPosition("test_positions"))
+  suite.addTest(TestAddCoMPosition("test_beads"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

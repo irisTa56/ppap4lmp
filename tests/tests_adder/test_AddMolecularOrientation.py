@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -26,14 +31,8 @@ class TestAddMolecularOrientation(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddMolecularOrientation())
 
-    try:
-      molecules.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', "
-        + "'I_yz', 'I_zz'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz'", molecules.get_data)
 
   def test_isotropic(self):
 
@@ -70,3 +69,14 @@ class TestAddMolecularOrientation(unittest.TestCase):
     self.assertEqual(data["S_x"], 1.0)
     self.assertEqual(data["S_y"], -0.5)
     self.assertEqual(data["S_z"], -0.5)
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddMolecularOrientation("test_error01"))
+  suite.addTest(TestAddMolecularOrientation("test_isotropic"))
+  suite.addTest(TestAddMolecularOrientation("test_x_oriented"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

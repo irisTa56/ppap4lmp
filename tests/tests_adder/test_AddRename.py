@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -12,39 +17,24 @@ class TestAddRename(unittest.TestCase):
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("dummy", "new"))
 
-    try:
-      elem.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'dummy'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'dummy'", elem.get_data)
 
   def test_error02(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("foo", "bar"))
 
-    try:
-      elem.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Key 'bar' already exists")
+    check_error_msg(
+      self, "RuntimeError: Key 'bar' already exists", elem.get_data)
 
   def test_error03(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("foo", "id"))
 
-    try:
-      elem.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Adder cannot add 'id'")
+    check_error_msg(
+      self, "RuntimeError: Adder cannot add 'id'", elem.get_data)
 
   def test_nonarray(self):
 
@@ -79,3 +69,17 @@ class TestAddRename(unittest.TestCase):
 
     self.assertEqual(data_new, elem.get_data())
     self.assertEqual({"A", "B"}, elem.get_keys())
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestAddRename("test_error01"))
+  suite.addTest(TestAddRename("test_error02"))
+  suite.addTest(TestAddRename("test_error03"))
+  suite.addTest(TestAddRename("test_nonarray"))
+  suite.addTest(TestAddRename("test_array"))
+  suite.addTest(TestAddRename("test_overwrite"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)
