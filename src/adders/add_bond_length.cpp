@@ -2,8 +2,8 @@
   @file src/adders/add_bond_length.cpp
   @brief This file has an implementation of AddBondLength class,
   which is a subclass of Adder class.
-  @author Takayuki Kobayashi
-  @date 2018/07/13
+  @author Yang Juntao & Kawai Kento
+  @date 2018/12/06
 */
 
 #include "add_bond_length.h"
