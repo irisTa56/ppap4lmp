@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaCustom, ProData, execute_omp
 
@@ -12,13 +17,8 @@ class TestProData(unittest.TestCase):
     pro = ProData(elems)
     pro.select("C")
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'C'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'C'", execute_omp, pro)
 
   def test_without_select(self):
 
@@ -70,3 +70,14 @@ class TestProData(unittest.TestCase):
     execute_omp(pro)
 
     self.assertEqual(pro.get_results(), data)
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProData("test_error01"))
+  suite.addTest(TestProData("test_without_select"))
+  suite.addTest(TestProData("test_with_select"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

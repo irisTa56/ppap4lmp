@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from copy import deepcopy
 from random import uniform
@@ -35,13 +40,8 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
 
     pro = ProMeanSquareDisplacement([atoms])
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'mass'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'mass'", execute_omp, pro)
 
   def test_dimension_3d(self):
 
@@ -149,3 +149,14 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
       pro_xz.get_mean_square_displacement() +
       pro_yz.get_mean_square_displacement() +
       pro_xz.get_mean_square_displacement()))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProMeanSquareDisplacement("test_error01"))
+  suite.addTest(TestProMeanSquareDisplacement("test_dimension_3d"))
+  suite.addTest(TestProMeanSquareDisplacement("test_dimension_2d"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -18,13 +23,8 @@ class TestProThicknessProfile(unittest.TestCase):
 
     pro = ProThicknessProfile(atoms, box)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'radius'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'radius'", execute_omp, pro)
 
   def test_error02(self):
 
@@ -35,13 +35,8 @@ class TestProThicknessProfile(unittest.TestCase):
 
     pro = ProThicknessProfile(atoms, box)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'lo_x', 'lo_y'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'lo_x', 'lo_y'", execute_omp, pro)
 
   def test_20x30(self):
 
@@ -140,3 +135,16 @@ class TestProThicknessProfile(unittest.TestCase):
 
       self.assertTrue(np.allclose(
         p, np.full((20, 30), float(i) + addition)))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProThicknessProfile("test_error01"))
+  suite.addTest(TestProThicknessProfile("test_error02"))
+  suite.addTest(TestProThicknessProfile("test_20x30"))
+  suite.addTest(TestProThicknessProfile("test_20x30_with_offset"))
+  suite.addTest(TestProThicknessProfile("test_20x30_with_shift"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

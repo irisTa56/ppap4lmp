@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -13,13 +18,8 @@ class TestStaDumpAtoms(unittest.TestCase):
 
     atoms = create(StaDumpAtoms("dummy.file", 0))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: No such a file 'dummy.file'")
+    check_error_msg(
+      self, "RuntimeError: No such a file 'dummy.file'", atoms.get_data)
 
   def test_get_data(self):
 
@@ -169,3 +169,18 @@ class TestStaDumpAtoms(unittest.TestCase):
       d = data[idx]
       self.assertTrue(np.allclose(
         np.array([d[k] for k in keys]), arr[idx]))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestStaDumpAtoms("test_error01"))
+  suite.addTest(TestStaDumpAtoms("test_get_data"))
+  suite.addTest(TestStaDumpAtoms("test_get_keys"))
+  suite.addTest(TestStaDumpAtoms("test_get_1d_int"))
+  suite.addTest(TestStaDumpAtoms("test_get_1d_float"))
+  suite.addTest(TestStaDumpAtoms("test_get_2d_int"))
+  suite.addTest(TestStaDumpAtoms("test_get_2d_float"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

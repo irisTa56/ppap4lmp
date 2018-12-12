@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaDumpBox, StaDumpAtoms, StaMolecules
 
@@ -10,13 +15,8 @@ class TestStaMolecules(unittest.TestCase):
     molecules = create(StaMolecules(
       create(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))))
 
-    try:
-      molecules.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'id', 'mol'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'id', 'mol'", molecules.get_data)
 
   def test_get_data(self):
 
@@ -49,3 +49,14 @@ class TestStaMolecules(unittest.TestCase):
     molecules = create(StaMolecules(create(StaDumpAtoms(*arguments))))
 
     self.assertEqual(molecules.get_keys(), expectation)
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestStaMolecules("test_error01"))
+  suite.addTest(TestStaMolecules("test_get_data"))
+  suite.addTest(TestStaMolecules("test_get_keys"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

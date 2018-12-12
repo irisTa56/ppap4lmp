@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from random import shuffle
 
@@ -14,13 +19,8 @@ class TestProValueArray(unittest.TestCase):
 
     pro = ProValueArray(elems)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Selected value(s) for ProValueArray")
+    check_error_msg(
+      self, "RuntimeError: Selected value(s) for ProValueArray", execute_omp, pro)
 
   def test_error02(self):
 
@@ -30,13 +30,8 @@ class TestProValueArray(unittest.TestCase):
     pro = ProValueArray(elems)
     pro.select("B")
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'B'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'B'", execute_omp, pro)
 
   def test_error03(self):
 
@@ -47,13 +42,8 @@ class TestProValueArray(unittest.TestCase):
     pro = ProValueArray(elems)
     pro.select("A")
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Data sizes must be the same")
+    check_error_msg(
+      self, "RuntimeError: Data sizes must be the same", execute_omp, pro)
 
   def test_select_one(self):
 
@@ -101,3 +91,16 @@ class TestProValueArray(unittest.TestCase):
       for d in ds:
         self.assertEqual(arrs["A"][i][d["id"]], d["A"])
         self.assertEqual(arrs["B"][i][d["id"]], d["B"])
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProValueArray("test_error01"))
+  suite.addTest(TestProValueArray("test_error02"))
+  suite.addTest(TestProValueArray("test_error03"))
+  suite.addTest(TestProValueArray("test_select_one"))
+  suite.addTest(TestProValueArray("test_select_two"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

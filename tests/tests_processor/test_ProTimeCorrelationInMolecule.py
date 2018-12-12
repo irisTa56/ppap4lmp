@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from copy import deepcopy
 from random import uniform
@@ -32,13 +37,8 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
 
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'xu'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'xu'", execute_omp, pro)
 
   def test_error02(self):
 
@@ -47,13 +47,8 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
 
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'atom-ids'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'atom-ids'", execute_omp, pro)
 
   def test_error03(self):
 
@@ -78,14 +73,8 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
 
     pro = ProTimeCorrelationInMolecule(list(zip(mols_traj, atoms_traj)))
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Number of molecules and molecular types must "
-        + "be unchanged")
+    check_error_msg(
+      self, "RuntimeError: Number of molecules and molecular types must be unchanged", execute_omp, pro)
 
   def test_rotate_stick(self):
 
@@ -172,3 +161,15 @@ def rot(deg, n, v):
   q2 = list(v) + [0.0]
 
   return q_mult(q_mult(q1, q2), q_conjugate(q1))[:3]
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProTimeCorrelationInMolecule("test_error01"))
+  suite.addTest(TestProTimeCorrelationInMolecule("test_error02"))
+  suite.addTest(TestProTimeCorrelationInMolecule("test_error03"))
+  suite.addTest(TestProTimeCorrelationInMolecule("test_rotate_stick"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

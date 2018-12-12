@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaDumpAtoms, StaCopy, FilSet
 
@@ -11,13 +16,8 @@ class TestFilSet(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilSet({"dummy": {1, 2, 3}}))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'dummy'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'dummy'", atoms.get_data)
 
   def test_equivalent_filter(self):
 
@@ -58,3 +58,14 @@ class TestFilSet(unittest.TestCase):
     atoms.append_updater(FilSet(filterset))
 
     self.assertEqual(len(atoms.get_data()), num)
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestFilSet("test_error01"))
+  suite.addTest(TestFilSet("test_equivalent_filter"))
+  suite.addTest(TestFilSet("test_remaining_number"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

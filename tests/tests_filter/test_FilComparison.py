@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -14,13 +19,8 @@ class TestFilComparison(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilComparison([("dummy", "<", 0)]))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'dummy'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'dummy'", atoms.get_data)
 
   def test_error02(self):
 
@@ -28,14 +28,8 @@ class TestFilComparison(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilComparison([("mol", "dummy", 10)]))
 
-    try:
-      atoms.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Supported operators for comparison are "
-        + "'<', '>', '<=', '>=', '==' and '!='")
+    check_error_msg(
+      self, "RuntimeError: Supported operators for comparison are '<', '>', '<=', '>=', '==' and '!='", atoms.get_data)
 
   def test_equivalent_filter(self):
 
@@ -120,3 +114,16 @@ class TestFilComparison(unittest.TestCase):
 
     self.assertEqual(
       len(atoms.get_data()) + num1 + num2 - num, num_total)
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestFilComparison("test_error01"))
+  suite.addTest(TestFilComparison("test_error02"))
+  suite.addTest(TestFilComparison("test_equivalent_filter"))
+  suite.addTest(TestFilComparison("test_remaining_number"))
+  suite.addTest(TestFilComparison("test_de_morgan"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)
