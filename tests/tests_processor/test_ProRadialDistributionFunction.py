@@ -1,6 +1,10 @@
 import unittest
-import traceback
-import math
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -20,13 +24,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro = ProRadialDistributionFunction(atoms, box)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'id'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'id'", execute_omp, pro)
 
   def test_error02(self):
 
@@ -37,14 +36,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro = ProRadialDistributionFunction(atoms, box)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', "
-        + "'lo_x', 'lo_y', 'lo_z'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z'", execute_omp, pro)
 
   def test_cubic(self):
 
@@ -91,8 +84,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       r_inner = (d["index"]-0.5) * bin_width
       r_outer = (d["index"]+0.5) * bin_width
 
-      dV = (4.0*math.pi/3.0) * (
-        math.pow(r_outer, 3) - math.pow(r_inner, 3))
+      dV = (4.0*np.pi/3.0) * (
+        np.power(r_outer, 3) - np.power(r_inner, 3))
 
       expected_rdf[d["index"]] = (d["num"]/dV)/1.0
 
@@ -145,8 +138,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       r_inner = (d["index"]) * bin_width
       r_outer = (d["index"]+1.0) * bin_width
 
-      dV = (4.0*math.pi/3.0) * (
-        math.pow(r_outer, 3) - math.pow(r_inner, 3))
+      dV = (4.0*np.pi/3.0) * (
+        np.power(r_outer, 3) - np.power(r_inner, 3))
 
       expected_rdf[d["index"]] = (d["num"]/dV)/1.0
 
@@ -199,8 +192,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       r_inner = (d["index"]-0.5) * bin_width
       r_outer = (d["index"]+0.5) * bin_width
 
-      dV = (4.0*math.pi/3.0) * (
-        math.pow(r_outer, 3) - math.pow(r_inner, 3))
+      dV = (4.0*np.pi/3.0) * (
+        np.power(r_outer, 3) - np.power(r_inner, 3))
 
       expected_rdf[d["index"]] = (d["num"]/dV)/1.0
 
@@ -256,8 +249,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       r_inner = (d["index"]-0.5) * bin_width
       r_outer = (d["index"]+0.5) * bin_width
 
-      dV = (4.0*math.pi/3.0) * (
-        math.pow(r_outer, 3) - math.pow(r_inner, 3))
+      dV = (4.0*np.pi/3.0) * (
+        np.power(r_outer, 3) - np.power(r_inner, 3))
 
       expected_rdf[d["index"]] = (d["num"]/dV)/1.0
 
@@ -276,3 +269,17 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       rdf_sum += rdf_tmp
 
     self.assertTrue(np.allclose(len(rdf_traj) * rdf, rdf_sum))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProRadialDistributionFunction("test_error01"))
+  suite.addTest(TestProRadialDistributionFunction("test_error02"))
+  suite.addTest(TestProRadialDistributionFunction("test_cubic"))
+  suite.addTest(TestProRadialDistributionFunction("test_cubic_bin_from_r_to_r_plus_dr"))
+  suite.addTest(TestProRadialDistributionFunction("test_cubic_beyond_half_box_length"))
+  suite.addTest(TestProRadialDistributionFunction("test_traj"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

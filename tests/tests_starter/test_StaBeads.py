@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import \
   create, StaCustom, StaDumpAtoms, StaMolecules, StaBeads
@@ -12,14 +17,9 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    try:
-      beads = create(StaBeads(moles, [{"foo": [1, 2, 3]}]))
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Mapping to Beads must be specified by "
-        + "'indices-in-mol'")
+    check_error_msg(
+      self, "RuntimeError: Mapping to Beads must be specified by 'indices-in-mol'",
+      create, StaBeads(moles, [{"foo": [1, 2, 3]}]))
 
   def test_error02(self):
 
@@ -27,15 +27,11 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    try:
-      beads = create(StaBeads(moles, [
-        {"indices-in-mol": [1, 2, 3, 4], "weights": [1.0, 1.0, 1.0]}]))
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: The numbers of elements in 'indices-in-mol' "
-        + "and 'weights' are inconsistent")
+    check_error_msg(
+      self, "RuntimeError: The numbers of elements in 'indices-in-mol' and 'weights' are inconsistent",
+      create, StaBeads(moles, [
+        {"indices-in-mol": [1, 2, 3, 4], "weights": [1.0, 1.0, 1.0]}
+      ]))
 
   def test_error03(self):
 
@@ -43,15 +39,12 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    try:
-      beads = create(StaBeads(moles, [
+    check_error_msg(
+      self, "RuntimeError: The number of 'type' is invalid",
+      create, StaBeads(moles, [
         {"indices-in-mol": [1, 2], "weights": [1.0, 1.0]},
-        {"indices-in-mol": [3, 4], "type": 1, "weights": [1.0, 1.0]}]))
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: The number of 'type' is invalid")
+        {"indices-in-mol": [3, 4], "type": 1, "weights": [1.0, 1.0]}
+      ]))
 
   def test_error04(self):
 
@@ -59,19 +52,18 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    try:
-      beads = create(StaBeads(moles, {
-        1: [
-          {"indices-in-mol": [1, 2]},
-          {"indices-in-mol": [3, 4, 5]}],
-        2: [
-          {"indices-in-mol": [1, 2, 3], "weights": [1.0, 1.0, 1.0]},
-          {"indices-in-mol": [3, 4], "weights": [1.0, 1.0]}]}))
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: The number of 'weights' is invalid")
+    check_error_msg(
+      self, "RuntimeError: The number of 'weights' is invalid",
+      create, StaBeads(moles, {
+          1: [
+            {"indices-in-mol": [1, 2]},
+            {"indices-in-mol": [3, 4, 5]}
+          ],
+          2: [
+            {"indices-in-mol": [1, 2, 3], "weights": [1.0, 1.0, 1.0]},
+            {"indices-in-mol": [3, 4], "weights": [1.0, 1.0]}
+          ]
+        }))
 
   def test_atom_id(self):
 
@@ -106,3 +98,16 @@ class TestStaBeads(unittest.TestCase):
 
       self.assertEqual(
         d["atom-ids"], [offset + i + 1 for i in mappings[in_mol]])
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestStaBeads("test_error01"))
+  suite.addTest(TestStaBeads("test_error02"))
+  suite.addTest(TestStaBeads("test_error03"))
+  suite.addTest(TestStaBeads("test_error04"))
+  suite.addTest(TestStaBeads("test_atom_id"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaCustom, StaCopy
 
@@ -30,3 +35,13 @@ class TestStaCopy(unittest.TestCase):
     elem2 = create(StaCopy(elem))
 
     self.assertEqual(elem.get_keys(), elem2.get_keys())
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestStaCopy("test_get_data"))
+  suite.addTest(TestStaCopy("test_get_keys"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from copy import deepcopy
 from math import sqrt
@@ -33,13 +38,8 @@ class TestProDistanceInMolecule(unittest.TestCase):
 
     pro = ProDistanceInMolecule(mols, atoms)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'xu'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'xu'", execute_omp, pro)
 
   def test_error02(self):
 
@@ -48,13 +48,8 @@ class TestProDistanceInMolecule(unittest.TestCase):
 
     pro = ProDistanceInMolecule(mols, atoms)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'atom-ids'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'atom-ids'", execute_omp, pro)
 
   def test_squared_distance(self):
 
@@ -157,3 +152,15 @@ class TestProDistanceInMolecule(unittest.TestCase):
       [[sqrt(12.0)*(i+1)] * 10 for i in range(10)])
 
     self.assertTrue(np.allclose(pro.get_distance_array(), expects))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProDistanceInMolecule("test_error01"))
+  suite.addTest(TestProDistanceInMolecule("test_error02"))
+  suite.addTest(TestProDistanceInMolecule("test_squared_distance"))
+  suite.addTest(TestProDistanceInMolecule("test_square_rooted_distance"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

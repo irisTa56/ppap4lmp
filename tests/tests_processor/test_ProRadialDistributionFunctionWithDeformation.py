@@ -1,6 +1,10 @@
 import unittest
-import traceback
-import math
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 import numpy as np
 
@@ -48,14 +52,8 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
 
     pro = ProRDFWD(atoms, box)
 
-    try:
-      execute_omp(pro)
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', "
-        + "'I_yz', 'I_zz', 'id', 'mass'")
+    check_error_msg(
+      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz', 'id', 'mass'", execute_omp, pro)
 
   def test_cubic_isotropic(self):
 
@@ -110,8 +108,8 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
       r_inner = (d["index"]-0.5) * bin_width
       r_outer = (d["index"]+0.5) * bin_width
 
-      dV = (4.0*math.pi/3.0) * (
-        math.pow(r_outer, 3) - math.pow(r_inner, 3))
+      dV = (4.0*np.pi/3.0) * (
+        np.power(r_outer, 3) - np.power(r_inner, 3))
 
       expected_rdf[d["index"]] = (d["num"]/dV)/1.0
 
@@ -171,8 +169,8 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
       r_inner = (d["index"]-0.5) * bin_width
       r_outer = (d["index"]+0.5) * bin_width
 
-      dV = (4.0*math.pi/3.0) * (
-        math.pow(r_outer, 3) - math.pow(r_inner, 3))
+      dV = (4.0*np.pi/3.0) * (
+        np.power(r_outer, 3) - np.power(r_inner, 3))
 
       expected_rdf[d["index"]] = (d["num"]/dV)/1.0
       expected_Rg2[d["index"]] = 3.14*3.14
@@ -295,3 +293,16 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
       np.array(Rg2s_traj["isotropic"]),
       (1/3)*np.array(Rg2s_traj["parallel"])
         + (2/3)*np.array(Rg2s_traj["perpendicular"])))
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_error01"))
+  suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_cubic_isotropic"))
+  suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_cubic_same_size"))
+  suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_with_and_without_modification"))
+  suite.addTest(TestProRadialDistributionFunctionWithDeformation("test_for_beads"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

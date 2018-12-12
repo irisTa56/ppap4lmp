@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaCustom
 
@@ -9,13 +14,8 @@ class TestStaCustom(unittest.TestCase):
 
     elem = create(StaCustom([{"foo": 1}, {"bar": 2}]))
 
-    try:
-      elem.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: Invalid key(s) in array data")
+    check_error_msg(
+      self, "RuntimeError: Invalid key(s) in array data", elem.get_data)
 
   def test_get_data(self):
 
@@ -38,3 +38,14 @@ class TestStaCustom(unittest.TestCase):
 
     elem = create(StaCustom(data))
     self.assertEqual(keys, elem.get_keys())
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestStaCustom("test_error01"))
+  suite.addTest(TestStaCustom("test_get_data"))
+  suite.addTest(TestStaCustom("test_get_keys"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)

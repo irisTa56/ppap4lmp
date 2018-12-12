@@ -1,5 +1,10 @@
 import unittest
-import traceback
+
+import os
+import sys
+sys.path.append(
+  os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
+from error_checker import check_error_msg
 
 from ppap4lmp import create, StaDumpBox
 
@@ -9,13 +14,8 @@ class TestStaDumpBox(unittest.TestCase):
 
     box = create(StaDumpBox("dummy.file", 0))
 
-    try:
-      box.get_data()
-    except SystemError:
-      msg = traceback.format_exc()
-      self.assertEqual(
-        msg.split("\n")[0],
-        "RuntimeError: No such a file 'dummy.file'")
+    check_error_msg(
+      self, "RuntimeError: No such a file 'dummy.file'", box.get_data)
 
   def test_get_data(self):
 
@@ -68,3 +68,14 @@ class TestStaDumpBox(unittest.TestCase):
     box = create(StaDumpBox(*arguments))
 
     self.assertEqual(box.get_keys(), expectation)
+
+if __name__ == "__main__":
+
+  suite = unittest.TestSuite()
+
+  suite.addTest(TestStaDumpBox("test_error01"))
+  suite.addTest(TestStaDumpBox("test_get_data"))
+  suite.addTest(TestStaDumpBox("test_get_keys"))
+
+  runner = unittest.TextTestRunner()
+  runner.run(suite)
