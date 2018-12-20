@@ -29,7 +29,8 @@ class DataKeys {
   */
   Set<Str> _keys;
   /*!
-    Name of a class of which instance calls #required().
+    Name of a class of which instance calls #required. Showing the class
+    name in an error message raised by #required helps debugging.
   */
   Str checking_classname;
  public:
@@ -74,7 +75,7 @@ class DataKeys {
   void remove(
     const Json &key_);
   /*!
-    @brief Set a name of class of which instance calls #required().
+    @brief Set a name of class of which instance calls #required.
 
     @param classname
       A string to be assigned to #checking_classname.

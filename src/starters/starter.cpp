@@ -42,18 +42,29 @@ void Starter::compute(
 {
   if (check_blacklist(dataid))
   {
-    if (data == nullptr)
-    {
-      compute_impl(data, datakeys);
-
-      if (data.is_array() && datakeys.optional("id"))
-      {
-        sort_by_id(data);
-      }
-    }
-    else
+    if (data != nullptr)
     {
       ut::runtime_error("Starter accepts empty data only");
+    }
+
+    Str myclassname
+      = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
+
+    if (ext_generator)
+    {
+      ext_generator->set_checking_classname(myclassname);
+    }
+
+    compute_impl(data, datakeys);
+
+    if (ext_generator)
+    {
+      ext_generator->unset_checking_classname();
+    }
+
+    if (data.is_array() && datakeys.optional("id"))
+    {
+      sort_by_id(data);
     }
   }
 }

@@ -25,7 +25,7 @@ class TestAddCoMPosition(unittest.TestCase):
     molecules.append_updater(AddCoMPosition(atoms))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'mass'", molecules.get_data)
+      self, "RuntimeError: Missing key(s) 'mass' in AddCoMPosition", molecules.get_data)
 
   def test_positions(self):
 

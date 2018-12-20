@@ -22,8 +22,10 @@ void Filter::compute(
   {
     if (data.is_array())
     {
-      datakeys.set_checking_classname(
-        abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int()));
+      Str myclassname
+        = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
+
+      datakeys.set_checking_classname(myclassname);
 
       compute_impl(data, datakeys);
 
