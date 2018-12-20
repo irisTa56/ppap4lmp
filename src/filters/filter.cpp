@@ -22,7 +22,12 @@ void Filter::compute(
   {
     if (data.is_array())
     {
+      datakeys.set_checking_classname(
+        abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int()));
+
       compute_impl(data, datakeys);
+
+      datakeys.unset_checking_classname();
     }
     else
     {

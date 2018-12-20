@@ -20,7 +20,7 @@ class TestFilComparison(unittest.TestCase):
     atoms.append_updater(FilComparison([("dummy", "<", 0)]))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy'", atoms.get_data)
+      self, "RuntimeError: Missing key(s) 'dummy' in FilComparison", atoms.get_data)
 
   def test_error02(self):
 

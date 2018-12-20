@@ -31,7 +31,7 @@ class TestAddWrappedPosition(unittest.TestCase):
     atoms.append_updater(AddWrappedPosition(box))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'xu', 'yu', 'zu'", atoms.get_data)
+      self, "RuntimeError: Missing key(s) 'xu', 'yu', 'zu' in AddWrappedPosition", atoms.get_data)
 
   def test_wrapping(self):
 

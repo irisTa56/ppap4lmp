@@ -31,7 +31,7 @@ class TestAddGyrationRadius(unittest.TestCase):
     molecules.append_updater(AddGyrationRadius())
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'I_xx', 'I_yy', 'I_zz', 'mass'", molecules.get_data)
+      self, "RuntimeError: Missing key(s) 'I_xx', 'I_yy', 'I_zz', 'mass' in AddGyrationRadius", molecules.get_data)
 
   def test_sqrted(self):
 

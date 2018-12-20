@@ -32,7 +32,7 @@ class TestAddMolecularOrientation(unittest.TestCase):
     molecules.append_updater(AddMolecularOrientation())
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz'", molecules.get_data)
+      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz' in AddMolecularOrientation", molecules.get_data)
 
   def test_isotropic(self):
 

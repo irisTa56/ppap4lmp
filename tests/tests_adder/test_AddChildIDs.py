@@ -31,7 +31,7 @@ class TestAddChildIDs(unittest.TestCase):
     moles.append_updater(AddChildIDs(atoms, "atom", "mol"))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id'", moles.get_data)
+      self, "RuntimeError: Missing key(s) 'id' in AddChildIDs", moles.get_data)
 
   def test_2way_molecules(self):
 

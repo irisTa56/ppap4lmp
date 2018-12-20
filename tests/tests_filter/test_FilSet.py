@@ -17,7 +17,7 @@ class TestFilSet(unittest.TestCase):
     atoms.append_updater(FilSet({"dummy": {1, 2, 3}}))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy'", atoms.get_data)
+      self, "RuntimeError: Missing key(s) 'dummy' in FilSet", atoms.get_data)
 
   def test_equivalent_filter(self):
 

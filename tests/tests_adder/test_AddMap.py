@@ -16,7 +16,7 @@ class TestAddMap(unittest.TestCase):
     elem.append_updater(AddMap("dummy", "new", {1: 0}))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy'", elem.get_data)
+      self, "RuntimeError: Missing key(s) 'dummy' in AddMap", elem.get_data)
 
   def test_error02(self):
 
