@@ -18,7 +18,7 @@ class TestAddRename(unittest.TestCase):
     elem.append_updater(AddRename("dummy", "new"))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy'", elem.get_data)
+      self, "RuntimeError: Missing key(s) 'dummy' in AddRename", elem.get_data)
 
   def test_error02(self):
 

@@ -26,7 +26,7 @@ class TestAddChildPositions(unittest.TestCase):
     moles.append_updater(AddChildPositions(atoms, "child"))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'child-ids', 'xu', 'yu', 'zu'", moles.get_data)
+      self, "RuntimeError: Missing key(s) 'child-ids', 'xu', 'yu', 'zu' in AddChildPositions", moles.get_data)
 
   def test_random(self):
 

@@ -39,7 +39,7 @@ class TestAddInertiaMoment(unittest.TestCase):
     molecules.append_updater(AddInertiaMoment(atoms))
 
     check_error_msg(
-      self,  "RuntimeError: Missing key(s) 'xu', 'yu', 'zu'", molecules.get_data)
+      self,  "RuntimeError: Missing key(s) 'xu', 'yu', 'zu' in AddInertiaMoment", molecules.get_data)
 
   def test_isotropic(self):
 

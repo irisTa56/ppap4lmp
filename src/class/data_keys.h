@@ -28,6 +28,10 @@ class DataKeys {
     to this member manually when new item(s) is added to Element::data.
   */
   Set<Str> _keys;
+  /*!
+    Name of a class of which instance calls #required().
+  */
+  Str checking_classname;
  public:
   //! Constructor of DataKeys class (default).
   DataKeys() = default;
@@ -69,6 +73,22 @@ class DataKeys {
   */
   void remove(
     const Json &key_);
+  /*!
+    @brief Set a name of class of which instance calls #required().
+
+    @param classname
+      A string to be assigned to #checking_classname.
+
+    @return None.
+  */
+  void set_checking_classname(
+    const Str &classname);
+  /*!
+    @brief Clear #checking_classname.
+
+    @return None.
+  */
+  void unset_checking_classname();
   /*!
     @brief Check if this object has required key(s).
 

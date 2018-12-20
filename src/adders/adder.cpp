@@ -27,7 +27,12 @@ void Adder::compute(
 
     auto id_exists = datakeys.optional("id");
 
+    datakeys.set_checking_classname(
+      abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int()));
+
     compute_impl(data, datakeys);
+
+    datakeys.unset_checking_classname();
 
     if (id_exists != datakeys.optional("id"))
     {

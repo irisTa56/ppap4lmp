@@ -53,6 +53,21 @@ void DataKeys::remove(
 
 /* ------------------------------------------------------------------ */
 
+void DataKeys::set_checking_classname(
+  const Str &classname)
+{
+  checking_classname = classname;
+}
+
+/* ------------------------------------------------------------------ */
+
+void DataKeys::unset_checking_classname()
+{
+  checking_classname.clear();
+}
+
+/* ------------------------------------------------------------------ */
+
 void DataKeys::required(
   const Json &key_)
 {
@@ -70,8 +85,14 @@ void DataKeys::required(
   {
     std::sort(missings.begin(), missings.end());
 
-    ut::runtime_error(
-      "Missing key(s) '" + ut::join(missings, "', '") + "'");
+    Str msg = "Missing key(s) '" + ut::join(missings, "', '") + "'";
+
+    if (!checking_classname.empty())
+    {
+      msg += " in " + checking_classname;
+    }
+
+    ut::runtime_error(msg);
   }
 }
 
