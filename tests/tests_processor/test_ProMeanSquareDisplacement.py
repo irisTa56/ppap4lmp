@@ -41,7 +41,7 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
     pro = ProMeanSquareDisplacement([atoms])
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'mass'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'mass' in ProMeanSquareDisplacement", execute_omp, pro)
 
   def test_dimension_3d(self):
 

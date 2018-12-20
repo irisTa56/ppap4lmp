@@ -63,16 +63,6 @@ void GenList::set_checking_classname(
 
 /* ------------------------------------------------------------------ */
 
-void GenList::unset_checking_classname()
-{
-  for (const auto &gen : generator_list)
-  {
-    gen->unset_checking_classname();
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
 int GenList::get_length()
 {
   return generator_list.size();

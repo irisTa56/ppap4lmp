@@ -31,7 +31,7 @@ class TestProValueArray(unittest.TestCase):
     pro.select("B")
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'B'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'B' in ProValueArray", execute_omp, pro)
 
   def test_error03(self):
 

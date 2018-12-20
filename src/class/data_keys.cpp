@@ -61,13 +61,6 @@ void DataKeys::set_checking_classname(
 
 /* ------------------------------------------------------------------ */
 
-void DataKeys::unset_checking_classname()
-{
-  checking_classname.clear();
-}
-
-/* ------------------------------------------------------------------ */
-
 void DataKeys::required(
   const Json &key_)
 {

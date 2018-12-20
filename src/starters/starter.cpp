@@ -57,11 +57,6 @@ void Starter::compute(
 
     compute_impl(data, datakeys);
 
-    if (ext_generator)
-    {
-      ext_generator->unset_checking_classname();
-    }
-
     if (data.is_array() && datakeys.optional("id"))
     {
       sort_by_id(data);

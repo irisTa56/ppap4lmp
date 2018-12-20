@@ -130,6 +130,28 @@ class Processor {
   */
   virtual bool run();
   /*!
+    @brief Call Generator::hello of \e i th Generator object in
+    #generators.
+
+    @param i
+      Index in #generators.
+
+    @return None.
+  */
+  virtual void say_hello(
+    const int i);
+  /*!
+    @brief Call Generator::goodbye of \e i th Generator object in
+    #generators.
+
+    @param i
+      Index in #generators.
+
+    @return None.
+  */
+  virtual void say_goodbye(
+    const int i);
+  /*!
     @brief Startup this Processor object.
 
     @return None.

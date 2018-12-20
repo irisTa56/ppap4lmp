@@ -63,16 +63,6 @@ void GenDict::set_checking_classname(
 
 /* ------------------------------------------------------------------ */
 
-void GenDict::unset_checking_classname()
-{
-  for (const auto &item : generator_dict)
-  {
-    item.second->unset_checking_classname();
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
 Set<Str> GenDict::get_keys()
 {
   Set<Str> tmp;

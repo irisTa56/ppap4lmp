@@ -38,11 +38,6 @@ class PyElement : public Element {
     PYBIND11_OVERLOAD(
       void, Element, set_checking_classname, classname);
   }
-  void unset_checking_classname() override
-  {
-    PYBIND11_OVERLOAD(
-      void, Element, unset_checking_classname, );
-  }
 };
 
 //! Namespace for functions to bind C++ classes to Python.

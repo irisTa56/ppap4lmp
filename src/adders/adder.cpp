@@ -39,13 +39,6 @@ void Adder::compute(
 
     compute_impl(data, datakeys);
 
-    datakeys.unset_checking_classname();
-
-    if (ext_generator)
-    {
-      ext_generator->unset_checking_classname();
-    }
-
     if (id_exists != datakeys.optional("id"))
     {
       ut::runtime_error("Adder cannot add 'id'");
