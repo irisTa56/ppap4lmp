@@ -159,6 +159,11 @@ class Element : public Generator, public EnShThis<Element> {
   */
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;
+  //! @copydoc Generator::set_checking_classname
+  virtual void set_checking_classname(
+    const Str &classname) override;
+  //! @copydoc Generator::unset_checking_classname
+  virtual void unset_checking_classname() override;
   /*!
     @brief Append an Updater object to this Element object:
     the only way to extend an updating process

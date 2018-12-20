@@ -23,7 +23,7 @@ class TestAddSpecialBonds(unittest.TestCase):
     atoms.append_updater(AddSpecialBonds(moles, abst_special_bonds))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'atom-ids'", atoms.get_data)
+      self, "RuntimeError: Missing key(s) 'atom-ids' in AddSpecialBonds", atoms.get_data)
 
   def test_error02(self):
 

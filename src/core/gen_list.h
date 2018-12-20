@@ -67,6 +67,11 @@ class GenList : public Generator {
   */
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;
+  //! @copydoc Generator::set_checking_classname
+  virtual void set_checking_classname(
+    const Str &classname) override;
+  //! @copydoc Generator::unset_checking_classname
+  virtual void unset_checking_classname() override;
   /*!
     @brief Get a length of #generator_list.
 

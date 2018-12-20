@@ -30,7 +30,18 @@ class PyElement : public Element {
     const Json &name) override
   {
     PYBIND11_OVERLOAD(
-      ShPtr<Generator> , Element, get_generator, name);
+      ShPtr<Generator>, Element, get_generator, name);
+  }
+  void set_checking_classname(
+    const Str &classname) override
+  {
+    PYBIND11_OVERLOAD(
+      void, Element, set_checking_classname, classname);
+  }
+  void unset_checking_classname() override
+  {
+    PYBIND11_OVERLOAD(
+      void, Element, unset_checking_classname, );
   }
 };
 

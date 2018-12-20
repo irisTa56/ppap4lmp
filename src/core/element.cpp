@@ -118,6 +118,21 @@ ShPtr<Generator> Element::get_generator(
 
 /* ------------------------------------------------------------------ */
 
+void Element::set_checking_classname(
+  const Str &classname)
+{
+  datakeys.set_checking_classname(classname);
+}
+
+/* ------------------------------------------------------------------ */
+
+void Element::unset_checking_classname()
+{
+  datakeys.unset_checking_classname();
+}
+
+/* ------------------------------------------------------------------ */
+
 ElPtr Element::append_updater(
   const ShPtr<Updater> &upd)
 {

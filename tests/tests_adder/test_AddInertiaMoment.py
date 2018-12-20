@@ -30,7 +30,7 @@ class TestAddInertiaMoment(unittest.TestCase):
       AddInertiaMoment(create(StaCustom({"foo": 0, "bar": 1}))))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id', 'mass', 'xu', 'yu', 'zu'", molecules.get_data)
+      self, "RuntimeError: Missing key(s) 'id', 'mass', 'xu', 'yu', 'zu' in AddInertiaMoment", molecules.get_data)
 
   def test_error02(self):
 

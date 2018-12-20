@@ -21,7 +21,7 @@ class TestAddWrappedPosition(unittest.TestCase):
     atoms.append_updater(AddWrappedPosition(box))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z'", atoms.get_data)
+      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z' in AddWrappedPosition", atoms.get_data)
 
   def test_error02(self):
 

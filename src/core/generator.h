@@ -80,6 +80,22 @@ class Generator {
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) = 0;
   /*!
+    @brief Wrapper for DataKeys::set_checking_classname.
+
+    @param classname
+      A string to be assigned to #checking_classname.
+
+    @return None.
+  */
+  virtual void set_checking_classname(
+    const Str &classname) = 0;
+  /*!
+    @brief Wrapper for DataKeys::unset_checking_classname.
+
+    @return None.
+  */
+  virtual void unset_checking_classname() = 0;
+  /*!
     @brief Appoint to this Generator object.
 
     @return None.

@@ -52,6 +52,27 @@ ShPtr<Generator> GenList::get_generator(
 
 /* ------------------------------------------------------------------ */
 
+void GenList::set_checking_classname(
+  const Str &classname)
+{
+  for (const auto &gen : generator_list)
+  {
+    gen->set_checking_classname(classname);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
+void GenList::unset_checking_classname()
+{
+  for (const auto &gen : generator_list)
+  {
+    gen->unset_checking_classname();
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
 int GenList::get_length()
 {
   return generator_list.size();

@@ -16,7 +16,7 @@ class TestStaMolecules(unittest.TestCase):
       create(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id', 'mol'", molecules.get_data)
+      self, "RuntimeError: Missing key(s) 'id', 'mol' in StaMolecules", molecules.get_data)
 
   def test_get_data(self):
 
