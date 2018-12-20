@@ -53,7 +53,7 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
     pro = ProRDFWD(atoms, box)
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz', 'id', 'mass'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz', 'id', 'mass' in ProRadialDistributionFunctionWithDeformation", execute_omp, pro)
 
   def test_cubic_isotropic(self):
 

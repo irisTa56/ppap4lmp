@@ -28,8 +28,6 @@ void Filter::compute(
       datakeys.set_checking_classname(myclassname);
 
       compute_impl(data, datakeys);
-
-      datakeys.unset_checking_classname();
     }
     else
     {

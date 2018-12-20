@@ -39,7 +39,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
     pro = ProDistanceInMolecule(mols, atoms)
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'xu'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'xu' in ProDistanceInMolecule", execute_omp, pro)
 
   def test_error02(self):
 
@@ -49,7 +49,7 @@ class TestProDistanceInMolecule(unittest.TestCase):
     pro = ProDistanceInMolecule(mols, atoms)
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'atom-ids'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'atom-ids' in ProDistanceInMolecule", execute_omp, pro)
 
   def test_squared_distance(self):
 

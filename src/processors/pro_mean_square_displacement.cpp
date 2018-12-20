@@ -65,9 +65,9 @@ void ProMeanSquareDisplacement::run_impl(
 
 void ProMeanSquareDisplacement::prepare()
 {
-  auto el_initial_points = generators.front()->get_element();
+  say_hello(0);
 
-  el_initial_points->hello();
+  auto el_initial_points = generators.front()->get_element();
 
   el_initial_points->required({"xu", "yu", "zu", "id"});
 

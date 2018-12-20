@@ -24,7 +24,7 @@ class TestProThicknessProfile(unittest.TestCase):
     pro = ProThicknessProfile(atoms, box)
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'radius'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'radius' in ProThicknessProfile", execute_omp, pro)
 
   def test_error02(self):
 
@@ -36,7 +36,7 @@ class TestProThicknessProfile(unittest.TestCase):
     pro = ProThicknessProfile(atoms, box)
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'lo_x', 'lo_y'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'lo_x', 'lo_y' in ProThicknessProfile", execute_omp, pro)
 
   def test_20x30(self):
 

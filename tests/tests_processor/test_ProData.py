@@ -18,7 +18,7 @@ class TestProData(unittest.TestCase):
     pro.select("C")
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'C'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'C' in ProData", execute_omp, pro)
 
   def test_without_select(self):
 

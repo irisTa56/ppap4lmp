@@ -90,12 +90,6 @@ class Generator {
   virtual void set_checking_classname(
     const Str &classname) = 0;
   /*!
-    @brief Wrapper for DataKeys::unset_checking_classname.
-
-    @return None.
-  */
-  virtual void unset_checking_classname() = 0;
-  /*!
     @brief Appoint to this Generator object.
 
     @return None.

@@ -85,12 +85,6 @@ class DataKeys {
   void set_checking_classname(
     const Str &classname);
   /*!
-    @brief Clear #checking_classname.
-
-    @return None.
-  */
-  void unset_checking_classname();
-  /*!
     @brief Check if this object has required key(s).
 
     @param key_

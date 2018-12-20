@@ -38,7 +38,7 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'xu'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'xu' in ProTimeCorrelationInMolecule", execute_omp, pro)
 
   def test_error02(self):
 
@@ -48,7 +48,7 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'atom-ids'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'atom-ids' in ProTimeCorrelationInMolecule", execute_omp, pro)
 
   def test_error03(self):
 

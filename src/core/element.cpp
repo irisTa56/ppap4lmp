@@ -126,13 +126,6 @@ void Element::set_checking_classname(
 
 /* ------------------------------------------------------------------ */
 
-void Element::unset_checking_classname()
-{
-  datakeys.unset_checking_classname();
-}
-
-/* ------------------------------------------------------------------ */
-
 ElPtr Element::append_updater(
   const ShPtr<Updater> &upd)
 {

@@ -25,7 +25,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
     pro = ProRadialDistributionFunction(atoms, box)
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'id' in ProRadialDistributionFunction", execute_omp, pro)
 
   def test_error02(self):
 
@@ -37,7 +37,7 @@ class TestProRadialDistributionFunction(unittest.TestCase):
     pro = ProRadialDistributionFunction(atoms, box)
 
     check_error_msg(
-      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z'", execute_omp, pro)
+      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z' in ProRadialDistributionFunction", execute_omp, pro)
 
   def test_cubic(self):
 
