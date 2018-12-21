@@ -102,12 +102,12 @@ $(document).ready(function(){initNavTree('classGenList.html','');});
 <div class="dynheader">
 Inheritance diagram for GenList:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__inherit__graph.svg" width="172" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__inherit__graph.svg" width="200" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for GenList:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__coll__graph.svg" width="172" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGenList__coll__graph.svg" width="200" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -121,6 +121,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a415cfc1b9b18024ba9f20fa94caacb39"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a415cfc1b9b18024ba9f20fa94caacb39">get_generator</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
 <tr class="memdesc:a415cfc1b9b18024ba9f20fa94caacb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an element of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a> as a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class.  <a href="#a415cfc1b9b18024ba9f20fa94caacb39">More...</a><br /></td></tr>
 <tr class="separator:a415cfc1b9b18024ba9f20fa94caacb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a462a37873feb3d58d213914c25d819c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a462a37873feb3d58d213914c25d819c5">set_checking_classname</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;classname) override</td></tr>
+<tr class="memdesc:a462a37873feb3d58d213914c25d819c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>.  <a href="#a462a37873feb3d58d213914c25d819c5">More...</a><br /></td></tr>
+<tr class="separator:a462a37873feb3d58d213914c25d819c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d90767ee64acbd33d7432c47dd6abf5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenList.html#a3d90767ee64acbd33d7432c47dd6abf5">get_length</a> ()</td></tr>
 <tr class="memdesc:a3d90767ee64acbd33d7432c47dd6abf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a length of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a>.  <a href="#a3d90767ee64acbd33d7432c47dd6abf5">More...</a><br /></td></tr>
 <tr class="separator:a3d90767ee64acbd33d7432c47dd6abf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,6 +303,45 @@ Here is the call graph for this function:</div>
 
 <p>Get a length of <a class="el" href="classGenList.html#a300d347c49a8d1cf5e49a7307fa85ae0">generator_list</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>An integer. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="gen__list_8cpp_source.html#l00066">66</a> of file <a class="el" href="gen__list_8cpp_source.html">gen_list.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a462a37873feb3d58d213914c25d819c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a462a37873feb3d58d213914c25d819c5">&#9670;&nbsp;</a></span>set_checking_classname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenList::set_checking_classname </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;&#160;</td>
+          <td class="paramname"><em>classname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wrapper for <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classname</td><td>A string passed to <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
+
+<p>Implements <a class="el" href="classGenerator.html#a68e2380cceb5787e3e43730121f647ca">Generator</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="gen__list_8cpp_source.html#l00055">55</a> of file <a class="el" href="gen__list_8cpp_source.html">gen_list.cpp</a>.</p>
 

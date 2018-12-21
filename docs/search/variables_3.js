@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['checking_5fclassname',['checking_classname',['../classDataKeys.html#a8612c431780271d319e792e06292ce9a',1,'DataKeys']]],
   ['child_5fname',['child_name',['../classAddChildIDs.html#a7f1aa53a67c5f2cee99a238d8e41c100',1,'AddChildIDs::child_name()'],['../classAddChildPositions.html#acde97085231187792667e1ce2ed46955',1,'AddChildPositions::child_name()']]],
   ['coefficients_5farray',['coefficients_array',['../classProTimeCorrelationInMolecule.html#a70aefbb81a2fa815ddf5c61e7dff10a8',1,'ProTimeCorrelationInMolecule']]],
   ['coefficients_5ftraj',['coefficients_traj',['../classProTimeCorrelationInMolecule.html#a1142ac19b509b12481f1d4f43451cc5a',1,'ProTimeCorrelationInMolecule']]],

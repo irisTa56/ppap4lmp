@@ -83,7 +83,7 @@ class Generator {
     @brief Wrapper for DataKeys::set_checking_classname.
 
     @param classname
-      A string to be assigned to #checking_classname.
+      A string passed to DataKeys::set_checking_classname.
 
     @return None.
   */

@@ -19,31 +19,31 @@
 <g id="node2" class="node">
 <title>Node3</title>
 <g id="a_node2"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="Check if this object has required key(s). ">
-<polygon fill="#ffffff" stroke="#000000" points="155,-76.5 155,-95.5 255,-95.5 255,-76.5 155,-76.5"/>
-<text text-anchor="middle" x="205" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::required</text>
+<polygon fill="#ffffff" stroke="#000000" points="155,-114.5 155,-133.5 255,-133.5 255,-114.5 155,-114.5"/>
+<text text-anchor="middle" x="205" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::required</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M119.1002,-74.7828C127.4694,-75.8757 136.0787,-77 144.4651,-78.0951"/>
-<polygon fill="#191970" stroke="#191970" points="144.1839,-81.588 154.553,-79.4124 145.0904,-74.6469 144.1839,-81.588"/>
+<path fill="none" stroke="#191970" d="M83.8534,-76.5405C107.7743,-85.9116 144.471,-100.2876 171.209,-110.7623"/>
+<polygon fill="#191970" stroke="#191970" points="169.9794,-114.0395 180.5671,-114.4284 172.5328,-107.5218 169.9794,-114.0395"/>
 </g>
-<!-- Node4 -->
-<g id="node3" class="node">
-<title>Node4</title>
-<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
-<polygon fill="#ffffff" stroke="#000000" points="291,-114.5 291,-133.5 389,-133.5 389,-114.5 291,-114.5"/>
-<text text-anchor="middle" x="340" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
+<!-- Node5 -->
+<g id="node4" class="node">
+<title>Node5</title>
+<g id="a_node4"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
+<polygon fill="#ffffff" stroke="#000000" points="291,-76.5 291,-95.5 389,-95.5 389,-76.5 291,-76.5"/>
+<text text-anchor="middle" x="340" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node4 -->
+<!-- Node2&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
-<title>Node2&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M79.0927,-76.6593C98.0367,-85.5461 127.7911,-98.3265 155,-105 196.2744,-115.1234 244.0122,-119.8595 280.6557,-122.072"/>
-<polygon fill="#191970" stroke="#191970" points="280.5027,-125.5688 290.6822,-122.6315 280.8928,-118.5797 280.5027,-125.5688"/>
+<title>Node2&#45;&gt;Node5</title>
+<path fill="none" stroke="#191970" d="M119.3302,-71.0527C166.8483,-74.2714 232.9686,-78.7501 280.4209,-81.9643"/>
+<polygon fill="#191970" stroke="#191970" points="280.3364,-85.4665 290.5501,-82.6505 280.8096,-78.4826 280.3364,-85.4665"/>
 </g>
 <!-- Node6 -->
 <g id="node5" class="node">
@@ -75,26 +75,26 @@
 <path fill="none" stroke="#191970" d="M83.4002,-57.3706C102.6928,-49.6264 130.5529,-38.5081 155,-29 159.852,-27.1129 164.9768,-25.1412 170.0222,-23.2123"/>
 <polygon fill="#191970" stroke="#191970" points="171.435,-26.4196 179.5344,-19.5894 168.9435,-19.878 171.435,-26.4196"/>
 </g>
+<!-- Node4 -->
+<g id="node3" class="node">
+<title>Node4</title>
+<g id="a_node3"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
+<polygon fill="#ffffff" stroke="#000000" points="312,-114.5 312,-133.5 368,-133.5 368,-114.5 312,-114.5"/>
+<text text-anchor="middle" x="340" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
+</a>
+</g>
+</g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge2" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M239.0662,-95.589C256.4135,-100.4719 277.7022,-106.4643 296.2492,-111.685"/>
-<polygon fill="#191970" stroke="#191970" points="295.3704,-115.0735 305.9447,-114.4141 297.2671,-108.3354 295.3704,-115.0735"/>
-</g>
-<!-- Node5 -->
-<g id="node4" class="node">
-<title>Node5</title>
-<g id="a_node4"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
-<polygon fill="#ffffff" stroke="#000000" points="312,-76.5 312,-95.5 368,-95.5 368,-76.5 312,-76.5"/>
-<text text-anchor="middle" x="340" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
-</a>
-</g>
+<path fill="none" stroke="#191970" d="M255.269,-124C270.5913,-124 287.1831,-124 301.589,-124"/>
+<polygon fill="#191970" stroke="#191970" points="301.6431,-127.5001 311.643,-124 301.643,-120.5001 301.6431,-127.5001"/>
 </g>
 <!-- Node3&#45;&gt;Node5 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M255.269,-86C270.5913,-86 287.1831,-86 301.589,-86"/>
-<polygon fill="#191970" stroke="#191970" points="301.6431,-89.5001 311.643,-86 301.643,-82.5001 301.6431,-89.5001"/>
+<path fill="none" stroke="#191970" d="M239.0662,-114.411C256.4135,-109.5281 277.7022,-103.5357 296.2492,-98.315"/>
+<polygon fill="#191970" stroke="#191970" points="297.2671,-101.6646 305.9447,-95.5859 295.3704,-94.9265 297.2671,-101.6646"/>
 </g>
 </g>
 </svg>

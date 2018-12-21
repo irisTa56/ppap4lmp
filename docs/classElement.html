@@ -124,6 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5474cb60706c92e37268ac4c3ff2c46b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a5474cb60706c92e37268ac4c3ff2c46b">get_generator</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr) override</td></tr>
 <tr class="memdesc:a5474cb60706c92e37268ac4c3ff2c46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this object as a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class.  <a href="#a5474cb60706c92e37268ac4c3ff2c46b">More...</a><br /></td></tr>
 <tr class="separator:a5474cb60706c92e37268ac4c3ff2c46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae07a844782e6b86f3d765ce661f02d82"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ae07a844782e6b86f3d765ce661f02d82">set_checking_classname</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;classname) override</td></tr>
+<tr class="memdesc:ae07a844782e6b86f3d765ce661f02d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>.  <a href="#ae07a844782e6b86f3d765ce661f02d82">More...</a><br /></td></tr>
+<tr class="separator:ae07a844782e6b86f3d765ce661f02d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc43106f0ea5e11d03105c40df1fe0a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classElement.html">Element</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8">append_updater</a> (const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classUpdater.html">Updater</a> &gt; &amp;upd)</td></tr>
 <tr class="memdesc:adc43106f0ea5e11d03105c40df1fe0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object to this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object: the only way to extend an updating process associated with this object.  <a href="#adc43106f0ea5e11d03105c40df1fe0a8">More...</a><br /></td></tr>
 <tr class="separator:adc43106f0ea5e11d03105c40df1fe0a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,7 +288,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>This <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.</dd></dl>
 <p><span class="remove_in_table"> To update the data, one needs to create an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object and then appends it to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object using this method. In this method, <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">Generator::update_chain</a> stored in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">Updater::ext_generator</a> of the <code>upd</code> is merged to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">Generator::update_chain</a> of this object; then an <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> consisting of this object and the <code>upd</code> is appended to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">Generator::update_chain</a> of this object. </span> </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00121">121</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00129">129</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -338,7 +341,7 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one passed <a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98" title="ArrayXi is an alias for a column array of Eigen where the values are integer. ">ArrayXi</a> or <a class="el" href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220" title="ArrayXd is an alias for a column array of Eigen where the values are double. ">ArrayXd</a> as a reference, this method fills it by values of a property specified by <code>key</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00188">188</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00196">196</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -386,7 +389,7 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one passed <a class="el" href="eigen_8h.html#a187c541a6423e8b13a361d39799a2bac" title="ArrayXXi is an alias for a two-dimensional array of Eigen where the values are integer. ">ArrayXXi</a> or <a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9" title="ArrayXXd is an alias for a two-dimensional array of Eigen where the values are double. ">ArrayXXd</a> as a reference, this method fills it by values of some properties specified by <code>keys</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00212">212</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00220">220</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -455,7 +458,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220" title="ArrayXd is an alias for a column array of Eigen where the values are double. ">ArrayXd</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00296">296</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00304">304</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -494,7 +497,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98" title="ArrayXi is an alias for a column array of Eigen where the values are integer. ">ArrayXi</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00281">281</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00289">289</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -533,7 +536,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9" title="ArrayXXd is an alias for a two-dimensional array of Eigen where the values are double. ">ArrayXXd</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00329">329</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00337">337</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -572,7 +575,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a187c541a6423e8b13a361d39799a2bac" title="ArrayXXi is an alias for a two-dimensional array of Eigen where the values are integer. ">ArrayXXi</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00311">311</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00319">319</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -605,7 +608,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to this <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.</dd></dl>
 <p>One can refer the whole data stored in this object by this method. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00173">173</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00181">181</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -635,7 +638,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object (not a reference).</dd></dl>
 <p>One can get the partial data stored in this object by this method. To select which property is included in the returned <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object, pass a string key for the property as <code>key_</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00138">138</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00146">146</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -657,7 +660,7 @@ Here is the caller graph for this function:</div>
 <p>Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00263">263</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00271">271</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -784,7 +787,7 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to this <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a>.</dd></dl>
 <p>One can refer the keys (property names) in this object by this method. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00180">180</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00188">188</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -806,7 +809,7 @@ Here is the call graph for this function:</div>
 <p>Get contents of <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a> of this object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307" title="Set is an alias for unordered set (same as set in Python). ">Set</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6" title="Str is an alias for string. ">Str</a>&gt;. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00272">272</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00280">280</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -876,7 +879,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>This method runs updating process associated with this object so that a wrapper of getter can access the filled <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00347">347</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00355">355</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -916,7 +919,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>A boolean.</dd></dl>
 <p>It is convenient if <a class="el" href="classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2" title="Check if this object has optional key(s). ">DataKeys::optional</a> can be called without getting <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> object from this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00255">255</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00263">263</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -951,7 +954,7 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>It is convenient if <a class="el" href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" title="Check if this object has required key(s). ">DataKeys::required</a> can be called without getting <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> object from this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00247">247</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00255">255</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -961,6 +964,52 @@ Here is the call graph for this function:</div>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a2dd2b3ed6f76878ae6cc1c1a36183517_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ae07a844782e6b86f3d765ce661f02d82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae07a844782e6b86f3d765ce661f02d82">&#9670;&nbsp;</a></span>set_checking_classname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Element::set_checking_classname </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;&#160;</td>
+          <td class="paramname"><em>classname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wrapper for <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">classname</td><td>A string passed to <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
+
+<p>Implements <a class="el" href="classGenerator.html#a68e2380cceb5787e3e43730121f647ca">Generator</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classPyElement.html#ad30132c3bf873f37fedf8016e22a0afe">PyElement</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00121">121</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ae07a844782e6b86f3d765ce661f02d82_cgraph.svg" width="378" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

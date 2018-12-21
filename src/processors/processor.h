@@ -89,6 +89,28 @@ class Processor {
   template <class GEN>
   void register_generators(
     const Vec<ShPtr<GEN>> &gens);
+  /*!
+    @brief Call Generator::hello of \e i th Generator object in
+    #generators.
+
+    @param i
+      Index in #generators.
+
+    @return None.
+  */
+  virtual void say_hello(
+    const int i);
+  /*!
+    @brief Call Generator::goodbye of \e i th Generator object in
+    #generators.
+
+    @param i
+      Index in #generators.
+
+    @return None.
+  */
+  virtual void say_goodbye(
+    const int i);
  public:
   //! Constructor of Processor class (default).
   Processor() = default;
@@ -129,28 +151,6 @@ class Processor {
     to clears Element::data if it is no longer to be used.
   */
   virtual bool run();
-  /*!
-    @brief Call Generator::hello of \e i th Generator object in
-    #generators.
-
-    @param i
-      Index in #generators.
-
-    @return None.
-  */
-  virtual void say_hello(
-    const int i);
-  /*!
-    @brief Call Generator::goodbye of \e i th Generator object in
-    #generators.
-
-    @param i
-      Index in #generators.
-
-    @return None.
-  */
-  virtual void say_goodbye(
-    const int i);
   /*!
     @brief Startup this Processor object.
 

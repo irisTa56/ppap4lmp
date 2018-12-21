@@ -9,5 +9,7 @@ var classDataKeys =
     [ "remove", "classDataKeys.html#ac06bc8ecc2ff5a774c358f85df959b19", null ],
     [ "required", "classDataKeys.html#a03517cffe825c983c3582ffb55318a7b", null ],
     [ "set", "classDataKeys.html#a302caba902c11e18d4bccb1006284763", null ],
-    [ "_keys", "classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83", null ]
+    [ "set_checking_classname", "classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8", null ],
+    [ "_keys", "classDataKeys.html#a8ba15555dcfdee7a18206606d675ac83", null ],
+    [ "checking_classname", "classDataKeys.html#a8612c431780271d319e792e06292ce9a", null ]
 ];

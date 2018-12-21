@@ -9,5 +9,6 @@ var classGenerator =
     [ "goodbye", "classGenerator.html#ad73afe8839404d7834d471b8bb3dfe02", null ],
     [ "hello", "classGenerator.html#ac4648b055ee0e51c1e68ea084156c222", null ],
     [ "merge_update_chain", "classGenerator.html#a540c397ab90d552e413ddfa4bf5e51cc", null ],
+    [ "set_checking_classname", "classGenerator.html#a68e2380cceb5787e3e43730121f647ca", null ],
     [ "update_chain", "classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf", null ]
 ];
