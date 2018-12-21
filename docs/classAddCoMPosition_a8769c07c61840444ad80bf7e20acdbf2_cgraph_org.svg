@@ -95,32 +95,32 @@
 <!-- Node4 -->
 <g id="node3" class="node">
 <title>Node4</title>
-<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
-<polygon fill="#ffffff" stroke="#000000" points="498,-134.5 498,-153.5 596,-153.5 596,-134.5 498,-134.5"/>
-<text text-anchor="middle" x="547" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
+<g id="a_node3"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
+<polygon fill="#ffffff" stroke="#000000" points="383.5,-175.5 383.5,-194.5 439.5,-194.5 439.5,-175.5 383.5,-175.5"/>
+<text text-anchor="middle" x="411.5" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge2" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M308.5573,-182.566C349.9322,-180.019 410.0952,-175.0799 462,-166 476.119,-163.5301 491.3338,-159.9065 504.9345,-156.3099"/>
-<polygon fill="#191970" stroke="#191970" points="506.2416,-159.5819 514.9755,-153.5844 504.4079,-152.8263 506.2416,-159.5819"/>
+<path fill="none" stroke="#191970" d="M308.5979,-185C329.5781,-185 353.5781,-185 373.12,-185"/>
+<polygon fill="#191970" stroke="#191970" points="373.181,-188.5001 383.181,-185 373.181,-181.5001 373.181,-188.5001"/>
 </g>
 <!-- Node5 -->
 <g id="node4" class="node">
 <title>Node5</title>
-<g id="a_node4"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
-<polygon fill="#ffffff" stroke="#000000" points="383.5,-137.5 383.5,-156.5 439.5,-156.5 439.5,-137.5 383.5,-137.5"/>
-<text text-anchor="middle" x="411.5" y="-144.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
+<g id="a_node4"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
+<polygon fill="#ffffff" stroke="#000000" points="498,-115.5 498,-134.5 596,-134.5 596,-115.5 498,-115.5"/>
+<text text-anchor="middle" x="547" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node5 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M297.1084,-175.411C320.3968,-169.6269 349.9529,-162.2862 373.1879,-156.5154"/>
-<polygon fill="#191970" stroke="#191970" points="374.1854,-159.8741 383.0469,-154.0668 372.4981,-153.0805 374.1854,-159.8741"/>
+<path fill="none" stroke="#191970" d="M304.2137,-175.4928C354.9198,-164.9474 436.7416,-147.9307 491.1891,-136.6071"/>
+<polygon fill="#191970" stroke="#191970" points="491.9456,-140.0248 501.0234,-134.5618 490.5203,-133.1714 491.9456,-140.0248"/>
 </g>
 <!-- Node8 -->
 <g id="node7" class="node">
@@ -137,11 +137,11 @@
 <path fill="none" stroke="#191970" d="M325.1629,-103C333.636,-103 342.2728,-103 350.6481,-103"/>
 <polygon fill="#191970" stroke="#191970" points="350.706,-106.5001 360.706,-103 350.7059,-99.5001 350.706,-106.5001"/>
 </g>
-<!-- Node8&#45;&gt;Node4 -->
+<!-- Node8&#45;&gt;Node5 -->
 <g id="edge7" class="edge">
-<title>Node8&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M442.927,-112.5093C461.6047,-118.1608 485.5115,-125.3946 505.7008,-131.5036"/>
-<polygon fill="#191970" stroke="#191970" points="504.6889,-134.854 515.274,-134.4003 506.7163,-128.154 504.6889,-134.854"/>
+<title>Node8&#45;&gt;Node5</title>
+<path fill="none" stroke="#191970" d="M462.3407,-111.2546C470.5624,-112.5895 479.1391,-113.982 487.543,-115.3465"/>
+<polygon fill="#191970" stroke="#191970" points="487.2409,-118.8432 497.6726,-116.9911 488.3628,-111.9337 487.2409,-118.8432"/>
 </g>
 <!-- Node9&#45;&gt;Node8 -->
 <g id="edge9" class="edge">

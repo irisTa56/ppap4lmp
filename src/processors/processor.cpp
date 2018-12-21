@@ -53,6 +53,24 @@ template void Processor::register_generators(
 
 /* ------------------------------------------------------------------ */
 
+void Processor::say_hello(
+  const int i)
+{
+  generators[i]->hello();
+  generators[i]->set_checking_classname(
+    abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int()));
+}
+
+/* ------------------------------------------------------------------ */
+
+void Processor::say_goodbye(
+  const int i)
+{
+  generators[i]->goodbye();
+}
+
+/* ------------------------------------------------------------------ */
+
 bool Processor::run()
 {
   int index;
@@ -74,24 +92,6 @@ bool Processor::run()
   }
 
   return true;
-}
-
-/* ------------------------------------------------------------------ */
-
-void Processor::say_hello(
-  const int i)
-{
-  generators[i]->hello();
-  generators[i]->set_checking_classname(
-    abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int()));
-}
-
-/* ------------------------------------------------------------------ */
-
-void Processor::say_goodbye(
-  const int i)
-{
-  generators[i]->goodbye();
 }
 
 /* ------------------------------------------------------------------ */

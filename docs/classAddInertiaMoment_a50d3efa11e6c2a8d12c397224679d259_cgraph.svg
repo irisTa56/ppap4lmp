@@ -141,32 +141,32 @@ var sectionId = 'dynsection-2';
 <!-- Node4 -->
 <g id="node3" class="node">
 <title>Node4</title>
-<g id="a_node3"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
-<polygon fill="#ffffff" stroke="#000000" points="512,-134.5 512,-153.5 610,-153.5 610,-134.5 512,-134.5"/>
-<text text-anchor="middle" x="561" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
+<g id="a_node3"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
+<polygon fill="#ffffff" stroke="#000000" points="397.5,-175.5 397.5,-194.5 453.5,-194.5 453.5,-175.5 397.5,-175.5"/>
+<text text-anchor="middle" x="425.5" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge2" class="edge">
 <title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M319.0709,-182.6765C361.1805,-180.1804 422.8474,-175.2553 476,-166 490.1209,-163.5412 505.3362,-159.9205 518.9368,-156.3232"/>
-<polygon fill="#191970" stroke="#191970" points="520.2444,-159.5949 528.9777,-153.5965 518.4099,-152.8396 520.2444,-159.5949"/>
+<path fill="none" stroke="#191970" d="M319.379,-185C341.2934,-185 366.5626,-185 386.9444,-185"/>
+<polygon fill="#191970" stroke="#191970" points="387.1137,-188.5001 397.1137,-185 387.1136,-181.5001 387.1137,-188.5001"/>
 </g>
 <!-- Node5 -->
 <g id="node4" class="node">
 <title>Node5</title>
-<g id="a_node4"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
-<polygon fill="#ffffff" stroke="#000000" points="397.5,-137.5 397.5,-156.5 453.5,-156.5 453.5,-137.5 397.5,-137.5"/>
-<text text-anchor="middle" x="425.5" y="-144.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
+<g id="a_node4"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
+<polygon fill="#ffffff" stroke="#000000" points="512,-115.5 512,-134.5 610,-134.5 610,-115.5 512,-115.5"/>
+<text text-anchor="middle" x="561" y="-122.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node5 -->
 <g id="edge3" class="edge">
 <title>Node3&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M308.4916,-175.411C332.7364,-169.5241 363.6226,-162.0245 387.5736,-156.209"/>
-<polygon fill="#191970" stroke="#191970" points="388.4823,-159.5901 397.3741,-153.8293 386.8306,-152.7877 388.4823,-159.5901"/>
+<path fill="none" stroke="#191970" d="M315.2683,-175.4928C366.5895,-164.9474 449.404,-147.9307 504.5121,-136.6071"/>
+<polygon fill="#191970" stroke="#191970" points="505.3748,-140.003 514.4657,-134.5618 503.9658,-133.1463 505.3748,-140.003"/>
 </g>
 <!-- Node8 -->
 <g id="node7" class="node">
@@ -183,11 +183,11 @@ var sectionId = 'dynsection-2';
 <path fill="none" stroke="#191970" d="M339.0107,-103C347.5739,-103 356.2701,-103 364.6832,-103"/>
 <polygon fill="#191970" stroke="#191970" points="364.7768,-106.5001 374.7768,-103 364.7767,-99.5001 364.7768,-106.5001"/>
 </g>
-<!-- Node8&#45;&gt;Node4 -->
+<!-- Node8&#45;&gt;Node5 -->
 <g id="edge7" class="edge">
-<title>Node8&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M456.927,-112.5093C475.6047,-118.1608 499.5115,-125.3946 519.7008,-131.5036"/>
-<polygon fill="#191970" stroke="#191970" points="518.6889,-134.854 529.274,-134.4003 520.7163,-128.154 518.6889,-134.854"/>
+<title>Node8&#45;&gt;Node5</title>
+<path fill="none" stroke="#191970" d="M476.3407,-111.2546C484.5624,-112.5895 493.1391,-113.982 501.543,-115.3465"/>
+<polygon fill="#191970" stroke="#191970" points="501.2409,-118.8432 511.6726,-116.9911 502.3628,-111.9337 501.2409,-118.8432"/>
 </g>
 <!-- Node9&#45;&gt;Node8 -->
 <g id="edge9" class="edge">

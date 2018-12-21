@@ -8,6 +8,8 @@ var classProcessor =
     [ "register_generators", "classProcessor.html#abcf04231ed598d17e888eaf3216c9350", null ],
     [ "run", "classProcessor.html#a929cbeccc7a4120da4a58ef7f7a609b1", null ],
     [ "run_impl", "classProcessor.html#a46c873071eb6309273eb330b6b837a40", null ],
+    [ "say_goodbye", "classProcessor.html#a3d25e6d6f7dd0e698f61ea5dfef08695", null ],
+    [ "say_hello", "classProcessor.html#a7d4a978d396b9ec0c738d314ef0ef5d5", null ],
     [ "startup", "classProcessor.html#a74fe912a6d9216d9b531ff58491889a9", null ],
     [ "generators", "classProcessor.html#a4ba2563ea3dd3e700e4a9e1e6cee524c", null ],
     [ "i_generator", "classProcessor.html#a91f79c0fff7211d2979a8bb3da54788a", null ],

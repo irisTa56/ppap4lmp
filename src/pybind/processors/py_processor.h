@@ -27,6 +27,16 @@ class PyProcessor : public PRO {
     PYBIND11_OVERLOAD_PURE(
       void, PRO, run_impl, index);
   }
+  void say_hello(const int i) override
+  {
+    PYBIND11_OVERLOAD(
+      void, PRO, say_hello, i);
+  }
+  void say_goodbye(const int i) override
+  {
+    PYBIND11_OVERLOAD(
+      void, PRO, say_goodbye, i);
+  }
  public:
   using PRO::PRO;
   void prepare() override
@@ -43,16 +53,6 @@ class PyProcessor : public PRO {
   {
     PYBIND11_OVERLOAD(
       bool, PRO, run, );
-  }
-  void say_hello(const int i) override
-  {
-    PYBIND11_OVERLOAD(
-      void, PRO, say_hello, i);
-  }
-  void say_goodbye(const int i) override
-  {
-    PYBIND11_OVERLOAD(
-      void, PRO, say_goodbye, i);
   }
 };
 

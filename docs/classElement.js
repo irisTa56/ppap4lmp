@@ -21,6 +21,7 @@ var classElement =
     [ "init_for_python", "classElement.html#a1fdb9455f49d2c66a0276925f7246cad", null ],
     [ "optional", "classElement.html#a0d0123e7fa1a7b96fb0ac271c0837a7d", null ],
     [ "required", "classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517", null ],
+    [ "set_checking_classname", "classElement.html#ae07a844782e6b86f3d765ce661f02d82", null ],
     [ "update_data", "classElement.html#aae8f7d596f055b36ea44206bbef38c73", null ],
     [ "Generator", "classElement.html#a366b7823e659ab78d952a7d79662a4d6", null ],
     [ "data", "classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5", null ],
