@@ -26,7 +26,7 @@ void InvOMP::execute_impl(const Vec<ShPtr<Processor>> &procs)
 
   #pragma omp parallel private(end)
   {
-    while (!end)
+    while (!end && error_msg.empty())
     {
       end = true;
 
