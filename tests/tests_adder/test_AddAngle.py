@@ -65,9 +65,8 @@ class TestAddAngle(unittest.TestCase):
     angle = create(StaCustom(angle_in_py))
     atoms = create(StaCustom(atoms_in_py))
     angle.append_updater(AddAngle(atoms))
-    print(angle_right_in_py)
-    print(angle.get_data()[0]["angle"])
-    #print(angle.get_data())
+    #print(angle_right_in_py)
+    #print(angle.get_data()[0]["angle"])
 
     if abs(angle_right_in_py-
       angle.get_data()[0]["angle"])<0.0000000001:
@@ -105,7 +104,8 @@ class TestAddAngle(unittest.TestCase):
       vec1 = [
         atom_list[i]["xu"] - atom_list[i+1]["xu"],
         atom_list[i]["yu"] - atom_list[i+1]["yu"],
-        atom_list[i]["zu"] - atom_list[i+1]["zu"]]#right vector
+        atom_list[i]["zu"] - atom_list[i+1]["zu"]]
+        #the vector of the 1st and 2nd atoms
 
       vec_test2 = get_random_unit_vector()
       length2 = np.random.uniform(0.8, 1.2)
@@ -120,26 +120,30 @@ class TestAddAngle(unittest.TestCase):
         atom_list_test[0]["xu"] - atom_list[i+1]["xu"],
         atom_list_test[0]["yu"] - atom_list[i+1]["yu"],
         atom_list_test[0]["zu"] - atom_list[i+1]["zu"]]
+        #the vector of the 2nd and 3rd atoms
 
       n_vec = np.cross(vec1,vec2)
+      #the Normal vector of vec1 and vec2
 
       angle_first =np.arccos(
       (vec1[0] * vec2[0] + vec1[1] * vec2[1] + vec1[2] * vec2[2])/(
       np.sqrt(vec1[0] * vec1[0] + vec1[1] * vec1[1] + vec1[2] * vec1[2])*
       np.sqrt(vec2[0] * vec2[0] + vec2[1] * vec2[1] + vec2[2] * vec2[2])
-      ))
+      ))#the angle of vec1 and vec2
 
-      if angle > angle_first:
-        vec3 = rot((angle_first-angle), n_vec, vec2)
-      else:
-         vec3 = rot(-(angle_first-angle), n_vec, vec2)
+      vec3 = rot((angle_first-angle), n_vec, vec2)
+      #Rotate vector 2
 
       angle_rot = np.arccos(
       (vec3[0] * vec2[0] + vec3[1] * vec2[1] + vec3[2] * vec2[2])/(
       np.sqrt(vec3[0] * vec3[0] + vec3[1] * vec3[1] + vec3[2] * vec3[2])*
       np.sqrt(vec2[0] * vec2[0] + vec2[1] * vec2[1] + vec2[2] * vec2[2])
       ))
-      print(angle_first,angle_rot,angle)
+      #the rotation angle of vec2
+      #print(angle_first,angle_rot,angle)
+      #to see the angle of vec1 and vec2,
+      #the rotation angle of vec2
+      #and the true angle
 
       atom_list.append({
         "id" : i+3,
@@ -158,10 +162,9 @@ class TestAddAngle(unittest.TestCase):
     bond = create(StaCustom(bond_angle_list))
     atoms = create(StaCustom(atom_list))
     bond.append_updater(AddAngle(atoms))
-    #print(atoms.get_data())
-    #print(bond.get_data())
-    print(angles)
-    print(bond.get_1d_float("angle"))
+
+    #print(angles)
+    #print(bond.get_1d_float("angle"))
 
     self.assertTrue(np.allclose(angles, bond.get_1d_float("angle")))
 
