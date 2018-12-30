@@ -2,6 +2,7 @@ import unittest
 
 import os
 import sys
+
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 from test_utils import check_error_msg
@@ -12,11 +13,11 @@ from scipy.stats import special_ortho_group
 
 from random import uniform
 
-from ppap4lmp import create, StaCustom, StaMolecules, \
-  AddCoMPosition, AddWrappedPosition, AddInertiaMoment, execute_omp, \
-  ProRadialDistributionFunctionWithDeformation, \
-  ProRadialDistributionFunction, \
-  StaDumpAtoms, StaDumpBox, StaBeads
+from ppap4lmp import (
+  create, StaCustom, StaMolecules, StaDumpAtoms, StaDumpBox, StaBeads,
+  AddCoMPosition, AddWrappedPosition, AddInertiaMoment, execute_omp,
+  ProRadialDistributionFunctionWithDeformation,
+  ProRadialDistributionFunction)
 
 ProRDFWD = ProRadialDistributionFunctionWithDeformation
 ProRDF = ProRadialDistributionFunction

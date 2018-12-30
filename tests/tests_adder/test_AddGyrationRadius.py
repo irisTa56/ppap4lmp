@@ -2,6 +2,7 @@ import unittest
 
 import os
 import sys
+
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 from test_utils import check_error_msg
@@ -9,9 +10,9 @@ from test_utils import check_error_msg
 from copy import deepcopy
 from math import sqrt
 
-from ppap4lmp import \
-  create, StaCustom, StaMolecules, \
-  AddCoMPosition, AddInertiaMoment, AddGyrationRadius
+from ppap4lmp import (
+  create, StaCustom, StaMolecules,
+  AddCoMPosition, AddInertiaMoment, AddGyrationRadius)
 
 class TestAddGyrationRadius(unittest.TestCase):
 

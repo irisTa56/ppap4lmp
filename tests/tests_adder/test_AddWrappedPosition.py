@@ -2,14 +2,15 @@ import unittest
 
 import os
 import sys
+
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 from test_utils import check_error_msg
 
 import numpy as np
 
-from ppap4lmp import \
-  create, StaCustom, StaDumpAtoms, StaDumpBox, AddWrappedPosition
+from ppap4lmp import (
+  create, StaCustom, StaDumpAtoms, StaDumpBox, AddWrappedPosition)
 
 class TestAddWrappedPosition(unittest.TestCase):
 
