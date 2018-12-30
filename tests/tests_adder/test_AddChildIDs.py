@@ -2,12 +2,13 @@ import unittest
 
 import os
 import sys
+
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 from test_utils import check_error_msg
 
-from ppap4lmp import \
-  create, StaCustom, StaDumpAtoms, StaMolecules, AddChildIDs
+from ppap4lmp import (
+  create, StaCustom, StaDumpAtoms, StaMolecules, AddChildIDs)
 
 class TestAddChildIDs(unittest.TestCase):
 

@@ -2,86 +2,84 @@ import unittest
 
 import os
 import sys
+
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import check_error_msg, generate_random_unit_vector
 
 import numpy as np
 
 from random import randrange
 
-from ppap4lmp import \
-  create, StaCustom, StaDumpAtoms, StaMolecules, StaBeads, \
-  AddMap, AddBondLength
-
-def get_random_unit_vector():
-  while True:
-    x = np.random.randn(3)  # standard normal distribution
-    r = np.linalg.norm(x)
-    if r != 0.:
-      return x/r
+from ppap4lmp import (
+  create, AddMap, AddBondLength,
+  StaCustom, StaDumpAtoms, StaMolecules, StaBeads)
 
 class TestAddBondLength(unittest.TestCase):
 
-  def test01(self):
-    bond_o2_in_py = 121.0
-    bond_in_py = [
-      {"atom1-id" : 1,"atom2-id" :2}
+  def test_single_length(self):
 
-    ]
-    atoms_in_py = [
-      {"id" : 1 ,"xu" : 0.0, "yu" : 0.0 ,"zu" :0.0},
-      {"id" : 2 ,"xu" : 0.0, "yu" : 0.0, "zu" :121.0},
-    ]
-    bond = create(StaCustom(bond_in_py))
-    atoms = create(StaCustom(atoms_in_py))
-    bond.append_updater(AddBondLength(atoms))
-    self.assertTrue(bond_o2_in_py == bond.get_data()[0]["length"])
+    right_length = 121.0
 
-  def test02(self):
-    bond_lengths = np.random.uniform(0.5, 1.5,2)
+    bonds_py = [{"atom1-id": 1, "atom2-id": 2}]
+
+    atoms_py = [
+      {"id": 1, "xu": 0.0, "yu": 0.0, "zu": 0.0},
+      {"id": 2, "xu": 0.0, "yu": 0.0, "zu": 121.0},
+    ]
+
+    bonds = create(StaCustom(bonds_py))
+    atoms = create(StaCustom(atoms_py))
+    bonds.append_updater(AddBondLength(atoms))
+
+    self.assertTrue(np.allclose(bonds.get_data()[0]["length"], right_length))
+
+  def test_sequence_lengths(self):
+
+    right_lengths = np.random.uniform(0.5, 1.5, 1000)
+
     lo = -100.0
     hi = 100.0
-    bond_list = []
-    atom_list = [
-      {"id" : 1,
-       "xu" : np.random.uniform(lo, hi) ,
-       "yu" : np.random.uniform(lo, hi) ,
-       "zu" : np.random.uniform(lo, hi),}
 
-      ]
-    for i , length in enumerate(bond_lengths):
-      vec = get_random_unit_vector()
-      atom_list.append({
-      "id" : i+2,
-       "xu" :atom_list[i]["xu"] + length * vec[0],
-       "yu" :atom_list[i]["yu"] + length * vec[1],
-       "zu" :atom_list[i]["zu"] + length * vec[2],
-        }
-      )
-      bond_list.append({
-        "id" : i+1 ,
-        "atom1-id" : i+1 ,
-        "atom2-id" : i+2,}
-        )
+    bonds_py = []
 
-    bond = create(StaCustom(bond_list))
-    atoms = create(StaCustom(atom_list))
-    bond.append_updater(AddBondLength(atoms))
-    print(bond_lengths)
-    print(bond.get_1d_float("length"))
-    self.assertTrue(np.allclose(bond_lengths, bond.get_1d_float("length")))
+    atoms_py = [{
+      "id": 1,
+      "xu": np.random.uniform(lo, hi),
+      "yu": np.random.uniform(lo, hi),
+      "zu": np.random.uniform(lo, hi),
+    }]
 
+    for i, length in enumerate(right_lengths):
 
+      vec = generate_random_unit_vector()
 
+      atoms_py.append({
+        "id": i+2,
+        "xu": atoms_py[i]["xu"] + length * vec[0],
+        "yu": atoms_py[i]["yu"] + length * vec[1],
+        "zu": atoms_py[i]["zu"] + length * vec[2],
+      })
 
+      bonds_py.append({
+        "id": i+1,
+        "atom1-id": i+1,
+        "atom2-id": i+2,
+      })
 
+    bonds = create(StaCustom(bonds_py))
+    atoms = create(StaCustom(atoms_py))
+    bonds.append_updater(AddBondLength(atoms))
+
+    self.assertTrue(
+      np.allclose(right_lengths, bonds.get_1d_float("length")))
 
 if __name__ == "__main__":
 
   suite = unittest.TestSuite()
 
-  suite.addTest(TestAddBondLength("test02"))
+  suite.addTest(TestAddBondLength("test_single_length"))
+  suite.addTest(TestAddBondLength("test_sequence_lengths"))
 
   runner = unittest.TextTestRunner()
   runner.run(suite)
