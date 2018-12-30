@@ -5,6 +5,7 @@ var annotated_dup =
         [ "type_caster< Json >", "structpybind11_1_1detail_1_1type__caster_3_01Json_01_4.html", "structpybind11_1_1detail_1_1type__caster_3_01Json_01_4" ]
       ] ]
     ] ],
+    [ "AddAngle", "classAddAngle.html", "classAddAngle" ],
     [ "AddBondLength", "classAddBondLength.html", "classAddBondLength" ],
     [ "AddChildIDs", "classAddChildIDs.html", "classAddChildIDs" ],
     [ "AddChildPositions", "classAddChildPositions.html", "classAddChildPositions" ],

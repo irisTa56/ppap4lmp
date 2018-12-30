@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 2309;
+var viewWidth = 2420;
 var viewHeight = 568;
 var sectionId = 'dynsection-0';
 </script>
@@ -54,100 +54,100 @@ var sectionId = 'dynsection-0';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>Updater</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-564 2305,-564 2305,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-564 2415.5,-564 2415.5,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="1550.5,-414.5 1550.5,-559.5 1680.5,-559.5 1680.5,-414.5 1550.5,-414.5"/>
-<text text-anchor="middle" x="1615.5" y="-547.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Updater</text>
-<polyline fill="none" stroke="#000000" points="1550.5,-540.5 1680.5,-540.5 "/>
-<text text-anchor="start" x="1558.5" y="-528.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># ext_generator</text>
-<text text-anchor="start" x="1558.5" y="-517.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; dataid_blacklist</text>
-<text text-anchor="start" x="1558.5" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; omp_lock</text>
-<polyline fill="none" stroke="#000000" points="1550.5,-499.5 1680.5,-499.5 "/>
-<text text-anchor="start" x="1558.5" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
-<text text-anchor="start" x="1558.5" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Updater()</text>
-<text text-anchor="start" x="1558.5" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
-<text text-anchor="start" x="1558.5" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ remove_from_blacklist()</text>
-<text text-anchor="start" x="1558.5" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_ext_generator()</text>
-<text text-anchor="start" x="1558.5" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="1558.5" y="-421.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># check_blacklist()</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="1661,-414.5 1661,-559.5 1791,-559.5 1791,-414.5 1661,-414.5"/>
+<text text-anchor="middle" x="1726" y="-547.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Updater</text>
+<polyline fill="none" stroke="#000000" points="1661,-540.5 1791,-540.5 "/>
+<text text-anchor="start" x="1669" y="-528.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># ext_generator</text>
+<text text-anchor="start" x="1669" y="-517.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; dataid_blacklist</text>
+<text text-anchor="start" x="1669" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; omp_lock</text>
+<polyline fill="none" stroke="#000000" points="1661,-499.5 1791,-499.5 "/>
+<text text-anchor="start" x="1669" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
+<text text-anchor="start" x="1669" y="-476.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Updater()</text>
+<text text-anchor="start" x="1669" y="-465.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
+<text text-anchor="start" x="1669" y="-454.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ remove_from_blacklist()</text>
+<text text-anchor="start" x="1669" y="-443.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_ext_generator()</text>
+<text text-anchor="start" x="1669" y="-432.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="1669" y="-421.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># check_blacklist()</text>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node">
 <title>Node1</title>
 <g id="a_node2"><a xlink:href="classAdder.html" target="_top" xlink:title="Adder adds new properties to a non&#45;empty Element object. ">
-<polygon fill="#ffffff" stroke="#000000" points="780,-293 780,-372 849,-372 849,-293 780,-293"/>
-<text text-anchor="middle" x="814.5" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Adder</text>
-<polyline fill="none" stroke="#000000" points="780,-353 849,-353 "/>
-<text text-anchor="middle" x="814.5" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="780,-334 849,-334 "/>
-<text text-anchor="start" x="788" y="-322" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Adder()</text>
-<text text-anchor="start" x="788" y="-311" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
-<text text-anchor="start" x="788" y="-300" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
+<polygon fill="#ffffff" stroke="#000000" points="823.5,-293 823.5,-372 892.5,-372 892.5,-293 823.5,-293"/>
+<text text-anchor="middle" x="858" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Adder</text>
+<polyline fill="none" stroke="#000000" points="823.5,-353 892.5,-353 "/>
+<text text-anchor="middle" x="858" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="823.5,-334 892.5,-334 "/>
+<text text-anchor="start" x="831.5" y="-322" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Adder()</text>
+<text text-anchor="start" x="831.5" y="-311" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
+<text text-anchor="start" x="831.5" y="-300" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node0&#45;&gt;Node1</title>
-<path fill="none" stroke="#191970" d="M1540.2657,-472.4885C1371.8475,-440.0034 969.8177,-362.4583 849.2546,-339.2036"/>
-<polygon fill="none" stroke="#191970" points="1539.8085,-475.9648 1550.2904,-474.4221 1541.1343,-469.0915 1539.8085,-475.9648"/>
+<path fill="none" stroke="#191970" d="M1650.8488,-473.6234C1470.941,-441.6007 1020.9354,-361.5017 892.6379,-338.6654"/>
+<polygon fill="none" stroke="#191970" points="1650.3003,-477.0807 1660.7589,-475.3874 1651.527,-470.1891 1650.3003,-477.0807"/>
 </g>
-<!-- Node13 -->
-<g id="node14" class="node">
-<title>Node13</title>
-<g id="a_node14"><a xlink:href="classFilter.html" target="_top" xlink:title="Filter removes elements from array Element::data if the elements fail user&#45;defined criteria...">
-<polygon fill="#ffffff" stroke="#000000" points="1581,-293 1581,-372 1650,-372 1650,-293 1581,-293"/>
-<text text-anchor="middle" x="1615.5" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Filter</text>
-<polyline fill="none" stroke="#000000" points="1581,-353 1650,-353 "/>
-<text text-anchor="middle" x="1615.5" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="1581,-334 1650,-334 "/>
-<text text-anchor="start" x="1589" y="-322" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Filter()</text>
-<text text-anchor="start" x="1589" y="-311" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
-<text text-anchor="start" x="1589" y="-300" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
+<!-- Node14 -->
+<g id="node15" class="node">
+<title>Node14</title>
+<g id="a_node15"><a xlink:href="classFilter.html" target="_top" xlink:title="Filter removes elements from array Element::data if the elements fail user&#45;defined criteria...">
+<polygon fill="#ffffff" stroke="#000000" points="1691.5,-293 1691.5,-372 1760.5,-372 1760.5,-293 1691.5,-293"/>
+<text text-anchor="middle" x="1726" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Filter</text>
+<polyline fill="none" stroke="#000000" points="1691.5,-353 1760.5,-353 "/>
+<text text-anchor="middle" x="1726" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="1691.5,-334 1760.5,-334 "/>
+<text text-anchor="start" x="1699.5" y="-322" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Filter()</text>
+<text text-anchor="start" x="1699.5" y="-311" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
+<text text-anchor="start" x="1699.5" y="-300" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node13 -->
-<g id="edge13" class="edge">
-<title>Node0&#45;&gt;Node13</title>
-<path fill="none" stroke="#191970" d="M1615.5,-404.0296C1615.5,-392.8941 1615.5,-381.9181 1615.5,-372.0337"/>
-<polygon fill="none" stroke="#191970" points="1612.0001,-404.274 1615.5,-414.2741 1619.0001,-404.2741 1612.0001,-404.274"/>
+<!-- Node0&#45;&gt;Node14 -->
+<g id="edge14" class="edge">
+<title>Node0&#45;&gt;Node14</title>
+<path fill="none" stroke="#191970" d="M1726,-404.0296C1726,-392.8941 1726,-381.9181 1726,-372.0337"/>
+<polygon fill="none" stroke="#191970" points="1722.5001,-404.274 1726,-414.2741 1729.5001,-404.2741 1722.5001,-404.274"/>
 </g>
-<!-- Node16 -->
-<g id="node17" class="node">
-<title>Node16</title>
-<g id="a_node17"><a xlink:href="classStarter.html" target="_top" xlink:title="Starter sets some properties to an empty Element object. ">
-<polygon fill="#ffffff" stroke="#000000" points="1951.5,-287.5 1951.5,-377.5 2025.5,-377.5 2025.5,-287.5 1951.5,-287.5"/>
-<text text-anchor="middle" x="1988.5" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter</text>
-<polyline fill="none" stroke="#000000" points="1951.5,-358.5 2025.5,-358.5 "/>
-<text text-anchor="middle" x="1988.5" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="1951.5,-339.5 2025.5,-339.5 "/>
-<text text-anchor="start" x="1959.5" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Starter()</text>
-<text text-anchor="start" x="1959.5" y="-316.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
-<text text-anchor="start" x="1959.5" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
-<text text-anchor="start" x="1959.5" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; sort_by_id()</text>
+<!-- Node17 -->
+<g id="node18" class="node">
+<title>Node17</title>
+<g id="a_node18"><a xlink:href="classStarter.html" target="_top" xlink:title="Starter sets some properties to an empty Element object. ">
+<polygon fill="#ffffff" stroke="#000000" points="2062,-287.5 2062,-377.5 2136,-377.5 2136,-287.5 2062,-287.5"/>
+<text text-anchor="middle" x="2099" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter</text>
+<polyline fill="none" stroke="#000000" points="2062,-358.5 2136,-358.5 "/>
+<text text-anchor="middle" x="2099" y="-346.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="2062,-339.5 2136,-339.5 "/>
+<text text-anchor="start" x="2070" y="-327.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Starter()</text>
+<text text-anchor="start" x="2070" y="-316.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
+<text text-anchor="start" x="2070" y="-305.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Updater()</text>
+<text text-anchor="start" x="2070" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; sort_by_id()</text>
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node16 -->
-<g id="edge16" class="edge">
-<title>Node0&#45;&gt;Node16</title>
-<path fill="none" stroke="#191970" d="M1690.3161,-456.0105C1769.318,-423.2872 1890.6471,-373.0316 1951.2968,-347.9099"/>
-<polygon fill="none" stroke="#191970" points="1688.7979,-452.8509 1680.8985,-459.9114 1691.4767,-459.3181 1688.7979,-452.8509"/>
+<!-- Node0&#45;&gt;Node17 -->
+<g id="edge17" class="edge">
+<title>Node0&#45;&gt;Node17</title>
+<path fill="none" stroke="#191970" d="M1800.8161,-456.0105C1879.818,-423.2872 2001.1471,-373.0316 2061.7968,-347.9099"/>
+<polygon fill="none" stroke="#191970" points="1799.2979,-452.8509 1791.3985,-459.9114 1801.9767,-459.3181 1799.2979,-452.8509"/>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="classAddBondLength.html" target="_top" xlink:title="AddBondLength adds center of mass to an Element object as its unwrapped position. ...">
-<polygon fill="#ffffff" stroke="#000000" points="0,-149.5 0,-228.5 107,-228.5 107,-149.5 0,-149.5"/>
-<text text-anchor="middle" x="53.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddBondLength</text>
-<polyline fill="none" stroke="#000000" points="0,-209.5 107,-209.5 "/>
-<text text-anchor="middle" x="53.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="0,-190.5 107,-190.5 "/>
-<text text-anchor="start" x="8" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddBondLength()</text>
-<text text-anchor="start" x="8" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddBondLength()</text>
+<g id="a_node3"><a xlink:href="classAddAngle.html" target="_top" xlink:title="AddAngle adds center of mass to an Element object as its unwrapped position. ">
+<polygon fill="#ffffff" stroke="#000000" points="0,-149.5 0,-228.5 92,-228.5 92,-149.5 0,-149.5"/>
+<text text-anchor="middle" x="46" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddAngle</text>
+<polyline fill="none" stroke="#000000" points="0,-209.5 92,-209.5 "/>
+<text text-anchor="middle" x="46" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="0,-190.5 92,-190.5 "/>
+<text text-anchor="start" x="8" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddAngle()</text>
+<text text-anchor="start" x="8" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddAngle()</text>
 <text text-anchor="start" x="8" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
@@ -155,428 +155,449 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M769.5562,-331.0384C634.2638,-326.0526 232.9815,-306.8104 116.5,-251 105.2903,-245.629 94.8671,-237.4499 85.855,-228.7773"/>
-<polygon fill="none" stroke="#191970" points="769.4592,-334.5371 779.5788,-331.3994 769.7113,-327.5416 769.4592,-334.5371"/>
+<path fill="none" stroke="#191970" d="M813.0138,-331.8612C669.7911,-329.1821 226.4964,-315.7302 101,-251 90.6418,-245.6573 81.3322,-237.4885 73.4446,-228.8169"/>
+<polygon fill="none" stroke="#191970" points="813.132,-335.3637 823.1928,-332.0427 813.2569,-328.3649 813.132,-335.3637"/>
 </g>
 <!-- Node3 -->
 <g id="node4" class="node">
 <title>Node3</title>
-<g id="a_node4"><a xlink:href="classAddChildIDs.html" target="_top" xlink:title="AddChildIDs adds id property of a child Element object to a parent Element object. ">
-<polygon fill="#ffffff" stroke="#000000" points="125.5,-144 125.5,-234 225.5,-234 225.5,-144 125.5,-144"/>
-<text text-anchor="middle" x="175.5" y="-222" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildIDs</text>
-<polyline fill="none" stroke="#000000" points="125.5,-215 225.5,-215 "/>
-<text text-anchor="start" x="133.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; child_name</text>
-<text text-anchor="start" x="133.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_for_parent_id</text>
-<polyline fill="none" stroke="#000000" points="125.5,-185 225.5,-185 "/>
-<text text-anchor="start" x="133.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddChildIDs()</text>
-<text text-anchor="start" x="133.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddChildIDs()</text>
-<text text-anchor="start" x="133.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node4"><a xlink:href="classAddBondLength.html" target="_top" xlink:title="AddBondLength adds center of mass to an Element object as its unwrapped position. ...">
+<polygon fill="#ffffff" stroke="#000000" points="110.5,-149.5 110.5,-228.5 217.5,-228.5 217.5,-149.5 110.5,-149.5"/>
+<text text-anchor="middle" x="164" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddBondLength</text>
+<polyline fill="none" stroke="#000000" points="110.5,-209.5 217.5,-209.5 "/>
+<text text-anchor="middle" x="164" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="110.5,-190.5 217.5,-190.5 "/>
+<text text-anchor="start" x="118.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddBondLength()</text>
+<text text-anchor="start" x="118.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddBondLength()</text>
+<text text-anchor="start" x="118.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M769.5984,-330.0002C650.3094,-322.764 328.2074,-299.1786 234.5,-251 226.1749,-246.7197 218.3741,-240.7913 211.3438,-234.2852"/>
-<polygon fill="none" stroke="#191970" points="769.6424,-333.5089 779.8331,-330.6109 770.0594,-326.5214 769.6424,-333.5089"/>
+<path fill="none" stroke="#191970" d="M813.1592,-330.409C686.9221,-323.9463 330.9716,-301.5994 227,-251 215.8233,-245.5607 205.4122,-237.3564 196.4012,-228.6815"/>
+<polygon fill="none" stroke="#191970" points="813.0872,-333.9097 823.2504,-330.9167 813.4389,-326.9186 813.0872,-333.9097"/>
 </g>
 <!-- Node4 -->
 <g id="node5" class="node">
 <title>Node4</title>
-<g id="a_node5"><a xlink:href="classAddChildPositions.html" target="_top" xlink:title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">
-<polygon fill="#ffffff" stroke="#000000" points="244,-149.5 244,-228.5 361,-228.5 361,-149.5 244,-149.5"/>
-<text text-anchor="middle" x="302.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildPositions</text>
-<polyline fill="none" stroke="#000000" points="244,-209.5 361,-209.5 "/>
-<text text-anchor="start" x="252" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; child_name</text>
-<polyline fill="none" stroke="#000000" points="244,-190.5 361,-190.5 "/>
-<text text-anchor="start" x="252" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddChildPositions()</text>
-<text text-anchor="start" x="252" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddChildPositions()</text>
-<text text-anchor="start" x="252" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node5"><a xlink:href="classAddChildIDs.html" target="_top" xlink:title="AddChildIDs adds id property of a child Element object to a parent Element object. ">
+<polygon fill="#ffffff" stroke="#000000" points="236,-144 236,-234 336,-234 336,-144 236,-144"/>
+<text text-anchor="middle" x="286" y="-222" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildIDs</text>
+<polyline fill="none" stroke="#000000" points="236,-215 336,-215 "/>
+<text text-anchor="start" x="244" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; child_name</text>
+<text text-anchor="start" x="244" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_for_parent_id</text>
+<polyline fill="none" stroke="#000000" points="236,-185 336,-185 "/>
+<text text-anchor="start" x="244" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddChildIDs()</text>
+<text text-anchor="start" x="244" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddChildIDs()</text>
+<text text-anchor="start" x="244" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge4" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M769.7278,-327.4572C671.5714,-315.8943 440.6132,-285.7731 370.5,-251 359.05,-245.3213 348.1157,-237.1371 338.4928,-228.5679"/>
-<polygon fill="none" stroke="#191970" points="769.5758,-330.9632 779.9143,-328.6466 770.3877,-324.0104 769.5758,-330.9632"/>
+<path fill="none" stroke="#191970" d="M813.442,-329.0963C704.2846,-320.1796 426.489,-293.8257 345,-251 336.7136,-246.6452 328.9326,-240.6789 321.9099,-234.158"/>
+<polygon fill="none" stroke="#191970" points="813.2179,-332.5895 823.467,-329.9047 813.7807,-325.6121 813.2179,-332.5895"/>
 </g>
 <!-- Node5 -->
 <g id="node6" class="node">
 <title>Node5</title>
-<g id="a_node6"><a xlink:href="classAddCoMPosition.html" target="_top" xlink:title="AddCoMPosition adds center of mass to an Element object as its unwrapped position. ">
-<polygon fill="#ffffff" stroke="#000000" points="379.5,-138.5 379.5,-239.5 519.5,-239.5 519.5,-138.5 379.5,-138.5"/>
-<text text-anchor="middle" x="449.5" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition</text>
-<polyline fill="none" stroke="#000000" points="379.5,-220.5 519.5,-220.5 "/>
-<text text-anchor="middle" x="449.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="379.5,-201.5 519.5,-201.5 "/>
-<text text-anchor="start" x="387.5" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddCoMPosition()</text>
-<text text-anchor="start" x="387.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddCoMPosition()</text>
-<text text-anchor="start" x="387.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="387.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_with_weights()</text>
-<text text-anchor="start" x="387.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_without_weights()</text>
+<g id="a_node6"><a xlink:href="classAddChildPositions.html" target="_top" xlink:title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">
+<polygon fill="#ffffff" stroke="#000000" points="354.5,-149.5 354.5,-228.5 471.5,-228.5 471.5,-149.5 354.5,-149.5"/>
+<text text-anchor="middle" x="413" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddChildPositions</text>
+<polyline fill="none" stroke="#000000" points="354.5,-209.5 471.5,-209.5 "/>
+<text text-anchor="start" x="362.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; child_name</text>
+<polyline fill="none" stroke="#000000" points="354.5,-190.5 471.5,-190.5 "/>
+<text text-anchor="start" x="362.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddChildPositions()</text>
+<text text-anchor="start" x="362.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddChildPositions()</text>
+<text text-anchor="start" x="362.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node5</title>
-<path fill="none" stroke="#191970" d="M769.9513,-325.3402C711.9551,-314.8054 608.5557,-291.8176 528.5,-251 521.9764,-247.6739 515.467,-243.7703 509.1426,-239.5683"/>
-<polygon fill="none" stroke="#191970" points="769.4342,-328.8031 779.8919,-327.1043 770.6573,-321.9108 769.4342,-328.8031"/>
+<path fill="none" stroke="#191970" d="M813.2352,-330.3242C739.9489,-325.1705 591.4753,-307.9668 481,-251 469.7825,-245.2157 459.0127,-237.0971 449.4824,-228.6358"/>
+<polygon fill="none" stroke="#191970" points="813.2802,-333.8347 823.4889,-331.0004 813.7409,-326.8499 813.2802,-333.8347"/>
 </g>
 <!-- Node6 -->
 <g id="node7" class="node">
 <title>Node6</title>
-<g id="a_node7"><a xlink:href="classAddGyrationRadius.html" target="_top" xlink:title="AddGyrationRadius adds gyration radius to an Element object. ">
-<polygon fill="#ffffff" stroke="#000000" points="537.5,-149.5 537.5,-228.5 659.5,-228.5 659.5,-149.5 537.5,-149.5"/>
-<text text-anchor="middle" x="598.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddGyrationRadius</text>
-<polyline fill="none" stroke="#000000" points="537.5,-209.5 659.5,-209.5 "/>
-<text text-anchor="start" x="545.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; add_sqrted</text>
-<polyline fill="none" stroke="#000000" points="537.5,-190.5 659.5,-190.5 "/>
-<text text-anchor="start" x="545.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddGyrationRadius()</text>
-<text text-anchor="start" x="545.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ with_sqrted()</text>
-<text text-anchor="start" x="545.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node7"><a xlink:href="classAddCoMPosition.html" target="_top" xlink:title="AddCoMPosition adds center of mass to an Element object as its unwrapped position. ">
+<polygon fill="#ffffff" stroke="#000000" points="490,-138.5 490,-239.5 630,-239.5 630,-138.5 490,-138.5"/>
+<text text-anchor="middle" x="560" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddCoMPosition</text>
+<polyline fill="none" stroke="#000000" points="490,-220.5 630,-220.5 "/>
+<text text-anchor="middle" x="560" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="490,-201.5 630,-201.5 "/>
+<text text-anchor="start" x="498" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddCoMPosition()</text>
+<text text-anchor="start" x="498" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddCoMPosition()</text>
+<text text-anchor="start" x="498" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="498" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_with_weights()</text>
+<text text-anchor="start" x="498" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_without_weights()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M770.6085,-311.1591C740.8202,-295.926 701.0808,-274.1124 668.5,-251 658.9665,-244.2371 649.2585,-236.374 640.2282,-228.5645"/>
-<polygon fill="none" stroke="#191970" points="769.4059,-314.4732 779.9087,-315.867 772.5674,-308.2278 769.4059,-314.4732"/>
+<path fill="none" stroke="#191970" d="M813.307,-320.3111C767.7602,-306.8865 695.9185,-282.9005 639,-251 632.9164,-247.5904 626.8053,-243.7326 620.8236,-239.65"/>
+<polygon fill="none" stroke="#191970" points="812.5928,-323.7482 823.1721,-323.1747 814.5442,-317.0257 812.5928,-323.7482"/>
 </g>
 <!-- Node7 -->
 <g id="node8" class="node">
 <title>Node7</title>
-<g id="a_node8"><a xlink:href="classAddInertiaMoment.html" target="_top" xlink:title="AddInertiaMoment adds inertia moment to an Element object. ">
-<polygon fill="#ffffff" stroke="#000000" points="677.5,-138.5 677.5,-239.5 817.5,-239.5 817.5,-138.5 677.5,-138.5"/>
-<text text-anchor="middle" x="747.5" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment</text>
-<polyline fill="none" stroke="#000000" points="677.5,-220.5 817.5,-220.5 "/>
-<text text-anchor="middle" x="747.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="677.5,-201.5 817.5,-201.5 "/>
-<text text-anchor="start" x="685.5" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddInertiaMoment()</text>
-<text text-anchor="start" x="685.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddInertiaMoment()</text>
-<text text-anchor="start" x="685.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="685.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_with_weights()</text>
-<text text-anchor="start" x="685.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_without_weights()</text>
+<g id="a_node8"><a xlink:href="classAddGyrationRadius.html" target="_top" xlink:title="AddGyrationRadius adds gyration radius to an Element object. ">
+<polygon fill="#ffffff" stroke="#000000" points="648,-149.5 648,-228.5 770,-228.5 770,-149.5 648,-149.5"/>
+<text text-anchor="middle" x="709" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddGyrationRadius</text>
+<polyline fill="none" stroke="#000000" points="648,-209.5 770,-209.5 "/>
+<text text-anchor="start" x="656" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; add_sqrted</text>
+<polyline fill="none" stroke="#000000" points="648,-190.5 770,-190.5 "/>
+<text text-anchor="start" x="656" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddGyrationRadius()</text>
+<text text-anchor="start" x="656" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ with_sqrted()</text>
+<text text-anchor="start" x="656" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M791.7428,-283.7588C785.084,-269.4971 777.7919,-253.879 771.083,-239.51"/>
-<polygon fill="none" stroke="#191970" points="788.6126,-285.3278 796.0146,-292.9081 794.9553,-282.3664 788.6126,-285.3278"/>
+<path fill="none" stroke="#191970" d="M816.0591,-292.1073C795.471,-272.2791 770.753,-248.4735 750.2575,-228.7346"/>
+<polygon fill="none" stroke="#191970" points="813.8112,-294.8016 823.4419,-299.2175 818.667,-289.7596 813.8112,-294.8016"/>
 </g>
 <!-- Node8 -->
 <g id="node9" class="node">
 <title>Node8</title>
-<g id="a_node9"><a xlink:href="classAddMap.html" target="_top" xlink:title="AddMap adds a new property by mapping from an existing property. ">
-<polygon fill="#ffffff" stroke="#000000" points="835.5,-127.5 835.5,-250.5 927.5,-250.5 927.5,-127.5 835.5,-127.5"/>
-<text text-anchor="middle" x="881.5" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMap</text>
-<polyline fill="none" stroke="#000000" points="835.5,-231.5 927.5,-231.5 "/>
-<text text-anchor="start" x="843.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; do_overwrite</text>
-<text text-anchor="start" x="843.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_ref</text>
-<text text-anchor="start" x="843.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_new</text>
-<text text-anchor="start" x="843.5" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; mapping</text>
-<polyline fill="none" stroke="#000000" points="835.5,-179.5 927.5,-179.5 "/>
-<text text-anchor="start" x="843.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddMap()</text>
-<text text-anchor="start" x="843.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddMap()</text>
-<text text-anchor="start" x="843.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ overwrite()</text>
-<text text-anchor="start" x="843.5" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node9"><a xlink:href="classAddInertiaMoment.html" target="_top" xlink:title="AddInertiaMoment adds inertia moment to an Element object. ">
+<polygon fill="#ffffff" stroke="#000000" points="788,-138.5 788,-239.5 928,-239.5 928,-138.5 788,-138.5"/>
+<text text-anchor="middle" x="858" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddInertiaMoment</text>
+<polyline fill="none" stroke="#000000" points="788,-220.5 928,-220.5 "/>
+<text text-anchor="middle" x="858" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="788,-201.5 928,-201.5 "/>
+<text text-anchor="start" x="796" y="-189.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddInertiaMoment()</text>
+<text text-anchor="start" x="796" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddInertiaMoment()</text>
+<text text-anchor="start" x="796" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="796" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_with_weights()</text>
+<text text-anchor="start" x="796" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; compute_without_weights()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="#191970" d="M837.262,-283.7485C842.247,-273.0717 847.5867,-261.6352 852.7708,-250.5318"/>
-<polygon fill="none" stroke="#191970" points="834.0447,-282.3664 832.9854,-292.9081 840.3874,-285.3278 834.0447,-282.3664"/>
+<path fill="none" stroke="#191970" d="M858,-282.5331C858,-268.6056 858,-253.4684 858,-239.51"/>
+<polygon fill="none" stroke="#191970" points="854.5001,-282.9081 858,-292.9081 861.5001,-282.9082 854.5001,-282.9081"/>
 </g>
 <!-- Node9 -->
 <g id="node10" class="node">
 <title>Node9</title>
-<g id="a_node10"><a xlink:href="classAddMolecularOrientation.html" target="_top" xlink:title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">
-<polygon fill="#ffffff" stroke="#000000" points="945.5,-155 945.5,-223 1089.5,-223 1089.5,-155 945.5,-155"/>
-<text text-anchor="middle" x="1017.5" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMolecularOrientation</text>
-<polyline fill="none" stroke="#000000" points="945.5,-204 1089.5,-204 "/>
-<text text-anchor="middle" x="1017.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="945.5,-185 1089.5,-185 "/>
-<text text-anchor="start" x="953.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddMolecularOrientation()</text>
-<text text-anchor="start" x="953.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node10"><a xlink:href="classAddMap.html" target="_top" xlink:title="AddMap adds a new property by mapping from an existing property. ">
+<polygon fill="#ffffff" stroke="#000000" points="946,-127.5 946,-250.5 1038,-250.5 1038,-127.5 946,-127.5"/>
+<text text-anchor="middle" x="992" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMap</text>
+<polyline fill="none" stroke="#000000" points="946,-231.5 1038,-231.5 "/>
+<text text-anchor="start" x="954" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; do_overwrite</text>
+<text text-anchor="start" x="954" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_ref</text>
+<text text-anchor="start" x="954" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_new</text>
+<text text-anchor="start" x="954" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; mapping</text>
+<polyline fill="none" stroke="#000000" points="946,-179.5 1038,-179.5 "/>
+<text text-anchor="start" x="954" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddMap()</text>
+<text text-anchor="start" x="954" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddMap()</text>
+<text text-anchor="start" x="954" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ overwrite()</text>
+<text text-anchor="start" x="954" y="-134.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge9" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="#191970" d="M857.4806,-304.7575C881.0616,-289.2954 910.6718,-269.483 936.5,-251 948.7413,-242.24 961.7834,-232.462 973.7451,-223.3078"/>
-<polygon fill="none" stroke="#191970" points="855.5389,-301.8453 849.0839,-310.2467 859.3692,-307.7044 855.5389,-301.8453"/>
+<path fill="none" stroke="#191970" d="M899.5875,-290.3068C911.7608,-277.7659 925.0149,-263.9238 937,-251 939.9352,-247.8349 942.9378,-244.5602 945.9517,-241.245"/>
+<polygon fill="none" stroke="#191970" points="897.0298,-287.9165 892.5627,-297.5236 902.0459,-292.7991 897.0298,-287.9165"/>
 </g>
 <!-- Node10 -->
 <g id="node11" class="node">
 <title>Node10</title>
-<g id="a_node11"><a xlink:href="classAddRename.html" target="_top" xlink:title="AddRename renames an existing property. ">
-<polygon fill="#ffffff" stroke="#000000" points="1107.5,-133 1107.5,-245 1199.5,-245 1199.5,-133 1107.5,-133"/>
-<text text-anchor="middle" x="1153.5" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddRename</text>
-<polyline fill="none" stroke="#000000" points="1107.5,-226 1199.5,-226 "/>
-<text text-anchor="start" x="1115.5" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; do_overwrite</text>
-<text text-anchor="start" x="1115.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_old</text>
-<text text-anchor="start" x="1115.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_new</text>
-<polyline fill="none" stroke="#000000" points="1107.5,-185 1199.5,-185 "/>
-<text text-anchor="start" x="1115.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddRename()</text>
-<text text-anchor="start" x="1115.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddRename()</text>
-<text text-anchor="start" x="1115.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ overwrite()</text>
-<text text-anchor="start" x="1115.5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node11"><a xlink:href="classAddMolecularOrientation.html" target="_top" xlink:title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">
+<polygon fill="#ffffff" stroke="#000000" points="1056,-155 1056,-223 1200,-223 1200,-155 1056,-155"/>
+<text text-anchor="middle" x="1128" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddMolecularOrientation</text>
+<polyline fill="none" stroke="#000000" points="1056,-204 1200,-204 "/>
+<text text-anchor="middle" x="1128" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="1056,-185 1200,-185 "/>
+<text text-anchor="start" x="1064" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddMolecularOrientation()</text>
+<text text-anchor="start" x="1064" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node10 -->
 <g id="edge10" class="edge">
 <title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="#191970" d="M859.4775,-327.492C918.3005,-319.2582 1022.7621,-298.7278 1098.5,-251 1101.5433,-249.0822 1104.5168,-246.9477 1107.405,-244.6571"/>
-<polygon fill="none" stroke="#191970" points="858.8374,-324.0464 849.3917,-328.8453 859.7684,-330.9842 858.8374,-324.0464"/>
+<path fill="none" stroke="#191970" d="M902.237,-316.9729C941.5134,-302.3694 999.8251,-278.6542 1047,-251 1060.7499,-242.9397 1074.8432,-232.8839 1087.339,-223.2318"/>
+<polygon fill="none" stroke="#191970" points="900.8582,-313.7507 892.68,-320.4862 903.2735,-320.3208 900.8582,-313.7507"/>
 </g>
 <!-- Node11 -->
 <g id="node12" class="node">
 <title>Node11</title>
-<g id="a_node12"><a xlink:href="classAddSpecialBonds.html" target="_top" xlink:title="AddSpecialBonds adds special bonds. ">
-<polygon fill="#ffffff" stroke="#000000" points="1218,-138.5 1218,-239.5 1341,-239.5 1341,-138.5 1218,-138.5"/>
-<text text-anchor="middle" x="1279.5" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddSpecialBonds</text>
-<polyline fill="none" stroke="#000000" points="1218,-220.5 1341,-220.5 "/>
-<text text-anchor="start" x="1226" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; mol_type_to_sbondses</text>
-<text text-anchor="start" x="1226" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_in_mol</text>
-<polyline fill="none" stroke="#000000" points="1218,-190.5 1341,-190.5 "/>
-<text text-anchor="start" x="1226" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddSpecialBonds()</text>
-<text text-anchor="start" x="1226" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddSpecialBonds()</text>
-<text text-anchor="start" x="1226" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddSpecialBonds()</text>
-<text text-anchor="start" x="1226" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node12"><a xlink:href="classAddRename.html" target="_top" xlink:title="AddRename renames an existing property. ">
+<polygon fill="#ffffff" stroke="#000000" points="1218,-133 1218,-245 1310,-245 1310,-133 1218,-133"/>
+<text text-anchor="middle" x="1264" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddRename</text>
+<polyline fill="none" stroke="#000000" points="1218,-226 1310,-226 "/>
+<text text-anchor="start" x="1226" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; do_overwrite</text>
+<text text-anchor="start" x="1226" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_old</text>
+<text text-anchor="start" x="1226" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; key_new</text>
+<polyline fill="none" stroke="#000000" points="1218,-185 1310,-185 "/>
+<text text-anchor="start" x="1226" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddRename()</text>
+<text text-anchor="start" x="1226" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddRename()</text>
+<text text-anchor="start" x="1226" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ overwrite()</text>
+<text text-anchor="start" x="1226" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node11 -->
 <g id="edge11" class="edge">
 <title>Node1&#45;&gt;Node11</title>
-<path fill="none" stroke="#191970" d="M859.205,-330.6056C934.8757,-325.8387 1091.3869,-309.1555 1208.5,-251 1214.9491,-247.7975 1221.2787,-243.8644 1227.3394,-239.5463"/>
-<polygon fill="none" stroke="#191970" points="858.8535,-327.1202 849.0766,-331.2023 859.2652,-334.1081 858.8535,-327.1202"/>
+<path fill="none" stroke="#191970" d="M902.8101,-325.5802C985.2612,-312.2838 1157.3119,-281.7487 1209,-251 1211.9679,-249.2345 1214.8626,-247.255 1217.672,-245.1173"/>
+<polygon fill="none" stroke="#191970" points="902.061,-322.1554 892.7389,-327.1903 903.1661,-329.0676 902.061,-322.1554"/>
 </g>
 <!-- Node12 -->
 <g id="node13" class="node">
 <title>Node12</title>
-<g id="a_node13"><a xlink:href="classAddWrappedPosition.html" target="_top" xlink:title="AddWrappedPosition adds wrapped positions for an Element object. ">
-<polygon fill="#ffffff" stroke="#000000" points="1359.5,-149.5 1359.5,-228.5 1487.5,-228.5 1487.5,-149.5 1359.5,-149.5"/>
-<text text-anchor="middle" x="1423.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddWrappedPosition</text>
-<polyline fill="none" stroke="#000000" points="1359.5,-209.5 1487.5,-209.5 "/>
-<text text-anchor="middle" x="1423.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="1359.5,-190.5 1487.5,-190.5 "/>
-<text text-anchor="start" x="1367.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddWrappedPosition()</text>
-<text text-anchor="start" x="1367.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddWrappedPosition()</text>
-<text text-anchor="start" x="1367.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node13"><a xlink:href="classAddSpecialBonds.html" target="_top" xlink:title="AddSpecialBonds adds special bonds. ">
+<polygon fill="#ffffff" stroke="#000000" points="1328.5,-138.5 1328.5,-239.5 1451.5,-239.5 1451.5,-138.5 1328.5,-138.5"/>
+<text text-anchor="middle" x="1390" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddSpecialBonds</text>
+<polyline fill="none" stroke="#000000" points="1328.5,-220.5 1451.5,-220.5 "/>
+<text text-anchor="start" x="1336.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; mol_type_to_sbondses</text>
+<text text-anchor="start" x="1336.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_in_mol</text>
+<polyline fill="none" stroke="#000000" points="1328.5,-190.5 1451.5,-190.5 "/>
+<text text-anchor="start" x="1336.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddSpecialBonds()</text>
+<text text-anchor="start" x="1336.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddSpecialBonds()</text>
+<text text-anchor="start" x="1336.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddSpecialBonds()</text>
+<text text-anchor="start" x="1336.5" y="-145.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node1&#45;&gt;Node12</title>
-<path fill="none" stroke="#191970" d="M859.4695,-328.7897C971.7723,-319.0275 1261.7832,-290.6233 1349.5,-251 1361.7195,-245.4802 1373.5284,-237.3556 1383.9899,-228.7932"/>
-<polygon fill="none" stroke="#191970" points="858.8321,-325.3315 849.169,-329.6759 859.4323,-332.3057 858.8321,-325.3315"/>
+<path fill="none" stroke="#191970" d="M902.6551,-327.6955C1003.4123,-316.3622 1245.3624,-286.2452 1319,-251 1325.4948,-247.8914 1331.8545,-244.0198 1337.9335,-239.7394"/>
+<polygon fill="none" stroke="#191970" points="902.0527,-324.2409 892.5021,-328.8276 902.8284,-331.1978 902.0527,-324.2409"/>
 </g>
-<!-- Node14 -->
-<g id="node15" class="node">
-<title>Node14</title>
-<g id="a_node15"><a xlink:href="classFilComparison.html" target="_top" xlink:title="FilComparison applies a filter defined by comparison operators. ">
-<polygon fill="#ffffff" stroke="#000000" points="1505.5,-133 1505.5,-245 1609.5,-245 1609.5,-133 1505.5,-133"/>
-<text text-anchor="middle" x="1557.5" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison</text>
-<polyline fill="none" stroke="#000000" points="1505.5,-226 1609.5,-226 "/>
-<text text-anchor="start" x="1513.5" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; comparisons</text>
-<polyline fill="none" stroke="#000000" points="1505.5,-207 1609.5,-207 "/>
-<text text-anchor="start" x="1513.5" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ FilComparison()</text>
-<text text-anchor="start" x="1513.5" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ FilComparison()</text>
-<text text-anchor="start" x="1513.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~FilComparison()</text>
-<text text-anchor="start" x="1513.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="1513.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; make_lambda()</text>
-<text text-anchor="start" x="1513.5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; convert_to_funcs()</text>
+<!-- Node13 -->
+<g id="node14" class="node">
+<title>Node13</title>
+<g id="a_node14"><a xlink:href="classAddWrappedPosition.html" target="_top" xlink:title="AddWrappedPosition adds wrapped positions for an Element object. ">
+<polygon fill="#ffffff" stroke="#000000" points="1470,-149.5 1470,-228.5 1598,-228.5 1598,-149.5 1470,-149.5"/>
+<text text-anchor="middle" x="1534" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">AddWrappedPosition</text>
+<polyline fill="none" stroke="#000000" points="1470,-209.5 1598,-209.5 "/>
+<text text-anchor="middle" x="1534" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="1470,-190.5 1598,-190.5 "/>
+<text text-anchor="start" x="1478" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ AddWrappedPosition()</text>
+<text text-anchor="start" x="1478" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~AddWrappedPosition()</text>
+<text text-anchor="start" x="1478" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node14 -->
-<g id="edge14" class="edge">
-<title>Node13&#45;&gt;Node14</title>
-<path fill="none" stroke="#191970" d="M1595.61,-283.2894C1590.6402,-270.9933 1585.273,-257.7143 1580.1794,-245.1118"/>
-<polygon fill="none" stroke="#191970" points="1592.5054,-284.9484 1599.4977,-292.9081 1598.9953,-282.3252 1592.5054,-284.9484"/>
+<!-- Node1&#45;&gt;Node13 -->
+<g id="edge13" class="edge">
+<title>Node1&#45;&gt;Node13</title>
+<path fill="none" stroke="#191970" d="M902.6534,-329.675C1024.3742,-321.4694 1359.5798,-295.3612 1460,-251 1472.4182,-245.5142 1484.3864,-237.2928 1494.9461,-228.6163"/>
+<polygon fill="none" stroke="#191970" points="902.3109,-326.19 892.5656,-330.3469 902.7761,-333.1745 902.3109,-326.19"/>
 </g>
 <!-- Node15 -->
 <g id="node16" class="node">
 <title>Node15</title>
-<g id="a_node16"><a xlink:href="classFilSet.html" target="_top" xlink:title="FilSet applies a filter defined by sets of acceptable values. ">
-<polygon fill="#ffffff" stroke="#000000" points="1627.5,-149.5 1627.5,-228.5 1719.5,-228.5 1719.5,-149.5 1627.5,-149.5"/>
-<text text-anchor="middle" x="1673.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilSet</text>
-<polyline fill="none" stroke="#000000" points="1627.5,-209.5 1719.5,-209.5 "/>
-<text text-anchor="start" x="1635.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; value_sets</text>
-<polyline fill="none" stroke="#000000" points="1627.5,-190.5 1719.5,-190.5 "/>
-<text text-anchor="start" x="1635.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ FilSet()</text>
-<text text-anchor="start" x="1635.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~FilSet()</text>
-<text text-anchor="start" x="1635.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node16"><a xlink:href="classFilComparison.html" target="_top" xlink:title="FilComparison applies a filter defined by comparison operators. ">
+<polygon fill="#ffffff" stroke="#000000" points="1616,-133 1616,-245 1720,-245 1720,-133 1616,-133"/>
+<text text-anchor="middle" x="1668" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison</text>
+<polyline fill="none" stroke="#000000" points="1616,-226 1720,-226 "/>
+<text text-anchor="start" x="1624" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; comparisons</text>
+<polyline fill="none" stroke="#000000" points="1616,-207 1720,-207 "/>
+<text text-anchor="start" x="1624" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ FilComparison()</text>
+<text text-anchor="start" x="1624" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ FilComparison()</text>
+<text text-anchor="start" x="1624" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~FilComparison()</text>
+<text text-anchor="start" x="1624" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="1624" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; make_lambda()</text>
+<text text-anchor="start" x="1624" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; convert_to_funcs()</text>
 </a>
 </g>
 </g>
-<!-- Node13&#45;&gt;Node15 -->
+<!-- Node14&#45;&gt;Node15 -->
 <g id="edge15" class="edge">
-<title>Node13&#45;&gt;Node15</title>
-<path fill="none" stroke="#191970" d="M1635.385,-283.3017C1642.55,-265.5747 1650.5412,-245.8032 1657.3486,-228.9608"/>
-<polygon fill="none" stroke="#191970" points="1632.0047,-282.3252 1631.5023,-292.9081 1638.4946,-284.9484 1632.0047,-282.3252"/>
+<title>Node14&#45;&gt;Node15</title>
+<path fill="none" stroke="#191970" d="M1706.11,-283.2894C1701.1402,-270.9933 1695.773,-257.7143 1690.6794,-245.1118"/>
+<polygon fill="none" stroke="#191970" points="1703.0054,-284.9484 1709.9977,-292.9081 1709.4953,-282.3252 1703.0054,-284.9484"/>
 </g>
-<!-- Node17 -->
-<g id="node18" class="node">
-<title>Node17</title>
-<g id="a_node18"><a xlink:href="classStaBeads.html" target="_top" xlink:title="StaBeads sets properties for beads using mapping (coarse&#45;graining) scheme for each molecule...">
-<polygon fill="#ffffff" stroke="#000000" points="1738,-133 1738,-245 1869,-245 1869,-133 1738,-133"/>
-<text text-anchor="middle" x="1803.5" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaBeads</text>
-<polyline fill="none" stroke="#000000" points="1738,-226 1869,-226 "/>
-<text text-anchor="start" x="1746" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; mol_type_to_abst_beads</text>
-<polyline fill="none" stroke="#000000" points="1738,-207 1869,-207 "/>
-<text text-anchor="start" x="1746" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaBeads()</text>
-<text text-anchor="start" x="1746" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaBeads()</text>
-<text text-anchor="start" x="1746" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaBeads()</text>
-<text text-anchor="start" x="1746" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="1746" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; check_mol_type_to_abst</text>
-<text text-anchor="start" x="1746" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_beads()</text>
+<!-- Node16 -->
+<g id="node17" class="node">
+<title>Node16</title>
+<g id="a_node17"><a xlink:href="classFilSet.html" target="_top" xlink:title="FilSet applies a filter defined by sets of acceptable values. ">
+<polygon fill="#ffffff" stroke="#000000" points="1738,-149.5 1738,-228.5 1830,-228.5 1830,-149.5 1738,-149.5"/>
+<text text-anchor="middle" x="1784" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilSet</text>
+<polyline fill="none" stroke="#000000" points="1738,-209.5 1830,-209.5 "/>
+<text text-anchor="start" x="1746" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; value_sets</text>
+<polyline fill="none" stroke="#000000" points="1738,-190.5 1830,-190.5 "/>
+<text text-anchor="start" x="1746" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ FilSet()</text>
+<text text-anchor="start" x="1746" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~FilSet()</text>
+<text text-anchor="start" x="1746" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node17 -->
-<g id="edge17" class="edge">
-<title>Node16&#45;&gt;Node17</title>
-<path fill="none" stroke="#191970" d="M1943.1372,-299.7257C1923.1351,-285.0606 1899.4604,-267.4098 1878.5,-251 1875.4405,-248.6047 1872.3254,-246.1394 1869.1893,-243.6359"/>
-<polygon fill="none" stroke="#191970" points="1941.3279,-302.7385 1951.466,-305.8155 1945.4595,-297.0878 1941.3279,-302.7385"/>
+<!-- Node14&#45;&gt;Node16 -->
+<g id="edge16" class="edge">
+<title>Node14&#45;&gt;Node16</title>
+<path fill="none" stroke="#191970" d="M1745.885,-283.3017C1753.05,-265.5747 1761.0412,-245.8032 1767.8486,-228.9608"/>
+<polygon fill="none" stroke="#191970" points="1742.5047,-282.3252 1742.0023,-292.9081 1748.9946,-284.9484 1742.5047,-282.3252"/>
 </g>
 <!-- Node18 -->
 <g id="node19" class="node">
 <title>Node18</title>
-<g id="a_node19"><a xlink:href="classStaCopy.html" target="_top" xlink:title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">
-<polygon fill="#ffffff" stroke="#000000" points="1887.5,-144 1887.5,-234 1979.5,-234 1979.5,-144 1887.5,-144"/>
-<text text-anchor="middle" x="1933.5" y="-222" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCopy</text>
-<polyline fill="none" stroke="#000000" points="1887.5,-215 1979.5,-215 "/>
-<text text-anchor="middle" x="1933.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="1887.5,-196 1979.5,-196 "/>
-<text text-anchor="start" x="1895.5" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCopy()</text>
-<text text-anchor="start" x="1895.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCopy()</text>
-<text text-anchor="start" x="1895.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
-<text text-anchor="start" x="1895.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node19"><a xlink:href="classStaBeads.html" target="_top" xlink:title="StaBeads sets properties for beads using mapping (coarse&#45;graining) scheme for each molecule...">
+<polygon fill="#ffffff" stroke="#000000" points="1848.5,-133 1848.5,-245 1979.5,-245 1979.5,-133 1848.5,-133"/>
+<text text-anchor="middle" x="1914" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaBeads</text>
+<polyline fill="none" stroke="#000000" points="1848.5,-226 1979.5,-226 "/>
+<text text-anchor="start" x="1856.5" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; mol_type_to_abst_beads</text>
+<polyline fill="none" stroke="#000000" points="1848.5,-207 1979.5,-207 "/>
+<text text-anchor="start" x="1856.5" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaBeads()</text>
+<text text-anchor="start" x="1856.5" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaBeads()</text>
+<text text-anchor="start" x="1856.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaBeads()</text>
+<text text-anchor="start" x="1856.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="1856.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; check_mol_type_to_abst</text>
+<text text-anchor="start" x="1856.5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_beads()</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node18 -->
+<!-- Node17&#45;&gt;Node18 -->
 <g id="edge18" class="edge">
-<title>Node16&#45;&gt;Node18</title>
-<path fill="none" stroke="#191970" d="M1967.516,-277.7509C1962.0229,-263.4187 1956.1616,-248.1262 1950.8793,-234.3443"/>
-<polygon fill="none" stroke="#191970" points="1964.4014,-279.4044 1971.2486,-287.4894 1970.9378,-276.8991 1964.4014,-279.4044"/>
+<title>Node17&#45;&gt;Node18</title>
+<path fill="none" stroke="#191970" d="M2053.6372,-299.7257C2033.6351,-285.0606 2009.9604,-267.4098 1989,-251 1985.9405,-248.6047 1982.8254,-246.1394 1979.6893,-243.6359"/>
+<polygon fill="none" stroke="#191970" points="2051.8279,-302.7385 2061.966,-305.8155 2055.9595,-297.0878 2051.8279,-302.7385"/>
 </g>
 <!-- Node19 -->
 <g id="node20" class="node">
 <title>Node19</title>
-<g id="a_node20"><a xlink:href="classStaCustom.html" target="_top" xlink:title="StaCustom sets an user&#45;defined Json object to a new Element object as its Element::data. ">
-<polygon fill="#ffffff" stroke="#000000" points="1997.5,-149.5 1997.5,-228.5 2089.5,-228.5 2089.5,-149.5 1997.5,-149.5"/>
-<text text-anchor="middle" x="2043.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
-<polyline fill="none" stroke="#000000" points="1997.5,-209.5 2089.5,-209.5 "/>
-<text text-anchor="start" x="2005.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
-<polyline fill="none" stroke="#000000" points="1997.5,-190.5 2089.5,-190.5 "/>
-<text text-anchor="start" x="2005.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
-<text text-anchor="start" x="2005.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
-<text text-anchor="start" x="2005.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node20"><a xlink:href="classStaCopy.html" target="_top" xlink:title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">
+<polygon fill="#ffffff" stroke="#000000" points="1998,-144 1998,-234 2090,-234 2090,-144 1998,-144"/>
+<text text-anchor="middle" x="2044" y="-222" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCopy</text>
+<polyline fill="none" stroke="#000000" points="1998,-215 2090,-215 "/>
+<text text-anchor="middle" x="2044" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="1998,-196 2090,-196 "/>
+<text text-anchor="start" x="2006" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCopy()</text>
+<text text-anchor="start" x="2006" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCopy()</text>
+<text text-anchor="start" x="2006" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ compute()</text>
+<text text-anchor="start" x="2006" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node19 -->
+<!-- Node17&#45;&gt;Node19 -->
 <g id="edge19" class="edge">
-<title>Node16&#45;&gt;Node19</title>
-<path fill="none" stroke="#191970" d="M2009.3963,-277.9796C2015.7019,-261.5279 2022.4997,-243.7916 2028.3545,-228.5161"/>
-<polygon fill="none" stroke="#191970" points="2006.0622,-276.8991 2005.7514,-287.4894 2012.5986,-279.4044 2006.0622,-276.8991"/>
+<title>Node17&#45;&gt;Node19</title>
+<path fill="none" stroke="#191970" d="M2078.016,-277.7509C2072.5229,-263.4187 2066.6616,-248.1262 2061.3793,-234.3443"/>
+<polygon fill="none" stroke="#191970" points="2074.9014,-279.4044 2081.7486,-287.4894 2081.4378,-276.8991 2074.9014,-279.4044"/>
 </g>
 <!-- Node20 -->
 <g id="node21" class="node">
 <title>Node20</title>
-<g id="a_node21"><a xlink:href="classStaDump.html" target="_top" xlink:title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">
-<polygon fill="#ffffff" stroke="#000000" points="2107.5,-149.5 2107.5,-228.5 2185.5,-228.5 2185.5,-149.5 2107.5,-149.5"/>
-<text text-anchor="middle" x="2146.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDump</text>
-<polyline fill="none" stroke="#000000" points="2107.5,-209.5 2185.5,-209.5 "/>
-<text text-anchor="start" x="2115.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># timestep</text>
-<text text-anchor="start" x="2115.5" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># filepath</text>
-<polyline fill="none" stroke="#000000" points="2107.5,-179.5 2185.5,-179.5 "/>
-<text text-anchor="start" x="2115.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
-<text text-anchor="start" x="2115.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDump()</text>
+<g id="a_node21"><a xlink:href="classStaCustom.html" target="_top" xlink:title="StaCustom sets an user&#45;defined Json object to a new Element object as its Element::data. ">
+<polygon fill="#ffffff" stroke="#000000" points="2108,-149.5 2108,-228.5 2200,-228.5 2200,-149.5 2108,-149.5"/>
+<text text-anchor="middle" x="2154" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaCustom</text>
+<polyline fill="none" stroke="#000000" points="2108,-209.5 2200,-209.5 "/>
+<text text-anchor="start" x="2116" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; json</text>
+<polyline fill="none" stroke="#000000" points="2108,-190.5 2200,-190.5 "/>
+<text text-anchor="start" x="2116" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaCustom()</text>
+<text text-anchor="start" x="2116" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaCustom()</text>
+<text text-anchor="start" x="2116" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
 </a>
 </g>
 </g>
-<!-- Node16&#45;&gt;Node20 -->
+<!-- Node17&#45;&gt;Node20 -->
 <g id="edge20" class="edge">
-<title>Node16&#45;&gt;Node20</title>
-<path fill="none" stroke="#191970" d="M2034.0018,-303.0173C2054.7306,-288.5541 2078.9462,-270.1446 2098.5,-251 2105.4061,-244.2384 2112.1736,-236.4584 2118.3482,-228.745"/>
-<polygon fill="none" stroke="#191970" points="2031.9074,-300.2099 2025.6538,-308.7623 2035.8758,-305.9763 2031.9074,-300.2099"/>
-</g>
-<!-- Node23 -->
-<g id="node24" class="node">
-<title>Node23</title>
-<g id="a_node24"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="StaMolecules sets properties for molecules using atoms forming the molecules. ">
-<polygon fill="#ffffff" stroke="#000000" points="2204,-149.5 2204,-228.5 2301,-228.5 2301,-149.5 2204,-149.5"/>
-<text text-anchor="middle" x="2252.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaMolecules</text>
-<polyline fill="none" stroke="#000000" points="2204,-209.5 2301,-209.5 "/>
-<text text-anchor="middle" x="2252.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="2204,-190.5 2301,-190.5 "/>
-<text text-anchor="start" x="2212" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaMolecules()</text>
-<text text-anchor="start" x="2212" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaMolecules()</text>
-<text text-anchor="start" x="2212" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-</a>
-</g>
-</g>
-<!-- Node16&#45;&gt;Node23 -->
-<g id="edge23" class="edge">
-<title>Node16&#45;&gt;Node23</title>
-<path fill="none" stroke="#191970" d="M2035.657,-320.33C2079.3755,-307.6021 2144.9482,-284.7351 2194.5,-251 2203.7598,-244.6959 2212.6334,-236.6705 2220.5341,-228.5014"/>
-<polygon fill="none" stroke="#191970" points="2034.5159,-317.0157 2025.8564,-323.1201 2036.4326,-323.7482 2034.5159,-317.0157"/>
+<title>Node17&#45;&gt;Node20</title>
+<path fill="none" stroke="#191970" d="M2119.8963,-277.9796C2126.2019,-261.5279 2132.9997,-243.7916 2138.8545,-228.5161"/>
+<polygon fill="none" stroke="#191970" points="2116.5622,-276.8991 2116.2514,-287.4894 2123.0986,-279.4044 2116.5622,-276.8991"/>
 </g>
 <!-- Node21 -->
 <g id="node22" class="node">
 <title>Node21</title>
-<g id="a_node22"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. ">
-<polygon fill="#ffffff" stroke="#000000" points="2029,-.5 2029,-90.5 2142,-90.5 2142,-.5 2029,-.5"/>
-<text text-anchor="middle" x="2085.5" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms</text>
-<polyline fill="none" stroke="#000000" points="2029,-71.5 2142,-71.5 "/>
-<text text-anchor="middle" x="2085.5" y="-59.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="2029,-52.5 2142,-52.5 "/>
-<text text-anchor="start" x="2037" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpAtoms()</text>
-<text text-anchor="start" x="2037" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
-<text text-anchor="start" x="2037" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
-<text text-anchor="start" x="2037" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; make_is_int_vector()</text>
+<g id="a_node22"><a xlink:href="classStaDump.html" target="_top" xlink:title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">
+<polygon fill="#ffffff" stroke="#000000" points="2218,-149.5 2218,-228.5 2296,-228.5 2296,-149.5 2218,-149.5"/>
+<text text-anchor="middle" x="2257" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDump</text>
+<polyline fill="none" stroke="#000000" points="2218,-209.5 2296,-209.5 "/>
+<text text-anchor="start" x="2226" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># timestep</text>
+<text text-anchor="start" x="2226" y="-186.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># filepath</text>
+<polyline fill="none" stroke="#000000" points="2218,-179.5 2296,-179.5 "/>
+<text text-anchor="start" x="2226" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
+<text text-anchor="start" x="2226" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDump()</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node21 -->
+<!-- Node17&#45;&gt;Node21 -->
 <g id="edge21" class="edge">
-<title>Node20&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M2125.7433,-140.1707C2118.9107,-124.0974 2111.3493,-106.3094 2104.6426,-90.5321"/>
-<polygon fill="none" stroke="#191970" points="2122.5368,-141.5744 2129.67,-149.4081 2128.9789,-138.8358 2122.5368,-141.5744"/>
+<title>Node17&#45;&gt;Node21</title>
+<path fill="none" stroke="#191970" d="M2144.5018,-303.0173C2165.2306,-288.5541 2189.4462,-270.1446 2209,-251 2215.9061,-244.2384 2222.6736,-236.4584 2228.8482,-228.745"/>
+<polygon fill="none" stroke="#191970" points="2142.4074,-300.2099 2136.1538,-308.7623 2146.3758,-305.9763 2142.4074,-300.2099"/>
+</g>
+<!-- Node24 -->
+<g id="node25" class="node">
+<title>Node24</title>
+<g id="a_node25"><a xlink:href="classStaMolecules.html" target="_top" xlink:title="StaMolecules sets properties for molecules using atoms forming the molecules. ">
+<polygon fill="#ffffff" stroke="#000000" points="2314.5,-149.5 2314.5,-228.5 2411.5,-228.5 2411.5,-149.5 2314.5,-149.5"/>
+<text text-anchor="middle" x="2363" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaMolecules</text>
+<polyline fill="none" stroke="#000000" points="2314.5,-209.5 2411.5,-209.5 "/>
+<text text-anchor="middle" x="2363" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="2314.5,-190.5 2411.5,-190.5 "/>
+<text text-anchor="start" x="2322.5" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaMolecules()</text>
+<text text-anchor="start" x="2322.5" y="-167.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaMolecules()</text>
+<text text-anchor="start" x="2322.5" y="-156.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+</a>
+</g>
+</g>
+<!-- Node17&#45;&gt;Node24 -->
+<g id="edge24" class="edge">
+<title>Node17&#45;&gt;Node24</title>
+<path fill="none" stroke="#191970" d="M2146.157,-320.33C2189.8755,-307.6021 2255.4482,-284.7351 2305,-251 2314.2598,-244.6959 2323.1334,-236.6705 2331.0341,-228.5014"/>
+<polygon fill="none" stroke="#191970" points="2145.0159,-317.0157 2136.3564,-323.1201 2146.9326,-323.7482 2145.0159,-317.0157"/>
 </g>
 <!-- Node22 -->
 <g id="node23" class="node">
 <title>Node22</title>
-<g id="a_node23"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. ">
-<polygon fill="#ffffff" stroke="#000000" points="2160,-6 2160,-85 2255,-85 2255,-6 2160,-6"/>
-<text text-anchor="middle" x="2207.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox</text>
-<polyline fill="none" stroke="#000000" points="2160,-66 2255,-66 "/>
-<text text-anchor="middle" x="2207.5" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#000000" points="2160,-47 2255,-47 "/>
-<text text-anchor="start" x="2168" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpBox()</text>
-<text text-anchor="start" x="2168" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
-<text text-anchor="start" x="2168" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<g id="a_node23"><a xlink:href="classStaDumpAtoms.html" target="_top" xlink:title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. ">
+<polygon fill="#ffffff" stroke="#000000" points="2139.5,-.5 2139.5,-90.5 2252.5,-90.5 2252.5,-.5 2139.5,-.5"/>
+<text text-anchor="middle" x="2196" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpAtoms</text>
+<polyline fill="none" stroke="#000000" points="2139.5,-71.5 2252.5,-71.5 "/>
+<text text-anchor="middle" x="2196" y="-59.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="2139.5,-52.5 2252.5,-52.5 "/>
+<text text-anchor="start" x="2147.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpAtoms()</text>
+<text text-anchor="start" x="2147.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
+<text text-anchor="start" x="2147.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+<text text-anchor="start" x="2147.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; make_is_int_vector()</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node22 -->
+<!-- Node21&#45;&gt;Node22 -->
 <g id="edge22" class="edge">
-<title>Node20&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M2167.4136,-139.8017C2174.9491,-122.0747 2183.3537,-102.3032 2190.5132,-85.4608"/>
-<polygon fill="none" stroke="#191970" points="2164.0211,-138.8359 2163.33,-149.4081 2170.4632,-141.5744 2164.0211,-138.8359"/>
+<title>Node21&#45;&gt;Node22</title>
+<path fill="none" stroke="#191970" d="M2236.2433,-140.1707C2229.4107,-124.0974 2221.8493,-106.3094 2215.1426,-90.5321"/>
+<polygon fill="none" stroke="#191970" points="2233.0368,-141.5744 2240.17,-149.4081 2239.4789,-138.8358 2233.0368,-141.5744"/>
+</g>
+<!-- Node23 -->
+<g id="node24" class="node">
+<title>Node23</title>
+<g id="a_node24"><a xlink:href="classStaDumpBox.html" target="_top" xlink:title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. ">
+<polygon fill="#ffffff" stroke="#000000" points="2270.5,-6 2270.5,-85 2365.5,-85 2365.5,-6 2270.5,-6"/>
+<text text-anchor="middle" x="2318" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">StaDumpBox</text>
+<polyline fill="none" stroke="#000000" points="2270.5,-66 2365.5,-66 "/>
+<text text-anchor="middle" x="2318" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#000000" points="2270.5,-47 2365.5,-47 "/>
+<text text-anchor="start" x="2278.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~StaDumpBox()</text>
+<text text-anchor="start" x="2278.5" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ StaDump()</text>
+<text text-anchor="start" x="2278.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># compute_impl()</text>
+</a>
+</g>
+</g>
+<!-- Node21&#45;&gt;Node23 -->
+<g id="edge23" class="edge">
+<title>Node21&#45;&gt;Node23</title>
+<path fill="none" stroke="#191970" d="M2277.9136,-139.8017C2285.4491,-122.0747 2293.8537,-102.3032 2301.0132,-85.4608"/>
+<polygon fill="none" stroke="#191970" points="2274.5211,-138.8359 2273.83,-149.4081 2280.9632,-141.5744 2274.5211,-138.8359"/>
 </g>
 </g>
 </svg>
