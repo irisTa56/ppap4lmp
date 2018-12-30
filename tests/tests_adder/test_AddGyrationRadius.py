@@ -4,7 +4,7 @@ import os
 import sys
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from error_checker import check_error_msg
+from test_utils import check_error_msg
 
 from copy import deepcopy
 from math import sqrt
