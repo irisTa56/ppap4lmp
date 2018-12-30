@@ -1,6 +1,7 @@
 var searchData=
 [
   ['add',['add',['../classDataKeys.html#a626d56b99861008c2a63580ed17b809d',1,'DataKeys']]],
+  ['addangle',['AddAngle',['../classAddAngle.html#a985c2e2ce57f3862b6e7d046578192ab',1,'AddAngle']]],
   ['addbondlength',['AddBondLength',['../classAddBondLength.html#a7900ec9cc3c8ff5f86640893fe1e953f',1,'AddBondLength']]],
   ['addchildids',['AddChildIDs',['../classAddChildIDs.html#a7278a3244f0a6d52e7f30491f2154a70',1,'AddChildIDs']]],
   ['addchildpositions',['AddChildPositions',['../classAddChildPositions.html#ad4db976f729aaf211154e36d47ee97f2',1,'AddChildPositions']]],

@@ -40,6 +40,7 @@ var hierarchy =
     ] ],
     [ "Updater", "classUpdater.html", [
       [ "Adder", "classAdder.html", [
+        [ "AddAngle", "classAddAngle.html", null ],
         [ "AddBondLength", "classAddBondLength.html", null ],
         [ "AddChildIDs", "classAddChildIDs.html", null ],
         [ "AddChildPositions", "classAddChildPositions.html", null ],

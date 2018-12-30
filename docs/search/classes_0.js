@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['addangle',['AddAngle',['../classAddAngle.html',1,'']]],
   ['addbondlength',['AddBondLength',['../classAddBondLength.html',1,'']]],
   ['addchildids',['AddChildIDs',['../classAddChildIDs.html',1,'']]],
   ['addchildpositions',['AddChildPositions',['../classAddChildPositions.html',1,'']]],

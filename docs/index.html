@@ -1048,6 +1048,14 @@ AddSpecialBonds</h3>
 </dl>
 </td><td class="py_constructor" colspan="2">
 <dl class="parameters">
+<dt>a1</dt>
+<dd>This is test. </dd>
+</dl>
+<dl class="parameters">
+<dt>a2</dt>
+<dd>This is test2.</dd>
+</dl>
+<dl class="parameters">
 <dt>el_mols</dt>
 <dd>A molecular <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object consisting of an atomic (or bead) <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where the constructed object is appended to.  <dl class="property required_ext">
 <dt class="property required_ext main_page">Required property </dt>
@@ -2236,7 +2244,7 @@ Properties To Be Added</h1>
 <th class="properties_list">Class </th><th class="properties_list" colspan="5">Property Names  </th></tr>
  <tr>
 <td class="properties_list"><a class="el" href="classStaBeads.html" title="StaBeads sets properties for beads using mapping (coarse-graining) scheme for each molecule...">StaBeads</a></td>
-<td class="properties_list" colspan="5"><code>type</code>, <code>mol</code>, <code>atom-weights</code>, <code>id</code>, <code>atom-ids</code></td>
+<td class="properties_list" colspan="5"><code>mol</code>, <code>type</code>, <code>id</code>, <code>atom-ids</code>, <code>atom-weights</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a></td>
@@ -2252,11 +2260,11 @@ Properties To Be Added</h1>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classStaDumpBox.html" title="StaDumpBox reads a Lammps' dump file and sets properties for simulation box. ">StaDumpBox</a></td>
-<td class="properties_list" colspan="5"><code>hi_z</code>, <code>hi_x</code>, <code>hi_y</code>, <code>periodic_y</code>, <code>lo_x</code>, <code>lo_y</code>, <code>periodic_z</code>, <code>periodic_x</code>, <code>lo_z</code></td>
+<td class="properties_list" colspan="5"><code>periodic_y</code>, <code>lo_z</code>, <code>hi_x</code>, <code>lo_x</code>, <code>periodic_x</code>, <code>hi_y</code>, <code>lo_y</code>, <code>hi_z</code>, <code>periodic_z</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. ">StaMolecules</a></td>
-<td class="properties_list" colspan="5"><code>atom-ids</code>, <code>id</code></td>
+<td class="properties_list" colspan="5"><code>id</code>, <code>atom-ids</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. ">AddChildIDs</a></td>
@@ -2264,19 +2272,19 @@ Properties To Be Added</h1>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object...">AddChildPositions</a></td>
-<td class="properties_list" colspan="5"><code>[child_name]-ys</code>, <code>[child_name]-xs</code>, <code>[child_name]-zs</code></td>
+<td class="properties_list" colspan="5"><code>[child_name]-ys</code>, <code>[child_name]-zs</code>, <code>[child_name]-xs</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddCoMPosition.html" title="AddCoMPosition adds center of mass to an Element object as its unwrapped position. ">AddCoMPosition</a></td>
-<td class="properties_list" colspan="5"><code>xu</code>, <code>mass</code>, <code>yu</code>, <code>zu</code></td>
+<td class="properties_list" colspan="5"><code>yu</code>, <code>mass</code>, <code>zu</code>, <code>xu</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. ">AddGyrationRadius</a></td>
-<td class="properties_list" colspan="5"><code>Rg(y+z)</code>, <code>Rg^2(y+z)</code>, <code>Rg</code>, <code>Rg^2(y)</code>, <code>Rg(z)</code>, <code>Rg^2(z+x)</code>, <code>Rg^2(x)</code>, <code>Rg(x+y)</code>, <code>Rg^2(z)</code>, <code>Rg(x)</code>, <code>Rg^2(x+y)</code>, <code>Rg^2</code>, <code>Rg(y)</code>, <code>Rg(z+x)</code></td>
+<td class="properties_list" colspan="5"><code>Rg(x)</code>, <code>Rg</code>, <code>Rg^2(z+x)</code>, <code>Rg(y+z)</code>, <code>Rg(x+y)</code>, <code>Rg^2(y+z)</code>, <code>Rg(y)</code>, <code>Rg^2(z)</code>, <code>Rg^2(x)</code>, <code>Rg(z+x)</code>, <code>Rg(z)</code>, <code>Rg^2(y)</code>, <code>Rg^2</code>, <code>Rg^2(x+y)</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. ">AddInertiaMoment</a></td>
-<td class="properties_list" colspan="5"><code>I_xx</code>, <code>I_yz</code>, <code>I_xy</code>, <code>I_zz</code>, <code>I_xz</code>, <code>I_yy</code></td>
+<td class="properties_list" colspan="5"><code>I_yy</code>, <code>I_zz</code>, <code>I_yz</code>, <code>I_xy</code>, <code>I_xx</code>, <code>I_xz</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddMap.html" title="AddMap adds a new property by mapping from an existing property. ">AddMap</a></td>
@@ -2284,7 +2292,7 @@ Properties To Be Added</h1>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object...">AddMolecularOrientation</a></td>
-<td class="properties_list" colspan="5"><code>S_y</code>, <code>I_vectors</code>, <code>S_x</code>, <code>S_z</code>, <code>I_values</code></td>
+<td class="properties_list" colspan="5"><code>I_values</code>, <code>S_x</code>, <code>S_z</code>, <code>S_y</code>, <code>I_vectors</code></td>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddRename.html" title="AddRename renames an existing property. ">AddRename</a></td>
@@ -2296,7 +2304,7 @@ Properties To Be Added</h1>
 </tr>
  <tr>
 <td class="properties_list"><a class="el" href="classAddWrappedPosition.html" title="AddWrappedPosition adds wrapped positions for an Element object. ">AddWrappedPosition</a></td>
-<td class="properties_list" colspan="5"><code>x</code>, <code>z</code>, <code>y</code></td>
+<td class="properties_list" colspan="5"><code>z</code>, <code>x</code>, <code>y</code></td>
 </tr>
 </table>
 <hr/>
