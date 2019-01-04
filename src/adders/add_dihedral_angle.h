@@ -41,7 +41,7 @@ class AddDihedralAngle : public Adder {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - \c dihedral_angle : float
+        - <c>dihedral-angle</c> : float
       </dd>
     </dl>
 

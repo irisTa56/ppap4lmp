@@ -89,10 +89,10 @@ void AddDihedralAngle::compute_impl(
     double y = b123[0]*b2u[0]+b123[1]*b2u[1]+b123[2]*b2u[2];
     double x = b12[0]*b23[0]+b12[1]*b23[1]+b12[2]*b23[2];
 
-    d["dihedral_angle"] = abs(atan2(y,x));
+    d["dihedral-angle"] = abs(atan2(y,x));
   }
 
-  datakeys.add("dihedral_angle");
+  datakeys.add("dihedral-angle");
 }
 
 /* ------------------------------------------------------------------ */

@@ -48,7 +48,7 @@ class TestAddAngle(unittest.TestCase):
 
   def test_sequence_angles(self):
 
-    right_angles = np.random.uniform(0.0, 180.0, 100000)
+    right_angles = np.random.uniform(0.0, 180.0, 1000)
 
     lo = -100.0
     hi = 100.0
