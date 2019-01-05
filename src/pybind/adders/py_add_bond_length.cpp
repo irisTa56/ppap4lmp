@@ -1,8 +1,8 @@
 /*!
   @file src/pybind/adders/py_add_bond_length.cpp
   @brief This file is for binding AddBondLength class to Python.
-  @author Takayuki Kobayashi
-  @date 2018/09/23
+  @author Yang Juntao & Kawai Kento
+  @date 2018/12/06
 */
 
 #include "py_add_bond_length.h"

@@ -2,8 +2,8 @@
   @file src/adders/add_bond_length.cpp
   @brief This file has an implementation of AddBondLength class,
   which is a subclass of Adder class.
-  @author Takayuki Kobayashi
-  @date 2018/07/13
+  @author Yang Juntao & Kawai Kento
+  @date 2018/12/06
 */
 
 #include "add_bond_length.h"
@@ -31,25 +31,16 @@ void AddBondLength::compute_impl(
 
   el_atoms->required({"id", "xu", "yu", "zu"});
 
-  auto &atoms = el_atoms->get_data();
+  auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
-  auto id2index_atom = ut::map_to_index(atoms, "id");
+  ArrayXXd rs_atom;
+  el_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
 
   for (auto &d : data)
   {
-    auto index1 = id2index_atom[d["atom1-id"]];
-    auto index2 = id2index_atom[d["atom2-id"]];
-    auto &atom1 = atoms[index1];
-    auto &atom2 = atoms[index2];
-    double xu1 = atom1["xu"];
-    double xu2 = atom2["xu"];
-    double yu1 = atom1["yu"];
-    double yu2 = atom2["yu"];
-    double zu1 = atom1["zu"];
-    double zu2 = atom2["zu"];
-
-    d["length"] = sqrt(
-        (xu2-xu1)*(xu2-xu1) + (yu2-yu1)*(yu2-yu1) + (zu2-zu1)*(zu2-zu1));
+    d["length"] = RowVector3d(
+      rs_atom.row(id2index_atom[d["atom2-id"]])
+      - rs_atom.row(id2index_atom[d["atom1-id"]])).norm();
   }
 
   datakeys.add("length");

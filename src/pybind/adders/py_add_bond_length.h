@@ -1,8 +1,8 @@
 /*!
   @file src/pybind/adders/py_add_bond_length.h
   @brief This file is for binding AddBondLength class to Python.
-  @author Takayuki Kobayashi
-  @date 2018/07/13
+  @author Yang Juntao & Kawai Kento
+  @date 2018/12/06
 */
 
 #ifndef PYBIND_ADD_BOND_LENGTH_H
@@ -42,20 +42,18 @@ namespace pybind
       </tr>
     </table>
 
-    ---modify
-    Usage example of the constructor to add \c xu, \c yu and \c zu
-    property to an Element object for molecules.
+    Usage example of the constructor to add `length` property to an
+    Element object for bonds.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python
 
     atoms = create(StaDumpAtoms("path/to/dump", 0))
-    molecules = create(StaMolecules(atoms))
+    bonds = create(StaCustom([...]))
 
-    molecules.append_updater(AddBondLength(atoms))
+    bonds.append_updater(AddBondLength(atoms))
     </code></pre>
     @endhtmlonly
-    ----
   */
   void py_add_bond_length(py::module &m);
 }

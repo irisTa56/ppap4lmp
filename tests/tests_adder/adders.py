@@ -10,6 +10,7 @@ from test_AddMolecularOrientation import TestAddMolecularOrientation
 from test_AddChildIDs import TestAddChildIDs
 from test_AddChildPositions import TestAddChildPositions
 from test_AddSpecialBonds import TestAddSpecialBonds
+from test_AddBondLength import TestAddBondLength
 
 suite = unittest.TestSuite()
 
@@ -57,3 +58,6 @@ suite.addTest(TestAddChildPositions("test_gyration_radius"))
 suite.addTest(TestAddSpecialBonds("test_error01"))
 suite.addTest(TestAddSpecialBonds("test_error02"))
 suite.addTest(TestAddSpecialBonds("test_exclude_angle"))
+
+suite.addTest(TestAddBondLength("test_single_length"))
+suite.addTest(TestAddBondLength("test_sequence_lengths"))
