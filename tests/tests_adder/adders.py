@@ -11,6 +11,7 @@ from test_AddChildIDs import TestAddChildIDs
 from test_AddChildPositions import TestAddChildPositions
 from test_AddSpecialBonds import TestAddSpecialBonds
 from test_AddBondLength import TestAddBondLength
+from test_AddBondAngle import TestAddBondAngle
 
 suite = unittest.TestSuite()
 
@@ -61,3 +62,6 @@ suite.addTest(TestAddSpecialBonds("test_exclude_angle"))
 
 suite.addTest(TestAddBondLength("test_single_length"))
 suite.addTest(TestAddBondLength("test_sequence_lengths"))
+
+suite.addTest(TestAddBondAngle("test_single_angle"))
+suite.addTest(TestAddBondAngle("test_sequence_angles"))

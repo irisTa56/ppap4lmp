@@ -173,7 +173,7 @@ void ProRadialDistributionFunction::finish()
 {
   ArrayXd shell_volume(n_bins);
 
-  double ball_coeff = 4.0 * M_PI / 3.0;
+  const double ball_coeff = 4.0 * M_PI / 3.0;
 
   for (int i = 0; i != n_bins; ++i)
   {

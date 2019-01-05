@@ -13,17 +13,14 @@ import numpy as np
 from random import randrange
 
 from ppap4lmp import (
-  create, AddMap, AddAngle,
+  create, AddMap, AddBondAngle,
   StaCustom, StaDumpAtoms, StaMolecules, StaBeads)
 
-def convert_to_deg(rad):
-  return rad * (180.0/np.pi)
-
 def compute_angle(v1, v2):
-  return convert_to_deg(
+  return (180.0/np.pi) * (
     np.arccos(np.dot(v1, v2) / (np.linalg.norm(v1)*np.linalg.norm(v2))))
 
-class TestAddAngle(unittest.TestCase):
+class TestAddBondAngle(unittest.TestCase):
 
   def test_single_angle(self):
 
@@ -41,10 +38,10 @@ class TestAddAngle(unittest.TestCase):
 
     angles = create(StaCustom(angles_py))
     atoms = create(StaCustom(atoms_py))
-    angles.append_updater(AddAngle(atoms))
+    angles.append_updater(AddBondAngle(atoms))
 
-    self.assertTrue(np.allclose(
-      convert_to_deg(angles.get_data()[0]["angle"]), right_angle))
+    self.assertTrue(
+      np.allclose(right_angle, angles.get_data()[0]["angle"]))
 
   def test_sequence_angles(self):
 
@@ -114,17 +111,17 @@ class TestAddAngle(unittest.TestCase):
 
     angles = create(StaCustom(angles_py))
     atoms = create(StaCustom(atoms_py))
-    angles.append_updater(AddAngle(atoms))
+    angles.append_updater(AddBondAngle(atoms))
 
     self.assertTrue(
-      np.allclose(right_angles, convert_to_deg(angles.get_1d_float("angle"))))
+      np.allclose(right_angles, angles.get_1d_float("angle")))
 
 if __name__ == "__main__":
 
   suite = unittest.TestSuite()
 
-  suite.addTest(TestAddAngle("test_single_angle"))
-  suite.addTest(TestAddAngle("test_sequence_angles"))
+  suite.addTest(TestAddBondAngle("test_single_angle"))
+  suite.addTest(TestAddBondAngle("test_sequence_angles"))
 
   runner = unittest.TextTestRunner()
   runner.run(suite)
