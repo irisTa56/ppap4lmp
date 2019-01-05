@@ -31,65 +31,29 @@ void AddDihedralAngle::compute_impl(
 
   el_atoms->required({"id", "xu", "yu", "zu"});
 
-  auto &atoms = el_atoms->get_data();
+  auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
-  auto id2index_atom = ut::map_to_index(atoms, "id");
+  ArrayXXd rs_atom;
+  el_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
+
+  const double rad2deg = 180.0 / M_PI;
 
   for (auto &d : data)
   {
-    auto index1 = id2index_atom[d["atom1-id"]];
-    auto index2 = id2index_atom[d["atom2-id"]];
-    auto index3 = id2index_atom[d["atom3-id"]];
-    auto index4 = id2index_atom[d["atom4-id"]];
-    auto &atom1 = atoms[index1];
-    auto &atom2 = atoms[index2];
-    auto &atom3 = atoms[index3];
-    auto &atom4 = atoms[index4];
-    double xu1 = atom1["xu"];
-    double yu1 = atom1["yu"];
-    double zu1 = atom1["zu"];
-    double xu2 = atom2["xu"];
-    double yu2 = atom2["yu"];
-    double zu2 = atom2["zu"];
-    double xu3 = atom3["xu"];
-    double yu3 = atom3["yu"];
-    double zu3 = atom3["zu"];
-    double xu4 = atom4["xu"];
-    double yu4 = atom4["yu"];
-    double zu4 = atom4["zu"];
+    RowVector3d r1 = rs_atom.row(id2index_atom[d["atom1-id"]]);
+    RowVector3d r2 = rs_atom.row(id2index_atom[d["atom2-id"]]);
+    RowVector3d r3 = rs_atom.row(id2index_atom[d["atom3-id"]]);
+    RowVector3d r4 = rs_atom.row(id2index_atom[d["atom4-id"]]);
 
-    double vec1[3] = {xu1-xu2 , yu1-yu2 , zu1-zu2};
-    double vec2[3] = {xu2-xu3 , yu2-yu3 , zu2-zu3};
-    double vec3[3] = {xu3-xu4 , yu3-yu4 , zu3-zu4};
+    auto vec_1to2 = r2 - r1;
+    auto vec_2to3 = r3 - r2;
+    auto vec_3to4 = r4 - r3;
 
-    double b12[3] =  {
-    (vec1[1]*vec2[2]-vec2[1]*vec1[2]),
-    (vec2[0]*vec1[2]-vec1[0]*vec2[2]),
-    (vec1[0]*vec2[1]-vec2[0]*vec1[1])
-    };
+    auto n123 = vec_1to2.cross(vec_2to3);
+    auto n234 = vec_2to3.cross(vec_3to4);
 
-    double b23[3] = {
-    (vec2[1]*vec3[2]-vec3[1]*vec2[2]),
-    (vec3[0]*vec2[2]-vec2[0]*vec3[2]),
-    (vec2[0]*vec3[1]-vec3[0]*vec2[1])
-    };
-
-    double b123[3] = {
-    (b12[1]*b23[2]-b23[1]*b12[2]),
-    (b23[0]*b12[2]-b12[0]*b23[2]),
-    (b12[0]*b23[1]-b23[0]*b12[1])
-    };
-
-    double b2u[3] = {
-    (vec2[0]/sqrt(vec2[0]*vec2[0]+vec2[1]*vec2[1]+vec2[2]*vec2[2])),
-    (vec2[1]/sqrt(vec2[0]*vec2[0]+vec2[1]*vec2[1]+vec2[2]*vec2[2])),
-    (vec2[2]/sqrt(vec2[0]*vec2[0]+vec2[1]*vec2[1]+vec2[2]*vec2[2]))
-    };
-
-    double y = b123[0]*b2u[0]+b123[1]*b2u[1]+b123[2]*b2u[2];
-    double x = b12[0]*b23[0]+b12[1]*b23[1]+b12[2]*b23[2];
-
-    d["dihedral-angle"] = abs(atan2(y,x));
+    d["dihedral-angle"] = rad2deg * acos(
+      n123.dot(n234) / (n123.norm() * n234.norm()));
   }
 
   datakeys.add("dihedral-angle");

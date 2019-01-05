@@ -16,11 +16,8 @@ from ppap4lmp import (
   create, AddMap, AddDihedralAngle,
   StaCustom, StaDumpAtoms, StaMolecules, StaBeads)
 
-def convert_to_deg(rad):
-  return rad * (180.0/np.pi)
-
 def compute_angle(v1, v2):
-  return convert_to_deg(
+  return (180.0/np.pi) * (
     np.arccos(np.dot(v1, v2) / (np.linalg.norm(v1)*np.linalg.norm(v2))))
 
 class TestAddDihedralAngle(unittest.TestCase):
@@ -45,8 +42,7 @@ class TestAddDihedralAngle(unittest.TestCase):
     dihedrals.append_updater(AddDihedralAngle(atoms))
 
     self.assertTrue(np.allclose(
-      right_dihedral_angle,
-      convert_to_deg(dihedrals.get_data()[0]["dihedral-angle"])))
+      right_dihedral_angle, dihedrals.get_data()[0]["dihedral-angle"]))
 
   def test_sequence_dihedral_angles(self):
 
@@ -132,7 +128,7 @@ class TestAddDihedralAngle(unittest.TestCase):
     dihedrals.append_updater(AddDihedralAngle(atoms))
 
     self.assertTrue(np.allclose(
-      right_dihedral_angles, convert_to_deg(dihedrals.get_1d_float("dihedral-angle"))))
+      right_dihedral_angles, dihedrals.get_1d_float("dihedral-angle")))
 
 if __name__ == "__main__":
 

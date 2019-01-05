@@ -12,6 +12,7 @@ from test_AddChildPositions import TestAddChildPositions
 from test_AddSpecialBonds import TestAddSpecialBonds
 from test_AddBondLength import TestAddBondLength
 from test_AddBondAngle import TestAddBondAngle
+from test_AddDihedralAngle import TestAddDihedralAngle
 
 suite = unittest.TestSuite()
 
@@ -65,3 +66,6 @@ suite.addTest(TestAddBondLength("test_sequence_lengths"))
 
 suite.addTest(TestAddBondAngle("test_single_angle"))
 suite.addTest(TestAddBondAngle("test_sequence_angles"))
+
+suite.addTest(TestAddDihedralAngle("test_single_dihedral_angle"))
+suite.addTest(TestAddDihedralAngle("test_sequence_dihedral_angles"))

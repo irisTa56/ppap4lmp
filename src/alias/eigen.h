@@ -9,7 +9,7 @@
 #ifndef ALIAS_EIGEN_H
 #define ALIAS_EIGEN_H
 
-#include <Eigen/LU>
+#include <Eigen/Dense>
 
 /*!
   @brief \e ArrayXXi is an alias for a two-dimensional array of Eigen

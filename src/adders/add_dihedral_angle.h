@@ -12,22 +12,16 @@
 #include <adders/adder.h>
 
 /*!
-  @brief AddDihedralAngle adds center of mass to an Element object
-  as its unwrapped position.
+  @brief AddDihedralAngle adds `dihedral-angle` property to dehedrals,
+  each of them is defined by four consecutive atoms.
 
-  An object of this class computes center of mass
-  of a \e parent Element object from unwrapped positions
-  for a \e child Element object, and adds it to the \e parent object
-  as its unwrapped position. The object of this class owns
-  the \e child object as #ext_generator, and is appended to
-  the \e parent object using its Element::append_updater.
-  An example of \e child is an Element object containing data
-  for atoms, and an example of \e parent is an Element object
-  containing data for molecules.
-
-  The terms \e child and \e parent are used because a \e parent object
-  consists of a \e child object. In terms of time series, however,
-  the \e child is created earlier than the \e parent.
+  An object of this class computes dihedral angles defined by four
+  consecutive atoms, (angles between two planes defined the first three
+  atoms and the last three atoms), and then adds these dihedral angles
+  (in degree) to the dihedrals as their `dihedral-angle` property.
+  The object of this class takes an Element object for atoms as
+  #ext_generator, and is appended to an Element object for dihedrals
+  using its Element::append_updater.
 
   About usage in Python,
   please see pybind::py_add_dihedral_angle.
@@ -41,17 +35,17 @@ class AddDihedralAngle : public Adder {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - <c>dihedral-angle</c> : float
+        - `dihedral-angle` : float
       </dd>
     </dl>
 
     <dl class="property required">
       <dt class="property required">Required property</dt>
       <dd class="property required">
-        - <c>atom1-id</c> : integer
-        - <c>atom2-id</c> : integer
-        - <c>atom3-id</c> : integer
-        - <c>atom4-id</c> : integer
+        - `atom1-id` : integer
+        - `atom2-id` : integer
+        - `atom3-id` : integer
+        - `atom4-id` : integer
       </dd>
     </dl>
   */
@@ -64,17 +58,17 @@ class AddDihedralAngle : public Adder {
 
     @param elem
     @parblock
-      A \e child Element object.
+      An Element object for dihedrals.
       <span class="remove_in_table">
         This parameter is assigned to #ext_generator.
       </span>
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c xu : float
-          - \c yu : float
-          - \c zu : float
+          - `id` : integer
+          - `xu` : float
+          - `yu` : float
+          - `zu` : float
         </dd>
       </dl>
     @endparblock

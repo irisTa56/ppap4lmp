@@ -42,20 +42,18 @@ namespace pybind
       </tr>
     </table>
 
-    ---modify
-    Usage example of the constructor to add \c xu, \c yu and \c zu
-    property to an Element object for molecules.
+    Usage example of the constructor to add `dihedral-angle` property
+    to an Element object for dihedrals.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python
 
     atoms = create(StaDumpAtoms("path/to/dump", 0))
-    molecules = create(StaMolecules(atoms))
+    dihedrals = create(StaCustom([...]))
 
-    molecules.append_updater(AddDihedralAngle(atoms))
+    dihedrals.append_updater(AddDihedralAngle(atoms))
     </code></pre>
     @endhtmlonly
-    ----
   */
   void py_add_dihedral_angle(py::module &m);
 }
