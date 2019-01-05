@@ -27,7 +27,7 @@
 class AddMap : public Adder, public EnShThis<AddMap> {
   /*!
     Whether overwriting an existing property whose name is
-    the same as a new property to be added (default is \c false).
+    the same as a new property to be added (default is `false`).
   */
   bool do_overwrite = false;
   /*!
@@ -54,14 +54,14 @@ class AddMap : public Adder, public EnShThis<AddMap> {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - <c>[key_new]</c> : any type
+        - `[key_new]` : any type
       </dd>
     </dl>
 
     <dl class="property required">
       <dt class="property required">Required property</dt>
       <dd class="property required">
-        - <c>[key_ref]</c> : any type
+        - `[key_ref]` : any type
         (but, in most cases, integer or strings)
       </dd>
     </dl>
@@ -112,7 +112,7 @@ class AddMap : public Adder, public EnShThis<AddMap> {
 
     @param do_overwrite_
       A boolean, whether an existing property can be overwritten
-      by a new property (default is \c true).
+      by a new property (default is `true`).
       <span class="remove_in_table">
         This parameter is assigned to #do_overwrite.
       </span>

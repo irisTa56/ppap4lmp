@@ -12,7 +12,7 @@
 #include <filters/filter.h>
 
 /*!
-  @brief \e CompareFunc is an alias for a function
+  @brief *CompareFunc* is an alias for a function
   taking a ::Json object and returning a boolean.
 */
 using CompareFunc = std::function<bool(const Json &)>;
@@ -26,7 +26,7 @@ using CompareFunc = std::function<bool(const Json &)>;
   a string key, the second element is a comparison operator and
   the third element is a right side value of an inequality
   (or equation). Currently supported operators are
-  \c <, \c >, \c <=, \c >=, \c ==, and \c !=.
+  `<`, `>`, `<=`, `>=`, `==`, and `!=`.
 
   An element of array Element::data can pass this filter
   only if every value for every key in #comparisons satisfies
@@ -54,7 +54,7 @@ class FilComparison : public Filter {
 
     @param oper
       A string representing a comparison operator.
-      One of \c <, \c >, \c <=, \c >=, \c ==, and \c !=.
+      One of `<`, `>`, `<=`, `>=`, `==`, and `!=`.
 
     @param rval
       A right side value. Since it is ::Json,

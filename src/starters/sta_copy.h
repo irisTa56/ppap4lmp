@@ -59,7 +59,7 @@ class StaCopy : public Starter {
     @return None.
 
     Unlike other subclasses of Stater class, StaCopy overrides
-    this method to skip sorting by \c id property.
+    this method to skip sorting by `id` property.
   */
   virtual void compute(
     Json &data,

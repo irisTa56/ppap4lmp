@@ -43,7 +43,7 @@ namespace pybind
     </table>
 
     Usage example of the constructor for a filter removing atoms
-    whose \c type property is not 1, 2, or 3.
+    whose `type` property is not 1, 2, or 3.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python
@@ -54,8 +54,8 @@ namespace pybind
     @endhtmlonly
 
     Usage example of the constructor for a filter removing atoms
-    except for those of which \c type property is 1, 2, or 3,
-    and \c id property is a multiple of 3 less than 1000.
+    except for those of which `type` property is 1, 2, or 3,
+    and `id` property is a multiple of 3 less than 1000.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python

@@ -70,7 +70,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c set_indices</td>
+        <td class="py_method">`set_indices`</td>
         <td class="py_method">ProDistanceInMolecule::set_indices</td>
         <td class="py_method">
           @copybrief ProDistanceInMolecule::set_indices
@@ -83,7 +83,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c set_moltype</td>
+        <td class="py_method">`set_moltype`</td>
         <td class="py_method">ProDistanceInMolecule::set_moltype</td>
         <td class="py_method">
           @copybrief ProDistanceInMolecule::set_moltype
@@ -96,7 +96,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_distance_array</td>
+        <td class="py_method">`get_distance_array`</td>
         <td class="py_method">ProDistanceInMolecule::get_distance_array</td>
         <td class="py_method">
           @copybrief ProDistanceInMolecule::get_distance_array
@@ -109,7 +109,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_distance2_array</td>
+        <td class="py_method">`get_distance2_array`</td>
         <td class="py_method">ProDistanceInMolecule::get_distance2_array</td>
         <td class="py_method">
           @copybrief ProDistanceInMolecule::get_distance2_array
@@ -124,8 +124,8 @@ namespace pybind
     </table>
 
     Usage example of ProDistanceInMolecule class for a trajectory of
-    molecules without \c type property.
-    Distance between the \e 0 th atom and \e 100 th atom is computed.
+    molecules without `type` property.
+    Distance between the *0* th atom and *100* th atom is computed.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python

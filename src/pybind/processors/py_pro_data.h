@@ -64,7 +64,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c select</td>
+        <td class="py_method">`select`</td>
         <td class="py_method">ProData::select</td>
         <td class="py_method">
           @copybrief ProData::select
@@ -77,7 +77,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_results</td>
+        <td class="py_method">`get_results`</td>
         <td class="py_method">ProData::get_results</td>
         <td class="py_method">
           @copybrief ProData::get_results

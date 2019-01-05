@@ -88,7 +88,7 @@ namespace pybind
 
     Usage example of the constructor; some beads belong to molecules
     whose type is 1 and the others belong to molecules whose type is 2.
-    The number of molecules is 100; molecules with odd \c id are type 1
+    The number of molecules is 100; molecules with odd `id` are type 1
     and the others are type 2. All the beads for molecular type 1
     consist of five atoms and their types are 1. All the beads
     for molecular type 2 consist of four atoms and their types are 2.

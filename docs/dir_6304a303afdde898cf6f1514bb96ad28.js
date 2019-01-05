@@ -1,7 +1,7 @@
 var dir_6304a303afdde898cf6f1514bb96ad28 =
 [
-    [ "py_add_angle.cpp", "py__add__angle_8cpp.html", null ],
-    [ "py_add_angle.h", "py__add__angle_8h.html", "py__add__angle_8h" ],
+    [ "py_add_bond_angle.cpp", "py__add__bond__angle_8cpp.html", null ],
+    [ "py_add_bond_angle.h", "py__add__bond__angle_8h.html", "py__add__bond__angle_8h" ],
     [ "py_add_bond_length.cpp", "py__add__bond__length_8cpp.html", null ],
     [ "py_add_bond_length.h", "py__add__bond__length_8h.html", "py__add__bond__length_8h" ],
     [ "py_add_child_ids.cpp", "py__add__child__ids_8cpp.html", null ],
@@ -10,6 +10,8 @@ var dir_6304a303afdde898cf6f1514bb96ad28 =
     [ "py_add_child_positions.h", "py__add__child__positions_8h.html", "py__add__child__positions_8h" ],
     [ "py_add_com_position.cpp", "py__add__com__position_8cpp.html", null ],
     [ "py_add_com_position.h", "py__add__com__position_8h.html", "py__add__com__position_8h" ],
+    [ "py_add_dihedral_angle.cpp", "py__add__dihedral__angle_8cpp.html", null ],
+    [ "py_add_dihedral_angle.h", "py__add__dihedral__angle_8h.html", "py__add__dihedral__angle_8h" ],
     [ "py_add_gyration_radius.cpp", "py__add__gyration__radius_8cpp.html", null ],
     [ "py_add_gyration_radius.h", "py__add__gyration__radius_8h.html", "py__add__gyration__radius_8h" ],
     [ "py_add_inertia_moment.cpp", "py__add__inertia__moment_8cpp.html", null ],

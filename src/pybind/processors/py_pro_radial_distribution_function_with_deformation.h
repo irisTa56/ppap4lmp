@@ -69,7 +69,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c set_bin</td>
+        <td class="py_method">`set_bin`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::set_bin</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::set_bin
@@ -82,7 +82,7 @@ namespace pybind
         </td>
       </tr>
         <tr class="py_method">
-        <td class="py_method">\c set_margin</td>
+        <td class="py_method">`set_margin`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::set_margin</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::set_margin
@@ -95,7 +95,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c bin_from_r_to_r_plus_dr</td>
+        <td class="py_method">`bin_from_r_to_r_plus_dr`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::bin_from_r_to_r_plus_dr</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::bin_from_r_to_r_plus_dr
@@ -108,7 +108,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c beyond_half_box_length</td>
+        <td class="py_method">`beyond_half_box_length`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::beyond_half_box_length</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::beyond_half_box_length
@@ -121,7 +121,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_r_axis</td>
+        <td class="py_method">`get_r_axis`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::get_r_axis</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::get_r_axis
@@ -134,7 +134,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_rdf</td>
+        <td class="py_method">`get_rdf`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::get_rdf</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::get_rdf
@@ -147,7 +147,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_rdf_traj</td>
+        <td class="py_method">`get_rdf_traj`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::get_rdf_traj</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::get_rdf_traj
@@ -160,7 +160,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_gyration_radius</td>
+        <td class="py_method">`get_gyration_radius`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::get_gyration_radius</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::get_gyration_radius
@@ -173,7 +173,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_gyration_radius_traj</td>
+        <td class="py_method">`get_gyration_radius_traj`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::get_gyration_radius_traj</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::get_gyration_radius_traj
@@ -186,7 +186,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_squared_gyration_radius</td>
+        <td class="py_method">`get_squared_gyration_radius`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::get_squared_gyration_radius</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::get_squared_gyration_radius
@@ -199,7 +199,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_squared_gyration_radius_traj</td>
+        <td class="py_method">`get_squared_gyration_radius_traj`</td>
         <td class="py_method">ProRadialDistributionFunctionWithDeformation::get_squared_gyration_radius_traj</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunctionWithDeformation::get_squared_gyration_radius_traj

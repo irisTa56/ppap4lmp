@@ -12,9 +12,9 @@
 #include <adders/adder.h>
 
 /*!
-  @brief AddSpecialBonds adds <i>special bonds</i>.
+  @brief AddSpecialBonds adds *special bonds*.
 
-  The term <i>special bonds</i> is somewhat confusing
+  The term *special bonds* is somewhat confusing
   because one of special bonds is not a bond but, for example,
   an atom connected with a special bond. If an atom has another atom
   as one of its special bonds, the two atoms are considered to
@@ -46,7 +46,7 @@ class AddSpecialBonds : public Adder {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - <c>special-bonds</c> : array of integers
+        - `special-bonds` : array of integers
       </dd>
     </dl>
   */
@@ -56,7 +56,7 @@ class AddSpecialBonds : public Adder {
  public:
   /*!
     @brief Constructor of AddSpecialBonds class for
-    molecules all of whose \c type property are 1,
+    molecules all of whose `type` property are 1,
     or molecules all of which do not have the property.
 
     @param el_mols
@@ -69,7 +69,7 @@ class AddSpecialBonds : public Adder {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - <c>atom-ids</c> : array of integers
+          - `atom-ids` : array of integers
         </dd>
       </dl>
 
@@ -100,7 +100,7 @@ class AddSpecialBonds : public Adder {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - <c>atom-ids</c> : array of integers
+          - `atom-ids` : array of integers
         </dd>
       </dl>
 

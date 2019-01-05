@@ -70,7 +70,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c set_bin</td>
+        <td class="py_method">`set_bin`</td>
         <td class="py_method">ProRadialDistributionFunction::set_bin</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunction::set_bin
@@ -83,7 +83,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c bin_from_r_to_r_plus_dr</td>
+        <td class="py_method">`bin_from_r_to_r_plus_dr`</td>
         <td class="py_method">ProRadialDistributionFunction::bin_from_r_to_r_plus_dr</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunction::bin_from_r_to_r_plus_dr
@@ -96,7 +96,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c beyond_half_box_length</td>
+        <td class="py_method">`beyond_half_box_length`</td>
         <td class="py_method">ProRadialDistributionFunction::beyond_half_box_length</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunction::beyond_half_box_length
@@ -109,7 +109,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_r_axis</td>
+        <td class="py_method">`get_r_axis`</td>
         <td class="py_method">ProRadialDistributionFunction::get_r_axis</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunction::get_r_axis
@@ -122,7 +122,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_rdf</td>
+        <td class="py_method">`get_rdf`</td>
         <td class="py_method">ProRadialDistributionFunction::get_rdf</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunction::get_rdf
@@ -135,7 +135,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_rdf_traj</td>
+        <td class="py_method">`get_rdf_traj`</td>
         <td class="py_method">ProRadialDistributionFunction::get_rdf_traj</td>
         <td class="py_method">
           @copybrief ProRadialDistributionFunction::get_rdf_traj

@@ -1,6 +1,6 @@
 /*!
   @file src/alias/pybind_std.h
-  @brief To bind C++ Standard Template Library to Python, \e pybind11
+  @brief To bind C++ Standard Template Library to Python, *pybind11*
   needs to include an additional header.
   @author Takayuki Kobayashi
   @date 2018/09/09

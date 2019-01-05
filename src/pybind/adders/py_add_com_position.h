@@ -42,7 +42,7 @@ namespace pybind
       </tr>
     </table>
 
-    Usage example of the constructor to add \c xu, \c yu and \c zu
+    Usage example of the constructor to add `xu`, `yu` and `zu`
     property to an Element object for molecules.
 
     @htmlonly

@@ -33,25 +33,25 @@ class AddMolecularOrientation : public Adder {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - \c I_values : array of floats
+        - `I_values` : array of floats
         (eigenvalues of inertia moment)
-        - \c I_vectors : array of arrays of floats
+        - `I_vectors` : array of arrays of floats
         (eigenvectors of inertia moment)
-        - \c S_x : float
-        - \c S_y : float
-        - \c S_z : float
+        - `S_x` : float
+        - `S_y` : float
+        - `S_z` : float
       </dd>
     </dl>
 
     <dl class="property required">
       <dt class="property required">Required property</dt>
       <dd class="property required">
-        - \c I_xx : float
-        - \c I_yy : float
-        - \c I_zz : float
-        - \c I_xy : float
-        - \c I_xz : float
-        - \c I_yz : float
+        - `I_xx` : float
+        - `I_yy` : float
+        - `I_zz` : float
+        - `I_xy` : float
+        - `I_xz` : float
+        - `I_yz` : float
       </dd>
     </dl>
   */

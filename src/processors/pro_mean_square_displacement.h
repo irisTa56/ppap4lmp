@@ -29,7 +29,7 @@
 class ProMeanSquareDisplacement : public Processor {
   /*!
     Whether to correct a drift of center of mass
-    of the simulation system (default is \c true).
+    of the simulation system (default is `true`).
     If the initial structure of the simulation has some biases
     of position or velocity, drift of the simulation system
     (translational displacement of center of mass of the system)
@@ -38,10 +38,10 @@ class ProMeanSquareDisplacement : public Processor {
   bool drift_correction = true;
   /*!
     Dimensions to be considered in computing squared displacements.
-    Three elements of this member corresponds to \e x, \e y,
-    and \e z direction, respectively. Only if an element of this member
-    is \c true, displacement in the corresponding direction is added to
-    resulted displacement. Default is \c true for all the direction.
+    Three elements of this member corresponds to *x*, *y*,
+    and *z* direction, respectively. Only if an element of this member
+    is `true`, displacement in the corresponding direction is added to
+    resulted displacement. Default is `true` for all the direction.
   */
   Vec<bool> dimension = {true, true, true};
   /*!
@@ -89,16 +89,16 @@ class ProMeanSquareDisplacement : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c xu : float
-          - \c yu : float
-          - \c zu : float
-          - \c mass : float (for drift correction)
+          - `id` : integer
+          - `xu` : float
+          - `yu` : float
+          - `zu` : float
+          - `mass` : float (for drift correction)
         </dd>
       </dl>
 
     <span class="remove_in_table">
-      Element objects in the \c elems are put into #generators
+      Element objects in the `elems` are put into #generators
       by #register_generators.
     </span>
   */
@@ -124,25 +124,25 @@ class ProMeanSquareDisplacement : public Processor {
   /*!
     @brief Specify dimensions to be considered. By default,
     the mean square displacement is computed in three dimensions.
-    To compute the mean square displacement in \e xy place, for example,
-    the third parameter of this method must be set to \c false.
+    To compute the mean square displacement in *xy* place, for example,
+    the third parameter of this method must be set to `false`.
 
     @param include_x
-      A boolean, whether component in the \e x direction is included in
+      A boolean, whether component in the *x* direction is included in
       squared displacement.
       <span class="remove_in_table">
         This parameter is stored as the first element of #dimension.
       </span>
 
     @param include_y
-      A boolean, whether component in the \e y direction is included in
+      A boolean, whether component in the *y* direction is included in
       squared displacement.
       <span class="remove_in_table">
         This parameter is stored as the second element of #dimension.
       </span>
 
     @param include_z
-      A boolean, whether component in the \e z direction is included in
+      A boolean, whether component in the *z* direction is included in
       squared displacement.
       <span class="remove_in_table">
         This parameter is stored as the third element of #dimension.
@@ -159,7 +159,7 @@ class ProMeanSquareDisplacement : public Processor {
     of the simulation system.
 
     @param without_drift_correction_
-      Whether disable the drift correction or not (default is \c true).
+      Whether disable the drift correction or not (default is `true`).
       <span class="remove_in_table">
         Negation of this parameter is assigned to #drift_correction.
       </span>

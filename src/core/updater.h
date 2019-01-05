@@ -74,9 +74,9 @@ class Updater {
     @param dataid
       An Element::dataid to be checked.
 
-    @return A boolean. If \c dataid is found in #dataid_blacklist,
+    @return A boolean. If `dataid` is found in #dataid_blacklist,
     this method returns false, that is, rejects the Element object
-    of the \c dataid.
+    of the `dataid`.
   */
   bool check_blacklist(
     const int dataid);
@@ -118,8 +118,8 @@ class Updater {
 
     @return None.
 
-    Removing \c dataid from #dataid_blacklist is necessary
-    so that this object can update the Element object of the \c dataid
+    Removing `dataid` from #dataid_blacklist is necessary
+    so that this object can update the Element object of the `dataid`
     again after its Element::data being cleared.
   */
   void remove_from_blacklist(

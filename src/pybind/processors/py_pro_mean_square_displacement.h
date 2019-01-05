@@ -53,7 +53,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c set_dimension</td>
+        <td class="py_method">`set_dimension`</td>
         <td class="py_method">ProMeanSquareDisplacement::set_dimension</td>
         <td class="py_method">
           @copybrief ProMeanSquareDisplacement::set_dimension
@@ -66,7 +66,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c without_drift_correction</td>
+        <td class="py_method">`without_drift_correction`</td>
         <td class="py_method">ProMeanSquareDisplacement::without_drift_correction</td>
         <td class="py_method">
           @copybrief ProMeanSquareDisplacement::without_drift_correction
@@ -79,7 +79,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_displacement2_array</td>
+        <td class="py_method">`get_displacement2_array`</td>
         <td class="py_method">ProMeanSquareDisplacement::get_displacement2_array</td>
         <td class="py_method">
           @copybrief ProMeanSquareDisplacement::get_displacement2_array
@@ -92,7 +92,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_mean_square_displacement</td>
+        <td class="py_method">`get_mean_square_displacement`</td>
         <td class="py_method">ProMeanSquareDisplacement::get_mean_square_displacement</td>
         <td class="py_method">
           @copybrief ProMeanSquareDisplacement::get_mean_square_displacement

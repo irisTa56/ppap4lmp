@@ -25,7 +25,7 @@
 class AddRename : public Adder, public EnShThis<AddRename> {
   /*!
     Whether overwriting an existing property whose name is
-    the same as #key_new (default is \c false).
+    the same as #key_new (default is `false`).
   */
   bool do_overwrite = false;
   /*!
@@ -72,7 +72,7 @@ class AddRename : public Adder, public EnShThis<AddRename> {
 
     @param do_overwrite_
       A boolean, whether an existing property can be overwritten
-      by a renamed property (default is \c true).
+      by a renamed property (default is `true`).
       <span class="remove_in_table">
         This parameter is assigned to #do_overwrite.
       </span>

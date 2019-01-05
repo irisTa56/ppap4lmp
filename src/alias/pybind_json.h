@@ -1,7 +1,7 @@
 /*!
   @file src/alias/pybind_json.h
   @brief To bind ::Json to Python, a custom type caster of
-  \e pybind11 is required.
+  *pybind11* is required.
   @author Takayuki Kobayashi
   @date 2018/09/09
 */
@@ -9,16 +9,16 @@
 #ifndef ALIAS_PYBIND_JSON_H
 #define ALIAS_PYBIND_JSON_H
 
-//! \c dumps attribute of Python's \c json module
+//! `dumps` attribute of Python's `json` module
 static py::object json_dumps = py::module::import("json").attr("dumps");
-//! \c loads attribute of Python's \c json module
+//! `loads` attribute of Python's `json` module
 static py::object json_loads = py::module::import("json").attr("loads");
 
 namespace pybind11
 {
   namespace detail
   {
-    //! A type caster of \e pybind11 for ::Json.
+    //! A type caster of *pybind11* for ::Json.
     template <> struct type_caster<Json> {
      public:
 
@@ -29,9 +29,9 @@ namespace pybind11
         @brief Loading a ::Json object from Python to C++.
 
         First, a JSON-like object in Python (complex of dictionary
-        and list) is dumped as a string by \c dumps attribute of
-        Python's \c json module (serialization). Then the string is
-        parsed by \c parse function of \e nlohmann/json and converted
+        and list) is dumped as a string by `dumps` attribute of
+        Python's `json` module (serialization). Then the string is
+        parsed by `parse` function of *nlohmann/json* and converted
         to a ::Json object. Since this conversion process might take
         a long time, using other containers is preferable (if you can).
       */
@@ -54,8 +54,8 @@ namespace pybind11
         @brief Casting a ::Json object from C++ to Python.
 
         First, a ::Json object is serialized to a string by
-        its \c dump  method. Then the string is loaded by \c loads
-        attribute of Python's \c json module and released as a complex
+        its `dump`  method. Then the string is loaded by `loads`
+        attribute of Python's `json` module and released as a complex
         of dictionary and list. Since this conversion process might take
         a long time, using other containers is preferable (if you can).
       */

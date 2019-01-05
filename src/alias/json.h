@@ -1,6 +1,6 @@
 /*!
   @file src/alias/json.h
-  @brief This file includes \e nlohmann/json and defines an alias for
+  @brief This file includes *nlohmann/json* and defines an alias for
   a JSON class.
   @author Takayuki Kobayashi
   @date 2018/09/09
@@ -12,12 +12,12 @@
 #include <nlohmann/json.hpp>
 
 /*!
-  @brief \e Json is an alias for a JSON class.
+  @brief *Json* is an alias for a JSON class.
 
   For more details, please see the
   <a href="https://github.com/nlohmann/json">repository</a> and
   <a href="https://nlohmann.github.io/json/">documents</a> of
-  \e nlohmann/json.
+  *nlohmann/json*.
 */
 using Json = nlohmann::json;
 

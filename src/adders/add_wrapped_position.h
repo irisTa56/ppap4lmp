@@ -29,18 +29,18 @@ class AddWrappedPosition : public Adder {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - \c x : float
-        - \c y : float
-        - \c z : float
+        - `x` : float
+        - `y` : float
+        - `z` : float
       </dd>
     </dl>
 
     <dl class="property required">
       <dt class="property required">Required property</dt>
       <dd class="property required">
-        - \c xu : float
-        - \c yu : float
-        - \c zu : float
+        - `xu` : float
+        - `yu` : float
+        - `zu` : float
       </dd>
     </dl>
   */
@@ -60,12 +60,12 @@ class AddWrappedPosition : public Adder {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c lo_x : float
-          - \c lo_y : float
-          - \c lo_z : float
-          - \c hi_x : float
-          - \c hi_y : float
-          - \c hi_z : float
+          - `lo_x` : float
+          - `lo_y` : float
+          - `lo_z` : float
+          - `hi_x` : float
+          - `hi_y` : float
+          - `hi_z` : float
         </dd>
       </dl>
     @endparblock

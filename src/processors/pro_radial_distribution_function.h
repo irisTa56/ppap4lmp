@@ -18,10 +18,10 @@
   An object of this class makes a one-dimensional array of
   radial distribution function of particles (can be atoms, beads,
   molecules ...). Each element of the array corresponds to a ratio
-  of local density at distance \e r to global density, where \e r is
-  distance from a reference particle. The local density at \e r defined
+  of local density at distance *r* to global density, where *r* is
+  distance from a reference particle. The local density at *r* defined
   as a division of the number of particles in a spherical shell
-  with radius of \e r by volume of the spherical shell.
+  with radius of *r* by volume of the spherical shell.
 
   List of radial distribution functions is also computed
   for a multiple snapshots of a simulation.
@@ -40,25 +40,25 @@ class ProRadialDistributionFunction : public Processor {
     Number of bins in the distance axis.
     The maximum distance in a domain, where the radial distribution
     function is computed, is given as a product of #n_bins
-    (if #bin_from_r is \c true) and #bin_width.
+    (if #bin_from_r is `true`) and #bin_width.
   */
   int n_bins = 1;
   /*!
     Width of a bin.
     The maximum distance in a domain, where the radial distribution
     function is computed, is given as a product of #n_bins
-    (if #bin_from_r is \c true) and #bin_width.
+    (if #bin_from_r is `true`) and #bin_width.
   */
   double bin_width = 1.0;
   /*!
-    If this member is \c true, the bins are <i>[0, dr), [dr, 2*dr),
-    ..., [(#n_bins-1)*dr, #n_bins*dr)</i>. If this member is \c false,
+    If this member is `true`, the bins are <i>[0, dr), [dr, 2*dr),
+    ..., [(#n_bins-1)*dr, #n_bins*dr)</i>. If this member is `false`,
     the bins are <i>[0, 0.5*dr), [0.5*dr, 1.5*dr), ...,
-    [(#n_bins-1.5)*dr, (#n_bins-0.5)*dr)</i>. Default is \c false.
+    [(#n_bins-1.5)*dr, (#n_bins-0.5)*dr)</i>. Default is `false`.
   */
   bool bin_from_r = false;
   /*!
-    If this member is \c false (default), a particle of which distance
+    If this member is `false` (default), a particle of which distance
     from a reference particle are larger than
     half the simulation box length is excluded from a sample used
     for computing radial distribution function.
@@ -87,7 +87,7 @@ class ProRadialDistributionFunction : public Processor {
   Vec<double> volume_traj;
   /*!
     List consisting of temporary numbers of particles
-    in a spherical shell with radius of \e r, where \e r is distance
+    in a spherical shell with radius of *r*, where *r* is distance
     from a reference particle.
     Indices in this list corresponds those in #generators.
   */
@@ -112,20 +112,20 @@ class ProRadialDistributionFunction : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c x : float
-          - \c y : float
-          - \c z : float
+          - `id` : integer
+          - `x` : float
+          - `y` : float
+          - `z` : float
           <span class="remove_in_rdf">
-          - \c mass : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_xx : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_yy : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_zz : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_xy : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_xz : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_yz : float <span class="remove_in_table">(for deformation)</span>
+          - `mass` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_xx` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_yy` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_zz` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_xy` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_xz` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_yz` : float <span class="remove_in_table">(for deformation)</span>
           </span>
-          - <c>special-bonds</c> : array of integers (optional)
+          - `special-bonds` : array of integers (optional)
         </dd>
       </dl>
 
@@ -134,18 +134,18 @@ class ProRadialDistributionFunction : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c lo_x : float
-          - \c lo_y : float
-          - \c lo_z : float
-          - \c hi_x : float
-          - \c hi_y : float
-          - \c hi_z : float
+          - `lo_x` : float
+          - `lo_y` : float
+          - `lo_z` : float
+          - `hi_x` : float
+          - `hi_y` : float
+          - `hi_z` : float
         </dd>
       </dl>
     @endparblock
 
     <span class="remove_in_table">
-      A GenDict object is constructed taking the \c targets and \c box,
+      A GenDict object is constructed taking the `targets` and `box`,
       and then put into #generators by #register_generator.
     </span>
   */
@@ -164,37 +164,37 @@ class ProRadialDistributionFunction : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property (first)</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c x : float
-          - \c y : float
-          - \c z : float
+          - `id` : integer
+          - `x` : float
+          - `y` : float
+          - `z` : float
           <span class="remove_in_rdf">
-          - \c mass : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_xx : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_yy : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_zz : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_xy : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_xz : float <span class="remove_in_table">(for deformation)</span>
-          - \c I_yz : float <span class="remove_in_table">(for deformation)</span>
+          - `mass` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_xx` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_yy` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_zz` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_xy` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_xz` : float <span class="remove_in_table">(for deformation)</span>
+          - `I_yz` : float <span class="remove_in_table">(for deformation)</span>
           </span>
-          - <c>special-bonds</c> : array of integers (optional)
+          - `special-bonds` : array of integers (optional)
         </dd>
       </dl>
       <dl class="property required_ext">
         <dt class="property required_ext">Required property (second)</dt>
         <dd class="property required_ext">
-          - \c lo_x : float
-          - \c lo_y : float
-          - \c lo_z : float
-          - \c hi_x : float
-          - \c hi_y : float
-          - \c hi_z : float
+          - `lo_x` : float
+          - `lo_y` : float
+          - `lo_z` : float
+          - `hi_x` : float
+          - `hi_y` : float
+          - `hi_z` : float
         </dd>
       </dl>
 
     <span class="remove_in_table">
       GenDict objects are constructed
-      taking each element of the \c pairs,
+      taking each element of the `pairs`,
       and then put into #generators by #register_generators.
     </span>
   */
@@ -246,8 +246,8 @@ class ProRadialDistributionFunction : public Processor {
     [dr, 2*dr), ... </i>.
 
     @param bin_from_r_
-      A boolean, whether to use bin of which inner radius is \e r
-      and outer radius is <i>r+dr</i> (default is \c true).
+      A boolean, whether to use bin of which inner radius is *r*
+      and outer radius is <i>r+dr</i> (default is `true`).
       <span class="remove_in_table">
         This parameter is assigned to #bin_from_r.
       </span>
@@ -263,7 +263,7 @@ class ProRadialDistributionFunction : public Processor {
 
     @param beyond_half_
       A boolean, whether to use particles beyond half the simulation
-      box from a reference particle (default is \c true).
+      box from a reference particle (default is `true`).
       <span class="remove_in_table">
         This parameter is assigned to #beyond_half.
       </span>
@@ -274,7 +274,7 @@ class ProRadialDistributionFunction : public Processor {
     bool beyond_half_ = true);
   /*!
     @brief Get a one-dimensional array of distance, <i>[0, dr, 2*dr,
-    ... ]</i>, where \e dr is width of a bin.
+    ... ]</i>, where *dr* is width of a bin.
 
     @return ::ArrayXd (Numpy-Array in Python).
   */

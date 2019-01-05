@@ -1,7 +1,7 @@
 /*!
   @file src/alias/pybind.h
-  @brief This file includes \e pybind11 and defines an alias for the
-   namespace \c pybind11.
+  @brief This file includes *pybind11* and defines an alias for the
+   namespace `pybind11`.
   @author Takayuki Kobayashi
   @date 2018/09/09
 */

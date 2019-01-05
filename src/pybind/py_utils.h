@@ -31,7 +31,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c log_switch</td>
+        <td class="py_method">`log_switch`</td>
         <td class="py_method">utils::log_switch</td>
         <td class="py_method">
           @copybrief utils::log_switch

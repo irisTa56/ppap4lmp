@@ -17,13 +17,13 @@
 #include <class/data_keys.h>
 
 /*!
-  @brief Element inherits Generator class and contains data \e element
-  (or \e entity) as a ::Json object.
+  @brief Element inherits Generator class and contains data *element*
+  (or *entity*) as a ::Json object.
 
   This class inherits Generator class and ::EnShThis<#Element>.
 
   Element class is different from Generator, GenDict and GenList by
-  owning data \e element (or \e entity). The data is stored as #data,
+  owning data *element* (or *entity*). The data is stored as #data,
   and a set of keys for properties in the data is stored as #datakeys.
   Note that #data can be either an array ::Json object or
   a non-array ::Json object. A non-array ::Json object consists of
@@ -59,7 +59,7 @@ class Element : public Generator, public EnShThis<Element> {
   */
   int dataid;
   /*!
-    Data \e element (or \e entity) itself. This member is
+    Data *element* (or *entity*) itself. This member is
     a ::Json object, which is a very flexible data container
     consisting of hierarchically organized items: pairs of a string key
     and int/bool/double/string/array value.
@@ -112,7 +112,7 @@ class Element : public Generator, public EnShThis<Element> {
     @return None.
 
     This method updates #data using an object of Updater
-    taken as \c upd. This object and the Updater object are paired
+    taken as `upd`. This object and the Updater object are paired
     as ::UpdatePair by #append_updater in advance. In this method,
     mutable references of the #data and #datakeys are passed to
     Updater::compute of the Updater object. The #dataid is also passed
@@ -139,7 +139,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief Get this object as a shared pointer of Element class.
 
     @param name
-      Leave it as it is (default is \c nullptr).
+      Leave it as it is (default is `nullptr`).
 
     @return Shared pointer to this Element object.
 
@@ -151,7 +151,7 @@ class Element : public Generator, public EnShThis<Element> {
     @brief Get this object as a shared pointer of Generator class.
 
     @param name
-      Leave it as it is (default is \c nullptr).
+      Leave it as it is (default is `nullptr`).
 
     @return Shared pointer to this object up-casted to Generator.
 
@@ -179,9 +179,9 @@ class Element : public Generator, public EnShThis<Element> {
       To update the data, one needs to create an Updater object
       and then appends it to an Element object using this method.
       In this method, Generator::update_chain stored in
-      Updater::ext_generator of the \c upd is merged to
+      Updater::ext_generator of the `upd` is merged to
       Generator::update_chain of this object; then an ::UpdatePair
-      consisting of this object and the \c upd is appended to
+      consisting of this object and the `upd` is appended to
       Generator::update_chain of this object.
     </span>
   */
@@ -206,7 +206,7 @@ class Element : public Generator, public EnShThis<Element> {
 
     One can get the partial data stored in this object by this method.
     To select which property is included in the returned ::Json object,
-    pass a string key for the property as \c key_.
+    pass a string key for the property as `key_`.
   */
   Json get_data(
     const Json &key_);
@@ -232,7 +232,7 @@ class Element : public Generator, public EnShThis<Element> {
     @return None.
 
     If one passed ::ArrayXi or ::ArrayXd as a reference, this method
-    fills it by values of a property specified by \c key.
+    fills it by values of a property specified by `key`.
   */
   template <typename T>
   void array1d(
@@ -251,7 +251,7 @@ class Element : public Generator, public EnShThis<Element> {
     @return None.
 
     If one passed ::ArrayXXi or ::ArrayXXd as a reference, this method
-    fills it by values of some properties specified by \c keys.
+    fills it by values of some properties specified by `keys`.
   */
   template <typename T>
   void array2d(
@@ -356,7 +356,7 @@ class Element : public Generator, public EnShThis<Element> {
   void init_for_python();
 };
 
-//! \e ElPtr is an alias for a shared pointer of Element class.
+//! *ElPtr* is an alias for a shared pointer of Element class.
 using ElPtr = ShPtr<Element>;
 
 #endif

@@ -19,7 +19,7 @@
   This class is an abstract class and has a pure virtual function,
   Filter::compute_impl.
 
-  Name of subclass of this class should be prefixed by \e Fil.
+  Name of subclass of this class should be prefixed by *Fil*.
   Note that Filter do nothing for non-array Element::data.
 */
 class Filter : public Updater {
@@ -41,10 +41,10 @@ class Filter : public Updater {
 
     @return None.
 
-    This method checks if \c dataid is in #dataid_blacklist. If it is
-    not in the blacklist, this method passes \c data and \c datakeys
+    This method checks if `dataid` is in #dataid_blacklist. If it is
+    not in the blacklist, this method passes `data` and `datakeys`
     to Filter::compute_impl. Due to the nature of filtering,
-    where each element is not be modified, \c datakeys remains
+    where each element is not be modified, `datakeys` remains
     unchanged. Note that actual filtering process is conducted by
     Filter::compute_impl orveridden in subclasses of this class.
   */

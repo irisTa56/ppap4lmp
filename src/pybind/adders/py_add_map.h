@@ -43,7 +43,7 @@ namespace pybind
     </table>
 
     Usage example of the constructor for mapping
-    from <c>atomic-number</c> to \c mass.
+    from `atomic-number` to `mass`.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python
@@ -71,7 +71,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c overwrite</td>
+        <td class="py_method">`overwrite`</td>
         <td class="py_method">AddMap::overwrite</td>
         <td class="py_method">
           @copybrief AddMap::overwrite

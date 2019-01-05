@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['add_5fangle_2ecpp',['add_angle.cpp',['../add__angle_8cpp.html',1,'']]],
-  ['add_5fangle_2eh',['add_angle.h',['../add__angle_8h.html',1,'']]],
+  ['add_5fbond_5fangle_2ecpp',['add_bond_angle.cpp',['../add__bond__angle_8cpp.html',1,'']]],
+  ['add_5fbond_5fangle_2eh',['add_bond_angle.h',['../add__bond__angle_8h.html',1,'']]],
   ['add_5fbond_5flength_2ecpp',['add_bond_length.cpp',['../add__bond__length_8cpp.html',1,'']]],
   ['add_5fbond_5flength_2eh',['add_bond_length.h',['../add__bond__length_8h.html',1,'']]],
   ['add_5fchild_5fids_2ecpp',['add_child_ids.cpp',['../add__child__ids_8cpp.html',1,'']]],
@@ -10,6 +10,8 @@ var searchData=
   ['add_5fchild_5fpositions_2eh',['add_child_positions.h',['../add__child__positions_8h.html',1,'']]],
   ['add_5fcom_5fposition_2ecpp',['add_com_position.cpp',['../add__com__position_8cpp.html',1,'']]],
   ['add_5fcom_5fposition_2eh',['add_com_position.h',['../add__com__position_8h.html',1,'']]],
+  ['add_5fdihedral_5fangle_2ecpp',['add_dihedral_angle.cpp',['../add__dihedral__angle_8cpp.html',1,'']]],
+  ['add_5fdihedral_5fangle_2eh',['add_dihedral_angle.h',['../add__dihedral__angle_8h.html',1,'']]],
   ['add_5fgyration_5fradius_2ecpp',['add_gyration_radius.cpp',['../add__gyration__radius_8cpp.html',1,'']]],
   ['add_5fgyration_5fradius_2eh',['add_gyration_radius.h',['../add__gyration__radius_8h.html',1,'']]],
   ['add_5finertia_5fmoment_2ecpp',['add_inertia_moment.cpp',['../add__inertia__moment_8cpp.html',1,'']]],

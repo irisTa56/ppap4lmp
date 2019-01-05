@@ -5,11 +5,12 @@ var annotated_dup =
         [ "type_caster< Json >", "structpybind11_1_1detail_1_1type__caster_3_01Json_01_4.html", "structpybind11_1_1detail_1_1type__caster_3_01Json_01_4" ]
       ] ]
     ] ],
-    [ "AddAngle", "classAddAngle.html", "classAddAngle" ],
+    [ "AddBondAngle", "classAddBondAngle.html", "classAddBondAngle" ],
     [ "AddBondLength", "classAddBondLength.html", "classAddBondLength" ],
     [ "AddChildIDs", "classAddChildIDs.html", "classAddChildIDs" ],
     [ "AddChildPositions", "classAddChildPositions.html", "classAddChildPositions" ],
     [ "AddCoMPosition", "classAddCoMPosition.html", "classAddCoMPosition" ],
+    [ "AddDihedralAngle", "classAddDihedralAngle.html", "classAddDihedralAngle" ],
     [ "Adder", "classAdder.html", "classAdder" ],
     [ "AddGyrationRadius", "classAddGyrationRadius.html", "classAddGyrationRadius" ],
     [ "AddInertiaMoment", "classAddInertiaMoment.html", "classAddInertiaMoment" ],

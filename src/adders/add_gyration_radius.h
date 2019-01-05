@@ -23,7 +23,7 @@
 class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
   /*!
     Whether gyration radius (not squared) is computed (default is
-    \c false). Note that an average gyration radius should be computed
+    `false`). Note that an average gyration radius should be computed
     by square rooting an averaged square of the gyration radius, not
     averaging the gyration radius itself.
   */
@@ -35,30 +35,30 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - <c>Rg^2</c> : float
-        - <c>Rg^2(y+z)</c> : float
-        - <c>Rg^2(z+x)</c> : float
-        - <c>Rg^2(x+y)</c> : float
-        - <c>Rg^2(x)</c> : float
-        - <c>Rg^2(y)</c> : float
-        - <c>Rg^2(z)</c> : float
-        - <c>Rg</c> : float (optional)
-        - <c>Rg(y+z)</c> : float (optional)
-        - <c>Rg(z+x)</c> : float (optional)
-        - <c>Rg(x+y)</c> : float (optional)
-        - <c>Rg(x)</c> : float (optional)
-        - <c>Rg(y)</c> : float (optional)
-        - <c>Rg(z)</c> : float (optional)
+        - `Rg^2` : float
+        - `Rg^2(y+z)` : float
+        - `Rg^2(z+x)` : float
+        - `Rg^2(x+y)` : float
+        - `Rg^2(x)` : float
+        - `Rg^2(y)` : float
+        - `Rg^2(z)` : float
+        - `Rg` : float (optional)
+        - `Rg(y+z)` : float (optional)
+        - `Rg(z+x)` : float (optional)
+        - `Rg(x+y)` : float (optional)
+        - `Rg(x)` : float (optional)
+        - `Rg(y)` : float (optional)
+        - `Rg(z)` : float (optional)
       </dd>
     </dl>
 
     <dl class="property required">
       <dt class="property required">Required property</dt>
       <dd class="property required">
-        - \c mass : float
-        - \c I_xx : float
-        - \c I_yy : float
-        - \c I_zz : float
+        - `mass` : float
+        - `I_xx` : float
+        - `I_yy` : float
+        - `I_zz` : float
       </dd>
     </dl>
   */
@@ -74,7 +74,7 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
 
     @param add_sqrted_
       A boolean, whether gyration radius is computed or not
-      (default is \c true).
+      (default is `true`).
 
     @return Shared pointer to this object.
 

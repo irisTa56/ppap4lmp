@@ -16,18 +16,18 @@
   as its unwrapped position.
 
   An object of this class computes center of mass
-  of a \e parent Element object from unwrapped positions
-  for a \e child Element object, and adds it to the \e parent object
+  of a *parent* Element object from unwrapped positions
+  for a *child* Element object, and adds it to the *parent* object
   as its unwrapped position. The object of this class owns
-  the \e child object as #ext_generator, and is appended to
-  the \e parent object using its Element::append_updater.
-  An example of \e child is an Element object containing data
-  for atoms, and an example of \e parent is an Element object
+  the *child* object as #ext_generator, and is appended to
+  the *parent* object using its Element::append_updater.
+  An example of *child* is an Element object containing data
+  for atoms, and an example of *parent* is an Element object
   containing data for molecules.
 
-  The terms \e child and \e parent are used because a \e parent object
-  consists of a \e child object. In terms of time series, however,
-  the \e child is created earlier than the \e parent.
+  The terms *child* and *parent* are used because a *parent* object
+  consists of a *child* object. In terms of time series, however,
+  the *child* is created earlier than the *parent*.
 
   About usage in Python,
   please see pybind::py_add_com_position.
@@ -73,18 +73,18 @@ class AddCoMPosition : public Adder {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - \c mass : float
-        - \c xu : float
-        - \c yu : float
-        - \c zu : float
+        - `mass` : float
+        - `xu` : float
+        - `yu` : float
+        - `zu` : float
       </dd>
     </dl>
 
     <dl class="property required">
       <dt class="property required">Required property</dt>
       <dd class="property required">
-        - <c>atom-ids</c> : array of integers
-        - <c>atom-weights</c> : array of floats (optional)
+        - `atom-ids` : array of integers
+        - `atom-weights` : array of floats (optional)
       </dd>
     </dl>
   */
@@ -97,18 +97,18 @@ class AddCoMPosition : public Adder {
 
     @param elem
     @parblock
-      A \e child Element object.
+      A *child* Element object.
       <span class="remove_in_table">
         This parameter is assigned to #ext_generator.
       </span>
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c mass : float
-          - \c xu : float
-          - \c yu : float
-          - \c zu : float
+          - `id` : integer
+          - `mass` : float
+          - `xu` : float
+          - `yu` : float
+          - `zu` : float
         </dd>
       </dl>
     @endparblock

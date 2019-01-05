@@ -54,7 +54,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c overwrite</td>
+        <td class="py_method">`overwrite`</td>
         <td class="py_method">AddRename::overwrite</td>
         <td class="py_method">
           @copybrief AddRename::overwrite

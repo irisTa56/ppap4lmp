@@ -31,11 +31,11 @@ class StaBeads : public Starter {
     object from molecular type to a ::Vec (list) object of
     ::Json objects. Each ::Json object corresponds to each bead
     in a molecule of that type, and contains three items:
-    \c indices-in-mol is an array of zero-based index of atoms
-    in the molecule, \c type is type of the bead, and \c weights is
+    `indices-in-mol` is an array of zero-based index of atoms
+    in the molecule, `type` is type of the bead, and `weights` is
     an array of floats for weighting factors of atoms.
     The last two items are optional. Length of the two arrays,
-    \c indices-in-mol and \c weights, should be the same with
+    `indices-in-mol` and `weights`, should be the same with
     the number of atoms belonging to the bead.
   */
   Map<int,Vec<Json>> mol_type_to_abst_beads;
@@ -43,10 +43,10 @@ class StaBeads : public Starter {
     Check if #mol_type_to_abst_beads correctly describes
     coarse-grain mapping schemes.
 
-    @return A pair of booleans: the first is whether \c type exists
-    or not, the second is whether \c weights exists or not. Note that
+    @return A pair of booleans: the first is whether `type` exists
+    or not, the second is whether `weights` exists or not. Note that
     if at least one of ::Json objects in #mol_type_to_abst_beads has
-    \c type (or \c weights) property, all the other objects must have
+    `type` (or `weights`) property, all the other objects must have
     that property too.
   */
   std::pair<bool,bool> check_mol_type_to_abst_beads();
@@ -57,11 +57,11 @@ class StaBeads : public Starter {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - \c id : integer
-        - \c mol : integer
-        - <c>atom-ids</c> : array of integers
-        - \c type : integer (optional)
-        - <c>atom-weights</c> : array of floats (optional)
+        - `id` : integer
+        - `mol` : integer
+        - `atom-ids` : array of integers
+        - `type` : integer (optional)
+        - `atom-weights` : array of floats (optional)
       </dd>
     </dl>
   */
@@ -71,7 +71,7 @@ class StaBeads : public Starter {
  public:
   /*!
     @brief Constructor of StaBeads class for
-    molecules all of whose \c type property are 1,
+    molecules all of whose `type` property are 1,
     or molecules all of which do not have the property.
 
     @param el_mols
@@ -84,16 +84,16 @@ class StaBeads : public Starter {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - <c>atom-ids</c> : array of integers
+          - `atom-ids` : array of integers
         </dd>
       </dl>
 
     @param scheme
       List of ::Json (complex of dictionary and list) objects.
       Each ::Json object corresponds to each bead in a molecule,
-      and contains three items: \c indices-in-mol is an array
-      of zero-based index of atoms in the molecule, \c type is type
-      of the bead, and \c weights is an array of floats for
+      and contains three items: `indices-in-mol` is an array
+      of zero-based index of atoms in the molecule, `type` is type
+      of the bead, and `weights` is an array of floats for
       weighting factors of atoms.
       <span class="remove_in_table">
         This parameter is stored in #mol_type_to_abst_beads
@@ -117,7 +117,7 @@ class StaBeads : public Starter {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - <c>atom-ids</c> : array of integers
+          - `atom-ids` : array of integers
         </dd>
       </dl>
 
@@ -125,9 +125,9 @@ class StaBeads : public Starter {
       Dictionary from molecular type to list of ::Json
       (complex of dictionary and list) objects.
       Each ::Json object corresponds to each bead in a molecule
-      of that type, and contains three items: \c indices-in-mol is
-      an array of zero-based index of atoms in the molecule, \c type is
-      type of the bead, and \c weights is an array of floats for
+      of that type, and contains three items: `indices-in-mol` is
+      an array of zero-based index of atoms in the molecule, `type` is
+      type of the bead, and `weights` is an array of floats for
       weighting factors of atoms.
       <span class="remove_in_table">
         This parameter is assigned to #mol_type_to_abst_beads.

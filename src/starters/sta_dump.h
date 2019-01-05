@@ -22,7 +22,7 @@ class StaDump : public Starter {
  protected:
   /*!
     A timestep of simulation to be read. In a Lammps' dump file,
-    this value is printed below the line saying <c>ITEM: TIMESTEP</c>.
+    this value is printed below the line saying `ITEM: TIMESTEP`.
     This member is useful to read one timestep from a Lammps' dump file
     containing multiple timesteps.
   */

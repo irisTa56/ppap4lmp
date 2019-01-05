@@ -14,13 +14,13 @@
 namespace utils
 {
   /*!
-    @brief Mimicking Python's \c join.
+    @brief Mimicking Python's `join`.
 
     @param strs
       Vector (list) of strings to be joined.
 
     @param jointer
-      A string used for jointing elements of the \c strs.
+      A string used for jointing elements of the `strs`.
 
     @return A string.
   */

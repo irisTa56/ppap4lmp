@@ -43,7 +43,7 @@ namespace pybind
     </table>
 
     Usage example of the constructor for a trajectory of typed molecules.
-    The number of molecules is 100; molecules with odd \c id are type 1
+    The number of molecules is 100; molecules with odd `id` are type 1
     and the others are type 2.
 
     @htmlonly

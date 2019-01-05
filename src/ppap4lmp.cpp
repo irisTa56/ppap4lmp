@@ -13,7 +13,7 @@
 
   @section intro_sec Introduction
 
-  This project is named \c ppap4lmp,
+  This project is named `ppap4lmp`,
   which stands for PostProcess and Analysis Program for LAMMPS.
 
   GitHub repository is
@@ -134,6 +134,14 @@
   @subsection python_sec_adder Adder
   @copybrief Adder
 
+  @subsubsection python_py_add_bond_angle AddBondAngle
+  @copybrief AddBondAngle
+  @copydetails pybind::py_add_bond_angle
+
+  @subsubsection python_py_add_bond_length AddBondLength
+  @copybrief AddBondLength
+  @copydetails pybind::py_add_bond_length
+
   @subsubsection python_py_add_child_ids AddChildIDs
   @copybrief AddChildIDs
   @copydetails pybind::py_add_child_ids
@@ -145,6 +153,10 @@
   @subsubsection python_py_add_com_position AddCoMPosition
   @copybrief AddCoMPosition
   @copydetails pybind::py_add_com_position
+
+  @subsubsection python_py_add_dihedral_angle AddDihedralAngle
+  @copybrief AddDihedralAngle
+  @copydetails pybind::py_add_dihedral_angle
 
   @subsubsection python_py_add_gyration_radius AddGyrationRadius
   @copybrief AddGyrationRadius

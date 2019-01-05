@@ -47,7 +47,7 @@ class Processor {
     should not be modified in this method.
     If modification of some members is necessary,
     please consider defining them as ::Vec,
-    and modifying only their \e i th element, where \e i = \c index.
+    and modifying only their *i* th element, where *i* = `index`.
   */
   virtual void run_impl(const int index) = 0;
   /*!
@@ -90,7 +90,7 @@ class Processor {
   void register_generators(
     const Vec<ShPtr<GEN>> &gens);
   /*!
-    @brief Call Generator::hello of \e i th Generator object in
+    @brief Call Generator::hello of *i* th Generator object in
     #generators.
 
     @param i
@@ -101,7 +101,7 @@ class Processor {
   virtual void say_hello(
     const int i);
   /*!
-    @brief Call Generator::goodbye of \e i th Generator object in
+    @brief Call Generator::goodbye of *i* th Generator object in
     #generators.
 
     @param i
@@ -136,8 +136,8 @@ class Processor {
   */
   virtual void finish() {}
   /*!
-    @brief Run analysis using \e i th Generator object in #generators,
-    where \e i = #i_generator.
+    @brief Run analysis using *i* th Generator object in #generators,
+    where *i* = #i_generator.
 
     @return A boolean whether all Generator objects in #generators
     have finished being used in #run_impl.

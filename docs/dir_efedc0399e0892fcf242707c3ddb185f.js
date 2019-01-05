@@ -1,8 +1,8 @@
 var dir_efedc0399e0892fcf242707c3ddb185f =
 [
-    [ "add_angle.cpp", "add__angle_8cpp.html", null ],
-    [ "add_angle.h", "add__angle_8h.html", [
-      [ "AddAngle", "classAddAngle.html", "classAddAngle" ]
+    [ "add_bond_angle.cpp", "add__bond__angle_8cpp.html", null ],
+    [ "add_bond_angle.h", "add__bond__angle_8h.html", [
+      [ "AddBondAngle", "classAddBondAngle.html", "classAddBondAngle" ]
     ] ],
     [ "add_bond_length.cpp", "add__bond__length_8cpp.html", null ],
     [ "add_bond_length.h", "add__bond__length_8h.html", [
@@ -19,6 +19,10 @@ var dir_efedc0399e0892fcf242707c3ddb185f =
     [ "add_com_position.cpp", "add__com__position_8cpp.html", null ],
     [ "add_com_position.h", "add__com__position_8h.html", [
       [ "AddCoMPosition", "classAddCoMPosition.html", "classAddCoMPosition" ]
+    ] ],
+    [ "add_dihedral_angle.cpp", "add__dihedral__angle_8cpp.html", null ],
+    [ "add_dihedral_angle.h", "add__dihedral__angle_8h.html", [
+      [ "AddDihedralAngle", "classAddDihedralAngle.html", "classAddDihedralAngle" ]
     ] ],
     [ "add_gyration_radius.cpp", "add__gyration__radius_8cpp.html", null ],
     [ "add_gyration_radius.h", "add__gyration__radius_8h.html", [

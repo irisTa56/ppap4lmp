@@ -65,7 +65,7 @@ namespace pybind
         <th class="py_constructor">Return</th>
       </tr>
       <tr class="py_constructor">
-        <td class="py_constructor">\c create</td>
+        <td class="py_constructor">`create`</td>
         <td class="py_constructor">
           Lambda function defined in pybind::py_element
         </td>
@@ -95,7 +95,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c append_updater</td>
+        <td class="py_method">`append_updater`</td>
         <td class="py_method">Element::append_updater</td>
         <td class="py_method">
           @copybrief Element::append_updater
@@ -108,7 +108,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_data</td>
+        <td class="py_method">`get_data`</td>
         <td class="py_method">Element::get_data_py</td>
         <td class="py_method">
           @copybrief Element::get_data_py
@@ -121,7 +121,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_keys</td>
+        <td class="py_method">`get_keys`</td>
         <td class="py_method">Element::get_keys_py</td>
         <td class="py_method">
           @copybrief Element::get_keys_py
@@ -134,7 +134,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_1d_int</td>
+        <td class="py_method">`get_1d_int`</td>
         <td class="py_method">Element::get_1d_int_py</td>
         <td class="py_method">
           @copybrief Element::get_1d_int_py
@@ -147,7 +147,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_1d_float</td>
+        <td class="py_method">`get_1d_float`</td>
         <td class="py_method">Element::get_1d_float_py</td>
         <td class="py_method">
           @copybrief Element::get_1d_float_py
@@ -160,7 +160,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_2d_int</td>
+        <td class="py_method">`get_2d_int`</td>
         <td class="py_method">Element::get_2d_int_py</td>
         <td class="py_method">
           @copybrief Element::get_2d_int_py
@@ -173,7 +173,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_2d_float</td>
+        <td class="py_method">`get_2d_float`</td>
         <td class="py_method">Element::get_2d_float_py</td>
         <td class="py_method">
           @copybrief Element::get_2d_float_py

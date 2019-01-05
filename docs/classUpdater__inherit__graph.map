@@ -1,26 +1,27 @@
 <map id="Updater" name="Updater">
-<area shape="rect" id="node2" href="$classAdder.html" title="Adder adds new properties to a non&#45;empty Element object. " alt="" coords="1103,255,1195,362"/>
-<area shape="rect" id="node15" href="$classFilter.html" title="Filter removes elements from array Element::data if the elements fail user&#45;defined criteria..." alt="" coords="2261,255,2353,362"/>
-<area shape="rect" id="node18" href="$classStarter.html" title="Starter sets some properties to an empty Element object. " alt="" coords="2755,248,2853,369"/>
-<area shape="rect" id="node3" href="$classAddAngle.html" title="AddAngle adds center of mass to an Element object as its unwrapped position. " alt="" coords="5,447,128,553"/>
-<area shape="rect" id="node4" href="$classAddBondLength.html" title="AddBondLength adds center of mass to an Element object as its unwrapped position. ..." alt="" coords="153,447,295,553"/>
-<area shape="rect" id="node5" href="$classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. " alt="" coords="320,439,453,561"/>
-<area shape="rect" id="node6" href="$classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object..." alt="" coords="478,447,634,553"/>
-<area shape="rect" id="node7" href="$classAddCoMPosition.html" title="AddCoMPosition adds center of mass to an Element object as its unwrapped position. " alt="" coords="659,432,845,568"/>
-<area shape="rect" id="node8" href="$classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. " alt="" coords="869,447,1032,553"/>
-<area shape="rect" id="node9" href="$classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. " alt="" coords="1056,432,1243,568"/>
-<area shape="rect" id="node10" href="$classAddMap.html" title="AddMap adds a new property by mapping from an existing property. " alt="" coords="1267,417,1389,583"/>
-<area shape="rect" id="node11" href="$classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object..." alt="" coords="1413,454,1605,546"/>
-<area shape="rect" id="node12" href="$classAddRename.html" title="AddRename renames an existing property. " alt="" coords="1629,425,1752,575"/>
-<area shape="rect" id="node13" href="$classAddSpecialBonds.html" title="AddSpecialBonds adds special bonds. " alt="" coords="1777,432,1941,568"/>
-<area shape="rect" id="node14" href="$classAddWrappedPosition.html" title="AddWrappedPosition adds wrapped positions for an Element object. " alt="" coords="1965,447,2136,553"/>
-<area shape="rect" id="node16" href="$classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. " alt="" coords="2160,425,2299,575"/>
-<area shape="rect" id="node17" href="$classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. " alt="" coords="2323,447,2445,553"/>
-<area shape="rect" id="node19" href="$classStaBeads.html" title="StaBeads sets properties for beads using mapping (coarse&#45;graining) scheme for each molecule..." alt="" coords="2470,425,2645,575"/>
-<area shape="rect" id="node20" href="$classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object..." alt="" coords="2669,439,2792,561"/>
-<area shape="rect" id="node21" href="$classStaCustom.html" title="StaCustom sets an user&#45;defined Json object to a new Element object as its Element::data. " alt="" coords="2816,447,2939,553"/>
-<area shape="rect" id="node22" href="$classStaDump.html" title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. " alt="" coords="2963,447,3067,553"/>
-<area shape="rect" id="node25" href="$classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. " alt="" coords="3091,447,3221,553"/>
-<area shape="rect" id="node23" href="$classStaDumpAtoms.html" title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. " alt="" coords="2858,631,3009,752"/>
-<area shape="rect" id="node24" href="$classStaDumpBox.html" title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. " alt="" coords="3033,638,3159,745"/>
+<area shape="rect" id="node2" href="$classAdder.html" title="Adder adds new properties to a non&#45;empty Element object. " alt="" coords="1197,255,1289,362"/>
+<area shape="rect" id="node16" href="$classFilter.html" title="Filter removes elements from array Element::data if the elements fail user&#45;defined criteria..." alt="" coords="2453,255,2545,362"/>
+<area shape="rect" id="node19" href="$classStarter.html" title="Starter sets some properties to an empty Element object. " alt="" coords="2947,248,3045,369"/>
+<area shape="rect" id="node3" href="$classAddBondAngle.html" title="AddBondAngle adds angle property to bond&#45;angles, each of them is defined by three consecutive atoms..." alt="" coords="5,447,141,553"/>
+<area shape="rect" id="node4" href="$classAddBondLength.html" title="AddBondLength adds length property to bonds, each of them connects two atoms. " alt="" coords="166,447,309,553"/>
+<area shape="rect" id="node5" href="$classAddChildIDs.html" title="AddChildIDs adds id property of a child Element object to a parent Element object. " alt="" coords="333,439,467,561"/>
+<area shape="rect" id="node6" href="$classAddChildPositions.html" title="AddChildPositions adds relative positions of a child Element object to a parent Element object..." alt="" coords="491,447,647,553"/>
+<area shape="rect" id="node7" href="$classAddCoMPosition.html" title="AddCoMPosition adds center of mass to an Element object as its unwrapped position. " alt="" coords="672,432,859,568"/>
+<area shape="rect" id="node8" href="$classAddDihedralAngle.html" title="AddDihedralAngle adds dihedral&#45;angle property to dehedrals, each of them is defined by four consecuti..." alt="" coords="883,447,1037,553"/>
+<area shape="rect" id="node9" href="$classAddGyrationRadius.html" title="AddGyrationRadius adds gyration radius to an Element object. " alt="" coords="1061,447,1224,553"/>
+<area shape="rect" id="node10" href="$classAddInertiaMoment.html" title="AddInertiaMoment adds inertia moment to an Element object. " alt="" coords="1248,432,1435,568"/>
+<area shape="rect" id="node11" href="$classAddMap.html" title="AddMap adds a new property by mapping from an existing property. " alt="" coords="1459,417,1581,583"/>
+<area shape="rect" id="node12" href="$classAddMolecularOrientation.html" title="AddMolecularOrientation adds molecular orientation (order parameter) to an Element object..." alt="" coords="1605,454,1797,546"/>
+<area shape="rect" id="node13" href="$classAddRename.html" title="AddRename renames an existing property. " alt="" coords="1821,425,1944,575"/>
+<area shape="rect" id="node14" href="$classAddSpecialBonds.html" title="AddSpecialBonds adds special bonds. " alt="" coords="1969,432,2133,568"/>
+<area shape="rect" id="node15" href="$classAddWrappedPosition.html" title="AddWrappedPosition adds wrapped positions for an Element object. " alt="" coords="2157,447,2328,553"/>
+<area shape="rect" id="node17" href="$classFilComparison.html" title="FilComparison applies a filter defined by comparison operators. " alt="" coords="2352,425,2491,575"/>
+<area shape="rect" id="node18" href="$classFilSet.html" title="FilSet applies a filter defined by sets of acceptable values. " alt="" coords="2515,447,2637,553"/>
+<area shape="rect" id="node20" href="$classStaBeads.html" title="StaBeads sets properties for beads using mapping (coarse&#45;graining) scheme for each molecule..." alt="" coords="2662,425,2837,575"/>
+<area shape="rect" id="node21" href="$classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object..." alt="" coords="2861,439,2984,561"/>
+<area shape="rect" id="node22" href="$classStaCustom.html" title="StaCustom sets an user&#45;defined Json object to a new Element object as its Element::data. " alt="" coords="3008,447,3131,553"/>
+<area shape="rect" id="node23" href="$classStaDump.html" title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. " alt="" coords="3155,447,3259,553"/>
+<area shape="rect" id="node26" href="$classStaMolecules.html" title="StaMolecules sets properties for molecules using atoms forming the molecules. " alt="" coords="3283,447,3413,553"/>
+<area shape="rect" id="node24" href="$classStaDumpAtoms.html" title="StaDumpAtoms reads a Lammps&#39; dump file and sets properties for atoms. " alt="" coords="3050,631,3201,752"/>
+<area shape="rect" id="node25" href="$classStaDumpBox.html" title="StaDumpBox reads a Lammps&#39; dump file and sets properties for simulation box. " alt="" coords="3225,638,3351,745"/>
 </map>

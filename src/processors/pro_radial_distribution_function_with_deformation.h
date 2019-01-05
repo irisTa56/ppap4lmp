@@ -11,7 +11,7 @@
 
 #include <processors/pro_radial_distribution_function.h>
 
-//! \e ProRDF is an alias for ProRadialDistributionFunction class.
+//! *ProRDF* is an alias for ProRadialDistributionFunction class.
 using ProRDF = ProRadialDistributionFunction;
 
 /*!
@@ -31,17 +31,17 @@ using ProRDF = ProRadialDistributionFunction;
   the particles into consideration. Deformation of the particle is
   estimated using gyration radius in a parallel direction of
   the particle-to-particle vector. This gyration radius can be computed
-  by subtracting gyration radius \e around the particle-to-particle
+  by subtracting gyration radius *around* the particle-to-particle
   axis from general gyration radius.
-  Difference between the gyration radius \e in the particle-to-particle
+  Difference between the gyration radius *in* the particle-to-particle
   axis and the general gyration radius is added to the distance.
 
   The above mentioned three types of gyration radius, that is,
   general gyration radius, gyration radius
-  \e around the particle-to-particle axis, and gyration radius
-  \e in the particle-to-particle vector are also stored as functions of
-  distance \e r, where \e r is distance from a reference particle
-  \e without modification.
+  *around* the particle-to-particle axis, and gyration radius
+  *in* the particle-to-particle vector are also stored as functions of
+  distance *r*, where *r* is distance from a reference particle
+  *without* modification.
 
   List of radial distribution functions and lists of functions
   for three types of gyration radius are also computed
@@ -62,7 +62,7 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
     larger than the maximum distance in a domain,
     where the radial distribution function is computed,
     might be counted. This program uses a sample including particles
-    up to the maximum distance \e plus this member.
+    up to the maximum distance *plus* this member.
   */
   double margin = 1.0;
   /*!
@@ -72,13 +72,13 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
   ArrayXd Rg2_array;
   /*!
     Averaged square of gyration radius
-    \e in the particle-to-particle axis
+    *in* the particle-to-particle axis
     as a function of distance from a reference particle.
   */
   ArrayXd Rg2_para_array;  // parallel
   /*!
     Averaged square of gyration radius
-    \e around the particle-to-particle axis
+    *around* the particle-to-particle axis
     as a function of distance from a reference particle.
   */
   ArrayXd Rg2_perp_array;  // perpendicular
@@ -91,22 +91,22 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
   Vec<ArrayXd> Rg2_array_traj;
   /*!
     List consisting of temporary averaged square of gyration radius
-    \e in the particle-to-particle axis
+    *in* the particle-to-particle axis
     as a function of distance from a reference particle.
     Indices in this list corresponds those in #generators.
   */
   Vec<ArrayXd> Rg2_para_array_traj;
   /*!
     List consisting of temporary averaged square of gyration radius
-    \e around the particle-to-particle axis
+    *around* the particle-to-particle axis
     as a function of distance from a reference particle.
     Indices in this list corresponds those in #generators.
   */
   Vec<ArrayXd> Rg2_perp_array_traj;
   /*!
     List consisting of temporary numbers of particles
-    in a spherical shell with radius of \e r, where \e r is distance
-    from a reference particle \e without modification.
+    in a spherical shell with radius of *r*, where *r* is distance
+    from a reference particle *without* modification.
     Indices in this list corresponds those in #generators.
   */
   Vec<ArrayXi> raw_counts_traj;
@@ -119,14 +119,14 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
   Vec<ArrayXd> Rg2_sum_traj;
   /*!
     List consisting of temporary sum of square of gyration radius
-    \e in the particle-to-particle axis
+    *in* the particle-to-particle axis
     as a function of distance from a reference particle.
     Indices in this list corresponds those in #generators.
   */
   Vec<ArrayXd> Rg2_para_sum_traj;
   /*!
     List consisting of temporary sum of square of gyration radius
-    \e around the particle-to-particle axis
+    *around* the particle-to-particle axis
     as a function of distance from a reference particle.
     Indices in this list corresponds those in #generators.
   */
@@ -170,11 +170,11 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
     this program uses a sample including particles of which distance
     from a reference particle are less than the maximum distance
     in a domain, where the radial distribution function is computed,
-    \e plus the margin.
+    *plus* the margin.
 
     @param margin_
       Consider particles up to the maximum distance in the domain
-      \e plus this value.
+      *plus* this value.
       <span class="remove_in_table">
         This parameter is assigned to #margin.
       </span>
@@ -186,10 +186,10 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
   /*!
     @brief Get averaged gyration radius as function of distance
     from a reference particle. The returned value is dictionary
-    of which keys are \c isotropic, \c parallel and \c perpendicular,
+    of which keys are `isotropic`, `parallel` and `perpendicular`,
     and corresponding values are functions for general gyration radius,
-    gyration radius \e in the particle-to-particle axis
-    and gyration radius \e around the particle-to-particle axis,
+    gyration radius *in* the particle-to-particle axis
+    and gyration radius *around* the particle-to-particle axis,
     respectively.
 
     @return Dictionary consisting of square rooted #Rg2_array,
@@ -199,11 +199,11 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
   /*!
     @brief Get list of temporary gyration radius as function
     of distance from a reference particle. The returned value is
-    dictionary of which keys are \c isotropic, \c parallel
-    and \c perpendicular, and corresponding values are lists
+    dictionary of which keys are `isotropic`, `parallel`
+    and `perpendicular`, and corresponding values are lists
     of functions for general gyration radius, gyration radius
-    \e in the particle-to-particle axis and gyration radius
-    \e around the particle-to-particle axis, respectively.
+    *in* the particle-to-particle axis and gyration radius
+    *around* the particle-to-particle axis, respectively.
     Each element of the lists corresponds to each snapshot
     of the simulation.
 
@@ -215,11 +215,11 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
   /*!
     @brief Get averaged square of gyration radius as function
     of distance from a reference particle. The returned value is
-    dictionary of which keys are \c isotropic, \c parallel
-    and \c perpendicular, and corresponding values are function for
+    dictionary of which keys are `isotropic`, `parallel`
+    and `perpendicular`, and corresponding values are function for
     general gyration radius, gyration radius
-    \e in the particle-to-particle axis and gyration radius
-    \e around the particle-to-particle axis, respectively.
+    *in* the particle-to-particle axis and gyration radius
+    *around* the particle-to-particle axis, respectively.
 
     @return Dictionary consisting of #Rg2_array, #Rg2_para_array
     and #Rg2_perp_array.
@@ -228,11 +228,11 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
   /*!
     @brief Get list of temporary square of gyration radius as function
     of distance from a reference particle. The returned value is
-    dictionary of which keys are \c isotropic, \c parallel
-    and \c perpendicular, and corresponding values are lists
+    dictionary of which keys are `isotropic`, `parallel`
+    and `perpendicular`, and corresponding values are lists
     of functions for general gyration radius, gyration radius
-    \e in the particle-to-particle axis and gyration radius
-    \e around the particle-to-particle axis, respectively.
+    *in* the particle-to-particle axis and gyration radius
+    *around* the particle-to-particle axis, respectively.
     Each element of the lists corresponds to each snapshot
     of the simulation.
 
@@ -243,7 +243,7 @@ class ProRadialDistributionFunctionWithDeformation : public ProRDF {
 };
 
 /*!
-  @brief \e ProRDFWD is an alias
+  @brief *ProRDFWD* is an alias
   for ProRadialDistributionFunctionWithDeformation class.
 */
 using ProRDFWD = ProRadialDistributionFunctionWithDeformation;

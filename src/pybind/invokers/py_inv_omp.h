@@ -35,7 +35,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c execute_omp</td>
+        <td class="py_method">`execute_omp`</td>
         <td class="py_method">pybind::execute_omp</td>
         <td class="py_method">
           @copybrief pybind::execute_omp(const ShPtr<Processor> &)
@@ -48,7 +48,7 @@ namespace pybind
         </td>
       </tr>
         <tr class="py_method">
-        <td class="py_method">\c execute_omp</td>
+        <td class="py_method">`execute_omp`</td>
         <td class="py_method">pybind::execute_omp</td>
         <td class="py_method">
           @copybrief pybind::execute_omp(const Vec<ShPtr<Processor>> &)

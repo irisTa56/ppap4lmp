@@ -23,7 +23,7 @@ namespace utils
 
     @param vec
       Mutable reference to a ::Vec object where elements of the
-      \c args are appended to.
+      `args` are appended to.
 
     @return None.
   */

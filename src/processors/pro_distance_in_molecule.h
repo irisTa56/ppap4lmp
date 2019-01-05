@@ -39,7 +39,7 @@ class ProDistanceInMolecule : public Processor {
   /*!
     Specify a type of molecules to be analyzed (default is 1).
     Only molecules whose type is #target_moltype are analyzed.
-    Note that if molecules do not have \c type property,
+    Note that if molecules do not have `type` property,
     1 is used as their types.
   */
   int target_moltype = 1;
@@ -75,8 +75,8 @@ class ProDistanceInMolecule : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - <c>atom-ids</c> : array of integers
+          - `id` : integer
+          - `atom-ids` : array of integers
         </dd>
       </dl>
 
@@ -85,16 +85,16 @@ class ProDistanceInMolecule : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c xu : float
-          - \c yu : float
-          - \c zu : float
+          - `id` : integer
+          - `xu` : float
+          - `yu` : float
+          - `zu` : float
         </dd>
       </dl>
     @endparblock
 
     <span class="remove_in_table">
-      A GenDict object is constructed taking the \c mols and \c atoms,
+      A GenDict object is constructed taking the `mols` and `atoms`,
       and then put into #generators by #register_generator.
     </span>
   */
@@ -113,22 +113,22 @@ class ProDistanceInMolecule : public Processor {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property (first)</dt>
         <dd class="property required_ext">
-          - <c>atom-ids</c> : array of integers
+          - `atom-ids` : array of integers
         </dd>
       </dl>
       <dl class="property required_ext">
         <dt class="property required_ext">Required property (second)</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c xu : float
-          - \c yu : float
-          - \c zu : float
+          - `id` : integer
+          - `xu` : float
+          - `yu` : float
+          - `zu` : float
         </dd>
       </dl>
 
     <span class="remove_in_table">
       GenDict objects are constructed
-      taking each element of the \c pairs,
+      taking each element of the `pairs`,
       and then put into #generators by #register_generators.
     </span>
   */
@@ -172,9 +172,9 @@ class ProDistanceInMolecule : public Processor {
     int index1_in_mol_,
     int index2_in_mol_);
   /*!
-    @brief Specify a molecular type. Only molecules whose \c type
+    @brief Specify a molecular type. Only molecules whose `type`
     property is the specified type are analyzed. If molecules have
-    no \c type property, you do not need to use this method.
+    no `type` property, you do not need to use this method.
 
     @param target_moltype_
       An integer for molecular type.

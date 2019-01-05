@@ -19,7 +19,7 @@
   such as an updating process defined by Generator::update_chain
   or analytical computations conducted in Processor::run_impl,
   under multithread environment using OpenMP.
-  All threads are used if \c OMP_NUM_THREADS environment variable is
+  All threads are used if `OMP_NUM_THREADS` environment variable is
   not set.
 
   Please be careful when you modify any member of any object

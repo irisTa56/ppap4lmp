@@ -41,9 +41,12 @@ var NAVTREE =
           [ "StaMolecules", "index.html#python_sec_sta_molecules", null ]
         ] ],
         [ "Adder", "index.html#python_sec_adder", [
+          [ "AddBondAngle", "index.html#python_py_add_bond_angle", null ],
+          [ "AddBondLength", "index.html#python_py_add_bond_length", null ],
           [ "AddChildIDs", "index.html#python_py_add_child_ids", null ],
           [ "AddChildPositions", "index.html#python_py_add_child_positions", null ],
           [ "AddCoMPosition", "index.html#python_py_add_com_position", null ],
+          [ "AddDihedralAngle", "index.html#python_py_add_dihedral_angle", null ],
           [ "AddGyrationRadius", "index.html#python_py_add_gyration_radius", null ],
           [ "AddInertiaMoment", "index.html#python_py_add_inertia_moment", null ],
           [ "AddMap", "index.html#python_py_add_map", null ],
@@ -106,9 +109,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classProDistanceInMolecule.html#af1441c6e56e1dd9efc18423f720dc230",
-"functions.html",
-"py__filter_8h.html#a3d607941afd49760705588955064d8da"
+"classProDistanceInMolecule.html#a57443f2cc857b09d3bca11d4e9122de1",
+"fil__set_8cpp_source.html",
+"py__element_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

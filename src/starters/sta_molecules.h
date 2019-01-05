@@ -18,7 +18,7 @@
   An object of this class owns an Element object for atoms
   forming molecules to be computed.
   Note that if molecular types are required elsewhere,
-  you need to add \c type property using an Adder's subclass object,
+  you need to add `type` property using an Adder's subclass object,
   such as an AddMap object.
 
   About usage in Python,
@@ -32,8 +32,8 @@ class StaMolecules : public Starter {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - \c id : integer
-        - <c>atom-ids</c> : array of integers
+        - `id` : integer
+        - `atom-ids` : array of integers
       </dd>
     </dl>
   */
@@ -53,8 +53,8 @@ class StaMolecules : public Starter {
       <dl class="property required_ext">
         <dt class="property required_ext">Required property</dt>
         <dd class="property required_ext">
-          - \c id : integer
-          - \c mol : integer
+          - `id` : integer
+          - `mol` : integer
         </dd>
       </dl>
     @endparblock

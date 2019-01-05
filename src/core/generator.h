@@ -16,7 +16,7 @@ class Element;
 class Updater;
 
 /*!
-  @brief \e UpdatePair is a pair of shared pointer of Element class
+  @brief *UpdatePair* is a pair of shared pointer of Element class
   and Updater class.
 
   The Updater object updates Element::data of the Element object
@@ -59,11 +59,11 @@ class Generator {
     @return None.
 
     In merging a chain of ::UpdatePair objects, relative
-    orders of ::UpdatePair objects in the \c new_chain and
+    orders of ::UpdatePair objects in the `new_chain` and
     #update_chain are retained so that dependency order of
     the updating process will be preserved. During the merging,
     duplication of ::UpdatePair objects will be removed. If there is
-    no explicit preference, elements in the \c new_chain will be
+    no explicit preference, elements in the `new_chain` will be
     appended to the end of #update_chain. This method is thread-unsafe
     because it accesses #update_chain thread-globally. Ensure this
     method is not called in a multithreading context.

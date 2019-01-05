@@ -40,11 +40,12 @@ var hierarchy =
     ] ],
     [ "Updater", "classUpdater.html", [
       [ "Adder", "classAdder.html", [
-        [ "AddAngle", "classAddAngle.html", null ],
+        [ "AddBondAngle", "classAddBondAngle.html", null ],
         [ "AddBondLength", "classAddBondLength.html", null ],
         [ "AddChildIDs", "classAddChildIDs.html", null ],
         [ "AddChildPositions", "classAddChildPositions.html", null ],
         [ "AddCoMPosition", "classAddCoMPosition.html", null ],
+        [ "AddDihedralAngle", "classAddDihedralAngle.html", null ],
         [ "AddGyrationRadius", "classAddGyrationRadius.html", null ],
         [ "AddInertiaMoment", "classAddInertiaMoment.html", null ],
         [ "AddMap", "classAddMap.html", null ],

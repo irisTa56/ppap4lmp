@@ -70,7 +70,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c set_grid</td>
+        <td class="py_method">`set_grid`</td>
         <td class="py_method">ProThicknessProfile::set_grid</td>
         <td class="py_method">
           @copybrief ProThicknessProfile::set_grid
@@ -83,7 +83,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c set_offset</td>
+        <td class="py_method">`set_offset`</td>
         <td class="py_method">ProThicknessProfile::set_offset</td>
         <td class="py_method">
           @copybrief ProThicknessProfile::set_offset
@@ -96,7 +96,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c shift_half_delta</td>
+        <td class="py_method">`shift_half_delta`</td>
         <td class="py_method">ProThicknessProfile::shift_half_delta</td>
         <td class="py_method">
           @copybrief ProThicknessProfile::shift_half_delta
@@ -109,7 +109,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_conditions</td>
+        <td class="py_method">`get_conditions`</td>
         <td class="py_method">ProThicknessProfile::get_conditions</td>
         <td class="py_method">
           @copybrief ProThicknessProfile::get_conditions
@@ -122,7 +122,7 @@ namespace pybind
         </td>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c get_profiles</td>
+        <td class="py_method">`get_profiles`</td>
         <td class="py_method">ProThicknessProfile::get_profiles</td>
         <td class="py_method">
           @copybrief ProThicknessProfile::get_profiles
@@ -138,7 +138,7 @@ namespace pybind
 
     Usage example of ProThicknessProfile class for computing
     a time series of thickness profile of a film consisting of atoms
-    of which radius is 2.16 and \c type property is 1.
+    of which radius is 2.16 and `type` property is 1.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python

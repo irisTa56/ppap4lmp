@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['addangle',['AddAngle',['../classAddAngle.html',1,'']]],
+  ['addbondangle',['AddBondAngle',['../classAddBondAngle.html',1,'']]],
   ['addbondlength',['AddBondLength',['../classAddBondLength.html',1,'']]],
   ['addchildids',['AddChildIDs',['../classAddChildIDs.html',1,'']]],
   ['addchildpositions',['AddChildPositions',['../classAddChildPositions.html',1,'']]],
   ['addcomposition',['AddCoMPosition',['../classAddCoMPosition.html',1,'']]],
+  ['adddihedralangle',['AddDihedralAngle',['../classAddDihedralAngle.html',1,'']]],
   ['adder',['Adder',['../classAdder.html',1,'']]],
   ['addgyrationradius',['AddGyrationRadius',['../classAddGyrationRadius.html',1,'']]],
   ['addinertiamoment',['AddInertiaMoment',['../classAddInertiaMoment.html',1,'']]],

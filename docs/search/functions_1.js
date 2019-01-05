@@ -1,11 +1,12 @@
 var searchData=
 [
   ['add',['add',['../classDataKeys.html#a626d56b99861008c2a63580ed17b809d',1,'DataKeys']]],
-  ['addangle',['AddAngle',['../classAddAngle.html#a985c2e2ce57f3862b6e7d046578192ab',1,'AddAngle']]],
+  ['addbondangle',['AddBondAngle',['../classAddBondAngle.html#a7b70621a2fb3fc9f807e4e782fd91365',1,'AddBondAngle']]],
   ['addbondlength',['AddBondLength',['../classAddBondLength.html#a7900ec9cc3c8ff5f86640893fe1e953f',1,'AddBondLength']]],
   ['addchildids',['AddChildIDs',['../classAddChildIDs.html#a7278a3244f0a6d52e7f30491f2154a70',1,'AddChildIDs']]],
   ['addchildpositions',['AddChildPositions',['../classAddChildPositions.html#ad4db976f729aaf211154e36d47ee97f2',1,'AddChildPositions']]],
   ['addcomposition',['AddCoMPosition',['../classAddCoMPosition.html#ade24bf19cac5bf1a61bb774a2f54fc63',1,'AddCoMPosition']]],
+  ['adddihedralangle',['AddDihedralAngle',['../classAddDihedralAngle.html#ad5139673d0d0ea9ce33f170d866c2617',1,'AddDihedralAngle']]],
   ['addinertiamoment',['AddInertiaMoment',['../classAddInertiaMoment.html#a7772bb782144b8dab59ea65dffdba6b6',1,'AddInertiaMoment']]],
   ['addmap',['AddMap',['../classAddMap.html#a358ea2d261cc91b117998e0a0d439608',1,'AddMap']]],
   ['addrename',['AddRename',['../classAddRename.html#a3119359de9028c40ed5fbf24b5fc3a46',1,'AddRename']]],

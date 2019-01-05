@@ -29,10 +29,10 @@ class StaDumpAtoms : public StaDump {
 
     @param line
       The first line in a body of a Lammps' dump file:
-      a line below the line beginning with <c>ITEM: ATOMS</c>.
+      a line below the line beginning with `ITEM: ATOMS`.
 
     @return A constant ::Vec object containing booleans
-    whether each value in the \c line is an integer or not.
+    whether each value in the `line` is an integer or not.
   */
   const Vec<bool> make_is_int_vector(
     const Str &line);
@@ -45,7 +45,7 @@ class StaDumpAtoms : public StaDump {
       <dd class="property added">
         - Keys to be set are names of dumped Lammps' atom property.
           In a Lammps' dump file, the names are printed in a line
-          beginning with <c>ITEM: ATOMS</c>.
+          beginning with `ITEM: ATOMS`.
       </dd>
     </dl>
   */

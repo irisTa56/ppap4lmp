@@ -69,7 +69,7 @@ namespace pybind
         <th class="py_method">Return</th>
       </tr>
       <tr class="py_method">
-        <td class="py_method">\c with_sqrted</td>
+        <td class="py_method">`with_sqrted`</td>
         <td class="py_method">AddGyrationRadius::with_sqrted</td>
         <td class="py_method">
           @copybrief AddGyrationRadius::with_sqrted

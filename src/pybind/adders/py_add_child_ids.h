@@ -42,7 +42,7 @@ namespace pybind
       </tr>
     </table>
 
-    Usage example of the constructor to add \c bead-ids property to
+    Usage example of the constructor to add `bead-ids` property to
     an Element object for molecules.
 
     @htmlonly

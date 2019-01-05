@@ -59,7 +59,7 @@ namespace pybind
     </table>
 
     Usage example of the constructor for a filter removing atoms
-    whose \c xu property is less than 10.0.
+    whose `xu` property is less than 10.0.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python
@@ -70,8 +70,8 @@ namespace pybind
     @endhtmlonly
 
     Usage example of the constructor for a filter removing atoms
-    except for those of which \c xu property is greater than 10.0
-    and less than 20.0, and \c charge property is equal to -1.0.
+    except for those of which `xu` property is greater than 10.0
+    and less than 20.0, and `charge` property is equal to -1.0.
 
     @htmlonly
     <pre class="prettyprint"><code class="lang-py"># python

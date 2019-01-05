@@ -14,12 +14,12 @@
 namespace utils
 {
   /*!
-    @brief Mimicking Python's \c split.
+    @brief Mimicking Python's `split`.
 
     @param str
       A string to be splitted.
     @param delim
-      A character by which the \c str is splitted.
+      A character by which the `str` is splitted.
       Default delimiter is a whitespace.
 
     @return A ::Vec object containing each part of splitted strings.
