@@ -87,11 +87,11 @@ void ProRadialDistributionFunction::run_impl(
     }
   }
 
-  std::pair<int,int> shift_x = box.value("periodic_x", false) ?
+  std::pair<int,int> shift_x = box.value("pbc_x", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
-  std::pair<int,int> shift_y = box.value("periodic_y", false) ?
+  std::pair<int,int> shift_y = box.value("pbc_y", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
-  std::pair<int,int> shift_z = box.value("periodic_z", false) ?
+  std::pair<int,int> shift_z = box.value("pbc_z", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
 
   auto reciprocal_width = 1.0 / bin_width;

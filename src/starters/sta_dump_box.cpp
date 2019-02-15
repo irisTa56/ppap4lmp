@@ -53,7 +53,7 @@ void StaDumpBox::compute_impl(
 
       for (int i = 0; i != 3; ++i)
       {
-        auto key = "periodic_" + Str("xyz").substr(i, 1);
+        auto key = "pbc_" + Str("xyz").substr(i, 1);
 
         data[key] = strs[3+i] == "pp";
         datakeys.add(key);

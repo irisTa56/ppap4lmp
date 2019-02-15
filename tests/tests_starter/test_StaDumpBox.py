@@ -23,9 +23,9 @@ class TestStaDumpBox(unittest.TestCase):
     self._test_get_data(
       ("dumps_bead/bead.2990000.dump", 2990000),
       {
-        "periodic_x": True,
-        "periodic_y": True,
-        "periodic_z": False,
+        "pbc_x": True,
+        "pbc_y": True,
+        "pbc_z": False,
         "lo_x": 0.0, "hi_x": 662.0,
         "lo_y": 0.0, "hi_y": 331.0,
         "lo_z": 0.0, "hi_z": 212.3
@@ -34,9 +34,9 @@ class TestStaDumpBox(unittest.TestCase):
     self._test_get_data(
       ("dumps_atom/atom.0.dump", 0),
       {
-        "periodic_x": True,
-        "periodic_y": True,
-        "periodic_z": True,
+        "pbc_x": True,
+        "pbc_y": True,
+        "pbc_z": True,
         "lo_x": 0.0, "hi_x": 3.7787347240000003e+01,
         "lo_y": 0.0, "hi_y": 3.7787347240000003e+01,
         "lo_z": 0.0, "hi_z": 3.7787347240000003e+01
@@ -53,14 +53,14 @@ class TestStaDumpBox(unittest.TestCase):
     self._test_get_keys(
       ("dumps_bead/bead.2990000.dump", 2990000),
       {
-        "periodic_x", "periodic_y", "periodic_z",
+        "pbc_x", "pbc_y", "pbc_z",
         "lo_x", "hi_x", "lo_y", "hi_y", "lo_z", "hi_z"
       })
 
     self._test_get_keys(
       ("dumps_atom/atom.0.dump", 0),
       {
-        "periodic_x", "periodic_y", "periodic_z",
+        "pbc_x", "pbc_y", "pbc_z",
         "lo_x", "hi_x", "lo_y", "hi_y", "lo_z", "hi_z"
       })
 

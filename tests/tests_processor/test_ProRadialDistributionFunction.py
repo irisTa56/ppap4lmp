@@ -57,9 +57,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
     atoms = create(StaCustom(abst_atoms))
 
     box = create(StaCustom({
-      "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
-      "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
-      "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True}))
+      "lo_x": 0.0, "hi_x": 10.0, "pbc_x": True,
+      "lo_y": 0.0, "hi_y": 10.0, "pbc_y": True,
+      "lo_z": 0.0, "hi_z": 10.0, "pbc_z": True}))
 
     pro = ProRadialDistributionFunction(atoms, box)
 
@@ -109,9 +109,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
     atoms = create(StaCustom(abst_atoms))
 
     box = create(StaCustom({
-      "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
-      "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
-      "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True}))
+      "lo_x": 0.0, "hi_x": 10.0, "pbc_x": True,
+      "lo_y": 0.0, "hi_y": 10.0, "pbc_y": True,
+      "lo_z": 0.0, "hi_z": 10.0, "pbc_z": True}))
 
     pro = ProRadialDistributionFunction(atoms, box)
 
@@ -163,9 +163,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
     atoms = create(StaCustom(abst_atoms))
 
     box = create(StaCustom({
-      "lo_x": 0.0, "hi_x": 3.0, "periodic_x": True,
-      "lo_y": 0.0, "hi_y": 3.0, "periodic_y": True,
-      "lo_z": 0.0, "hi_z": 3.0, "periodic_z": True}))
+      "lo_x": 0.0, "hi_x": 3.0, "pbc_x": True,
+      "lo_y": 0.0, "hi_y": 3.0, "pbc_y": True,
+      "lo_z": 0.0, "hi_z": 3.0, "pbc_z": True}))
 
     pro = ProRadialDistributionFunction(atoms, box)
 
@@ -225,9 +225,9 @@ class TestProRadialDistributionFunction(unittest.TestCase):
       atoms_traj.append(create(StaCustom(abst_atoms)))
 
       box_traj.append(create(StaCustom({
-        "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
-        "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
-        "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True})))
+        "lo_x": 0.0, "hi_x": 10.0, "pbc_x": True,
+        "lo_y": 0.0, "hi_y": 10.0, "pbc_y": True,
+        "lo_z": 0.0, "hi_z": 10.0, "pbc_z": True})))
 
     pro = ProRadialDistributionFunction(list(zip(atoms_traj, box_traj)))
 

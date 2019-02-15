@@ -79,9 +79,9 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
     mols.append_updater(AddInertiaMoment(atoms))
 
     box = create(StaCustom({
-      "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
-      "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
-      "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True}))
+      "lo_x": 0.0, "hi_x": 10.0, "pbc_x": True,
+      "lo_y": 0.0, "hi_y": 10.0, "pbc_y": True,
+      "lo_z": 0.0, "hi_z": 10.0, "pbc_z": True}))
 
     mols.append_updater(AddWrappedPosition(box))
 
@@ -139,9 +139,9 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
     mols.append_updater(AddInertiaMoment(atoms))
 
     box = create(StaCustom({
-      "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
-      "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
-      "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True}))
+      "lo_x": 0.0, "hi_x": 10.0, "pbc_x": True,
+      "lo_y": 0.0, "hi_y": 10.0, "pbc_y": True,
+      "lo_z": 0.0, "hi_z": 10.0, "pbc_z": True}))
 
     mols.append_updater(AddWrappedPosition(box))
 
@@ -215,9 +215,9 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
 
     boxes = [
       create(StaCustom({
-        "lo_x": 0.0, "hi_x": 10.0, "periodic_x": True,
-        "lo_y": 0.0, "hi_y": 10.0, "periodic_y": True,
-        "lo_z": 0.0, "hi_z": 10.0, "periodic_z": True
+        "lo_x": 0.0, "hi_x": 10.0, "pbc_x": True,
+        "lo_y": 0.0, "hi_y": 10.0, "pbc_y": True,
+        "lo_z": 0.0, "hi_z": 10.0, "pbc_z": True
       })) for i in range(n_traj)]
 
     molses = [

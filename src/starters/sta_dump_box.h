@@ -30,9 +30,9 @@ class StaDumpBox : public StaDump {
     <dl class="property added">
       <dt class="property added">Property to be added</dt>
       <dd class="property added">
-        - `periodic_x` : boolean
-        - `periodic_y` : boolean
-        - `periodic_z` : boolean
+        - `pbc_x` : boolean
+        - `pbc_y` : boolean
+        - `pbc_z` : boolean
         - `lo_x` : float
         - `lo_y` : float
         - `lo_z` : float
