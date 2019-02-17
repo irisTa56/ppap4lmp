@@ -257,7 +257,7 @@
   <table class="properties_list">
     <tr>
       <th class="properties_list">Class</th>
-      <th class="properties_list" colspan="5">Property Names</th>
+      <th class="properties_list" colspan="4">Property Names</th>
     </tr>
   </table>
 

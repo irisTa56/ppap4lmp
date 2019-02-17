@@ -1,11 +1,21 @@
 #!/usr/bin/env python
 
+# execute Doxygen
 
+import os
 import subprocess
+
+version_ns = {}
+with open(os.path.join("ppap4lmp", "_version.py")) as f:
+  exec(f.read(), {}, version_ns)
+
+dox_env = os.environ.copy()
+dox_env["PROJECT_NUMBER"] = ".".join(
+  map(str, version_ns["version_info"][:3]))
 
 p = subprocess.run(
   ['doxygen', 'Doxyfile'],
-  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+  stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=dox_env)
 
 lines = p.stderr.decode().split("\n")
 
@@ -19,6 +29,7 @@ for line in lines:
       or "@param is not found in the argument list of pybind::" in line):
     print(line)
 
+# modify generated HTML file
 
 from bs4 import BeautifulSoup
 
@@ -119,13 +130,13 @@ def get_properties_to_be_adde(soup):
 
       target_table.contents.append(BeautifulSoup("""  <tr>
     <td class="properties_list">{}</td>
-    <td class="properties_list" colspan="5">{}</td>
+    <td class="properties_list" colspan="4">{}</td>
   </tr>
-""".format(str(table.a), ", ".join(list(set([
+""".format(str(table.a), ", ".join(sorted(list(set(
         name_alias[str(code)] if str(code) in name_alias else str(code)
         for dd in table.find_all("dd", class_="added")
         for code in dd.find_all("code")
-      ])))), "html.parser"))
+      ))))), "html.parser"))
 
 modify_table(mainpage)
 
