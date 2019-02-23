@@ -112,3 +112,7 @@ This project would not be possible without the following great open-source proje
 * [pybind11](https://github.com/pybind/pybind11)
 * [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 * [nlohmann/json](https://github.com/nlohmann/json)
+
+## Known Bugs
+
+* `Error in 'python': double free or corruption (out):` occurs when exiting from Jupyter.
