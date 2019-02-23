@@ -121,7 +121,7 @@ with open("src/pybind.h", "w") as f:
   This file is not included in the GitHub repository.
   It will be created at installation time.
   To find the way how this file is written,
-  please see \c setup.py in the root directory of this project.
+  please see `setup.py` in the root directory of this project.
 */
 
 #ifndef PYBIND_H
@@ -131,7 +131,7 @@ with open("src/pybind.h", "w") as f:
 
 {}
 
-//! Macro for generating Python module named \c _ppap4lmp.
+//! Macro for generating Python module named `_ppap4lmp`.
 PYBIND11_MODULE(_ppap4lmp, m)
 {{
 {}
