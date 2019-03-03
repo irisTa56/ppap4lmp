@@ -7,6 +7,7 @@
 */
 
 #include <fstream>
+#include <tuple>
 
 #include "sta_dump_atoms.h"
 #include "../utils/runtime_error.h"
@@ -62,25 +63,57 @@ void StaDumpAtoms::compute_impl(
         std::getline(ifs, line);
 
         auto is_int_vector = make_is_int_vector(line);
-        auto size = is_int_vector.size();
 
-        for (auto &d : data)
+        // set data from the 1st line
+
+        auto &d = data.front();
+
+        auto strs = ut::split(line);
+
+        for (int i = 0; i != is_int_vector.size(); ++i)
         {
-          auto strs = ut::split(line);
-
-          for (int j = 0; j != size; ++j)
+          if (is_int_vector[i])
           {
-            if (is_int_vector[j])
+            d[keys[i]] = std::stoi(strs[i]);
+          }
+          else
+          {
+            d[keys[i]] = std::stod(strs[i]);
+          }
+        }
+
+        // set data from the remaining lines
+
+        Vec<std::tuple<Str, bool, char>> keys_is_int(is_int_vector.size());
+        for (int i = 0; i < keys_is_int.size(); ++i)
+        {
+          keys_is_int[i] = std::make_tuple(
+            keys[i], is_int_vector[i], i+1 == keys_is_int.size() ? '\n' : ' ');
+        }
+
+        auto begin = keys_is_int.begin();
+        auto end = keys_is_int.end();
+
+        for (auto it = data.begin()+1; it != data.end(); ++it)
+        {
+          for (auto jt = begin; jt != end; ++jt)
+          {
+            Str str;
+
+            while (str.empty())
             {
-              d[keys[j]] = std::stoi(strs[j]);
+              std::getline(ifs, str, std::get<2>(*jt));
+            }
+
+            if (std::get<1>(*jt))
+            {
+              (*it)[std::get<0>(*jt)] = std::stoi(str);
             }
             else
             {
-              d[keys[j]] = std::stod(strs[j]);
+              (*it)[std::get<0>(*jt)] = std::stod(str);
             }
           }
-
-          std::getline(ifs, line);
         }
 
         datakeys.add(keys);
