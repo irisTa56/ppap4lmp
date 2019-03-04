@@ -99,7 +99,6 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
@@ -111,7 +110,7 @@ var NAVTREEINDEX =
 ".html",
 "classProDistanceInMolecule.html#a57443f2cc857b09d3bca11d4e9122de1",
 "fil__set_8cpp_source.html",
-"py__element_8h.html"
+"py__element_8h.html#aa960fe0db10e19d7b7b60784a7e81be0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

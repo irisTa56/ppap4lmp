@@ -1,6 +1,7 @@
 import traceback
 import numpy as np
 
+# TODO: re-define the below function as a method
 def check_error_msg(testcase, expected_msg, callback, *args, **kwargs):
   """
   @param testcase
