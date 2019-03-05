@@ -5,11 +5,11 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaCustom, StaCopy
 
-class TestStaCopy(unittest.TestCase):
+class TestStaCopy(TestCasePPAP):
 
   def test_get_data(self):
 

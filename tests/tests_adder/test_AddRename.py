@@ -5,37 +5,37 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
 from ppap4lmp import create, StaCustom, AddRename
 
-class TestAddRename(unittest.TestCase):
+class TestAddRename(TestCasePPAP):
 
   def test_error01(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("dummy", "new"))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy' in AddRename", elem.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'dummy' in AddRename", elem.get_data)
 
   def test_error02(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("foo", "bar"))
 
-    check_error_msg(
-      self, "RuntimeError: Key 'bar' already exists", elem.get_data)
+    self.check_error_msg(
+      "RuntimeError: Key 'bar' already exists", elem.get_data)
 
   def test_error03(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddRename("foo", "id"))
 
-    check_error_msg(
-      self, "RuntimeError: Adder cannot add 'id'", elem.get_data)
+    self.check_error_msg(
+      "RuntimeError: Adder cannot add 'id'", elem.get_data)
 
   def test_nonarray(self):
 

@@ -5,11 +5,11 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaDumpAtoms, StaCopy, FilSet
 
-class TestFilSet(unittest.TestCase):
+class TestFilSet(TestCasePPAP):
 
   def test_error01(self):
 
@@ -17,8 +17,8 @@ class TestFilSet(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilSet({"dummy": {1, 2, 3}}))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy' in FilSet", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'dummy' in FilSet", atoms.get_data)
 
   def test_equivalent_filter(self):
 

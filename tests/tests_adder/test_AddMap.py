@@ -5,27 +5,27 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaCustom, AddMap
 
-class TestAddMap(unittest.TestCase):
+class TestAddMap(TestCasePPAP):
 
   def test_error01(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("dummy", "new", {1: 0}))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy' in AddMap", elem.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'dummy' in AddMap", elem.get_data)
 
   def test_error02(self):
 
     elem = create(StaCustom({"foo": 0, "bar": 1}))
     elem.append_updater(AddMap("foo", "bar", {0: 1}))
 
-    check_error_msg(
-      self, "RuntimeError: Key 'bar' already exists", elem.get_data)
+    self.check_error_msg(
+      "RuntimeError: Key 'bar' already exists", elem.get_data)
 
   def test_nonarray(self):
 

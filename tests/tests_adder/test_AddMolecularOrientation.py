@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
@@ -15,7 +15,7 @@ from ppap4lmp import (
   create, StaCustom, StaMolecules,
   AddCoMPosition, AddInertiaMoment, AddMolecularOrientation)
 
-class TestAddMolecularOrientation(unittest.TestCase):
+class TestAddMolecularOrientation(TestCasePPAP):
 
   custom_data = [
     {"id": 1, "mol": 1, "mass": 1.0, "xu": 2.0, "yu": 1.0, "zu": 1.0},
@@ -32,8 +32,8 @@ class TestAddMolecularOrientation(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddMolecularOrientation())
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz' in AddMolecularOrientation", molecules.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz' in AddMolecularOrientation", molecules.get_data)
 
   def test_isotropic(self):
 

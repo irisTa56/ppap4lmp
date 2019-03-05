@@ -5,12 +5,12 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import (
   create, StaCustom, StaDumpAtoms, StaMolecules, AddChildIDs)
 
-class TestAddChildIDs(unittest.TestCase):
+class TestAddChildIDs(TestCasePPAP):
 
   def test_error01(self):
 
@@ -20,8 +20,8 @@ class TestAddChildIDs(unittest.TestCase):
     moles = create(StaCustom([{"id": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "molecule-id"))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'molecule-id' in AddChildIDs", moles.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'molecule-id' in AddChildIDs", moles.get_data)
 
   def test_error02(self):
 
@@ -31,8 +31,8 @@ class TestAddChildIDs(unittest.TestCase):
     moles = create(StaCustom([{"index": i} for i in range(10)]))
     moles.append_updater(AddChildIDs(atoms, "atom", "mol"))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id' in AddChildIDs", moles.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'id' in AddChildIDs", moles.get_data)
 
   def test_2way_molecules(self):
 

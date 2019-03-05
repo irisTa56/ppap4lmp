@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from copy import deepcopy
 from math import sqrt
@@ -14,7 +14,7 @@ from ppap4lmp import (
   create, StaCustom, StaMolecules,
   AddCoMPosition, AddInertiaMoment, AddGyrationRadius)
 
-class TestAddGyrationRadius(unittest.TestCase):
+class TestAddGyrationRadius(TestCasePPAP):
 
   custom_data = [
     {"id": 1, "mol": 1, "mass": 1.0, "xu": 2.0, "yu": 1.0, "zu": 1.0},
@@ -31,8 +31,8 @@ class TestAddGyrationRadius(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddGyrationRadius())
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'I_xx', 'I_yy', 'I_zz', 'mass' in AddGyrationRadius", molecules.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'I_xx', 'I_yy', 'I_zz', 'mass' in AddGyrationRadius", molecules.get_data)
 
   def test_sqrted(self):
 

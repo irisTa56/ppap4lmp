@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from copy import deepcopy
 from random import uniform
@@ -15,7 +15,7 @@ import numpy as np
 from ppap4lmp import (
   create, StaCustom, ProMeanSquareDisplacement, execute_omp)
 
-class TestProMeanSquareDisplacement(unittest.TestCase):
+class TestProMeanSquareDisplacement(TestCasePPAP):
 
   abst_atoms = []
   atom_id = 0
@@ -41,8 +41,8 @@ class TestProMeanSquareDisplacement(unittest.TestCase):
 
     pro = ProMeanSquareDisplacement([atoms])
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'mass' in ProMeanSquareDisplacement", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'mass' in ProMeanSquareDisplacement", execute_omp, pro)
 
   def test_dimension_3d(self):
 

@@ -5,12 +5,12 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import (
   create, StaCustom, StaMolecules, AddCoMPosition, AddInertiaMoment)
 
-class TestAddInertiaMoment(unittest.TestCase):
+class TestAddInertiaMoment(TestCasePPAP):
 
   custom_data = [
     {"id": 1, "mol": 1, "mass": 1.0, "xu": 1.0, "yu": 0.0, "zu": 0.0},
@@ -30,8 +30,8 @@ class TestAddInertiaMoment(unittest.TestCase):
     molecules.append_updater(
       AddInertiaMoment(create(StaCustom({"foo": 0, "bar": 1}))))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id', 'mass', 'xu', 'yu', 'zu' in AddInertiaMoment", molecules.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'id', 'mass', 'xu', 'yu', 'zu' in AddInertiaMoment", molecules.get_data)
 
   def test_error02(self):
 
@@ -39,8 +39,8 @@ class TestAddInertiaMoment(unittest.TestCase):
     molecules = create(StaMolecules(atoms))
     molecules.append_updater(AddInertiaMoment(atoms))
 
-    check_error_msg(
-      self,  "RuntimeError: Missing key(s) 'xu', 'yu', 'zu' in AddInertiaMoment", molecules.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'xu', 'yu', 'zu' in AddInertiaMoment", molecules.get_data)
 
   def test_isotropic(self):
 

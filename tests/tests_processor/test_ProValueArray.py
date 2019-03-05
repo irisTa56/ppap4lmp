@@ -5,13 +5,13 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from random import shuffle
 
 from ppap4lmp import create, StaCustom, ProValueArray, execute_omp
 
-class TestProValueArray(unittest.TestCase):
+class TestProValueArray(TestCasePPAP):
 
   def test_error01(self):
 
@@ -20,8 +20,8 @@ class TestProValueArray(unittest.TestCase):
 
     pro = ProValueArray(elems)
 
-    check_error_msg(
-      self, "RuntimeError: Selected value(s) for ProValueArray", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Selected value(s) for ProValueArray", execute_omp, pro)
 
   def test_error02(self):
 
@@ -31,8 +31,8 @@ class TestProValueArray(unittest.TestCase):
     pro = ProValueArray(elems)
     pro.select("B")
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'B' in ProValueArray", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'B' in ProValueArray", execute_omp, pro)
 
   def test_error03(self):
 
@@ -43,8 +43,8 @@ class TestProValueArray(unittest.TestCase):
     pro = ProValueArray(elems)
     pro.select("A")
 
-    check_error_msg(
-      self, "RuntimeError: Data sizes must be the same", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Data sizes must be the same", execute_omp, pro)
 
   def test_select_one(self):
 

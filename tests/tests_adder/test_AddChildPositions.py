@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
@@ -16,7 +16,7 @@ from ppap4lmp import (
   create, StaCustom, StaMolecules, AddChildPositions,
   AddCoMPosition, AddInertiaMoment, AddGyrationRadius)
 
-class TestAddChildPositions(unittest.TestCase):
+class TestAddChildPositions(TestCasePPAP):
 
   def test_error01(self):
 
@@ -26,8 +26,8 @@ class TestAddChildPositions(unittest.TestCase):
     moles = create(StaMolecules(atoms))
     moles.append_updater(AddChildPositions(atoms, "child"))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'child-ids', 'xu', 'yu', 'zu' in AddChildPositions", moles.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'child-ids', 'xu', 'yu', 'zu' in AddChildPositions", moles.get_data)
 
   def test_random(self):
 

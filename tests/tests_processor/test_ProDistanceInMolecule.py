@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from copy import deepcopy
 from math import sqrt
@@ -16,7 +16,7 @@ import numpy as np
 from ppap4lmp import (
   create, StaCustom, StaMolecules, ProDistanceInMolecule, execute_omp)
 
-class TestProDistanceInMolecule(unittest.TestCase):
+class TestProDistanceInMolecule(TestCasePPAP):
 
   base_data = [
     {"id": 1, "mol": 1, "xu": 0.0, "yu": 1.0, "zu": 2.0},
@@ -39,8 +39,8 @@ class TestProDistanceInMolecule(unittest.TestCase):
 
     pro = ProDistanceInMolecule(mols, atoms)
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'xu' in ProDistanceInMolecule", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'xu' in ProDistanceInMolecule", execute_omp, pro)
 
   def test_error02(self):
 
@@ -49,8 +49,8 @@ class TestProDistanceInMolecule(unittest.TestCase):
 
     pro = ProDistanceInMolecule(mols, atoms)
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'atom-ids' in ProDistanceInMolecule", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'atom-ids' in ProDistanceInMolecule", execute_omp, pro)
 
   def test_squared_distance(self):
 

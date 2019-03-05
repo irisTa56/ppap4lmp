@@ -5,11 +5,11 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaCustom, StaMolecules, AddSpecialBonds
 
-class TestAddSpecialBonds(unittest.TestCase):
+class TestAddSpecialBonds(TestCasePPAP):
 
   def test_error01(self):
 
@@ -23,8 +23,8 @@ class TestAddSpecialBonds(unittest.TestCase):
 
     atoms.append_updater(AddSpecialBonds(moles, abst_special_bonds))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'atom-ids' in AddSpecialBonds", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'atom-ids' in AddSpecialBonds", atoms.get_data)
 
   def test_error02(self):
 
@@ -39,8 +39,8 @@ class TestAddSpecialBonds(unittest.TestCase):
     atoms.append_updater(AddSpecialBonds(
       moles, {1: abst_special_bonds + [[0]], 2: abst_special_bonds }))
 
-    check_error_msg(
-      self, "RuntimeError: The numbers of atoms in a molecule are inconsistent", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: The numbers of atoms in a molecule are inconsistent", atoms.get_data)
 
   def test_exclude_angle(self):
 

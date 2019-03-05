@@ -5,14 +5,14 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
 from ppap4lmp import (
   create, StaDumpAtoms, StaCopy, FilSet, FilComparison)
 
-class TestFilComparison(unittest.TestCase):
+class TestFilComparison(TestCasePPAP):
 
   def test_error01(self):
 
@@ -20,8 +20,8 @@ class TestFilComparison(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilComparison([("dummy", "<", 0)]))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'dummy' in FilComparison", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'dummy' in FilComparison", atoms.get_data)
 
   def test_error02(self):
 
@@ -29,8 +29,8 @@ class TestFilComparison(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(FilComparison([("mol", "dummy", 10)]))
 
-    check_error_msg(
-      self, "RuntimeError: Supported operators for comparison are '<', '>', '<=', '>=', '==' and '!='", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: Supported operators for comparison are '<', '>', '<=', '>=', '==' and '!='", atoms.get_data)
 
   def test_equivalent_filter(self):
 

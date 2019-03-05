@@ -5,14 +5,14 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
 from ppap4lmp import (
   create, StaCustom, StaDumpAtoms, StaDumpBox, AddWrappedPosition)
 
-class TestAddWrappedPosition(unittest.TestCase):
+class TestAddWrappedPosition(TestCasePPAP):
 
   def test_error01(self):
 
@@ -21,8 +21,8 @@ class TestAddWrappedPosition(unittest.TestCase):
       StaDumpAtoms("dumps_bead/bead.2990000.dump", 2990000))
     atoms.append_updater(AddWrappedPosition(box))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z' in AddWrappedPosition", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z' in AddWrappedPosition", atoms.get_data)
 
   def test_error02(self):
 
@@ -31,8 +31,8 @@ class TestAddWrappedPosition(unittest.TestCase):
       StaCustom([{"A": i, "B": i*i} for i in range(1000)]))
     atoms.append_updater(AddWrappedPosition(box))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'xu', 'yu', 'zu' in AddWrappedPosition", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'xu', 'yu', 'zu' in AddWrappedPosition", atoms.get_data)
 
   def test_wrapping(self):
 

@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
@@ -13,14 +13,14 @@ from random import randrange
 
 from ppap4lmp import create, StaDumpAtoms
 
-class TestStaDumpAtoms(unittest.TestCase):
+class TestStaDumpAtoms(TestCasePPAP):
 
   def test_error01(self):
 
     atoms = create(StaDumpAtoms("dummy.file", 0))
 
-    check_error_msg(
-      self, "RuntimeError: No such a file 'dummy.file'", atoms.get_data)
+    self.check_error_msg(
+      "RuntimeError: No such a file 'dummy.file'", atoms.get_data)
 
   def test_get_data(self):
 

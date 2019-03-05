@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from copy import deepcopy
 from random import uniform
@@ -15,7 +15,7 @@ import numpy as np
 from ppap4lmp import (
   create, StaCustom, StaMolecules, ProTimeCorrelationInMolecule, execute_omp)
 
-class TestProTimeCorrelationInMolecule(unittest.TestCase):
+class TestProTimeCorrelationInMolecule(TestCasePPAP):
 
   base_data = [
     {"id": 1, "mol": 1, "xu": 0.0, "yu": 1.0, "zu": 2.0},
@@ -38,8 +38,8 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
 
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'xu' in ProTimeCorrelationInMolecule", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'xu' in ProTimeCorrelationInMolecule", execute_omp, pro)
 
   def test_error02(self):
 
@@ -48,8 +48,8 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
 
     pro = ProTimeCorrelationInMolecule(list(zip(molses, atomses)))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'atom-ids' in ProTimeCorrelationInMolecule", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'atom-ids' in ProTimeCorrelationInMolecule", execute_omp, pro)
 
   def test_error03(self):
 
@@ -74,8 +74,8 @@ class TestProTimeCorrelationInMolecule(unittest.TestCase):
 
     pro = ProTimeCorrelationInMolecule(list(zip(mols_traj, atoms_traj)))
 
-    check_error_msg(
-      self, "RuntimeError: Number of molecules and molecular types must be unchanged", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Number of molecules and molecular types must be unchanged", execute_omp, pro)
 
   def test_rotate_stick(self):
 

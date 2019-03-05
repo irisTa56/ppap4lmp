@@ -1,30 +1,31 @@
+import unittest
+
 import traceback
 import numpy as np
 
-# TODO: re-define the below function as a method
-def check_error_msg(testcase, expected_msg, callback, *args, **kwargs):
-  """
-  @param testcase
-    Subclass of unittest.TestCase.
-  @param expected_msg
-    Exptected error message.
-  @param callback
-    A function supposed to raise the error.
-  @param *args
-    Arguments to be passed to `callback`.
-  @param **kwargs
-    keyword arguments to be passed to `callback`.
+class TestCasePPAP(unittest.TestCase):
 
-  @return None.
-  """
-  try:
-    if args:
-      callback(*args)
-    else:
-      callback()
-  except SystemError:
-    msg = traceback.format_exc()
-    testcase.assertEqual(msg.split("\n")[0], expected_msg)
+  def check_error_msg(self, expected_msg, callback, *args, **kwargs):
+    """
+    @param expected_msg
+      Exptected error message.
+    @param callback
+      A function supposed to raise the error.
+    @param *args
+      Arguments to be passed to `callback`.
+    @param **kwargs
+      keyword arguments to be passed to `callback`.
+
+    @return None.
+    """
+    try:
+      if args:
+        callback(*args)
+      else:
+        callback()
+    except SystemError:
+      msg = traceback.format_exc()
+      self.assertEqual(msg.split("\n")[0], expected_msg)
 
 def generate_random_unit_vector():
   """

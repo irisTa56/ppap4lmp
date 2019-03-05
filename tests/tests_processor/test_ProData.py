@@ -5,11 +5,11 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaCustom, ProData, execute_omp
 
-class TestProData(unittest.TestCase):
+class TestProData(TestCasePPAP):
 
   def test_error01(self):
 
@@ -18,8 +18,8 @@ class TestProData(unittest.TestCase):
     pro = ProData(elems)
     pro.select("C")
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'C' in ProData", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'C' in ProData", execute_omp, pro)
 
   def test_without_select(self):
 

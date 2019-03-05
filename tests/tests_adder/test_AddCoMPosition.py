@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
@@ -15,7 +15,7 @@ from ppap4lmp import (
   create, StaCustom, StaDumpAtoms, StaMolecules, StaBeads,
   AddMap, AddCoMPosition)
 
-class TestAddCoMPosition(unittest.TestCase):
+class TestAddCoMPosition(TestCasePPAP):
 
   def test_error01(self):
 
@@ -25,8 +25,8 @@ class TestAddCoMPosition(unittest.TestCase):
 
     molecules.append_updater(AddCoMPosition(atoms))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'mass' in AddCoMPosition", molecules.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'mass' in AddCoMPosition", molecules.get_data)
 
   def test_positions(self):
 

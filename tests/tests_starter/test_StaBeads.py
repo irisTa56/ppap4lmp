@@ -5,12 +5,12 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import (
   create, StaCustom, StaDumpAtoms, StaMolecules, StaBeads)
 
-class TestStaBeads(unittest.TestCase):
+class TestStaBeads(TestCasePPAP):
 
   def test_error01(self):
 
@@ -18,8 +18,8 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    check_error_msg(
-      self, "RuntimeError: Mapping to Beads must be specified by 'indices-in-mol'",
+    self.check_error_msg(
+      "RuntimeError: Mapping to Beads must be specified by 'indices-in-mol'",
       create, StaBeads(moles, [{"foo": [1, 2, 3]}]))
 
   def test_error02(self):
@@ -28,8 +28,8 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    check_error_msg(
-      self, "RuntimeError: The numbers of elements in 'indices-in-mol' and 'weights' are inconsistent",
+    self.check_error_msg(
+      "RuntimeError: The numbers of elements in 'indices-in-mol' and 'weights' are inconsistent",
       create, StaBeads(moles, [
         {"indices-in-mol": [1, 2, 3, 4], "weights": [1.0, 1.0, 1.0]}
       ]))
@@ -40,8 +40,8 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    check_error_msg(
-      self, "RuntimeError: The number of 'type' is invalid",
+    self.check_error_msg(
+      "RuntimeError: The number of 'type' is invalid",
       create, StaBeads(moles, [
         {"indices-in-mol": [1, 2], "weights": [1.0, 1.0]},
         {"indices-in-mol": [3, 4], "type": 1, "weights": [1.0, 1.0]}
@@ -53,8 +53,8 @@ class TestStaBeads(unittest.TestCase):
       StaDumpAtoms("dumps_atom/atom.0.dump", 0))
     moles = create(StaMolecules(atoms))
 
-    check_error_msg(
-      self, "RuntimeError: The number of 'weights' is invalid",
+    self.check_error_msg(
+      "RuntimeError: The number of 'weights' is invalid",
       create, StaBeads(moles, {
           1: [
             {"indices-in-mol": [1, 2]},

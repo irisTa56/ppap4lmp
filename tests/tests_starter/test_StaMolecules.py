@@ -5,19 +5,19 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaDumpBox, StaDumpAtoms, StaMolecules
 
-class TestStaMolecules(unittest.TestCase):
+class TestStaMolecules(TestCasePPAP):
 
   def test_error01(self):
 
     molecules = create(StaMolecules(
       create(StaDumpBox("dumps_bead/bead.2990000.dump", 2990000))))
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id', 'mol' in StaMolecules", molecules.get_data)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'id', 'mol' in StaMolecules", molecules.get_data)
 
   def test_get_data(self):
 

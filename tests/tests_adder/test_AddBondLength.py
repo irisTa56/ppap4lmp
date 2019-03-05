@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg, generate_random_unit_vector
+from test_utils import TestCasePPAP, generate_random_unit_vector
 
 import numpy as np
 
@@ -15,7 +15,7 @@ from ppap4lmp import (
   create, AddMap, AddBondLength,
   StaCustom, StaDumpAtoms, StaMolecules, StaBeads)
 
-class TestAddBondLength(unittest.TestCase):
+class TestAddBondLength(TestCasePPAP):
 
   def test_single_length(self):
 

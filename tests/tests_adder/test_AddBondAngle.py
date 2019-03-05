@@ -6,7 +6,7 @@ import sys
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
 from test_utils import (
-  check_error_msg, generate_random_unit_vector, rotate_vector)
+  TestCasePPAP, generate_random_unit_vector, rotate_vector)
 
 import numpy as np
 
@@ -20,7 +20,7 @@ def compute_angle(v1, v2):
   return (180.0/np.pi) * (
     np.arccos(np.dot(v1, v2) / (np.linalg.norm(v1)*np.linalg.norm(v2))))
 
-class TestAddBondAngle(unittest.TestCase):
+class TestAddBondAngle(TestCasePPAP):
 
   def test_single_angle(self):
 

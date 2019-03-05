@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
@@ -13,7 +13,7 @@ from math import sqrt
 
 from ppap4lmp import create, StaCustom, ProThicknessProfile, execute_omp
 
-class TestProThicknessProfile(unittest.TestCase):
+class TestProThicknessProfile(TestCasePPAP):
 
   def test_error01(self):
 
@@ -24,8 +24,8 @@ class TestProThicknessProfile(unittest.TestCase):
 
     pro = ProThicknessProfile(atoms, box)
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'radius' in ProThicknessProfile", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'radius' in ProThicknessProfile", execute_omp, pro)
 
   def test_error02(self):
 
@@ -36,8 +36,8 @@ class TestProThicknessProfile(unittest.TestCase):
 
     pro = ProThicknessProfile(atoms, box)
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'lo_x', 'lo_y' in ProThicknessProfile", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'lo_x', 'lo_y' in ProThicknessProfile", execute_omp, pro)
 
   def test_20x30(self):
 

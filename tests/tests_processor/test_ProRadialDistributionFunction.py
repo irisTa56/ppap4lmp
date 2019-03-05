@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
@@ -14,7 +14,7 @@ from random import uniform
 from ppap4lmp import (
   create, StaCustom, ProRadialDistributionFunction, execute_omp)
 
-class TestProRadialDistributionFunction(unittest.TestCase):
+class TestProRadialDistributionFunction(TestCasePPAP):
 
   def test_error01(self):
 
@@ -25,8 +25,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro = ProRadialDistributionFunction(atoms, box)
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'id' in ProRadialDistributionFunction", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'id' in ProRadialDistributionFunction", execute_omp, pro)
 
   def test_error02(self):
 
@@ -37,8 +37,8 @@ class TestProRadialDistributionFunction(unittest.TestCase):
 
     pro = ProRadialDistributionFunction(atoms, box)
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z' in ProRadialDistributionFunction", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'hi_x', 'hi_y', 'hi_z', 'lo_x', 'lo_y', 'lo_z' in ProRadialDistributionFunction", execute_omp, pro)
 
   def test_cubic(self):
 

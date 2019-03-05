@@ -5,7 +5,7 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 import numpy as np
 
@@ -22,7 +22,7 @@ from ppap4lmp import (
 ProRDFWD = ProRadialDistributionFunctionWithDeformation
 ProRDF = ProRadialDistributionFunction
 
-class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
+class TestProRadialDistributionFunctionWithDeformation(TestCasePPAP):
 
   def create_rotated_abst_atoms_in_mol(
     self, size, id_start, mol, shift_x, shift_y, shift_z):
@@ -53,8 +53,8 @@ class TestProRadialDistributionFunctionWithDeformation(unittest.TestCase):
 
     pro = ProRDFWD(atoms, box)
 
-    check_error_msg(
-      self, "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz', 'id', 'mass' in ProRadialDistributionFunctionWithDeformation", execute_omp, pro)
+    self.check_error_msg(
+      "RuntimeError: Missing key(s) 'I_xx', 'I_xy', 'I_xz', 'I_yy', 'I_yz', 'I_zz', 'id', 'mass' in ProRadialDistributionFunctionWithDeformation", execute_omp, pro)
 
   def test_cubic_isotropic(self):
 

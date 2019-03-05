@@ -5,18 +5,18 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaCustom
 
-class TestStaCustom(unittest.TestCase):
+class TestStaCustom(TestCasePPAP):
 
   def test_error01(self):
 
     elem = create(StaCustom([{"foo": 1}, {"bar": 2}]))
 
-    check_error_msg(
-      self, "RuntimeError: Invalid key(s) in array data", elem.get_data)
+    self.check_error_msg(
+      "RuntimeError: Invalid key(s) in array data", elem.get_data)
 
   def test_get_data(self):
 

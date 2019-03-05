@@ -5,18 +5,18 @@ import sys
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
-from test_utils import check_error_msg
+from test_utils import TestCasePPAP
 
 from ppap4lmp import create, StaDumpBox
 
-class TestStaDumpBox(unittest.TestCase):
+class TestStaDumpBox(TestCasePPAP):
 
   def test_error01(self):
 
     box = create(StaDumpBox("dummy.file", 0))
 
-    check_error_msg(
-      self, "RuntimeError: No such a file 'dummy.file'", box.get_data)
+    self.check_error_msg(
+      "RuntimeError: No such a file 'dummy.file'", box.get_data)
 
   def test_get_data(self):
 
