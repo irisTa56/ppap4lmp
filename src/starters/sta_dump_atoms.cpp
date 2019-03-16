@@ -95,8 +95,8 @@ void StaDumpAtoms::compute_impl(
             keys[i], is_int_vector[i], i+1 == tuples.size() ? '\n' : ' ');
         }
 
-        const auto begin = tuples.begin();
-        const auto end = tuples.end();
+        auto begin = tuples.cbegin();
+        auto end = tuples.cend();
 
         for (auto it = data.begin()+1; it != data.end(); ++it)
         {

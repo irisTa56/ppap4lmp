@@ -35,8 +35,8 @@ void StaCustom::compute_impl(
 
     for (const auto &j : json)
     {
-      const auto begin = j.begin();
-      const auto end = j.end();
+      auto begin = j.cbegin();
+      auto end = j.cend();
 
       for (auto it = begin; it != end; ++it)
       {

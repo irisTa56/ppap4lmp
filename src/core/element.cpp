@@ -276,8 +276,8 @@ void Element::required_keys(
   const Json &key_)
 {
   Vec<Str> missings;
-  const auto begin = datakeys.begin();
-  const auto end = datakeys.end();
+  auto begin = datakeys.cbegin();
+  auto end = datakeys.cend();
 
   for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
@@ -307,8 +307,8 @@ void Element::required_keys(
 bool Element::optional_keys(
   const Json &key_)
 {
-  const auto begin = datakeys.begin();
-  const auto end = datakeys.end();
+  auto begin = datakeys.cbegin();
+  auto end = datakeys.cend();
 
   for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
