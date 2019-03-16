@@ -8,6 +8,7 @@
 
 #include "element.h"
 #include "updater.h"
+#include "../utils/join.h"
 #include "../utils/message.h"
 #include "../utils/pyargs_to_vec.h"
 #include "../utils/runtime_error.h"
@@ -55,7 +56,7 @@ void Element::decrement_remain()
       data = nullptr;
     }
 
-    datakeys.clear();
+    update_keys();
 
     auto shared_this = shared_from_this();
 
@@ -121,7 +122,7 @@ ShPtr<Generator> Element::get_generator(
 void Element::set_checking_classname(
   const Str &classname)
 {
-  datakeys.set_checking_classname(classname);
+  checking_classname = classname;
 }
 
 /* ------------------------------------------------------------------ */
@@ -192,9 +193,9 @@ Json &Element::get_mutable_data()
 
 /* ------------------------------------------------------------------ */
 
-const DataKeys &Element::get_keys()
+Set<Str> Element::get_keys()
 {
-  return datakeys;
+  return Set<Str>(datakeys.begin(), datakeys.end());
 }
 
 /* ------------------------------------------------------------------ */
@@ -257,7 +258,7 @@ void Element::array2d(
   }
 }
 
-/* wrappers for DataKeys' methods ----------------------------------- */
+/* ------------------------------------------------------------------ */
 
 void Element::update_keys()
 {
@@ -265,7 +266,7 @@ void Element::update_keys()
 
   for (const auto &el : (data.is_array() ? data.front() : data).items())
   {
-    datakeys.add(el.key());
+    datakeys.push_back(el.key());
   }
 }
 
@@ -274,7 +275,31 @@ void Element::update_keys()
 void Element::required(
   const Json &key_)
 {
-  datakeys.required(key_);
+  Vec<Str> missings;
+  const auto begin = datakeys.begin();
+  const auto end = datakeys.end();
+
+  for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
+  {
+    if (std::find(begin, end, key) == end)
+    {
+      missings.push_back(key);
+    }
+  }
+
+  if (!missings.empty())
+  {
+    std::sort(missings.begin(), missings.end());
+
+    Str msg = "Missing key(s) '" + ut::join(missings, "', '") + "'";
+
+    if (!checking_classname.empty())
+    {
+      msg += " in " + checking_classname;
+    }
+
+    ut::runtime_error(msg);
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -282,7 +307,18 @@ void Element::required(
 bool Element::optional(
   const Json &key_)
 {
-  return datakeys.optional(key_);
+  const auto begin = datakeys.begin();
+  const auto end = datakeys.end();
+
+  for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
+  {
+    if (std::find(begin, end, key) == end)
+    {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 /* functions for Python --------------------------------------------- */
@@ -296,11 +332,11 @@ const Json &Element::get_data_py()
 
 /* ------------------------------------------------------------------ */
 
-const Set<Str> &Element::get_keys_py()
+Set<Str> Element::get_keys_py()
 {
   init_for_python();
 
-  return datakeys.get();
+  return get_keys();
 }
 
 /* ------------------------------------------------------------------ */

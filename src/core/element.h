@@ -14,7 +14,6 @@
 #include <alias/eigen.h>
 #include <alias/pybind.h>
 #include <core/generator.h>
-#include <class/data_keys.h>
 
 /*!
   @brief Element inherits Generator class and contains data *element*
@@ -68,12 +67,16 @@ class Element : public Generator, public EnShThis<Element> {
   */
   Json data;
   /*!
-    Set of keys of the data. This member stores string keys #data has.
-    For more details, please see DataKeys class.
-    Note that after updating the data, the set of keys must be
-    manually updated (add/remove keys) in Updater or its subclasses.
+    List of keys of the data.
+    This member stores string keys which #data has.
   */
-  DataKeys datakeys;
+  Vec<Str> datakeys;
+  /*!
+    Name of a class of instance calling #required.
+    Showing the class name in an error message raised by #required
+    helps debugging.
+  */
+  Str checking_classname;
   /*!
     A variable used by OpenMP. In this program, #data is updated
     in a multithreading context. To prevent the #data from being
@@ -214,12 +217,12 @@ class Element : public Generator, public EnShThis<Element> {
   /*!
     @brief Get keys of the data of this object.
 
-    @return Constant reference to this Element::datakeys.
+    @return Set of keys stored in #datakeys.
 
     One can refer the keys (property names) in this object
     by this method.
   */
-  const DataKeys &get_keys();
+  Set<Str> get_keys();
   /*!
     @brief Extract values of a property in #data as a one-dimensional
     Eigen-Array.
@@ -261,30 +264,30 @@ class Element : public Generator, public EnShThis<Element> {
   /**/
   void update_keys();
   /*!
-    @brief Wrapper for DataKeys::required.
+    @brief Check if this object has required key(s).
 
     @param key_
-      A ::Json object for either a key or an array of keys.
+      A ::Json object for either a key or an array of keys
+      for required property.
 
     @return None.
 
-    It is convenient if DataKeys::required can be called
-    without getting DataKeys object from this Element object.
-    For more details, please see DataKeys class.
+    If this object does not have the given required key(s),
+    a runtime error is thrown in C++ (and also raised in Python).
   */
   void required(
     const Json &key_);
   /*!
-    @brief Wrapper for DataKeys::optional.
+    @brief Check if this object has optional key(s).
 
     @param key_
-     A ::Json object for either a key or an array of keys.
+      A ::Json object for either a key or an array of keys
+      for optional property.
 
     @return A boolean.
 
-    It is convenient if DataKeys::optional can be called
-    without getting DataKeys object from this Element object.
-    For more details, please see DataKeys class.
+    If this object has the given key(s), it returns true. If
+    not, it returns false.
   */
   bool optional(
     const Json &key_);
@@ -294,12 +297,8 @@ class Element : public Generator, public EnShThis<Element> {
     @return Constant reference to ::Json.
   */
   const Json &get_data_py();
-  /*!
-    @brief Get contents of Element::datakeys of this object.
-
-    @return Constant reference to ::Set<#Str>.
-  */
-  const Set<Str> &get_keys_py();
+  //! @copydoc Element::get_keys
+  Set<Str> get_keys_py();
   /*!
     @brief Get integer values stored in Element::data of this object
     as a one-dimensional Numpy-Array.
