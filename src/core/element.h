@@ -198,7 +198,14 @@ class Element : public Generator, public EnShThis<Element> {
     by this method.
   */
   const Json &get_data();
-  /**/
+  /*!
+    @brief Get the reference to #data of this object.
+
+    @return Mutable reference to this Element::data.
+
+    Mainly used by Updater objects;
+    other objects should use Element::get_data.
+  */
   Json &get_mutable_data();
   /*!
     @brief Get the partial data of this object.
@@ -261,7 +268,9 @@ class Element : public Generator, public EnShThis<Element> {
   void array2d(
     T &array,
     const Vec<Str> &keys);
-  /**/
+  /*
+
+  */
   void update_keys();
   /*!
     @brief Check if this object has required key(s).
