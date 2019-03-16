@@ -25,8 +25,7 @@ AddChildPositions::AddChildPositions(
 /* ------------------------------------------------------------------ */
 
 void AddChildPositions::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   auto key_for_child_ids = child_name + "-ids";
 

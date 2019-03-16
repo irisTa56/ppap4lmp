@@ -28,16 +28,14 @@
 class FilSet : public Filter {
   /*!
     Criteria of this filter stored in a ::Map (dictionary) object.
-    Note that keys of this dictionary must be a partial set
-    of Element::datakeys of an Element object
-    where this object appended to.
+    Note that keys of this dictionary must be contained
+    in an Element object where this object appended to.
   */
   Map<Str,Set<Json>> value_sets;
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   /*!
     @brief Constructor of FilSet class.

@@ -96,8 +96,7 @@ const Vec<std::pair<Str,CompareFunc>> FilComparison::convert_to_funcs()
 /* ------------------------------------------------------------------ */
 
 void FilComparison::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   auto compare_funcs = convert_to_funcs();
 

@@ -43,17 +43,13 @@ class Starter : public Updater {
       Shared pointer to an Element object
       where computed properties are set to.
 
-    @param datakeys
-      Mutable reference to Element::datakeys where keys
-      for computed properties are set to.
-
     @param dataid
       A constant integer copied from Element::dataid.
 
     @return None.
 
-    This method checks if `dataid` is in #dataid_blacklist. If it is
-    not in the blacklist, this method passes `data` and `datakeys`
+    This method checks if `dataid` is in #dataid_blacklist.
+    If it is not in the blacklist, this method passes `data`
     to Starter::compute_impl. Note that actual computation and setting
     of properties is conducted by Starter::compute_impl orveridden
     in subclasses of this class. In addition, this method sorts
@@ -62,7 +58,6 @@ class Starter : public Updater {
   */
   virtual void compute(
     const ElPtr &elem,
-    DataKeys &datakeys,
     const int dataid) override;
 };
 

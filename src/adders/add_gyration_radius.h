@@ -63,8 +63,7 @@ class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
     </dl>
   */
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   using Adder::Adder;
   virtual ~AddGyrationRadius() = default;

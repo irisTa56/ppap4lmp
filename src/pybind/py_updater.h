@@ -22,21 +22,19 @@ template <class UPD = Updater>
 class PyUpdater : public UPD {
  protected:
   void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override
+    Json &data) override
   {
     PYBIND11_OVERLOAD_PURE(
-      void, UPD, compute_impl, data, datakeys);
+      void, UPD, compute_impl, data);
   }
  public:
   using UPD::UPD;
   void compute(
     const ElPtr &elem,
-    DataKeys &datakeys,
     const int dataid) override
   {
     PYBIND11_OVERLOAD_PURE(
-      void, UPD, compute, elem, datakeys, dataid);
+      void, UPD, compute, elem, dataid);
   }
 };
 

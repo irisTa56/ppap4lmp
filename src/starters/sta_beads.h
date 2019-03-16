@@ -66,8 +66,7 @@ class StaBeads : public Starter {
     </dl>
   */
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   /*!
     @brief Constructor of StaBeads class for

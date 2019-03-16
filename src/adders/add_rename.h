@@ -41,8 +41,7 @@ class AddRename : public Adder, public EnShThis<AddRename> {
     @brief This method overrides Updater::compute_impl.
   */
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   /*!
     @brief Constructor of AddRename class.

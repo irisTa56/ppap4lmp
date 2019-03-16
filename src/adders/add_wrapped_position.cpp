@@ -19,8 +19,7 @@ AddWrappedPosition::AddWrappedPosition(
 /* ------------------------------------------------------------------ */
 
 void AddWrappedPosition::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required({"xu", "yu", "zu"});
 

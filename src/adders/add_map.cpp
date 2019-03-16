@@ -26,8 +26,7 @@ AddMap::AddMap(
 /* ------------------------------------------------------------------ */
 
 void AddMap::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required(key_ref);
 

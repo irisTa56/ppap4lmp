@@ -18,8 +18,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 void StaDumpAtoms::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   std::ifstream ifs(filepath);
   Str line;

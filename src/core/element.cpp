@@ -85,7 +85,7 @@ void Element::update_data(
 {
   omp_set_lock(&omp_lock);
 
-  upd->compute(shared_from_this(), datakeys, dataid);
+  upd->compute(shared_from_this(), dataid);
 
   omp_unset_lock(&omp_lock);
 }

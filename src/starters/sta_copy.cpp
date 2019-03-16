@@ -22,28 +22,26 @@ StaCopy::StaCopy(
 /* ------------------------------------------------------------------ */
 
 void StaCopy::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   auto elem = ext_generator->get_element();
   data = elem->get_data();
-  datakeys = elem->get_keys();
 }
 
 /* ------------------------------------------------------------------ */
 
 void StaCopy::compute(
-  const ElPtr &el,
-  DataKeys &datakeys,
+  const ElPtr &elem,
   const int dataid)
 {
-  auto &data = el->get_mutable_data();
+  auto &data = elem->get_mutable_data();
 
   if (check_blacklist(dataid))
   {
     if (data == nullptr)
     {
-      compute_impl(data, datakeys);
+      compute_impl(data);
+      elem->update_keys();
     }
     else
     {

@@ -35,8 +35,7 @@ AddSpecialBonds::AddSpecialBonds(
 /* ------------------------------------------------------------------ */
 
 void AddSpecialBonds::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   if (optional("special-bonds"))
   {

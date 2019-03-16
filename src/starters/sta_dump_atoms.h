@@ -50,8 +50,7 @@ class StaDumpAtoms : public StaDump {
     </dl>
   */
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   using StaDump::StaDump;
   virtual ~StaDumpAtoms() = default;

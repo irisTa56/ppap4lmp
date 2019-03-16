@@ -19,8 +19,7 @@ FilSet::FilSet(
 /* ------------------------------------------------------------------ */
 
 void FilSet::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   for (const auto &item : value_sets)
   {

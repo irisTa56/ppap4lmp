@@ -33,24 +33,19 @@ class Filter : public Updater {
     @param elem
       Shared pointer to an Element object to be filtered.
 
-    @param datakeys
-      Mutable reference to Element::datakeys.
-
     @param dataid
       A constant integer copied from Element::dataid.
 
     @return None.
 
-    This method checks if `dataid` is in #dataid_blacklist. If it is
-    not in the blacklist, this method passes `data` and `datakeys`
-    to Filter::compute_impl. Due to the nature of filtering,
-    where each element is not be modified, `datakeys` remains
+    This method checks if `dataid` is in #dataid_blacklist.
+    If it is not in the blacklist, this method passes `data`
+    to Filter::compute_impl. Each element in the array `data` remains
     unchanged. Note that actual filtering process is conducted by
     Filter::compute_impl orveridden in subclasses of this class.
   */
   virtual void compute(
     const ElPtr &elem,
-    DataKeys &datakeys,
     const int dataid) override;
 };
 

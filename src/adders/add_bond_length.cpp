@@ -22,8 +22,7 @@ AddBondLength::AddBondLength(
 /* ------------------------------------------------------------------ */
 
 void AddBondLength::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required({"atom1-id", "atom2-id"});
 

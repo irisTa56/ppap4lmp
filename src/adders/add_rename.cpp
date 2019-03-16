@@ -24,8 +24,7 @@ AddRename::AddRename(
 /* ------------------------------------------------------------------ */
 
 void AddRename::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required(key_old);
 

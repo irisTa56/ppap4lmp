@@ -115,8 +115,7 @@ void AddInertiaMoment::compute_without_weights(
 /* ------------------------------------------------------------------ */
 
 void AddInertiaMoment::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required({"atom-ids", "xu", "yu", "zu"});
 

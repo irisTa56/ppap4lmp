@@ -22,8 +22,7 @@ AddDihedralAngle::AddDihedralAngle(
 /* ------------------------------------------------------------------ */
 
 void AddDihedralAngle::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required({"atom1-id", "atom2-id","atom3-id", "atom4-id"});
 

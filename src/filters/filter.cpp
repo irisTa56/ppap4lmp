@@ -15,7 +15,6 @@ namespace ut = utils;
 
 void Filter::compute(
   const ElPtr &elem,
-  DataKeys &datakeys,
   const int dataid)
 {
   auto &data = elem->get_mutable_data();
@@ -31,7 +30,7 @@ void Filter::compute(
       make_required(elem);
       make_optional(elem);
 
-      compute_impl(data, datakeys);
+      compute_impl(data);
     }
     else
     {

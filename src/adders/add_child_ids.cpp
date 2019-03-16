@@ -27,8 +27,7 @@ AddChildIDs::AddChildIDs(
 /* ------------------------------------------------------------------ */
 
 void AddChildIDs::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required("id");
 

@@ -33,18 +33,14 @@ class Adder : public Updater {
       Shared pointer to an Element object
       where computed properties are added to.
 
-    @param datakeys
-      Mutable reference to Element::datakeys where keys
-      for computed properties are added to.
-
     @param dataid
       A constant integer copied from Element::dataid.
 
     @return None.
 
-    This method checks if `dataid` is in #dataid_blacklist. If it is
-    not in the blacklist, this method passes `data` and `datakeys`
-    to Adder::compute_impl. Note that actual computation and addition
+    This method checks if `dataid` is in #dataid_blacklist.
+    If it is not in the blacklist, this method passes `data` to
+    Adder::compute_impl. Note that actual computation and addition
     of properties is conducted by Adder::compute_impl orveridden
     in subclasses of this class. In addition, this method ensures that
     a new property whose name is *id* is not added; `id` property
@@ -52,7 +48,6 @@ class Adder : public Updater {
   */
   virtual void compute(
     const ElPtr &elem,
-    DataKeys &datakeys,
     const int dataid) override;
 };
 

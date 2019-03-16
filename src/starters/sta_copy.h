@@ -16,9 +16,8 @@
   and sets it to a new Element object.
 
   An object of this class owns an existing Element object as
-  #ext_generator and copies Element::data and Element::datakeys
-  of the existing object, and then sets the copies to a new Element
-  object.
+  #ext_generator and copies Element::data of the existing object,
+  and then sets the copies to a new Element object.
 
   About usage in Python,
   please see pybind::py_sta_copy.
@@ -27,8 +26,7 @@ class StaCopy : public Starter {
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   /*!
     @brief Constructor of StaCopy class.
@@ -45,13 +43,9 @@ class StaCopy : public Starter {
   /*!
     @copybrief Starter::compute
 
-    @param data
-      Mutable reference to Element::data
+    @param elem
+      Shared pointer to an Element object
       where copied properties are set to.
-
-    @param datakeys
-      Mutable reference to Element::datakeys
-      where keys for copied properties are set to.
 
     @param dataid
       A constant integer copied from Element::dataid.
@@ -62,8 +56,7 @@ class StaCopy : public Starter {
     this method to skip sorting by `id` property.
   */
   virtual void compute(
-    const ElPtr &el,
-    DataKeys &datakeys,
+    const ElPtr &elem,
     const int dataid) override;
 };
 

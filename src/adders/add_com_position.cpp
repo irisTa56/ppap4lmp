@@ -106,8 +106,7 @@ void AddCoMPosition::compute_without_weights(
 /* ------------------------------------------------------------------ */
 
 void AddCoMPosition::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required("atom-ids");
 

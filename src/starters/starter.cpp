@@ -37,7 +37,6 @@ void Starter::sort_by_id(
 
 void Starter::compute(
   const ElPtr &elem,
-  DataKeys &datakeys,
   const int dataid)
 {
   auto &data = elem->get_mutable_data();
@@ -57,7 +56,7 @@ void Starter::compute(
       ext_generator->set_checking_classname(myclassname);
     }
 
-    compute_impl(data, datakeys);
+    compute_impl(data);
     elem->update_keys();
 
     if (data.is_array() && elem->optional("id"))

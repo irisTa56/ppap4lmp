@@ -19,8 +19,7 @@ StaMolecules::StaMolecules(
 /* ------------------------------------------------------------------ */
 
 void StaMolecules::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   auto el_atoms = ext_generator->get_element();
 

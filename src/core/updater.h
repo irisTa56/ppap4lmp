@@ -65,13 +65,9 @@ class Updater {
       Mutable reference to Element::data
       where computed properties are added to.
 
-    @param datakeys
-      Mutable reference to Element::datakeys
-      where keys for computed properties are added to.
-
     @return None.
   */
-  virtual void compute_impl(Json &data, DataKeys &datakeys) = 0;
+  virtual void compute_impl(Json &data) = 0;
   /**/
   void make_required(
     const ElPtr &elem);
@@ -109,17 +105,13 @@ class Updater {
       Shared pointer to an Element object
       where computed properties are added to.
 
-    @param datakeys
-      Mutable reference to Element::datakeys where keys
-      for computed properties are added to.
-
     @param dataid
       A constant integer copied from Element::dataid.
 
     @return None.
   */
   virtual void compute(
-    const ElPtr &elem, DataKeys &datakeys, const int dataid) = 0;
+    const ElPtr &elem, const int dataid) = 0;
   /*!
     @brief Remove Element::dataid from #dataid_blacklist.
 

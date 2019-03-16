@@ -13,8 +13,7 @@
 /* ------------------------------------------------------------------ */
 
 void AddMolecularOrientation::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required({"I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz"});
 

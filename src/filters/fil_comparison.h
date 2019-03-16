@@ -41,10 +41,10 @@ using CompareFunc = std::function<bool(const Json &)>;
 class FilComparison : public Filter {
   /*!
     Criteria of this filter stored in a ::Vec (list) object.
-    Elements of the list are three-elements tuples. The first element
-    of each tuple is a key; and the key must be contained in
-    Element::datakeys of an Element object where this object is
-    appended to. Note that the reason not using ::Map is to allow
+    Elements of the list are three-elements tuples.
+    The first element of each tuple is a key; and the key must be
+    contained in an Element object where this object is appended to.
+    Note that the reason not using ::Map is to allow
     duplicate keys.
   */
   Vec<std::tuple<Str,Str,Json>> comparisons;
@@ -83,8 +83,7 @@ class FilComparison : public Filter {
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   /*!
     @brief Constructor of FilComparison class with one criterion.

@@ -11,8 +11,7 @@
 /* ------------------------------------------------------------------ */
 
 void AddGyrationRadius::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   required({"mass", "I_xx", "I_yy", "I_zz"});
 

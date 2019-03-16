@@ -22,8 +22,7 @@ StaCustom::StaCustom(
 /* ------------------------------------------------------------------ */
 
 void StaCustom::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   Set<Str> jsonkeys;
 
@@ -53,7 +52,6 @@ void StaCustom::compute_impl(
   }
 
   data = json;
-  datakeys.set(jsonkeys);
 }
 
 /* ------------------------------------------------------------------ */

@@ -30,8 +30,7 @@ class StaCustom : public Starter {
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   /*!
     @brief Constructor of StaCustom class.

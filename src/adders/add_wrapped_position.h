@@ -45,8 +45,7 @@ class AddWrappedPosition : public Adder {
     </dl>
   */
   virtual void compute_impl(
-    Json &data,
-    DataKeys &datakeys) override;
+    Json &data) override;
  public:
   /*!
     @brief Constructor of AddWrappedPosition class.

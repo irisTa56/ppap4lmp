@@ -17,8 +17,7 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 void StaDumpBox::compute_impl(
-  Json &data,
-  DataKeys &datakeys)
+  Json &data)
 {
   std::ifstream ifs(filepath);
   Str line;
