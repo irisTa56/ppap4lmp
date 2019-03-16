@@ -24,29 +24,25 @@ StaCustom::StaCustom(
 void StaCustom::compute_impl(
   Json &data)
 {
-  Set<Str> jsonkeys;
-
-  auto front = json.is_array() ? json.front() : json;
-
-  for (auto it = front.begin(); it != front.end(); ++it)
-  {
-    jsonkeys.insert(it.key());
-  }
-
   if (json.is_array())
   {
+    Vec<Str> jsonkeys;
+
+    for (const auto &el : json.front().items())
+    {
+      jsonkeys.push_back(el.key());
+    }
+
     for (const auto &j : json)
     {
-      Set<Str> tmpkeys;
+      const auto begin = j.begin();
 
       for (auto it = j.begin(); it != j.end(); ++it)
       {
-        tmpkeys.insert(it.key());
-      }
-
-      if (tmpkeys != jsonkeys)
-      {
-        ut::runtime_error("Invalid key(s) in array data");
+        if (it.key() != jsonkeys[std::distance(begin, it)])
+        {
+          ut::runtime_error("Invalid key(s) in array data");
+        }
       }
     }
   }

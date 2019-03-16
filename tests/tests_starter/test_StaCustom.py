@@ -23,6 +23,11 @@ class TestStaCustom(TestCasePPAP):
     self._test_get_data({"prop1": 1, "prop2": 0.1})
     self._test_get_data(
       [{"foo": i, "bar": 0.1*i} for i in range(1000)])
+    self._test_get_data(
+      [
+        {"foo" if i%2 else "bar": i, "bar" if i%2 else "foo": 0.1*i}
+        for i in range(1000)
+      ])
 
   def _test_get_data(self, data):
 
