@@ -45,18 +45,6 @@ void AddGyrationRadius::compute_impl(
       d["Rg(z)"] = sqrt(tr_per_mass - izz_per_mass);
     }
   }
-
-
-  datakeys.add({
-    "Rg^2", "Rg^2(y+z)", "Rg^2(z+x)", "Rg^2(x+y)",
-    "Rg^2(x)", "Rg^2(y)", "Rg^2(z)"});
-
-  if (add_sqrted)
-  {
-    datakeys.add({
-      "Rg", "Rg(y+z)", "Rg(z+x)", "Rg(x+y)",
-      "Rg(x)", "Rg(y)", "Rg(z)"});
-  }
 }
 
 /* ------------------------------------------------------------------ */

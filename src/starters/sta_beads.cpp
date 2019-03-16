@@ -143,18 +143,6 @@ void StaBeads::compute_impl(
       }
     }
   }
-
-  datakeys.add({"id", "mol", "atom-ids"});
-
-  if (with_additional.first)
-  {
-    datakeys.add("type");
-  }
-
-  if (with_additional.second)
-  {
-    datakeys.add("atom-weights");
-  }
 }
 
 /* ------------------------------------------------------------------ */

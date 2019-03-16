@@ -123,8 +123,6 @@ void AddCoMPosition::compute_impl(
   {
     compute_without_weights(data, el_atoms);
   }
-
-  datakeys.add({"mass", "xu", "yu", "zu"});
 }
 
 /* ------------------------------------------------------------------ */

@@ -55,8 +55,6 @@ void AddWrappedPosition::compute_impl(
     d["y"] = tmp(1);
     d["z"] = tmp(2);
   }
-
-  datakeys.add({"x", "y", "z"});
 }
 
 /* ------------------------------------------------------------------ */

@@ -116,8 +116,6 @@ void StaDumpAtoms::compute_impl(
           }
         }
 
-        datakeys.add(keys);
-
         break;
       }
       else

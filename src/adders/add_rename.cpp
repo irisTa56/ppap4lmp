@@ -49,9 +49,6 @@ void AddRename::compute_impl(
     data[key_new] = *it;
     data.erase(it);
   }
-
-  datakeys.remove(key_old);
-  datakeys.add(key_new);
 }
 
 /* ------------------------------------------------------------------ */

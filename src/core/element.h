@@ -258,6 +258,8 @@ class Element : public Generator, public EnShThis<Element> {
   void array2d(
     T &array,
     const Vec<Str> &keys);
+  /**/
+  void update_keys();
   /*!
     @brief Wrapper for DataKeys::required.
 

@@ -44,8 +44,6 @@ void StaMolecules::compute_impl(
 
     data[id2index[molid]]["atom-ids"].push_back(atom["id"]);
   }
-
-  datakeys.add({"id", "atom-ids"});
 }
 
 /* ------------------------------------------------------------------ */

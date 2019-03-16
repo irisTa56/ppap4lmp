@@ -132,8 +132,6 @@ void AddInertiaMoment::compute_impl(
   {
     compute_without_weights(data, el_atoms);
   }
-
-  datakeys.add({"I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz"});
 }
 
 /* ------------------------------------------------------------------ */

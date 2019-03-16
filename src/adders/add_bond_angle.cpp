@@ -52,8 +52,6 @@ void AddBondAngle::compute_impl(
     d["angle"] = rad2deg * acos(
       vec1.dot(vec2) / (vec1.norm() * vec2.norm()));
   }
-
-  datakeys.add("angle");
 }
 
 /* ------------------------------------------------------------------ */

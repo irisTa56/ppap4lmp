@@ -259,6 +259,18 @@ void Element::array2d(
 
 /* wrappers for DataKeys' methods ----------------------------------- */
 
+void Element::update_keys()
+{
+  datakeys.clear();
+
+  for (const auto &el : (data.is_array() ? data.front() : data).items())
+  {
+    datakeys.add(el.key());
+  }
+}
+
+/* ------------------------------------------------------------------ */
+
 void Element::required(
   const Json &key_)
 {

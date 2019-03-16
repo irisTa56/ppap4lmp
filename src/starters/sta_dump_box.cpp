@@ -56,7 +56,6 @@ void StaDumpBox::compute_impl(
         auto key = "pbc_" + Str("xyz").substr(i, 1);
 
         data[key] = strs[3+i] == "pp";
-        datakeys.add(key);
       }
 
       for (const Str &dim : {"x", "y", "z"})
@@ -66,8 +65,6 @@ void StaDumpBox::compute_impl(
 
         data["lo_"+dim] = std::stod(strs[0]);
         data["hi_"+dim] = std::stod(strs[1]);
-
-        datakeys.add({"lo_"+dim, "hi_"+dim});
       }
 
       break;

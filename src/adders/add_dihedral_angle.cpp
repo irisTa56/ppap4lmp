@@ -55,8 +55,6 @@ void AddDihedralAngle::compute_impl(
     d["dihedral-angle"] = rad2deg * acos(
       n123.dot(n234) / (n123.norm() * n234.norm()));
   }
-
-  datakeys.add("dihedral-angle");
 }
 
 /* ------------------------------------------------------------------ */

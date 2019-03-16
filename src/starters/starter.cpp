@@ -58,6 +58,7 @@ void Starter::compute(
     }
 
     compute_impl(data, datakeys);
+    elem->update_keys();
 
     if (data.is_array() && elem->optional("id"))
     {

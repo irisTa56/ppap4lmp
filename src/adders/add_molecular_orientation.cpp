@@ -60,8 +60,6 @@ void AddMolecularOrientation::compute_impl(
     d["S_y"] = orientation(1);
     d["S_z"] = orientation(2);
   }
-
-  datakeys.add({"I_values", "I_vectors", "S_x", "S_y", "S_z"});
 }
 
 /* ------------------------------------------------------------------ */

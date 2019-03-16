@@ -67,8 +67,6 @@ void AddChildPositions::compute_impl(
     d[key_y].swap(tmp_y);
     d[key_z].swap(tmp_z);
   }
-
-  datakeys.add({key_x, key_y, key_z});
 }
 
 /* ------------------------------------------------------------------ */

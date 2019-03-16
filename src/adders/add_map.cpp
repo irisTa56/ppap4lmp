@@ -47,8 +47,6 @@ void AddMap::compute_impl(
   {
     data[key_new] = mapping.at(data[key_ref]);
   }
-
-  datakeys.add(key_new);
 }
 
 /* ------------------------------------------------------------------ */

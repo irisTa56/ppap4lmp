@@ -50,8 +50,6 @@ void AddChildIDs::compute_impl(
     auto mol_index = id2index[child[key_for_parent_id]];
     data[mol_index][key_for_child_ids].push_back(child["id"]);
   }
-
-  datakeys.add(key_for_child_ids);
 }
 
 /* ------------------------------------------------------------------ */

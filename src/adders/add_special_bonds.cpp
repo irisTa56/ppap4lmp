@@ -77,8 +77,6 @@ void AddSpecialBonds::compute_impl(
       data[id2index[atom_ids[i]]]["special-bonds"].swap(tmp);
     }
   }
-
-  datakeys.add("special-bonds");
 }
 
 /* ------------------------------------------------------------------ */

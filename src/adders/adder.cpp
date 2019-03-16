@@ -42,6 +42,7 @@ void Adder::compute(
     }
 
     compute_impl(data, datakeys);
+    elem->update_keys();
 
     if (id_exists != elem->optional("id"))
     {
