@@ -25,7 +25,7 @@ void AddDihedralAngle::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  datakeys.required({"atom1-id", "atom2-id","atom3-id", "atom4-id"});
+  required({"atom1-id", "atom2-id","atom3-id", "atom4-id"});
 
   auto el_atoms = ext_generator->get_element();
 

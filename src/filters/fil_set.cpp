@@ -24,7 +24,7 @@ void FilSet::compute_impl(
 {
   for (const auto &item : value_sets)
   {
-    datakeys.required(item.first);
+    required(item.first);
   }
 
   Json tmp = Json::array();

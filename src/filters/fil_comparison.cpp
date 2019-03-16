@@ -103,7 +103,7 @@ void FilComparison::compute_impl(
 
   for (const auto &item : compare_funcs)
   {
-    datakeys.required(item.first);
+    required(item.first);
   }
 
   Json tmp = Json::array();

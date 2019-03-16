@@ -27,9 +27,9 @@ void AddRename::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  datakeys.required(key_old);
+  required(key_old);
 
-  if (datakeys.optional(key_new) && !do_overwrite)
+  if (optional(key_new) && !do_overwrite)
   {
     ut::runtime_error("Key '" + key_new + "' already exists");
   }

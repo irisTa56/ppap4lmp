@@ -30,7 +30,7 @@ void AddChildIDs::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  datakeys.required("id");
+  required("id");
 
   auto el_children = ext_generator->get_element();
 
@@ -38,7 +38,7 @@ void AddChildIDs::compute_impl(
 
   auto key_for_child_ids = child_name + "-ids";
 
-  if (datakeys.optional(key_for_child_ids))
+  if (optional(key_for_child_ids))
   {
     ut::runtime_error("Key '" + key_for_child_ids + "' already exists");
   }

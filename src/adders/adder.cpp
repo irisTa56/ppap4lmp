@@ -27,7 +27,7 @@ void Adder::compute(
       ut::runtime_error("Adder accepts nonempty data only");
     }
 
-    auto id_exists = datakeys.optional("id");
+    auto id_exists = elem->optional("id");
 
     Str myclassname
       = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
@@ -43,7 +43,7 @@ void Adder::compute(
 
     compute_impl(data, datakeys);
 
-    if (id_exists != datakeys.optional("id"))
+    if (id_exists != elem->optional("id"))
     {
       ut::runtime_error("Adder cannot add 'id'");
     }

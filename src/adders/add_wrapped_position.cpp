@@ -22,7 +22,7 @@ void AddWrappedPosition::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  datakeys.required({"xu", "yu", "zu"});
+  required({"xu", "yu", "zu"});
 
   auto el_box = ext_generator->get_element();
 

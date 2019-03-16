@@ -52,10 +52,6 @@ void Starter::compute(
     Str myclassname
       = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
-    elem->set_checking_classname(myclassname);
-    make_required(elem);
-    make_optional(elem);
-
     if (ext_generator)
     {
       ext_generator->set_checking_classname(myclassname);
@@ -63,7 +59,7 @@ void Starter::compute(
 
     compute_impl(data, datakeys);
 
-    if (data.is_array() && datakeys.optional("id"))
+    if (data.is_array() && elem->optional("id"))
     {
       sort_by_id(data);
     }

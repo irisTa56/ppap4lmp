@@ -38,7 +38,7 @@ void AddSpecialBonds::compute_impl(
   Json &data,
   DataKeys &datakeys)
 {
-  if (datakeys.optional("special-bonds"))
+  if (optional("special-bonds"))
   {
     ut::runtime_error("Key 'special-bonds' already exists");
   }
