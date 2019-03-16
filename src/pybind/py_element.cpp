@@ -7,6 +7,8 @@
 
 #include "py_element.h"
 #include "../core/updater.h"
+#include "../starters/sta_copy.h"
+#include "../starters/sta_custom.h"
 
 void pybind::py_element(py::module &m)
 {
@@ -22,6 +24,24 @@ void pybind::py_element(py::module &m)
     [](ShPtr<Updater> upd)
     {
       return ElPtr(new Element())->append_updater(upd);
+    }
+  );
+
+  m.def(
+    "create",
+    [](ElPtr elem)
+    {
+      return ElPtr(new Element())->append_updater(
+        ShPtr<Updater>(new StaCopy(elem)));
+    }
+  );
+
+  m.def(
+    "create",
+    [](Json object)
+    {
+      return ElPtr(new Element())->append_updater(
+        ShPtr<Updater>(new StaCustom(object)));
     }
   );
 

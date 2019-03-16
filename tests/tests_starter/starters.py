@@ -12,9 +12,11 @@ suite = unittest.TestSuite()
 suite.addTest(TestStaCustom("test_error01"))
 suite.addTest(TestStaCustom("test_get_data"))
 suite.addTest(TestStaCustom("test_get_keys"))
+suite.addTest(TestStaCustom("test_short_form"))
 
 suite.addTest(TestStaCopy("test_get_data"))
 suite.addTest(TestStaCopy("test_get_keys"))
+suite.addTest(TestStaCopy("test_short_form"))
 
 suite.addTest(TestStaDumpAtoms("test_error01"))
 suite.addTest(TestStaDumpAtoms("test_get_data"))

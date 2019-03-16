@@ -2,6 +2,9 @@ import unittest
 
 import os
 import sys
+import random
+
+import numpy as np
 
 sys.path.append(
   os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."))
@@ -37,12 +40,27 @@ class TestStaCopy(TestCasePPAP):
 
     self.assertEqual(elem.get_keys(), elem2.get_keys())
 
+  def test_short_form(self):
+    keys = [chr(i) for i in range(65, 65+26)]
+    array = []
+
+    for i in range(100):
+      random.shuffle(keys)
+      array.append(dict(zip(keys, np.random.uniform(size=26)*i)))
+
+    elem = create(StaCustom(array))
+    elem2 = create(elem)
+
+    self.assertEqual(elem.get_data(), elem2.get_data())
+    self.assertEqual(elem.get_keys(), elem2.get_keys())
+
 if __name__ == "__main__":
 
   suite = unittest.TestSuite()
 
   suite.addTest(TestStaCopy("test_get_data"))
   suite.addTest(TestStaCopy("test_get_keys"))
+  suite.addTest(TestStaCopy("test_short_form"))
 
   runner = unittest.TextTestRunner()
   runner.run(suite)
