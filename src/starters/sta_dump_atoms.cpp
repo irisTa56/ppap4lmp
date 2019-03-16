@@ -61,7 +61,12 @@ void StaDumpAtoms::compute_impl(
 
         std::getline(ifs, line);
 
-        auto is_int_vector = make_is_int_vector(line);
+        Vec<bool> is_int_vector;
+
+        for (const auto &s : ut::split(line))
+        {
+          is_int_vector.push_back(s.find(".") == Str::npos);
+        }
 
         // set data from the 1st line
 
@@ -83,15 +88,15 @@ void StaDumpAtoms::compute_impl(
 
         // set data from the remaining lines
 
-        Vec<std::tuple<Str, bool, char>> keys_is_int(is_int_vector.size());
-        for (int i = 0; i < keys_is_int.size(); ++i)
+        Vec<std::tuple<Str, bool, char>> tuples(is_int_vector.size());
+        for (int i = 0; i < tuples.size(); ++i)
         {
-          keys_is_int[i] = std::make_tuple(
-            keys[i], is_int_vector[i], i+1 == keys_is_int.size() ? '\n' : ' ');
+          tuples[i] = std::make_tuple(
+            keys[i], is_int_vector[i], i+1 == tuples.size() ? '\n' : ' ');
         }
 
-        auto begin = keys_is_int.begin();
-        auto end = keys_is_int.end();
+        const auto begin = tuples.begin();
+        const auto end = tuples.end();
 
         for (auto it = data.begin()+1; it != data.end(); ++it)
         {
@@ -126,21 +131,6 @@ void StaDumpAtoms::compute_impl(
       }
     }
   }
-}
-
-/* ------------------------------------------------------------------ */
-
-const Vec<bool> StaDumpAtoms::make_is_int_vector(
-  const Str &line)
-{
-  Vec<bool> is_int;
-
-  for (const auto &s : ut::split(line))
-  {
-    is_int.push_back(s.find(".") == Str::npos);
-  }
-
-  return is_int;
 }
 
 /* ------------------------------------------------------------------ */

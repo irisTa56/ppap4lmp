@@ -36,8 +36,9 @@ void StaCustom::compute_impl(
     for (const auto &j : json)
     {
       const auto begin = j.begin();
+      const auto end = j.end();
 
-      for (auto it = j.begin(); it != j.end(); ++it)
+      for (auto it = begin; it != end; ++it)
       {
         if (it.key() != jsonkeys[std::distance(begin, it)])
         {

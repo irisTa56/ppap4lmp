@@ -23,19 +23,6 @@
   please see pybind::py_sta_dump_atoms.
 */
 class StaDumpAtoms : public StaDump {
-  /*!
-    Make a list whether each value printed in a line of
-    a Lammps' dump file is an integer or not.
-
-    @param line
-      The first line in a body of a Lammps' dump file:
-      a line below the line beginning with `ITEM: ATOMS`.
-
-    @return A constant ::Vec object containing booleans
-    whether each value in the `line` is an integer or not.
-  */
-  const Vec<bool> make_is_int_vector(
-    const Str &line);
  protected:
   /*!
     @brief This method overrides Updater::compute_impl.
