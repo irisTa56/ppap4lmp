@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1882;
+var viewWidth = 2035;
 var viewHeight = 341;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,611 +54,632 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>src/starters/starter.h</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-337 1877.5,-337 1877.5,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-337 2030.5,-337 2030.5,4 -4,4"/>
 <!-- Node20 -->
 <g id="node1" class="node">
 <title>Node20</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="830,-313.5 830,-332.5 935,-332.5 935,-313.5 830,-313.5"/>
-<text text-anchor="middle" x="882.5" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/starter.h</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="1029.5,-313.5 1029.5,-332.5 1134.5,-332.5 1134.5,-313.5 1029.5,-313.5"/>
+<text text-anchor="middle" x="1082" y="-320.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/starter.h</text>
 </g>
 <!-- Node21 -->
 <g id="node2" class="node">
 <title>Node21</title>
 <g id="a_node2"><a xlink:href="py__starter_8h.html" target="_top" xlink:title="This file is for binding Starter class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="833.5,-190.5 833.5,-220.5 931.5,-220.5 931.5,-190.5 833.5,-190.5"/>
-<text text-anchor="start" x="841.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="882.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_starter.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="1033,-190.5 1033,-220.5 1131,-220.5 1131,-190.5 1033,-190.5"/>
+<text text-anchor="start" x="1041" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1082" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_starter.h</text>
 </a>
 </g>
 </g>
 <!-- Node20&#45;&gt;Node21 -->
 <g id="edge1" class="edge">
 <title>Node20&#45;&gt;Node21</title>
-<path fill="none" stroke="#191970" d="M882.5,-303.3022C882.5,-280.0339 882.5,-241.8278 882.5,-220.7143"/>
-<polygon fill="#191970" stroke="#191970" points="879.0001,-303.3844 882.5,-313.3845 886.0001,-303.3845 879.0001,-303.3844"/>
+<path fill="none" stroke="#191970" d="M1082,-303.3022C1082,-280.0339 1082,-241.8278 1082,-220.7143"/>
+<polygon fill="#191970" stroke="#191970" points="1078.5001,-303.3844 1082,-313.3845 1085.5001,-303.3845 1078.5001,-303.3844"/>
 </g>
 <!-- Node39 -->
 <g id="node20" class="node">
 <title>Node39</title>
-<g id="a_node20"><a xlink:href="sta__beads_8h.html" target="_top" xlink:title="This file has a definition of StaBeads class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="274.5,-196 274.5,-215 396.5,-215 396.5,-196 274.5,-196"/>
-<text text-anchor="middle" x="335.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_beads.h</text>
+<g id="a_node20"><a xlink:href="sta__copy_8h.html" target="_top" xlink:title="This file has a definition of StaCopy class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="221.5,-196 221.5,-215 338.5,-215 338.5,-196 221.5,-196"/>
+<text text-anchor="middle" x="280" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_copy.h</text>
 </a>
 </g>
 </g>
 <!-- Node20&#45;&gt;Node39 -->
 <g id="edge26" class="edge">
 <title>Node20&#45;&gt;Node39</title>
-<path fill="none" stroke="#191970" d="M822.1944,-311.5137C775.3133,-302.4705 708.6861,-289.3697 650.5,-277 551.765,-256.0101 436.1449,-229.1887 376.1974,-215.1135"/>
-<polygon fill="#191970" stroke="#191970" points="821.7027,-314.9832 832.1841,-313.4369 823.0261,-308.1094 821.7027,-314.9832"/>
+<path fill="none" stroke="#191970" d="M1019.3377,-313.8194C868.27,-291.6867 485.6443,-235.6287 338.7089,-214.1014"/>
+<polygon fill="#191970" stroke="#191970" points="1018.9768,-317.3038 1029.3785,-315.2905 1019.9916,-310.3778 1018.9768,-317.3038"/>
 </g>
-<!-- Node41 -->
-<g id="node22" class="node">
-<title>Node41</title>
-<g id="a_node22"><a xlink:href="sta__copy_8h.html" target="_top" xlink:title="This file has a definition of StaCopy class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="415,-196 415,-215 532,-215 532,-196 415,-196"/>
-<text text-anchor="middle" x="473.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_copy.h</text>
+<!-- Node42 -->
+<g id="node23" class="node">
+<title>Node42</title>
+<g id="a_node23"><a xlink:href="sta__custom_8h.html" target="_top" xlink:title="This file has a definition of StaCustom class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="490,-196 490,-215 618,-215 618,-196 490,-196"/>
+<text text-anchor="middle" x="554" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_custom.h</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node41 -->
-<g id="edge29" class="edge">
-<title>Node20&#45;&gt;Node41</title>
-<path fill="none" stroke="#191970" d="M839.6324,-310.6847C757.6679,-287.1375 580.3315,-236.1912 506.647,-215.0227"/>
-<polygon fill="#191970" stroke="#191970" points="838.7986,-314.0867 849.3763,-313.484 840.7315,-307.3588 838.7986,-314.0867"/>
+<!-- Node20&#45;&gt;Node42 -->
+<g id="edge30" class="edge">
+<title>Node20&#45;&gt;Node42</title>
+<path fill="none" stroke="#191970" d="M1029.2188,-311.2542C924.5827,-287.9687 692.6886,-236.3635 596.7913,-215.0227"/>
+<polygon fill="#191970" stroke="#191970" points="1028.7173,-314.7281 1039.2388,-313.484 1030.2379,-307.8953 1028.7173,-314.7281"/>
 </g>
-<!-- Node43 -->
-<g id="node24" class="node">
-<title>Node43</title>
-<g id="a_node24"><a xlink:href="sta__custom_8h.html" target="_top" xlink:title="This file has a definition of StaCustom class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="672.5,-196 672.5,-215 800.5,-215 800.5,-196 672.5,-196"/>
-<text text-anchor="middle" x="736.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_custom.h</text>
+<!-- Node44 -->
+<g id="node25" class="node">
+<title>Node44</title>
+<g id="a_node25"><a xlink:href="sta__beads_8h.html" target="_top" xlink:title="This file has a definition of StaBeads class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="828,-196 828,-215 950,-215 950,-196 828,-196"/>
+<text text-anchor="middle" x="889" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_beads.h</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node43 -->
-<g id="edge32" class="edge">
-<title>Node20&#45;&gt;Node43</title>
-<path fill="none" stroke="#191970" d="M862.6657,-307.0375C831.9462,-282.3146 773.7828,-235.505 748.6129,-215.2484"/>
-<polygon fill="#191970" stroke="#191970" points="860.5673,-309.8414 870.5522,-313.3845 864.9562,-304.3881 860.5673,-309.8414"/>
+<!-- Node20&#45;&gt;Node44 -->
+<g id="edge34" class="edge">
+<title>Node20&#45;&gt;Node44</title>
+<path fill="none" stroke="#191970" d="M1057.5549,-308.1176C1017.3438,-283.6368 938.3536,-235.5469 904.7416,-215.0836"/>
+<polygon fill="#191970" stroke="#191970" points="1055.8444,-311.1738 1066.206,-313.3845 1059.4845,-305.1947 1055.8444,-311.1738"/>
 </g>
-<!-- Node45 -->
-<g id="node26" class="node">
-<title>Node45</title>
-<g id="a_node26"><a xlink:href="sta__dump_8h.html" target="_top" xlink:title="This file has a definition of StaDump class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="1324.5,-257.5 1324.5,-276.5 1444.5,-276.5 1444.5,-257.5 1324.5,-257.5"/>
-<text text-anchor="middle" x="1384.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump.h</text>
+<!-- Node46 -->
+<g id="node27" class="node">
+<title>Node46</title>
+<g id="a_node27"><a xlink:href="sta__dump_8h.html" target="_top" xlink:title="This file has a definition of StaDump class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="1149,-257.5 1149,-276.5 1269,-276.5 1269,-257.5 1149,-257.5"/>
+<text text-anchor="middle" x="1209" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump.h</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node45 -->
-<g id="edge35" class="edge">
-<title>Node20&#45;&gt;Node45</title>
-<path fill="none" stroke="#191970" d="M945.264,-315.9984C1042.5746,-305.1431 1228.5883,-284.3925 1324.3085,-273.7146"/>
-<polygon fill="#191970" stroke="#191970" points="944.8243,-312.5257 935.274,-317.1129 945.6004,-319.4825 944.8243,-312.5257"/>
+<!-- Node20&#45;&gt;Node46 -->
+<g id="edge37" class="edge">
+<title>Node20&#45;&gt;Node46</title>
+<path fill="none" stroke="#191970" d="M1113.1892,-309.2473C1136.2537,-299.0771 1167.0712,-285.4883 1187.4528,-276.5011"/>
+<polygon fill="#191970" stroke="#191970" points="1111.5699,-306.1361 1103.8321,-313.3733 1114.3942,-312.5411 1111.5699,-306.1361"/>
 </g>
-<!-- Node51 -->
-<g id="node32" class="node">
-<title>Node51</title>
-<g id="a_node32"><a xlink:href="sta__molecules_8h.html" target="_top" xlink:title="This file has a definition of StaMolecules class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="949.5,-196 949.5,-215 1089.5,-215 1089.5,-196 949.5,-196"/>
-<text text-anchor="middle" x="1019.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_molecules.h</text>
+<!-- Node52 -->
+<g id="node33" class="node">
+<title>Node52</title>
+<g id="a_node33"><a xlink:href="sta__molecules_8h.html" target="_top" xlink:title="This file has a definition of StaMolecules class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="1618,-196 1618,-215 1758,-215 1758,-196 1618,-196"/>
+<text text-anchor="middle" x="1688" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_molecules.h</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node51 -->
-<g id="edge44" class="edge">
-<title>Node20&#45;&gt;Node51</title>
-<path fill="none" stroke="#191970" d="M901.4826,-306.7193C930.4034,-281.915 984.6164,-235.4184 1008.1338,-215.2484"/>
-<polygon fill="#191970" stroke="#191970" points="899.0233,-304.2175 893.7113,-313.3845 903.5805,-309.531 899.0233,-304.2175"/>
+<!-- Node20&#45;&gt;Node52 -->
+<g id="edge46" class="edge">
+<title>Node20&#45;&gt;Node52</title>
+<path fill="none" stroke="#191970" d="M1144.8207,-312.4737C1183.876,-304.9037 1234.7185,-293.1678 1278,-277 1295.8786,-270.3214 1297.7874,-262.7052 1316,-257 1440.7813,-217.9115 1478.8484,-241.4482 1608,-221 1618.899,-219.2744 1630.5832,-217.1614 1641.5623,-215.0573"/>
+<polygon fill="#191970" stroke="#191970" points="1143.8193,-309.1012 1134.6468,-314.4035 1145.1239,-315.9786 1143.8193,-309.1012"/>
 </g>
-<!-- Node53 -->
-<g id="node34" class="node">
-<title>Node53</title>
-<g id="a_node34"><a xlink:href="starter_8cpp.html" target="_top" xlink:title="This file has an implementation of Starter class, which is a subclass of Updater class. ">
-<polygon fill="#ffffff" stroke="#000000" points="1462.5,-257.5 1462.5,-276.5 1578.5,-276.5 1578.5,-257.5 1462.5,-257.5"/>
-<text text-anchor="middle" x="1520.5" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/starter.cpp</text>
+<!-- Node54 -->
+<g id="node35" class="node">
+<title>Node54</title>
+<g id="a_node35"><a xlink:href="starter_8cpp.html" target="_top" xlink:title="This file has an implementation of Starter class, which is a subclass of Updater class. ">
+<polygon fill="#ffffff" stroke="#000000" points="1325,-257.5 1325,-276.5 1441,-276.5 1441,-257.5 1325,-257.5"/>
+<text text-anchor="middle" x="1383" y="-264.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/starter.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node20&#45;&gt;Node53 -->
-<g id="edge47" class="edge">
-<title>Node20&#45;&gt;Node53</title>
-<path fill="none" stroke="#191970" d="M945.5046,-319.325C1050.8751,-312.865 1269.4309,-298.1262 1453.5,-277 1456.421,-276.6647 1459.4105,-276.2996 1462.4272,-275.9136"/>
-<polygon fill="#191970" stroke="#191970" points="945.1289,-315.8413 935.3602,-319.9427 945.5545,-322.8283 945.1289,-315.8413"/>
+<!-- Node20&#45;&gt;Node54 -->
+<g id="edge49" class="edge">
+<title>Node20&#45;&gt;Node54</title>
+<path fill="none" stroke="#191970" d="M1143.461,-311.5654C1198.9745,-301.2373 1279.7247,-286.214 1331.8103,-276.5237"/>
+<polygon fill="#191970" stroke="#191970" points="1142.5928,-308.1668 1133.4017,-313.4369 1143.8732,-315.0487 1142.5928,-308.1668"/>
 </g>
 <!-- Node22 -->
 <g id="node3" class="node">
 <title>Node22</title>
 <g id="a_node3"><a xlink:href="pybind_8h.html" target="_top" xlink:title="This file includes all the header files containing definitions of functions to bind C++ and Python...">
-<polygon fill="#ffffff" stroke="#000000" points="835.5,-62 835.5,-81 905.5,-81 905.5,-62 835.5,-62"/>
-<text text-anchor="middle" x="870.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="1022,-62 1022,-81 1092,-81 1092,-62 1022,-62"/>
+<text text-anchor="middle" x="1057" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node22 -->
 <g id="edge2" class="edge">
 <title>Node21&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M853.9728,-183.6569C845.3994,-175.4027 837.0644,-165.2539 832.5,-154 827.3217,-141.2324 828.1942,-136.0877 832.5,-123 837.9866,-106.3233 851.1757,-90.6145 860.4695,-81.0313"/>
-<polygon fill="#191970" stroke="#191970" points="851.7022,-186.3221 861.4796,-190.4031 856.3812,-181.1156 851.7022,-186.3221"/>
+<path fill="none" stroke="#191970" d="M1077.2903,-180.2559C1071.6889,-150.2327 1062.617,-101.6073 1058.7918,-81.1042"/>
+<polygon fill="#191970" stroke="#191970" points="1073.906,-181.2005 1079.1808,-190.389 1080.7873,-179.9167 1073.906,-181.2005"/>
 </g>
 <!-- Node24 -->
 <g id="node5" class="node">
 <title>Node24</title>
 <g id="a_node5"><a xlink:href="py__sta__beads_8h.html" target="_top" xlink:title="This file is for binding StaBeads class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="297.5,-123.5 297.5,-153.5 395.5,-153.5 395.5,-123.5 297.5,-123.5"/>
-<text text-anchor="start" x="305.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="346.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_beads.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="840,-123.5 840,-153.5 938,-153.5 938,-123.5 840,-123.5"/>
+<text text-anchor="start" x="848" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="889" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_beads.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node24 -->
 <g id="edge4" class="edge">
 <title>Node21&#45;&gt;Node24</title>
-<path fill="none" stroke="#191970" d="M823.1223,-192.2718C818.5247,-191.4376 813.9444,-190.6669 809.5,-190 630.7909,-163.1847 582.4529,-185.4448 404.5,-154 401.6261,-153.4922 398.6871,-152.91 395.7315,-152.2759"/>
-<polygon fill="#191970" stroke="#191970" points="822.6913,-195.7525 833.1694,-194.1837 824,-188.8759 822.6913,-195.7525"/>
+<path fill="none" stroke="#191970" d="M1029.11,-187.1392C998.7604,-176.6033 961.1229,-163.5375 932.5019,-153.6017"/>
+<polygon fill="#191970" stroke="#191970" points="1028.0922,-190.4907 1038.687,-190.4639 1030.3879,-183.8779 1028.0922,-190.4907"/>
 </g>
 <!-- Node26 -->
 <g id="node7" class="node">
 <title>Node26</title>
 <g id="a_node7"><a xlink:href="py__sta__copy_8h.html" target="_top" xlink:title="This file is for binding StaCopy class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="413.5,-123.5 413.5,-153.5 511.5,-153.5 511.5,-123.5 413.5,-123.5"/>
-<text text-anchor="start" x="421.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="462.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_copy.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="456,-123.5 456,-153.5 554,-153.5 554,-123.5 456,-123.5"/>
+<text text-anchor="start" x="464" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="505" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_copy.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node26 -->
 <g id="edge7" class="edge">
 <title>Node21&#45;&gt;Node26</title>
-<path fill="none" stroke="#191970" d="M823.0944,-192.4473C818.5031,-191.573 813.932,-190.7452 809.5,-190 681.8545,-168.5385 647.5455,-178.7674 520.5,-154 517.6355,-153.4416 514.7038,-152.8199 511.7538,-152.1554"/>
-<polygon fill="#191970" stroke="#191970" points="822.6439,-195.9257 833.1315,-194.4218 823.9952,-189.0574 822.6439,-195.9257"/>
+<path fill="none" stroke="#191970" d="M1022.9414,-197.6357C1002.6865,-195.0508 979.8677,-192.2627 959,-190 783.304,-170.9493 736.9988,-184.9259 563,-154 560.1266,-153.4893 557.188,-152.9049 554.2327,-152.269"/>
+<polygon fill="#191970" stroke="#191970" points="1022.6015,-201.1208 1032.9663,-198.925 1023.4944,-194.1779 1022.6015,-201.1208"/>
 </g>
 <!-- Node28 -->
 <g id="node9" class="node">
 <title>Node28</title>
 <g id="a_node9"><a xlink:href="py__sta__custom_8h.html" target="_top" xlink:title="This file is for binding StaCustom class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="687.5,-123.5 687.5,-153.5 785.5,-153.5 785.5,-123.5 687.5,-123.5"/>
-<text text-anchor="start" x="695.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="736.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_custom.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="572,-123.5 572,-153.5 670,-153.5 670,-123.5 572,-123.5"/>
+<text text-anchor="start" x="580" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="621" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_custom.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node28 -->
 <g id="edge10" class="edge">
 <title>Node21&#45;&gt;Node28</title>
-<path fill="none" stroke="#191970" d="M840.3879,-186.1746C817.8118,-175.8143 790.4032,-163.2364 769.4082,-153.6017"/>
-<polygon fill="#191970" stroke="#191970" points="839.1862,-189.474 849.7348,-190.4639 842.1059,-183.112 839.1862,-189.474"/>
+<path fill="none" stroke="#191970" d="M1022.6826,-198.0235C912.6721,-184.1434 687.3578,-155.6431 679,-154 676.1364,-153.437 673.2054,-152.8118 670.256,-152.1446"/>
+<polygon fill="#191970" stroke="#191970" points="1022.279,-201.5002 1032.6385,-199.2794 1023.1552,-194.5553 1022.279,-201.5002"/>
 </g>
 <!-- Node30 -->
 <g id="node11" class="node">
 <title>Node30</title>
 <g id="a_node11"><a xlink:href="py__sta__dump_8h.html" target="_top" xlink:title="This file is for binding StaDump class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="1377.5,-123.5 1377.5,-153.5 1475.5,-153.5 1475.5,-123.5 1377.5,-123.5"/>
-<text text-anchor="start" x="1385.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1426.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="1110,-123.5 1110,-153.5 1208,-153.5 1208,-123.5 1110,-123.5"/>
+<text text-anchor="start" x="1118" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1159" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node30 -->
 <g id="edge13" class="edge">
 <title>Node21&#45;&gt;Node30</title>
-<path fill="none" stroke="#191970" d="M941.6945,-189.9957C1130.373,-158.2204 1183.654,-186.2111 1368.5,-154 1371.3751,-153.499 1374.3151,-152.9222 1377.2714,-152.2921"/>
-<polygon fill="#191970" stroke="#191970" points="940.9915,-186.5651 931.7286,-191.7079 942.1769,-193.464 940.9915,-186.5651"/>
+<path fill="none" stroke="#191970" d="M1107.2876,-183.4965C1118.524,-173.7193 1131.4692,-162.4554 1141.5967,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1104.719,-181.092 1099.4725,-190.2967 1109.3139,-186.3728 1104.719,-181.092"/>
 </g>
 <!-- Node32 -->
 <g id="node13" class="node">
 <title>Node32</title>
 <g id="a_node13"><a xlink:href="py__sta__molecules_8h.html" target="_top" xlink:title="This file is for binding StaMolecules class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="958,-123.5 958,-153.5 1065,-153.5 1065,-123.5 958,-123.5"/>
-<text text-anchor="start" x="966" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1011.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_molecules.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="1619.5,-123.5 1619.5,-153.5 1726.5,-153.5 1726.5,-123.5 1619.5,-123.5"/>
+<text text-anchor="start" x="1627.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1673" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_molecules.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node32 -->
 <g id="edge16" class="edge">
 <title>Node21&#45;&gt;Node32</title>
-<path fill="none" stroke="#191970" d="M920.4793,-185.7743C940.1967,-175.5335 963.9179,-163.2132 982.2002,-153.7177"/>
-<polygon fill="#191970" stroke="#191970" points="918.7113,-182.7486 911.4501,-190.4639 921.9378,-188.9607 918.7113,-182.7486"/>
+<path fill="none" stroke="#191970" d="M1141.2244,-197.1353C1159.7085,-194.6641 1180.1826,-192.0695 1199,-190 1381.2671,-169.9542 1429.1034,-183.9925 1610,-154 1613.0002,-153.5026 1616.0684,-152.9376 1619.1568,-152.325"/>
+<polygon fill="#191970" stroke="#191970" points="1140.6249,-193.6844 1131.1834,-198.4913 1141.5618,-200.6214 1140.6249,-193.6844"/>
 </g>
 <!-- Node34 -->
 <g id="node15" class="node">
 <title>Node34</title>
 <g id="a_node15"><a xlink:href="py__sta__dump__atoms_8h.html" target="_top" xlink:title="This file is for binding StaDumpAtoms class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="1494,-123.5 1494,-153.5 1613,-153.5 1613,-123.5 1494,-123.5"/>
-<text text-anchor="start" x="1502" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1553.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_atoms.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="1351.5,-123.5 1351.5,-153.5 1470.5,-153.5 1470.5,-123.5 1351.5,-123.5"/>
+<text text-anchor="start" x="1359.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1411" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_atoms.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node34 -->
 <g id="edge19" class="edge">
 <title>Node21&#45;&gt;Node34</title>
-<path fill="none" stroke="#191970" d="M941.7825,-190.0046C1181.3839,-151.5618 1247.9635,-188.1839 1484.5,-154 1487.5379,-153.561 1490.6404,-153.0599 1493.7661,-152.513"/>
-<polygon fill="#191970" stroke="#191970" points="941.024,-186.582 931.7183,-191.6469 942.1514,-193.4906 941.024,-186.582"/>
+<path fill="none" stroke="#191970" d="M1141.2968,-194.1997C1194.0522,-184.04 1273.2695,-168.5242 1342,-154 1345.0031,-153.3654 1348.0777,-152.7069 1351.1812,-152.0352"/>
+<polygon fill="#191970" stroke="#191970" points="1140.5956,-190.7703 1131.4363,-196.0956 1141.9173,-197.6444 1140.5956,-190.7703"/>
 </g>
 <!-- Node36 -->
 <g id="node17" class="node">
 <title>Node36</title>
 <g id="a_node17"><a xlink:href="py__sta__dump__box_8h.html" target="_top" xlink:title="This file is for binding StaDumpBox class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="1083,-123.5 1083,-153.5 1190,-153.5 1190,-123.5 1083,-123.5"/>
-<text text-anchor="start" x="1091" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1136.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_box.h</text>
+<polygon fill="#ffffff" stroke="#000000" points="1226.5,-123.5 1226.5,-153.5 1333.5,-153.5 1333.5,-123.5 1226.5,-123.5"/>
+<text text-anchor="start" x="1234.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1280" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_box.h</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node36 -->
 <g id="edge22" class="edge">
 <title>Node21&#45;&gt;Node36</title>
-<path fill="none" stroke="#191970" d="M941.2185,-189.8147C994.7817,-175.6307 1045.6598,-162.274 1082.8267,-152.5382"/>
-<polygon fill="#191970" stroke="#191970" points="940.3139,-186.4336 931.5439,-192.378 942.1067,-193.2001 940.3139,-186.4336"/>
+<path fill="none" stroke="#191970" d="M1136.2602,-187.1392C1167.3961,-176.6033 1206.0087,-163.5375 1235.3711,-153.6017"/>
+<polygon fill="#191970" stroke="#191970" points="1134.7856,-183.9432 1126.4351,-190.4639 1137.0293,-190.5739 1134.7856,-183.9432"/>
 </g>
 <!-- Node38 -->
 <g id="node19" class="node">
 <title>Node38</title>
 <g id="a_node19"><a xlink:href="py__starter_8cpp.html" target="_top" xlink:title="This file is for binding Starter class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="841.5,-123.5 841.5,-153.5 939.5,-153.5 939.5,-123.5 841.5,-123.5"/>
-<text text-anchor="start" x="849.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="890.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_starter.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="956,-123.5 956,-153.5 1054,-153.5 1054,-123.5 956,-123.5"/>
+<text text-anchor="start" x="964" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1005" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_starter.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node21&#45;&gt;Node38 -->
 <g id="edge25" class="edge">
 <title>Node21&#45;&gt;Node38</title>
-<path fill="none" stroke="#191970" d="M885.5068,-180.3179C886.5786,-171.3414 887.752,-161.5143 888.6919,-153.6432"/>
-<polygon fill="#191970" stroke="#191970" points="882.0257,-179.9522 884.3153,-190.2967 888.9763,-180.7822 882.0257,-179.9522"/>
+<path fill="none" stroke="#191970" d="M1056.7124,-183.4965C1045.476,-173.7193 1032.5308,-162.4554 1022.4033,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1054.6861,-186.3728 1064.5275,-190.2967 1059.281,-181.092 1054.6861,-186.3728"/>
 </g>
 <!-- Node23 -->
 <g id="node4" class="node">
 <title>Node23</title>
 <g id="a_node4"><a xlink:href="ppap4lmp_8cpp.html" target="_top" xlink:title="This file has no implementation, only includes a header file to bind C++ and Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="823.5,-.5 823.5,-19.5 917.5,-19.5 917.5,-.5 823.5,-.5"/>
-<text text-anchor="middle" x="870.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/ppap4lmp.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="1010,-.5 1010,-19.5 1104,-19.5 1104,-.5 1010,-.5"/>
+<text text-anchor="middle" x="1057" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/ppap4lmp.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node22&#45;&gt;Node23 -->
 <g id="edge3" class="edge">
 <title>Node22&#45;&gt;Node23</title>
-<path fill="none" stroke="#191970" d="M870.5,-51.7462C870.5,-41.0519 870.5,-28.314 870.5,-19.7449"/>
-<polygon fill="#191970" stroke="#191970" points="867.0001,-51.8906 870.5,-61.8906 874.0001,-51.8907 867.0001,-51.8906"/>
+<path fill="none" stroke="#191970" d="M1057,-51.7462C1057,-41.0519 1057,-28.314 1057,-19.7449"/>
+<polygon fill="#191970" stroke="#191970" points="1053.5001,-51.8906 1057,-61.8906 1060.5001,-51.8907 1053.5001,-51.8906"/>
 </g>
 <!-- Node24&#45;&gt;Node22 -->
 <g id="edge5" class="edge">
 <title>Node24&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M405.6959,-122.9796C578.9648,-93.0106 627.2968,-112.7733 797.5,-87 809.9258,-85.1184 823.4158,-82.4374 835.3795,-79.8329"/>
-<polygon fill="#191970" stroke="#191970" points="404.9749,-119.5527 395.7331,-124.7333 406.1885,-126.4467 404.9749,-119.5527"/>
+<path fill="none" stroke="#191970" d="M936.1732,-119.6869C967.6647,-107.1278 1007.7663,-91.1349 1032.9185,-81.1039"/>
+<polygon fill="#191970" stroke="#191970" points="934.6945,-116.5085 926.7025,-123.4639 937.2876,-123.0105 934.6945,-116.5085"/>
 </g>
 <!-- Node25 -->
 <g id="node6" class="node">
 <title>Node25</title>
 <g id="a_node6"><a xlink:href="py__sta__beads_8cpp.html" target="_top" xlink:title="This file is for binding StaBeads class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="296,-56.5 296,-86.5 395,-86.5 395,-56.5 296,-56.5"/>
-<text text-anchor="start" x="304" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="345.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_beads.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="839.5,-56.5 839.5,-86.5 938.5,-86.5 938.5,-56.5 839.5,-56.5"/>
+<text text-anchor="start" x="847.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="889" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_beads.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node24&#45;&gt;Node25 -->
 <g id="edge6" class="edge">
 <title>Node24&#45;&gt;Node25</title>
-<path fill="none" stroke="#191970" d="M346.1198,-113.0249C345.987,-104.128 345.8422,-94.4287 345.726,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="342.6241,-113.35 346.2731,-123.2967 349.6234,-113.2455 342.6241,-113.35"/>
+<path fill="none" stroke="#191970" d="M889,-113.0249C889,-104.128 889,-94.4287 889,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="885.5001,-113.2966 889,-123.2967 892.5001,-113.2967 885.5001,-113.2966"/>
 </g>
 <!-- Node26&#45;&gt;Node22 -->
 <g id="edge8" class="edge">
 <title>Node26&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M521.8823,-122.8823C644.083,-99.3747 678.3536,-107.3579 797.5,-87 809.8879,-84.8833 823.3687,-82.1454 835.3357,-79.5608"/>
-<polygon fill="#191970" stroke="#191970" points="520.8996,-119.5081 511.7574,-124.8627 522.2433,-126.378 520.8996,-119.5081"/>
+<path fill="none" stroke="#191970" d="M564.2321,-122.9636C733.4878,-93.2941 779.9936,-106.584 947,-87 972.0926,-84.0575 1000.3086,-80.0677 1021.8808,-76.873"/>
+<polygon fill="#191970" stroke="#191970" points="563.4676,-119.5446 554.2344,-124.7406 564.6926,-126.4365 563.4676,-119.5446"/>
 </g>
 <!-- Node27 -->
 <g id="node8" class="node">
 <title>Node27</title>
 <g id="a_node8"><a xlink:href="py__sta__copy_8cpp.html" target="_top" xlink:title="This file is for binding StaCopy class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="413.5,-56.5 413.5,-86.5 511.5,-86.5 511.5,-56.5 413.5,-56.5"/>
-<text text-anchor="start" x="421.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="462.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_copy.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="454,-56.5 454,-86.5 552,-86.5 552,-56.5 454,-56.5"/>
+<text text-anchor="start" x="462" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="503" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_copy.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node26&#45;&gt;Node27 -->
 <g id="edge9" class="edge">
 <title>Node26&#45;&gt;Node27</title>
-<path fill="none" stroke="#191970" d="M462.5,-113.0249C462.5,-104.128 462.5,-94.4287 462.5,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="459.0001,-113.2966 462.5,-123.2967 466.0001,-113.2967 459.0001,-113.2966"/>
+<path fill="none" stroke="#191970" d="M504.2395,-113.0249C503.974,-104.128 503.6844,-94.4287 503.452,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="500.7493,-113.4056 504.5462,-123.2967 507.7461,-113.1967 500.7493,-113.4056"/>
 </g>
 <!-- Node28&#45;&gt;Node22 -->
 <g id="edge11" class="edge">
 <title>Node28&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M775.7596,-118.8702C800.6176,-106.4412 831.6627,-90.9187 851.2922,-81.1039"/>
-<polygon fill="#191970" stroke="#191970" points="773.9512,-115.8612 766.5722,-123.4639 777.0818,-122.1222 773.9512,-115.8612"/>
+<path fill="none" stroke="#191970" d="M680.0778,-122.9253C798.5494,-99.6318 831.0804,-102.9525 947,-87 972.0286,-83.5556 1000.2462,-79.5776 1021.8351,-76.514"/>
+<polygon fill="#191970" stroke="#191970" points="679.3858,-119.4943 670.2603,-124.8773 680.7509,-126.36 679.3858,-119.4943"/>
 </g>
 <!-- Node29 -->
 <g id="node10" class="node">
 <title>Node29</title>
 <g id="a_node10"><a xlink:href="py__sta__custom_8cpp.html" target="_top" xlink:title="This file is for binding StaCustom class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="684,-56.5 684,-86.5 789,-86.5 789,-56.5 684,-56.5"/>
-<text text-anchor="start" x="692" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="736.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_custom.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="570.5,-56.5 570.5,-86.5 675.5,-86.5 675.5,-56.5 570.5,-56.5"/>
+<text text-anchor="start" x="578.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="623" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_custom.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node28&#45;&gt;Node29 -->
 <g id="edge12" class="edge">
 <title>Node28&#45;&gt;Node29</title>
-<path fill="none" stroke="#191970" d="M736.5,-113.0249C736.5,-104.128 736.5,-94.4287 736.5,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="733.0001,-113.2966 736.5,-123.2967 740.0001,-113.2967 733.0001,-113.2966"/>
+<path fill="none" stroke="#191970" d="M621.7605,-113.0249C622.026,-104.128 622.3156,-94.4287 622.548,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="618.2539,-113.1967 621.4538,-123.2967 625.2507,-113.4056 618.2539,-113.1967"/>
 </g>
 <!-- Node30&#45;&gt;Node22 -->
 <g id="edge14" class="edge">
 <title>Node30&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M1367.2395,-122.9826C1177.3136,-90.9514 1124.1626,-116.2314 937.5,-87 927.12,-85.3745 915.9593,-83.035 905.7811,-80.6644"/>
-<polygon fill="#191970" stroke="#191970" points="1366.8235,-126.4623 1377.2717,-124.7059 1368.0087,-119.5634 1366.8235,-126.4623"/>
+<path fill="none" stroke="#191970" d="M1127.6058,-117.8783C1108.9509,-105.6246 1086.1678,-90.6593 1071.6209,-81.1039"/>
+<polygon fill="#191970" stroke="#191970" points="1125.8295,-120.8991 1136.1092,-123.4639 1129.6726,-115.0484 1125.8295,-120.8991"/>
 </g>
 <!-- Node31 -->
 <g id="node12" class="node">
 <title>Node31</title>
 <g id="a_node12"><a xlink:href="py__sta__dump_8cpp.html" target="_top" xlink:title="This file is for binding StaDump class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="1374.5,-56.5 1374.5,-86.5 1472.5,-86.5 1472.5,-56.5 1374.5,-56.5"/>
-<text text-anchor="start" x="1382.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1423.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="1110,-56.5 1110,-86.5 1208,-86.5 1208,-56.5 1110,-56.5"/>
+<text text-anchor="start" x="1118" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1159" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node30&#45;&gt;Node31 -->
 <g id="edge15" class="edge">
 <title>Node30&#45;&gt;Node31</title>
-<path fill="none" stroke="#191970" d="M1425.3593,-113.0249C1424.961,-104.128 1424.5267,-94.4287 1424.1781,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="1421.8754,-113.4633 1425.8193,-123.2967 1428.8683,-113.1501 1421.8754,-113.4633"/>
+<path fill="none" stroke="#191970" d="M1159,-113.0249C1159,-104.128 1159,-94.4287 1159,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1155.5001,-113.2966 1159,-123.2967 1162.5001,-113.2967 1155.5001,-113.2966"/>
 </g>
 <!-- Node32&#45;&gt;Node22 -->
 <g id="edge17" class="edge">
 <title>Node32&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M970.5348,-119.0343C944.321,-106.5781 911.4572,-90.9619 890.7112,-81.1039"/>
-<polygon fill="#191970" stroke="#191970" points="969.3225,-122.3332 979.8568,-123.4639 972.3269,-116.0107 969.3225,-122.3332"/>
+<path fill="none" stroke="#191970" d="M1609.027,-123.0483C1384.0868,-89.0891 1319.8018,-132.4144 1101,-87 1094.1802,-85.5845 1086.9769,-83.3708 1080.4174,-81.0549"/>
+<polygon fill="#191970" stroke="#191970" points="1608.7494,-126.5469 1619.1665,-124.6146 1609.8181,-119.6289 1608.7494,-126.5469"/>
 </g>
 <!-- Node33 -->
 <g id="node14" class="node">
 <title>Node33</title>
 <g id="a_node14"><a xlink:href="py__sta__molecules_8cpp.html" target="_top" xlink:title="This file is for binding StaMolecules class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="947,-56.5 947,-86.5 1064,-86.5 1064,-56.5 947,-56.5"/>
-<text text-anchor="start" x="955" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1005.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_molecules.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="1614.5,-56.5 1614.5,-86.5 1731.5,-86.5 1731.5,-56.5 1614.5,-56.5"/>
+<text text-anchor="start" x="1622.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1673" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_molecules.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node32&#45;&gt;Node33 -->
 <g id="edge18" class="edge">
 <title>Node32&#45;&gt;Node33</title>
-<path fill="none" stroke="#191970" d="M1009.2449,-113.3179C1008.441,-104.3414 1007.561,-94.5143 1006.8561,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="1005.7604,-113.6487 1010.1385,-123.2967 1012.7325,-113.0243 1005.7604,-113.6487"/>
+<path fill="none" stroke="#191970" d="M1673,-113.0249C1673,-104.128 1673,-94.4287 1673,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1669.5001,-113.2966 1673,-123.2967 1676.5001,-113.2967 1669.5001,-113.2966"/>
 </g>
 <!-- Node34&#45;&gt;Node22 -->
 <g id="edge20" class="edge">
 <title>Node34&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M1483.5989,-123.0365C1241.556,-89.1225 1175.2308,-122.0865 937.5,-87 927.1061,-85.466 915.9411,-83.1551 905.7632,-80.7826"/>
-<polygon fill="#191970" stroke="#191970" points="1483.3724,-126.5395 1493.7663,-124.4856 1484.3602,-119.6095 1483.3724,-126.5395"/>
+<path fill="none" stroke="#191970" d="M1341.267,-122.966C1233.7513,-103.673 1203.0257,-112.3451 1101,-87 1094.5547,-85.3989 1087.724,-83.2332 1081.4161,-81.0288"/>
+<polygon fill="#191970" stroke="#191970" points="1340.7484,-126.4292 1351.2158,-124.791 1342.0114,-119.5441 1340.7484,-126.4292"/>
 </g>
 <!-- Node35 -->
 <g id="node16" class="node">
 <title>Node35</title>
 <g id="a_node16"><a xlink:href="py__sta__dump__atoms_8cpp.html" target="_top" xlink:title="This file is for binding StaDumpAtoms class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="1491,-56.5 1491,-86.5 1620,-86.5 1620,-56.5 1491,-56.5"/>
-<text text-anchor="start" x="1499" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1555.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_atoms.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="1362.5,-56.5 1362.5,-86.5 1491.5,-86.5 1491.5,-56.5 1362.5,-56.5"/>
+<text text-anchor="start" x="1370.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1427" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_atoms.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node34&#45;&gt;Node35 -->
 <g id="edge21" class="edge">
 <title>Node34&#45;&gt;Node35</title>
-<path fill="none" stroke="#191970" d="M1554.2605,-113.0249C1554.526,-104.128 1554.8156,-94.4287 1555.048,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="1550.7539,-113.1967 1553.9538,-123.2967 1557.7507,-113.4056 1550.7539,-113.1967"/>
+<path fill="none" stroke="#191970" d="M1417.0136,-113.3179C1419.1573,-104.3414 1421.5041,-94.5143 1423.3837,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1413.5492,-112.7572 1414.6306,-123.2967 1420.3577,-114.3831 1413.5492,-112.7572"/>
 </g>
 <!-- Node36&#45;&gt;Node22 -->
 <g id="edge23" class="edge">
 <title>Node36&#45;&gt;Node22</title>
-<path fill="none" stroke="#191970" d="M1073.1242,-122.5369C1020.7298,-109.3398 948.2595,-91.086 905.6876,-80.363"/>
-<polygon fill="#191970" stroke="#191970" points="1072.4389,-125.9736 1082.9909,-125.0221 1074.1487,-119.1856 1072.4389,-125.9736"/>
+<path fill="none" stroke="#191970" d="M1216.5875,-121.2313C1182.2317,-111.6306 1139.1263,-99.1885 1101,-87 1095.2914,-85.175 1089.2065,-83.11 1083.4399,-81.0961"/>
+<polygon fill="#191970" stroke="#191970" points="1215.9203,-124.6786 1226.4926,-123.9885 1217.7975,-117.935 1215.9203,-124.6786"/>
 </g>
 <!-- Node37 -->
 <g id="node18" class="node">
 <title>Node37</title>
 <g id="a_node18"><a xlink:href="py__sta__dump__box_8cpp.html" target="_top" xlink:title="This file is for binding StaDumpBox class to Python. ">
-<polygon fill="#ffffff" stroke="#000000" points="1082.5,-56.5 1082.5,-86.5 1200.5,-86.5 1200.5,-56.5 1082.5,-56.5"/>
-<text text-anchor="start" x="1090.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
-<text text-anchor="middle" x="1141.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_box.cpp</text>
+<polygon fill="#ffffff" stroke="#000000" points="1226,-56.5 1226,-86.5 1344,-86.5 1344,-56.5 1226,-56.5"/>
+<text text-anchor="start" x="1234" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/starters</text>
+<text text-anchor="middle" x="1285" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">/py_sta_dump_box.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node36&#45;&gt;Node37 -->
 <g id="edge24" class="edge">
 <title>Node36&#45;&gt;Node37</title>
-<path fill="none" stroke="#191970" d="M1138.3793,-113.3179C1139.0491,-104.3414 1139.7825,-94.5143 1140.3699,-86.6432"/>
-<polygon fill="#191970" stroke="#191970" points="1134.8886,-113.0639 1137.6346,-123.2967 1141.8692,-113.5849 1134.8886,-113.0639"/>
+<path fill="none" stroke="#191970" d="M1281.8793,-113.3179C1282.5491,-104.3414 1283.2825,-94.5143 1283.8699,-86.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1278.3886,-113.0639 1281.1346,-123.2967 1285.3692,-113.5849 1278.3886,-113.0639"/>
 </g>
-<!-- Node39&#45;&gt;Node24 -->
+<!-- Node39&#45;&gt;Node26 -->
 <g id="edge27" class="edge">
-<title>Node39&#45;&gt;Node24</title>
-<path fill="none" stroke="#191970" d="M338.7383,-185.7758C340.4313,-175.4641 342.4704,-163.0437 344.0337,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="335.2425,-185.4656 337.076,-195.9005 342.15,-186.5997 335.2425,-185.4656"/>
+<title>Node39&#45;&gt;Node26</title>
+<path fill="none" stroke="#191970" d="M321.9555,-193.0066C359.9013,-181.7072 415.7984,-165.0622 455.8292,-153.142"/>
+<polygon fill="#191970" stroke="#191970" points="320.8222,-189.6921 312.237,-195.9005 322.82,-196.401 320.8222,-189.6921"/>
 </g>
 <!-- Node40 -->
 <g id="node21" class="node">
 <title>Node40</title>
-<g id="a_node21"><a xlink:href="sta__beads_8cpp.html" target="_top" xlink:title="This file has an implementation of StaBeads class, which is a subclass of Starter class...">
-<polygon fill="#ffffff" stroke="#000000" points="0,-129 0,-148 133,-148 133,-129 0,-129"/>
-<text text-anchor="middle" x="66.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_beads.cpp</text>
+<g id="a_node21"><a xlink:href="py__element_8cpp.html" target="_top" xlink:title="This file is for binding Element class to Python. ">
+<polygon fill="#ffffff" stroke="#000000" points="146,-129 146,-148 280,-148 280,-129 146,-129"/>
+<text text-anchor="middle" x="213" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/pybind/py_element.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node39&#45;&gt;Node40 -->
 <g id="edge28" class="edge">
 <title>Node39&#45;&gt;Node40</title>
-<path fill="none" stroke="#191970" d="M287.2347,-193.4785C235.0983,-180.4929 153.0697,-160.062 105.059,-148.1039"/>
-<polygon fill="#191970" stroke="#191970" points="286.6951,-196.951 297.2445,-195.9717 288.3869,-190.1585 286.6951,-196.951"/>
+<path fill="none" stroke="#191970" d="M263.0785,-188.5785C250.2639,-175.7639 233.1218,-158.6218 222.5817,-148.0817"/>
+<polygon fill="#191970" stroke="#191970" points="260.8546,-191.3043 270.4005,-195.9005 265.8043,-186.3546 260.8546,-191.3043"/>
 </g>
-<!-- Node41&#45;&gt;Node26 -->
-<g id="edge30" class="edge">
-<title>Node41&#45;&gt;Node26</title>
-<path fill="none" stroke="#191970" d="M470.2617,-185.7758C468.5687,-175.4641 466.5296,-163.0437 464.9663,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="466.85,-186.5997 471.924,-195.9005 473.7575,-185.4656 466.85,-186.5997"/>
-</g>
-<!-- Node42 -->
-<g id="node23" class="node">
-<title>Node42</title>
-<g id="a_node23"><a xlink:href="sta__copy_8cpp.html" target="_top" xlink:title="This file has an implementation of StaCopy class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="151.5,-129 151.5,-148 279.5,-148 279.5,-129 151.5,-129"/>
-<text text-anchor="middle" x="215.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_copy.cpp</text>
+<!-- Node41 -->
+<g id="node22" class="node">
+<title>Node41</title>
+<g id="a_node22"><a xlink:href="sta__copy_8cpp.html" target="_top" xlink:title="This file has an implementation of StaCopy class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="0,-129 0,-148 128,-148 128,-129 0,-129"/>
+<text text-anchor="middle" x="64" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_copy.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node41&#45;&gt;Node42 -->
+<!-- Node39&#45;&gt;Node41 -->
+<g id="edge29" class="edge">
+<title>Node39&#45;&gt;Node41</title>
+<path fill="none" stroke="#191970" d="M239.4228,-192.9136C197.4642,-179.8986 132.8774,-159.8647 94.8901,-148.0817"/>
+<polygon fill="#191970" stroke="#191970" points="238.4645,-196.2807 249.0525,-195.9005 240.5383,-189.595 238.4645,-196.2807"/>
+</g>
+<!-- Node42&#45;&gt;Node28 -->
 <g id="edge31" class="edge">
-<title>Node41&#45;&gt;Node42</title>
-<path fill="none" stroke="#191970" d="M426.8955,-193.3973C376.8762,-180.4078 298.4338,-160.0371 252.4823,-148.1039"/>
-<polygon fill="#191970" stroke="#191970" points="426.2502,-196.8457 436.8089,-195.9717 428.0097,-190.0705 426.2502,-196.8457"/>
+<title>Node42&#45;&gt;Node28</title>
+<path fill="none" stroke="#191970" d="M570.8247,-188.6753C581.6309,-177.8691 595.5447,-163.9553 605.9782,-153.5218"/>
+<polygon fill="#191970" stroke="#191970" points="568.1957,-186.3546 563.5995,-195.9005 573.1454,-191.3043 568.1957,-186.3546"/>
 </g>
-<!-- Node43&#45;&gt;Node28 -->
+<!-- Node42&#45;&gt;Node40 -->
+<g id="edge32" class="edge">
+<title>Node42&#45;&gt;Node40</title>
+<path fill="none" stroke="#191970" d="M494.1161,-194.0258C440.3856,-183.6917 359.3868,-168.0168 289,-154 279.4911,-152.1064 269.3193,-150.0519 259.6096,-148.0768"/>
+<polygon fill="#191970" stroke="#191970" points="493.6739,-197.5048 504.1548,-195.9555 494.9953,-190.6307 493.6739,-197.5048"/>
+</g>
+<!-- Node43 -->
+<g id="node24" class="node">
+<title>Node43</title>
+<g id="a_node24"><a xlink:href="sta__custom_8cpp.html" target="_top" xlink:title="This file has an implementation of StaCustom class, which is a subclass of Starter class...">
+<polygon fill="#ffffff" stroke="#000000" points="298.5,-129 298.5,-148 437.5,-148 437.5,-129 298.5,-129"/>
+<text text-anchor="middle" x="368" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_custom.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node42&#45;&gt;Node43 -->
 <g id="edge33" class="edge">
-<title>Node43&#45;&gt;Node28</title>
-<path fill="none" stroke="#191970" d="M736.5,-185.7758C736.5,-175.4641 736.5,-163.0437 736.5,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="733.0001,-185.9005 736.5,-195.9005 740.0001,-185.9006 733.0001,-185.9005"/>
+<title>Node42&#45;&gt;Node43</title>
+<path fill="none" stroke="#191970" d="M517.6772,-192.416C481.5232,-179.3928 426.897,-159.7156 394.5998,-148.0817"/>
+<polygon fill="#191970" stroke="#191970" points="516.7563,-195.8044 527.3507,-195.9005 519.1287,-189.2186 516.7563,-195.8044"/>
 </g>
-<!-- Node44 -->
-<g id="node25" class="node">
-<title>Node44</title>
-<g id="a_node25"><a xlink:href="sta__custom_8cpp.html" target="_top" xlink:title="This file has an implementation of StaCustom class, which is a subclass of Starter class...">
-<polygon fill="#ffffff" stroke="#000000" points="530,-129 530,-148 669,-148 669,-129 530,-129"/>
-<text text-anchor="middle" x="599.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_custom.cpp</text>
+<!-- Node44&#45;&gt;Node24 -->
+<g id="edge35" class="edge">
+<title>Node44&#45;&gt;Node24</title>
+<path fill="none" stroke="#191970" d="M889,-185.7758C889,-175.4641 889,-163.0437 889,-153.5218"/>
+<polygon fill="#191970" stroke="#191970" points="885.5001,-185.9005 889,-195.9005 892.5001,-185.9006 885.5001,-185.9005"/>
+</g>
+<!-- Node45 -->
+<g id="node26" class="node">
+<title>Node45</title>
+<g id="a_node26"><a xlink:href="sta__beads_8cpp.html" target="_top" xlink:title="This file has an implementation of StaBeads class, which is a subclass of Starter class...">
+<polygon fill="#ffffff" stroke="#000000" points="688.5,-129 688.5,-148 821.5,-148 821.5,-129 688.5,-129"/>
+<text text-anchor="middle" x="755" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_beads.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node43&#45;&gt;Node44 -->
-<g id="edge34" class="edge">
-<title>Node43&#45;&gt;Node44</title>
-<path fill="none" stroke="#191970" d="M707.6714,-191.4013C681.064,-178.389 642.2712,-159.4173 619.0923,-148.0817"/>
-<polygon fill="#191970" stroke="#191970" points="706.3503,-194.6513 716.8712,-195.9005 709.4256,-188.3631 706.3503,-194.6513"/>
-</g>
-<!-- Node45&#45;&gt;Node30 -->
+<!-- Node44&#45;&gt;Node45 -->
 <g id="edge36" class="edge">
-<title>Node45&#45;&gt;Node30</title>
-<path fill="none" stroke="#191970" d="M1395.0625,-248.4008C1399.387,-240.1971 1404.151,-230.319 1407.5,-221 1415.7018,-198.1776 1421.224,-170.5025 1424.1135,-153.711"/>
-<polygon fill="#191970" stroke="#191970" points="1391.8542,-246.9732 1390.1304,-257.4269 1397.9969,-250.3299 1391.8542,-246.9732"/>
+<title>Node44&#45;&gt;Node45</title>
+<path fill="none" stroke="#191970" d="M860.8026,-191.4013C834.7779,-178.389 796.8346,-159.4173 774.1633,-148.0817"/>
+<polygon fill="#191970" stroke="#191970" points="859.2915,-194.5588 869.8011,-195.9005 862.4221,-188.2978 859.2915,-194.5588"/>
 </g>
-<!-- Node46 -->
-<g id="node27" class="node">
-<title>Node46</title>
-<g id="a_node27"><a xlink:href="sta__dump_8cpp.html" target="_top" xlink:title="This file has an implementation of StaDump class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="1606,-196 1606,-215 1737,-215 1737,-196 1606,-196"/>
-<text text-anchor="middle" x="1671.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump.cpp</text>
-</a>
-</g>
-</g>
-<!-- Node45&#45;&gt;Node46 -->
-<g id="edge37" class="edge">
-<title>Node45&#45;&gt;Node46</title>
-<path fill="none" stroke="#191970" d="M1438.8529,-255.3529C1493.3098,-243.6836 1576.1307,-225.9363 1626.8667,-215.0643"/>
-<polygon fill="#191970" stroke="#191970" points="1438.0735,-251.9404 1429.0289,-257.4581 1439.5403,-258.785 1438.0735,-251.9404"/>
+<!-- Node46&#45;&gt;Node30 -->
+<g id="edge38" class="edge">
+<title>Node46&#45;&gt;Node30</title>
+<path fill="none" stroke="#191970" d="M1201.5915,-247.9602C1191.6147,-222.3198 1174.06,-177.2041 1164.915,-153.7016"/>
+<polygon fill="#191970" stroke="#191970" points="1198.3538,-249.2914 1205.2419,-257.3416 1204.8774,-246.753 1198.3538,-249.2914"/>
 </g>
 <!-- Node47 -->
 <g id="node28" class="node">
 <title>Node47</title>
-<g id="a_node28"><a xlink:href="sta__dump__atoms_8h.html" target="_top" xlink:title="This file has a definition of StaDumpAtoms class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="1475.5,-190.5 1475.5,-220.5 1587.5,-220.5 1587.5,-190.5 1475.5,-190.5"/>
-<text text-anchor="start" x="1483.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
-<text text-anchor="middle" x="1531.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_atoms.h</text>
+<g id="a_node28"><a xlink:href="sta__dump_8cpp.html" target="_top" xlink:title="This file has an implementation of StaDump class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="1468.5,-196 1468.5,-215 1599.5,-215 1599.5,-196 1468.5,-196"/>
+<text text-anchor="middle" x="1534" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node47 -->
-<g id="edge38" class="edge">
-<title>Node45&#45;&gt;Node47</title>
-<path fill="none" stroke="#191970" d="M1416.8962,-253.4465C1440.1548,-243.7159 1471.507,-230.5991 1495.5398,-220.5446"/>
-<polygon fill="#191970" stroke="#191970" points="1415.3431,-250.3022 1407.4688,-257.3906 1418.0448,-256.7599 1415.3431,-250.3022"/>
-</g>
-<!-- Node49 -->
-<g id="node30" class="node">
-<title>Node49</title>
-<g id="a_node30"><a xlink:href="sta__dump__box_8h.html" target="_top" xlink:title="This file has a definition of StaDumpBox class, which is a subclass of Starter class. ">
-<polygon fill="#ffffff" stroke="#000000" points="1286.5,-190.5 1286.5,-220.5 1398.5,-220.5 1398.5,-190.5 1286.5,-190.5"/>
-<text text-anchor="start" x="1294.5" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
-<text text-anchor="middle" x="1342.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_box.h</text>
-</a>
-</g>
-</g>
-<!-- Node45&#45;&gt;Node49 -->
-<g id="edge41" class="edge">
-<title>Node45&#45;&gt;Node49</title>
-<path fill="none" stroke="#191970" d="M1372.2672,-249.0877C1366.0819,-240.0307 1358.6599,-229.1627 1352.7744,-220.5446"/>
-<polygon fill="#191970" stroke="#191970" points="1369.4075,-251.1065 1377.9375,-257.3906 1375.1881,-247.1587 1369.4075,-251.1065"/>
-</g>
-<!-- Node47&#45;&gt;Node34 -->
+<!-- Node46&#45;&gt;Node47 -->
 <g id="edge39" class="edge">
-<title>Node47&#45;&gt;Node34</title>
-<path fill="none" stroke="#191970" d="M1539.6727,-180.6103C1542.646,-171.5553 1545.915,-161.5998 1548.5276,-153.6432"/>
-<polygon fill="#191970" stroke="#191970" points="1536.2866,-179.7038 1536.4921,-190.2967 1542.9372,-181.8877 1536.2866,-179.7038"/>
+<title>Node46&#45;&gt;Node47</title>
+<path fill="none" stroke="#191970" d="M1272.8368,-255.6504C1323.3959,-246.5658 1395.7867,-233.3461 1459,-221 1468.6566,-219.114 1478.9972,-217.0232 1488.8196,-215.0036"/>
+<polygon fill="#191970" stroke="#191970" points="1271.9331,-252.2566 1262.7083,-257.4675 1273.1692,-259.1466 1271.9331,-252.2566"/>
 </g>
 <!-- Node48 -->
 <g id="node29" class="node">
 <title>Node48</title>
-<g id="a_node29"><a xlink:href="sta__dump__atoms_8cpp.html" target="_top" xlink:title="This file has an implementation of StaDumpAtoms class, which is a subclass of Starter class...">
-<polygon fill="#ffffff" stroke="#000000" points="1761.5,-123.5 1761.5,-153.5 1873.5,-153.5 1873.5,-123.5 1761.5,-123.5"/>
-<text text-anchor="start" x="1769.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
-<text text-anchor="middle" x="1817.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_atoms.cpp</text>
+<g id="a_node29"><a xlink:href="sta__dump__atoms_8h.html" target="_top" xlink:title="This file has a definition of StaDumpAtoms class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="1338,-190.5 1338,-220.5 1450,-220.5 1450,-190.5 1338,-190.5"/>
+<text text-anchor="start" x="1346" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
+<text text-anchor="middle" x="1394" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_atoms.h</text>
 </a>
 </g>
 </g>
-<!-- Node47&#45;&gt;Node48 -->
+<!-- Node46&#45;&gt;Node48 -->
 <g id="edge40" class="edge">
-<title>Node47&#45;&gt;Node48</title>
-<path fill="none" stroke="#191970" d="M1597.1989,-190.0703C1597.2993,-190.0469 1597.3997,-190.0234 1597.5,-190 1666.3692,-173.9154 1683.6584,-170.2024 1752.5,-154 1755.4361,-153.309 1758.4462,-152.5984 1761.4851,-151.8795"/>
-<polygon fill="#191970" stroke="#191970" points="1596.6075,-186.6141 1587.6672,-192.2993 1598.2015,-193.4302 1596.6075,-186.6141"/>
-</g>
-<!-- Node49&#45;&gt;Node36 -->
-<g id="edge42" class="edge">
-<title>Node49&#45;&gt;Node36</title>
-<path fill="none" stroke="#191970" d="M1286.4677,-187.2759C1254.0015,-176.7165 1213.6131,-163.5805 1182.9321,-153.6017"/>
-<polygon fill="#191970" stroke="#191970" points="1285.6774,-190.6993 1296.2696,-190.4639 1287.8425,-184.0425 1285.6774,-190.6993"/>
+<title>Node46&#45;&gt;Node48</title>
+<path fill="none" stroke="#191970" d="M1247.4409,-254.221C1276.9213,-244.4207 1317.6885,-230.8684 1348.7439,-220.5446"/>
+<polygon fill="#191970" stroke="#191970" points="1246.2915,-250.9147 1237.9063,-257.3906 1248.4998,-257.5573 1246.2915,-250.9147"/>
 </g>
 <!-- Node50 -->
 <g id="node31" class="node">
 <title>Node50</title>
-<g id="a_node31"><a xlink:href="sta__dump__box_8cpp.html" target="_top" xlink:title="This file has an implementation of StaDumpBox class, which is a subclass of Starter class...">
-<polygon fill="#ffffff" stroke="#000000" points="1631.5,-123.5 1631.5,-153.5 1743.5,-153.5 1743.5,-123.5 1631.5,-123.5"/>
-<text text-anchor="start" x="1639.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
-<text text-anchor="middle" x="1687.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_box.cpp</text>
+<g id="a_node31"><a xlink:href="sta__dump__box_8h.html" target="_top" xlink:title="This file has a definition of StaDumpBox class, which is a subclass of Starter class. ">
+<polygon fill="#ffffff" stroke="#000000" points="1208,-190.5 1208,-220.5 1320,-220.5 1320,-190.5 1208,-190.5"/>
+<text text-anchor="start" x="1216" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
+<text text-anchor="middle" x="1264" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_box.h</text>
 </a>
 </g>
 </g>
-<!-- Node49&#45;&gt;Node50 -->
+<!-- Node46&#45;&gt;Node50 -->
 <g id="edge43" class="edge">
-<title>Node49&#45;&gt;Node50</title>
-<path fill="none" stroke="#191970" d="M1408.6543,-194.3354C1465.5129,-184.5002 1549.6188,-169.3812 1622.5,-154 1625.3378,-153.4011 1628.2412,-152.7714 1631.1703,-152.1225"/>
-<polygon fill="#191970" stroke="#191970" points="1407.9757,-190.9007 1398.7157,-196.0487 1409.1649,-197.7989 1407.9757,-190.9007"/>
+<title>Node46&#45;&gt;Node50</title>
+<path fill="none" stroke="#191970" d="M1224.2646,-249.9314C1232.5095,-240.7122 1242.5973,-229.4321 1250.5455,-220.5446"/>
+<polygon fill="#191970" stroke="#191970" points="1221.6511,-247.6034 1217.5938,-257.3906 1226.8689,-252.2698 1221.6511,-247.6034"/>
 </g>
-<!-- Node51&#45;&gt;Node32 -->
-<g id="edge45" class="edge">
-<title>Node51&#45;&gt;Node32</title>
-<path fill="none" stroke="#191970" d="M1017.1449,-185.7758C1015.9136,-175.4641 1014.4306,-163.0437 1013.2936,-153.5218"/>
-<polygon fill="#191970" stroke="#191970" points="1013.6928,-186.3861 1018.3538,-195.9005 1020.6434,-185.5561 1013.6928,-186.3861"/>
+<!-- Node48&#45;&gt;Node34 -->
+<g id="edge41" class="edge">
+<title>Node48&#45;&gt;Node34</title>
+<path fill="none" stroke="#191970" d="M1400.3895,-180.3179C1402.6671,-171.3414 1405.1606,-161.5143 1407.1577,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1396.9245,-179.743 1397.8576,-190.2967 1403.7095,-181.4646 1396.9245,-179.743"/>
 </g>
-<!-- Node52 -->
-<g id="node33" class="node">
-<title>Node52</title>
-<g id="a_node33"><a xlink:href="sta__molecules_8cpp.html" target="_top" xlink:title="This file has an implementation of StaMolecules class, which is a subclass of Starter class...">
-<polygon fill="#ffffff" stroke="#000000" points="1208,-129 1208,-148 1359,-148 1359,-129 1208,-129"/>
-<text text-anchor="middle" x="1283.5" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_molecules.cpp</text>
+<!-- Node49 -->
+<g id="node30" class="node">
+<title>Node49</title>
+<g id="a_node30"><a xlink:href="sta__dump__atoms_8cpp.html" target="_top" xlink:title="This file has an implementation of StaDumpAtoms class, which is a subclass of Starter class...">
+<polygon fill="#ffffff" stroke="#000000" points="1745,-123.5 1745,-153.5 1857,-153.5 1857,-123.5 1745,-123.5"/>
+<text text-anchor="start" x="1753" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
+<text text-anchor="middle" x="1801" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_atoms.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node51&#45;&gt;Node52 -->
-<g id="edge46" class="edge">
-<title>Node51&#45;&gt;Node52</title>
-<path fill="none" stroke="#191970" d="M1066.8681,-193.4785C1118.0355,-180.4929 1198.5394,-160.062 1245.6577,-148.1039"/>
-<polygon fill="#191970" stroke="#191970" points="1065.8761,-190.1193 1057.0444,-195.9717 1067.5981,-196.9042 1065.8761,-190.1193"/>
+<!-- Node48&#45;&gt;Node49 -->
+<g id="edge42" class="edge">
+<title>Node48&#45;&gt;Node49</title>
+<path fill="none" stroke="#191970" d="M1460.406,-189.8587C1582.4477,-168.0517 1616.506,-175.585 1735,-154 1738.2423,-153.4094 1741.5648,-152.7625 1744.9114,-152.0788"/>
+<polygon fill="#191970" stroke="#191970" points="1459.507,-186.4647 1450.2938,-191.6961 1460.7585,-193.3519 1459.507,-186.4647"/>
+</g>
+<!-- Node50&#45;&gt;Node36 -->
+<g id="edge44" class="edge">
+<title>Node50&#45;&gt;Node36</title>
+<path fill="none" stroke="#191970" d="M1270.0136,-180.3179C1272.1573,-171.3414 1274.5041,-161.5143 1276.3837,-153.6432"/>
+<polygon fill="#191970" stroke="#191970" points="1266.5492,-179.7572 1267.6306,-190.2967 1273.3577,-181.3831 1266.5492,-179.7572"/>
+</g>
+<!-- Node51 -->
+<g id="node32" class="node">
+<title>Node51</title>
+<g id="a_node32"><a xlink:href="sta__dump__box_8cpp.html" target="_top" xlink:title="This file has an implementation of StaDumpBox class, which is a subclass of Starter class...">
+<polygon fill="#ffffff" stroke="#000000" points="1489,-123.5 1489,-153.5 1601,-153.5 1601,-123.5 1489,-123.5"/>
+<text text-anchor="start" x="1497" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_dump</text>
+<text text-anchor="middle" x="1545" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_box.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node50&#45;&gt;Node51 -->
+<g id="edge45" class="edge">
+<title>Node50&#45;&gt;Node51</title>
+<path fill="none" stroke="#191970" d="M1329.9247,-189.7813C1378.2258,-178.2647 1443.0844,-162.8002 1488.9082,-151.8742"/>
+<polygon fill="#191970" stroke="#191970" points="1329.1047,-186.3786 1320.1892,-192.1026 1330.7283,-193.1877 1329.1047,-186.3786"/>
+</g>
+<!-- Node52&#45;&gt;Node32 -->
+<g id="edge47" class="edge">
+<title>Node52&#45;&gt;Node32</title>
+<path fill="none" stroke="#191970" d="M1683.6577,-186.1042C1681.3348,-175.7287 1678.5175,-163.145 1676.3631,-153.5218"/>
+<polygon fill="#191970" stroke="#191970" points="1680.2506,-186.9068 1685.8509,-195.9005 1687.0815,-185.3774 1680.2506,-186.9068"/>
+</g>
+<!-- Node53 -->
+<g id="node34" class="node">
+<title>Node53</title>
+<g id="a_node34"><a xlink:href="sta__molecules_8cpp.html" target="_top" xlink:title="This file has an implementation of StaMolecules class, which is a subclass of Starter class...">
+<polygon fill="#ffffff" stroke="#000000" points="1875.5,-129 1875.5,-148 2026.5,-148 2026.5,-129 1875.5,-129"/>
+<text text-anchor="middle" x="1951" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">src/starters/sta_molecules.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node52&#45;&gt;Node53 -->
+<g id="edge48" class="edge">
+<title>Node52&#45;&gt;Node53</title>
+<path fill="none" stroke="#191970" d="M1735.1887,-193.4785C1786.1623,-180.4929 1866.3612,-160.062 1913.301,-148.1039"/>
+<polygon fill="#191970" stroke="#191970" points="1734.2286,-190.1113 1725.4022,-195.9717 1735.9567,-196.8946 1734.2286,-190.1113"/>
 </g>
 </g>
 </svg>

@@ -76,6 +76,9 @@ namespace pybind
           @param upd
             An object of Starter's subclass, which sets some properties
             to empty Element::data of the created Element object.
+            Note that `upd` can be an Element or ::Json object:
+            StaCopy and StaCustom are implicitly used for Element
+            and ::Json, respectively.
         </td>
         <td class="py_constructor">
           An object of Element class.
