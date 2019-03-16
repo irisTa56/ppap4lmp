@@ -36,10 +36,12 @@ void Starter::sort_by_id(
 /* ------------------------------------------------------------------ */
 
 void Starter::compute(
-  Json &data,
+  const ElPtr &el,
   DataKeys &datakeys,
   const int dataid)
 {
+  auto &data = el->get_mutable_data();
+
   if (check_blacklist(dataid))
   {
     if (data != nullptr)

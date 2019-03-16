@@ -196,6 +196,7 @@ class Element : public Generator, public EnShThis<Element> {
     by this method.
   */
   const Json &get_data();
+  Json &get_mutable_data();
   /*!
     @brief Get the partial data of this object.
 

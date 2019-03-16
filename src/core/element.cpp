@@ -85,7 +85,7 @@ void Element::update_data(
 {
   omp_set_lock(&omp_lock);
 
-  upd->compute(data, datakeys, dataid);
+  upd->compute(shared_from_this(), datakeys, dataid);
 
   omp_unset_lock(&omp_lock);
 }
@@ -179,6 +179,13 @@ Json Element::get_data(const Json &key_)
 /* ------------------------------------------------------------------ */
 
 const Json &Element::get_data()
+{
+  return data;
+}
+
+/* ------------------------------------------------------------------ */
+
+Json &Element::get_mutable_data()
 {
   return data;
 }

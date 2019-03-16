@@ -49,7 +49,7 @@ class Filter : public Updater {
     Filter::compute_impl orveridden in subclasses of this class.
   */
   virtual void compute(
-    Json &data,
+    const ElPtr &el,
     DataKeys &datakeys,
     const int dataid) override;
 };

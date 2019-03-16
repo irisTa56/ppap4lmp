@@ -61,7 +61,7 @@ class Starter : public Updater {
     is an array and `id` property is set.
   */
   virtual void compute(
-    Json &data,
+    const ElPtr &el,
     DataKeys &datakeys,
     const int dataid) override;
 };

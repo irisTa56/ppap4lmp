@@ -51,7 +51,7 @@ class Adder : public Updater {
     must be set at initialization (done by Starter) only.
   */
   virtual void compute(
-    Json &data,
+    const ElPtr &el,
     DataKeys &datakeys,
     const int dataid) override;
 };

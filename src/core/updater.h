@@ -109,7 +109,7 @@ class Updater {
     @return None.
   */
   virtual void compute(
-    Json &data, DataKeys &datakeys, const int dataid) = 0;
+    const ElPtr &el, DataKeys &datakeys, const int dataid) = 0;
   /*!
     @brief Remove Element::dataid from #dataid_blacklist.
 

@@ -62,7 +62,7 @@ class StaCopy : public Starter {
     this method to skip sorting by `id` property.
   */
   virtual void compute(
-    Json &data,
+    const ElPtr &el,
     DataKeys &datakeys,
     const int dataid) override;
 };

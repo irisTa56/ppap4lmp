@@ -14,10 +14,12 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 void Filter::compute(
-  Json &data,
+  const ElPtr &el,
   DataKeys &datakeys,
   const int dataid)
 {
+  auto &data = el->get_mutable_data();
+
   if (check_blacklist(dataid))
   {
     if (data.is_array())
