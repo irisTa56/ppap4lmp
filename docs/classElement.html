@@ -106,12 +106,14 @@ $(document).ready(function(){initNavTree('classElement.html','');});
 <div class="dynheader">
 Inheritance diagram for Element:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Element:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -126,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5474cb60706c92e37268ac4c3ff2c46b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get this object as a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class.  <a href="#a5474cb60706c92e37268ac4c3ff2c46b">More...</a><br /></td></tr>
 <tr class="separator:a5474cb60706c92e37268ac4c3ff2c46b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae07a844782e6b86f3d765ce661f02d82"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ae07a844782e6b86f3d765ce661f02d82">set_checking_classname</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;classname) override</td></tr>
-<tr class="memdesc:ae07a844782e6b86f3d765ce661f02d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>.  <a href="#ae07a844782e6b86f3d765ce661f02d82">More...</a><br /></td></tr>
+<tr class="memdesc:ae07a844782e6b86f3d765ce661f02d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a name of class of which instance calls Element::required.  <a href="#ae07a844782e6b86f3d765ce661f02d82">More...</a><br /></td></tr>
 <tr class="separator:ae07a844782e6b86f3d765ce661f02d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc43106f0ea5e11d03105c40df1fe0a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classElement.html">Element</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8">append_updater</a> (const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classUpdater.html">Updater</a> &gt; &amp;upd)</td></tr>
 <tr class="memdesc:adc43106f0ea5e11d03105c40df1fe0a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object to this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object: the only way to extend an updating process associated with this object.  <a href="#adc43106f0ea5e11d03105c40df1fe0a8">More...</a><br /></td></tr>
@@ -134,12 +136,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a47096a22005245db075143ff1ee1981c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a47096a22005245db075143ff1ee1981c">get_data</a> ()</td></tr>
 <tr class="memdesc:a47096a22005245db075143ff1ee1981c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> of this object.  <a href="#a47096a22005245db075143ff1ee1981c">More...</a><br /></td></tr>
 <tr class="separator:a47096a22005245db075143ff1ee1981c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4692ea82ce0c1b756c37e6b101aade"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a6f4692ea82ce0c1b756c37e6b101aade">get_mutable_data</a> ()</td></tr>
+<tr class="memdesc:a6f4692ea82ce0c1b756c37e6b101aade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> of this object.  <a href="#a6f4692ea82ce0c1b756c37e6b101aade">More...</a><br /></td></tr>
+<tr class="separator:a6f4692ea82ce0c1b756c37e6b101aade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5881587aff2e2425e3110f35241e5ce8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a5881587aff2e2425e3110f35241e5ce8">get_data</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;key_)</td></tr>
 <tr class="memdesc:a5881587aff2e2425e3110f35241e5ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the partial data of this object.  <a href="#a5881587aff2e2425e3110f35241e5ce8">More...</a><br /></td></tr>
 <tr class="separator:a5881587aff2e2425e3110f35241e5ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a060b21b533cc1deb92e666653a89f229"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classDataKeys.html">DataKeys</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a060b21b533cc1deb92e666653a89f229">get_keys</a> ()</td></tr>
-<tr class="memdesc:a060b21b533cc1deb92e666653a89f229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get keys of the data of this object.  <a href="#a060b21b533cc1deb92e666653a89f229">More...</a><br /></td></tr>
-<tr class="separator:a060b21b533cc1deb92e666653a89f229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dfb31b61142eff280750d3dd0cffc6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a5dfb31b61142eff280750d3dd0cffc6a">get_keys</a> ()</td></tr>
+<tr class="memdesc:a5dfb31b61142eff280750d3dd0cffc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get keys of the data of this object.  <a href="#a5dfb31b61142eff280750d3dd0cffc6a">More...</a><br /></td></tr>
+<tr class="separator:a5dfb31b61142eff280750d3dd0cffc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576395d61902a76979ffd336afa714b3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a576395d61902a76979ffd336afa714b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classElement.html#a576395d61902a76979ffd336afa714b3">array1d</a> (T &amp;array, const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;key)</td></tr>
 <tr class="memdesc:a576395d61902a76979ffd336afa714b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract values of a property in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> as a one-dimensional Eigen-Array.  <a href="#a576395d61902a76979ffd336afa714b3">More...</a><br /></td></tr>
@@ -148,18 +153,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classElement.html#a4c2fcdb60e23dedce2b54b9deeadc469">array2d</a> (T &amp;array, const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt; &amp;keys)</td></tr>
 <tr class="memdesc:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract values of properties in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> as a two-dimensional Eigen-Array.  <a href="#a4c2fcdb60e23dedce2b54b9deeadc469">More...</a><br /></td></tr>
 <tr class="separator:a4c2fcdb60e23dedce2b54b9deeadc469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd2b3ed6f76878ae6cc1c1a36183517"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517">required</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;key_)</td></tr>
-<tr class="memdesc:a2dd2b3ed6f76878ae6cc1c1a36183517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" title="Check if this object has required key(s). ">DataKeys::required</a>.  <a href="#a2dd2b3ed6f76878ae6cc1c1a36183517">More...</a><br /></td></tr>
-<tr class="separator:a2dd2b3ed6f76878ae6cc1c1a36183517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d0123e7fa1a7b96fb0ac271c0837a7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a0d0123e7fa1a7b96fb0ac271c0837a7d">optional</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;key_)</td></tr>
-<tr class="memdesc:a0d0123e7fa1a7b96fb0ac271c0837a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2" title="Check if this object has optional key(s). ">DataKeys::optional</a>.  <a href="#a0d0123e7fa1a7b96fb0ac271c0837a7d">More...</a><br /></td></tr>
-<tr class="separator:a0d0123e7fa1a7b96fb0ac271c0837a7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536675d255a5d38f1bb37dea285467e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a536675d255a5d38f1bb37dea285467e9">update_keys</a> ()</td></tr>
+<tr class="memdesc:a536675d255a5d38f1bb37dea285467e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>. This method must be called after setting new properties to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>.  <a href="#a536675d255a5d38f1bb37dea285467e9">More...</a><br /></td></tr>
+<tr class="separator:a536675d255a5d38f1bb37dea285467e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af851a0ffe85ec6c9b88dac84dbe5f4f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2">required_keys</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;key_)</td></tr>
+<tr class="memdesc:af851a0ffe85ec6c9b88dac84dbe5f4f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this object has required key(s).  <a href="#af851a0ffe85ec6c9b88dac84dbe5f4f2">More...</a><br /></td></tr>
+<tr class="separator:af851a0ffe85ec6c9b88dac84dbe5f4f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79fb503bb7d7e9facf08fec2e15d96f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ab79fb503bb7d7e9facf08fec2e15d96f">optional_keys</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;key_)</td></tr>
+<tr class="memdesc:ab79fb503bb7d7e9facf08fec2e15d96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this object has optional key(s).  <a href="#ab79fb503bb7d7e9facf08fec2e15d96f">More...</a><br /></td></tr>
+<tr class="separator:ab79fb503bb7d7e9facf08fec2e15d96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62989090a40d237e617bc6e5f5087388"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a62989090a40d237e617bc6e5f5087388">get_data_py</a> ()</td></tr>
 <tr class="memdesc:a62989090a40d237e617bc6e5f5087388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object.  <a href="#a62989090a40d237e617bc6e5f5087388">More...</a><br /></td></tr>
 <tr class="separator:a62989090a40d237e617bc6e5f5087388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae253cbec6307a157902d7f25867ded2b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ae253cbec6307a157902d7f25867ded2b">get_keys_py</a> ()</td></tr>
-<tr class="memdesc:ae253cbec6307a157902d7f25867ded2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get contents of <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a> of this object.  <a href="#ae253cbec6307a157902d7f25867ded2b">More...</a><br /></td></tr>
-<tr class="separator:ae253cbec6307a157902d7f25867ded2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa6debec21fb714908f8c44a7cea0a49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#afa6debec21fb714908f8c44a7cea0a49">get_keys_py</a> ()</td></tr>
+<tr class="memdesc:afa6debec21fb714908f8c44a7cea0a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get keys of the data of this object.  <a href="#afa6debec21fb714908f8c44a7cea0a49">More...</a><br /></td></tr>
+<tr class="separator:afa6debec21fb714908f8c44a7cea0a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8257b02b1e3b208f193b35d5d47b9af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98">ArrayXi</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a8257b02b1e3b208f193b35d5d47b9af8">get_1d_int_py</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;key)</td></tr>
 <tr class="memdesc:a8257b02b1e3b208f193b35d5d47b9af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get integer values stored in <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object as a one-dimensional Numpy-Array.  <a href="#a8257b02b1e3b208f193b35d5d47b9af8">More...</a><br /></td></tr>
 <tr class="separator:a8257b02b1e3b208f193b35d5d47b9af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,8 +213,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a644085ed8d59a6835d218b7651ceb4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7cd44abcb0c90a9c5035584bc92ac5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a></td></tr>
 <tr class="separator:a2a7cd44abcb0c90a9c5035584bc92ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a141b8b8adc3aa5c9b3d6c3262c36a7c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataKeys.html">DataKeys</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">datakeys</a></td></tr>
-<tr class="separator:a141b8b8adc3aa5c9b3d6c3262c36a7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff592a8196ddeae630d36fcd971ce668"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a></td></tr>
+<tr class="separator:aff592a8196ddeae630d36fcd971ce668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a7d8fed22faf5deaa2695b3a06d901"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#ae7a7d8fed22faf5deaa2695b3a06d901">checking_classname</a></td></tr>
+<tr class="separator:ae7a7d8fed22faf5deaa2695b3a06d901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6899e560e3f3c1fefcf44d37e4e99522"><td class="memItemLeft" align="right" valign="top">omp_lock_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classElement.html#a6899e560e3f3c1fefcf44d37e4e99522">omp_lock</a></td></tr>
 <tr class="separator:a6899e560e3f3c1fefcf44d37e4e99522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -234,11 +244,11 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and contains data <em>element</em> (or <em>entity</em>) as a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. </p>
 <p>This class inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="EnShThis is an alias for a class which can create shared pointer of itself by calling shared_from_thi...">EnShThis</a>&lt;<a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a>&gt;.</p>
-<p><a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class is different from <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> and <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> by owning data <em>element</em> (or <em>entity</em>). The data is stored as <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>, and a set of keys for properties in the data is stored as <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">datakeys</a>. Note that <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> can be either an array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object or a non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. A non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object consists of items: pairs of a string key and int/bool/double/string/array value. The key represents a property name. For array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>, it contains non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects. Each non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object should have the same set of keys; this set is the one stored as <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">datakeys</a>.</p>
-<p>An object of this class can update its own <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> and <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">datakeys</a> by calling its <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73">update_data</a> where mutable references of the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> and <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">datakeys</a> are passed to an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a>.</p>
+<p><a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class is different from <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> and <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> by owning data <em>element</em> (or <em>entity</em>). The data is stored as <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>, and a set of keys for properties in the data is stored as <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>. Note that <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> can be either an array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object or a non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. A non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object consists of items: pairs of a string key and int/bool/double/string/array value. The key represents a property name. For array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>, it contains non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects. Each non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object should have the same set of keys; this set is the one stored as <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>.</p>
+<p>An object of this class can update itself by calling its <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73">update_data</a> where a shared pointer of this object is passed to an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a>.</p>
 <p>About usage in Python, please see <a class="el" href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" title="Bind Element class to Python. ">pybind::py_element</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00042">42</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00041">41</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab0d0e20be9a36ae676202db753faeec9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0d0e20be9a36ae676202db753faeec9">&#9670;&nbsp;</a></span>Element()</h2>
@@ -258,7 +268,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructor of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class. </p>
 <p>This constructor is thread-unsafe because it accesses its members thread-globally. Ensure this constructor is not called in a multithreading context. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00021">21</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00022">22</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +299,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>This <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.</dd></dl>
 <p><span class="remove_in_table"> To update the data, one needs to create an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object and then appends it to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object using this method. In this method, <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">Generator::update_chain</a> stored in <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">Updater::ext_generator</a> of the <code>upd</code> is merged to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">Generator::update_chain</a> of this object; then an <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> consisting of this object and the <code>upd</code> is appended to <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">Generator::update_chain</a> of this object. </span> </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00129">129</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00130">130</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -342,7 +352,7 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one passed <a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98" title="ArrayXi is an alias for a column array of Eigen where the values are integer. ">ArrayXi</a> or <a class="el" href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220" title="ArrayXd is an alias for a column array of Eigen where the values are double. ">ArrayXd</a> as a reference, this method fills it by values of a property specified by <code>key</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00196">196</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00204">204</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -390,7 +400,7 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one passed <a class="el" href="eigen_8h.html#a187c541a6423e8b13a361d39799a2bac" title="ArrayXXi is an alias for a two-dimensional array of Eigen where the values are integer. ">ArrayXXi</a> or <a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9" title="ArrayXXd is an alias for a two-dimensional array of Eigen where the values are double. ">ArrayXXd</a> as a reference, this method fills it by values of some properties specified by <code>keys</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00220">220</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00228">228</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -425,11 +435,12 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one increments <a class="el" href="classElement.html#a678d35749bc335254f3fd4a4cc135d83">n_remain</a> of this object before using <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> and then decrements it after using it, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> is cleared to save memory. This system is convenient to access <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> multiple times while saving memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00038">38</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00039">39</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a9ff7a4e19165faa6da26635d9145b46b_cgraph.svg" width="328" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a9ff7a4e19165faa6da26635d9145b46b_cgraph.svg" width="350" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -459,16 +470,18 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220" title="ArrayXd is an alias for a column array of Eigen where the values are double. ">ArrayXd</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00304">304</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00359">359</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a3f11848589faad4cbca8119385887713_cgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a3f11848589faad4cbca8119385887713_cgraph.svg" width="571" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a3f11848589faad4cbca8119385887713_icgraph.svg" width="559" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a3f11848589faad4cbca8119385887713_icgraph.svg" width="559" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -498,16 +511,18 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98" title="ArrayXi is an alias for a column array of Eigen where the values are integer. ">ArrayXi</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00289">289</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00344">344</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a8257b02b1e3b208f193b35d5d47b9af8_cgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8257b02b1e3b208f193b35d5d47b9af8_cgraph.svg" width="559" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8257b02b1e3b208f193b35d5d47b9af8_icgraph.svg" width="547" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8257b02b1e3b208f193b35d5d47b9af8_icgraph.svg" width="547" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -537,16 +552,18 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9" title="ArrayXXd is an alias for a two-dimensional array of Eigen where the values are double. ">ArrayXXd</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00337">337</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00392">392</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a6a62280eadd3d4e6bfe8c43082797733_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a6a62280eadd3d4e6bfe8c43082797733_cgraph.svg" width="571" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a6a62280eadd3d4e6bfe8c43082797733_icgraph.svg" width="559" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a6a62280eadd3d4e6bfe8c43082797733_icgraph.svg" width="559" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -576,16 +593,18 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="eigen_8h.html#a187c541a6423e8b13a361d39799a2bac" title="ArrayXXi is an alias for a two-dimensional array of Eigen where the values are integer. ">ArrayXXi</a> (Numpy-Array in Python). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00319">319</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00374">374</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a8e8245fb94b6417e3e804e6bfdf2f906_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8e8245fb94b6417e3e804e6bfdf2f906_cgraph.svg" width="559" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8e8245fb94b6417e3e804e6bfdf2f906_icgraph.svg" width="547" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a8e8245fb94b6417e3e804e6bfdf2f906_icgraph.svg" width="547" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -609,7 +628,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to this <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.</dd></dl>
 <p>One can refer the whole data stored in this object by this method. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00181">181</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00182">182</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +658,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object (not a reference).</dd></dl>
 <p>One can get the partial data stored in this object by this method. To select which property is included in the returned <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object, pass a string key for the property as <code>key_</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00146">146</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00147">147</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -661,16 +680,18 @@ Here is the caller graph for this function:</div>
 <p>Get <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of this object. </p>
 <dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00271">271</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00326">326</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a62989090a40d237e617bc6e5f5087388_cgraph.svg" width="550" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a62989090a40d237e617bc6e5f5087388_cgraph.svg" width="550" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a62989090a40d237e617bc6e5f5087388_icgraph.svg" width="538" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a62989090a40d237e617bc6e5f5087388_icgraph.svg" width="538" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -713,11 +734,12 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="classPyElement.html#a249fb6a35941b5fb0cc129c33a5574eb">PyElement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00095">95</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00096">96</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ab12675e00173496f85052d82f334f395_cgraph.svg" width="339" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ab12675e00173496f85052d82f334f395_cgraph.svg" width="339" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -760,23 +782,24 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="classPyElement.html#a27c414aa8d4316702b812b0d624714da">PyElement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00108">108</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00109">109</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a5474cb60706c92e37268ac4c3ff2c46b_cgraph.svg" width="347" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a5474cb60706c92e37268ac4c3ff2c46b_cgraph.svg" width="347" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
 </div>
-<a id="a060b21b533cc1deb92e666653a89f229"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a060b21b533cc1deb92e666653a89f229">&#9670;&nbsp;</a></span>get_keys()</h2>
+<a id="a5dfb31b61142eff280750d3dd0cffc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dfb31b61142eff280750d3dd0cffc6a">&#9670;&nbsp;</a></span>get_keys()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classDataKeys.html">DataKeys</a> &amp; Element::get_keys </td>
+          <td class="memname"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt; Element::get_keys </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -785,21 +808,27 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Get keys of the data of this object. </p>
-<dl class="section return"><dt>Returns</dt><dd>Constant reference to this <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Set of keys stored in <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>.</dd></dl>
 <p>One can refer the keys (property names) in this object by this method. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00188">188</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00196">196</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a5dfb31b61142eff280750d3dd0cffc6a_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
-<a id="ae253cbec6307a157902d7f25867ded2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae253cbec6307a157902d7f25867ded2b">&#9670;&nbsp;</a></span>get_keys_py()</h2>
+<a id="afa6debec21fb714908f8c44a7cea0a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa6debec21fb714908f8c44a7cea0a49">&#9670;&nbsp;</a></span>get_keys_py()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt; &amp; Element::get_keys_py </td>
+          <td class="memname"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &gt; Element::get_keys_py </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -807,20 +836,46 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Get contents of <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a> of this object. </p>
-<dl class="section return"><dt>Returns</dt><dd>Constant reference to <a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307" title="Set is an alias for unordered set (same as set in Python). ">Set</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6" title="Str is an alias for string. ">Str</a>&gt;. </dd></dl>
+<p>Get keys of the data of this object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Set of keys stored in <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>.</dd></dl>
+<p>One can refer the keys (property names) in this object by this method. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00280">280</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00335">335</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ae253cbec6307a157902d7f25867ded2b_cgraph.svg" width="552" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_afa6debec21fb714908f8c44a7cea0a49_cgraph.svg" width="552" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ae253cbec6307a157902d7f25867ded2b_icgraph.svg" width="540" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_afa6debec21fb714908f8c44a7cea0a49_icgraph.svg" width="540" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
+</div>
+
+</div>
+</div>
+<a id="a6f4692ea82ce0c1b756c37e6b101aade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4692ea82ce0c1b756c37e6b101aade">&#9670;&nbsp;</a></span>get_mutable_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp; Element::get_mutable_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> of this object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Mutable reference to this <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.</dd></dl>
+<p>Mainly used by <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> objects; other objects should use <a class="el" href="classElement.html#a47096a22005245db075143ff1ee1981c" title="Get the reference to data of this object. ">Element::get_data</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00189">189</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -850,7 +905,7 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>If one increments <a class="el" href="classElement.html#a678d35749bc335254f3fd4a4cc135d83">n_remain</a> of this object before using <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> and then decrements it after using it, the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> is cleared to save memory. This system is convenient to access <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> multiple times while saving memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00030">30</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00031">31</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -880,28 +935,30 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>This method runs updating process associated with this object so that a wrapper of getter can access the filled <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00355">355</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00410">410</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_cgraph.svg" width="352" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_cgraph.svg" width="352" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
 </div>
-<a id="a0d0123e7fa1a7b96fb0ac271c0837a7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d0123e7fa1a7b96fb0ac271c0837a7d">&#9670;&nbsp;</a></span>optional()</h2>
+<a id="ab79fb503bb7d7e9facf08fec2e15d96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab79fb503bb7d7e9facf08fec2e15d96f">&#9670;&nbsp;</a></span>optional_keys()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Element::optional </td>
+          <td class="memname">bool Element::optional_keys </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
           <td class="paramname"><em>key_</em></td><td>)</td>
@@ -910,33 +967,28 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Wrapper for <a class="el" href="classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2" title="Check if this object has optional key(s). ">DataKeys::optional</a>. </p>
+<p>Check if this object has optional key(s). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key_</td><td>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object for either a key or an array of keys.</td></tr>
+    <tr><td class="paramname">key_</td><td>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object for either a key or an array of keys for optional property.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A boolean.</dd></dl>
-<p>It is convenient if <a class="el" href="classDataKeys.html#a83c539d93200a30f57d0d795c68ee5a2" title="Check if this object has optional key(s). ">DataKeys::optional</a> can be called without getting <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> object from this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. </p>
+<p>If this object has the given key(s), it returns true. If not, it returns false. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00263">263</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a0d0123e7fa1a7b96fb0ac271c0837a7d_cgraph.svg" width="314" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00307">307</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a2dd2b3ed6f76878ae6cc1c1a36183517"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dd2b3ed6f76878ae6cc1c1a36183517">&#9670;&nbsp;</a></span>required()</h2>
+<a id="af851a0ffe85ec6c9b88dac84dbe5f4f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af851a0ffe85ec6c9b88dac84dbe5f4f2">&#9670;&nbsp;</a></span>required_keys()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Element::required </td>
+          <td class="memname">void Element::required_keys </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
           <td class="paramname"><em>key_</em></td><td>)</td>
@@ -945,26 +997,28 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Wrapper for <a class="el" href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" title="Check if this object has required key(s). ">DataKeys::required</a>. </p>
+<p>Check if this object has required key(s). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key_</td><td>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object for either a key or an array of keys.</td></tr>
+    <tr><td class="paramname">key_</td><td>A <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object for either a key or an array of keys for required property.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>It is convenient if <a class="el" href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" title="Check if this object has required key(s). ">DataKeys::required</a> can be called without getting <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> object from this <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. </p>
+<p>If this object does not have the given required key(s), a runtime error is thrown in C++ (and also raised in Python). </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00255">255</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00275">275</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a2dd2b3ed6f76878ae6cc1c1a36183517_cgraph.svg" width="495" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_af851a0ffe85ec6c9b88dac84dbe5f4f2_cgraph.svg" width="348" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a2dd2b3ed6f76878ae6cc1c1a36183517_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_af851a0ffe85ec6c9b88dac84dbe5f4f2_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -993,10 +1047,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Wrapper for <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>. </p>
+<p>Set a name of class of which instance calls Element::required. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">classname</td><td>A string passed to <a class="el" href="classDataKeys.html#af27295623e19f9bda8186bfd3374a7d8" title="Set a name of class of which instance calls required. ">DataKeys::set_checking_classname</a>.</td></tr>
+    <tr><td class="paramname">classname</td><td>A string to be assigned to <a class="el" href="classElement.html#ae7a7d8fed22faf5deaa2695b3a06d901">Element::checking_classname</a>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1006,12 +1060,7 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="classPyElement.html#ad30132c3bf873f37fedf8016e22a0afe">PyElement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00121">121</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_ae07a844782e6b86f3d765ce661f02d82_cgraph.svg" width="378" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00122">122</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
 
 </div>
 </div>
@@ -1046,13 +1095,67 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This method updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> using an object of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> taken as <code>upd</code>. This object and the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object are paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object: the only way to extend an updating process associate...">append_updater</a> in advance. In this method, mutable references of the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> and <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">datakeys</a> are passed to <a class="el" href="classUpdater.html#a85d3e869ce4536fdf8f7a74623218649" title="Managing computation to update Element::data. ">Updater::compute</a> of the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. The <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">dataid</a> is also passed to the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. </p>
+<p>This method updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> using an object of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> taken as <code>upd</code>. This object and the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object are paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a> by <a class="el" href="classElement.html#adc43106f0ea5e11d03105c40df1fe0a8" title="Append an Updater object to this Element object: the only way to extend an updating process associate...">append_updater</a> in advance. In this method, a shared pointer of this object is passed to <a class="el" href="classUpdater.html#a88308fd5a11102dc6598249363278e08" title="Managing computation to update Element::data. ">Updater::compute</a> of the <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00083">83</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00084">84</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a536675d255a5d38f1bb37dea285467e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536675d255a5d38f1bb37dea285467e9">&#9670;&nbsp;</a></span>update_keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Element::update_keys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>. This method must be called after setting new properties to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
+<p>If <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> is an array, only the first element is used for investigating keys. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8cpp_source.html#l00263">263</a> of file <a class="el" href="element_8cpp_source.html">element.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a536675d255a5d38f1bb37dea285467e9_icgraph.svg" width="350" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae7a7d8fed22faf5deaa2695b3a06d901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a7d8fed22faf5deaa2695b3a06d901">&#9670;&nbsp;</a></span>checking_classname</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> Element::checking_classname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Name of a class of instance calling <a class="el" href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2" title="Check if this object has required key(s). ">required_keys</a>. Showing the class name in an error message raised by <a class="el" href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2" title="Check if this object has required key(s). ">required_keys</a> helps debugging. </p>
+
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00079">79</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+
+</div>
+</div>
 <a id="a2a7cd44abcb0c90a9c5035584bc92ac5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a7cd44abcb0c90a9c5035584bc92ac5">&#9670;&nbsp;</a></span>data</h2>
 
@@ -1074,7 +1177,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Data <em>element</em> (or <em>entity</em>) itself. This member is a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object, which is a very flexible data container consisting of hierarchically organized items: pairs of a string key and int/bool/double/string/array value. Thanks to this flexibility, this class can store data for box, atoms, molecules, beads, cube, ... and more!! </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00069">69</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00068">68</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1099,12 +1202,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Unique ID for an object of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class. This member is used for preventing duplication of updating process of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>. For more details, please see <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00060">60</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00059">59</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
-<a id="a141b8b8adc3aa5c9b3d6c3262c36a7c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a141b8b8adc3aa5c9b3d6c3262c36a7c4">&#9670;&nbsp;</a></span>datakeys</h2>
+<a id="aff592a8196ddeae630d36fcd971ce668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff592a8196ddeae630d36fcd971ce668">&#9670;&nbsp;</a></span>datakeys</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1113,7 +1216,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classDataKeys.html">DataKeys</a> Element::datakeys</td>
+          <td class="memname"><a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt;<a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a>&gt; Element::datakeys</td>
         </tr>
       </table>
   </td>
@@ -1122,9 +1225,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set of keys of the data. This member stores string keys <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> has. For more details, please see <a class="el" href="classDataKeys.html" title="DataKeys is a small class owning a set of string keys in Element::data. ">DataKeys</a> class. Note that after updating the data, the set of keys must be manually updated (add/remove keys) in <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> or its subclasses. </p>
+<p>List of keys of the data. This member stores string keys which <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> has. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00076">76</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00073">73</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1149,7 +1252,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>The number of created objects (a.k.a. instances) of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class. This member is only used for setting <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">dataid</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00047">47</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00046">46</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1277,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>The number of times this object will be used in the future. This member can be incremented by <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e">increment_remain</a> and decremented by <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b">decrement_remain</a>. If this member becomes 0 in <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b">decrement_remain</a>, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> is cleared to save memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00054">54</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00053">53</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1302,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>A variable used by OpenMP. In this program, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> is updated in a multithreading context. To prevent the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> from being updated from multiple threads at the same time, this member must be locked in <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73">update_data</a>, <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e">increment_remain</a> and <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b">decrement_remain</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00083">83</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00086">86</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>

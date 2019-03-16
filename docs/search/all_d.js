@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['make_5fis_5fint_5fvector',['make_is_int_vector',['../classStaDumpAtoms.html#a8a507beb5e12cb6e306f05e87f42e7bf',1,'StaDumpAtoms']]],
   ['make_5flambda',['make_lambda',['../classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e',1,'FilComparison']]],
+  ['make_5foptional_5fkeys',['make_optional_keys',['../classUpdater.html#ab1f6c0058c5f0860e06569e05c6c5cdd',1,'Updater']]],
+  ['make_5frequired_5fkeys',['make_required_keys',['../classUpdater.html#a7c72d0115a18442dd594a2868528e924',1,'Updater']]],
   ['map',['Map',['../std_8h.html#a4b049b8ec1536df1dcbc6d01556630b6',1,'std.h']]],
   ['map_5fto_5findex',['map_to_index',['../namespaceutils.html#aeabf3fc19efc71936f355f069d336b5a',1,'utils']]],
   ['map_5fto_5findex_2ecpp',['map_to_index.cpp',['../map__to__index_8cpp.html',1,'']]],

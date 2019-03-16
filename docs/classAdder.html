@@ -102,19 +102,21 @@ $(document).ready(function(){initNavTree('classAdder.html','');});
 <div class="dynheader">
 Inheritance diagram for Adder:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classAdder__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classAdder__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Adder:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classAdder__coll__graph.svg" width="184" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classAdder__coll__graph.svg" width="184" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4de42742fffbb58ac8ab71a1eb17100"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ac4de42742fffbb58ac8ab71a1eb17100">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
-<tr class="memdesc:ac4de42742fffbb58ac8ab71a1eb17100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.  <a href="#ac4de42742fffbb58ac8ab71a1eb17100">More...</a><br /></td></tr>
-<tr class="separator:ac4de42742fffbb58ac8ab71a1eb17100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2702febc51f2643de5d7aa18a4fc42e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#a2702febc51f2643de5d7aa18a4fc42e9">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int dataid) override</td></tr>
+<tr class="memdesc:a2702febc51f2643de5d7aa18a4fc42e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.  <a href="#a2702febc51f2643de5d7aa18a4fc42e9">More...</a><br /></td></tr>
+<tr class="separator:a2702febc51f2643de5d7aa18a4fc42e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
 <tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,24 +134,36 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
-<tr class="memitem:a288fd0d27e760ec1d2e1f689641b01a7 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys)=0</td></tr>
-<tr class="memdesc:a288fd0d27e760ec1d2e1f689641b01a7 inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation for updating <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7">More...</a><br /></td></tr>
-<tr class="separator:a288fd0d27e760ec1d2e1f689641b01a7 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2256a52be76c16dc71987aca1164c9 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data)=0</td></tr>
+<tr class="memdesc:a8f2256a52be76c16dc71987aca1164c9 inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation for updating <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9">More...</a><br /></td></tr>
+<tr class="separator:a8f2256a52be76c16dc71987aca1164c9 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top"><a id="a7c72d0115a18442dd594a2868528e924"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a7c72d0115a18442dd594a2868528e924">make_required_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a>. <br /></td></tr>
+<tr class="separator:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top"><a id="ab1f6c0058c5f0860e06569e05c6c5cdd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ab1f6c0058c5f0860e06569e05c6c5cdd">make_optional_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a>. <br /></td></tr>
+<tr class="separator:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
 <tr class="separator:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83ef04b8c3dc30168a655a5f43e6f93 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a></td></tr>
+<tr class="separator:af83ef04b8c3dc30168a655a5f43e6f93 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892adbb5176936765ace2750cfdc7f08 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a></td></tr>
+<tr class="separator:a892adbb5176936765ace2750cfdc7f08 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> adds new properties to a non-empty <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
-<p>This class inherits <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class and overrides <a class="el" href="classUpdater.html#a85d3e869ce4536fdf8f7a74623218649" title="Managing computation to update Element::data. ">Updater::compute</a>. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>.</p>
+<p>This class inherits <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class and overrides <a class="el" href="classUpdater.html#a88308fd5a11102dc6598249363278e08" title="Managing computation to update Element::data. ">Updater::compute</a>. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>.</p>
 <p>Name of subclass of this class should be prefixed by <em>Add</em>. Unlike <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> accepts only non-empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="adder_8h_source.html#l00024">24</a> of file <a class="el" href="adder_8h_source.html">adder.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac4de42742fffbb58ac8ab71a1eb17100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4de42742fffbb58ac8ab71a1eb17100">&#9670;&nbsp;</a></span>compute()</h2>
+<a id="a2702febc51f2643de5d7aa18a4fc42e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2702febc51f2643de5d7aa18a4fc42e9">&#9670;&nbsp;</a></span>compute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,14 +174,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void Adder::compute </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDataKeys.html">DataKeys</a> &amp;&#160;</td>
-          <td class="paramname"><em>datakeys</em>, </td>
+          <td class="paramtype">const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -191,22 +199,22 @@ Additional Inherited Members</h2></td></tr>
 <p>Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> where computed properties are added to.</td></tr>
-    <tr><td class="paramname">datakeys</td><td>Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a> where keys for computed properties are added to.</td></tr>
+    <tr><td class="paramname">elem</td><td>Shared pointer to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where computed properties are added to.</td></tr>
     <tr><td class="paramname">dataid</td><td>A constant integer copied from <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> and <code>datakeys</code> to <a class="el" href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>. Note that actual computation and addition of properties is conducted by <a class="el" href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a> orveridden in subclasses of this class. In addition, this method ensures that a new property whose name is <em>id</em> is not added; <code>id</code> property must be set at initialization (done by <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>) only. </p>
+<p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> to <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>. Note that actual computation and addition of properties is conducted by <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a> orveridden in subclasses of this class. In addition, this method ensures that a new property whose name is <em>id</em> is not added; <code>id</code> property must be set at initialization (done by <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>) only. </p>
 
-<p>Implements <a class="el" href="classUpdater.html#a85d3e869ce4536fdf8f7a74623218649">Updater</a>.</p>
+<p>Implements <a class="el" href="classUpdater.html#a88308fd5a11102dc6598249363278e08">Updater</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="adder_8cpp_source.html#l00016">16</a> of file <a class="el" href="adder_8cpp_source.html">adder.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classAdder_ac4de42742fffbb58ac8ab71a1eb17100_cgraph.svg" width="339" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classAdder_a2702febc51f2643de5d7aa18a4fc42e9_cgraph.svg" width="368" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>

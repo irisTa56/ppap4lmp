@@ -103,12 +103,14 @@ $(document).ready(function(){initNavTree('classStaDump.html','');});
 <div class="dynheader">
 Inheritance diagram for StaDump:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStaDump__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStaDump__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for StaDump:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStaDump__coll__graph.svg" width="184" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStaDump__coll__graph.svg" width="184" height="588"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -117,9 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac237195b46542e1db67eff0235832a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStaDump.html" title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">StaDump</a> class.  <a href="#ac237195b46542e1db67eff0235832a8b">More...</a><br /></td></tr>
 <tr class="separator:ac237195b46542e1db67eff0235832a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStarter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStarter')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStarter.html">Starter</a></td></tr>
-<tr class="memitem:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
-<tr class="memdesc:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.  <a href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">More...</a><br /></td></tr>
-<tr class="separator:a5e1cc4f19ad4d82b765b48c5aa8eb22a inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06098875ca2584225ac5aec4e0c82d09 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a06098875ca2584225ac5aec4e0c82d09">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int dataid) override</td></tr>
+<tr class="memdesc:a06098875ca2584225ac5aec4e0c82d09 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.  <a href="classStarter.html#a06098875ca2584225ac5aec4e0c82d09">More...</a><br /></td></tr>
+<tr class="separator:a06098875ca2584225ac5aec4e0c82d09 inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
 <tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,19 +145,31 @@ Protected Attributes</h2></td></tr>
 <tr class="inherit_header pro_attribs_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83ef04b8c3dc30168a655a5f43e6f93 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a></td></tr>
+<tr class="separator:af83ef04b8c3dc30168a655a5f43e6f93 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892adbb5176936765ace2750cfdc7f08 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a></td></tr>
+<tr class="separator:a892adbb5176936765ace2750cfdc7f08 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
-<tr class="memitem:a288fd0d27e760ec1d2e1f689641b01a7 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys)=0</td></tr>
-<tr class="memdesc:a288fd0d27e760ec1d2e1f689641b01a7 inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation for updating <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7">More...</a><br /></td></tr>
-<tr class="separator:a288fd0d27e760ec1d2e1f689641b01a7 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2256a52be76c16dc71987aca1164c9 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data)=0</td></tr>
+<tr class="memdesc:a8f2256a52be76c16dc71987aca1164c9 inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation for updating <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9">More...</a><br /></td></tr>
+<tr class="separator:a8f2256a52be76c16dc71987aca1164c9 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top"><a id="a7c72d0115a18442dd594a2868528e924"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a7c72d0115a18442dd594a2868528e924">make_required_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a>. <br /></td></tr>
+<tr class="separator:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top"><a id="ab1f6c0058c5f0860e06569e05c6c5cdd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ab1f6c0058c5f0860e06569e05c6c5cdd">make_optional_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a>. <br /></td></tr>
+<tr class="separator:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
 <tr class="separator:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classStaDump.html" title="StaDump is an abstract class whose subclasses read a Lammps&#39; dump file. ">StaDump</a> is an abstract class whose subclasses read a Lammps' dump file. </p>
-<p>This class inherits <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a> class. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7" title="Implementation of computation for updating Element::data. ">StaDump::compute_impl</a>. </p>
+<p>This class inherits <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a> class. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">StaDump::compute_impl</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="sta__dump_8h_source.html#l00021">21</a> of file <a class="el" href="sta__dump_8h_source.html">sta_dump.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>

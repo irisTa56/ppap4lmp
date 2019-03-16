@@ -19,7 +19,6 @@ var annotated_dup =
     [ "AddRename", "classAddRename.html", "classAddRename" ],
     [ "AddSpecialBonds", "classAddSpecialBonds.html", "classAddSpecialBonds" ],
     [ "AddWrappedPosition", "classAddWrappedPosition.html", "classAddWrappedPosition" ],
-    [ "DataKeys", "classDataKeys.html", "classDataKeys" ],
     [ "Element", "classElement.html", "classElement" ],
     [ "FilComparison", "classFilComparison.html", "classFilComparison" ],
     [ "FilSet", "classFilSet.html", "classFilSet" ],

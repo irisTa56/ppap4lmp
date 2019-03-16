@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 706;
+var viewWidth = 570;
 var viewHeight = 287;
 var sectionId = 'dynsection-18';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-18';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>pybind::py_element</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-282.5 702,-282.5 702,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-282.5 566,-282.5 566,4 -4,4"/>
 <!-- Node51 -->
 <g id="node1" class="node">
 <title>Node51</title>
@@ -94,7 +94,7 @@ var sectionId = 'dynsection-18';
 <!-- Node59 -->
 <g id="node9" class="node">
 <title>Node59</title>
-<g id="a_node9"><a xlink:href="classElement.html#ae253cbec6307a157902d7f25867ded2b" target="_top" xlink:title="Get contents of Element::datakeys of this object. ">
+<g id="a_node9"><a xlink:href="classElement.html#afa6debec21fb714908f8c44a7cea0a49" target="_top" xlink:title="Get keys of the data of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="144,-210.5 144,-229.5 258,-229.5 258,-210.5 144,-210.5"/>
 <text text-anchor="middle" x="201" y="-217.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys_py</text>
 </a>
@@ -121,48 +121,48 @@ var sectionId = 'dynsection-18';
 <path fill="none" stroke="#191970" d="M101.033,-144C110.7679,-144 121.1237,-144 131.3413,-144"/>
 <polygon fill="#191970" stroke="#191970" points="131.4847,-147.5001 141.4846,-144 131.4846,-140.5001 131.4847,-147.5001"/>
 </g>
-<!-- Node66 -->
-<g id="node16" class="node">
-<title>Node66</title>
-<g id="a_node16"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Get float values stored in Element::data of this object as a one&#45;dimensional Numpy&#45;Array. ">
+<!-- Node65 -->
+<g id="node15" class="node">
+<title>Node65</title>
+<g id="a_node15"><a xlink:href="classElement.html#a3f11848589faad4cbca8119385887713" target="_top" xlink:title="Get float values stored in Element::data of this object as a one&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="137,-96.5 137,-115.5 265,-115.5 265,-96.5 137,-96.5"/>
 <text text-anchor="middle" x="201" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_1d_float_py</text>
 </a>
 </g>
 </g>
-<!-- Node51&#45;&gt;Node66 -->
-<g id="edge18" class="edge">
-<title>Node51&#45;&gt;Node66</title>
+<!-- Node51&#45;&gt;Node65 -->
+<g id="edge17" class="edge">
+<title>Node51&#45;&gt;Node65</title>
 <path fill="none" stroke="#191970" d="M88.4775,-134.411C108.1587,-129.4417 132.3907,-123.3233 153.3206,-118.0387"/>
 <polygon fill="#191970" stroke="#191970" points="154.4567,-121.3617 163.2956,-115.5201 152.743,-114.5747 154.4567,-121.3617"/>
 </g>
-<!-- Node67 -->
-<g id="node17" class="node">
-<title>Node67</title>
-<g id="a_node17"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Get integer values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
+<!-- Node66 -->
+<g id="node16" class="node">
+<title>Node66</title>
+<g id="a_node16"><a xlink:href="classElement.html#a8e8245fb94b6417e3e804e6bfdf2f906" target="_top" xlink:title="Get integer values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="141.5,-20.5 141.5,-39.5 260.5,-39.5 260.5,-20.5 141.5,-20.5"/>
 <text text-anchor="middle" x="201" y="-27.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_int_py</text>
 </a>
 </g>
 </g>
-<!-- Node51&#45;&gt;Node67 -->
-<g id="edge22" class="edge">
-<title>Node51&#45;&gt;Node67</title>
+<!-- Node51&#45;&gt;Node66 -->
+<g id="edge21" class="edge">
+<title>Node51&#45;&gt;Node66</title>
 <path fill="none" stroke="#191970" d="M56.6177,-134.3268C69.2533,-115.1381 100.1568,-72.1189 137,-49 140.3288,-46.9112 143.8985,-45.0424 147.5869,-43.372"/>
 <polygon fill="#191970" stroke="#191970" points="148.9573,-46.5934 156.9302,-39.6161 146.3464,-40.0985 148.9573,-46.5934"/>
 </g>
-<!-- Node70 -->
-<g id="node20" class="node">
-<title>Node70</title>
-<g id="a_node20"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Get float values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
+<!-- Node69 -->
+<g id="node19" class="node">
+<title>Node69</title>
+<g id="a_node19"><a xlink:href="classElement.html#a6a62280eadd3d4e6bfe8c43082797733" target="_top" xlink:title="Get float values stored in Element::data of this object as a two&#45;dimensional Numpy&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="137,-58.5 137,-77.5 265,-77.5 265,-58.5 137,-58.5"/>
 <text text-anchor="middle" x="201" y="-65.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_2d_float_py</text>
 </a>
 </g>
 </g>
-<!-- Node51&#45;&gt;Node70 -->
-<g id="edge27" class="edge">
-<title>Node51&#45;&gt;Node70</title>
+<!-- Node51&#45;&gt;Node69 -->
+<g id="edge26" class="edge">
+<title>Node51&#45;&gt;Node69</title>
 <path fill="none" stroke="#191970" d="M62.4295,-134.4805C78.5219,-122.0404 108.4661,-100.2808 137,-87 141.9256,-84.7074 147.1932,-82.6174 152.5123,-80.7326"/>
 <polygon fill="#191970" stroke="#191970" points="153.6883,-84.0301 162.0798,-77.5622 151.4864,-77.3855 153.6883,-84.0301"/>
 </g>
@@ -201,46 +201,46 @@ var sectionId = 'dynsection-18';
 <g id="node6" class="node">
 <title>Node56</title>
 <g id="a_node6"><a xlink:href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222" target="_top" xlink:title="Hello to this Generator object. ">
-<polygon fill="#ffffff" stroke="#000000" points="471,-190.5 471,-209.5 557,-209.5 557,-190.5 471,-190.5"/>
-<text text-anchor="middle" x="514" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Generator::hello</text>
+<polygon fill="#ffffff" stroke="#000000" points="470,-190.5 470,-209.5 556,-209.5 556,-190.5 470,-190.5"/>
+<text text-anchor="middle" x="513" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Generator::hello</text>
 </a>
 </g>
 </g>
 <!-- Node55&#45;&gt;Node56 -->
 <g id="edge5" class="edge">
 <title>Node55&#45;&gt;Node56</title>
-<path fill="none" stroke="#191970" d="M402.2252,-171.589C421.7756,-176.5583 445.8466,-182.6767 466.6374,-187.9613"/>
-<polygon fill="#191970" stroke="#191970" points="465.9921,-191.4085 476.5461,-190.4799 467.7165,-184.6243 465.9921,-191.4085"/>
+<path fill="none" stroke="#191970" d="M401.9728,-171.589C421.3925,-176.5583 445.3025,-182.6767 465.9542,-187.9613"/>
+<polygon fill="#191970" stroke="#191970" points="465.2411,-191.3916 475.7966,-190.4799 466.9765,-184.6101 465.2411,-191.3916"/>
 </g>
 <!-- Node57 -->
 <g id="node7" class="node">
 <title>Node57</title>
 <g id="a_node7"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
-<polygon fill="#ffffff" stroke="#000000" points="600,-133.5 600,-152.5 698,-152.5 698,-133.5 600,-133.5"/>
-<text text-anchor="middle" x="649" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
+<polygon fill="#ffffff" stroke="#000000" points="464,-114.5 464,-133.5 562,-133.5 562,-114.5 464,-114.5"/>
+<text text-anchor="middle" x="513" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
 <!-- Node55&#45;&gt;Node57 -->
 <g id="edge6" class="edge">
 <title>Node55&#45;&gt;Node57</title>
-<path fill="none" stroke="#191970" d="M425.5324,-157.924C474.0559,-154.6834 541.5406,-150.1766 589.6252,-146.9653"/>
-<polygon fill="#191970" stroke="#191970" points="590.1369,-150.439 599.8814,-146.2803 589.6704,-143.4546 590.1369,-150.439"/>
+<path fill="none" stroke="#191970" d="M401.9728,-152.411C421.3925,-147.4417 445.3025,-141.3233 465.9542,-136.0387"/>
+<polygon fill="#191970" stroke="#191970" points="466.9765,-139.3899 475.7966,-133.5201 465.2411,-132.6084 466.9765,-139.3899"/>
 </g>
 <!-- Node58 -->
 <g id="node8" class="node">
 <title>Node58</title>
 <g id="a_node8"><a xlink:href="namespaceutils.html#a26267fe7371b6215c5d61374d716527b" target="_top" xlink:title="Logging a message. ">
-<polygon fill="#ffffff" stroke="#000000" points="487.5,-114.5 487.5,-133.5 540.5,-133.5 540.5,-114.5 487.5,-114.5"/>
-<text text-anchor="middle" x="514" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::log</text>
+<polygon fill="#ffffff" stroke="#000000" points="486.5,-152.5 486.5,-171.5 539.5,-171.5 539.5,-152.5 486.5,-152.5"/>
+<text text-anchor="middle" x="513" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::log</text>
 </a>
 </g>
 </g>
 <!-- Node55&#45;&gt;Node58 -->
 <g id="edge7" class="edge">
 <title>Node55&#45;&gt;Node58</title>
-<path fill="none" stroke="#191970" d="M402.2252,-152.411C425.1788,-146.5766 454.3639,-139.1583 477.1556,-133.3651"/>
-<polygon fill="#191970" stroke="#191970" points="478.3026,-136.685 487.1321,-130.8293 476.5781,-129.9007 478.3026,-136.685"/>
+<path fill="none" stroke="#191970" d="M425.758,-162C442.8954,-162 460.9858,-162 476.2228,-162"/>
+<polygon fill="#191970" stroke="#191970" points="476.269,-165.5001 486.2689,-162 476.2689,-158.5001 476.269,-165.5001"/>
 </g>
 <!-- Node59&#45;&gt;Node55 -->
 <g id="edge9" class="edge">
@@ -251,17 +251,17 @@ var sectionId = 'dynsection-18';
 <!-- Node60 -->
 <g id="node10" class="node">
 <title>Node60</title>
-<g id="a_node10"><a xlink:href="classDataKeys.html#ab29d313282fe7c52adfa35b8335f3ca6" target="_top" xlink:title="Get a constant reference to _keys. ">
-<polygon fill="#ffffff" stroke="#000000" points="325,-209.5 325,-228.5 404,-228.5 404,-209.5 325,-209.5"/>
-<text text-anchor="middle" x="364.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::get</text>
+<g id="a_node10"><a xlink:href="classElement.html#a5dfb31b61142eff280750d3dd0cffc6a" target="_top" xlink:title="Get keys of the data of this object. ">
+<polygon fill="#ffffff" stroke="#000000" points="315.5,-209.5 315.5,-228.5 413.5,-228.5 413.5,-209.5 315.5,-209.5"/>
+<text text-anchor="middle" x="364.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys</text>
 </a>
 </g>
 </g>
 <!-- Node59&#45;&gt;Node60 -->
 <g id="edge10" class="edge">
 <title>Node59&#45;&gt;Node60</title>
-<path fill="none" stroke="#191970" d="M258.1844,-219.6502C276.5824,-219.5377 296.8104,-219.414 314.6388,-219.305"/>
-<polygon fill="#191970" stroke="#191970" points="314.8483,-222.8038 324.8267,-219.2427 314.8054,-215.804 314.8483,-222.8038"/>
+<path fill="none" stroke="#191970" d="M258.1844,-219.6502C273.373,-219.5574 289.8089,-219.4568 305.1121,-219.3632"/>
+<polygon fill="#191970" stroke="#191970" points="305.5182,-222.8609 315.4965,-219.2997 305.4753,-215.861 305.5182,-222.8609"/>
 </g>
 <!-- Node61&#45;&gt;Node55 -->
 <g id="edge12" class="edge">
@@ -272,9 +272,9 @@ var sectionId = 'dynsection-18';
 <!-- Node62 -->
 <g id="node12" class="node">
 <title>Node62</title>
-<g id="a_node12"><a xlink:href="classElement.html#a2dd2b3ed6f76878ae6cc1c1a36183517" target="_top" xlink:title="Wrapper for DataKeys::required. ">
-<polygon fill="#ffffff" stroke="#000000" points="318,-76.5 318,-95.5 411,-95.5 411,-76.5 318,-76.5"/>
-<text text-anchor="middle" x="364.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::required</text>
+<g id="a_node12"><a xlink:href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2" target="_top" xlink:title="Check if this object has required key(s). ">
+<polygon fill="#ffffff" stroke="#000000" points="305,-76.5 305,-95.5 424,-95.5 424,-76.5 305,-76.5"/>
+<text text-anchor="middle" x="364.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::required_keys</text>
 </a>
 </g>
 </g>
@@ -284,138 +284,123 @@ var sectionId = 'dynsection-18';
 <path fill="none" stroke="#191970" d="M238.3715,-134.3989C247.2325,-131.7149 256.5587,-128.5475 265,-125 281.8738,-117.9087 284.1338,-112.1094 301,-105 306.4344,-102.7093 312.2379,-100.5743 318.0449,-98.6245"/>
 <polygon fill="#191970" stroke="#191970" points="319.2951,-101.8994 327.7564,-95.523 317.1655,-95.2312 319.2951,-101.8994"/>
 </g>
-<!-- Node65 -->
-<g id="node15" class="node">
-<title>Node65</title>
-<g id="a_node15"><a xlink:href="classElement.html#a576395d61902a76979ffd336afa714b3" target="_top" xlink:title="Extract values of a property in data as a one&#45;dimensional Eigen&#45;Array. ">
+<!-- Node64 -->
+<g id="node14" class="node">
+<title>Node64</title>
+<g id="a_node14"><a xlink:href="classElement.html#a576395d61902a76979ffd336afa714b3" target="_top" xlink:title="Extract values of a property in data as a one&#45;dimensional Eigen&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="319,-114.5 319,-133.5 410,-133.5 410,-114.5 319,-114.5"/>
 <text text-anchor="middle" x="364.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::array1d</text>
 </a>
 </g>
 </g>
-<!-- Node61&#45;&gt;Node65 -->
-<g id="edge17" class="edge">
-<title>Node61&#45;&gt;Node65</title>
+<!-- Node61&#45;&gt;Node64 -->
+<g id="edge16" class="edge">
+<title>Node61&#45;&gt;Node64</title>
 <path fill="none" stroke="#191970" d="M260.953,-136.6663C276.653,-134.7458 293.5101,-132.6838 308.9683,-130.7929"/>
 <polygon fill="#191970" stroke="#191970" points="309.3974,-134.2666 318.8984,-129.5782 308.5474,-127.3183 309.3974,-134.2666"/>
+</g>
+<!-- Node62&#45;&gt;Node57 -->
+<g id="edge15" class="edge">
+<title>Node62&#45;&gt;Node57</title>
+<path fill="none" stroke="#191970" d="M401.9728,-95.589C421.3925,-100.5583 445.3025,-106.6767 465.9542,-111.9613"/>
+<polygon fill="#191970" stroke="#191970" points="465.2411,-115.3916 475.7966,-114.4799 466.9765,-108.6101 465.2411,-115.3916"/>
 </g>
 <!-- Node63 -->
 <g id="node13" class="node">
 <title>Node63</title>
-<g id="a_node13"><a xlink:href="classDataKeys.html#a03517cffe825c983c3582ffb55318a7b" target="_top" xlink:title="Check if this object has required key(s). ">
-<polygon fill="#ffffff" stroke="#000000" points="464,-76.5 464,-95.5 564,-95.5 564,-76.5 464,-76.5"/>
-<text text-anchor="middle" x="514" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys::required</text>
+<g id="a_node13"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
+<polygon fill="#ffffff" stroke="#000000" points="485,-76.5 485,-95.5 541,-95.5 541,-76.5 485,-76.5"/>
+<text text-anchor="middle" x="513" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
 </a>
 </g>
 </g>
 <!-- Node62&#45;&gt;Node63 -->
 <g id="edge14" class="edge">
 <title>Node62&#45;&gt;Node63</title>
-<path fill="none" stroke="#191970" d="M411.3926,-86C424.8294,-86 439.6676,-86 453.7862,-86"/>
-<polygon fill="#191970" stroke="#191970" points="453.9093,-89.5001 463.9093,-86 453.9092,-82.5001 453.9093,-89.5001"/>
+<path fill="none" stroke="#191970" d="M424.045,-86C441.091,-86 459.2141,-86 474.6237,-86"/>
+<polygon fill="#191970" stroke="#191970" points="474.8118,-89.5001 484.8117,-86 474.8117,-82.5001 474.8118,-89.5001"/>
 </g>
-<!-- Node63&#45;&gt;Node57 -->
-<g id="edge16" class="edge">
-<title>Node63&#45;&gt;Node57</title>
-<path fill="none" stroke="#191970" d="M540.0622,-95.5808C547.8027,-98.5131 556.2757,-101.8088 564,-105 582.4342,-112.6158 602.8452,-121.7182 619.0447,-129.1048"/>
-<polygon fill="#191970" stroke="#191970" points="617.9827,-132.4681 628.5316,-133.4536 620.8997,-126.1048 617.9827,-132.4681"/>
-</g>
-<!-- Node64 -->
-<g id="node14" class="node">
-<title>Node64</title>
-<g id="a_node14"><a xlink:href="namespaceutils.html#a5e5339e32b770a14691521435849c949" target="_top" xlink:title="Mimicking Python&#39;s join. ">
-<polygon fill="#ffffff" stroke="#000000" points="621,-76.5 621,-95.5 677,-95.5 677,-76.5 621,-76.5"/>
-<text text-anchor="middle" x="649" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::join</text>
-</a>
-</g>
-</g>
-<!-- Node63&#45;&gt;Node64 -->
-<g id="edge15" class="edge">
-<title>Node63&#45;&gt;Node64</title>
-<path fill="none" stroke="#191970" d="M564.269,-86C579.5913,-86 596.1831,-86 610.589,-86"/>
-<polygon fill="#191970" stroke="#191970" points="610.6431,-89.5001 620.643,-86 610.643,-82.5001 610.6431,-89.5001"/>
-</g>
-<!-- Node66&#45;&gt;Node55 -->
-<g id="edge19" class="edge">
-<title>Node66&#45;&gt;Node55</title>
+<!-- Node65&#45;&gt;Node55 -->
+<g id="edge18" class="edge">
+<title>Node65&#45;&gt;Node55</title>
 <path fill="none" stroke="#191970" d="M237.2561,-115.5624C246.417,-118.305 256.1602,-121.509 265,-125 281.6381,-131.5707 284.369,-136.4115 301,-143 306.6199,-145.2264 312.6073,-147.3391 318.5746,-149.2911"/>
 <polygon fill="#191970" stroke="#191970" points="317.9405,-152.7604 328.5298,-152.4159 320.037,-146.0816 317.9405,-152.7604"/>
 </g>
-<!-- Node66&#45;&gt;Node62 -->
-<g id="edge20" class="edge">
-<title>Node66&#45;&gt;Node62</title>
-<path fill="none" stroke="#191970" d="M265.1503,-98.1529C279.1947,-96.4349 293.9666,-94.6279 307.6996,-92.9481"/>
-<polygon fill="#191970" stroke="#191970" points="308.4686,-96.3802 317.9696,-91.6918 307.6186,-89.432 308.4686,-96.3802"/>
+<!-- Node65&#45;&gt;Node62 -->
+<g id="edge19" class="edge">
+<title>Node65&#45;&gt;Node62</title>
+<path fill="none" stroke="#191970" d="M265.1503,-98.1529C274.8445,-96.967 284.8854,-95.7388 294.6919,-94.5392"/>
+<polygon fill="#191970" stroke="#191970" points="295.3012,-97.9909 304.8022,-93.3025 294.4512,-91.0427 295.3012,-97.9909"/>
 </g>
-<!-- Node66&#45;&gt;Node65 -->
-<g id="edge21" class="edge">
-<title>Node66&#45;&gt;Node65</title>
+<!-- Node65&#45;&gt;Node64 -->
+<g id="edge20" class="edge">
+<title>Node65&#45;&gt;Node64</title>
 <path fill="none" stroke="#191970" d="M265.1503,-113.0624C279.5483,-114.6475 294.711,-116.3168 308.7351,-117.8607"/>
 <polygon fill="#191970" stroke="#191970" points="308.3953,-121.3444 318.7183,-118.9598 309.1614,-114.3864 308.3953,-121.3444"/>
 </g>
-<!-- Node67&#45;&gt;Node55 -->
-<g id="edge23" class="edge">
-<title>Node67&#45;&gt;Node55</title>
+<!-- Node66&#45;&gt;Node55 -->
+<g id="edge22" class="edge">
+<title>Node66&#45;&gt;Node55</title>
 <path fill="none" stroke="#191970" d="M250.6884,-39.6109C255.9152,-42.0648 260.8322,-45.142 265,-49 297.8303,-79.39 268.2023,-112.5747 301,-143 302.7136,-144.5897 304.5551,-146.0467 306.4933,-147.3821"/>
 <polygon fill="#191970" stroke="#191970" points="305.0887,-150.6089 315.5147,-152.4925 308.5389,-144.5183 305.0887,-150.6089"/>
 </g>
-<!-- Node67&#45;&gt;Node62 -->
-<g id="edge25" class="edge">
-<title>Node67&#45;&gt;Node62</title>
+<!-- Node66&#45;&gt;Node62 -->
+<g id="edge24" class="edge">
+<title>Node66&#45;&gt;Node62</title>
 <path fill="none" stroke="#191970" d="M237.2561,-39.5624C246.417,-42.305 256.1602,-45.509 265,-49 281.6381,-55.5707 284.369,-60.4115 301,-67 306.6199,-69.2264 312.6073,-71.3391 318.5746,-73.2911"/>
 <polygon fill="#191970" stroke="#191970" points="317.9405,-76.7604 328.5298,-76.4159 320.037,-70.0816 317.9405,-76.7604"/>
 </g>
-<!-- Node68 -->
-<g id="node18" class="node">
-<title>Node68</title>
-<g id="a_node18"><a xlink:href="namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850" target="_top" xlink:title="Convert a py::args (a variable number arguments) object to a Vec object. ">
+<!-- Node67 -->
+<g id="node17" class="node">
+<title>Node67</title>
+<g id="a_node17"><a xlink:href="namespaceutils.html#a9fdbb91c9e48ca033fca642b6e73d850" target="_top" xlink:title="Convert a py::args (a variable number arguments) object to a Vec object. ">
 <polygon fill="#ffffff" stroke="#000000" points="312.5,-.5 312.5,-19.5 416.5,-19.5 416.5,-.5 312.5,-.5"/>
 <text text-anchor="middle" x="364.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::pyargs_to_vec</text>
 </a>
 </g>
 </g>
-<!-- Node67&#45;&gt;Node68 -->
-<g id="edge24" class="edge">
-<title>Node67&#45;&gt;Node68</title>
+<!-- Node66&#45;&gt;Node67 -->
+<g id="edge23" class="edge">
+<title>Node66&#45;&gt;Node67</title>
 <path fill="none" stroke="#191970" d="M260.953,-22.6663C274.3887,-21.0228 288.6719,-19.2756 302.2006,-17.6207"/>
 <polygon fill="#191970" stroke="#191970" points="302.8715,-21.0648 312.3725,-16.3764 302.0215,-14.1166 302.8715,-21.0648"/>
 </g>
-<!-- Node69 -->
-<g id="node19" class="node">
-<title>Node69</title>
-<g id="a_node19"><a xlink:href="classElement.html#a4c2fcdb60e23dedce2b54b9deeadc469" target="_top" xlink:title="Extract values of properties in data as a two&#45;dimensional Eigen&#45;Array. ">
+<!-- Node68 -->
+<g id="node18" class="node">
+<title>Node68</title>
+<g id="a_node18"><a xlink:href="classElement.html#a4c2fcdb60e23dedce2b54b9deeadc469" target="_top" xlink:title="Extract values of properties in data as a two&#45;dimensional Eigen&#45;Array. ">
 <polygon fill="#ffffff" stroke="#000000" points="319,-38.5 319,-57.5 410,-57.5 410,-38.5 319,-38.5"/>
 <text text-anchor="middle" x="364.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::array2d</text>
 </a>
 </g>
 </g>
-<!-- Node67&#45;&gt;Node69 -->
-<g id="edge26" class="edge">
-<title>Node67&#45;&gt;Node69</title>
+<!-- Node66&#45;&gt;Node68 -->
+<g id="edge25" class="edge">
+<title>Node66&#45;&gt;Node68</title>
 <path fill="none" stroke="#191970" d="M260.953,-36.6003C276.5034,-38.3123 293.1891,-40.1493 308.5263,-41.8378"/>
 <polygon fill="#191970" stroke="#191970" points="308.5754,-45.3642 318.8984,-42.9796 309.3415,-38.4063 308.5754,-45.3642"/>
 </g>
-<!-- Node70&#45;&gt;Node55 -->
-<g id="edge28" class="edge">
-<title>Node70&#45;&gt;Node55</title>
+<!-- Node69&#45;&gt;Node55 -->
+<g id="edge27" class="edge">
+<title>Node69&#45;&gt;Node55</title>
 <path fill="none" stroke="#191970" d="M247.6483,-77.5344C253.8274,-80.0016 259.8095,-83.1029 265,-87 288.6612,-104.7652 277.3579,-125.2094 301,-143 303.4941,-144.8768 306.1725,-146.5692 308.9683,-148.0951"/>
 <polygon fill="#191970" stroke="#191970" points="307.674,-151.3537 318.2146,-152.4245 310.6423,-145.0142 307.674,-151.3537"/>
 </g>
-<!-- Node70&#45;&gt;Node62 -->
-<g id="edge30" class="edge">
-<title>Node70&#45;&gt;Node62</title>
-<path fill="none" stroke="#191970" d="M265.1503,-75.0624C279.1947,-76.6086 293.9666,-78.2349 307.6996,-79.7467"/>
-<polygon fill="#191970" stroke="#191970" points="307.6466,-83.262 317.9696,-80.8774 308.4127,-76.304 307.6466,-83.262"/>
-</g>
-<!-- Node70&#45;&gt;Node68 -->
+<!-- Node69&#45;&gt;Node62 -->
 <g id="edge29" class="edge">
-<title>Node70&#45;&gt;Node68</title>
+<title>Node69&#45;&gt;Node62</title>
+<path fill="none" stroke="#191970" d="M265.1503,-75.0624C274.8445,-76.1297 284.8854,-77.2351 294.6919,-78.3147"/>
+<polygon fill="#191970" stroke="#191970" points="294.4793,-81.8124 304.8022,-79.4278 295.2453,-74.8544 294.4793,-81.8124"/>
+</g>
+<!-- Node69&#45;&gt;Node67 -->
+<g id="edge28" class="edge">
+<title>Node69&#45;&gt;Node67</title>
 <path fill="none" stroke="#191970" d="M238.3715,-58.3989C247.2325,-55.7149 256.5587,-52.5475 265,-49 281.8738,-41.9087 284.1338,-36.1094 301,-29 306.4344,-26.7093 312.2379,-24.5743 318.0449,-22.6245"/>
 <polygon fill="#191970" stroke="#191970" points="319.2951,-25.8994 327.7564,-19.523 317.1655,-19.2312 319.2951,-25.8994"/>
 </g>
-<!-- Node70&#45;&gt;Node69 -->
-<g id="edge31" class="edge">
-<title>Node70&#45;&gt;Node69</title>
+<!-- Node69&#45;&gt;Node68 -->
+<g id="edge30" class="edge">
+<title>Node69&#45;&gt;Node68</title>
 <path fill="none" stroke="#191970" d="M265.1503,-60.1529C279.5483,-58.3916 294.711,-56.5369 308.7351,-54.8214"/>
 <polygon fill="#191970" stroke="#191970" points="309.2173,-58.2886 318.7183,-53.6002 308.3673,-51.3404 309.2173,-58.2886"/>
 </g>

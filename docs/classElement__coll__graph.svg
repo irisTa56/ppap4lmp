@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 442;
+var viewWidth = 282;
 var viewHeight = 479;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,108 +54,80 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>Element</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-475 438,-475 438,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-475 277.5,-475 277.5,4 -4,4"/>
 <!-- Node4 -->
 <g id="node1" class="node">
 <title>Node4</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="146,-.5 146,-255.5 288,-255.5 288,-.5 146,-.5"/>
-<text text-anchor="middle" x="217" y="-243.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element</text>
-<polyline fill="none" stroke="#000000" points="146,-236.5 288,-236.5 "/>
-<text text-anchor="start" x="154" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; n_remain</text>
-<text text-anchor="start" x="154" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; dataid</text>
-<text text-anchor="start" x="154" y="-202.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; data</text>
-<text text-anchor="start" x="154" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; omp_lock</text>
-<text text-anchor="start" x="154" y="-180.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; instance_count</text>
-<polyline fill="none" stroke="#000000" points="146,-173.5 288,-173.5 "/>
-<text text-anchor="start" x="154" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Element()</text>
-<text text-anchor="start" x="154" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Element()</text>
-<text text-anchor="start" x="154" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_element()</text>
-<text text-anchor="start" x="154" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_generator()</text>
-<text text-anchor="start" x="154" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_checking_classname()</text>
-<text text-anchor="start" x="154" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ append_updater()</text>
-<text text-anchor="start" x="154" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_data()</text>
-<text text-anchor="start" x="154" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_data()</text>
-<text text-anchor="start" x="154" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_keys()</text>
-<text text-anchor="start" x="154" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ array1d()</text>
-<text text-anchor="start" x="154" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">and 9 more...</text>
-<text text-anchor="start" x="154" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; increment_remain()</text>
-<text text-anchor="start" x="154" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; decrement_remain()</text>
-<text text-anchor="start" x="154" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; update_data()</text>
-<text text-anchor="start" x="154" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; init_for_python()</text>
+<polygon fill="#bfbfbf" stroke="#000000" points="73,-.5 73,-277.5 215,-277.5 215,-.5 73,-.5"/>
+<text text-anchor="middle" x="144" y="-265.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element</text>
+<polyline fill="none" stroke="#000000" points="73,-258.5 215,-258.5 "/>
+<text text-anchor="start" x="81" y="-246.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; n_remain</text>
+<text text-anchor="start" x="81" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; dataid</text>
+<text text-anchor="start" x="81" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; data</text>
+<text text-anchor="start" x="81" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; datakeys</text>
+<text text-anchor="start" x="81" y="-202.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; checking_classname</text>
+<text text-anchor="start" x="81" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; omp_lock</text>
+<text text-anchor="start" x="81" y="-180.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; instance_count</text>
+<polyline fill="none" stroke="#000000" points="73,-173.5 215,-173.5 "/>
+<text text-anchor="start" x="81" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Element()</text>
+<text text-anchor="start" x="81" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Element()</text>
+<text text-anchor="start" x="81" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_element()</text>
+<text text-anchor="start" x="81" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_generator()</text>
+<text text-anchor="start" x="81" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_checking_classname()</text>
+<text text-anchor="start" x="81" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ append_updater()</text>
+<text text-anchor="start" x="81" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_data()</text>
+<text text-anchor="start" x="81" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_mutable_data()</text>
+<text text-anchor="start" x="81" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_data()</text>
+<text text-anchor="start" x="81" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_keys()</text>
+<text text-anchor="start" x="81" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">and 11 more...</text>
+<text text-anchor="start" x="81" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; increment_remain()</text>
+<text text-anchor="start" x="81" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; decrement_remain()</text>
+<text text-anchor="start" x="81" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; update_data()</text>
+<text text-anchor="start" x="81" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; init_for_python()</text>
 </g>
 <!-- Node5 -->
 <g id="node2" class="node">
 <title>Node5</title>
 <g id="a_node2"><a xlink:href="classGenerator.html" target="_top" xlink:title="Generator is an abstract class to generate data. ">
-<polygon fill="#ffffff" stroke="#000000" points="0,-309 0,-465 142,-465 142,-309 0,-309"/>
-<text text-anchor="middle" x="71" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Generator</text>
-<polyline fill="none" stroke="#000000" points="0,-446 142,-446 "/>
-<text text-anchor="start" x="8" y="-434" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># update_chain</text>
-<polyline fill="none" stroke="#000000" points="0,-427 142,-427 "/>
-<text text-anchor="start" x="8" y="-415" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Generator()</text>
-<text text-anchor="start" x="8" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Generator()</text>
-<text text-anchor="start" x="8" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_element()</text>
-<text text-anchor="start" x="8" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_generator()</text>
-<text text-anchor="start" x="8" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_checking_classname()</text>
-<text text-anchor="start" x="8" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ appoint()</text>
-<text text-anchor="start" x="8" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ hello()</text>
-<text text-anchor="start" x="8" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ goodbye()</text>
-<text text-anchor="start" x="8" y="-327" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_update_chain()</text>
-<text text-anchor="start" x="8" y="-316" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># merge_update_chain()</text>
+<polygon fill="#ffffff" stroke="#000000" points="0,-314.5 0,-470.5 142,-470.5 142,-314.5 0,-314.5"/>
+<text text-anchor="middle" x="71" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Generator</text>
+<polyline fill="none" stroke="#000000" points="0,-451.5 142,-451.5 "/>
+<text text-anchor="start" x="8" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># update_chain</text>
+<polyline fill="none" stroke="#000000" points="0,-432.5 142,-432.5 "/>
+<text text-anchor="start" x="8" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Generator()</text>
+<text text-anchor="start" x="8" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Generator()</text>
+<text text-anchor="start" x="8" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_element()</text>
+<text text-anchor="start" x="8" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_generator()</text>
+<text text-anchor="start" x="8" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_checking_classname()</text>
+<text text-anchor="start" x="8" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ appoint()</text>
+<text text-anchor="start" x="8" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ hello()</text>
+<text text-anchor="start" x="8" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ goodbye()</text>
+<text text-anchor="start" x="8" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get_update_chain()</text>
+<text text-anchor="start" x="8" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># merge_update_chain()</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node4 -->
 <g id="edge1" class="edge">
 <title>Node5&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M120.0932,-299.9099C128.3716,-285.2244 137.111,-269.7208 145.816,-254.2784"/>
-<polygon fill="none" stroke="#191970" points="116.8645,-298.5102 115.0028,-308.9402 122.9624,-301.9477 116.8645,-298.5102"/>
+<path fill="none" stroke="#191970" d="M96.3214,-304.569C98.8546,-295.7722 101.4673,-286.6993 104.1038,-277.5436"/>
+<polygon fill="none" stroke="#191970" points="92.902,-303.7951 93.4981,-314.3732 99.6287,-305.7322 92.902,-303.7951"/>
 </g>
 <!-- Node6 -->
 <g id="node3" class="node">
 <title>Node6</title>
-<polygon fill="#ffffff" stroke="#bfbfbf" points="160.5,-358.5 160.5,-415.5 273.5,-415.5 273.5,-358.5 160.5,-358.5"/>
-<text text-anchor="middle" x="217" y="-403.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">EnShThis&lt; Element &gt;</text>
-<polyline fill="none" stroke="#bfbfbf" points="160.5,-396.5 273.5,-396.5 "/>
-<text text-anchor="middle" x="217" y="-384.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="160.5,-377.5 273.5,-377.5 "/>
-<text text-anchor="middle" x="217" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polygon fill="#ffffff" stroke="#bfbfbf" points="160.5,-364 160.5,-421 273.5,-421 273.5,-364 160.5,-364"/>
+<text text-anchor="middle" x="217" y="-409" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">EnShThis&lt; Element &gt;</text>
+<polyline fill="none" stroke="#bfbfbf" points="160.5,-402 273.5,-402 "/>
+<text text-anchor="middle" x="217" y="-390" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="160.5,-383 273.5,-383 "/>
+<text text-anchor="middle" x="217" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> </text>
 </g>
 <!-- Node6&#45;&gt;Node4 -->
 <g id="edge2" class="edge">
 <title>Node6&#45;&gt;Node4</title>
-<path fill="none" stroke="#191970" d="M217,-348.2076C217,-323.3316 217,-289.4851 217,-255.7928"/>
-<polygon fill="none" stroke="#191970" points="213.5001,-348.2928 217,-358.2929 220.5001,-348.2929 213.5001,-348.2928"/>
-</g>
-<!-- Node7 -->
-<g id="node4" class="node">
-<title>Node7</title>
-<g id="a_node4"><a xlink:href="classDataKeys.html" target="_top" xlink:title="DataKeys is a small class owning a set of string keys in Element::data. ">
-<polygon fill="#ffffff" stroke="#000000" points="292,-303.5 292,-470.5 434,-470.5 434,-303.5 292,-303.5"/>
-<text text-anchor="middle" x="363" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">DataKeys</text>
-<polyline fill="none" stroke="#000000" points="292,-451.5 434,-451.5 "/>
-<text text-anchor="start" x="300" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; _keys</text>
-<text text-anchor="start" x="300" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; checking_classname</text>
-<polyline fill="none" stroke="#000000" points="292,-421.5 434,-421.5 "/>
-<text text-anchor="start" x="300" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ DataKeys()</text>
-<text text-anchor="start" x="300" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~DataKeys()</text>
-<text text-anchor="start" x="300" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ clear()</text>
-<text text-anchor="start" x="300" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set()</text>
-<text text-anchor="start" x="300" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ add()</text>
-<text text-anchor="start" x="300" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ remove()</text>
-<text text-anchor="start" x="300" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ set_checking_classname()</text>
-<text text-anchor="start" x="300" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ required()</text>
-<text text-anchor="start" x="300" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ optional()</text>
-<text text-anchor="start" x="300" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ get()</text>
-</a>
-</g>
-</g>
-<!-- Node7&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
-<title>Node7&#45;&gt;Node4</title>
-<path fill="none" stroke="#404040" d="M315.7996,-303.2678C308.8313,-290.9062 301.5031,-277.9061 294.1184,-264.806"/>
-<polygon fill="none" stroke="#404040" points="294.0826,-264.7423 287.6517,-261.4798 288.1898,-254.2888 294.6207,-257.5513 294.0826,-264.7423"/>
-<text text-anchor="middle" x="327" y="-277" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> &#45;datakeys</text>
+<path fill="none" stroke="#191970" d="M205.9624,-354.1708C199.9305,-333.2245 192.0499,-305.8582 183.9407,-277.6983"/>
+<polygon fill="none" stroke="#191970" points="202.6372,-355.2722 208.7679,-363.9131 209.3639,-353.335 202.6372,-355.2722"/>
 </g>
 </g>
 </svg>

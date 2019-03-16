@@ -1,5 +1,5 @@
 var classPyUpdater =
 [
-    [ "compute", "classPyUpdater.html#ad5589aa85b06a5266cc9ccededde18ca", null ],
-    [ "compute_impl", "classPyUpdater.html#ad46f16d0ed7da468da9b1bf1fca493e1", null ]
+    [ "compute", "classPyUpdater.html#a0a557adc0f6e6ab49a31cecb1285328b", null ],
+    [ "compute_impl", "classPyUpdater.html#a33804d870cb62cc94bf69a836a5d483a", null ]
 ];

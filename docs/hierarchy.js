@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "DataKeys", "classDataKeys.html", null ],
     [ "EnShThis", null, [
       [ "AddGyrationRadius", "classAddGyrationRadius.html", null ],
       [ "AddMap", "classAddMap.html", null ],

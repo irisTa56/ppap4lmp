@@ -2,7 +2,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
     [ "adders", "dir_efedc0399e0892fcf242707c3ddb185f.html", "dir_efedc0399e0892fcf242707c3ddb185f" ],
     [ "alias", "dir_6c04a91bc13b4612622c78d14e29af33.html", "dir_6c04a91bc13b4612622c78d14e29af33" ],
-    [ "class", "dir_6ddc554cda5704a54b4cf197aaaaa198.html", "dir_6ddc554cda5704a54b4cf197aaaaa198" ],
     [ "core", "dir_aebb8dcc11953d78e620bbef0b9e2183.html", "dir_aebb8dcc11953d78e620bbef0b9e2183" ],
     [ "filters", "dir_1bc13244e26df1e1f069a1fd18e36da3.html", "dir_1bc13244e26df1e1f069a1fd18e36da3" ],
     [ "invokers", "dir_f8cc41312865e1289a0b78825bfdc325.html", "dir_f8cc41312865e1289a0b78825bfdc325" ],

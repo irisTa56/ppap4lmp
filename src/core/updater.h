@@ -54,9 +54,15 @@ class Updater {
     required.
   */
   ShPtr<Generator> ext_generator;
-  /**/
+  /*!
+    Wrapper function for Element::required_keys of an Element object
+    where this instance is appended to.
+  */
   std::function<void(const Json &)> required_keys;
-  /**/
+  /*!
+    Wrapper function for Element::optional_keys of an Element object
+    where this instance is appended to.
+  */
   std::function<bool(const Json &)> optional_keys;
   /*!
     @brief Implementation of computation for updating Element::data.
@@ -68,10 +74,10 @@ class Updater {
     @return None.
   */
   virtual void compute_impl(Json &data) = 0;
-  /**/
+  //! Make #required_keys
   void make_required_keys(
     const ElPtr &elem);
-  /**/
+  //! Make #optional_keys
   void make_optional_keys(
     const ElPtr &elem);
   /*!

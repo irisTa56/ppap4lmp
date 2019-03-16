@@ -268,8 +268,14 @@ class Element : public Generator, public EnShThis<Element> {
   void array2d(
     T &array,
     const Vec<Str> &keys);
-  /*
+  /*!
+    @brief Update #datakeys.
+    This method must be called after setting new properties to #data.
 
+    @return None.
+
+    If #data is an array,
+    only the first element is used for investigating keys.
   */
   void update_keys();
   /*!

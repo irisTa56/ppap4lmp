@@ -103,12 +103,14 @@ $(document).ready(function(){initNavTree('classStaCopy.html','');});
 <div class="dynheader">
 Inheritance diagram for StaCopy:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStaCopy__inherit__graph.svg" width="184" height="544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStaCopy__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for StaCopy:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStaCopy__coll__graph.svg" width="184" height="544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStaCopy__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -116,8 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17757d5366c3e1d57b1a05fbb01125d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#a17757d5366c3e1d57b1a05fbb01125d3">StaCopy</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
 <tr class="memdesc:a17757d5366c3e1d57b1a05fbb01125d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a> class.  <a href="#a17757d5366c3e1d57b1a05fbb01125d3">More...</a><br /></td></tr>
 <tr class="separator:a17757d5366c3e1d57b1a05fbb01125d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50e7868dc364e6a21b9c6ab4604deee5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#a50e7868dc364e6a21b9c6ab4604deee5">compute</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys, const int dataid) override</td></tr>
-<tr class="separator:a50e7868dc364e6a21b9c6ab4604deee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7e1b1e53f63b63d92486fab68a758f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#a2e7e1b1e53f63b63d92486fab68a758f">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int dataid) override</td></tr>
+<tr class="separator:a2e7e1b1e53f63b63d92486fab68a758f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStarter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStarter')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStarter.html">Starter</a></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
 <tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
@@ -135,11 +137,19 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae962c8d37a62afa08d961a48c25dede7"><td class="memItemLeft" align="right" valign="top"><a id="ae962c8d37a62afa08d961a48c25dede7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#ae962c8d37a62afa08d961a48c25dede7">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, <a class="el" href="classDataKeys.html">DataKeys</a> &amp;datakeys) override</td></tr>
-<tr class="memdesc:ae962c8d37a62afa08d961a48c25dede7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classUpdater.html#a288fd0d27e760ec1d2e1f689641b01a7" title="Implementation of computation for updating Element::data. ">Updater::compute_impl</a>. <br /></td></tr>
-<tr class="separator:ae962c8d37a62afa08d961a48c25dede7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8075c95cad0203e88cc9048d9bf485d0"><td class="memItemLeft" align="right" valign="top"><a id="a8075c95cad0203e88cc9048d9bf485d0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#a8075c95cad0203e88cc9048d9bf485d0">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data) override</td></tr>
+<tr class="memdesc:a8075c95cad0203e88cc9048d9bf485d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Updater::compute_impl</a>. <br /></td></tr>
+<tr class="separator:a8075c95cad0203e88cc9048d9bf485d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
+<tr class="memitem:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top"><a id="a7c72d0115a18442dd594a2868528e924"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a7c72d0115a18442dd594a2868528e924">make_required_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a>. <br /></td></tr>
+<tr class="separator:a7c72d0115a18442dd594a2868528e924 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top"><a id="ab1f6c0058c5f0860e06569e05c6c5cdd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ab1f6c0058c5f0860e06569e05c6c5cdd">make_optional_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a>. <br /></td></tr>
+<tr class="separator:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
 <tr class="separator:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -148,13 +158,17 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classUpdater"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classUpdater')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classUpdater.html">Updater</a></td></tr>
 <tr class="memitem:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83ef04b8c3dc30168a655a5f43e6f93 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a></td></tr>
+<tr class="separator:af83ef04b8c3dc30168a655a5f43e6f93 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892adbb5176936765ace2750cfdc7f08 inherit pro_attribs_classUpdater"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a></td></tr>
+<tr class="separator:a892adbb5176936765ace2750cfdc7f08 inherit pro_attribs_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a> copies <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of an existing <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object and sets it to a new <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
-<p>An object of this class owns an existing <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a> and copies <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> and <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a> of the existing object, and then sets the copies to a new <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.</p>
+<p>An object of this class owns an existing <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object as <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a> and copies <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> of the existing object, and then sets the copies to a new <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object.</p>
 <p>About usage in Python, please see <a class="el" href="namespacepybind.html#a7169ceefca09ffb95769b42e317f8eea" title="Bind StaCopy class to Python. ">pybind::py_sta_copy</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="sta__copy_8h_source.html#l00026">26</a> of file <a class="el" href="sta__copy_8h_source.html">sta_copy.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sta__copy_8h_source.html#l00025">25</a> of file <a class="el" href="sta__copy_8h_source.html">sta_copy.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a17757d5366c3e1d57b1a05fbb01125d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17757d5366c3e1d57b1a05fbb01125d3">&#9670;&nbsp;</a></span>StaCopy()</h2>
@@ -185,8 +199,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a50e7868dc364e6a21b9c6ab4604deee5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50e7868dc364e6a21b9c6ab4604deee5">&#9670;&nbsp;</a></span>compute()</h2>
+<a id="a2e7e1b1e53f63b63d92486fab68a758f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7e1b1e53f63b63d92486fab68a758f">&#9670;&nbsp;</a></span>compute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,14 +211,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void StaCopy::compute </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classDataKeys.html">DataKeys</a> &amp;&#160;</td>
-          <td class="paramname"><em>datakeys</em>, </td>
+          <td class="paramtype">const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>elem</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -227,8 +235,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> where copied properties are set to.</td></tr>
-    <tr><td class="paramname">datakeys</td><td>Mutable reference to <a class="el" href="classElement.html#a141b8b8adc3aa5c9b3d6c3262c36a7c4">Element::datakeys</a> where keys for copied properties are set to.</td></tr>
+    <tr><td class="paramname">elem</td><td>Shared pointer to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where copied properties are set to.</td></tr>
     <tr><td class="paramname">dataid</td><td>A constant integer copied from <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a>.</td></tr>
   </table>
   </dd>
@@ -236,13 +243,14 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>Unlike other subclasses of Stater class, <a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a> overrides this method to skip sorting by <code>id</code> property. </p>
 
-<p>Reimplemented from <a class="el" href="classStarter.html#a5e1cc4f19ad4d82b765b48c5aa8eb22a">Starter</a>.</p>
+<p>Reimplemented from <a class="el" href="classStarter.html#a06098875ca2584225ac5aec4e0c82d09">Starter</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="sta__copy_8cpp_source.html#l00035">35</a> of file <a class="el" href="sta__copy_8cpp_source.html">sta_copy.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sta__copy_8cpp_source.html#l00033">33</a> of file <a class="el" href="sta__copy_8cpp_source.html">sta_copy.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStaCopy_a50e7868dc364e6a21b9c6ab4604deee5_cgraph.svg" width="355" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStaCopy_a2e7e1b1e53f63b63d92486fab68a758f_cgraph.svg" width="355" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
