@@ -14,11 +14,11 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 void Filter::compute(
-  const ElPtr &el,
+  const ElPtr &elem,
   DataKeys &datakeys,
   const int dataid)
 {
-  auto &data = el->get_mutable_data();
+  auto &data = elem->get_mutable_data();
 
   if (check_blacklist(dataid))
   {
@@ -27,7 +27,9 @@ void Filter::compute(
       Str myclassname
         = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
-      datakeys.set_checking_classname(myclassname);
+      elem->set_checking_classname(myclassname);
+      make_required(elem);
+      make_optional(elem);
 
       compute_impl(data, datakeys);
     }

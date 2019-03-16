@@ -14,11 +14,11 @@ namespace ut =  utils;
 /* ------------------------------------------------------------------ */
 
 void Adder::compute(
-  const ElPtr &el,
+  const ElPtr &elem,
   DataKeys &datakeys,
   const int dataid)
 {
-  auto &data = el->get_mutable_data();
+  auto &data = elem->get_mutable_data();
 
   if (check_blacklist(dataid))
   {
@@ -32,12 +32,14 @@ void Adder::compute(
     Str myclassname
       = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
+    elem->set_checking_classname(myclassname);
+    make_required(elem);
+    make_optional(elem);
+
     if (ext_generator)
     {
       ext_generator->set_checking_classname(myclassname);
     }
-
-    datakeys.set_checking_classname(myclassname);
 
     compute_impl(data, datakeys);
 

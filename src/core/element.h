@@ -32,9 +32,9 @@
   non-array ::Json objects. Each non-array ::Json object should have
   the same set of keys; this set is the one stored as #datakeys.
 
-  An object of this class can update its own #data and #datakeys
-  by calling its #update_data where mutable references of the #data
-  and #datakeys are passed to an Updater object paired as ::UpdatePair.
+  An object of this class can update itself by calling its #update_data
+  where a shared pointer of this object is passed to an Updater object
+  paired as ::UpdatePair.
 
   About usage in Python,
   please see pybind::py_element.
@@ -114,9 +114,8 @@ class Element : public Generator, public EnShThis<Element> {
     This method updates #data using an object of Updater
     taken as `upd`. This object and the Updater object are paired
     as ::UpdatePair by #append_updater in advance. In this method,
-    mutable references of the #data and #datakeys are passed to
-    Updater::compute of the Updater object. The #dataid is also passed
-    to the Updater object.
+    a shared pointer of this object is passed to Updater::compute
+    of the Updater object.
   */
   void update_data(
     const ShPtr<Updater> &upd);
@@ -196,6 +195,7 @@ class Element : public Generator, public EnShThis<Element> {
     by this method.
   */
   const Json &get_data();
+  /**/
   Json &get_mutable_data();
   /*!
     @brief Get the partial data of this object.

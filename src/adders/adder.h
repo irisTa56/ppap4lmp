@@ -29,9 +29,9 @@ class Adder : public Updater {
     @brief Compute properties and add them to Element::data given
     as a mutable reference.
 
-    @param data
-      Mutable reference to Element::data where computed
-      properties are added to.
+    @param elem
+      Shared pointer to an Element object
+      where computed properties are added to.
 
     @param datakeys
       Mutable reference to Element::datakeys where keys
@@ -51,7 +51,7 @@ class Adder : public Updater {
     must be set at initialization (done by Starter) only.
   */
   virtual void compute(
-    const ElPtr &el,
+    const ElPtr &elem,
     DataKeys &datakeys,
     const int dataid) override;
 };

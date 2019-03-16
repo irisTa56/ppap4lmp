@@ -17,6 +17,26 @@ Updater::Updater()
 
 /* ------------------------------------------------------------------ */
 
+void Updater::make_required(
+  const ElPtr &elem)
+{
+  required = [elem](const Json &key_) {
+    elem->required(key_);
+  };
+}
+
+/* ------------------------------------------------------------------ */
+
+void Updater::make_optional(
+  const ElPtr &elem)
+{
+  optional = [elem](const Json &key_) {
+    return elem->optional(key_);
+  };
+}
+
+/* ------------------------------------------------------------------ */
+
 bool Updater::check_blacklist(
   const int dataid)
 {

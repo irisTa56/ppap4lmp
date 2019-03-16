@@ -30,8 +30,8 @@ class Filter : public Updater {
     @brief Filter elements from array Element::data given
     as a mutable reference.
 
-    @param data
-      Mutable reference to Element::data to be filtered.
+    @param elem
+      Shared pointer to an Element object to be filtered.
 
     @param datakeys
       Mutable reference to Element::datakeys.
@@ -49,7 +49,7 @@ class Filter : public Updater {
     Filter::compute_impl orveridden in subclasses of this class.
   */
   virtual void compute(
-    const ElPtr &el,
+    const ElPtr &elem,
     DataKeys &datakeys,
     const int dataid) override;
 };

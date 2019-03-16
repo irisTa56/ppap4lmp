@@ -39,9 +39,9 @@ class Starter : public Updater {
     @brief Compute or parse properties and set them to Element::data
     given as a mutable reference.
 
-    @param data
-      Mutable reference to Element::data where computed
-      properties are set to.
+    @param elem
+      Shared pointer to an Element object
+      where computed properties are set to.
 
     @param datakeys
       Mutable reference to Element::datakeys where keys
@@ -61,7 +61,7 @@ class Starter : public Updater {
     is an array and `id` property is set.
   */
   virtual void compute(
-    const ElPtr &el,
+    const ElPtr &elem,
     DataKeys &datakeys,
     const int dataid) override;
 };

@@ -54,6 +54,10 @@ class Updater {
     required.
   */
   ShPtr<Generator> ext_generator;
+  /**/
+  std::function<void(const Json &)> required;
+  /**/
+  std::function<bool(const Json &)> optional;
   /*!
     @brief Implementation of computation for updating Element::data.
 
@@ -68,6 +72,12 @@ class Updater {
     @return None.
   */
   virtual void compute_impl(Json &data, DataKeys &datakeys) = 0;
+  /**/
+  void make_required(
+    const ElPtr &elem);
+  /**/
+  void make_optional(
+    const ElPtr &elem);
   /*!
     Look for Element::dataid in #dataid_blacklist.
 
@@ -95,9 +105,9 @@ class Updater {
   /*!
     @brief Managing computation to update Element::data.
 
-    @param data
-      Mutable reference to Element::data where computed
-      properties are added to.
+    @param elem
+      Shared pointer to an Element object
+      where computed properties are added to.
 
     @param datakeys
       Mutable reference to Element::datakeys where keys
@@ -109,7 +119,7 @@ class Updater {
     @return None.
   */
   virtual void compute(
-    const ElPtr &el, DataKeys &datakeys, const int dataid) = 0;
+    const ElPtr &elem, DataKeys &datakeys, const int dataid) = 0;
   /*!
     @brief Remove Element::dataid from #dataid_blacklist.
 
