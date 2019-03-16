@@ -43,7 +43,7 @@ void ProData::run_impl(
   }
   else
   {
-    elem->required(selected_keys);
+    elem->required_keys(selected_keys);
 
     auto &json = results[index];
 

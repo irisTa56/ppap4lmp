@@ -26,15 +26,15 @@ void ProMeanSquareDisplacement::run_impl(
 {
   auto el_points = generators[index]->get_element();
 
-  // NOTE: `id` property is required to ensure data is sorted.
-  el_points->required({"xu", "yu", "zu", "id"});
+  // NOTE: `id` property is required_keys to ensure data is sorted.
+  el_points->required_keys({"xu", "yu", "zu", "id"});
 
   ArrayXXd rs;
   el_points->array2d(rs, {"xu", "yu", "zu"});
 
   if (drift_correction)
   {
-    el_points->required("mass");
+    el_points->required_keys("mass");
 
     ArrayXd ms;
     el_points->array1d(ms, "mass");
@@ -69,13 +69,13 @@ void ProMeanSquareDisplacement::prepare()
 
   auto el_initial_points = generators.front()->get_element();
 
-  el_initial_points->required({"xu", "yu", "zu", "id"});
+  el_initial_points->required_keys({"xu", "yu", "zu", "id"});
 
   el_initial_points->array2d(initial_rs, {"xu", "yu", "zu"});
 
   if (drift_correction)
   {
-    el_initial_points->required("mass");
+    el_initial_points->required_keys("mass");
 
     ArrayXd ms;
     el_initial_points->array1d(ms, "mass");

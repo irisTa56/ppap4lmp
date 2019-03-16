@@ -59,7 +59,7 @@ void Starter::compute(
     compute_impl(data);
     elem->update_keys();
 
-    if (data.is_array() && elem->optional("id"))
+    if (data.is_array() && elem->optional_keys("id"))
     {
       sort_by_id(data);
     }

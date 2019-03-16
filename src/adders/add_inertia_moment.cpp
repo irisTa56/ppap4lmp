@@ -117,13 +117,13 @@ void AddInertiaMoment::compute_without_weights(
 void AddInertiaMoment::compute_impl(
   Json &data)
 {
-  required({"atom-ids", "xu", "yu", "zu"});
+  required_keys({"atom-ids", "xu", "yu", "zu"});
 
   auto el_atoms = ext_generator->get_element();
 
-  el_atoms->required({"id", "mass", "xu", "yu", "zu"});
+  el_atoms->required_keys({"id", "mass", "xu", "yu", "zu"});
 
-  if (optional("atom-weights"))
+  if (optional_keys("atom-weights"))
   {
     compute_with_weights(data, el_atoms);
   }

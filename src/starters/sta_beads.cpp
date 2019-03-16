@@ -107,7 +107,7 @@ void StaBeads::compute_impl(
 
   auto el_mols = ext_generator->get_element();
 
-  el_mols->required("atom-ids");
+  el_mols->required_keys("atom-ids");
 
   auto &mols = el_mols->get_data();
 

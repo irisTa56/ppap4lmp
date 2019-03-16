@@ -72,8 +72,8 @@ class Element : public Generator, public EnShThis<Element> {
   */
   Vec<Str> datakeys;
   /*!
-    Name of a class of instance calling #required.
-    Showing the class name in an error message raised by #required
+    Name of a class of instance calling #required_keys.
+    Showing the class name in an error message raised by #required_keys
     helps debugging.
   */
   Str checking_classname;
@@ -100,9 +100,9 @@ class Element : public Generator, public EnShThis<Element> {
 
     @return None.
 
-    If one increments #n_remain of this object before using
-    #data and then decrements it after using it, the #data is
-    cleared to save memory. This system is convenient to access #data
+    If one increments #n_remain of this object before using #data
+    and then decrements it after using it, the #data is cleared
+    to save memory. This system is convenient to access #data
     multiple times while saving memory.
   */
   void decrement_remain();
@@ -275,7 +275,7 @@ class Element : public Generator, public EnShThis<Element> {
     If this object does not have the given required key(s),
     a runtime error is thrown in C++ (and also raised in Python).
   */
-  void required(
+  void required_keys(
     const Json &key_);
   /*!
     @brief Check if this object has optional key(s).
@@ -289,7 +289,7 @@ class Element : public Generator, public EnShThis<Element> {
     If this object has the given key(s), it returns true. If
     not, it returns false.
   */
-  bool optional(
+  bool optional_keys(
     const Json &key_);
   /*!
     @brief Get Element::data of this object.

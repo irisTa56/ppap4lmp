@@ -52,15 +52,15 @@ void ProRadialDistributionFunction::run_impl(
   */
   auto el_atoms = generators[index]->get_element("Targets");
 
-  el_atoms->required({"x", "y", "z", "id"});
+  el_atoms->required_keys({"x", "y", "z", "id"});
 
   auto &atoms = el_atoms->get_data();
 
-  auto special_bonds_exist = el_atoms->optional("special-bonds");
+  auto special_bonds_exist = el_atoms->optional_keys("special-bonds");
 
   auto el_box = generators[index]->get_element("Box");
 
-  el_box->required({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
+  el_box->required_keys({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
 
   auto &box = el_box->get_data();
 

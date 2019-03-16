@@ -23,17 +23,17 @@ void ProRDFWD::run_impl(
   */
   auto el_beads = generators[index]->get_element("Targets");
 
-  el_beads->required({
+  el_beads->required_keys({
     "I_xx", "I_yy", "I_zz", "I_xy", "I_xz", "I_yz", "mass",
     "x", "y", "z", "id"});
 
   auto &beads = el_beads->get_data();
 
-  auto special_bonds_exist = el_beads->optional("special-bonds");
+  auto special_bonds_exist = el_beads->optional_keys("special-bonds");
 
   auto el_box = generators[index]->get_element("Box");
 
-  el_box->required({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
+  el_box->required_keys({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
 
   auto &box = el_box->get_data();
 

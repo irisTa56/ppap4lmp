@@ -29,11 +29,11 @@ void AddChildPositions::compute_impl(
 {
   auto key_for_child_ids = child_name + "-ids";
 
-  required({key_for_child_ids, "xu", "yu", "zu"});
+  required_keys({key_for_child_ids, "xu", "yu", "zu"});
 
   auto el_children = ext_generator->get_element();
 
-  el_children->required({"id", "xu", "yu", "zu"});
+  el_children->required_keys({"id", "xu", "yu", "zu"});
 
   auto &children = el_children->get_data();
 

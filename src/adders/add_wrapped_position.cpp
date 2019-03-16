@@ -21,11 +21,11 @@ AddWrappedPosition::AddWrappedPosition(
 void AddWrappedPosition::compute_impl(
   Json &data)
 {
-  required({"xu", "yu", "zu"});
+  required_keys({"xu", "yu", "zu"});
 
   auto el_box = ext_generator->get_element();
 
-  el_box->required({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
+  el_box->required_keys({"lo_x", "lo_y", "lo_z", "hi_x", "hi_y", "hi_z"});
 
   auto &box = el_box->get_data();
 

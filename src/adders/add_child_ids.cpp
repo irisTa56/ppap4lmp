@@ -29,15 +29,15 @@ AddChildIDs::AddChildIDs(
 void AddChildIDs::compute_impl(
   Json &data)
 {
-  required("id");
+  required_keys("id");
 
   auto el_children = ext_generator->get_element();
 
-  el_children->required({"id", key_for_parent_id});
+  el_children->required_keys({"id", key_for_parent_id});
 
   auto key_for_child_ids = child_name + "-ids";
 
-  if (optional(key_for_child_ids))
+  if (optional_keys(key_for_child_ids))
   {
     ut::runtime_error("Key '" + key_for_child_ids + "' already exists");
   }

@@ -55,9 +55,9 @@ class Updater {
   */
   ShPtr<Generator> ext_generator;
   /**/
-  std::function<void(const Json &)> required;
+  std::function<void(const Json &)> required_keys;
   /**/
-  std::function<bool(const Json &)> optional;
+  std::function<bool(const Json &)> optional_keys;
   /*!
     @brief Implementation of computation for updating Element::data.
 
@@ -69,10 +69,10 @@ class Updater {
   */
   virtual void compute_impl(Json &data) = 0;
   /**/
-  void make_required(
+  void make_required_keys(
     const ElPtr &elem);
   /**/
-  void make_optional(
+  void make_optional_keys(
     const ElPtr &elem);
   /*!
     Look for Element::dataid in #dataid_blacklist.

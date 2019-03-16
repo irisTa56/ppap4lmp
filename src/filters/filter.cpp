@@ -27,8 +27,7 @@ void Filter::compute(
         = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
       elem->set_checking_classname(myclassname);
-      make_required(elem);
-      make_optional(elem);
+      make_required_keys(elem);
 
       compute_impl(data);
     }

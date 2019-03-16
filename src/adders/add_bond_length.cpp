@@ -24,11 +24,11 @@ AddBondLength::AddBondLength(
 void AddBondLength::compute_impl(
   Json &data)
 {
-  required({"atom1-id", "atom2-id"});
+  required_keys({"atom1-id", "atom2-id"});
 
   auto el_atoms = ext_generator->get_element();
 
-  el_atoms->required({"id", "xu", "yu", "zu"});
+  el_atoms->required_keys({"id", "xu", "yu", "zu"});
 
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 

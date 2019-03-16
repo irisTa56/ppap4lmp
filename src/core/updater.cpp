@@ -17,21 +17,21 @@ Updater::Updater()
 
 /* ------------------------------------------------------------------ */
 
-void Updater::make_required(
+void Updater::make_required_keys(
   const ElPtr &elem)
 {
-  required = [elem](const Json &key_) {
-    elem->required(key_);
+  required_keys = [elem](const Json &key_) {
+    elem->required_keys(key_);
   };
 }
 
 /* ------------------------------------------------------------------ */
 
-void Updater::make_optional(
+void Updater::make_optional_keys(
   const ElPtr &elem)
 {
-  optional = [elem](const Json &key_) {
-    return elem->optional(key_);
+  optional_keys = [elem](const Json &key_) {
+    return elem->optional_keys(key_);
   };
 }
 

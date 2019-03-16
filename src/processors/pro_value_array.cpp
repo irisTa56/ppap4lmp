@@ -44,9 +44,9 @@ void ProValueArray::run_impl(
   auto elem = generators[index]->get_element();
   auto &data = elem->get_data();
 
-  // NOTE: `id` property is required to ensure data is sorted.
-  elem->required("id");
-  elem->required(selected_keys);
+  // NOTE: `id` property is required_keys to ensure data is sorted.
+  elem->required_keys("id");
+  elem->required_keys(selected_keys);
 
   auto &rows = results_trajs[index];
 

@@ -272,7 +272,7 @@ void Element::update_keys()
 
 /* ------------------------------------------------------------------ */
 
-void Element::required(
+void Element::required_keys(
   const Json &key_)
 {
   Vec<Str> missings;
@@ -304,7 +304,7 @@ void Element::required(
 
 /* ------------------------------------------------------------------ */
 
-bool Element::optional(
+bool Element::optional_keys(
   const Json &key_)
 {
   const auto begin = datakeys.begin();
@@ -346,7 +346,7 @@ ArrayXi Element::get_1d_int_py(
 {
   init_for_python();
 
-  required(key);
+  required_keys(key);
 
   ArrayXi array;
   array1d(array, key);
@@ -361,7 +361,7 @@ ArrayXd Element::get_1d_float_py(
 {
   init_for_python();
 
-  required(key);
+  required_keys(key);
 
   ArrayXd array;
   array1d(array, key);
@@ -379,7 +379,7 @@ ArrayXXi Element::get_2d_int_py(
   Vec<Str> keys;
   ut::pyargs_to_vec(args, keys);
 
-  required(keys);
+  required_keys(keys);
 
   ArrayXXi array;
   array2d(array, keys);
@@ -397,7 +397,7 @@ ArrayXXd Element::get_2d_float_py(
   Vec<Str> keys;
   ut::pyargs_to_vec(args, keys);
 
-  required(keys);
+  required_keys(keys);
 
   ArrayXXd array;
   array2d(array, keys);

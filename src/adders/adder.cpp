@@ -26,14 +26,14 @@ void Adder::compute(
       ut::runtime_error("Adder accepts nonempty data only");
     }
 
-    auto id_exists = elem->optional("id");
+    auto id_exists = elem->optional_keys("id");
 
     Str myclassname
       = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
     elem->set_checking_classname(myclassname);
-    make_required(elem);
-    make_optional(elem);
+    make_required_keys(elem);
+    make_optional_keys(elem);
 
     if (ext_generator)
     {
@@ -43,7 +43,7 @@ void Adder::compute(
     compute_impl(data);
     elem->update_keys();
 
-    if (id_exists != elem->optional("id"))
+    if (id_exists != elem->optional_keys("id"))
     {
       ut::runtime_error("Adder cannot add 'id'");
     }
