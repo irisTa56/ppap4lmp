@@ -24,7 +24,6 @@ var searchData=
   ['get_5fkeys_5fpy',['get_keys_py',['../classElement.html#afa6debec21fb714908f8c44a7cea0a49',1,'Element']]],
   ['get_5flength',['get_length',['../classGenList.html#a3d90767ee64acbd33d7432c47dd6abf5',1,'GenList']]],
   ['get_5fmean_5fsquare_5fdisplacement',['get_mean_square_displacement',['../classProMeanSquareDisplacement.html#a3f0e107cdb76243eb37159755436137a',1,'ProMeanSquareDisplacement']]],
-  ['get_5fmutable_5fdata',['get_mutable_data',['../classElement.html#a6f4692ea82ce0c1b756c37e6b101aade',1,'Element']]],
   ['get_5fprofiles',['get_profiles',['../classProThicknessProfile.html#ac34db6788d6087c8626342a73c60df67',1,'ProThicknessProfile']]],
   ['get_5fr_5faxis',['get_r_axis',['../classProRadialDistributionFunction.html#a55a0157cec820775d58a7beae942e90c',1,'ProRadialDistributionFunction']]],
   ['get_5frdf',['get_rdf',['../classProRadialDistributionFunction.html#a4cf16e97c3eeaac139f365503b903964',1,'ProRadialDistributionFunction']]],

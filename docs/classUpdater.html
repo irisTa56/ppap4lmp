@@ -118,9 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
 <tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88308fd5a11102dc6598249363278e08"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a88308fd5a11102dc6598249363278e08">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int dataid)=0</td></tr>
-<tr class="memdesc:a88308fd5a11102dc6598249363278e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="#a88308fd5a11102dc6598249363278e08">More...</a><br /></td></tr>
-<tr class="separator:a88308fd5a11102dc6598249363278e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49eed09b4d57a42ec2b423a9cb60213d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a49eed09b4d57a42ec2b423a9cb60213d">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, const int dataid)=0</td></tr>
+<tr class="memdesc:a49eed09b4d57a42ec2b423a9cb60213d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="#a49eed09b4d57a42ec2b423a9cb60213d">More...</a><br /></td></tr>
+<tr class="separator:a49eed09b4d57a42ec2b423a9cb60213d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb7ad60b6b3e19b83299fb644b49f02b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b">remove_from_blacklist</a> (const int dataid)</td></tr>
 <tr class="memdesc:afb7ad60b6b3e19b83299fb644b49f02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>.  <a href="#afb7ad60b6b3e19b83299fb644b49f02b">More...</a><br /></td></tr>
 <tr class="separator:afb7ad60b6b3e19b83299fb644b49f02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,13 +226,14 @@ Private Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a2184a4efa52ad2f4a631c134379ef7b8_icgraph.svg" width="343" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a2184a4efa52ad2f4a631c134379ef7b8_icgraph.svg" width="343" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
 </div>
-<a id="a88308fd5a11102dc6598249363278e08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88308fd5a11102dc6598249363278e08">&#9670;&nbsp;</a></span>compute()</h2>
+<a id="a49eed09b4d57a42ec2b423a9cb60213d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49eed09b4d57a42ec2b423a9cb60213d">&#9670;&nbsp;</a></span>compute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,6 +246,12 @@ Here is the caller graph for this function:</div>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -269,13 +276,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">elem</td><td>Shared pointer to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where computed properties are added to.</td></tr>
+    <tr><td class="paramname">data</td><td>Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> where computed properties are added to.</td></tr>
     <tr><td class="paramname">dataid</td><td>A constant integer copied from <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
-<p>Implemented in <a class="el" href="classStarter.html#a06098875ca2584225ac5aec4e0c82d09">Starter</a>, <a class="el" href="classAdder.html#a2702febc51f2643de5d7aa18a4fc42e9">Adder</a>, and <a class="el" href="classFilter.html#a6fcd5c57bf85541b46b946335ebb7707">Filter</a>.</p>
+<p>Implemented in <a class="el" href="classStarter.html#a2f63dae15f27c99095e7f0d71ea66010">Starter</a>, <a class="el" href="classAdder.html#a5c416043e396771c79e4381ae70defe1">Adder</a>, and <a class="el" href="classFilter.html#a3720cae109b4fa91fc63f6c540880de7">Filter</a>.</p>
 
 </div>
 </div>
@@ -316,7 +324,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a8f2256a52be76c16dc71987aca1164c9_icgraph.svg" width="334" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a8f2256a52be76c16dc71987aca1164c9_icgraph.svg" width="334" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>

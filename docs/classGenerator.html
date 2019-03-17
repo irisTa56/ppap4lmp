@@ -104,12 +104,14 @@ $(document).ready(function(){initNavTree('classGenerator.html','');});
 <div class="dynheader">
 Inheritance diagram for Generator:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classGenerator__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classGenerator__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Generator:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classGenerator__coll__graph.svg" width="200" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGenerator__coll__graph.svg" width="172" height="220"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -122,12 +124,12 @@ virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr
 virtual <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#a76231ee9835f9b21951630e7909816e1">get_generator</a> (const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;name=nullptr)=0</td></tr>
 <tr class="memdesc:a76231ee9835f9b21951630e7909816e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a shared pointer of <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class. <br /></td></tr>
 <tr class="separator:a76231ee9835f9b21951630e7909816e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e2380cceb5787e3e43730121f647ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#a68e2380cceb5787e3e43730121f647ca">set_checking_classname</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;classname)=0</td></tr>
-<tr class="memdesc:a68e2380cceb5787e3e43730121f647ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a name of class of which instance calls Element::required.  <a href="#a68e2380cceb5787e3e43730121f647ca">More...</a><br /></td></tr>
-<tr class="separator:a68e2380cceb5787e3e43730121f647ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b5fae1411adc475d862e1c35dffae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#a26b5fae1411adc475d862e1c35dffae0">appoint</a> ()</td></tr>
-<tr class="memdesc:a26b5fae1411adc475d862e1c35dffae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appoint to this <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object.  <a href="#a26b5fae1411adc475d862e1c35dffae0">More...</a><br /></td></tr>
-<tr class="separator:a26b5fae1411adc475d862e1c35dffae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad501f716cfbffba600ba7e2dd74fe30b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#ad501f716cfbffba600ba7e2dd74fe30b">talk_with</a> (const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;classname)=0</td></tr>
+<tr class="memdesc:ad501f716cfbffba600ba7e2dd74fe30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a name of class of which instance calls Element::required.  <a href="#ad501f716cfbffba600ba7e2dd74fe30b">More...</a><br /></td></tr>
+<tr class="separator:ad501f716cfbffba600ba7e2dd74fe30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b31a438467a72aea046fe934aea1f51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#a9b31a438467a72aea046fe934aea1f51">book</a> ()</td></tr>
+<tr class="memdesc:a9b31a438467a72aea046fe934aea1f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appoint to this <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object.  <a href="#a9b31a438467a72aea046fe934aea1f51">More...</a><br /></td></tr>
+<tr class="separator:a9b31a438467a72aea046fe934aea1f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4648b055ee0e51c1e68ea084156c222"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222">hello</a> ()</td></tr>
 <tr class="memdesc:ac4648b055ee0e51c1e68ea084156c222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hello to this <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> object.  <a href="#ac4648b055ee0e51c1e68ea084156c222">More...</a><br /></td></tr>
 <tr class="separator:ac4648b055ee0e51c1e68ea084156c222"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,14 +157,14 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="generator_8h_source.html#l00041">41</a> of file <a class="el" href="generator_8h_source.html">generator.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a26b5fae1411adc475d862e1c35dffae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26b5fae1411adc475d862e1c35dffae0">&#9670;&nbsp;</a></span>appoint()</h2>
+<a id="a9b31a438467a72aea046fe934aea1f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b31a438467a72aea046fe934aea1f51">&#9670;&nbsp;</a></span>book()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Generator::appoint </td>
+          <td class="memname">void Generator::book </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -294,8 +296,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a68e2380cceb5787e3e43730121f647ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68e2380cceb5787e3e43730121f647ca">&#9670;&nbsp;</a></span>set_checking_classname()</h2>
+<a id="ad501f716cfbffba600ba7e2dd74fe30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad501f716cfbffba600ba7e2dd74fe30b">&#9670;&nbsp;</a></span>talk_with()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,7 +306,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Generator::set_checking_classname </td>
+          <td class="memname">virtual void Generator::talk_with </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="std_8h.html#a376207d46bd161163b9089964e8fbed6">Str</a> &amp;&#160;</td>
           <td class="paramname"><em>classname</em></td><td>)</td>
@@ -327,7 +329,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
-<p>Implemented in <a class="el" href="classElement.html#ae07a844782e6b86f3d765ce661f02d82">Element</a>, <a class="el" href="classGenDict.html#a343518497c3d54b7a4a16ec3367f2c28">GenDict</a>, <a class="el" href="classGenList.html#a462a37873feb3d58d213914c25d819c5">GenList</a>, and <a class="el" href="classPyElement.html#ad30132c3bf873f37fedf8016e22a0afe">PyElement</a>.</p>
+<p>Implemented in <a class="el" href="classElement.html#ac1c9a6032f2ba22de65d6bae72bbe979">Element</a>, <a class="el" href="classGenDict.html#aa5e393d29aff2d24290cdd29790f99e5">GenDict</a>, <a class="el" href="classGenList.html#a31932bb46a9bc85c83fb777516ec5e97">GenList</a>, and <a class="el" href="classPyElement.html#a56ea5e0e843a9294c5ec6f4e867f0ec4">PyElement</a>.</p>
 
 </div>
 </div>

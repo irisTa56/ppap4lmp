@@ -112,9 +112,9 @@ Collaboration diagram for Adder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2702febc51f2643de5d7aa18a4fc42e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#a2702febc51f2643de5d7aa18a4fc42e9">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int dataid) override</td></tr>
-<tr class="memdesc:a2702febc51f2643de5d7aa18a4fc42e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.  <a href="#a2702febc51f2643de5d7aa18a4fc42e9">More...</a><br /></td></tr>
-<tr class="separator:a2702febc51f2643de5d7aa18a4fc42e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c416043e396771c79e4381ae70defe1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#a5c416043e396771c79e4381ae70defe1">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, const int dataid) override</td></tr>
+<tr class="memdesc:a5c416043e396771c79e4381ae70defe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute properties and add them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.  <a href="#a5c416043e396771c79e4381ae70defe1">More...</a><br /></td></tr>
+<tr class="separator:a5c416043e396771c79e4381ae70defe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdder.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
 <tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,13 +155,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> adds new properties to a non-empty <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object. </p>
-<p>This class inherits <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class and overrides <a class="el" href="classUpdater.html#a88308fd5a11102dc6598249363278e08" title="Managing computation to update Element::data. ">Updater::compute</a>. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>.</p>
+<p>This class inherits <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class and overrides <a class="el" href="classUpdater.html#a49eed09b4d57a42ec2b423a9cb60213d" title="Managing computation to update Element::data. ">Updater::compute</a>. This class is an abstract class and has a pure virtual function, <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>.</p>
 <p>Name of subclass of this class should be prefixed by <em>Add</em>. Unlike <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>, <a class="el" href="classAdder.html" title="Adder adds new properties to a non-empty Element object. ">Adder</a> accepts only non-empty <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="adder_8h_source.html#l00024">24</a> of file <a class="el" href="adder_8h_source.html">adder.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2702febc51f2643de5d7aa18a4fc42e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2702febc51f2643de5d7aa18a4fc42e9">&#9670;&nbsp;</a></span>compute()</h2>
+<a id="a5c416043e396771c79e4381ae70defe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c416043e396771c79e4381ae70defe1">&#9670;&nbsp;</a></span>compute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,6 +174,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td>(</td>
           <td class="paramtype">const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>elem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -198,6 +204,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">elem</td><td>Shared pointer to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where computed properties are added to.</td></tr>
+    <tr><td class="paramname">data</td><td>Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> where computed properties are added to.</td></tr>
     <tr><td class="paramname">dataid</td><td>A constant integer copied from <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a>.</td></tr>
   </table>
   </dd>
@@ -205,13 +212,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
 <p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> to <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a>. Note that actual computation and addition of properties is conducted by <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Adder::compute_impl</a> orveridden in subclasses of this class. In addition, this method ensures that a new property whose name is <em>id</em> is not added; <code>id</code> property must be set at initialization (done by <a class="el" href="classStarter.html" title="Starter sets some properties to an empty Element object. ">Starter</a>) only. </p>
 
-<p>Implements <a class="el" href="classUpdater.html#a88308fd5a11102dc6598249363278e08">Updater</a>.</p>
+<p>Implements <a class="el" href="classUpdater.html#a49eed09b4d57a42ec2b423a9cb60213d">Updater</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="adder_8cpp_source.html#l00016">16</a> of file <a class="el" href="adder_8cpp_source.html">adder.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classAdder_a2702febc51f2643de5d7aa18a4fc42e9_cgraph.svg" width="368" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classAdder_a5c416043e396771c79e4381ae70defe1_cgraph.svg" width="368" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>

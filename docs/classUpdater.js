@@ -3,7 +3,7 @@ var classUpdater =
     [ "Updater", "classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549", null ],
     [ "~Updater", "classUpdater.html#a99c425219bd92a884fc34ae816fd5597", null ],
     [ "check_blacklist", "classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8", null ],
-    [ "compute", "classUpdater.html#a88308fd5a11102dc6598249363278e08", null ],
+    [ "compute", "classUpdater.html#a49eed09b4d57a42ec2b423a9cb60213d", null ],
     [ "compute_impl", "classUpdater.html#a8f2256a52be76c16dc71987aca1164c9", null ],
     [ "get_ext_generator", "classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36", null ],
     [ "make_optional_keys", "classUpdater.html#ab1f6c0058c5f0860e06569e05c6c5cdd", null ],
