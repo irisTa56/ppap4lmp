@@ -116,5 +116,3 @@ This project would not be possible without the following great open-source proje
 ## Known Bugs
 
 * `Error in 'python': double free or corruption (out):` occurs when exiting from Jupyter.
-
-## To Do
