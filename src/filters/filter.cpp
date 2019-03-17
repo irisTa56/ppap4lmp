@@ -15,10 +15,9 @@ namespace ut = utils;
 
 void Filter::compute(
   const ElPtr &elem,
+  Json &data,
   const int dataid)
 {
-  auto &data = elem->get_mutable_data();
-
   if (check_blacklist(dataid))
   {
     if (data.is_array())
@@ -27,7 +26,9 @@ void Filter::compute(
         = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
       elem->set_checking_classname(myclassname);
+
       make_required_keys(elem);
+      make_optional_keys(elem);
 
       compute_impl(data);
     }

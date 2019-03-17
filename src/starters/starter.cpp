@@ -37,10 +37,9 @@ void Starter::sort_by_id(
 
 void Starter::compute(
   const ElPtr &elem,
+  Json &data,
   const int dataid)
 {
-  auto &data = elem->get_mutable_data();
-
   if (check_blacklist(dataid))
   {
     if (data != nullptr)
@@ -52,10 +51,12 @@ void Starter::compute(
     {
       Str myclassname
         = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
+
       ext_generator->set_checking_classname(myclassname);
     }
 
     compute_impl(data);
+
     elem->update_keys();
 
     if (data.is_array() && elem->optional_keys("id") && do_sorting_by_id)

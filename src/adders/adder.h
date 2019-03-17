@@ -33,6 +33,10 @@ class Adder : public Updater {
       Shared pointer to an Element object
       where computed properties are added to.
 
+    @param data
+      Mutable reference to Element::data
+      where computed properties are added to.
+
     @param dataid
       A constant integer copied from Element::dataid.
 
@@ -48,6 +52,7 @@ class Adder : public Updater {
   */
   virtual void compute(
     const ElPtr &elem,
+    Json &data,
     const int dataid) override;
 };
 

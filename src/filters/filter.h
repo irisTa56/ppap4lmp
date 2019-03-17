@@ -33,6 +33,9 @@ class Filter : public Updater {
     @param elem
       Shared pointer to an Element object to be filtered.
 
+    @param data
+      Mutable reference to Element::data to be filtered.
+
     @param dataid
       A constant integer copied from Element::dataid.
 
@@ -46,6 +49,7 @@ class Filter : public Updater {
   */
   virtual void compute(
     const ElPtr &elem,
+    Json &data,
     const int dataid) override;
 };
 

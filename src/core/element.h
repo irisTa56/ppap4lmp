@@ -123,15 +123,6 @@ class Element : public Generator, public EnShThis<Element> {
   void update_data(
     const ShPtr<Updater> &upd);
   /*!
-    @brief Get the reference to #data of this object.
-
-    @return Mutable reference to this Element::data.
-
-    Mainly used by Updater objects;
-    other objects should use Element::get_data.
-  */
-  Json &get_mutable_data();
-  /*!
     @brief For speeding up to access values in ::Json.
 
     @return List of pairs: key and distance from the previous item
@@ -143,12 +134,6 @@ class Element : public Generator, public EnShThis<Element> {
     const Json &key_);
   //! To use #increment_remain, #decrement_remain and #update_data.
   friend class Generator;
-  //! To use #get_mutable_data.
-  friend class Adder;
-  //! To use #get_mutable_data.
-  friend class Filter;
-  //! To use #get_mutable_data.
-  friend class Starter;
  public:
   /*!
     @brief Constructor of Element class.

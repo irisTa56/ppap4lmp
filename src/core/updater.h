@@ -111,13 +111,17 @@ class Updater {
       Shared pointer to an Element object
       where computed properties are added to.
 
+    @param data
+      Mutable reference to Element::data
+      where computed properties are added to.
+
     @param dataid
       A constant integer copied from Element::dataid.
 
     @return None.
   */
   virtual void compute(
-    const ElPtr &elem, const int dataid) = 0;
+    const ElPtr &elem, Json &data, const int dataid) = 0;
   /*!
     @brief Remove Element::dataid from #dataid_blacklist.
 

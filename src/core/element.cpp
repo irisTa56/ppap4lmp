@@ -86,16 +86,9 @@ void Element::update_data(
 {
   omp_set_lock(&omp_lock);
 
-  upd->compute(shared_from_this(), dataid);
+  upd->compute(shared_from_this(), data, dataid);
 
   omp_unset_lock(&omp_lock);
-}
-
-/* ------------------------------------------------------------------ */
-
-Json &Element::get_mutable_data()
-{
-  return data;
 }
 
 /* ------------------------------------------------------------------ */
