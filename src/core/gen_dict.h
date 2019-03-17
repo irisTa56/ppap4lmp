@@ -68,8 +68,8 @@ class GenDict : public Generator {
   */
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;
-  //! @copydoc Generator::set_checking_classname
-  virtual void set_checking_classname(
+  //! @copydoc Generator::talk_with
+  virtual void talk_with(
     const Str &classname) override;
   /*!
     @brief Get a set of the keys of #generator_dict.

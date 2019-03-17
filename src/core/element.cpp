@@ -144,7 +144,7 @@ ShPtr<Generator> Element::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-void Element::set_checking_classname(
+void Element::talk_with(
   const Str &classname)
 {
   checking_classname = classname;

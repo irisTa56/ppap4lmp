@@ -87,7 +87,7 @@ class Generator {
 
     @return None.
   */
-  virtual void set_checking_classname(
+  virtual void talk_with(
     const Str &classname) = 0;
   /*!
     @brief Appoint to this Generator object.
@@ -97,7 +97,7 @@ class Generator {
     Appointing means calling Element::increment_remain of
     all the Element objects contained in #update_chain.
   */
-  void appoint();
+  void book();
   /*!
     @brief Hello to this Generator object.
 

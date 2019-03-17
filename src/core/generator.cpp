@@ -54,7 +54,7 @@ void Generator::merge_update_chain(
 
 /* ------------------------------------------------------------------ */
 
-void Generator::appoint()
+void Generator::book()
 {
   for (const auto &item : update_chain)
   {

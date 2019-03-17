@@ -168,8 +168,8 @@ class Element : public Generator, public EnShThis<Element> {
   */
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) override;
-  //! @copydoc Generator::set_checking_classname
-  virtual void set_checking_classname(
+  //! @copydoc Generator::talk_with
+  virtual void talk_with(
     const Str &classname) override;
   /*!
     @brief Append an Updater object to this Element object:

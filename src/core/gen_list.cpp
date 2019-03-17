@@ -52,12 +52,12 @@ ShPtr<Generator> GenList::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-void GenList::set_checking_classname(
+void GenList::talk_with(
   const Str &classname)
 {
   for (const auto &gen : generator_list)
   {
-    gen->set_checking_classname(classname);
+    gen->talk_with(classname);
   }
 }
 

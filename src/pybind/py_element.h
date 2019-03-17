@@ -32,11 +32,11 @@ class PyElement : public Element {
     PYBIND11_OVERLOAD(
       ShPtr<Generator>, Element, get_generator, name);
   }
-  void set_checking_classname(
+  void talk_with(
     const Str &classname) override
   {
     PYBIND11_OVERLOAD(
-      void, Element, set_checking_classname, classname);
+      void, Element, talk_with, classname);
   }
 };
 

@@ -157,7 +157,7 @@ class Processor {
     @return None.
 
     This method (re)sets #i_generator to 0, and then
-    calls Generator::appoint of Generator objects in #generators.
+    calls Generator::book of Generator objects in #generators.
   */
   void startup();
 };

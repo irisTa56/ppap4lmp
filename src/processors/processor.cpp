@@ -57,7 +57,7 @@ void Processor::say_hello(
   const int i)
 {
   generators[i]->hello();
-  generators[i]->set_checking_classname(
+  generators[i]->talk_with(
     abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int()));
 }
 
@@ -105,7 +105,7 @@ void Processor::startup()
 
   for (const auto &g : generators)
   {
-    g->appoint();
+    g->book();
   }
 }
 

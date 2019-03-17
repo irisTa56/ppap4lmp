@@ -52,7 +52,7 @@ void Starter::compute(
       Str myclassname
         = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
-      ext_generator->set_checking_classname(myclassname);
+      ext_generator->talk_with(myclassname);
     }
 
     compute_impl(data);

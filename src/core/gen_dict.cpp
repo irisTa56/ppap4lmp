@@ -52,12 +52,12 @@ ShPtr<Generator> GenDict::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-void GenDict::set_checking_classname(
+void GenDict::talk_with(
   const Str &classname)
 {
   for (const auto &item : generator_dict)
   {
-    item.second->set_checking_classname(classname);
+    item.second->talk_with(classname);
   }
 }
 
