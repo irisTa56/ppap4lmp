@@ -48,18 +48,17 @@ void Starter::compute(
       ut::runtime_error("Starter accepts empty data only");
     }
 
-    Str myclassname
-      = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
-
     if (ext_generator)
     {
+      Str myclassname
+        = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
       ext_generator->set_checking_classname(myclassname);
     }
 
     compute_impl(data);
     elem->update_keys();
 
-    if (data.is_array() && elem->optional_keys("id"))
+    if (data.is_array() && elem->optional_keys("id") && do_sorting_by_id)
     {
       sort_by_id(data);
     }

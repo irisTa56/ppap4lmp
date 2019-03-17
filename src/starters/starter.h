@@ -22,16 +22,19 @@
   Unlike Adder, Starter accepts only empty Element::data.
 */
 class Starter : public Updater {
-/*!
-  Sort elements of a array ::Json object by its `id` property.
+  /*!
+    Sort elements of a array ::Json object by its `id` property.
 
-  @param data
-    Mutable reference to a ::Json object.
+    @param data
+      Mutable reference to a ::Json object.
 
-  @return None.
-*/
+    @return None.
+  */
   void sort_by_id(
     Json &data);
+ protected:
+  //! Whether to call #sort_by_id after setting data.
+  static const bool do_sorting_by_id = true;
  public:
   using Updater::Updater;
   virtual ~Starter() = default;

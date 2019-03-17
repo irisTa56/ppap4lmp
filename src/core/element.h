@@ -123,10 +123,28 @@ class Element : public Generator, public EnShThis<Element> {
   void update_data(
     const ShPtr<Updater> &upd);
   /*!
-    @brief To use #increment_remain, #decrement_remain and
+    @brief Get the reference to #data of this object.
+
+    @return Mutable reference to this Element::data.
+
+    Mainly used by Updater objects;
+    other objects should use Element::get_data.
+  */
+  Json &get_mutable_data();
+  /**/
+  Vec<std::pair<Str,int>> get_key_advances(
+    const Json &key_);
+  /*!
+    To use #increment_remain, #decrement_remain and
     #update_data, Generator needs to be a friend class.
   */
   friend class Generator;
+  //! To use #get_mutable_data.
+  friend class Adder;
+  //! To use #get_mutable_data.
+  friend class Filter;
+  //! To use #get_mutable_data.
+  friend class Starter;
  public:
   /*!
     @brief Constructor of Element class.
@@ -199,15 +217,6 @@ class Element : public Generator, public EnShThis<Element> {
   */
   const Json &get_data();
   /*!
-    @brief Get the reference to #data of this object.
-
-    @return Mutable reference to this Element::data.
-
-    Mainly used by Updater objects;
-    other objects should use Element::get_data.
-  */
-  Json &get_mutable_data();
-  /*!
     @brief Get the partial data of this object.
 
     @param key_
@@ -218,8 +227,12 @@ class Element : public Generator, public EnShThis<Element> {
     One can get the partial data stored in this object by this method.
     To select which property is included in the returned ::Json object,
     pass a string key for the property as `key_`.
+
+    @note
+      If you'd like to modify (sorting etc.) contents of #data,
+      please use this method insted of #get_data.
   */
-  Json get_data(
+  Json get_json(
     const Json &key_);
   /*!
     @brief Get keys of the data of this object.
@@ -306,11 +319,7 @@ class Element : public Generator, public EnShThis<Element> {
   */
   bool optional_keys(
     const Json &key_);
-  /*!
-    @brief Get Element::data of this object.
-
-    @return Constant reference to ::Json.
-  */
+  //! @copydoc Element::get_data
   const Json &get_data_py();
   //! @copydoc Element::get_keys
   Set<Str> get_keys_py();

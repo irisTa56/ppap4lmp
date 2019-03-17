@@ -35,12 +35,9 @@ void StaCustom::compute_impl(
 
     for (const auto &j : json)
     {
-      auto begin = j.cbegin();
-      auto end = j.cend();
-
-      for (auto it = begin; it != end; ++it)
+      for (auto it = j.begin(); it != j.end(); ++it)
       {
-        if (it.key() != jsonkeys[std::distance(begin, it)])
+        if (it.key() != jsonkeys[std::distance(j.begin(), it)])
         {
           ut::runtime_error("Invalid key(s) in array data");
         }

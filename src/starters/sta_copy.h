@@ -24,6 +24,8 @@
 */
 class StaCopy : public Starter {
  protected:
+  //! @copydoc Starter::do_sorting_by_id
+  static const bool do_sorting_by_id = false;
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
     Json &data) override;
@@ -40,24 +42,6 @@ class StaCopy : public Starter {
   StaCopy(
     const ElPtr &elem);
   virtual ~StaCopy() = default;
-  /*!
-    @copybrief Starter::compute
-
-    @param elem
-      Shared pointer to an Element object
-      where copied properties are set to.
-
-    @param dataid
-      A constant integer copied from Element::dataid.
-
-    @return None.
-
-    Unlike other subclasses of Stater class, StaCopy overrides
-    this method to skip sorting by `id` property.
-  */
-  virtual void compute(
-    const ElPtr &elem,
-    const int dataid) override;
 };
 
 #endif

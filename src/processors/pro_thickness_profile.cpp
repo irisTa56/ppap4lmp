@@ -47,7 +47,7 @@ void ProThicknessProfile::run_impl(
 
   el_atoms->required_keys({"x", "y", "z", "radius"});
 
-  auto mini_atoms = el_atoms->get_data({"x", "y", "z", "radius"});
+  auto atoms = el_atoms->get_json({"x", "y", "z", "radius"});
 
   auto el_box = generators[index]->get_element("Box");
 
@@ -76,11 +76,8 @@ void ProThicknessProfile::run_impl(
     direction) can speed up this analysis significantly.
   */
   std::sort(
-    mini_atoms.begin(), mini_atoms.end(),
-    [](auto &a, auto &b)
-    {
-      return a["z"] > b["z"];
-    });
+    atoms.begin(), atoms.end(),
+    [](auto &a, auto &b) { return a["z"] > b["z"]; });
 
   // loop over all atoms
 
@@ -92,11 +89,11 @@ void ProThicknessProfile::run_impl(
   auto reciprocal_delta_x = 1.0 / delta_x;
   auto reciprocal_delta_y = 1.0 / delta_y;
 
-  auto n_atoms = mini_atoms.size();
+  auto n_atoms = atoms.size();
 
   for (int i = 0; i != n_atoms; ++i)
   {
-    auto atom = mini_atoms[i];
+    auto atom = atoms[i];
 
     auto atom_x = atom["x"].get<double>() - origin_x;
     auto atom_y = atom["y"].get<double>() - origin_y;

@@ -29,25 +29,3 @@ void StaCopy::compute_impl(
 }
 
 /* ------------------------------------------------------------------ */
-
-void StaCopy::compute(
-  const ElPtr &elem,
-  const int dataid)
-{
-  auto &data = elem->get_mutable_data();
-
-  if (check_blacklist(dataid))
-  {
-    if (data == nullptr)
-    {
-      compute_impl(data);
-      elem->update_keys();
-    }
-    else
-    {
-      ut::runtime_error("Starter accepts empty data only");
-    }
-  }
-}
-
-/* ------------------------------------------------------------------ */

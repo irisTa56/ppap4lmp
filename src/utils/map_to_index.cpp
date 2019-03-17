@@ -20,13 +20,16 @@ Map<Json,int> ut::map_to_index(
 
   if (data.is_array())
   {
+    auto front = data.front();
+    const int key_position = std::distance(front.begin(), front.find(key));
+
     tmp.reserve(data.size());
 
     int index = 0;
 
     for (const auto &d : data)
     {
-      tmp[d[key]] = index++;
+      tmp[*std::next(d.begin(), key_position)] = index++;
     }
   }
 

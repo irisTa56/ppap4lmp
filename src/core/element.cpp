@@ -93,6 +93,38 @@ void Element::update_data(
 
 /* ------------------------------------------------------------------ */
 
+Json &Element::get_mutable_data()
+{
+  return data;
+}
+
+/* ------------------------------------------------------------------ */
+
+Vec<std::pair<Str,int>> Element::get_key_advances(
+  const Json &key_)
+{
+  const Vec<Str> keys = key_.is_array() ? key_ : Json::array({key_});
+  const auto &front = data.is_array() ? data.front() : data;
+
+  Vec<std::pair<Str,int>> distances;
+  int from_begin_ex = 0;
+
+  for (auto it = front.begin(); it != front.end(); ++it)
+  {
+    if (std::find(keys.begin(), keys.end(), it.key()) != keys.end())
+    {
+      int from_begin = std::distance(front.begin(), it);
+      distances.push_back(
+        std::make_pair(it.key(), from_begin - from_begin_ex));
+      from_begin_ex = from_begin;
+    }
+  }
+
+  return distances;
+}
+
+/* ------------------------------------------------------------------ */
+
 ElPtr Element::get_element(
   const Json &name)
 {
@@ -144,9 +176,18 @@ ElPtr Element::append_updater(
 
 /* ------------------------------------------------------------------ */
 
-Json Element::get_data(const Json &key_)
+const Json &Element::get_data()
 {
-  Vec<Str> keys = key_.is_array() ? key_ : Json::array({key_});
+  return data;
+}
+
+/* ------------------------------------------------------------------ */
+
+Json Element::get_json(const Json &key_)
+{
+  required_keys(key_);
+
+  const auto distances = get_key_advances(key_);
 
   Json tmp;
 
@@ -158,37 +199,28 @@ Json Element::get_data(const Json &key_)
     for (const auto &d : data)
     {
       tmp.push_back({});
-      auto &elem = tmp.back();
+      auto &back = tmp.back();
+      auto it = d.begin();
 
-      for (const auto &key : keys)
+      for (const auto &pair : distances)
       {
-        elem[key] = d[key];
+        std::advance(it, pair.second);
+        back[pair.first] = *it; //*(begin+item.second);
       }
     }
   }
   else
   {
-    for (const auto &key : keys)
+    auto it = data.begin();
+
+    for (const auto &pair : distances)
     {
-      tmp[key] = data[key];
+      std::advance(it, pair.second);
+      tmp[pair.first] = *it; //*(begin+item.second);
     }
   }
 
   return tmp;
-}
-
-/* ------------------------------------------------------------------ */
-
-const Json &Element::get_data()
-{
-  return data;
-}
-
-/* ------------------------------------------------------------------ */
-
-Json &Element::get_mutable_data()
-{
-  return data;
 }
 
 /* ------------------------------------------------------------------ */
@@ -276,12 +308,10 @@ void Element::required_keys(
   const Json &key_)
 {
   Vec<Str> missings;
-  auto begin = datakeys.cbegin();
-  auto end = datakeys.cend();
 
   for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
-    if (std::find(begin, end, key) == end)
+    if (std::find(datakeys.begin(), datakeys.end(), key) == datakeys.end())
     {
       missings.push_back(key);
     }
@@ -307,12 +337,9 @@ void Element::required_keys(
 bool Element::optional_keys(
   const Json &key_)
 {
-  auto begin = datakeys.cbegin();
-  auto end = datakeys.cend();
-
   for (const Str &key : key_.is_array() ? key_ : Json::array({key_}))
   {
-    if (std::find(begin, end, key) == end)
+    if (std::find(datakeys.begin(), datakeys.end(), key) == datakeys.end())
     {
       return false;
     }
