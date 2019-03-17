@@ -106,7 +106,7 @@ Vec<std::pair<Str,int>> Element::get_key_advances(
   const Vec<Str> keys = key_.is_array() ? key_ : Json::array({key_});
   const auto &front = data.is_array() ? data.front() : data;
 
-  Vec<std::pair<Str,int>> distances;
+  Vec<std::pair<Str,int>> advances;
   int from_begin_ex = 0;
 
   for (auto it = front.begin(); it != front.end(); ++it)
@@ -114,13 +114,13 @@ Vec<std::pair<Str,int>> Element::get_key_advances(
     if (std::find(keys.begin(), keys.end(), it.key()) != keys.end())
     {
       int from_begin = std::distance(front.begin(), it);
-      distances.push_back(
+      advances.push_back(
         std::make_pair(it.key(), from_begin - from_begin_ex));
       from_begin_ex = from_begin;
     }
   }
 
-  return distances;
+  return advances;
 }
 
 /* ------------------------------------------------------------------ */
@@ -185,9 +185,7 @@ const Json &Element::get_data()
 
 Json Element::get_json(const Json &key_)
 {
-  required_keys(key_);
-
-  const auto distances = get_key_advances(key_);
+  const auto advances = get_key_advances(key_);
 
   Json tmp;
 
@@ -202,7 +200,7 @@ Json Element::get_json(const Json &key_)
       auto &back = tmp.back();
       auto it = d.begin();
 
-      for (const auto &pair : distances)
+      for (const auto &pair : advances)
       {
         std::advance(it, pair.second);
         back[pair.first] = *it; //*(begin+item.second);
@@ -213,7 +211,7 @@ Json Element::get_json(const Json &key_)
   {
     auto it = data.begin();
 
-    for (const auto &pair : distances)
+    for (const auto &pair : advances)
     {
       std::advance(it, pair.second);
       tmp[pair.first] = *it; //*(begin+item.second);
@@ -241,11 +239,13 @@ void Element::array1d(
 
   if (data.is_array())
   {
+    const auto key_position = get_key_advances(key).front().second;
+
     int index = 0;
 
     for (const auto &d : data)
     {
-      array(index++) = d[key];
+      array(index++) = *std::next(d.begin(), key_position);
     }
   }
   else
@@ -265,15 +265,26 @@ void Element::array2d(
 
   if (data.is_array())
   {
+    Vec<std::pair<int,int>> advances;
+    for (const auto &pair : get_key_advances(keys))
+    {
+      advances.push_back(std::make_pair(
+        pair.second,
+        std::distance(
+          keys.begin(), std::find(keys.begin(), keys.end(), pair.first))
+      ));
+    }
+
     int irow = 0;
 
     for (const auto &d : data)
     {
-      int icol = 0;
+      auto it = d.begin();
 
-      for (const auto &key : keys)
+      for (const auto &pair : advances)
       {
-        array(irow, icol++) = d[key];
+        std::advance(it, pair.first);
+        array(irow, pair.second) = *it;
       }
 
       irow++;
