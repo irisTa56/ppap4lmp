@@ -89,6 +89,7 @@ $(document).ready(function(){initNavTree('classStarter.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classStarter-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -103,12 +104,14 @@ $(document).ready(function(){initNavTree('classStarter.html','');});
 <div class="dynheader">
 Inheritance diagram for Starter:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStarter__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStarter__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Starter:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStarter__coll__graph.svg" width="184" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStarter__coll__graph.svg" width="184" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -129,6 +132,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a64bb77bc8aa6d7ee1ddeaf98a033ec36 inherit pub_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36">get_ext_generator</a> ()</td></tr>
 <tr class="memdesc:a64bb77bc8aa6d7ee1ddeaf98a033ec36 inherit pub_methods_classUpdater"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a> of this object.  <a href="classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36">More...</a><br /></td></tr>
 <tr class="separator:a64bb77bc8aa6d7ee1ddeaf98a033ec36 inherit pub_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a649a1a8e497d4f91109c401ff6b33ca9"><td class="memItemLeft" align="right" valign="top"><a id="a649a1a8e497d4f91109c401ff6b33ca9"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a649a1a8e497d4f91109c401ff6b33ca9">do_sorting_by_id</a> = true</td></tr>
+<tr class="memdesc:a649a1a8e497d4f91109c401ff6b33ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to call <a class="el" href="classStarter.html#a112a95fc261365ba92609db3fa907939">sort_by_id</a> after setting data. <br /></td></tr>
+<tr class="separator:a649a1a8e497d4f91109c401ff6b33ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -212,8 +222,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>This method checks if <code>dataid</code> is in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>. If it is not in the blacklist, this method passes <code>data</code> to <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Starter::compute_impl</a>. Note that actual computation and setting of properties is conducted by <a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9" title="Implementation of computation for updating Element::data. ">Starter::compute_impl</a> orveridden in subclasses of this class. In addition, this method sorts elements of the <code>data</code> by <code>id</code> property, if the <code>data</code> is an array and <code>id</code> property is set. </p>
 
 <p>Implements <a class="el" href="classUpdater.html#a88308fd5a11102dc6598249363278e08">Updater</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classStaCopy.html#a2e7e1b1e53f63b63d92486fab68a758f">StaCopy</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="starter_8cpp_source.html#l00038">38</a> of file <a class="el" href="starter_8cpp_source.html">starter.cpp</a>.</p>
 <div class="dynheader">

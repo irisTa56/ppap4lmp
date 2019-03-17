@@ -41,7 +41,7 @@ var searchData=
   ['stadumpatoms',['StaDumpAtoms',['../classStaDumpAtoms.html',1,'']]],
   ['stadumpbox',['StaDumpBox',['../classStaDumpBox.html',1,'']]],
   ['stamolecules',['StaMolecules',['../classStaMolecules.html',1,'StaMolecules'],['../classStaMolecules.html#a9b83d7e7df5a1a364d784e395621dc40',1,'StaMolecules::StaMolecules()']]],
-  ['starter',['Starter',['../classStarter.html',1,'']]],
+  ['starter',['Starter',['../classStarter.html',1,'Starter'],['../classElement.html#a354fb3393af95b7ae740c6928f96276e',1,'Element::Starter()']]],
   ['starter_2ecpp',['starter.cpp',['../starter_8cpp.html',1,'']]],
   ['starter_2eh',['starter.h',['../starter_8h.html',1,'']]],
   ['startup',['startup',['../classProcessor.html#a74fe912a6d9216d9b531ff58491889a9',1,'Processor']]],

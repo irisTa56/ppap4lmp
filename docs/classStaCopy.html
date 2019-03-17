@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('classStaCopy.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classStaCopy-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">StaCopy Class Reference</div>  </div>
@@ -103,12 +104,14 @@ $(document).ready(function(){initNavTree('classStaCopy.html','');});
 <div class="dynheader">
 Inheritance diagram for StaCopy:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStaCopy__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStaCopy__inherit__graph.svg" width="184" height="588"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for StaCopy:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classStaCopy__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classStaCopy__coll__graph.svg" width="184" height="588"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -116,9 +119,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17757d5366c3e1d57b1a05fbb01125d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#a17757d5366c3e1d57b1a05fbb01125d3">StaCopy</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
 <tr class="memdesc:a17757d5366c3e1d57b1a05fbb01125d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a> class.  <a href="#a17757d5366c3e1d57b1a05fbb01125d3">More...</a><br /></td></tr>
 <tr class="separator:a17757d5366c3e1d57b1a05fbb01125d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e7e1b1e53f63b63d92486fab68a758f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#a2e7e1b1e53f63b63d92486fab68a758f">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int dataid) override</td></tr>
-<tr class="separator:a2e7e1b1e53f63b63d92486fab68a758f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStarter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStarter')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classStarter.html">Starter</a></td></tr>
+<tr class="memitem:a06098875ca2584225ac5aec4e0c82d09 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a06098875ca2584225ac5aec4e0c82d09">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int dataid) override</td></tr>
+<tr class="memdesc:a06098875ca2584225ac5aec4e0c82d09 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.  <a href="classStarter.html#a06098875ca2584225ac5aec4e0c82d09">More...</a><br /></td></tr>
+<tr class="separator:a06098875ca2584225ac5aec4e0c82d09 inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
 <tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="classStarter.html#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549 inherit pub_methods_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +154,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:ab1f6c0058c5f0860e06569e05c6c5cdd inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
 <tr class="separator:a2184a4efa52ad2f4a631c134379ef7b8 inherit pro_methods_classUpdater"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a289b9ff6d23cac2147eb84bbbff7e7ce"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStaCopy.html#a289b9ff6d23cac2147eb84bbbff7e7ce">do_sorting_by_id</a> = false</td></tr>
+<tr class="memdesc:a289b9ff6d23cac2147eb84bbbff7e7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to call <a class="el" href="classStarter.html#a112a95fc261365ba92609db3fa907939">sort_by_id</a> after setting data.  <a href="#a289b9ff6d23cac2147eb84bbbff7e7ce">More...</a><br /></td></tr>
+<tr class="separator:a289b9ff6d23cac2147eb84bbbff7e7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_classStarter"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_classStarter')"><img src="closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="classStarter.html">Starter</a></td></tr>
+<tr class="memitem:a649a1a8e497d4f91109c401ff6b33ca9 inherit pro_static_attribs_classStarter"><td class="memItemLeft" align="right" valign="top"><a id="a649a1a8e497d4f91109c401ff6b33ca9"></a>
+static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStarter.html#a649a1a8e497d4f91109c401ff6b33ca9">do_sorting_by_id</a> = true</td></tr>
+<tr class="memdesc:a649a1a8e497d4f91109c401ff6b33ca9 inherit pro_static_attribs_classStarter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to call <a class="el" href="classStarter.html#a112a95fc261365ba92609db3fa907939">sort_by_id</a> after setting data. <br /></td></tr>
+<tr class="separator:a649a1a8e497d4f91109c401ff6b33ca9 inherit pro_static_attribs_classStarter"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -196,9 +211,9 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2e7e1b1e53f63b63d92486fab68a758f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e7e1b1e53f63b63d92486fab68a758f">&#9670;&nbsp;</a></span>compute()</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a289b9ff6d23cac2147eb84bbbff7e7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a289b9ff6d23cac2147eb84bbbff7e7ce">&#9670;&nbsp;</a></span>do_sorting_by_id</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,48 +222,19 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void StaCopy::compute </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;&#160;</td>
-          <td class="paramname"><em>elem</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>dataid</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">const bool StaCopy::do_sorting_by_id = false</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Compute or parse properties and set them to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> given as a mutable reference.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">elem</td><td>Shared pointer to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where copied properties are set to.</td></tr>
-    <tr><td class="paramname">dataid</td><td>A constant integer copied from <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a>.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>Unlike other subclasses of Stater class, <a class="el" href="classStaCopy.html" title="StaCopy copies Element::data of an existing Element object and sets it to a new Element object...">StaCopy</a> overrides this method to skip sorting by <code>id</code> property. </p>
 
-<p>Reimplemented from <a class="el" href="classStarter.html#a06098875ca2584225ac5aec4e0c82d09">Starter</a>.</p>
+<p>Whether to call <a class="el" href="classStarter.html#a112a95fc261365ba92609db3fa907939">sort_by_id</a> after setting data. </p>
 
-<p class="definition">Definition at line <a class="el" href="sta__copy_8cpp_source.html#l00033">33</a> of file <a class="el" href="sta__copy_8cpp_source.html">sta_copy.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classStaCopy_a2e7e1b1e53f63b63d92486fab68a758f_cgraph.svg" width="355" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="sta__copy_8h_source.html#l00028">28</a> of file <a class="el" href="sta__copy_8h_source.html">sta_copy.h</a>.</p>
 
 </div>
 </div>

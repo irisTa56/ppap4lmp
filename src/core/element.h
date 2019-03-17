@@ -131,7 +131,14 @@ class Element : public Generator, public EnShThis<Element> {
     other objects should use Element::get_data.
   */
   Json &get_mutable_data();
-  /**/
+  /*!
+    @brief For speeding up to access values in ::Json.
+
+    @return List of pairs: key and distance from the previous item
+    (distance from the beginning for the first item).
+
+    For more details about usage, please see #get_json or #array2d.
+  */
   Vec<std::pair<Str,int>> get_key_advances(
     const Json &key_);
   /*!

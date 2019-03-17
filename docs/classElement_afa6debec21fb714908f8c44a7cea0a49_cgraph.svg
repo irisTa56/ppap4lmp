@@ -9,84 +9,84 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 100)">
 <title>Element::get_keys_py</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-100 410,-100 410,4 -4,4"/>
-<!-- Node93 -->
+<!-- Node111 -->
 <g id="node1" class="node">
-<title>Node93</title>
+<title>Node111</title>
 <polygon fill="#bfbfbf" stroke="#000000" points="0,-19.5 0,-38.5 114,-38.5 114,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="57" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys_py</text>
 </g>
-<!-- Node94 -->
+<!-- Node112 -->
 <g id="node2" class="node">
-<title>Node94</title>
+<title>Node112</title>
 <g id="a_node2"><a xlink:href="classElement.html#a1fdb9455f49d2c66a0276925f7246cad" target="_top" xlink:title="Element::init_for_python">
 <polygon fill="#ffffff" stroke="#000000" points="150,-38.5 150,-57.5 272,-57.5 272,-38.5 150,-38.5"/>
 <text text-anchor="middle" x="211" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::init_for_python</text>
 </a>
 </g>
 </g>
-<!-- Node93&#45;&gt;Node94 -->
+<!-- Node111&#45;&gt;Node112 -->
 <g id="edge1" class="edge">
-<title>Node93&#45;&gt;Node94</title>
+<title>Node111&#45;&gt;Node112</title>
 <path fill="none" stroke="#191970" d="M114.3439,-36.0749C122.7031,-37.1062 131.3936,-38.1784 139.9841,-39.2383"/>
 <polygon fill="#191970" stroke="#191970" points="139.6435,-42.7227 149.9969,-40.4736 140.5007,-35.7754 139.6435,-42.7227"/>
 </g>
-<!-- Node98 -->
+<!-- Node116 -->
 <g id="node6" class="node">
-<title>Node98</title>
+<title>Node116</title>
 <g id="a_node6"><a xlink:href="classElement.html#a5dfb31b61142eff280750d3dd0cffc6a" target="_top" xlink:title="Get keys of the data of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="162,-.5 162,-19.5 260,-19.5 260,-.5 162,-.5"/>
 <text text-anchor="middle" x="211" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_keys</text>
 </a>
 </g>
 </g>
-<!-- Node93&#45;&gt;Node98 -->
+<!-- Node111&#45;&gt;Node116 -->
 <g id="edge5" class="edge">
-<title>Node93&#45;&gt;Node98</title>
+<title>Node111&#45;&gt;Node116</title>
 <path fill="none" stroke="#191970" d="M114.3439,-21.9251C126.5033,-20.4249 139.3635,-18.8383 151.5975,-17.3289"/>
 <polygon fill="#191970" stroke="#191970" points="152.2015,-20.781 161.6976,-16.0828 151.3443,-13.8337 152.2015,-20.781"/>
 </g>
-<!-- Node95 -->
+<!-- Node113 -->
 <g id="node3" class="node">
-<title>Node95</title>
+<title>Node113</title>
 <g id="a_node3"><a xlink:href="classGenerator.html#ac4648b055ee0e51c1e68ea084156c222" target="_top" xlink:title="Hello to this Generator object. ">
 <polygon fill="#ffffff" stroke="#000000" points="314,-76.5 314,-95.5 400,-95.5 400,-76.5 314,-76.5"/>
 <text text-anchor="middle" x="357" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Generator::hello</text>
 </a>
 </g>
 </g>
-<!-- Node94&#45;&gt;Node95 -->
+<!-- Node112&#45;&gt;Node113 -->
 <g id="edge2" class="edge">
-<title>Node94&#45;&gt;Node95</title>
+<title>Node112&#45;&gt;Node113</title>
 <path fill="none" stroke="#191970" d="M247.842,-57.589C266.8479,-62.5358 290.2286,-68.6211 310.4692,-73.8892"/>
 <polygon fill="#191970" stroke="#191970" points="309.8638,-77.3482 320.423,-76.4799 311.627,-70.5739 309.8638,-77.3482"/>
 </g>
-<!-- Node96 -->
+<!-- Node114 -->
 <g id="node4" class="node">
-<title>Node96</title>
+<title>Node114</title>
 <g id="a_node4"><a xlink:href="namespaceutils.html#acee57b54806ee63ddaa30518fed90adb" target="_top" xlink:title="Raise (for Python) and throw (for C++) a runtime error. ">
 <polygon fill="#ffffff" stroke="#000000" points="308,-38.5 308,-57.5 406,-57.5 406,-38.5 308,-38.5"/>
 <text text-anchor="middle" x="357" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::runtime_error</text>
 </a>
 </g>
 </g>
-<!-- Node94&#45;&gt;Node96 -->
+<!-- Node112&#45;&gt;Node114 -->
 <g id="edge3" class="edge">
-<title>Node94&#45;&gt;Node96</title>
+<title>Node112&#45;&gt;Node114</title>
 <path fill="none" stroke="#191970" d="M272.0712,-48C280.5152,-48 289.1781,-48 297.5913,-48"/>
 <polygon fill="#191970" stroke="#191970" points="297.6983,-51.5001 307.6983,-48 297.6983,-44.5001 297.6983,-51.5001"/>
 </g>
-<!-- Node97 -->
+<!-- Node115 -->
 <g id="node5" class="node">
-<title>Node97</title>
+<title>Node115</title>
 <g id="a_node5"><a xlink:href="namespaceutils.html#a26267fe7371b6215c5d61374d716527b" target="_top" xlink:title="Logging a message. ">
 <polygon fill="#ffffff" stroke="#000000" points="330.5,-.5 330.5,-19.5 383.5,-19.5 383.5,-.5 330.5,-.5"/>
 <text text-anchor="middle" x="357" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">utils::log</text>
 </a>
 </g>
 </g>
-<!-- Node94&#45;&gt;Node97 -->
+<!-- Node112&#45;&gt;Node115 -->
 <g id="edge4" class="edge">
-<title>Node94&#45;&gt;Node97</title>
+<title>Node112&#45;&gt;Node115</title>
 <path fill="none" stroke="#191970" d="M247.842,-38.411C270.1117,-32.6148 298.3878,-25.2552 320.5809,-19.4789"/>
 <polygon fill="#191970" stroke="#191970" points="321.5103,-22.8537 330.3063,-16.9477 319.7471,-16.0794 321.5103,-22.8537"/>
 </g>

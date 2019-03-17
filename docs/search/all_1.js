@@ -33,7 +33,7 @@ var searchData=
   ['addchildpositions',['AddChildPositions',['../classAddChildPositions.html',1,'AddChildPositions'],['../classAddChildPositions.html#ad4db976f729aaf211154e36d47ee97f2',1,'AddChildPositions::AddChildPositions()']]],
   ['addcomposition',['AddCoMPosition',['../classAddCoMPosition.html',1,'AddCoMPosition'],['../classAddCoMPosition.html#ade24bf19cac5bf1a61bb774a2f54fc63',1,'AddCoMPosition::AddCoMPosition()']]],
   ['adddihedralangle',['AddDihedralAngle',['../classAddDihedralAngle.html',1,'AddDihedralAngle'],['../classAddDihedralAngle.html#ad5139673d0d0ea9ce33f170d866c2617',1,'AddDihedralAngle::AddDihedralAngle()']]],
-  ['adder',['Adder',['../classAdder.html',1,'']]],
+  ['adder',['Adder',['../classAdder.html',1,'Adder'],['../classElement.html#a492e3288488dceef644aabf5c16456e5',1,'Element::Adder()']]],
   ['adder_2ecpp',['adder.cpp',['../adder_8cpp.html',1,'']]],
   ['adder_2eh',['adder.h',['../adder_8h.html',1,'']]],
   ['addgyrationradius',['AddGyrationRadius',['../classAddGyrationRadius.html',1,'']]],
