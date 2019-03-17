@@ -141,10 +141,7 @@ class Element : public Generator, public EnShThis<Element> {
   */
   Vec<std::pair<Str,int>> get_key_advances(
     const Json &key_);
-  /*!
-    To use #increment_remain, #decrement_remain and
-    #update_data, Generator needs to be a friend class.
-  */
+  //! To use #increment_remain, #decrement_remain and #update_data.
   friend class Generator;
   //! To use #get_mutable_data.
   friend class Adder;
