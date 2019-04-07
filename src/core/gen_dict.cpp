@@ -52,12 +52,12 @@ ShPtr<Generator> GenDict::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-void GenDict::talk_with(
+void GenDict::accessed_by_instance_of(
   const Str &classname)
 {
   for (const auto &item : generator_dict)
   {
-    item.second->talk_with(classname);
+    item.second->accessed_by_instance_of(classname);
   }
 }
 

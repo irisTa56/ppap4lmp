@@ -25,7 +25,7 @@ void Filter::compute(
       Str myclassname
         = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
 
-      elem->talk_with(myclassname);
+      elem->accessed_by_instance_of(myclassname);
 
       make_required_keys(elem);
       make_optional_keys(elem);

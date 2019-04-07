@@ -43,7 +43,7 @@ class Generator {
   /*!
     Chain (sequence) of ::UpdatePair objects. It describes a process
     how Element::data is generated and updated. This chain of
-    ::UpdatePair objects is executed one by one using #hello.
+    ::UpdatePair objects is executed one by one using #generate_data.
     In this updating process, the Element objects (the first items of
     ::UpdatePair) uses the Updater objects (the second items of
     ::UpdatePair) to update their Element::data.
@@ -80,46 +80,40 @@ class Generator {
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) = 0;
   /*!
-    @brief Set a name of class of which instance calls Element::required.
+    @brief Set class name of an instance calling Element::required.
 
     @param classname
       A string to be assigned to Element::checking_classname.
 
     @return None.
   */
-  virtual void talk_with(
+  virtual void accessed_by_instance_of(
     const Str &classname) = 0;
   /*!
     @brief Appoint to this Generator object.
 
     @return None.
-
-    Appointing means calling Element::increment_remain of
-    all the Element objects contained in #update_chain.
   */
-  void book();
+  void book_to_generate_data();
   /*!
     @brief Hello to this Generator object.
 
     @return None.
 
-    Greeting means calling Element::update_data for
+    This method calls Element::update_data for
     all the ::UpdatePair objects in #update_chain, that is,
-    executing the updating process associated with this object.
+    executing whole updating process associated with this object.
     By executing this method, Element::data in this Element object
     (or Element objects in this GenDict or GenList object) is ready
     to be used (filled with values).
   */
-  void hello();
+  void generate_data();
   /*!
     @brief Goodbye to this object.
 
     @return None.
-
-    Saying goodbye means calling Element::decrement_remain of
-    all the Element objects contained in #update_chain.
   */
-  void goodbye();
+  void finish_using_generated_data();
   /*!
     @brief Get #update_chain of this object.
 

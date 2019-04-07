@@ -52,12 +52,12 @@ ShPtr<Generator> GenList::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-void GenList::talk_with(
+void GenList::accessed_by_instance_of(
   const Str &classname)
 {
   for (const auto &gen : generator_list)
   {
-    gen->talk_with(classname);
+    gen->accessed_by_instance_of(classname);
   }
 }
 

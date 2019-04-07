@@ -85,7 +85,7 @@ void ProTimeCorrelationInMolecule::run_impl(
 
 void ProTimeCorrelationInMolecule::prepare()
 {
-  say_hello(0);
+  use_generator_at(0);
 
   auto el_initial_mols = generators.front()->get_element("Mols");
 

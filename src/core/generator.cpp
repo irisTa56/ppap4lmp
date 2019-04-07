@@ -54,7 +54,7 @@ void Generator::merge_update_chain(
 
 /* ------------------------------------------------------------------ */
 
-void Generator::book()
+void Generator::book_to_generate_data()
 {
   for (const auto &item : update_chain)
   {
@@ -64,7 +64,7 @@ void Generator::book()
 
 /* ------------------------------------------------------------------ */
 
-void Generator::hello()
+void Generator::generate_data()
 {
   for (const auto &item : update_chain)
   {
@@ -74,7 +74,7 @@ void Generator::hello()
 
 /* ------------------------------------------------------------------ */
 
-void Generator::goodbye()
+void Generator::finish_using_generated_data()
 {
   for (const auto &item : update_chain)
   {

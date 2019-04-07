@@ -27,15 +27,15 @@ class PyProcessor : public PRO {
     PYBIND11_OVERLOAD_PURE(
       void, PRO, run_impl, index);
   }
-  void say_hello(const int i) override
+  void use_generator_at(const int i) override
   {
     PYBIND11_OVERLOAD(
-      void, PRO, say_hello, i);
+      void, PRO, use_generator_at, i);
   }
-  void say_goodbye(const int i) override
+  void finish_using_generator_at(const int i) override
   {
     PYBIND11_OVERLOAD(
-      void, PRO, say_goodbye, i);
+      void, PRO, finish_using_generator_at, i);
   }
  public:
   using PRO::PRO;

@@ -53,20 +53,20 @@ template void Processor::register_generators(
 
 /* ------------------------------------------------------------------ */
 
-void Processor::say_hello(
+void Processor::use_generator_at(
   const int i)
 {
-  generators[i]->hello();
-  generators[i]->talk_with(
+  generators[i]->generate_data();
+  generators[i]->accessed_by_instance_of(
     abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int()));
 }
 
 /* ------------------------------------------------------------------ */
 
-void Processor::say_goodbye(
+void Processor::finish_using_generator_at(
   const int i)
 {
-  generators[i]->goodbye();
+  generators[i]->finish_using_generated_data();
 }
 
 /* ------------------------------------------------------------------ */
@@ -82,11 +82,11 @@ bool Processor::run()
 
   if (index < n_generators)
   {
-    say_hello(index);
+    use_generator_at(index);
 
     run_impl(index);
 
-    say_goodbye(index);
+    finish_using_generator_at(index);
 
     return false;
   }
@@ -105,7 +105,7 @@ void Processor::startup()
 
   for (const auto &g : generators)
   {
-    g->book();
+    g->book_to_generate_data();
   }
 }
 

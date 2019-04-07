@@ -144,7 +144,7 @@ ShPtr<Generator> Element::get_generator(
 
 /* ------------------------------------------------------------------ */
 
-void Element::talk_with(
+void Element::accessed_by_instance_of(
   const Str &classname)
 {
   checking_classname = classname;
@@ -442,7 +442,7 @@ void Element::init_for_python()
 {
   try
   {
-    hello();
+    generate_data();
   }
   catch (std::runtime_error &e)
   {

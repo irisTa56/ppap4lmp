@@ -90,7 +90,7 @@ class Processor {
   void register_generators(
     const Vec<ShPtr<GEN>> &gens);
   /*!
-    @brief Call Generator::hello of *i* th Generator object in
+    @brief Call Generator::generate_data of *i* th Generator object in
     #generators.
 
     @param i
@@ -98,18 +98,18 @@ class Processor {
 
     @return None.
   */
-  virtual void say_hello(
+  virtual void use_generator_at(
     const int i);
   /*!
-    @brief Call Generator::goodbye of *i* th Generator object in
-    #generators.
+    @brief Call Generator::finish_using_generated_data of
+    *i* th Generator object in #generators.
 
     @param i
       Index in #generators.
 
     @return None.
   */
-  virtual void say_goodbye(
+  virtual void finish_using_generator_at(
     const int i);
  public:
   //! Constructor of Processor class (default).
@@ -144,10 +144,10 @@ class Processor {
 
     First, this method copies #i_generator as an index in #generators
     for a Generator object to be analyzed.
-    This method then calls Generator::hello
+    This method then calls Generator::generate_data
     to execute updating processes associated with the Generator object,
     and calls #run_impl taking the copied index,
-    and finally calls Generator::goodbye
+    and finally calls Generator::finish_using_generated_data
     to clears Element::data if it is no longer to be used.
   */
   virtual bool run();
