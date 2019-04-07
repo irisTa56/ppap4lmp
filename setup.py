@@ -67,19 +67,23 @@ class CMakeBuild(build_ext):
 
 #-----------------------------------------------------------------------
 
-headers = sorted(
+header_paths = sorted(
   glob.glob("src/pybind/*.h") + glob.glob("src/pybind/*/*.h"))
 
-pybinds = []
-classes = []
-functions = []
+pybinds = []  # pybind11's binding functions
+classes = []  # bound class names
+functions = []  # bound function names
 
-for header in headers:
+for path_h in header_paths:
 
-  with open(header[:-2]+".cpp", "r") as f:
+  path_s = path_h[:-len(".h")] + ".cpp"
+
+  with open(path_s, "r") as f:
 
     lines = f.readlines()
 
+    # parse lines in the source file one by one
+    # and put data into `pybinds`, `classes`, and `functions`
     for i, line in enumerate(lines):
 
       line_ = line.lstrip()
@@ -95,6 +99,10 @@ for header in headers:
           functions.append(lines[i+1].lstrip().split("\"")[1])
 
 def priority(x):
+  """
+  Elements and Updater class must be included earlier
+  than the other classes.
+  """
   if x.count("element"):
     return 1
   elif x.count("updater"):
@@ -102,13 +110,14 @@ def priority(x):
   else:
     return 3 + x.count("_")
 
-headers.sort(key=priority)
+header_paths.sort(key=priority)
 pybinds.sort(key=priority)
 classes.sort()
 functions.sort()
 
 #-----------------------------------------------------------------------
 
+# write header paths and pybind11's binding functions to `src/pybind.h`
 with open("src/pybind.h", "w") as f:
 
   f.write("""/*!
@@ -139,11 +148,14 @@ PYBIND11_MODULE(_ppap4lmp, m)
 
 #endif
 """.format(
-  "\n".join(["#include \"{}\"".format(h[4:]) for h in headers]),
+  "\n".join(
+    "#include \"{}\"".format(p.replace("src/", "", 1))
+    for p in header_paths),
   "\n".join(pybinds)))
 
 #-----------------------------------------------------------------------
 
+# write class and function names to `ppap4lmp/__init__.py`
 with open("ppap4lmp/__init__.py", "w") as f:
 
   f.write("""from ._version import version_info, __version__
