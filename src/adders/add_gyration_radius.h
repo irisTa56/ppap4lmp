@@ -20,7 +20,7 @@
   About usage in Python,
   please see pybind::py_add_gyration_radius.
 */
-class AddGyrationRadius : public Adder, public EnShThis<AddGyrationRadius> {
+class AddGyrationRadius : public Adder {
   /*!
     Whether gyration radius (not squared) is computed (default is
     `false`). Note that an average gyration radius should be computed

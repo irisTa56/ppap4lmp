@@ -15,13 +15,6 @@
 template <typename T>
 using ShPtr = std::shared_ptr<T>;
 
-/*!
-  @brief *EnShThis* is an alias for a class which can create shared
-  pointer of itself by calling `shared_from_this()`.
-*/
-template <typename T>
-using EnShThis = std::enable_shared_from_this<T>;
-
 #include <string>
 
 //! *Str* is an alias for string.

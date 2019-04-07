@@ -25,7 +25,7 @@
   item is the Element object and the second item is the object of
   this class).
 */
-class Updater {
+class Updater : public std::enable_shared_from_this<Updater> {
   /*!
     Blacklist of Element::dataid updated by this Updater object.
     If this Updater object is called from an Element object

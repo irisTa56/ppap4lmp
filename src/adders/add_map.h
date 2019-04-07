@@ -24,7 +24,7 @@
   About usage in Python,
   please see pybind::py_add_map.
 */
-class AddMap : public Adder, public EnShThis<AddMap> {
+class AddMap : public Adder {
   /*!
     Whether overwriting an existing property whose name is
     the same as a new property to be added (default is `false`).

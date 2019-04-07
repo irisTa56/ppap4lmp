@@ -53,7 +53,7 @@ ShPtr<AddGyrationRadius> AddGyrationRadius::with_sqrted(
 {
   add_sqrted = add_sqrted_;
 
-  return shared_from_this();
+  return std::dynamic_pointer_cast<AddGyrationRadius>(shared_from_this());
 }
 
 /* ------------------------------------------------------------------ */

@@ -19,7 +19,8 @@
   @brief Element inherits Generator class and contains data *element*
   (or *entity*) as a ::Json object.
 
-  This class inherits Generator class and ::EnShThis<#Element>.
+  This class inherits Generator class
+  and std::enable_shared_from_this<#Element>.
 
   Element class is different from Generator, GenDict and GenList by
   owning data *element* (or *entity*). The data is stored as #data,
@@ -38,7 +39,7 @@
   About usage in Python,
   please see pybind::py_element.
 */
-class Element : public Generator, public EnShThis<Element> {
+class Element : public Generator, public std::enable_shared_from_this<Element> {
   /*!
     The number of created objects (a.k.a. instances) of Element class.
     This member is only used for setting #dataid.

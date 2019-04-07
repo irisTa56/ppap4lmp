@@ -22,7 +22,7 @@
   About usage in Python,
   please see pybind::py_add_rename.
 */
-class AddRename : public Adder, public EnShThis<AddRename> {
+class AddRename : public Adder {
   /*!
     Whether overwriting an existing property whose name is
     the same as #key_new (default is `false`).
