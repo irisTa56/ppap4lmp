@@ -31,7 +31,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ppap4lmp
-   &#160;<span id="projectnumber">0.7.0</span>
+   &#160;<span id="projectnumber">0.7.1</span>
    </div>
   </td>
  </tr>
@@ -243,12 +243,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and contains data <em>element</em> (or <em>entity</em>) as a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. </p>
-<p>This class inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and <a class="el" href="std_8h.html#a7f19b9462968832a5e38e8e4286a5afa" title="EnShThis is an alias for a class which can create shared pointer of itself by calling shared_from_thi...">EnShThis</a>&lt;<a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a>&gt;.</p>
+<p>This class inherits <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a> class and std::enable_shared_from_this&lt;<a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a>&gt;.</p>
 <p><a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class is different from <a class="el" href="classGenerator.html" title="Generator is an abstract class to generate data. ">Generator</a>, <a class="el" href="classGenDict.html" title="GenDict is a dictionary (or map) of Generator objects. ">GenDict</a> and <a class="el" href="classGenList.html" title="GenList is a list (or vector) of Generator objects. ">GenList</a> by owning data <em>element</em> (or <em>entity</em>). The data is stored as <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>, and a set of keys for properties in the data is stored as <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>. Note that <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> can be either an array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object or a non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object. A non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object consists of items: pairs of a string key and int/bool/double/string/array value. The key represents a property name. For array <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>, it contains non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> objects. Each non-array <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object should have the same set of keys; this set is the one stored as <a class="el" href="classElement.html#aff592a8196ddeae630d36fcd971ce668">datakeys</a>.</p>
 <p>An object of this class can update itself by calling its <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73">update_data</a> where a shared pointer of this object is passed to an <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object paired as <a class="el" href="generator_8h.html#aa743f1a2c3b5394843428e88fd4dda26" title="UpdatePair is a pair of shared pointer of Element class and Updater class. ">UpdatePair</a>.</p>
 <p>About usage in Python, please see <a class="el" href="namespacepybind.html#aa960fe0db10e19d7b7b60784a7e81be0" title="Bind Element class to Python. ">pybind::py_element</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00041">41</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00042">42</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab0d0e20be9a36ae676202db753faeec9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0d0e20be9a36ae676202db753faeec9">&#9670;&nbsp;</a></span>Element()</h2>
@@ -954,14 +954,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_cgraph.svg" width="352" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_cgraph.svg" width="352" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_a1fdb9455f49d2c66a0276925f7246cad_icgraph.svg" width="100%" height="518"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1026,14 +1024,12 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_af851a0ffe85ec6c9b88dac84dbe5f4f2_cgraph.svg" width="348" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_af851a0ffe85ec6c9b88dac84dbe5f4f2_cgraph.svg" width="348" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_af851a0ffe85ec6c9b88dac84dbe5f4f2_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classElement_af851a0ffe85ec6c9b88dac84dbe5f4f2_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -1139,8 +1135,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a536675d255a5d38f1bb37dea285467e9_icgraph.svg" width="350" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classElement_a536675d255a5d38f1bb37dea285467e9_icgraph.svg" width="350" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -1167,7 +1162,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Name of a class of instance calling <a class="el" href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2" title="Check if this object has required key(s). ">required_keys</a>. Showing the class name in an error message raised by <a class="el" href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2" title="Check if this object has required key(s). ">required_keys</a> helps debugging. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00079">79</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00080">80</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1192,7 +1187,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Data <em>element</em> (or <em>entity</em>) itself. This member is a <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6" title="Json is an alias for a JSON class. ">Json</a> object, which is a very flexible data container consisting of hierarchically organized items: pairs of a string key and int/bool/double/string/array value. Thanks to this flexibility, this class can store data for box, atoms, molecules, beads, cube, ... and more!! </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00068">68</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00069">69</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1217,7 +1212,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Unique ID for an object of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class. This member is used for preventing duplication of updating process of <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a>. For more details, please see <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00059">59</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00060">60</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1242,7 +1237,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>List of keys of the data. This member stores string keys which <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> has. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00073">73</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00074">74</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1267,7 +1262,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The number of created objects (a.k.a. instances) of <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> class. This member is only used for setting <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">dataid</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00046">46</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00047">47</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1292,7 +1287,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The number of times this object will be used in the future. This member can be incremented by <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e">increment_remain</a> and decremented by <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b">decrement_remain</a>. If this member becomes 0 in <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b">decrement_remain</a>, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> is cleared to save memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00053">53</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00054">54</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
@@ -1317,7 +1312,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>A variable used by OpenMP. In this program, <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> is updated in a multithreading context. To prevent the <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">data</a> from being updated from multiple threads at the same time, this member must be locked in <a class="el" href="classElement.html#aae8f7d596f055b36ea44206bbef38c73">update_data</a>, <a class="el" href="classElement.html#ae1c4dcf96ca096946908821d6079e97e">increment_remain</a> and <a class="el" href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b">decrement_remain</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00086">86</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="element_8h_source.html#l00087">87</a> of file <a class="el" href="element_8h_source.html">element.h</a>.</p>
 
 </div>
 </div>
