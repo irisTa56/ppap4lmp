@@ -21,30 +21,30 @@ void Generator::merge_update_chain(
   {
     if (std::find(chain.begin(), chain.end(), *it) == chain.end())
     {
-      bool inserted = false;
+      bool it_is_inserted = false;
 
       for (auto jt = chain.begin(); jt != chain.end(); ++jt)
       {
-        bool match = false;
+        bool jt_should_be_after_it = false;
 
         for (auto kt = it+1; kt != new_chain.end(); ++kt)
         {
           if (*kt == *jt)
           {
-            match = true;
+            jt_should_be_after_it = true;
             break;
           }
         }
 
-        if (match)
+        if (jt_should_be_after_it)
         {
           chain.insert(jt, *it);
-          inserted = true;
+          it_is_inserted = true;
           break;
         }
       }
 
-      if (!inserted)
+      if (!it_is_inserted)
       {
         chain.push_back(*it);
       }
@@ -58,7 +58,7 @@ void Generator::book_to_generate_data()
 {
   for (const auto &item : update_chain)
   {
-    item.first->increment_remain();
+    item.first->increment_bookings();
   }
 }
 
@@ -78,7 +78,7 @@ void Generator::finish_using_generated_data()
 {
   for (const auto &item : update_chain)
   {
-    item.first->decrement_remain();
+    item.first->decrement_bookings();
   }
 }
 

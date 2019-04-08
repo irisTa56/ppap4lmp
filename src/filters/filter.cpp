@@ -15,10 +15,10 @@ namespace ut = utils;
 
 void Filter::compute(
   const ElPtr &elem,
-  Json &data,
-  const int dataid)
+  const int elementid,
+  Json &data)
 {
-  if (check_blacklist(dataid))
+  if (check_update_requirest_for(elementid))
   {
     if (data.is_array())
     {
@@ -27,8 +27,8 @@ void Filter::compute(
 
       elem->accessed_by_instance_of(myclassname);
 
-      make_required_keys(elem);
-      make_optional_keys(elem);
+      make_check_required_keys(elem);
+      make_check_optional_keys(elem);
 
       compute_impl(data);
     }

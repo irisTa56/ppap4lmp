@@ -80,10 +80,11 @@ class Generator {
   virtual ShPtr<Generator> get_generator(
     const Json &name = nullptr) = 0;
   /*!
-    @brief Set class name of an instance calling Element::required.
+    @brief Set class name of an instance
+    calling Element::check_required_keys.
 
     @param classname
-      A string to be assigned to Element::checking_classname.
+      A string to be assigned to Element::accessing_classname.
 
     @return None.
   */

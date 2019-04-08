@@ -26,16 +26,16 @@ AddBondAngle::AddBondAngle(
 void AddBondAngle::compute_impl(
   Json &data)
 {
-  required_keys({"atom1-id", "atom2-id", "atom3-id"});
+  check_required_keys({"atom1-id", "atom2-id", "atom3-id"});
 
   auto el_atoms = ext_generator->get_element();
 
-  el_atoms->required_keys({"id", "xu", "yu", "zu"});
+  el_atoms->check_required_keys({"id", "xu", "yu", "zu"});
 
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
   ArrayXXd rs_atom;
-  el_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
+  el_atoms->make_2darray_from_data(rs_atom, {"xu", "yu", "zu"});
 
   const double rad2deg = 180.0 / M_PI;
 

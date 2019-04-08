@@ -31,11 +31,11 @@ class PyUpdater : public UPD {
   using UPD::UPD;
   void compute(
     const ElPtr &elem,
-    Json &data,
-    const int dataid) override
+    const int elementid,
+    Json &data) override
   {
     PYBIND11_OVERLOAD_PURE(
-      void, UPD, compute, elem, data, dataid);
+      void, UPD, compute, elem, elementid, data);
   }
 };
 

@@ -46,17 +46,17 @@ class Starter : public Updater {
       Shared pointer to an Element object
       where computed properties are set to.
 
+    @param elementid
+      A constant integer copied from Element::elementid.
+
     @param data
       Mutable reference to Element::data
       where computed properties are set to.
 
-    @param dataid
-      A constant integer copied from Element::dataid.
-
     @return None.
 
-    This method checks if `dataid` is in #dataid_blacklist.
-    If it is not in the blacklist, this method passes `data`
+    This method checks if `elementid` is in #skippable_elementids.
+    If it is not in the list, this method passes `data`
     to Starter::compute_impl. Note that actual computation and setting
     of properties is conducted by Starter::compute_impl orveridden
     in subclasses of this class. In addition, this method sorts
@@ -65,8 +65,8 @@ class Starter : public Updater {
   */
   virtual void compute(
     const ElPtr &elem,
-    Json &data,
-    const int dataid) override;
+    const int elementid,
+    Json &data) override;
 };
 
 #endif

@@ -17,52 +17,52 @@ Updater::Updater()
 
 /* ------------------------------------------------------------------ */
 
-void Updater::make_required_keys(
+void Updater::make_check_required_keys(
   const ElPtr &elem)
 {
-  required_keys = [elem](const Json &key_) {
-    elem->required_keys(key_);
+  check_required_keys = [elem](const Json &key_) {
+    elem->check_required_keys(key_);
   };
 }
 
 /* ------------------------------------------------------------------ */
 
-void Updater::make_optional_keys(
+void Updater::make_check_optional_keys(
   const ElPtr &elem)
 {
-  optional_keys = [elem](const Json &key_) {
-    return elem->optional_keys(key_);
+  check_optional_keys = [elem](const Json &key_) {
+    return elem->check_optional_keys(key_);
   };
 }
 
 /* ------------------------------------------------------------------ */
 
-bool Updater::check_blacklist(
-  const int dataid)
+bool Updater::check_update_requirest_for(
+  const int elementid)
 {
-  bool pass = false;
+  bool update_is_required = false;
 
   omp_set_lock(&omp_lock);
 
-  if (dataid_blacklist.find(dataid) == dataid_blacklist.end())
+  if (skippable_elementids.find(elementid) == skippable_elementids.end())
   {
-    dataid_blacklist.insert(dataid);
-    pass = true;
+    skippable_elementids.insert(elementid);
+    update_is_required = true;
   }
 
   omp_unset_lock(&omp_lock);
 
-  return pass;
+  return update_is_required;
 }
 
 /* ------------------------------------------------------------------ */
 
-void Updater::remove_from_blacklist(
-  const int dataid)
+void Updater::remove_from_skippable_elementids(
+  const int elementid)
 {
   omp_set_lock(&omp_lock);
 
-  dataid_blacklist.erase(dataid);
+  skippable_elementids.erase(elementid);
 
   omp_unset_lock(&omp_lock);
 }

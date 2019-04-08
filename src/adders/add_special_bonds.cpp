@@ -37,14 +37,14 @@ AddSpecialBonds::AddSpecialBonds(
 void AddSpecialBonds::compute_impl(
   Json &data)
 {
-  if (optional_keys("special-bonds"))
+  if (check_optional_keys("special-bonds"))
   {
     ut::runtime_error("Key 'special-bonds' already exists");
   }
 
   auto el_mols = ext_generator->get_element();
 
-  el_mols->required_keys("atom-ids");
+  el_mols->check_required_keys("atom-ids");
 
   auto &mols = el_mols->get_data();
 

@@ -15,17 +15,17 @@ namespace ut =  utils;
 
 void Adder::compute(
   const ElPtr &elem,
-  Json &data,
-  const int dataid)
+  const int elementid,
+  Json &data)
 {
-  if (check_blacklist(dataid))
+  if (check_update_requirest_for(elementid))
   {
     if (data == nullptr)
     {
       ut::runtime_error("Adder accepts nonempty data only");
     }
 
-    auto id_exists = elem->optional_keys("id");
+    auto id_exists = elem->check_optional_keys("id");
 
     Str myclassname
       = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
@@ -37,14 +37,14 @@ void Adder::compute(
       ext_generator->accessed_by_instance_of(myclassname);
     }
 
-    make_required_keys(elem);
-    make_optional_keys(elem);
+    make_check_required_keys(elem);
+    make_check_optional_keys(elem);
 
     compute_impl(data);
 
     elem->update_keys();
 
-    if (id_exists != elem->optional_keys("id"))
+    if (id_exists != elem->check_optional_keys("id"))
     {
       ut::runtime_error("Adder cannot add 'id'");
     }

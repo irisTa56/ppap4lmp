@@ -42,22 +42,22 @@
 class Element : public Generator, public std::enable_shared_from_this<Element> {
   /*!
     The number of created objects (a.k.a. instances) of Element class.
-    This member is only used for setting #dataid.
+    This member is only used for setting #elementid.
   */
-  static int instance_count;
+  static int n_element_instances;
   /*!
     The number of times this object will be used in the future.
-    This member can be incremented by #increment_remain and
-    decremented by #decrement_remain. If this member becomes 0 in
-    #decrement_remain, #data is cleared to save memory.
+    This member can be incremented by #increment_bookings and
+    decremented by #decrement_bookings. If this member becomes 0 in
+    #decrement_bookings, #data is cleared to save memory.
   */
-  int n_remain = 0;
+  int n_bookings = 0;
   /*!
     Unique ID for an object of Element class. This member is used
     for preventing duplication of updating process of #data.
     For more details, please see Updater class.
   */
-  int dataid;
+  int elementid;
   /*!
     Data *element* (or *entity*) itself. This member is
     a ::Json object, which is a very flexible data container
@@ -73,40 +73,40 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   */
   Vec<Str> datakeys;
   /*!
-    Name of a class of instance calling #required_keys.
-    Showing the class name in an error message raised by #required_keys
-    helps debugging.
+    Name of a class of instance calling #check_required_keys.
+    Showing the class name in an error message raised
+    by #check_required_keys helps debugging.
   */
-  Str checking_classname;
+  Str accessing_classname;
   /*!
     A variable used by OpenMP. In this program, #data is updated
     in a multithreading context. To prevent the #data from being
     updated from multiple threads at the same time, this member must be
-    locked in #update_data, #increment_remain and #decrement_remain.
+    locked in #update_data, #increment_bookings and #decrement_bookings.
   */
   omp_lock_t omp_lock;
   /*!
-    This method increments #n_remain.
+    This method increments #n_bookings.
 
     @return None.
 
-    If one increments #n_remain of this object before using
+    If one increments #n_bookings of this object before using
     #data and then decrements it after using it, the #data is
     cleared to save memory. This system is convenient to access #data
     multiple times while saving memory.
   */
-  void increment_remain();
+  void increment_bookings();
   /*!
-    This method decrements #n_remain.
+    This method decrements #n_bookings.
 
     @return None.
 
-    If one increments #n_remain of this object before using #data
+    If one increments #n_bookings of this object before using #data
     and then decrements it after using it, the #data is cleared
     to save memory. This system is convenient to access #data
     multiple times while saving memory.
   */
-  void decrement_remain();
+  void decrement_bookings();
   /*!
     This method updates #data of this object.
 
@@ -128,12 +128,10 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
 
     @return List of pairs: key and distance from the previous item
     (distance from the beginning for the first item).
-
-    For more details about usage, please see #get_json or #array2d.
   */
-  Vec<std::pair<Str,int>> get_key_advances(
+  Vec<std::pair<Str,int>> get_distances_between_keys(
     const Json &key_);
-  //! To use #increment_remain, #decrement_remain and #update_data.
+  //! To use #increment_bookings, #decrement_bookings and #update_data.
   friend class Generator;
  public:
   /*!
@@ -198,7 +196,7 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   ShPtr<Element> append_updater(
     const ShPtr<Updater> &upd);
   /*!
-    @brief Get the reference to #data of this object.
+    @brief Get a reference to #data of this object.
 
     @return Constant reference to this Element::data.
 
@@ -207,22 +205,20 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   */
   const Json &get_data();
   /*!
-    @brief Get the partial data of this object.
+    @brief Get reduced data of this object.
 
     @param key_
-      A ::Json object for either a key or an array of keys.
+      Either a key or an array of keys.
 
-    @return A ::Json object (not a reference).
+    @return Reduced data (not a reference).
 
-    One can get the partial data stored in this object by this method.
-    To select which property is included in the returned ::Json object,
-    pass a string key for the property as `key_`.
+    Returned ::Json object has items whose key is or is in `key_` only.
 
     @note
       If you'd like to modify (sorting etc.) contents of #data,
       please use this method insted of #get_data.
   */
-  Json get_json(
+  Json get_reduced_data(
     const Json &key_);
   /*!
     @brief Get keys of the data of this object.
@@ -249,7 +245,7 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
     fills it by values of a property specified by `key`.
   */
   template <typename T>
-  void array1d(
+  void make_1darray_from_data(
     T &array,
     const Str &key);
   /*!
@@ -268,7 +264,7 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
     fills it by values of some properties specified by `keys`.
   */
   template <typename T>
-  void array2d(
+  void make_2darray_from_data(
     T &array,
     const Vec<Str> &keys);
   /*!
@@ -293,7 +289,7 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
     If this object does not have the given required key(s),
     a runtime error is thrown in C++ (and also raised in Python).
   */
-  void required_keys(
+  void check_required_keys(
     const Json &key_);
   /*!
     @brief Check if this object has optional key(s).
@@ -307,7 +303,7 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
     If this object has the given key(s), it returns true. If
     not, it returns false.
   */
-  bool optional_keys(
+  bool check_optional_keys(
     const Json &key_);
   //! @copydoc Element::get_data
   const Json &get_data_py();

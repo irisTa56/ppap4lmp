@@ -27,20 +27,20 @@
 */
 class Updater : public std::enable_shared_from_this<Updater> {
   /*!
-    Blacklist of Element::dataid updated by this Updater object.
+    Blacklist of Element::elementid updated by this Updater object.
     If this Updater object is called from an Element object
-    for the first time, this object stores Element::dataid
-    in #dataid_blacklist and updates Element::data.
+    for the first time, this object stores Element::elementid
+    in #skippable_elementids and updates Element::data.
     From the second time on, this object can skip
     the updating computation.
   */
-  Set<int> dataid_blacklist;
+  Set<int> skippable_elementids;
   /*!
-    A variable used for OpenMP. In this program, #dataid_blacklist is
-    modified in a multithreading context. To prevent #dataid_blacklist
-    from being modified from multiple threads at the same time,
-    this member must be locked in #check_blacklist
-    and #remove_from_blacklist.
+    A variable used for OpenMP. In this program,
+    #skippable_elementids is modified in a multithreading context.
+    To prevent #skippable_elementids from being modified from
+    multiple threads at the same time, this member must be locked
+    in #check_update_requirest_for and #remove_from_skippable_elementids.
   */
   omp_lock_t omp_lock;
  protected:
@@ -55,15 +55,15 @@ class Updater : public std::enable_shared_from_this<Updater> {
   */
   ShPtr<Generator> ext_generator;
   /*!
-    Wrapper function for Element::required_keys of an Element object
-    where this instance is appended to.
+    Wrapper function for Element::check_required_keys of
+    an Element object where this instance is appended to.
   */
-  std::function<void(const Json &)> required_keys;
+  std::function<void(const Json &)> check_required_keys;
   /*!
-    Wrapper function for Element::optional_keys of an Element object
-    where this instance is appended to.
+    Wrapper function for Element::check_optional_keys of
+    an Element object where this instance is appended to.
   */
-  std::function<bool(const Json &)> optional_keys;
+  std::function<bool(const Json &)> check_optional_keys;
   /*!
     @brief Implementation of computation for updating Element::data.
 
@@ -74,24 +74,24 @@ class Updater : public std::enable_shared_from_this<Updater> {
     @return None.
   */
   virtual void compute_impl(Json &data) = 0;
-  //! Make #required_keys
-  void make_required_keys(
+  //! Make #check_required_keys
+  void make_check_required_keys(
     const ElPtr &elem);
-  //! Make #optional_keys
-  void make_optional_keys(
+  //! Make #check_optional_keys
+  void make_check_optional_keys(
     const ElPtr &elem);
   /*!
-    Look for Element::dataid in #dataid_blacklist.
+    Look for Element::elementid in #skippable_elementids.
 
-    @param dataid
-      An Element::dataid to be checked.
+    @param elementid
+      An Element::elementid to be checked.
 
-    @return A boolean. If `dataid` is found in #dataid_blacklist,
+    @return A boolean. If `elementid` is found in #skippable_elementids,
     this method returns false, that is, rejects the Element object
-    of the `dataid`.
+    of the `elementid`.
   */
-  bool check_blacklist(
-    const int dataid);
+  bool check_update_requirest_for(
+    const int elementid);
  public:
   /*!
     @brief Constructor of Updater class.
@@ -111,31 +111,31 @@ class Updater : public std::enable_shared_from_this<Updater> {
       Shared pointer to an Element object
       where computed properties are added to.
 
+    @param elementid
+      A constant integer copied from Element::elementid.
+
     @param data
       Mutable reference to Element::data
       where computed properties are added to.
 
-    @param dataid
-      A constant integer copied from Element::dataid.
-
     @return None.
   */
   virtual void compute(
-    const ElPtr &elem, Json &data, const int dataid) = 0;
+    const ElPtr &elem, const int elementid, Json &data) = 0;
   /*!
-    @brief Remove Element::dataid from #dataid_blacklist.
+    @brief Remove Element::elementid from #skippable_elementids.
 
-    @param dataid
-      An Element::dataid to be removed.
+    @param elementid
+      An Element::elementid to be removed.
 
     @return None.
 
-    Removing `dataid` from #dataid_blacklist is necessary
-    so that this object can update the Element object of the `dataid`
+    Removing `elementid` from #skippable_elementids is necessary
+    so that this object can update the Element object of the `elementid`
     again after its Element::data being cleared.
   */
-  void remove_from_blacklist(
-    const int dataid);
+  void remove_from_skippable_elementids(
+    const int elementid);
   /*!
     @brief Get #ext_generator of this object.
 

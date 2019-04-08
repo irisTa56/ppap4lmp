@@ -28,9 +28,9 @@ AddMap::AddMap(
 void AddMap::compute_impl(
   Json &data)
 {
-  required_keys(key_ref);
+  check_required_keys(key_ref);
 
-  if (optional_keys(key_new) && !do_overwrite)
+  if (check_optional_keys(key_new) && !do_overwrite)
   {
     ut::runtime_error("Key '" + key_new + "' already exists");
   }

@@ -13,7 +13,7 @@
 void AddGyrationRadius::compute_impl(
   Json &data)
 {
-  required_keys({"mass", "I_xx", "I_yy", "I_zz"});
+  check_required_keys({"mass", "I_xx", "I_yy", "I_zz"});
 
   for (auto &d : data)
   {

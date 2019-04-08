@@ -26,18 +26,18 @@ void ProMeanSquareDisplacement::run_impl(
 {
   auto el_points = generators[index]->get_element();
 
-  // NOTE: `id` property is required_keys to ensure data is sorted.
-  el_points->required_keys({"xu", "yu", "zu", "id"});
+  // NOTE: `id` property is check_required_keys to ensure data is sorted.
+  el_points->check_required_keys({"xu", "yu", "zu", "id"});
 
   ArrayXXd rs;
-  el_points->array2d(rs, {"xu", "yu", "zu"});
+  el_points->make_2darray_from_data(rs, {"xu", "yu", "zu"});
 
   if (drift_correction)
   {
-    el_points->required_keys("mass");
+    el_points->check_required_keys("mass");
 
     ArrayXd ms;
-    el_points->array1d(ms, "mass");
+    el_points->make_1darray_from_data(ms, "mass");
 
     auto reciprocal = 1.0 / ms.sum();
 
@@ -69,16 +69,16 @@ void ProMeanSquareDisplacement::prepare()
 
   auto el_initial_points = generators.front()->get_element();
 
-  el_initial_points->required_keys({"xu", "yu", "zu", "id"});
+  el_initial_points->check_required_keys({"xu", "yu", "zu", "id"});
 
-  el_initial_points->array2d(initial_rs, {"xu", "yu", "zu"});
+  el_initial_points->make_2darray_from_data(initial_rs, {"xu", "yu", "zu"});
 
   if (drift_correction)
   {
-    el_initial_points->required_keys("mass");
+    el_initial_points->check_required_keys("mass");
 
     ArrayXd ms;
-    el_initial_points->array1d(ms, "mass");
+    el_initial_points->make_1darray_from_data(ms, "mass");
 
     auto reciprocal = 1.0 / ms.sum();
 

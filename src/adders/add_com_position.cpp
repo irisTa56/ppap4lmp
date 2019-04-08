@@ -28,10 +28,10 @@ void AddCoMPosition::compute_with_weights(
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
   ArrayXd ms_atom;
-  el_atoms->array1d(ms_atom, "mass");
+  el_atoms->make_1darray_from_data(ms_atom, "mass");
 
   ArrayXXd rs_atom;
-  el_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
+  el_atoms->make_2darray_from_data(rs_atom, {"xu", "yu", "zu"});
 
   for (auto &d : data)
   {
@@ -74,10 +74,10 @@ void AddCoMPosition::compute_without_weights(
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
   ArrayXd ms_atom;
-  el_atoms->array1d(ms_atom, "mass");
+  el_atoms->make_1darray_from_data(ms_atom, "mass");
 
   ArrayXXd rs_atom;
-  el_atoms->array2d(rs_atom, {"xu", "yu", "zu"});
+  el_atoms->make_2darray_from_data(rs_atom, {"xu", "yu", "zu"});
 
   for (auto &d : data)
   {
@@ -108,13 +108,13 @@ void AddCoMPosition::compute_without_weights(
 void AddCoMPosition::compute_impl(
   Json &data)
 {
-  required_keys("atom-ids");
+  check_required_keys("atom-ids");
 
   auto el_atoms = ext_generator->get_element();
 
-  el_atoms->required_keys({"id", "mass", "xu", "yu", "zu"});
+  el_atoms->check_required_keys({"id", "mass", "xu", "yu", "zu"});
 
-  if (optional_keys("atom-weights"))
+  if (check_optional_keys("atom-weights"))
   {
     compute_with_weights(data, el_atoms);
   }

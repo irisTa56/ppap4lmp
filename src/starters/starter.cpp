@@ -37,10 +37,10 @@ void Starter::sort_by_id(
 
 void Starter::compute(
   const ElPtr &elem,
-  Json &data,
-  const int dataid)
+  const int elementid,
+  Json &data)
 {
-  if (check_blacklist(dataid))
+  if (check_update_requirest_for(elementid))
   {
     if (data != nullptr)
     {
@@ -59,7 +59,7 @@ void Starter::compute(
 
     elem->update_keys();
 
-    if (data.is_array() && elem->optional_keys("id") && do_sorting_by_id)
+    if (data.is_array() && elem->check_optional_keys("id") && do_sorting_by_id)
     {
       sort_by_id(data);
     }

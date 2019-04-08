@@ -45,13 +45,13 @@ void ProThicknessProfile::run_impl(
   */
   auto el_atoms = generators[index]->get_element("Atoms");
 
-  el_atoms->required_keys({"x", "y", "z", "radius"});
+  el_atoms->check_required_keys({"x", "y", "z", "radius"});
 
-  auto atoms = el_atoms->get_json({"x", "y", "z", "radius"});
+  auto atoms = el_atoms->get_reduced_data({"x", "y", "z", "radius"});
 
   auto el_box = generators[index]->get_element("Box");
 
-  el_box->required_keys({"lo_x", "lo_y", "hi_x", "hi_y"});
+  el_box->check_required_keys({"lo_x", "lo_y", "hi_x", "hi_y"});
 
   auto &box = el_box->get_data();
 

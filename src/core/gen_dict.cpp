@@ -65,14 +65,14 @@ void GenDict::accessed_by_instance_of(
 
 Set<Str> GenDict::get_keys()
 {
-  Set<Str> tmp;
+  Set<Str> keys;
 
   for (const auto &item : generator_dict)
   {
-    tmp.insert(item.first);
+    keys.insert(item.first);
   }
 
-  return tmp;
+  return keys;
 }
 
 /* ------------------------------------------------------------------ */

@@ -35,14 +35,14 @@ void ProTimeCorrelationInMolecule::run_impl(
 {
   auto el_mols = generators[index]->get_element("Mols");
 
-  // NOTE: `id` property is required_keys to ensure data is sorted.
-  el_mols->required_keys({"id", "atom-ids"});
+  // NOTE: `id` property is check_required_keys to ensure data is sorted.
+  el_mols->check_required_keys({"id", "atom-ids"});
 
   auto &mols = el_mols->get_data();
 
   auto el_atoms = generators[index]->get_element("Atoms");
 
-  el_atoms->required_keys({"id", "xu", "yu", "zu"});
+  el_atoms->check_required_keys({"id", "xu", "yu", "zu"});
 
   auto &atoms = el_atoms->get_data();
 
@@ -89,14 +89,14 @@ void ProTimeCorrelationInMolecule::prepare()
 
   auto el_initial_mols = generators.front()->get_element("Mols");
 
-  // NOTE: `id` property is required_keys to ensure data is sorted.
-  el_initial_mols->required_keys({"id", "atom-ids"});
+  // NOTE: `id` property is check_required_keys to ensure data is sorted.
+  el_initial_mols->check_required_keys({"id", "atom-ids"});
 
   auto &mols = el_initial_mols->get_data();
 
   auto el_initial_atoms = generators.front()->get_element("Atoms");
 
-  el_initial_atoms->required_keys({"id", "xu", "yu", "zu"});
+  el_initial_atoms->check_required_keys({"id", "xu", "yu", "zu"});
 
   auto &atoms = el_initial_atoms->get_data();
 
