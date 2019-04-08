@@ -39,6 +39,10 @@ void AddMap::compute_impl(
   {
     for (auto &d : data)
     {
+      /* NOTE:
+        Use at(), not operator [], to throw an error
+        if the reference value does not exit as a key of the mapping.
+      */
       d[key_new] = mapping.at(d[key_ref]);
     }
   }

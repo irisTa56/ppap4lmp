@@ -57,7 +57,7 @@ class AddDihedralAngle : public Adder {
 
     @param elem
     @parblock
-      An Element object for dihedrals.
+      An Element object containing atoms data.
       <span class="remove_in_table">
         This parameter is assigned to #ext_generator.
       </span>

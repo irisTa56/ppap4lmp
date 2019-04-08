@@ -41,18 +41,18 @@ void AddWrappedPosition::compute_impl(
     ArrayXd unwrapped(3);
     unwrapped << d["xu"], d["yu"], d["zu"];
 
-    ArrayXd tmp = unwrapped;
+    ArrayXd tmp_wrapped = unwrapped;
 
-    tmp -= offset;
-    tmp /= length;
+    tmp_wrapped -= offset;
+    tmp_wrapped /= length;
 
-    tmp = -tmp.floor();
-    tmp *= length;
-    tmp += unwrapped;
+    tmp_wrapped = -tmp_wrapped.floor();
+    tmp_wrapped *= length;
+    tmp_wrapped += unwrapped;
 
-    d["x"] = tmp(0);
-    d["y"] = tmp(1);
-    d["z"] = tmp(2);
+    d["x"] = tmp_wrapped(0);
+    d["y"] = tmp_wrapped(1);
+    d["z"] = tmp_wrapped(2);
   }
 }
 

@@ -38,7 +38,7 @@ void AddInertiaMoment::compute_with_weights(
     RowArrayXd r_mol(3);
     r_mol << d["xu"], d["yu"], d["zu"];
 
-    Matrix3d sum = Matrix3d::Zero();
+    Matrix3d inertia_tensor = Matrix3d::Zero();
 
     auto &atom_ids = d["atom-ids"];
     auto &atom_weights = d["atom-weights"];
@@ -55,18 +55,17 @@ void AddInertiaMoment::compute_with_weights(
 
       RowVector3d dr = rs_atom.row(index) - r_mol;
 
-      sum += mass * dr.transpose() * dr;
+      inertia_tensor += mass * dr.transpose() * dr;
     }
 
-    auto tr = sum.trace();
+    auto tr = inertia_tensor.trace();
 
-    d["I_xx"] = tr - sum(0, 0);
-    d["I_yy"] = tr - sum(1, 1);
-    d["I_zz"] = tr - sum(2, 2);
-    d["I_xy"] = -sum(0, 1);
-    d["I_xz"] = -sum(0, 2);
-    d["I_yz"] = -sum(1, 2);
-
+    d["I_xx"] = tr - inertia_tensor(0, 0);
+    d["I_yy"] = tr - inertia_tensor(1, 1);
+    d["I_zz"] = tr - inertia_tensor(2, 2);
+    d["I_xy"] = -inertia_tensor(0, 1);
+    d["I_xz"] = -inertia_tensor(0, 2);
+    d["I_yz"] = -inertia_tensor(1, 2);
   }
 }
 
@@ -89,7 +88,7 @@ void AddInertiaMoment::compute_without_weights(
     RowArrayXd r_mol(3);
     r_mol << d["xu"], d["yu"], d["zu"];
 
-    Matrix3d sum = Matrix3d::Zero();
+    Matrix3d inertia_tensor = Matrix3d::Zero();
 
     for (const int &id : d["atom-ids"])
     {
@@ -98,17 +97,17 @@ void AddInertiaMoment::compute_without_weights(
 
       RowVector3d dr = rs_atom.row(index) - r_mol;
 
-      sum += mass * dr.transpose() * dr;
+      inertia_tensor += mass * dr.transpose() * dr;
     }
 
-    auto tr = sum.trace();
+    auto tr = inertia_tensor.trace();
 
-    d["I_xx"] = tr - sum(0, 0);
-    d["I_yy"] = tr - sum(1, 1);
-    d["I_zz"] = tr - sum(2, 2);
-    d["I_xy"] = -sum(0, 1);
-    d["I_xz"] = -sum(0, 2);
-    d["I_yz"] = -sum(1, 2);
+    d["I_xx"] = tr - inertia_tensor(0, 0);
+    d["I_yy"] = tr - inertia_tensor(1, 1);
+    d["I_zz"] = tr - inertia_tensor(2, 2);
+    d["I_xy"] = -inertia_tensor(0, 1);
+    d["I_xz"] = -inertia_tensor(0, 2);
+    d["I_yz"] = -inertia_tensor(1, 2);
   }
 }
 

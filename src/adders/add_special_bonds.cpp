@@ -19,17 +19,17 @@ AddSpecialBonds::AddSpecialBonds(
   const Vec<Vec<int>> &scheme)
 {
   ext_generator = el_mols;
-  mol_type_to_sbondses_in_mol[1] = scheme;
+  mol_type_to_sbonds_list_in_mol[1] = scheme;
 }
 
 /* ------------------------------------------------------------------ */
 
 AddSpecialBonds::AddSpecialBonds(
   const ElPtr &el_mols,
-  const Map<int,Vec<Vec<int>>> &schemes)
+  const Map<int,Vec<Vec<int>>> &type_to_scheme)
 {
   ext_generator = el_mols;
-  mol_type_to_sbondses_in_mol = schemes;
+  mol_type_to_sbonds_list_in_mol = type_to_scheme;
 }
 
 /* ------------------------------------------------------------------ */
@@ -53,12 +53,12 @@ void AddSpecialBonds::compute_impl(
   for (const auto &mol : mols)
   {
     auto &atom_ids = mol["atom-ids"];
-    auto sbondses_in_mol
-      = mol_type_to_sbondses_in_mol[mol.value("type", 1)];
+    auto sbonds_list_in_mol
+      = mol_type_to_sbonds_list_in_mol[mol.value("type", 1)];
 
     auto n_atoms_in_mol = atom_ids.size();
 
-    if (sbondses_in_mol.size() != n_atoms_in_mol)
+    if (sbonds_list_in_mol.size() != n_atoms_in_mol)
     {
       ut::runtime_error(
         "The numbers of atoms in a molecule are inconsistent");
@@ -66,14 +66,15 @@ void AddSpecialBonds::compute_impl(
 
     for (int i = 0; i != n_atoms_in_mol; ++i)
     {
-      auto tmp = Json::array();
+      auto absolute_sbonds = Json::array();
 
-      for (const int &index: sbondses_in_mol[i])
+      for (const int &index: sbonds_list_in_mol[i])
       {
-        tmp.push_back(atom_ids.at(index));
+        // convert relative index in a molecule to absolute atom id
+        absolute_sbonds.push_back(atom_ids.at(index));
       }
 
-      data[id2index[atom_ids[i]]]["special-bonds"].swap(tmp);
+      data[id2index[atom_ids[i]]]["special-bonds"].swap(absolute_sbonds);
     }
   }
 }

@@ -35,8 +35,8 @@ void AddCoMPosition::compute_with_weights(
 
   for (auto &d : data)
   {
-    double m_tmp = 0.0;
-    RowArrayXd r_tmp = RowArrayXd::Zero(3);
+    double sum_mass = 0.0;
+    RowArrayXd tmp_r = RowArrayXd::Zero(3);
 
     auto &atom_ids = d["atom-ids"];
     auto &atom_weights = d["atom-weights"];
@@ -51,17 +51,17 @@ void AddCoMPosition::compute_with_weights(
       auto index = id2index_atom[id];
       auto mass = ms_atom(index) * weight;
 
-      m_tmp += mass;
-      r_tmp += mass * rs_atom.row(index);
+      sum_mass += mass;
+      tmp_r += mass * rs_atom.row(index);
     }
 
-    r_tmp /= m_tmp;
+    tmp_r /= sum_mass;
 
-    d["mass"] = m_tmp;
+    d["mass"] = sum_mass;
 
-    d["xu"] = r_tmp(0);
-    d["yu"] = r_tmp(1);
-    d["zu"] = r_tmp(2);
+    d["xu"] = tmp_r(0);
+    d["yu"] = tmp_r(1);
+    d["zu"] = tmp_r(2);
   }
 }
 
@@ -81,25 +81,25 @@ void AddCoMPosition::compute_without_weights(
 
   for (auto &d : data)
   {
-    double m_tmp = 0.0;
-    RowArrayXd r_tmp = RowArrayXd::Zero(3);
+    double sum_mass = 0.0;
+    RowArrayXd tmp_r = RowArrayXd::Zero(3);
 
     for (const int &id : d["atom-ids"])
     {
       auto index = id2index_atom[id];
       auto mass = ms_atom(index);
 
-      m_tmp += mass;
-      r_tmp += mass * rs_atom.row(index);
+      sum_mass += mass;
+      tmp_r += mass * rs_atom.row(index);
     }
 
-    r_tmp /= m_tmp;
+    tmp_r /= sum_mass;
 
-    d["mass"] = m_tmp;
+    d["mass"] = sum_mass;
 
-    d["xu"] = r_tmp(0);
-    d["yu"] = r_tmp(1);
-    d["zu"] = r_tmp(2);
+    d["xu"] = tmp_r(0);
+    d["yu"] = tmp_r(1);
+    d["zu"] = tmp_r(2);
   }
 }
 

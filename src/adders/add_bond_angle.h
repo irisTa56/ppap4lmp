@@ -55,7 +55,7 @@ class AddBondAngle : public Adder {
 
     @param elem
     @parblock
-      An Element object for atoms.
+      An Element object containing atoms data.
       <span class="remove_in_table">
         This parameter is assigned to #ext_generator.
       </span>

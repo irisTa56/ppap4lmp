@@ -38,7 +38,7 @@ class AddSpecialBonds : public Adder {
     in a molecule, and the second lists corresponds special bonds
     of each atom.
   */
-  Map<int,Vec<Vec<int>>> mol_type_to_sbondses_in_mol;
+  Map<int,Vec<Vec<int>>> mol_type_to_sbonds_list_in_mol;
  protected:
   /*!
     @brief This method overrides Updater::compute_impl.
@@ -77,7 +77,7 @@ class AddSpecialBonds : public Adder {
       The first list corresponds atoms in a molecule,
       and the second lists corresponds special bonds of each atom.
       <span class="remove_in_table">
-        This parameter is stored in #mol_type_to_sbondses_in_mol
+        This parameter is stored in #mol_type_to_sbonds_list_in_mol
         as a scheme for molecular type 1.
       </span>
     @endparblock
@@ -103,19 +103,19 @@ class AddSpecialBonds : public Adder {
         </dd>
       </dl>
 
-    @param schemes
+    @param type_to_scheme
       Dictionary from molecular type to list of lists of
       zero-based indices of atoms in a molecule.
       The first list corresponds atoms in a molecule,
       and the second lists corresponds special bonds of each atom.
       <span class="remove_in_table">
-        This parameter is assigned to #mol_type_to_sbondses_in_mol.
+        This parameter is assigned to #mol_type_to_sbonds_list_in_mol.
       </span>
     @endparblock
   */
   AddSpecialBonds(
     const ElPtr &el_mols,
-    const Map<int,Vec<Vec<int>>> &schemes);
+    const Map<int,Vec<Vec<int>>> &type_to_scheme);
   virtual ~AddSpecialBonds() = default;
 };
 
