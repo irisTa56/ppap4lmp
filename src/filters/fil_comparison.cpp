@@ -14,22 +14,22 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
-  const std::tuple<Str,Str,Json> &comparison_)
+  const std::tuple<Str,Str,Json> &compare_expr_)
 {
-  comparisons = {comparison_};
+  compare_expr_list = {compare_expr_};
 }
 
 /* ------------------------------------------------------------------ */
 
 FilComparison::FilComparison(
-  const Vec<std::tuple<Str,Str,Json>> &comparisons_)
+  const Vec<std::tuple<Str,Str,Json>> &compare_expr_list_)
 {
-  comparisons = comparisons_;
+  compare_expr_list = compare_expr_list_;
 }
 
 /* ------------------------------------------------------------------ */
 
-const CompareFunc FilComparison::make_lambda(
+const CompareFunc FilComparison::make_compare_func(
   const Str &oper,
   const Json &rval)
 {
@@ -79,18 +79,21 @@ const CompareFunc FilComparison::make_lambda(
 
 /* ------------------------------------------------------------------ */
 
-const Vec<std::pair<Str,CompareFunc>> FilComparison::convert_to_funcs()
+const Vec<std::pair<Str,CompareFunc>> FilComparison::make_compare_func_list()
 {
-  Vec<std::pair<Str,CompareFunc>> tmp;
+  Vec<std::pair<Str,CompareFunc>> compare_func_list;
 
-  for (const auto &item : comparisons)
+  for (const auto &item : compare_expr_list)
   {
-    tmp.push_back(std::make_pair(
-      std::get<0>(item),
-      make_lambda(std::get<1>(item), std::get<2>(item))));
+    auto &datakey = std::get<0>(item);
+    auto &compare_oper = std::get<1>(item);
+    auto &target_val = std::get<2>(item);
+
+    compare_func_list.push_back(std::make_pair(
+      datakey, make_compare_func(compare_oper, target_val)));
   }
 
-  return tmp;
+  return compare_func_list;
 }
 
 /* ------------------------------------------------------------------ */
@@ -98,14 +101,14 @@ const Vec<std::pair<Str,CompareFunc>> FilComparison::convert_to_funcs()
 void FilComparison::compute_impl(
   Json &data)
 {
-  auto compare_funcs = convert_to_funcs();
+  auto compare_funcs = make_compare_func_list();
 
   for (const auto &item : compare_funcs)
   {
     check_required_keys(item.first);
   }
 
-  Json tmp = Json::array();
+  Json passing_data = Json::array();
 
   for (const auto &d : data)
   {
@@ -113,7 +116,7 @@ void FilComparison::compute_impl(
 
     for (const auto &item : compare_funcs)
     {
-      if (!item.second(d[item.first]))
+      if (!item.second(d[item.first]))  // value satisfies a comparison?
       {
         pass = false;
         break;
@@ -122,11 +125,11 @@ void FilComparison::compute_impl(
 
     if (pass)
     {
-      tmp.push_back(d);
+      passing_data.push_back(d);
     }
   }
 
-  data.swap(tmp);
+  data.swap(passing_data);
 }
 
 /* ------------------------------------------------------------------ */

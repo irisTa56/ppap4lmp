@@ -11,29 +11,23 @@
 
 #include <filters/filter.h>
 
-/*!
-  @brief *CompareFunc* is an alias for a function
-  taking a ::Json object and returning a boolean.
-*/
+//! Alias for a function taking a ::Json object and returning a boolean.
 using CompareFunc = std::function<bool(const Json &)>;
 
 /*!
   @brief FilComparison applies a filter
   defined by comparison operators.
 
-  An object of this class has a filter defined by #comparisons,
-  which is a list consisting of tuples where the first element is
-  a string key, the second element is a comparison operator and
-  the third element is a right side value of an inequality
-  (or equation). Currently supported operators are
+  An object of this class has a filter defined
+  by #compare_expr_list, which is a list consisting of tuples
+  where the first element is a string key, the second element is
+  a comparison operator and the third element is a right hand value of
+  an inequality (or equation). Currently supported operators are
   `<`, `>`, `<=`, `>=`, `==`, and `!=`.
-
-  An element of array Element::data can pass this filter
-  only if every value for every key in #comparisons satisfies
-  an inequality consisting of the corresponding comparison operator
-  and right side value (the second and third elements of #comparisons).
-  Note that value(s) of the item is taken as left side value of
-  the inequality.
+  An element of array Element::data can pass this filter only if
+  satisfying all the inequalities. The element can pass a inequality
+  when its value for the string key satisfies the condition defined by
+  the comparison operator and right hand value.
 
   About usage in Python,
   please see pybind::py_fil_comparison.
@@ -47,7 +41,7 @@ class FilComparison : public Filter {
     Note that the reason not using ::Map is to allow
     duplicate keys.
   */
-  Vec<std::tuple<Str,Str,Json>> comparisons;
+  Vec<std::tuple<Str,Str,Json>> compare_expr_list;
   /*!
     Make a ::CompareFunc object from a comparison operator
     and a right side value.
@@ -63,11 +57,11 @@ class FilComparison : public Filter {
     @return A ::CompareFunc object, a function evaluating an inequality
     (or equation).
   */
-  const CompareFunc make_lambda(
+  const CompareFunc make_compare_func(
     const Str &oper,
     const Json &rval);
   /*!
-    Convert tuples in #comparisons to pairs of a string key
+    Convert tuples in #compare_expr_list to pairs of a string key
     and ::CompareFunc.
 
     @return A constant ::Vec<std::pair<#Str,#CompareFunc>> object,
@@ -75,11 +69,11 @@ class FilComparison : public Filter {
 
     Returned value of this method is used for evaluating inequalities
     consisting of the second and third elements of tuples contained
-    in #comparisons. Note that this conversion from tuples to pairs
-    should not be conducted in constructor because of possibility
-    of throwing (and raising) a runtime error.
+    in #compare_expr_list. Note that this conversion from tuples
+    to pairs should not be conducted in constructor because of
+    possibility of throwing (and raising) a runtime error.
   */
-  const Vec<std::pair<Str,CompareFunc>> convert_to_funcs();
+  const Vec<std::pair<Str,CompareFunc>> make_compare_func_list();
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
@@ -88,7 +82,7 @@ class FilComparison : public Filter {
   /*!
     @brief Constructor of FilComparison class with one criterion.
 
-    @param comparison_
+    @param compare_expr_
       A three-elements tuple consisting of a string key,
       comparison operator and right side value of an inequality
       (or equation). Note that an Element object, where the constructed
@@ -96,26 +90,26 @@ class FilComparison : public Filter {
       the first element of this parameter (string key).
       <span class="remove_in_table">
         A single-element ::Vec object consisting of this parameter
-        is assigned to #comparisons.
+        is assigned to #compare_expr_list.
       </span>
   */
   FilComparison(
-    const std::tuple<Str,Str,Json> &comparison_);
+    const std::tuple<Str,Str,Json> &compare_expr_);
   /*!
     @brief Constructor of FilComparison class with multiple criteria.
 
-    @param comparisons_
+    @param compare_expr_list_
       List of three-elements tuples consisting of a string key,
       comparison operator and right side value of an inequality
       (or equation). Note that an Element object, where the constructed
       object is appended to, must has properties corresponding to
       the first elements of this parameter (string key).
       <span class="remove_in_table">
-        This parameter is assigned to #comparisons.
+        This parameter is assigned to #compare_expr_list.
       </span>
   */
   FilComparison(
-    const Vec<std::tuple<Str,Str,Json>> &comparisons_);
+    const Vec<std::tuple<Str,Str,Json>> &compare_expr_list_);
   virtual ~FilComparison() = default;
 };
 

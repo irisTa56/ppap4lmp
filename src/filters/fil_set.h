@@ -14,13 +14,13 @@
 /*!
   @brief FilSet applies a filter defined by sets of acceptable values.
 
-  An object of this class has a filter defined by #value_sets,
+  An object of this class has a filter defined by #acceptable_value_sets,
   which is a dictionary consisting of pairs of a string key
-  and a set of acceptable values.
+  and a set of values which can pass the filter.
 
   An element of array Element::data can pass this filter
-  only if every value for every key in #value_sets is
-  included in the corresponding set (a value of #value_sets).
+  only if its value for every key in #acceptable_value_sets is
+  included in the corresponding set (a value of #acceptable_value_sets).
 
   About usage in Python,
   please see pybind::py_fil_set.
@@ -31,7 +31,7 @@ class FilSet : public Filter {
     Note that keys of this dictionary must be contained
     in an Element object where this object appended to.
   */
-  Map<Str,Set<Json>> value_sets;
+  Map<Str,Set<Json>> acceptable_value_sets;
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
@@ -40,17 +40,17 @@ class FilSet : public Filter {
   /*!
     @brief Constructor of FilSet class.
 
-    @param value_sets_
+    @param acceptable_value_sets_
       Dictionary from a string key for property to acceptable values
       of that property. Note that an Element object,
       where the constructed object is appended to, must has properties
       corresponding to keys in this parameter.
       <span class="remove_in_table">
-        This parameter is assigned to #value_sets.
+        This parameter is assigned to #acceptable_value_sets.
       </span>
   */
   FilSet(
-    const Map<Str,Set<Json>> &value_sets_);
+    const Map<Str,Set<Json>> &acceptable_value_sets_);
   virtual ~FilSet() = default;
 };
 

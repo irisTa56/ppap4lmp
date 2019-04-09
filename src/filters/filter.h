@@ -43,8 +43,11 @@ class Filter : public Updater {
 
     This method checks if `elementid` is in #skippable_elementids.
     If it is not in the list, this method passes `data`
-    to Filter::compute_impl. Each element in the array `data` remains
-    unchanged. Note that actual filtering process is conducted by
+    to Filter::compute_impl.
+
+    Each element in the array `data` remains unchanged.
+
+    Note that actual filtering process is conducted by
     Filter::compute_impl orveridden in subclasses of this class.
   */
   virtual void compute(

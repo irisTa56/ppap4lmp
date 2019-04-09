@@ -11,9 +11,9 @@
 /* ------------------------------------------------------------------ */
 
 FilSet::FilSet(
-  const Map<Str,Set<Json>> &value_sets_)
+  const Map<Str,Set<Json>> &acceptable_value_sets_)
 {
-  value_sets = value_sets_;
+  acceptable_value_sets = acceptable_value_sets_;
 }
 
 /* ------------------------------------------------------------------ */
@@ -21,22 +21,22 @@ FilSet::FilSet(
 void FilSet::compute_impl(
   Json &data)
 {
-  for (const auto &item : value_sets)
+  for (const auto &item : acceptable_value_sets)
   {
     check_required_keys(item.first);
   }
 
-  Json tmp = Json::array();
+  Json remaining_data = Json::array();
 
   for (const auto &d : data)
   {
     bool pass = true;
 
-    for (const auto &item : value_sets)
+    for (const auto &item : acceptable_value_sets)
     {
       auto &set = item.second;
 
-      if (set.find(d[item.first]) == set.end())
+      if (set.find(d[item.first]) == set.end())  // value is in set?
       {
         pass = false;
         break;
@@ -45,11 +45,11 @@ void FilSet::compute_impl(
 
     if (pass)
     {
-      tmp.push_back(d);
+      remaining_data.push_back(d);
     }
   }
 
-  data.swap(tmp);
+  data.swap(remaining_data);
 }
 
 /* ------------------------------------------------------------------ */
