@@ -124,7 +124,7 @@ var sectionId = 'dynsection-7';
 <!-- Node69 -->
 <g id="node6" class="node">
 <title>Node69</title>
-<g id="a_node6"><a xlink:href="classAdder.html#a5c416043e396771c79e4381ae70defe1" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
+<g id="a_node6"><a xlink:href="classAdder.html#a1ad2c73b355e25ef29d61277ca843ff0" target="_top" xlink:title="Compute properties and add them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="167,-868.5 167,-887.5 253,-887.5 253,-868.5 167,-868.5"/>
 <text text-anchor="middle" x="210" y="-875.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Adder::compute</text>
 </a>
@@ -139,10 +139,10 @@ var sectionId = 'dynsection-7';
 <!-- Node70 -->
 <g id="node7" class="node">
 <title>Node70</title>
-<g id="a_node7"><a xlink:href="classElement.html#a9ff7a4e19165faa6da26635d9145b46b" target="_top" xlink:title="Element::decrement\l_remain">
+<g id="a_node7"><a xlink:href="classElement.html#af07a7b62170dab48a3e54f008bbb1ae1" target="_top" xlink:title="Element::decrement\l_bookings">
 <polygon fill="#ffffff" stroke="#000000" points="158,-819 158,-849 262,-849 262,-819 158,-819"/>
 <text text-anchor="start" x="166" y="-837" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::decrement</text>
-<text text-anchor="middle" x="210" y="-826" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_remain</text>
+<text text-anchor="middle" x="210" y="-826" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_bookings</text>
 </a>
 </g>
 </g>
@@ -185,9 +185,9 @@ var sectionId = 'dynsection-7';
 <!-- Node73 -->
 <g id="node10" class="node">
 <title>Node73</title>
-<g id="a_node10"><a xlink:href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2" target="_top" xlink:title="Check if this object has required key(s). ">
-<polygon fill="#ffffff" stroke="#000000" points="150.5,-704.5 150.5,-723.5 269.5,-723.5 269.5,-704.5 150.5,-704.5"/>
-<text text-anchor="middle" x="210" y="-711.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::required_keys</text>
+<g id="a_node10"><a xlink:href="classElement.html#a343252084136e932e8830ec359d49558" target="_top" xlink:title="Check if this object has required key(s). ">
+<polygon fill="#ffffff" stroke="#000000" points="134.5,-704.5 134.5,-723.5 285.5,-723.5 285.5,-704.5 134.5,-704.5"/>
+<text text-anchor="middle" x="210" y="-711.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::check_required_keys</text>
 </a>
 </g>
 </g>
@@ -275,10 +275,10 @@ var sectionId = 'dynsection-7';
 <!-- Node87 -->
 <g id="node24" class="node">
 <title>Node87</title>
-<g id="a_node24"><a xlink:href="classFilComparison.html#ad19575c3d6f52a1d12b064ba0f1e006e" target="_top" xlink:title="FilComparison::make\l_lambda">
+<g id="a_node24"><a xlink:href="classFilComparison.html#a43365e5d65f5050011a1e44bcbac4157" target="_top" xlink:title="Make a CompareFunc object from a comparison operator and a right side value. ">
 <polygon fill="#ffffff" stroke="#000000" points="155.5,-465 155.5,-495 264.5,-495 264.5,-465 155.5,-465"/>
 <text text-anchor="start" x="163.5" y="-483" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::make</text>
-<text text-anchor="middle" x="210" y="-472" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_lambda</text>
+<text text-anchor="middle" x="210" y="-472" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_compare_func</text>
 </a>
 </g>
 </g>
@@ -476,7 +476,7 @@ var sectionId = 'dynsection-7';
 <!-- Node103 -->
 <g id="node40" class="node">
 <title>Node103</title>
-<g id="a_node40"><a xlink:href="classStarter.html#a2f63dae15f27c99095e7f0d71ea66010" target="_top" xlink:title="Compute or parse properties and set them to Element::data given as a mutable reference. ">
+<g id="a_node40"><a xlink:href="classStarter.html#a1e59be564d3139e249c710cb134b9d7b" target="_top" xlink:title="Compute or parse properties and set them to Element::data given as a mutable reference. ">
 <polygon fill="#ffffff" stroke="#000000" points="556,-919.5 556,-938.5 645,-938.5 645,-919.5 556,-919.5"/>
 <text text-anchor="middle" x="600.5" y="-926.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Starter::compute</text>
 </a>
@@ -515,8 +515,8 @@ var sectionId = 'dynsection-7';
 <!-- Node73&#45;&gt;Node74 -->
 <g id="edge10" class="edge">
 <title>Node73&#45;&gt;Node74</title>
-<path fill="none" stroke="#191970" d="M279.6002,-707.1304C300.3225,-705.0851 322.8338,-702.8632 342.8603,-700.8865"/>
-<polygon fill="#191970" stroke="#191970" points="279.1977,-703.653 269.5899,-708.1184 279.8854,-710.6191 279.1977,-703.653"/>
+<path fill="none" stroke="#191970" d="M295.8977,-705.5218C311.7883,-703.9534 328.0596,-702.3474 342.9522,-700.8774"/>
+<polygon fill="#191970" stroke="#191970" points="295.1364,-702.0798 285.5286,-706.5452 295.8241,-709.046 295.1364,-702.0798"/>
 </g>
 <!-- Node77 -->
 <g id="node14" class="node">
@@ -560,8 +560,8 @@ var sectionId = 'dynsection-7';
 <!-- Node73&#45;&gt;Node79 -->
 <g id="edge17" class="edge">
 <title>Node73&#45;&gt;Node79</title>
-<path fill="none" stroke="#191970" d="M279.7167,-720.8811C298.8064,-722.7653 319.4066,-724.7986 338.1792,-726.6515"/>
-<polygon fill="#191970" stroke="#191970" points="279.8854,-717.3809 269.5899,-719.8816 279.1977,-724.347 279.8854,-717.3809"/>
+<path fill="none" stroke="#191970" d="M295.8651,-722.475C310.1607,-723.886 324.7655,-725.3275 338.3982,-726.6731"/>
+<polygon fill="#191970" stroke="#191970" points="295.8241,-718.954 285.5286,-721.4548 295.1364,-725.9202 295.8241,-718.954"/>
 </g>
 <!-- Node75 -->
 <g id="node12" class="node">
@@ -638,7 +638,7 @@ var sectionId = 'dynsection-7';
 <!-- Node81 -->
 <g id="node18" class="node">
 <title>Node81</title>
-<g id="a_node18"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Get the reference to data of this object. ">
+<g id="a_node18"><a xlink:href="classElement.html#a62989090a40d237e617bc6e5f5087388" target="_top" xlink:title="Get a reference to data of this object. ">
 <polygon fill="#ffffff" stroke="#000000" points="346.5,-609.5 346.5,-628.5 458.5,-628.5 458.5,-609.5 346.5,-609.5"/>
 <text text-anchor="middle" x="402.5" y="-616.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Element::get_data_py</text>
 </a>
@@ -680,17 +680,17 @@ var sectionId = 'dynsection-7';
 <!-- Node88 -->
 <g id="node25" class="node">
 <title>Node88</title>
-<g id="a_node25"><a xlink:href="classFilComparison.html#accbd8d97e175b70c61b603999b944565" target="_top" xlink:title="FilComparison::convert\l_to_funcs">
-<polygon fill="#ffffff" stroke="#000000" points="344,-465 344,-495 461,-495 461,-465 344,-465"/>
-<text text-anchor="start" x="352" y="-483" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::convert</text>
-<text text-anchor="middle" x="402.5" y="-472" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_to_funcs</text>
+<g id="a_node25"><a xlink:href="classFilComparison.html#a413bd0e0d69da0515ed265b6b8ead945" target="_top" xlink:title="Convert tuples in compare_expr_list to pairs of a string key and CompareFunc. ">
+<polygon fill="#ffffff" stroke="#000000" points="348,-465 348,-495 457,-495 457,-465 348,-465"/>
+<text text-anchor="start" x="356" y="-483" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">FilComparison::make</text>
+<text text-anchor="middle" x="402.5" y="-472" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">_compare_func_list</text>
 </a>
 </g>
 </g>
 <!-- Node87&#45;&gt;Node88 -->
 <g id="edge33" class="edge">
 <title>Node87&#45;&gt;Node88</title>
-<path fill="none" stroke="#191970" d="M274.6989,-480C297.0077,-480 321.8592,-480 343.6731,-480"/>
+<path fill="none" stroke="#191970" d="M274.9353,-480C298.5748,-480 325.0428,-480 347.7155,-480"/>
 <polygon fill="#191970" stroke="#191970" points="274.6479,-476.5001 264.6479,-480 274.6478,-483.5001 274.6479,-476.5001"/>
 </g>
 <!-- Node89 -->
@@ -705,8 +705,8 @@ var sectionId = 'dynsection-7';
 <!-- Node88&#45;&gt;Node89 -->
 <g id="edge34" class="edge">
 <title>Node88&#45;&gt;Node89</title>
-<path fill="none" stroke="#191970" d="M471.2755,-480C489.3746,-480 508.9644,-480 527.2874,-480"/>
-<polygon fill="#191970" stroke="#191970" points="471.1029,-476.5001 461.1029,-480 471.1028,-483.5001 471.1029,-476.5001"/>
+<path fill="none" stroke="#191970" d="M467.2444,-480C486.3936,-480 507.4931,-480 527.1447,-480"/>
+<polygon fill="#191970" stroke="#191970" points="467.1285,-476.5001 457.1285,-480 467.1285,-483.5001 467.1285,-476.5001"/>
 </g>
 <!-- Node99 -->
 <g id="node36" class="node">

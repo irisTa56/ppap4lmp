@@ -43,7 +43,7 @@ class FilComparison : public Filter {
   */
   Vec<std::tuple<Str,Str,Json>> compare_expr_list;
   /*!
-    Make a ::CompareFunc object from a comparison operator
+    @brief Make a ::CompareFunc object from a comparison operator
     and a right side value.
 
     @param oper
@@ -54,14 +54,13 @@ class FilComparison : public Filter {
       A right side value. Since it is ::Json,
       it can be either an integer or a float.
 
-    @return A ::CompareFunc object, a function evaluating an inequality
-    (or equation).
+    @return A function evaluating an inequality (or equation).
   */
   const CompareFunc make_compare_func(
     const Str &oper,
     const Json &rval);
   /*!
-    Convert tuples in #compare_expr_list to pairs of a string key
+    @brief Convert tuples in #compare_expr_list to pairs of a string key
     and ::CompareFunc.
 
     @return A constant ::Vec<std::pair<#Str,#CompareFunc>> object,
@@ -74,6 +73,21 @@ class FilComparison : public Filter {
     possibility of throwing (and raising) a runtime error.
   */
   const Vec<std::pair<Str,CompareFunc>> make_compare_func_list();
+  /*!
+    @brief Check if an element in data array can pass this filter.
+
+    @param elem_in_data
+      An element in data array.
+
+    @param compare_func_list
+      Comparison functions made by #make_compare_func_list.
+
+    @return
+      If `elem_in_data` can pass this filter.
+  */
+  const bool check_if_pass_data_elem(
+    const Json &elem_in_data,
+    const Vec<std::pair<Str,CompareFunc>> &compare_func_list);
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(

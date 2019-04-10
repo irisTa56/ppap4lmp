@@ -111,8 +111,7 @@ Inheritance diagram for Updater:</div>
 <div class="dynheader">
 Collaboration diagram for Updater:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater__coll__graph.svg" width="184" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater__coll__graph.svg" width="214" height="419"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -120,12 +119,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ae5e87ea9ea0f6f31de04f93cd1819549">Updater</a> ()</td></tr>
 <tr class="memdesc:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> class.  <a href="#ae5e87ea9ea0f6f31de04f93cd1819549">More...</a><br /></td></tr>
 <tr class="separator:ae5e87ea9ea0f6f31de04f93cd1819549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49eed09b4d57a42ec2b423a9cb60213d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a49eed09b4d57a42ec2b423a9cb60213d">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data, const int dataid)=0</td></tr>
-<tr class="memdesc:a49eed09b4d57a42ec2b423a9cb60213d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="#a49eed09b4d57a42ec2b423a9cb60213d">More...</a><br /></td></tr>
-<tr class="separator:a49eed09b4d57a42ec2b423a9cb60213d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb7ad60b6b3e19b83299fb644b49f02b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b">remove_from_blacklist</a> (const int dataid)</td></tr>
-<tr class="memdesc:afb7ad60b6b3e19b83299fb644b49f02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>.  <a href="#afb7ad60b6b3e19b83299fb644b49f02b">More...</a><br /></td></tr>
-<tr class="separator:afb7ad60b6b3e19b83299fb644b49f02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cf431c3b7abd1d477a09b9bcbaa3357"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a3cf431c3b7abd1d477a09b9bcbaa3357">compute</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem, const int elementid, <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data)=0</td></tr>
+<tr class="memdesc:a3cf431c3b7abd1d477a09b9bcbaa3357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managing computation to update <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="#a3cf431c3b7abd1d477a09b9bcbaa3357">More...</a><br /></td></tr>
+<tr class="separator:a3cf431c3b7abd1d477a09b9bcbaa3357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12bdc73a3dde99638c81fc8dcf75992a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a12bdc73a3dde99638c81fc8dcf75992a">remove_from_skippable_elementids</a> (const int elementid)</td></tr>
+<tr class="memdesc:a12bdc73a3dde99638c81fc8dcf75992a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a> from <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a>.  <a href="#a12bdc73a3dde99638c81fc8dcf75992a">More...</a><br /></td></tr>
+<tr class="separator:a12bdc73a3dde99638c81fc8dcf75992a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64bb77bc8aa6d7ee1ddeaf98a033ec36"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a64bb77bc8aa6d7ee1ddeaf98a033ec36">get_ext_generator</a> ()</td></tr>
 <tr class="memdesc:a64bb77bc8aa6d7ee1ddeaf98a033ec36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a> of this object.  <a href="#a64bb77bc8aa6d7ee1ddeaf98a033ec36">More...</a><br /></td></tr>
 <tr class="separator:a64bb77bc8aa6d7ee1ddeaf98a033ec36"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,30 +134,30 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8f2256a52be76c16dc71987aca1164c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a8f2256a52be76c16dc71987aca1164c9">compute_impl</a> (<a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;data)=0</td></tr>
 <tr class="memdesc:a8f2256a52be76c16dc71987aca1164c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of computation for updating <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>.  <a href="#a8f2256a52be76c16dc71987aca1164c9">More...</a><br /></td></tr>
 <tr class="separator:a8f2256a52be76c16dc71987aca1164c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c72d0115a18442dd594a2868528e924"><td class="memItemLeft" align="right" valign="top"><a id="a7c72d0115a18442dd594a2868528e924"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a7c72d0115a18442dd594a2868528e924">make_required_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
-<tr class="memdesc:a7c72d0115a18442dd594a2868528e924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a>. <br /></td></tr>
-<tr class="separator:a7c72d0115a18442dd594a2868528e924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1f6c0058c5f0860e06569e05c6c5cdd"><td class="memItemLeft" align="right" valign="top"><a id="ab1f6c0058c5f0860e06569e05c6c5cdd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ab1f6c0058c5f0860e06569e05c6c5cdd">make_optional_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
-<tr class="memdesc:ab1f6c0058c5f0860e06569e05c6c5cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a>. <br /></td></tr>
-<tr class="separator:ab1f6c0058c5f0860e06569e05c6c5cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2184a4efa52ad2f4a631c134379ef7b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> (const int dataid)</td></tr>
-<tr class="separator:a2184a4efa52ad2f4a631c134379ef7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3aade931c7812d866e73ac1009e6cea"><td class="memItemLeft" align="right" valign="top"><a id="ab3aade931c7812d866e73ac1009e6cea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ab3aade931c7812d866e73ac1009e6cea">make_check_required_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:ab3aade931c7812d866e73ac1009e6cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#a79cb4fa483d540087833acbf09351e13">check_required_keys</a>. <br /></td></tr>
+<tr class="separator:ab3aade931c7812d866e73ac1009e6cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad973d7a2bc52bc390ba299335f3ffdf2"><td class="memItemLeft" align="right" valign="top"><a id="ad973d7a2bc52bc390ba299335f3ffdf2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#ad973d7a2bc52bc390ba299335f3ffdf2">make_check_optional_keys</a> (const <a class="el" href="element_8h.html#ae7eed80b2509599cc9301188e51f57d8">ElPtr</a> &amp;elem)</td></tr>
+<tr class="memdesc:ad973d7a2bc52bc390ba299335f3ffdf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make <a class="el" href="classUpdater.html#a29ffa0ae1735361c3b74fe8c3f87c506">check_optional_keys</a>. <br /></td></tr>
+<tr class="separator:ad973d7a2bc52bc390ba299335f3ffdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e144f917459792836eefd723c2545e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a8e144f917459792836eefd723c2545e9">check_update_requirest_for</a> (const int elementid)</td></tr>
+<tr class="separator:a8e144f917459792836eefd723c2545e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a26dc5059d13d9e8b5d96390286976868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classGenerator.html">Generator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a26dc5059d13d9e8b5d96390286976868">ext_generator</a></td></tr>
 <tr class="separator:a26dc5059d13d9e8b5d96390286976868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af83ef04b8c3dc30168a655a5f43e6f93"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#af83ef04b8c3dc30168a655a5f43e6f93">required_keys</a></td></tr>
-<tr class="separator:af83ef04b8c3dc30168a655a5f43e6f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a892adbb5176936765ace2750cfdc7f08"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a892adbb5176936765ace2750cfdc7f08">optional_keys</a></td></tr>
-<tr class="separator:a892adbb5176936765ace2750cfdc7f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cb4fa483d540087833acbf09351e13"><td class="memItemLeft" align="right" valign="top">std::function&lt; void(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a79cb4fa483d540087833acbf09351e13">check_required_keys</a></td></tr>
+<tr class="separator:a79cb4fa483d540087833acbf09351e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ffa0ae1735361c3b74fe8c3f87c506"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a29ffa0ae1735361c3b74fe8c3f87c506">check_optional_keys</a></td></tr>
+<tr class="separator:a29ffa0ae1735361c3b74fe8c3f87c506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a963bbb490a5f715e3330c508fe209deb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a></td></tr>
-<tr class="separator:a963bbb490a5f715e3330c508fe209deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf92e9c2775e872302db7bce6509588b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a></td></tr>
+<tr class="separator:acf92e9c2775e872302db7bce6509588b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74289331716430382f81370e9cb64c42"><td class="memItemLeft" align="right" valign="top">omp_lock_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUpdater.html#a74289331716430382f81370e9cb64c42">omp_lock</a></td></tr>
 <tr class="separator:a74289331716430382f81370e9cb64c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -192,8 +191,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2184a4efa52ad2f4a631c134379ef7b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2184a4efa52ad2f4a631c134379ef7b8">&#9670;&nbsp;</a></span>check_blacklist()</h2>
+<a id="a8e144f917459792836eefd723c2545e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e144f917459792836eefd723c2545e9">&#9670;&nbsp;</a></span>check_update_requirest_for()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,10 +201,10 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Updater::check_blacklist </td>
+          <td class="memname">bool Updater::check_update_requirest_for </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>dataid</em></td><td>)</td>
+          <td class="paramname"><em>elementid</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -215,26 +214,26 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Look for <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>.</p>
+<p>Look for <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a> in <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dataid</td><td>An <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> to be checked.</td></tr>
+    <tr><td class="paramname">elementid</td><td>An <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a> to be checked.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A boolean. If <code>dataid</code> is found in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>, this method returns false, that is, rejects the <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object of the <code>dataid</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A boolean. If <code>elementid</code> is found in <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a>, this method returns false, that is, rejects the <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object of the <code>elementid</code>. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="updater_8cpp_source.html#l00040">40</a> of file <a class="el" href="updater_8cpp_source.html">updater.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a2184a4efa52ad2f4a631c134379ef7b8_icgraph.svg" width="343" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classUpdater_a8e144f917459792836eefd723c2545e9_icgraph.svg" width="334" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a49eed09b4d57a42ec2b423a9cb60213d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49eed09b4d57a42ec2b423a9cb60213d">&#9670;&nbsp;</a></span>compute()</h2>
+<a id="a3cf431c3b7abd1d477a09b9bcbaa3357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cf431c3b7abd1d477a09b9bcbaa3357">&#9670;&nbsp;</a></span>compute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,14 +250,14 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>elementid</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>dataid</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -277,14 +276,14 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">elem</td><td>Shared pointer to an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where computed properties are added to.</td></tr>
+    <tr><td class="paramname">elementid</td><td>A constant integer copied from <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a>.</td></tr>
     <tr><td class="paramname">data</td><td>Mutable reference to <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> where computed properties are added to.</td></tr>
-    <tr><td class="paramname">dataid</td><td>A constant integer copied from <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
-<p>Implemented in <a class="el" href="classStarter.html#a2f63dae15f27c99095e7f0d71ea66010">Starter</a>, <a class="el" href="classAdder.html#a5c416043e396771c79e4381ae70defe1">Adder</a>, and <a class="el" href="classFilter.html#a3720cae109b4fa91fc63f6c540880de7">Filter</a>.</p>
+<p>Implemented in <a class="el" href="classStarter.html#a1e59be564d3139e249c710cb134b9d7b">Starter</a>, <a class="el" href="classAdder.html#a1ad2c73b355e25ef29d61277ca843ff0">Adder</a>, and <a class="el" href="classFilter.html#a660dd63387e5cf589578d63deee55d5c">Filter</a>.</p>
 
 </div>
 </div>
@@ -321,7 +320,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
-<p>Implemented in <a class="el" href="classAddInertiaMoment.html#a00ec4176ec775d4f9f9dbfa798197617">AddInertiaMoment</a>, <a class="el" href="classAddCoMPosition.html#a616981db390214b3a00a80d96571c646">AddCoMPosition</a>, <a class="el" href="classFilComparison.html#a71b4288f14b1460e3cfc1597221bdf08">FilComparison</a>, <a class="el" href="classAddMap.html#a167206580a168c2fa8762f24ec92638e">AddMap</a>, <a class="el" href="classStaBeads.html#a77ad61374fee27759fd34e378f508a8c">StaBeads</a>, <a class="el" href="classAddChildPositions.html#aad530cce490d646510b3d64279c08b08">AddChildPositions</a>, <a class="el" href="classAddGyrationRadius.html#a60db8516b60c59fd899e65dbe8bf45c8">AddGyrationRadius</a>, <a class="el" href="classAddChildIDs.html#a281e778fd38a1c903a43bc425f89f67c">AddChildIDs</a>, <a class="el" href="classAddMolecularOrientation.html#a1226588af028f689edea37346d4a9c37">AddMolecularOrientation</a>, <a class="el" href="classAddSpecialBonds.html#affda746cd8b9a033940a82d1bcc5131f">AddSpecialBonds</a>, <a class="el" href="classAddDihedralAngle.html#ab094acbaeefbf82b441eb6513927cada">AddDihedralAngle</a>, <a class="el" href="classAddBondAngle.html#a24f4bb313b518d6f9211ecc32c94daa5">AddBondAngle</a>, <a class="el" href="classAddBondLength.html#aa6e01ac14e34780bb22a951d8be2aac5">AddBondLength</a>, <a class="el" href="classAddWrappedPosition.html#a5ebca24d45a5c62d207aefe68e610220">AddWrappedPosition</a>, <a class="el" href="classStaDumpBox.html#a2cafacc416a7707a16a7f41d6ed74be3">StaDumpBox</a>, <a class="el" href="classAddRename.html#a051e4db797853a176bb5fcfceb9060ef">AddRename</a>, <a class="el" href="classStaMolecules.html#ab9c7b64a69f989aca5231c25fde7fa04">StaMolecules</a>, <a class="el" href="classStaDumpAtoms.html#a60229097acd4f512e50c5db4a0047301">StaDumpAtoms</a>, <a class="el" href="classFilSet.html#a5256cbd6faa0059b29033bcdafacf2fc">FilSet</a>, <a class="el" href="classStaCustom.html#a6a54ca7110d885e47f4db4e385b12b94">StaCustom</a>, and <a class="el" href="classStaCopy.html#a8075c95cad0203e88cc9048d9bf485d0">StaCopy</a>.</p>
+<p>Implemented in <a class="el" href="classAddInertiaMoment.html#a00ec4176ec775d4f9f9dbfa798197617">AddInertiaMoment</a>, <a class="el" href="classFilComparison.html#a71b4288f14b1460e3cfc1597221bdf08">FilComparison</a>, <a class="el" href="classAddCoMPosition.html#a616981db390214b3a00a80d96571c646">AddCoMPosition</a>, <a class="el" href="classAddMap.html#a167206580a168c2fa8762f24ec92638e">AddMap</a>, <a class="el" href="classStaBeads.html#a77ad61374fee27759fd34e378f508a8c">StaBeads</a>, <a class="el" href="classAddChildPositions.html#aad530cce490d646510b3d64279c08b08">AddChildPositions</a>, <a class="el" href="classAddGyrationRadius.html#a60db8516b60c59fd899e65dbe8bf45c8">AddGyrationRadius</a>, <a class="el" href="classAddChildIDs.html#a281e778fd38a1c903a43bc425f89f67c">AddChildIDs</a>, <a class="el" href="classAddMolecularOrientation.html#a1226588af028f689edea37346d4a9c37">AddMolecularOrientation</a>, <a class="el" href="classAddSpecialBonds.html#affda746cd8b9a033940a82d1bcc5131f">AddSpecialBonds</a>, <a class="el" href="classAddDihedralAngle.html#ab094acbaeefbf82b441eb6513927cada">AddDihedralAngle</a>, <a class="el" href="classAddBondAngle.html#a24f4bb313b518d6f9211ecc32c94daa5">AddBondAngle</a>, <a class="el" href="classAddBondLength.html#aa6e01ac14e34780bb22a951d8be2aac5">AddBondLength</a>, <a class="el" href="classFilSet.html#a5256cbd6faa0059b29033bcdafacf2fc">FilSet</a>, <a class="el" href="classAddWrappedPosition.html#a5ebca24d45a5c62d207aefe68e610220">AddWrappedPosition</a>, <a class="el" href="classStaDumpBox.html#a2cafacc416a7707a16a7f41d6ed74be3">StaDumpBox</a>, <a class="el" href="classAddRename.html#a051e4db797853a176bb5fcfceb9060ef">AddRename</a>, <a class="el" href="classStaMolecules.html#ab9c7b64a69f989aca5231c25fde7fa04">StaMolecules</a>, <a class="el" href="classStaDumpAtoms.html#a60229097acd4f512e50c5db4a0047301">StaDumpAtoms</a>, <a class="el" href="classStaCustom.html#a6a54ca7110d885e47f4db4e385b12b94">StaCustom</a>, and <a class="el" href="classStaCopy.html#a8075c95cad0203e88cc9048d9bf485d0">StaCopy</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -353,39 +352,39 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="afb7ad60b6b3e19b83299fb644b49f02b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb7ad60b6b3e19b83299fb644b49f02b">&#9670;&nbsp;</a></span>remove_from_blacklist()</h2>
+<a id="a12bdc73a3dde99638c81fc8dcf75992a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12bdc73a3dde99638c81fc8dcf75992a">&#9670;&nbsp;</a></span>remove_from_skippable_elementids()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Updater::remove_from_blacklist </td>
+          <td class="memname">void Updater::remove_from_skippable_elementids </td>
           <td>(</td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>dataid</em></td><td>)</td>
+          <td class="paramname"><em>elementid</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Remove <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a>. </p>
+<p>Remove <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a> from <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dataid</td><td>An <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> to be removed.</td></tr>
+    <tr><td class="paramname">elementid</td><td>An <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a> to be removed.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>Removing <code>dataid</code> from <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a> is necessary so that this object can update the <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object of the <code>dataid</code> again after its <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> being cleared. </p>
+<p>Removing <code>elementid</code> from <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a> is necessary so that this object can update the <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object of the <code>elementid</code> again after its <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a> being cleared. </p>
 
 <p class="definition">Definition at line <a class="el" href="updater_8cpp_source.html#l00060">60</a> of file <a class="el" href="updater_8cpp_source.html">updater.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a963bbb490a5f715e3330c508fe209deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a963bbb490a5f715e3330c508fe209deb">&#9670;&nbsp;</a></span>dataid_blacklist</h2>
+<a id="a29ffa0ae1735361c3b74fe8c3f87c506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ffa0ae1735361c3b74fe8c3f87c506">&#9670;&nbsp;</a></span>check_optional_keys</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,18 +393,43 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt;int&gt; Updater::dataid_blacklist</td>
+          <td class="memname">std::function&lt;bool(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt; Updater::check_optional_keys</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Blacklist of <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> updated by this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. If this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object is called from an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for the first time, this object stores <a class="el" href="classElement.html#a644085ed8d59a6835d218b7651ceb4c3">Element::dataid</a> in <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a> and updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. From the second time on, this object can skip the updating computation. </p>
+<p>Wrapper function for <a class="el" href="classElement.html#a4f2b926717d312e23824cc6347f3d3d7" title="Check if this object has optional key(s). ">Element::check_optional_keys</a> of an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where this instance is appended to. </p>
 
-<p class="definition">Definition at line <a class="el" href="updater_8h_source.html#l00037">37</a> of file <a class="el" href="updater_8h_source.html">updater.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="updater_8h_source.html#l00066">66</a> of file <a class="el" href="updater_8h_source.html">updater.h</a>.</p>
+
+</div>
+</div>
+<a id="a79cb4fa483d540087833acbf09351e13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79cb4fa483d540087833acbf09351e13">&#9670;&nbsp;</a></span>check_required_keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;void(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt; Updater::check_required_keys</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Wrapper function for <a class="el" href="classElement.html#a343252084136e932e8830ec359d49558" title="Check if this object has required key(s). ">Element::check_required_keys</a> of an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where this instance is appended to. </p>
+
+<p class="definition">Definition at line <a class="el" href="updater_8h_source.html#l00061">61</a> of file <a class="el" href="updater_8h_source.html">updater.h</a>.</p>
 
 </div>
 </div>
@@ -453,14 +477,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>A variable used for OpenMP. In this program, <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a> is modified in a multithreading context. To prevent <a class="el" href="classUpdater.html#a963bbb490a5f715e3330c508fe209deb">dataid_blacklist</a> from being modified from multiple threads at the same time, this member must be locked in <a class="el" href="classUpdater.html#a2184a4efa52ad2f4a631c134379ef7b8">check_blacklist</a> and <a class="el" href="classUpdater.html#afb7ad60b6b3e19b83299fb644b49f02b" title="Remove Element::dataid from dataid_blacklist. ">remove_from_blacklist</a>. </p>
+<p>A variable used for OpenMP. In this program, <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a> is modified in a multithreading context. To prevent <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a> from being modified from multiple threads at the same time, this member must be locked in <a class="el" href="classUpdater.html#a8e144f917459792836eefd723c2545e9">check_update_requirest_for</a> and <a class="el" href="classUpdater.html#a12bdc73a3dde99638c81fc8dcf75992a" title="Remove Element::elementid from skippable_elementids. ">remove_from_skippable_elementids</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="updater_8h_source.html#l00045">45</a> of file <a class="el" href="updater_8h_source.html">updater.h</a>.</p>
 
 </div>
 </div>
-<a id="a892adbb5176936765ace2750cfdc7f08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a892adbb5176936765ace2750cfdc7f08">&#9670;&nbsp;</a></span>optional_keys</h2>
+<a id="acf92e9c2775e872302db7bce6509588b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf92e9c2775e872302db7bce6509588b">&#9670;&nbsp;</a></span>skippable_elementids</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,43 +493,18 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::function&lt;bool(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt; Updater::optional_keys</td>
+          <td class="memname"><a class="el" href="std_8h.html#a09b917d71c14ba8ae2d896e2af192307">Set</a>&lt;int&gt; Updater::skippable_elementids</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Wrapper function for <a class="el" href="classElement.html#ab79fb503bb7d7e9facf08fec2e15d96f" title="Check if this object has optional key(s). ">Element::optional_keys</a> of an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where this instance is appended to. </p>
+<p>Blacklist of <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a> updated by this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object. If this <a class="el" href="classUpdater.html" title="Updater is an abstract class to update data held by an Element object. ">Updater</a> object is called from an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object for the first time, this object stores <a class="el" href="classElement.html#a80788883d99d76c7b33bbb724e766d34">Element::elementid</a> in <a class="el" href="classUpdater.html#acf92e9c2775e872302db7bce6509588b">skippable_elementids</a> and updates <a class="el" href="classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5">Element::data</a>. From the second time on, this object can skip the updating computation. </p>
 
-<p class="definition">Definition at line <a class="el" href="updater_8h_source.html#l00066">66</a> of file <a class="el" href="updater_8h_source.html">updater.h</a>.</p>
-
-</div>
-</div>
-<a id="af83ef04b8c3dc30168a655a5f43e6f93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af83ef04b8c3dc30168a655a5f43e6f93">&#9670;&nbsp;</a></span>required_keys</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::function&lt;void(const <a class="el" href="json_8h.html#af13a1979f9e8f62c101433fac6511cc6">Json</a> &amp;)&gt; Updater::required_keys</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Wrapper function for <a class="el" href="classElement.html#af851a0ffe85ec6c9b88dac84dbe5f4f2" title="Check if this object has required key(s). ">Element::required_keys</a> of an <a class="el" href="classElement.html" title="Element inherits Generator class and contains data element (or entity) as a Json object. ">Element</a> object where this instance is appended to. </p>
-
-<p class="definition">Definition at line <a class="el" href="updater_8h_source.html#l00061">61</a> of file <a class="el" href="updater_8h_source.html">updater.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="updater_8h_source.html#l00037">37</a> of file <a class="el" href="updater_8h_source.html">updater.h</a>.</p>
 
 </div>
 </div>

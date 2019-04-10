@@ -18,6 +18,21 @@ FilSet::FilSet(
 
 /* ------------------------------------------------------------------ */
 
+const bool FilSet::check_if_pass_data_elem(
+  const Json &elem_in_data)
+{
+  for (const auto &item : acceptable_value_sets)
+  {
+    auto &set = item.second;
+
+    if (set.find(elem_in_data[item.first]) == set.end()) return false;
+  }
+
+  return true;
+}
+
+/* ------------------------------------------------------------------ */
+
 void FilSet::compute_impl(
   Json &data)
 {
@@ -30,20 +45,7 @@ void FilSet::compute_impl(
 
   for (const auto &d : data)
   {
-    bool pass = true;
-
-    for (const auto &item : acceptable_value_sets)
-    {
-      auto &set = item.second;
-
-      if (set.find(d[item.first]) == set.end())  // value is in set?
-      {
-        pass = false;
-        break;
-      }
-    }
-
-    if (pass)
+    if (check_if_pass_data_elem(d))
     {
       remaining_data.push_back(d);
     }
@@ -51,5 +53,3 @@ void FilSet::compute_impl(
 
   data.swap(remaining_data);
 }
-
-/* ------------------------------------------------------------------ */

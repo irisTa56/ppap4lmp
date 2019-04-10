@@ -98,12 +98,26 @@ const Vec<std::pair<Str,CompareFunc>> FilComparison::make_compare_func_list()
 
 /* ------------------------------------------------------------------ */
 
+const bool FilComparison::check_if_pass_data_elem(
+  const Json &elem_in_data,
+  const Vec<std::pair<Str,CompareFunc>> &compare_func_list)
+{
+  for (const auto &item : compare_func_list)
+  {
+    if (!item.second(elem_in_data[item.first])) return false;
+  }
+
+  return true;
+}
+
+/* ------------------------------------------------------------------ */
+
 void FilComparison::compute_impl(
   Json &data)
 {
-  auto compare_funcs = make_compare_func_list();
+  const auto compare_func_list = make_compare_func_list();
 
-  for (const auto &item : compare_funcs)
+  for (const auto &item : compare_func_list)
   {
     check_required_keys(item.first);
   }
@@ -112,18 +126,7 @@ void FilComparison::compute_impl(
 
   for (const auto &d : data)
   {
-    bool pass = true;
-
-    for (const auto &item : compare_funcs)
-    {
-      if (!item.second(d[item.first]))  // value satisfies a comparison?
-      {
-        pass = false;
-        break;
-      }
-    }
-
-    if (pass)
+    if (check_if_pass_data_elem(d, compare_func_list))
     {
       passing_data.push_back(d);
     }
@@ -131,5 +134,3 @@ void FilComparison::compute_impl(
 
   data.swap(passing_data);
 }
-
-/* ------------------------------------------------------------------ */

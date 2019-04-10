@@ -59,7 +59,6 @@ var menudata={children:[
 {text:"e",url:"functions_e.html#index_e"},
 {text:"f",url:"functions_f.html#index_f"},
 {text:"g",url:"functions_g.html#index_g"},
-{text:"h",url:"functions_h.html#index_h"},
 {text:"i",url:"functions_i.html#index_i"},
 {text:"j",url:"functions_j.html#index_j"},
 {text:"k",url:"functions_k.html#index_k"},
@@ -82,7 +81,6 @@ var menudata={children:[
 {text:"e",url:"functions_func.html#index_e"},
 {text:"f",url:"functions_func.html#index_f"},
 {text:"g",url:"functions_func.html#index_g"},
-{text:"h",url:"functions_func.html#index_h"},
 {text:"i",url:"functions_func.html#index_i"},
 {text:"l",url:"functions_func.html#index_l"},
 {text:"m",url:"functions_func.html#index_m"},
@@ -90,7 +88,6 @@ var menudata={children:[
 {text:"p",url:"functions_func.html#index_p"},
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
-{text:"t",url:"functions_func.html#index_t"},
 {text:"u",url:"functions_func.html#index_u"},
 {text:"w",url:"functions_func.html#index_w"}]},
 {text:"Variables",url:"functions_vars.html",children:[

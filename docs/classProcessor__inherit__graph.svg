@@ -58,24 +58,24 @@ var sectionId = 'dynsection-0';
 <!-- Node0 -->
 <g id="node1" class="node">
 <title>Node0</title>
-<polygon fill="#bfbfbf" stroke="#000000" points="476,-639.5 476,-828.5 590,-828.5 590,-639.5 476,-639.5"/>
+<polygon fill="#bfbfbf" stroke="#000000" points="462,-639.5 462,-828.5 604,-828.5 604,-639.5 462,-639.5"/>
 <text text-anchor="middle" x="533" y="-816.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Processor</text>
-<polyline fill="none" stroke="#000000" points="476,-809.5 590,-809.5 "/>
-<text text-anchor="start" x="484" y="-797.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># n_generators</text>
-<text text-anchor="start" x="484" y="-786.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># generators</text>
-<text text-anchor="start" x="484" y="-775.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; i_generator</text>
-<polyline fill="none" stroke="#000000" points="476,-768.5 590,-768.5 "/>
-<text text-anchor="start" x="484" y="-756.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Processor()</text>
-<text text-anchor="start" x="484" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Processor()</text>
-<text text-anchor="start" x="484" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ prepare()</text>
-<text text-anchor="start" x="484" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ finish()</text>
-<text text-anchor="start" x="484" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ run()</text>
-<text text-anchor="start" x="484" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ startup()</text>
-<text text-anchor="start" x="484" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># run_impl()</text>
-<text text-anchor="start" x="484" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># register_generator()</text>
-<text text-anchor="start" x="484" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># register_generators()</text>
-<text text-anchor="start" x="484" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># say_hello()</text>
-<text text-anchor="start" x="484" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># say_goodbye()</text>
+<polyline fill="none" stroke="#000000" points="462,-809.5 604,-809.5 "/>
+<text text-anchor="start" x="470" y="-797.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># n_generators</text>
+<text text-anchor="start" x="470" y="-786.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># generators</text>
+<text text-anchor="start" x="470" y="-775.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">&#45; i_generator</text>
+<polyline fill="none" stroke="#000000" points="462,-768.5 604,-768.5 "/>
+<text text-anchor="start" x="470" y="-756.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ Processor()</text>
+<text text-anchor="start" x="470" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ ~Processor()</text>
+<text text-anchor="start" x="470" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ prepare()</text>
+<text text-anchor="start" x="470" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ finish()</text>
+<text text-anchor="start" x="470" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ run()</text>
+<text text-anchor="start" x="470" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">+ startup()</text>
+<text text-anchor="start" x="470" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># run_impl()</text>
+<text text-anchor="start" x="470" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># register_generator()</text>
+<text text-anchor="start" x="470" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># register_generators()</text>
+<text text-anchor="start" x="470" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># use_generator_at()</text>
+<text text-anchor="start" x="470" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"># finish_using_generator_at()</text>
 </g>
 <!-- Node1 -->
 <g id="node2" class="node">
@@ -100,8 +100,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node0&#45;&gt;Node1</title>
-<path fill="none" stroke="#191970" d="M466.0125,-721.4316C357.3866,-699.8574 149.4564,-653.2242 95,-603 76.0759,-585.5466 63.954,-560.3845 56.2273,-536.5999"/>
-<polygon fill="none" stroke="#191970" points="465.3997,-724.8781 475.8878,-723.3782 466.7536,-718.0103 465.3997,-724.8781"/>
+<path fill="none" stroke="#191970" d="M451.8561,-718.5898C340.2342,-695.9439 147.175,-651.1202 95,-603 76.0759,-585.5466 63.954,-560.3845 56.2273,-536.5999"/>
+<polygon fill="none" stroke="#191970" points="451.2399,-722.0359 461.7341,-720.5791 452.6219,-715.1737 451.2399,-722.0359"/>
 </g>
 <!-- Node2 -->
 <g id="node3" class="node">
@@ -132,8 +132,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node0&#45;&gt;Node2</title>
-<path fill="none" stroke="#191970" d="M466.2094,-715.6543C404.5422,-696.0006 313.3354,-659.741 251,-603 240.3798,-593.3329 230.7919,-581.8759 222.2687,-569.7992"/>
-<polygon fill="none" stroke="#191970" points="465.2552,-719.023 475.844,-718.6666 467.3441,-712.3419 465.2552,-719.023"/>
+<path fill="none" stroke="#191970" d="M452.2649,-711.0866C391.3891,-690.6015 308.7881,-655.6018 251,-603 240.3798,-593.3329 230.7919,-581.8759 222.2687,-569.7992"/>
+<polygon fill="none" stroke="#191970" points="451.2483,-714.4367 461.8415,-714.2502 453.4441,-707.79 451.2483,-714.4367"/>
 </g>
 <!-- Node3 -->
 <g id="node4" class="node">
@@ -164,8 +164,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
 <title>Node0&#45;&gt;Node3</title>
-<path fill="none" stroke="#191970" d="M469.9269,-644.7869C452.9128,-620.7216 434.3901,-594.5224 416.9758,-569.8909"/>
-<polygon fill="none" stroke="#191970" points="467.2469,-647.0592 475.8777,-653.2041 472.9627,-643.0181 467.2469,-647.0592"/>
+<path fill="none" stroke="#191970" d="M460.1844,-631.0068C445.9721,-610.9044 431.0886,-589.8526 416.9383,-569.8379"/>
+<polygon fill="none" stroke="#191970" points="457.3861,-633.1116 466.0169,-639.2565 463.1019,-629.0706 457.3861,-633.1116"/>
 </g>
 <!-- Node4 -->
 <g id="node5" class="node">
@@ -235,8 +235,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node0&#45;&gt;Node6</title>
-<path fill="none" stroke="#191970" d="M596.0937,-647.1867C606.0586,-632.626 616.0249,-617.5264 625,-603 630.5364,-594.0392 636.1005,-584.6193 641.5484,-575.1026"/>
-<polygon fill="none" stroke="#191970" points="593.0268,-645.4691 590.2342,-655.6892 598.7907,-649.4412 593.0268,-645.4691"/>
+<path fill="none" stroke="#191970" d="M607.1262,-630.8275C613.3117,-621.5094 619.3521,-612.1412 625,-603 630.5364,-594.0392 636.1005,-584.6193 641.5484,-575.1026"/>
+<polygon fill="none" stroke="#191970" points="604.0667,-629.106 601.4118,-639.3629 609.8835,-633.0003 604.0667,-629.106"/>
 </g>
 <!-- Node7 -->
 <g id="node8" class="node">
@@ -270,8 +270,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node7 -->
 <g id="edge7" class="edge">
 <title>Node0&#45;&gt;Node7</title>
-<path fill="none" stroke="#191970" d="M599.2132,-707.1474C649.5796,-684.5089 718.5806,-648.5348 769,-603 774.7648,-597.7937 780.3642,-592.1654 785.7673,-586.2659"/>
-<polygon fill="none" stroke="#191970" points="597.7563,-703.9647 590.0342,-711.2186 600.5945,-710.3635 597.7563,-703.9647"/>
+<path fill="none" stroke="#191970" d="M613.4262,-700.6255C662.0075,-677.8695 723.1776,-644.3832 769,-603 774.7648,-597.7937 780.3642,-592.1654 785.7673,-586.2659"/>
+<polygon fill="none" stroke="#191970" points="611.8065,-697.5183 604.1975,-704.8908 614.7433,-703.8725 611.8065,-697.5183"/>
 </g>
 <!-- Node8 -->
 <g id="node9" class="node">
@@ -298,8 +298,8 @@ var sectionId = 'dynsection-0';
 <!-- Node0&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node0&#45;&gt;Node8</title>
-<path fill="none" stroke="#191970" d="M600.1924,-729.943C691.0926,-721.0787 853.5186,-692.8539 955,-603 971.6465,-588.2608 983.9231,-568.0011 992.8723,-547.7165"/>
-<polygon fill="none" stroke="#191970" points="599.6444,-726.4786 590.0089,-730.884 600.2886,-733.4489 599.6444,-726.4786"/>
+<path fill="none" stroke="#191970" d="M614.5847,-728.4364C707.4408,-718.0514 858.6748,-688.2884 955,-603 971.6465,-588.2608 983.9231,-568.0011 992.8723,-547.7165"/>
+<polygon fill="none" stroke="#191970" points="613.9659,-724.9824 604.394,-729.5245 614.7092,-731.9429 613.9659,-724.9824"/>
 </g>
 <!-- Node5 -->
 <g id="node6" class="node">

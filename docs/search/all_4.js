@@ -1,10 +1,8 @@
 var searchData=
 [
   ['data',['data',['../classElement.html#a2a7cd44abcb0c90a9c5035584bc92ac5',1,'Element']]],
-  ['dataid',['dataid',['../classElement.html#a644085ed8d59a6835d218b7651ceb4c3',1,'Element']]],
-  ['dataid_5fblacklist',['dataid_blacklist',['../classUpdater.html#a963bbb490a5f715e3330c508fe209deb',1,'Updater']]],
   ['datakeys',['datakeys',['../classElement.html#aff592a8196ddeae630d36fcd971ce668',1,'Element']]],
-  ['decrement_5fremain',['decrement_remain',['../classElement.html#a9ff7a4e19165faa6da26635d9145b46b',1,'Element']]],
+  ['decrement_5fbookings',['decrement_bookings',['../classElement.html#af07a7b62170dab48a3e54f008bbb1ae1',1,'Element']]],
   ['dimension',['dimension',['../classProMeanSquareDisplacement.html#a215407a364fbe70431a267db10b5baef',1,'ProMeanSquareDisplacement']]],
   ['displacement2_5farray',['displacement2_array',['../classProMeanSquareDisplacement.html#a1b2b6634a9935e2cbce833a83af3a10a',1,'ProMeanSquareDisplacement']]],
   ['displacement2_5ftraj',['displacement2_traj',['../classProMeanSquareDisplacement.html#aaaeaa84fa589dff67009f374e861c86e',1,'ProMeanSquareDisplacement']]],

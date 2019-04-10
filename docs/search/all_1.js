@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['acceptable_5fvalue_5fsets',['acceptable_value_sets',['../classFilSet.html#acd011b9dbfb429a84d71b65c1031bd8f',1,'FilSet']]],
+  ['accessed_5fby_5finstance_5fof',['accessed_by_instance_of',['../classElement.html#ac4b046687350ca7aa6c4c101ef53550e',1,'Element::accessed_by_instance_of()'],['../classGenDict.html#abca7675f09fa195ab476b2aa6ebadac2',1,'GenDict::accessed_by_instance_of()'],['../classGenList.html#a35dc22c73a439da027c43afbe30720d1',1,'GenList::accessed_by_instance_of()'],['../classGenerator.html#a74e51949528ed513efe79d06e5e09ed1',1,'Generator::accessed_by_instance_of()'],['../classPyElement.html#a9584d71c03546134e8da27ff9dd144d9',1,'PyElement::accessed_by_instance_of()']]],
+  ['accessing_5fclassname',['accessing_classname',['../classElement.html#a321364bdc10ef8fd38a2d438617c57cb',1,'Element']]],
   ['add_5fbond_5fangle_2ecpp',['add_bond_angle.cpp',['../add__bond__angle_8cpp.html',1,'']]],
   ['add_5fbond_5fangle_2eh',['add_bond_angle.h',['../add__bond__angle_8h.html',1,'']]],
   ['add_5fbond_5flength_2ecpp',['add_bond_length.cpp',['../add__bond__length_8cpp.html',1,'']]],
@@ -41,11 +44,9 @@ var searchData=
   ['addmap',['AddMap',['../classAddMap.html',1,'AddMap'],['../classAddMap.html#a358ea2d261cc91b117998e0a0d439608',1,'AddMap::AddMap()']]],
   ['addmolecularorientation',['AddMolecularOrientation',['../classAddMolecularOrientation.html',1,'']]],
   ['addrename',['AddRename',['../classAddRename.html',1,'AddRename'],['../classAddRename.html#a3119359de9028c40ed5fbf24b5fc3a46',1,'AddRename::AddRename()']]],
-  ['addspecialbonds',['AddSpecialBonds',['../classAddSpecialBonds.html',1,'AddSpecialBonds'],['../classAddSpecialBonds.html#a0f8fc9908ed16650778fad41640097a8',1,'AddSpecialBonds::AddSpecialBonds(const ElPtr &amp;el_mols, const Vec&lt; Vec&lt; int &gt;&gt; &amp;scheme)'],['../classAddSpecialBonds.html#ab61e60bad28616e316ad0e80c5030a17',1,'AddSpecialBonds::AddSpecialBonds(const ElPtr &amp;el_mols, const Map&lt; int, Vec&lt; Vec&lt; int &gt;&gt;&gt; &amp;schemes)']]],
+  ['addspecialbonds',['AddSpecialBonds',['../classAddSpecialBonds.html',1,'AddSpecialBonds'],['../classAddSpecialBonds.html#a0f8fc9908ed16650778fad41640097a8',1,'AddSpecialBonds::AddSpecialBonds(const ElPtr &amp;el_mols, const Vec&lt; Vec&lt; int &gt;&gt; &amp;scheme)'],['../classAddSpecialBonds.html#a5c937179b01a78d1095225f6da5f4412',1,'AddSpecialBonds::AddSpecialBonds(const ElPtr &amp;el_mols, const Map&lt; int, Vec&lt; Vec&lt; int &gt;&gt;&gt; &amp;type_to_scheme)']]],
   ['addwrappedposition',['AddWrappedPosition',['../classAddWrappedPosition.html',1,'AddWrappedPosition'],['../classAddWrappedPosition.html#af82c7e41a330a37a9cdcf6ee51a646a0',1,'AddWrappedPosition::AddWrappedPosition()']]],
   ['append_5fupdater',['append_updater',['../classElement.html#adc43106f0ea5e11d03105c40df1fe0a8',1,'Element']]],
-  ['array1d',['array1d',['../classElement.html#a576395d61902a76979ffd336afa714b3',1,'Element']]],
-  ['array2d',['array2d',['../classElement.html#a4c2fcdb60e23dedce2b54b9deeadc469',1,'Element']]],
   ['arrayxd',['ArrayXd',['../eigen_8h.html#aaf26741e06a5b5d4eb28cb1cc53ba220',1,'eigen.h']]],
   ['arrayxi',['ArrayXi',['../eigen_8h.html#a03ac9ed9384a1ffbfcf6faf664de4c98',1,'eigen.h']]],
   ['arrayxxd',['ArrayXXd',['../eigen_8h.html#a90de8f6d3f6c2c0ff3a6465ec14e26f9',1,'eigen.h']]],

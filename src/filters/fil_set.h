@@ -32,6 +32,17 @@ class FilSet : public Filter {
     in an Element object where this object appended to.
   */
   Map<Str,Set<Json>> acceptable_value_sets;
+  /*!
+    @brief Check if an element in data array can pass this filter.
+
+    @param elem_in_data
+      An element in data array.
+
+    @return
+      If `elem_in_data` can pass this filter.
+  */
+  const bool check_if_pass_data_elem(
+    const Json &elem_in_data);
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
