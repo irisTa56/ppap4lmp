@@ -22,8 +22,9 @@
   All threads are used if `OMP_NUM_THREADS` environment variable is
   not set.
 
-  Please be careful when you modify any member of any object
-  in a multithreading context!!
+  @note
+    Please be careful when you modify any member of any object
+    in a multithreading context!!
 
   About usage in Python,
   please see pybind::py_inv_omp.

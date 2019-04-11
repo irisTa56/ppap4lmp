@@ -124,7 +124,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a51d48b182a22adfed234b622546f1ab5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvoker.html#a51d48b182a22adfed234b622546f1ab5">execute_impl</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt;&gt; &amp;procs)=0</td></tr>
-<tr class="memdesc:a51d48b182a22adfed234b622546f1ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation how to execute a main part of analysis.s.  <a href="#a51d48b182a22adfed234b622546f1ab5">More...</a><br /></td></tr>
+<tr class="memdesc:a51d48b182a22adfed234b622546f1ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation how to execute a main part of analysis.  <a href="#a51d48b182a22adfed234b622546f1ab5">More...</a><br /></td></tr>
 <tr class="separator:a51d48b182a22adfed234b622546f1ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -156,13 +156,14 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None.</dd></dl>
-<p>First, this method calls <a class="el" href="classProcessor.html#a74fe912a6d9216d9b531ff58491889a9" title="Startup this Processor object. ">Processor::startup</a>. Next, this method calls <a class="el" href="classProcessor.html#ae402da6f2bad22f074987a9d15fffc73" title="Prepare analysis. ">Processor::prepare</a>, and then calls <a class="el" href="classInvoker.html#a51d48b182a22adfed234b622546f1ab5" title="Implementation how to execute a main part of analysis.s. ">execute_impl</a> where computationally expensive calculations are conducted. Finally, this method calls <a class="el" href="classProcessor.html#a3731212e329a563ee79f1bd2e7c0a512" title="Finish analysis. ">Processor::finish</a>. </p>
+<p>First, this method calls <a class="el" href="classProcessor.html#a74fe912a6d9216d9b531ff58491889a9" title="Startup this Processor object. ">Processor::startup</a>. Next, this method calls <a class="el" href="classProcessor.html#ae402da6f2bad22f074987a9d15fffc73" title="Prepare analysis. ">Processor::prepare</a>, and then calls <a class="el" href="classInvoker.html#a51d48b182a22adfed234b622546f1ab5" title="Implementation how to execute a main part of analysis. ">execute_impl</a> where computationally expensive calculations are conducted. Finally, this method calls <a class="el" href="classProcessor.html#a3731212e329a563ee79f1bd2e7c0a512" title="Finish analysis. ">Processor::finish</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="invoker_8cpp_source.html#l00016">16</a> of file <a class="el" href="invoker_8cpp_source.html">invoker.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a1dc7ea9d0bd6bac848a200c9dddd23a2_cgraph.svg" width="328" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classInvoker_a1dc7ea9d0bd6bac848a200c9dddd23a2_cgraph.svg" width="328" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -191,7 +192,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implementation how to execute a main part of analysis.s. </p>
+<p>Implementation how to execute a main part of analysis. </p>
 <dl class="section return"><dt>Returns</dt><dd>None. </dd></dl>
 
 <p>Implemented in <a class="el" href="classInvOMP.html#a844025ff8279acb71aafc3bcd066eaab">InvOMP</a>.</p>

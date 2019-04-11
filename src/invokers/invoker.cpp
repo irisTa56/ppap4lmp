@@ -36,8 +36,7 @@ void Invoker::execute(const Vec<ShPtr<Processor>> &procs)
   }
   catch (std::runtime_error &e)
   {
+    // NOTE: Error message can also be seen as Python's exception.
     ut::log("ERROR - " + Str(e.what()));
   }
 }
-
-/* ------------------------------------------------------------------ */

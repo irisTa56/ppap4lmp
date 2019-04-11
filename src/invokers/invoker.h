@@ -18,7 +18,7 @@
 class Invoker {
  protected:
   /*!
-    @brief Implementation how to execute a main part of analysis.s
+    @brief Implementation how to execute a main part of analysis.
     @return None.
   */
   virtual void execute_impl(

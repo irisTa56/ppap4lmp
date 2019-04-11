@@ -129,16 +129,16 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a844025ff8279acb71aafc3bcd066eaab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInvOMP.html#a844025ff8279acb71aafc3bcd066eaab">execute_impl</a> (const <a class="el" href="std_8h.html#a1b01c504448c96cd2191a5184dd31acf">Vec</a>&lt; <a class="el" href="std_8h.html#acdc005cb83114401121fe9980eaf1395">ShPtr</a>&lt; <a class="el" href="classProcessor.html">Processor</a> &gt;&gt; &amp;procs) override</td></tr>
-<tr class="memdesc:a844025ff8279acb71aafc3bcd066eaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classInvoker.html#a51d48b182a22adfed234b622546f1ab5" title="Implementation how to execute a main part of analysis.s. ">Invoker::execute_impl</a>.  <a href="#a844025ff8279acb71aafc3bcd066eaab">More...</a><br /></td></tr>
+<tr class="memdesc:a844025ff8279acb71aafc3bcd066eaab"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method overrides <a class="el" href="classInvoker.html#a51d48b182a22adfed234b622546f1ab5" title="Implementation how to execute a main part of analysis. ">Invoker::execute_impl</a>.  <a href="#a844025ff8279acb71aafc3bcd066eaab">More...</a><br /></td></tr>
 <tr class="separator:a844025ff8279acb71aafc3bcd066eaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classInvOMP.html" title="InvOMP is an Invoker&#39;s subclass using OpenMP to execute a computationally expensive part of analysis...">InvOMP</a> is an <a class="el" href="classInvoker.html" title="Invoker executes analysis programmed in one or more Processor objects. ">Invoker</a>'s subclass using OpenMP to execute a computationally expensive part of analysis. </p>
 <p>This class executes a computationally expensive calculation, such as an updating process defined by <a class="el" href="classGenerator.html#ac187dba6169f8ec15c15705f19e55ecf">Generator::update_chain</a> or analytical computations conducted in <a class="el" href="classProcessor.html#a46c873071eb6309273eb330b6b837a40" title="Implementation of analysis using an element of generators. ">Processor::run_impl</a>, under multithread environment using OpenMP. All threads are used if <code>OMP_NUM_THREADS</code> environment variable is not set.</p>
-<p>Please be careful when you modify any member of any object in a multithreading context!!</p>
+<dl class="section note"><dt>Note</dt><dd>Please be careful when you modify any member of any object in a multithreading context!!</dd></dl>
 <p>About usage in Python, please see <a class="el" href="namespacepybind.html#ac6f4ad874cc52ba2877cc6ca3a917596" title="Bind InvOMP class to Python. ">pybind::py_inv_omp</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="inv__omp_8h_source.html#l00031">31</a> of file <a class="el" href="inv__omp_8h_source.html">inv_omp.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inv__omp_8h_source.html#l00032">32</a> of file <a class="el" href="inv__omp_8h_source.html">inv_omp.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a844025ff8279acb71aafc3bcd066eaab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a844025ff8279acb71aafc3bcd066eaab">&#9670;&nbsp;</a></span>execute_impl()</h2>
@@ -164,7 +164,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This method overrides <a class="el" href="classInvoker.html#a51d48b182a22adfed234b622546f1ab5" title="Implementation how to execute a main part of analysis.s. ">Invoker::execute_impl</a>. </p>
+<p>This method overrides <a class="el" href="classInvoker.html#a51d48b182a22adfed234b622546f1ab5" title="Implementation how to execute a main part of analysis. ">Invoker::execute_impl</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">procs</td><td>List of <a class="el" href="classProcessor.html" title="Processor analyzes data contained in one or more Generator objects. ">Processor</a> objects to be executed.</td></tr>
