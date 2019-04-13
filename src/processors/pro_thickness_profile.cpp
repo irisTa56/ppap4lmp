@@ -47,7 +47,7 @@ void ProThicknessProfile::run_impl(
 
   el_atoms->check_required_keys({"x", "y", "z", "radius"});
 
-  auto atoms = el_atoms->get_reduced_data({"x", "y", "z", "radius"});
+  auto atoms = el_atoms->make_reduced_data({"x", "y", "z", "radius"});
 
   auto el_box = generators[index]->get_element("Box");
 

@@ -97,18 +97,17 @@ Vec<std::pair<Str,int>> Element::get_distances_between_keys(
   const Json &key_)
 {
   const Vec<Str> keys = key_.is_array() ? key_ : Json::array({key_});
-  const auto &front = data.is_array() ? data.front() : data;
 
   Vec<std::pair<Str,int>> distances;
   int distance_from_begin_ex = 0;
 
-  for (auto it = front.begin(); it != front.end(); ++it)
+  for (auto it = datakeys.begin(); it != datakeys.end(); ++it)
   {
-    if (std::find(keys.begin(), keys.end(), it.key()) != keys.end())
+    if (std::find(keys.begin(), keys.end(), *it) != keys.end())
     {
-      int distance_from_begin = std::distance(front.begin(), it);
+      int distance_from_begin = std::distance(datakeys.begin(), it);
       distances.push_back(std::make_pair(
-        it.key(), distance_from_begin - distance_from_begin_ex));
+        *it, distance_from_begin - distance_from_begin_ex));
       distance_from_begin_ex = distance_from_begin;
     }
   }
@@ -176,49 +175,38 @@ const Json &Element::get_data()
 
 /* ------------------------------------------------------------------ */
 
-Json Element::get_reduced_data(const Json &key_)
+Set<Str> Element::get_keys()
 {
-  const auto key_and_distance_pairs = get_distances_between_keys(key_);
-
-  Json reduced_data;
-
-  if (data.is_array())
-  {
-    reduced_data = Json::array();
-    reduced_data.get_ref<Json::array_t&>().reserve(data.size());
-
-    for (const auto &d : data)
-    {
-      reduced_data.push_back({});
-      auto &back = reduced_data.back();
-      auto it_item = d.begin();
-
-      for (const auto &pair : key_and_distance_pairs)
-      {
-        std::advance(it_item, pair.second);
-        back[pair.first] = *it_item;
-      }
-    }
-  }
-  else
-  {
-    auto it_item = data.begin();
-
-    for (const auto &pair : key_and_distance_pairs)
-    {
-      std::advance(it_item, pair.second);
-      reduced_data[pair.first] = *it_item;
-    }
-  }
-
-  return reduced_data;
+  return Set<Str>(datakeys.begin(), datakeys.end());
 }
 
 /* ------------------------------------------------------------------ */
 
-Set<Str> Element::get_keys()
+Json Element::make_reduced_data(const Json &key_)
 {
-  return Set<Str>(datakeys.begin(), datakeys.end());
+  const auto pairs_key_and_distance = get_distances_between_keys(key_);
+
+  auto reduced_data = Json::array();
+
+  if (data.is_array())
+  {
+    reduced_data.get_ref<Json::array_t&>().reserve(data.size());
+  }
+
+  for (const auto &d : data.is_array() ? data : Json::array({data}))
+  {
+    reduced_data.push_back({});
+    auto &back = reduced_data.back();
+    auto it_item = d.begin();
+
+    for (const auto &pair : pairs_key_and_distance)
+    {
+      std::advance(it_item, pair.second);
+      back[pair.first] = *it_item;
+    }
+  }
+
+  return data.is_array() ? reduced_data : reduced_data.front();
 }
 
 /* ------------------------------------------------------------------ */
@@ -230,20 +218,14 @@ void Element::make_1darray_from_data(
 {
   array.resize(data.is_array() ? data.size() : 1);
 
-  if (data.is_array())
-  {
-    const auto key_position = get_distances_between_keys(key).front().second;
+  const auto key_position = std::distance(
+    datakeys.begin(), std::find(datakeys.begin(), datakeys.end(), key));
 
-    int index = 0;
+  int index = 0;
 
-    for (const auto &d : data)
-    {
-      array(index++) = *std::next(d.begin(), key_position);
-    }
-  }
-  else
+  for (const auto &d : data.is_array() ? data : Json::array({data}))
   {
-    array(0) = data[key];
+    array(index++) = *std::next(d.begin(), key_position);
   }
 }
 
@@ -256,41 +238,29 @@ void Element::make_2darray_from_data(
 {
   array.resize(data.is_array() ? data.size() : 1, keys.size());
 
-  if (data.is_array())
+  Vec<std::pair<int,int>> pairs_distance_and_icol;
+  for (const auto &pair : get_distances_between_keys(keys))
   {
-    Vec<std::pair<int,int>> distance_and_icol_pairs;
-    for (const auto &pair : get_distances_between_keys(keys))
-    {
-      distance_and_icol_pairs.push_back(std::make_pair(
-        pair.second,
-        std::distance(
-          keys.begin(), std::find(keys.begin(), keys.end(), pair.first))
-      ));
-    }
-
-    int irow = 0;
-
-    for (const auto &d : data)
-    {
-      auto it_item = d.begin();
-
-      for (const auto &pair : distance_and_icol_pairs)
-      {
-        std::advance(it_item, pair.first);
-        array(irow, pair.second) = *it_item;
-      }
-
-      irow++;
-    }
+    pairs_distance_and_icol.push_back(std::make_pair(
+      pair.second,
+      std::distance(
+        keys.begin(), std::find(keys.begin(), keys.end(), pair.first))
+    ));
   }
-  else
-  {
-    int icol = 0;
 
-    for (const auto &key : keys)
+  int irow = 0;
+
+  for (const auto &d : data.is_array() ? data : Json::array({data}))
+  {
+    auto it_item = d.begin();
+
+    for (const auto &pair : pairs_distance_and_icol)
     {
-      array(0, icol++) = data[key];
+      std::advance(it_item, pair.first);
+      array(irow, pair.second) = *it_item;
     }
+
+    irow++;
   }
 }
 
@@ -453,5 +423,3 @@ void Element::init_for_python()
     ut::log("ERROR - " + Str(e.what()));
   }
 }
-
-/* ------------------------------------------------------------------ */

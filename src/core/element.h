@@ -123,9 +123,13 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   void update_data(
     const ShPtr<Updater> &upd);
   /*!
-    @brief For speeding up to access values in ::Json.
+    @brief To speed up accessing values in ::Json.
 
-    @return List of pairs: key and distance from the previous item
+    @return List of pairs: key and distance in #datakeys.
+
+    The pairs are sorted by their keys in the same order with #datakeys.
+    The *i* th distance of the list is measured from the *i-1* th key
+    to *i* th key in #datakeys
     (distance from the beginning for the first item).
   */
   Vec<std::pair<Str,int>> get_distances_between_keys(
@@ -204,6 +208,15 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   */
   const Json &get_data();
   /*!
+    @brief Get keys of the data of this object.
+
+    @return Set of keys stored in #datakeys.
+
+    One can refer the keys (property names) in this object
+    by this method.
+  */
+  Set<Str> get_keys();
+  /*!
     @brief Get reduced data of this object.
 
     @param key_
@@ -217,17 +230,8 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
       If you'd like to modify (sorting etc.) contents of #data,
       please use this method insted of #get_data.
   */
-  Json get_reduced_data(
+  Json make_reduced_data(
     const Json &key_);
-  /*!
-    @brief Get keys of the data of this object.
-
-    @return Set of keys stored in #datakeys.
-
-    One can refer the keys (property names) in this object
-    by this method.
-  */
-  Set<Str> get_keys();
   /*!
     @brief Extract values of a property in #data as a one-dimensional
     Eigen-Array.
