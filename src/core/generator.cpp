@@ -88,5 +88,3 @@ const Vec<UpdatePair> &Generator::get_update_chain()
 {
   return update_chain;
 }
-
-/* ------------------------------------------------------------------ */
