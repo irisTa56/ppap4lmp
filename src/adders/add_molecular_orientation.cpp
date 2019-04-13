@@ -62,5 +62,3 @@ void AddMolecularOrientation::compute_impl(
     d["S_z"] = orientation(2);
   }
 }
-
-/* ------------------------------------------------------------------ */

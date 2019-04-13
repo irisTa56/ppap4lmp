@@ -33,39 +33,6 @@
   please see pybind::py_add_com_position.
 */
 class AddCoMPosition : public Adder {
-  /*!
-    Compute the center of mass with weighting factors. Note that
-    the weighting factors are different from something like
-    mass of atoms. Weighting factors are artificial values defined
-    with some reason.
-
-    @param data
-      Mutable reference to Element::data where computed properties are
-      added to.
-
-    @param el_atoms
-      Shared pointer of up-casted #ext_generator.
-
-    @return None.
-  */
-  void compute_with_weights(
-    Json &data,
-    const ElPtr &el_atoms);
-  /*!
-    Compute the center of mass.
-
-    @param data
-      Mutable reference to Element::data where computed properties are
-      added to.
-
-    @param el_atoms
-      Shared pointer of up-casted #ext_generator.
-
-    @return None.
-  */
-  void compute_without_weights(
-    Json &data,
-    const ElPtr &el_atoms);
  protected:
   /*!
     @brief This method overrides Updater::compute_impl.

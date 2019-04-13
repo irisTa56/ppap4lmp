@@ -11,8 +11,8 @@
 
 #include <filters/filter.h>
 
-//! Alias for a function taking a ::Json object and returning a boolean.
-using CompareFunc = std::function<bool(const Json &)>;
+//! An alias for ::Vec containing comparing functions.
+using CompareFuncs = Vec<std::pair<Str,JsonToBoolFunc>>;
 
 /*!
   @brief FilComparison applies a filter
@@ -43,7 +43,7 @@ class FilComparison : public Filter {
   */
   Vec<std::tuple<Str,Str,Json>> compare_expr_list;
   /*!
-    @brief Make a ::CompareFunc object from a comparison operator
+    @brief Make a ::JsonToBoolFunc object from a comparison operator
     and a right side value.
 
     @param oper
@@ -56,14 +56,14 @@ class FilComparison : public Filter {
 
     @return A function evaluating an inequality (or equation).
   */
-  const CompareFunc make_compare_func(
+  const JsonToBoolFunc make_compare_func(
     const Str &oper,
     const Json &rval);
   /*!
     @brief Convert tuples in #compare_expr_list to pairs of a string key
-    and ::CompareFunc.
+    and ::JsonToBoolFunc.
 
-    @return A constant ::Vec<std::pair<#Str,#CompareFunc>> object,
+    @return A constant ::Vec<std::pair<#Str,#JsonToBoolFunc>> object,
     which describes criteria of this filter.
 
     Returned value of this method is used for evaluating inequalities
@@ -72,7 +72,7 @@ class FilComparison : public Filter {
     to pairs should not be conducted in constructor because of
     possibility of throwing (and raising) a runtime error.
   */
-  const Vec<std::pair<Str,CompareFunc>> make_compare_func_list();
+  const CompareFuncs make_compare_func_list();
   /*!
     @brief Check if an element in data array can pass this filter.
 
@@ -87,7 +87,7 @@ class FilComparison : public Filter {
   */
   const bool check_if_pass_data_elem(
     const Json &elem_in_data,
-    const Vec<std::pair<Str,CompareFunc>> &compare_func_list);
+    const CompareFuncs &compare_func_list);
  protected:
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(

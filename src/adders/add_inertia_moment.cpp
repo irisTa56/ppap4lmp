@@ -21,10 +21,17 @@ AddInertiaMoment::AddInertiaMoment(
 
 /* ------------------------------------------------------------------ */
 
-void AddInertiaMoment::compute_with_weights(
+void AddInertiaMoment::compute_impl(
   Json &data,
-  const ElPtr &el_atoms)
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
+  check_required_keys({"atom-ids", "xu", "yu", "zu"});
+
+  auto el_atoms = ext_generator->get_element();
+
+  el_atoms->check_required_keys({"id", "mass", "xu", "yu", "zu"});
+
   auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
 
   ArrayXd ms_atom;
@@ -41,14 +48,16 @@ void AddInertiaMoment::compute_with_weights(
     Matrix3d inertia_tensor = Matrix3d::Zero();
 
     auto &atom_ids = d["atom-ids"];
-    auto &atom_weights = d["atom-weights"];
+
+    auto atom_weights = d.value(
+      "atom-weights", Vec<double>(atom_ids.size(), 1.0));
 
     auto n_atoms = atom_ids.size();
 
     for (int i = 0; i != n_atoms; ++i)
     {
-      auto id = atom_ids[i].get<int>();
-      auto weight = atom_weights[i].get<double>();
+      auto id = atom_ids[i];
+      auto weight = atom_weights[i];
 
       auto index = id2index_atom[id];
       auto mass = ms_atom(index) * weight;
@@ -68,70 +77,3 @@ void AddInertiaMoment::compute_with_weights(
     d["I_yz"] = -inertia_tensor(1, 2);
   }
 }
-
-/* ------------------------------------------------------------------ */
-
-void AddInertiaMoment::compute_without_weights(
-  Json &data,
-  const ElPtr &el_atoms)
-{
-  auto id2index_atom = ut::map_to_index(el_atoms->get_data(), "id");
-
-  ArrayXd ms_atom;
-  el_atoms->make_1darray_from_data(ms_atom, "mass");
-
-  ArrayXXd rs_atom;
-  el_atoms->make_2darray_from_data(rs_atom, {"xu", "yu", "zu"});
-
-  for (auto &d : data)
-  {
-    RowArrayXd r_mol(3);
-    r_mol << d["xu"], d["yu"], d["zu"];
-
-    Matrix3d inertia_tensor = Matrix3d::Zero();
-
-    for (const int &id : d["atom-ids"])
-    {
-      auto index = id2index_atom[id];
-      auto mass = ms_atom(index);
-
-      RowVector3d dr = rs_atom.row(index) - r_mol;
-
-      inertia_tensor += mass * dr.transpose() * dr;
-    }
-
-    auto tr = inertia_tensor.trace();
-
-    d["I_xx"] = tr - inertia_tensor(0, 0);
-    d["I_yy"] = tr - inertia_tensor(1, 1);
-    d["I_zz"] = tr - inertia_tensor(2, 2);
-    d["I_xy"] = -inertia_tensor(0, 1);
-    d["I_xz"] = -inertia_tensor(0, 2);
-    d["I_yz"] = -inertia_tensor(1, 2);
-  }
-}
-
-/* ------------------------------------------------------------------ */
-
-void AddInertiaMoment::compute_impl(
-  Json &data,
-  JsonToVoidFunc check_required_keys,
-  JsonToBoolFunc check_optional_keys)
-{
-  check_required_keys({"atom-ids", "xu", "yu", "zu"});
-
-  auto el_atoms = ext_generator->get_element();
-
-  el_atoms->check_required_keys({"id", "mass", "xu", "yu", "zu"});
-
-  if (check_optional_keys("atom-weights"))
-  {
-    compute_with_weights(data, el_atoms);
-  }
-  else
-  {
-    compute_without_weights(data, el_atoms);
-  }
-}
-
-/* ------------------------------------------------------------------ */

@@ -20,25 +20,26 @@ void InvOMP::execute_impl(const Vec<ShPtr<Processor>> &procs)
     "Max number of threads = " + std::to_string(omp_get_max_threads()));
   #endif
 
-  bool finish_loop = false;
   Str error_msg;
 
-  #pragma omp parallel private(finish_loop)
+  #pragma omp parallel
   {
-    while (!finish_loop && error_msg.empty())
+    while (true)
     {
-      finish_loop = true;
-
       try
       {
+        bool finish_loop = true;
+
         for (const auto &p : procs)
         {
           /* NOTE:
             Exit the while loop only if all the processors have finished
             thier computation.
           */
-          finish_loop = finish_loop && p->run();
+          finish_loop &= p->run();
         }
+
+        if (finish_loop) break;
       }
       // NOTE: Exception must be caught in the same scope.
       catch (std::runtime_error &e)

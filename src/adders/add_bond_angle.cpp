@@ -54,5 +54,3 @@ void AddBondAngle::compute_impl(
       vec1.dot(vec2) / (vec1.norm() * vec2.norm()));
   }
 }
-
-/* ------------------------------------------------------------------ */

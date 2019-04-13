@@ -63,5 +63,3 @@ ShPtr<AddMap> AddMap::overwrite(
 
   return std::dynamic_pointer_cast<AddMap>(shared_from_this());
 }
-
-/* ------------------------------------------------------------------ */

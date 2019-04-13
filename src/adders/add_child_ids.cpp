@@ -52,5 +52,3 @@ void AddChildIDs::compute_impl(
     data[mol_index][key_for_child_ids].push_back(child["id"]);
   }
 }
-
-/* ------------------------------------------------------------------ */

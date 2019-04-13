@@ -44,5 +44,3 @@ void AddBondLength::compute_impl(
       - rs_atom.row(id2index_atom[d["atom1-id"]])).norm();
   }
 }
-
-/* ------------------------------------------------------------------ */

@@ -69,5 +69,3 @@ void AddChildPositions::compute_impl(
     d[key_z].swap(tmp_z);
   }
 }
-
-/* ------------------------------------------------------------------ */

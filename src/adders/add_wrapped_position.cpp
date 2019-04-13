@@ -57,5 +57,3 @@ void AddWrappedPosition::compute_impl(
     d["z"] = tmp_wrapped(2);
   }
 }
-
-/* ------------------------------------------------------------------ */

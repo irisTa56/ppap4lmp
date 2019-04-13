@@ -29,7 +29,7 @@ FilComparison::FilComparison(
 
 /* ------------------------------------------------------------------ */
 
-const CompareFunc FilComparison::make_compare_func(
+const JsonToBoolFunc FilComparison::make_compare_func(
   const Str &oper,
   const Json &rval)
 {
@@ -79,9 +79,9 @@ const CompareFunc FilComparison::make_compare_func(
 
 /* ------------------------------------------------------------------ */
 
-const Vec<std::pair<Str,CompareFunc>> FilComparison::make_compare_func_list()
+const CompareFuncs FilComparison::make_compare_func_list()
 {
-  Vec<std::pair<Str,CompareFunc>> compare_func_list;
+  CompareFuncs compare_func_list;
 
   for (const auto &item : compare_expr_list)
   {
@@ -100,7 +100,7 @@ const Vec<std::pair<Str,CompareFunc>> FilComparison::make_compare_func_list()
 
 const bool FilComparison::check_if_pass_data_elem(
   const Json &elem_in_data,
-  const Vec<std::pair<Str,CompareFunc>> &compare_func_list)
+  const CompareFuncs &compare_func_list)
 {
   for (const auto &item : compare_func_list)
   {

@@ -61,5 +61,3 @@ ShPtr<AddRename> AddRename::overwrite(
 
   return std::dynamic_pointer_cast<AddRename>(shared_from_this());
 }
-
-/* ------------------------------------------------------------------ */
