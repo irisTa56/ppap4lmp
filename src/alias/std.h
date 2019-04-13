@@ -22,14 +22,14 @@ using Str = std::string;
 
 #include <vector>
 
-//! *Vec* is an alias for vector (same as list in Python).
+//! *Vec* is an alias for vector (same as `list` in Python).
 template <typename T>
 using Vec = std::vector<T>;
 
 #include <unordered_map>
 
 /*!
-  @brief *Map* is an alias for unordered map (same as dict in Python).
+  @brief *Map* is an alias for unordered map (same as `dict` in Python).
 
   Searching an item from unordered map takes shorter time
   than doing the same thing with ordered map (`std::map`).
@@ -40,7 +40,7 @@ using Map = std::unordered_map<T,U>;
 #include <unordered_set>
 
 /*!
-  @brief *Set* is an alias for unordered set (same as set in Python).
+  @brief *Set* is an alias for unordered set (same as `set` in Python).
 
   Searching an element from unordered set takes shorter time
   than doing the same thing with ordered set (`std::set`).
