@@ -19,7 +19,9 @@ AddWrappedPosition::AddWrappedPosition(
 /* ------------------------------------------------------------------ */
 
 void AddWrappedPosition::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   check_required_keys({"xu", "yu", "zu"});
 

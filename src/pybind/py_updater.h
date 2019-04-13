@@ -21,22 +21,30 @@
 template <class UPD = Updater>
 class PyUpdater : public UPD {
  protected:
-  void compute_impl(
+  void compute_body(
+    const ElPtr &elem,
     Json &data) override
   {
     PYBIND11_OVERLOAD_PURE(
-      void, UPD, compute_impl, data);
+      void, UPD, compute_body, elem, data);
+  }
+  void compute_common(
+    const ElPtr &elem,
+    Json &data) override
+  {
+    PYBIND11_OVERLOAD(
+      void, UPD, compute_common, elem, data);
+  }
+  void compute_impl(
+    Json &data,
+    JsonToVoidFunc check_required_keys,
+    JsonToBoolFunc check_optional_keys) override
+  {
+    PYBIND11_OVERLOAD_PURE(
+      void, UPD, compute_impl, data, check_required_keys, check_optional_keys);
   }
  public:
   using UPD::UPD;
-  void compute(
-    const ElPtr &elem,
-    const int elementid,
-    Json &data) override
-  {
-    PYBIND11_OVERLOAD_PURE(
-      void, UPD, compute, elem, elementid, data);
-  }
 };
 
 //! Namespace for functions to bind C++ classes to Python.

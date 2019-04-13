@@ -14,7 +14,7 @@
 /*!
   @brief Adder adds new properties to a non-empty Element object.
 
-  This class inherits Updater class and overrides Updater::compute.
+  This class inherits Updater class and overrides Updater::compute_boby.
   This class is an abstract class and has a pure virtual function,
   Adder::compute_impl.
 
@@ -22,9 +22,7 @@
   Unlike Starter, Adder accepts only non-empty Element::data.
 */
 class Adder : public Updater {
- public:
-  using Updater::Updater;
-  virtual ~Adder() = default;
+ protected:
   /*!
     @brief Compute properties and add them to Element::data given
     as a mutable reference.
@@ -33,27 +31,22 @@ class Adder : public Updater {
       Shared pointer to an Element object
       where computed properties are added to.
 
-    @param elementid
-      A constant integer copied from Element::elementid.
-
     @param data
       Mutable reference to Element::data
       where computed properties are added to.
 
     @return None.
 
-    This method checks if `elementid` is in #skippable_elementids.
-    If it is not in the list, this method passes `data` to
-    Adder::compute_impl. Note that actual computation and addition
-    of properties is conducted by Adder::compute_impl orveridden
-    in subclasses of this class. In addition, this method ensures that
-    a new property whose name is *id* is not added; `id` property
-    must be set at initialization (done by Starter) only.
+    This method ensures that a new property whose name is *id*
+    is not added; `id` property must be set at initialization
+    (done by Starter) only.
   */
-  virtual void compute(
+  virtual void compute_body(
     const ElPtr &elem,
-    const int elementid,
     Json &data) override;
+ public:
+  using Updater::Updater;
+  virtual ~Adder() = default;
 };
 
 #endif

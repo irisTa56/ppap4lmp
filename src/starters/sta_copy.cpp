@@ -22,7 +22,9 @@ StaCopy::StaCopy(
 /* ------------------------------------------------------------------ */
 
 void StaCopy::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   auto elem = ext_generator->get_element();
   data = elem->get_data();

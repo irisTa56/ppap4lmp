@@ -28,7 +28,9 @@ class StaCopy : public Starter {
   static const bool do_sorting_by_id = false;
   //! This method overrides Updater::compute_impl.
   virtual void compute_impl(
-    Json &data) override;
+    Json &data,
+    JsonToVoidFunc check_required_keys,
+    JsonToBoolFunc check_optional_keys) override;
  public:
   /*!
     @brief Constructor of StaCopy class.

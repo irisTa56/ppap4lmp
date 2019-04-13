@@ -33,11 +33,10 @@ class Starter : public Updater {
   void sort_by_id(
     Json &data);
  protected:
-  //! Whether to call #sort_by_id after setting data.
+  /*
+    Whether to call #sort_by_id after setting data.
+  */
   static const bool do_sorting_by_id = true;
- public:
-  using Updater::Updater;
-  virtual ~Starter() = default;
   /*!
     @brief Compute or parse properties and set them to Element::data
     given as a mutable reference.
@@ -46,27 +45,21 @@ class Starter : public Updater {
       Shared pointer to an Element object
       where computed properties are set to.
 
-    @param elementid
-      A constant integer copied from Element::elementid.
-
     @param data
       Mutable reference to Element::data
       where computed properties are set to.
 
     @return None.
 
-    This method checks if `elementid` is in #skippable_elementids.
-    If it is not in the list, this method passes `data`
-    to Starter::compute_impl. Note that actual computation and setting
-    of properties is conducted by Starter::compute_impl orveridden
-    in subclasses of this class. In addition, this method sorts
-    elements of the `data` by `id` property, if the `data`
-    is an array and `id` property is set.
+    This method sorts elements of the `data` by `id` property,
+    if the `data` is array and `id` property exists.
   */
-  virtual void compute(
+  virtual void compute_body(
     const ElPtr &elem,
-    const int elementid,
     Json &data) override;
+ public:
+  using Updater::Updater;
+  virtual ~Starter() = default;
 };
 
 #endif

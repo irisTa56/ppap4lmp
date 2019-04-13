@@ -37,7 +37,9 @@ class StaDumpAtoms : public StaDump {
     </dl>
   */
   virtual void compute_impl(
-    Json &data) override;
+    Json &data,
+    JsonToVoidFunc check_required_keys,
+    JsonToBoolFunc check_optional_keys) override;
  public:
   using StaDump::StaDump;
   virtual ~StaDumpAtoms() = default;

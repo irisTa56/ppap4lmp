@@ -13,6 +13,12 @@
 
 #include <core/generators.h>
 
+
+//! An alias for a function accepts a ::Json object.
+using JsonToVoidFunc = std::function<void(const Json &)>;
+//! An alias for a function accepts a ::Json object and returns a bool.
+using JsonToBoolFunc = std::function<bool(const Json &)>;
+
 /*!
   @brief Updater is an abstract class to update data held by
   an Element object.
@@ -27,12 +33,10 @@
 */
 class Updater : public std::enable_shared_from_this<Updater> {
   /*!
-    Blacklist of Element::elementid updated by this Updater object.
     If this Updater object is called from an Element object
     for the first time, this object stores Element::elementid
     in #skippable_elementids and updates Element::data.
-    From the second time on, this object can skip
-    the updating computation.
+    From the second time on, this object skips the updating computation.
   */
   Set<int> skippable_elementids;
   /*!
@@ -43,6 +47,18 @@ class Updater : public std::enable_shared_from_this<Updater> {
     in #check_update_requirest_for and #remove_from_skippable_elementids.
   */
   omp_lock_t omp_lock;
+  /*!
+    Look for Element::elementid in #skippable_elementids.
+
+    @param elementid
+      An Element::elementid to be checked.
+
+    @return A boolean. If `elementid` is found in #skippable_elementids,
+    this method returns false, that is, rejects the Element object
+    of the `elementid`.
+  */
+  bool check_compute_request_for(
+    const int elementid);
  protected:
   /*!
     Shared pointer to a Generator object used in updating process.
@@ -55,17 +71,30 @@ class Updater : public std::enable_shared_from_this<Updater> {
   */
   ShPtr<Generator> ext_generator;
   /*!
-    Wrapper function for Element::check_required_keys of
-    an Element object where this instance is appended to.
+    @brief Managing computation to update Element::data.
+
+    @param elem
+      Shared pointer to an Element object
+      where computed properties are added to.
+
+    @param data
+      Mutable reference to Element::data
+      where computed properties are added to.
+
+    @return None.
+
+    More specific than #compute; implementation of this method is
+    different in each subclass.
   */
-  std::function<void(const Json &)> check_required_keys;
+  virtual void compute_body(
+    const ElPtr &elem,
+    Json &data) = 0;
   /*!
-    Wrapper function for Element::check_optional_keys of
-    an Element object where this instance is appended to.
-  */
-  std::function<bool(const Json &)> check_optional_keys;
-  /*!
-    @brief Implementation of computation for updating Element::data.
+    @brief Common part of #compute_body.
+
+    @param elem
+      Shared pointer to an Element object
+      where computed properties are added to.
 
     @param data
       Mutable reference to Element::data
@@ -73,25 +102,30 @@ class Updater : public std::enable_shared_from_this<Updater> {
 
     @return None.
   */
-  virtual void compute_impl(Json &data) = 0;
-  //! Make #check_required_keys
-  void make_check_required_keys(
-    const ElPtr &elem);
-  //! Make #check_optional_keys
-  void make_check_optional_keys(
-    const ElPtr &elem);
+  virtual void compute_common(
+    const ElPtr &elem,
+    Json &data);
   /*!
-    Look for Element::elementid in #skippable_elementids.
+    @brief Implementation of computation updating Element::data.
 
-    @param elementid
-      An Element::elementid to be checked.
+    @param data
+      Mutable reference to Element::data
+      where computed properties are added to.
 
-    @return A boolean. If `elementid` is found in #skippable_elementids,
-    this method returns false, that is, rejects the Element object
-    of the `elementid`.
+    @param check_required_keys
+      Wrapper function for Element::check_required_keys of
+      an Element object where this instance is appended to.
+
+    @param check_optional_keys
+      Wrapper function for Element::check_optional_keys of
+      an Element object where this instance is appended to.
+
+    @return None.
   */
-  bool check_update_requirest_for(
-    const int elementid);
+  virtual void compute_impl(
+    Json &data,
+    JsonToVoidFunc check_required_keys,
+    JsonToBoolFunc check_optional_keys) = 0;
  public:
   /*!
     @brief Constructor of Updater class.
@@ -120,8 +154,8 @@ class Updater : public std::enable_shared_from_this<Updater> {
 
     @return None.
   */
-  virtual void compute(
-    const ElPtr &elem, const int elementid, Json &data) = 0;
+  void compute(
+    const ElPtr &elem, const int elementid, Json &data);
   /*!
     @brief Remove Element::elementid from #skippable_elementids.
 

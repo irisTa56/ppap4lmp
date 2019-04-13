@@ -13,28 +13,16 @@ namespace ut = utils;
 
 /* ------------------------------------------------------------------ */
 
-void Filter::compute(
+void Filter::compute_body(
   const ElPtr &elem,
-  const int elementid,
   Json &data)
 {
-  if (check_update_requirest_for(elementid))
+  if (data.is_array())
   {
-    if (data.is_array())
-    {
-      Str myclassname
-        = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
-
-      elem->accessed_by_instance_of(myclassname);
-
-      make_check_required_keys(elem);
-      make_check_optional_keys(elem);
-
-      compute_impl(data);
-    }
-    else
-    {
-      ut::warning("Non-array data will not be filtered");
-    }
+    compute_common(elem, data);
+  }
+  else
+  {
+    ut::warning("Non-array data will not be filtered");
   }
 }

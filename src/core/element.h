@@ -73,9 +73,8 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   */
   Vec<Str> datakeys;
   /*!
-    Name of a class of instance calling #check_required_keys.
-    Showing the class name in an error message raised
-    by #check_required_keys helps debugging.
+    Class name of instance accessing this Element instance.
+    The name is shown in error messages thrown by #check_required_keys.
   */
   Str accessing_classname;
   /*!
@@ -305,6 +304,9 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   */
   bool check_optional_keys(
     const Json &key_);
+
+  /* Methods for bridging to Python */
+
   //! @copydoc Element::get_data
   const Json &get_data_py();
   //! @copydoc Element::get_keys
@@ -368,7 +370,7 @@ class Element : public Generator, public std::enable_shared_from_this<Element> {
   void init_for_python();
 };
 
-//! *ElPtr* is an alias for a shared pointer of Element class.
+//! An alias for a shared pointer of Element class.
 using ElPtr = ShPtr<Element>;
 
 #endif

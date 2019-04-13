@@ -59,7 +59,9 @@ class AddChildIDs : public Adder {
     </dl>
   */
   virtual void compute_impl(
-    Json &data) override;
+    Json &data,
+    JsonToVoidFunc check_required_keys,
+    JsonToBoolFunc check_optional_keys) override;
  public:
   /*!
     @brief Constructor of AddChildIDs class.

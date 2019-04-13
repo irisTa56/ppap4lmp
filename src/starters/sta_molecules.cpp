@@ -19,7 +19,9 @@ StaMolecules::StaMolecules(
 /* ------------------------------------------------------------------ */
 
 void StaMolecules::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   auto el_atoms = ext_generator->get_element();
 

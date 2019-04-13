@@ -114,7 +114,9 @@ void AddInertiaMoment::compute_without_weights(
 /* ------------------------------------------------------------------ */
 
 void AddInertiaMoment::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   check_required_keys({"atom-ids", "xu", "yu", "zu"});
 

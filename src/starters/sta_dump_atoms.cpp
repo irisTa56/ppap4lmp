@@ -18,7 +18,9 @@ namespace ut = utils;
 /* ------------------------------------------------------------------ */
 
 void StaDumpAtoms::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   std::ifstream ifs(filepath);
   Str line;

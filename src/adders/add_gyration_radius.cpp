@@ -11,7 +11,9 @@
 /* ------------------------------------------------------------------ */
 
 void AddGyrationRadius::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   check_required_keys({"mass", "I_xx", "I_yy", "I_zz"});
 

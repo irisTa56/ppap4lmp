@@ -22,7 +22,9 @@ StaCustom::StaCustom(
 /* ------------------------------------------------------------------ */
 
 void StaCustom::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   if (json.is_array())
   {

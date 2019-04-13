@@ -34,7 +34,9 @@ const bool FilSet::check_if_pass_data_elem(
 /* ------------------------------------------------------------------ */
 
 void FilSet::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   for (const auto &item : acceptable_value_sets)
   {

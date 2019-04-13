@@ -113,7 +113,9 @@ const bool FilComparison::check_if_pass_data_elem(
 /* ------------------------------------------------------------------ */
 
 void FilComparison::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   const auto compare_func_list = make_compare_func_list();
 

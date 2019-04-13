@@ -35,35 +35,21 @@ void Starter::sort_by_id(
 
 /* ------------------------------------------------------------------ */
 
-void Starter::compute(
+void Starter::compute_body(
   const ElPtr &elem,
-  const int elementid,
   Json &data)
 {
-  if (check_update_requirest_for(elementid))
+  if (data != nullptr)
   {
-    if (data != nullptr)
-    {
-      ut::runtime_error("Starter accepts empty data only");
-    }
+    ut::runtime_error("Starter accepts empty data only");
+  }
 
-    if (ext_generator)
-    {
-      Str myclassname
-        = abi::__cxa_demangle(typeid(*this).name(), 0, 0, new int());
+  compute_common(elem, data);
 
-      ext_generator->accessed_by_instance_of(myclassname);
-    }
+  elem->update_keys();
 
-    compute_impl(data);
-
-    elem->update_keys();
-
-    if (data.is_array() && elem->check_optional_keys("id") && do_sorting_by_id)
-    {
-      sort_by_id(data);
-    }
+  if (data.is_array() && elem->check_optional_keys("id") && do_sorting_by_id)
+  {
+    sort_by_id(data);
   }
 }
-
-/* ------------------------------------------------------------------ */

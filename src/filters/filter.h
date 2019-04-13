@@ -15,7 +15,7 @@
   @brief Filter removes elements from array Element::data
   if the elements fail user-defined criteria.
 
-  This class inherits Updater class and overrides Updater::compute.
+  This class inherits Updater class and overrides Updater::compute_boby.
   This class is an abstract class and has a pure virtual function,
   Filter::compute_impl.
 
@@ -23,9 +23,7 @@
   Note that Filter do nothing for non-array Element::data.
 */
 class Filter : public Updater {
- public:
-  using Updater::Updater;
-  virtual ~Filter() = default;
+ protected:
   /*!
     @brief Filter elements from array Element::data given
     as a mutable reference.
@@ -33,27 +31,19 @@ class Filter : public Updater {
     @param elem
       Shared pointer to an Element object to be filtered.
 
-    @param elementid
-      A constant integer copied from Element::elementid.
-
     @param data
       Mutable reference to Element::data to be filtered.
 
     @return None.
 
-    This method checks if `elementid` is in #skippable_elementids.
-    If it is not in the list, this method passes `data`
-    to Filter::compute_impl.
-
     Each element in the array `data` remains unchanged.
-
-    Note that actual filtering process is conducted by
-    Filter::compute_impl orveridden in subclasses of this class.
   */
-  virtual void compute(
+  virtual void compute_body(
     const ElPtr &elem,
-    const int elementid,
     Json &data) override;
+ public:
+  using Updater::Updater;
+  virtual ~Filter() = default;
 };
 
 #endif

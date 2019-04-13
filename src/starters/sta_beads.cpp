@@ -101,7 +101,9 @@ std::pair<bool,bool> StaBeads::check_mol_type_to_abst_beads()
 /* ------------------------------------------------------------------ */
 
 void StaBeads::compute_impl(
-  Json &data)
+  Json &data,
+  JsonToVoidFunc check_required_keys,
+  JsonToBoolFunc check_optional_keys)
 {
   auto with_additional = check_mol_type_to_abst_beads();
 
