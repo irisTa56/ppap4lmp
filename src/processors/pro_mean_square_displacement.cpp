@@ -21,30 +21,35 @@ ProMeanSquareDisplacement::ProMeanSquareDisplacement(
 
 /* ------------------------------------------------------------------ */
 
-void ProMeanSquareDisplacement::run_impl(
-  const int index)
+void ProMeanSquareDisplacement::extract_positions(
+  ArrayXXd &positions,
+  const ElPtr &elem)
 {
-  auto el_points = generators[index]->get_element();
-
   // NOTE: `id` property is check_required_keys to ensure data is sorted.
-  el_points->check_required_keys({"xu", "yu", "zu", "id"});
+  elem->check_required_keys({"xu", "yu", "zu", "id"});
 
-  ArrayXXd rs;
-  el_points->make_2darray_from_data(rs, {"xu", "yu", "zu"});
+  elem->make_2darray_from_data(positions, {"xu", "yu", "zu"});
 
   if (drift_correction)
   {
-    el_points->check_required_keys("mass");
+    elem->check_required_keys("mass");
 
     ArrayXd ms;
-    el_points->make_1darray_from_data(ms, "mass");
+    elem->make_1darray_from_data(ms, "mass");
 
-    auto reciprocal = 1.0 / ms.sum();
+    auto com = (positions.colwise()*ms).colwise().sum() / ms.sum();
 
-    auto com = (rs.colwise()*ms).colwise().sum() * reciprocal;
-
-    rs.rowwise() -= com;
+    positions.rowwise() -= com;
   }
+}
+
+/* ------------------------------------------------------------------ */
+
+void ProMeanSquareDisplacement::run_impl(
+  const int index)
+{
+  ArrayXXd rs;
+  extract_positions(rs, generators[index]->get_element());
 
   auto displacement2_xyz = (rs - initial_rs).square();
 
@@ -67,25 +72,7 @@ void ProMeanSquareDisplacement::prepare()
 {
   use_generator_at(0);
 
-  auto el_initial_points = generators.front()->get_element();
-
-  el_initial_points->check_required_keys({"xu", "yu", "zu", "id"});
-
-  el_initial_points->make_2darray_from_data(initial_rs, {"xu", "yu", "zu"});
-
-  if (drift_correction)
-  {
-    el_initial_points->check_required_keys("mass");
-
-    ArrayXd ms;
-    el_initial_points->make_1darray_from_data(ms, "mass");
-
-    auto reciprocal = 1.0 / ms.sum();
-
-    auto com = (initial_rs.colwise()*ms).colwise().sum() * reciprocal;
-
-    initial_rs.rowwise() -= com;
-  }
+  extract_positions(initial_rs, generators.front()->get_element());
 
   displacement2_traj.resize(n_generators);
 }
@@ -94,17 +81,17 @@ void ProMeanSquareDisplacement::prepare()
 
 void ProMeanSquareDisplacement::finish()
 {
-  auto size = displacement2_traj.front().size();
+  const auto n_points = displacement2_traj.front().size();
 
   for (const auto &sd : displacement2_traj)
   {
-    if (size != sd.size())
+    if (n_points != sd.size())
     {
       ut::runtime_error("Data sizes must be the same");
     }
   }
 
-  displacement2_array = ArrayXXd(n_generators, size);
+  displacement2_array = ArrayXXd(n_generators, n_points);
 
   for (int i = 0; i != n_generators; ++i)
   {
@@ -148,5 +135,3 @@ const ArrayXd &ProMeanSquareDisplacement::get_mean_square_displacement()
 {
   return mean_square_displacement;
 }
-
-/* ------------------------------------------------------------------ */

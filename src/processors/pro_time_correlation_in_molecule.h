@@ -75,6 +75,25 @@ class ProTimeCorrelationInMolecule : public Processor {
     (snapshot of simulation).
   */
   ArrayXd time_correlation_function;
+  /*
+    @brief Compute intramolecular vectors
+    and conduct customized manipulation using them.
+
+    @param callback
+      Define a customized manipulation using intramolecular vectors.
+
+    @param el_mols
+      An Element object containing molecule data.
+
+    @param el_atoms
+      An Element object containing atom data.
+
+    @return None.
+  */
+  void compute_temporary_vectors(
+    std::function<void(const RowVector3d &)> callback,
+    const ElPtr &el_mols,
+    const ElPtr &el_atoms);
  protected:
   /*!
     @copydoc Processor::run_impl

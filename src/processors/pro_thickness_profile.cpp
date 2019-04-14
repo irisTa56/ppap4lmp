@@ -84,10 +84,10 @@ void ProThicknessProfile::run_impl(
   profiles[index] = ArrayXXd::Zero(nx, ny);
   auto &profile_tmp = profiles[index];
 
-  auto reciprocal_nx = 1.0 / double(nx);
-  auto reciprocal_ny = 1.0 / double(ny);
-  auto reciprocal_delta_x = 1.0 / delta_x;
-  auto reciprocal_delta_y = 1.0 / delta_y;
+  const auto reciprocal_nx = 1.0 / double(nx);
+  const auto reciprocal_ny = 1.0 / double(ny);
+  const auto reciprocal_delta_x = 1.0 / delta_x;
+  const auto reciprocal_delta_y = 1.0 / delta_y;
 
   auto n_atoms = atoms.size();
 
@@ -182,5 +182,3 @@ const Vec<ArrayXXd> &ProThicknessProfile::get_profiles()
 {
   return profiles;
 }
-
-/* ------------------------------------------------------------------ */

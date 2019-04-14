@@ -33,7 +33,7 @@ void InvOMP::execute_impl(const Vec<ShPtr<Processor>> &procs)
         for (const auto &p : procs)
         {
           /* NOTE:
-            Exit the while loop only if all the processors have finished
+            Exit the while loop when all the processors have finished
             thier computation.
           */
           finish_loop &= p->run();

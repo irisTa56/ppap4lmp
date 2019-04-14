@@ -67,74 +67,74 @@ void ProRadialDistributionFunction::run_impl(
   ArrayXXd rs;
   el_atoms->make_2darray_from_data(rs, {"x", "y", "z"});
 
-  ArrayXd length(3);
-  length << box["hi_x"].get<double>() - box["lo_x"].get<double>(),
+  ArrayXd box_length(3);
+  box_length << box["hi_x"].get<double>() - box["lo_x"].get<double>(),
             box["hi_y"].get<double>() - box["lo_y"].get<double>(),
             box["hi_z"].get<double>() - box["lo_z"].get<double>();
 
-  ArrayXd limits = beyond_half ? length : 0.5 * length;
+  ArrayXd neighbor_limits = beyond_half ? box_length : 0.5 * box_length;
 
-  auto r_max = bin_from_r ?
+  const auto r_max = bin_from_r ?
     n_bins * bin_width : (n_bins-0.5) * bin_width;
-  auto r2_max = r_max*r_max;
+  const auto r2_max = r_max*r_max;
 
   for (int i = 0; i != 3; ++i)
   {
-    if (limits(i) < r_max)
+    if (neighbor_limits(i) < r_max)
     {
       ut::warning(
         "Box length is too short in " + Str("xyz").substr(i, 1));
     }
   }
 
-  std::pair<int,int> shift_x = box.value("pbc_x", false) ?
+  const std::pair<int,int> image_range_x = box.value("pbc_x", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
-  std::pair<int,int> shift_y = box.value("pbc_y", false) ?
+  const std::pair<int,int> image_range_y = box.value("pbc_y", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
-  std::pair<int,int> shift_z = box.value("pbc_z", false) ?
+  const std::pair<int,int> image_range_z = box.value("pbc_z", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
 
-  auto reciprocal_width = 1.0 / bin_width;
+  const auto reciprocal_bin_width = 1.0 / bin_width;
 
-  auto n_atoms = atoms.size();
+  const auto n_atoms = atoms.size();
 
   number_traj[index] = n_atoms;
-  volume_traj[index] = length.prod();
+  volume_traj[index] = box_length.prod();
   counts_traj[index] = ArrayXi::Zero(n_bins);
 
   auto &counts = counts_traj[index];
 
   for (int i = 0; i != n_atoms; ++i)
   {
-    auto sbs_i = special_bonds_exist ?
+    auto sbonds_i = special_bonds_exist ?
       atoms[i]["special-bonds"].get<Set<int>>() : Set<int>();
 
     auto r_i = rs.row(i);
 
     for (int j = i+1; j != n_atoms; ++j)
     {
-      if (!sbs_i.empty() && sbs_i.find(
-        atoms[j]["id"].get<int>()) != sbs_i.end()) continue;
+      if (!sbonds_i.empty() && sbonds_i.find(
+        atoms[j]["id"].get<int>()) != sbonds_i.end()) continue;
 
       auto dr_original = rs.row(j) - r_i;
 
-      for (int ix = shift_x.first; ix <= shift_x.second; ++ix)
+      for (int ix = image_range_x.first; ix <= image_range_x.second; ++ix)
       {
-        auto dx = dr_original(0) + ix*length(0);
+        auto dx = dr_original(0) + ix*box_length(0);
 
-        if (limits(0) < abs(dx)) continue;
+        if (neighbor_limits(0) < abs(dx)) continue;
 
-        for (int iy = shift_y.first; iy <= shift_y.second; ++iy)
+        for (int iy = image_range_y.first; iy <= image_range_y.second; ++iy)
         {
-          auto dy = dr_original(1) + iy*length(1);
+          auto dy = dr_original(1) + iy*box_length(1);
 
-          if (limits(1) < abs(dy)) continue;
+          if (neighbor_limits(1) < abs(dy)) continue;
 
-          for (int iz = shift_z.first; iz <= shift_z.second; ++iz)
+          for (int iz = image_range_z.first; iz <= image_range_z.second; ++iz)
           {
-            auto dz = dr_original(2) + iz*length(2);
+            auto dz = dr_original(2) + iz*box_length(2);
 
-            if (limits(2) < abs(dz)) continue;
+            if (neighbor_limits(2) < abs(dz)) continue;
 
             auto r2 = dx*dx + dy*dy + dz*dz;
 
@@ -143,7 +143,7 @@ void ProRadialDistributionFunction::run_impl(
             auto r = sqrt(r2);
 
             auto r_index = bin_from_r ?
-              floor(r*reciprocal_width) : round(r*reciprocal_width);
+              floor(r*reciprocal_bin_width) : round(r*reciprocal_bin_width);
 
             /* NOTE:
               Adding 2 (not 1) is for taking both directions
@@ -276,5 +276,3 @@ const Vec<ArrayXd> &ProRadialDistributionFunction::get_rdf_traj()
 {
   return rdf_traj;
 }
-
-/* ------------------------------------------------------------------ */

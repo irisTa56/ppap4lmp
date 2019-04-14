@@ -38,23 +38,25 @@ void ProValueArray::run_impl(
 {
   if (selected_keys.empty())
   {
-    ut::runtime_error("Selected value(s) for ProValueArray");
+    ut::runtime_error("No selected value(s) for ProValueArray");
   }
 
   auto elem = generators[index]->get_element();
-  auto &data = elem->get_data();
 
   // NOTE: `id` property is check_required_keys to ensure data is sorted.
   elem->check_required_keys("id");
+
   elem->check_required_keys(selected_keys);
 
-  auto &rows = results_trajs[index];
+  auto &map_key_to_row = value_trajectories[index];
 
-  auto size = data.is_array() ? data.size() : 1;
+  auto &data = elem->get_data();
+
+  auto row_length = data.is_array() ? data.size() : 1;
 
   for (const auto &key : selected_keys)
   {
-    rows[key].resize(size);
+    map_key_to_row[key].resize(row_length);
   }
 
   int irow = 0;
@@ -63,7 +65,7 @@ void ProValueArray::run_impl(
   {
     for (const auto &key : selected_keys)
     {
-      rows[key](irow) = d[key].get<double>();
+      map_key_to_row[key](irow) = d[key].get<double>();
     }
 
     irow++;
@@ -74,7 +76,7 @@ void ProValueArray::run_impl(
 
 void ProValueArray::prepare()
 {
-  results_trajs.resize(n_generators);
+  value_trajectories.resize(n_generators);
 }
 
 /* ------------------------------------------------------------------ */
@@ -83,31 +85,31 @@ void ProValueArray::finish()
 {
   auto front_key = selected_keys.front();
 
-  auto size = results_trajs.front()[front_key].size();
+  auto row_length = value_trajectories.front()[front_key].size();
 
-  for (const auto &tmp : results_trajs)
+  for (const auto &trajectory : value_trajectories)
   {
-    if (size != tmp.at(front_key).size())
+    if (row_length != trajectory.at(front_key).size())
     {
-      ut::runtime_error("Data sizes must be the same");
+      ut::runtime_error("Length of trajectories must be the same");
     }
   }
 
   for (const auto &key : selected_keys)
   {
     auto &array = results[key];
-    array.resize(n_generators, size);
+    array.resize(n_generators, row_length);
 
     int irow = 0;
 
-    for (const auto &tmp : results_trajs)
+    for (const auto &trajectory : value_trajectories)
     {
-      array.row(irow++) = tmp.at(key);
+      array.row(irow++) = trajectory.at(key);
     }
   }
 
-  results_trajs.clear();
-  results_trajs.shrink_to_fit();
+  value_trajectories.clear();
+  value_trajectories.shrink_to_fit();
 }
 
 /* ------------------------------------------------------------------ */
@@ -124,5 +126,3 @@ const Map<Str,ArrayXXd> &ProValueArray::get_results()
 {
   return results;
 }
-
-/* ------------------------------------------------------------------ */

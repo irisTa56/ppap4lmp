@@ -40,14 +40,6 @@ class Updater : public std::enable_shared_from_this<Updater> {
   */
   Set<int> skippable_elementids;
   /*!
-    A variable used for OpenMP. In this program,
-    #skippable_elementids is modified in a multithreading context.
-    To prevent #skippable_elementids from being modified from
-    multiple threads at the same time, this member must be locked
-    in #check_update_requirest_for and #remove_from_skippable_elementids.
-  */
-  omp_lock_t omp_lock;
-  /*!
     Look for Element::elementid in #skippable_elementids.
 
     @param elementid
@@ -136,7 +128,7 @@ class Updater : public std::enable_shared_from_this<Updater> {
     that constructors of subclasses of this class are
     also thread-unsafe.
   */
-  Updater();
+  Updater() = default;
   virtual ~Updater() = default;
   /*!
     @brief Managing computation to update Element::data.

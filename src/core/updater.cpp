@@ -10,29 +10,23 @@
 
 /* ------------------------------------------------------------------ */
 
-Updater::Updater()
-{
-  omp_init_lock(&omp_lock);
-}
-
-/* ------------------------------------------------------------------ */
-
 bool Updater::check_compute_request_for(
   const int elementid)
 {
-  bool update_is_required = false;
+  bool compute_required;
 
-  omp_set_lock(&omp_lock);
-
-  if (skippable_elementids.find(elementid) == skippable_elementids.end())
+  #pragma omp critical (check_skippable_elementids)
   {
-    skippable_elementids.insert(elementid);
-    update_is_required = true;
+    compute_required
+      = skippable_elementids.find(elementid) == skippable_elementids.end();
+
+    if (compute_required)
+    {
+      skippable_elementids.insert(elementid);
+    }
   }
 
-  omp_unset_lock(&omp_lock);
-
-  return update_is_required;
+  return compute_required;
 }
 
 /* ------------------------------------------------------------------ */
@@ -81,11 +75,10 @@ void Updater::compute_common(
 void Updater::remove_from_skippable_elementids(
   const int elementid)
 {
-  omp_set_lock(&omp_lock);
-
-  skippable_elementids.erase(elementid);
-
-  omp_unset_lock(&omp_lock);
+  #pragma omp critical (remove_skippable_elementid)
+  {
+    skippable_elementids.erase(elementid);
+  }
 }
 
 /* ------------------------------------------------------------------ */

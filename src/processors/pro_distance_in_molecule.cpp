@@ -91,17 +91,17 @@ void ProDistanceInMolecule::prepare()
 
 void ProDistanceInMolecule::finish()
 {
-  auto size = distance2_traj.front().size();
+  const auto n_mols = distance2_traj.front().size();
 
   for (const auto &d2 : distance2_traj)
   {
-    if (size != d2.size())
+    if (n_mols != d2.size())
     {
       ut::runtime_error("Data sizes must be the same");
     }
   }
 
-  distance2_array = ArrayXXd(n_generators, size);
+  distance2_array = ArrayXXd(n_generators, n_mols);
 
   for (int i = 0; i != n_generators; ++i)
   {
@@ -127,7 +127,7 @@ void ProDistanceInMolecule::set_indices(
 void ProDistanceInMolecule::set_moltype(
   int target_moltype_)
 {
-  target_moltype_ = target_moltype;
+  target_moltype = target_moltype_;
 }
 
 /* ------------------------------------------------------------------ */
@@ -143,5 +143,3 @@ const ArrayXXd &ProDistanceInMolecule::get_distance2_array()
 {
   return distance2_array;
 }
-
-/* ------------------------------------------------------------------ */

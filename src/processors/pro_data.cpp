@@ -45,31 +45,25 @@ void ProData::run_impl(
   {
     elem->check_required_keys(selected_keys);
 
-    auto &json = results[index];
+    auto json = Json::array();
 
     if (data.is_array())
     {
-      json = Json::array();
       json.get_ref<Json::array_t&>().reserve(data.size());
-
-      for (const auto &d : data)
-      {
-        json.push_back({});
-        auto &elem = json.back();
-
-        for (const auto &k : selected_keys)
-        {
-          elem[k] = d[k];
-        }
-      }
     }
-    else
+
+    for (const auto &d : data.is_array() ? data : Json::array({data}))
     {
+      json.push_back({});
+      auto &elem = json.back();
+
       for (const auto &k : selected_keys)
       {
-        json[k] = data[k];
+        elem[k] = d[k];
       }
     }
+
+    results[index].swap(data.is_array() ? json : json.front());
   }
 }
 
@@ -95,5 +89,3 @@ const Vec<Json> &ProData::get_results()
 {
   return results;
 }
-
-/* ------------------------------------------------------------------ */

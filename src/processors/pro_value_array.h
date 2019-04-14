@@ -44,7 +44,7 @@ class ProValueArray : public Processor {
     of values for the property are stored.
     Indices in this list corresponds those in #generators.
   */
-  Vec<Map<Str,RowArrayXd>> results_trajs;
+  Vec<Map<Str,RowArrayXd>> value_trajectories;
  protected:
   /*!
     @copydoc Processor::run_impl
@@ -83,17 +83,17 @@ class ProValueArray : public Processor {
     const Vec<ElPtr> &elems);
   virtual ~ProValueArray() = default;
   /*!
-    @brief Resize #results_trajs.
+    @brief Resize #value_trajectories.
     @return None.
   */
   virtual void prepare() override;
   /*!
-    @brief Make #results from #results_trajs.
+    @brief Make #results from #value_trajectories.
 
     @return None.
 
     Each row of a value of #results corresponds to a value
-    for the corresponding key in each element of #results_trajs.
+    for the corresponding key in each element of #value_trajectories.
   */
   virtual void finish() override;
   /*!

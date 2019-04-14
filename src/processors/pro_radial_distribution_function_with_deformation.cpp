@@ -39,7 +39,7 @@ void ProRDFWD::run_impl(
 
   // prepare
 
-  auto n_beads = beads.size();
+  const auto n_beads = beads.size();
 
   Vec<std::pair<Vector3d,Matrix3d>> rs_and_Is_per_mass;
   rs_and_Is_per_mass.reserve(n_beads);
@@ -50,48 +50,47 @@ void ProRDFWD::run_impl(
       (Vector3d() << bead["x"], bead["y"], bead["z"]).finished(),
       (Matrix3d() << bead["I_xx"], bead["I_xy"], bead["I_xz"],
                      bead["I_xy"], bead["I_yy"], bead["I_yz"],
-                     bead["I_xz"], bead["I_yz"], bead["I_zz"])
-        .finished() / bead["mass"].get<double>()));
+                     bead["I_xz"], bead["I_yz"], bead["I_zz"]).finished()
+        / bead["mass"].get<double>()));
   }
 
-  ArrayXd length(3);
-  length << box["hi_x"].get<double>() - box["lo_x"].get<double>(),
-            box["hi_y"].get<double>() - box["lo_y"].get<double>(),
-            box["hi_z"].get<double>() - box["lo_z"].get<double>();
+  ArrayXd box_length(3);
+  box_length << box["hi_x"].get<double>() - box["lo_x"].get<double>(),
+                box["hi_y"].get<double>() - box["lo_y"].get<double>(),
+                box["hi_z"].get<double>() - box["lo_z"].get<double>();
 
-  ArrayXd limits = beyond_half ? length : 0.5 * length;
+  ArrayXd neighbor_limits = beyond_half ? box_length : 0.5 * box_length;
 
-  auto r_max = bin_from_r ?
-    n_bins * bin_width : (n_bins-0.5) * bin_width;
-  auto r_margined = r_max + margin;
-  auto r2_max = r_max * r_max;
-  auto r2_margined = r_margined * r_margined;
+  const auto r_max = bin_from_r ? n_bins * bin_width : (n_bins-0.5) * bin_width;
+  const auto r_margined = r_max + margin;
+  const auto r2_max = r_max * r_max;
+  const auto r2_margined = r_margined * r_margined;
 
   for (int i = 0; i != 3; ++i)
   {
-    if (limits(i) < r_margined)
+    if (neighbor_limits(i) < r_margined)
     {
       ut::warning(
         "Box length is too short in " + Str("xyz").substr(i, 1));
     }
   }
 
-  std::pair<int,int> shift_x = box.value("pbc_x", false) ?
+  const std::pair<int,int> image_range_x = box.value("pbc_x", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
-  std::pair<int,int> shift_y = box.value("pbc_y", false) ?
+  const std::pair<int,int> image_range_y = box.value("pbc_y", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
-  std::pair<int,int> shift_z = box.value("pbc_z", false) ?
+  const std::pair<int,int> image_range_z = box.value("pbc_z", false) ?
     std::make_pair(-1, 1) : std::make_pair(0, 0);
 
-  auto reciprocal_width = 1.0 / bin_width;
+  const auto reciprocal_bin_width = 1.0 / bin_width;
 
-  double one_third = 1.0 / 3.0;
-  double two_thirds = 2.0 / 3.0;
+  const double one_third = 1.0 / 3.0;
+  const double two_thirds = 2.0 / 3.0;
 
   // loop over all pairs of beads
 
   number_traj[index] = n_beads;
-  volume_traj[index] = length.prod();
+  volume_traj[index] = box_length.prod();
 
   counts_traj[index] = ArrayXi::Zero(n_bins);
   auto &counts = counts_traj[index];
@@ -110,7 +109,7 @@ void ProRDFWD::run_impl(
 
   for (int i = 0; i != n_beads; ++i)
   {
-    auto sbs_i = special_bonds_exist ?
+    auto sbonds_i = special_bonds_exist ?
       beads[i]["special-bonds"].get<Set<int>>() : Set<int>();
 
     auto &tmp_i = rs_and_Is_per_mass[i];
@@ -119,31 +118,31 @@ void ProRDFWD::run_impl(
 
     for (int j = i+1; j != n_beads; ++j)
     {
-      if (!sbs_i.empty() && sbs_i.find(
-        beads[j]["id"].get<int>()) != sbs_i.end()) continue;
+      if (!sbonds_i.empty() && sbonds_i.find(
+        beads[j]["id"].get<int>()) != sbonds_i.end()) continue;
 
       auto &tmp_j = rs_and_Is_per_mass[j];
       auto &I_j = tmp_j.second;
 
       auto dr_original = tmp_j.first - r_i;
 
-      for (int ix = shift_x.first; ix <= shift_x.second; ++ix)
+      for (int ix = image_range_x.first; ix <= image_range_x.second; ++ix)
       {
-        auto dx = dr_original(0) + ix*length(0);
+        auto dx = dr_original(0) + ix*box_length(0);
 
-        if (limits(0) < abs(dx)) continue;
+        if (neighbor_limits(0) < abs(dx)) continue;
 
-        for (int iy = shift_y.first; iy <= shift_y.second; ++iy)
+        for (int iy = image_range_y.first; iy <= image_range_y.second; ++iy)
         {
-          auto dy = dr_original(1) + iy*length(1);
+          auto dy = dr_original(1) + iy*box_length(1);
 
-          if (limits(1) < abs(dy)) continue;
+          if (neighbor_limits(1) < abs(dy)) continue;
 
-          for (int iz = shift_z.first; iz <= shift_z.second; ++iz)
+          for (int iz = image_range_z.first; iz <= image_range_z.second; ++iz)
           {
-            auto dz = dr_original(2) + iz*length(2);
+            auto dz = dr_original(2) + iz*box_length(2);
 
-            if (limits(2) < abs(dz)) continue;
+            if (neighbor_limits(2) < abs(dz)) continue;
 
             auto r2 = dx*dx + dy*dy + dz*dz;
 
@@ -171,7 +170,7 @@ void ProRDFWD::run_impl(
             if (r < r_max)
             {
               auto r_index = bin_from_r ?
-                floor(r*reciprocal_width) : round(r*reciprocal_width);
+                floor(r*reciprocal_bin_width) : round(r*reciprocal_bin_width);
 
               raw_counts(r_index) += 2;
               Rg2_sum(r_index) += Rg2_i + Rg2_j;
@@ -207,8 +206,8 @@ void ProRDFWD::run_impl(
             }
 
             auto r_index = bin_from_r ?
-              floor(r_modified*reciprocal_width) :
-              round(r_modified*reciprocal_width);
+              floor(r_modified*reciprocal_bin_width) :
+              round(r_modified*reciprocal_bin_width);
 
             /* NOTE:
               Adding 2 (not 1) is for taking both directions
@@ -315,30 +314,30 @@ Map<Str,ArrayXd> ProRDFWD::get_gyration_radius()
 
 Map<Str,Vec<ArrayXd>> ProRDFWD::get_gyration_radius_traj()
 {
-  Map<Str,Vec<ArrayXd>> tmp;
+  Map<Str,Vec<ArrayXd>> type2traj;
 
-  auto &iso = tmp["isotropic"];
+  auto &iso = type2traj["isotropic"];
 
   for (const auto &array : Rg2_array_traj)
-{
+  {
     iso.push_back(array.sqrt());
-}
+  }
 
-  auto &para = tmp["parallel"];
+  auto &para = type2traj["parallel"];
 
   for (const auto &array : Rg2_array_traj)
-{
+  {
     para.push_back(array.sqrt());
-}
+  }
 
-  auto &perp = tmp["perpendicular"];
+  auto &perp = type2traj["perpendicular"];
 
   for (const auto &array : Rg2_array_traj)
   {
     perp.push_back(array.sqrt());
   }
 
-  return tmp;
+  return type2traj;
 }
 
 /* ------------------------------------------------------------------ */
@@ -360,5 +359,3 @@ Map<Str,Vec<ArrayXd>> ProRDFWD::get_squared_gyration_radius_traj()
     {"parallel", Rg2_para_array_traj},
     {"perpendicular", Rg2_perp_array_traj}};
 }
-
-/* ------------------------------------------------------------------ */

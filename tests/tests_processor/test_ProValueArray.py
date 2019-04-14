@@ -21,7 +21,7 @@ class TestProValueArray(TestCasePPAP):
     pro = ProValueArray(elems)
 
     self.check_error_msg(
-      "RuntimeError: Selected value(s) for ProValueArray", execute_omp, pro)
+      "RuntimeError: No selected value(s) for ProValueArray", execute_omp, pro)
 
   def test_error02(self):
 
@@ -44,7 +44,7 @@ class TestProValueArray(TestCasePPAP):
     pro.select("A")
 
     self.check_error_msg(
-      "RuntimeError: Data sizes must be the same", execute_omp, pro)
+      "RuntimeError: Length of trajectories must be the same", execute_omp, pro)
 
   def test_select_one(self):
 
