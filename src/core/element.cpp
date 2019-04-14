@@ -146,7 +146,10 @@ ShPtr<Generator> Element::get_generator(
 void Element::accessed_by_instance_of(
   const Str &classname)
 {
-  accessing_classname = classname;
+  #pragma omp critical (set_accessing_classname)
+  {
+    accessing_classname = classname;
+  }
 }
 
 /* ------------------------------------------------------------------ */
