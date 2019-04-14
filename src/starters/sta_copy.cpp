@@ -29,5 +29,3 @@ void StaCopy::compute_impl(
   auto elem = ext_generator->get_element();
   data = elem->get_data();
 }
-
-/* ------------------------------------------------------------------ */

@@ -21,7 +21,7 @@ Str ut::join(
   {
     tmp = strs.front();
 
-    for (auto it = strs.begin()+1; it != strs.end(); ++it)
+    for (auto it = strs.cbegin()+1; it != strs.cend(); ++it)
     {
       tmp += jointer + *it;
     }
@@ -29,5 +29,3 @@ Str ut::join(
 
   return tmp;
 }
-
-/* ------------------------------------------------------------------ */

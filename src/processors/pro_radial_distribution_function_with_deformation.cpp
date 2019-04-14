@@ -119,7 +119,7 @@ void ProRDFWD::run_impl(
     for (int j = i+1; j != n_beads; ++j)
     {
       if (!sbonds_i.empty() && sbonds_i.find(
-        beads[j]["id"].get<int>()) != sbonds_i.end()) continue;
+        beads[j]["id"].get<int>()) != sbonds_i.cend()) continue;
 
       auto &tmp_j = rs_and_Is_per_mass[j];
       auto &I_j = tmp_j.second;

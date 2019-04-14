@@ -19,7 +19,7 @@ class TestStaBeads(TestCasePPAP):
     moles = create(StaMolecules(atoms))
 
     self.check_error_msg(
-      "RuntimeError: Mapping to Beads must be specified by 'indices-in-mol'",
+      "RuntimeError: Mapping to beads must be specified by 'indices-in-mol'",
       create, StaBeads(moles, [{"foo": [1, 2, 3]}]))
 
   def test_error02(self):

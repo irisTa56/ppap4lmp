@@ -20,8 +20,8 @@ Map<Json,int> ut::map_to_index(
 
   if (data.is_array())
   {
-    auto front = data.front();
-    const int key_position = std::distance(front.begin(), front.find(key));
+    auto &front = data.front();
+    const int key_position = std::distance(front.cbegin(), front.find(key));
 
     tmp.reserve(data.size());
 
@@ -29,7 +29,7 @@ Map<Json,int> ut::map_to_index(
 
     for (const auto &d : data)
     {
-      tmp[*std::next(d.begin(), key_position)] = index++;
+      tmp[*std::next(d.cbegin(), key_position)] = index++;
     }
   }
 
@@ -75,5 +75,4 @@ Map<Json,int> ut::map_to_index(
 
   return tmp;
 }
-
-/* ------------------------------------------------------------------ */
+*/

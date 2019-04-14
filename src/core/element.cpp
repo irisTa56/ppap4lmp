@@ -101,11 +101,11 @@ Vec<std::pair<Str,int>> Element::get_distances_between_keys(
   Vec<std::pair<Str,int>> distances;
   int distance_from_begin_ex = 0;
 
-  for (auto it = datakeys.begin(); it != datakeys.end(); ++it)
+  for (auto it = datakeys.cbegin(); it != datakeys.cend(); ++it)
   {
-    if (std::find(keys.begin(), keys.end(), *it) != keys.end())
+    if (std::find(keys.cbegin(), keys.cend(), *it) != keys.cend())
     {
-      int distance_from_begin = std::distance(datakeys.begin(), it);
+      int distance_from_begin = std::distance(datakeys.cbegin(), it);
       distances.push_back(std::make_pair(
         *it, distance_from_begin - distance_from_begin_ex));
       distance_from_begin_ex = distance_from_begin;
@@ -222,13 +222,13 @@ void Element::make_1darray_from_data(
   array.resize(data.is_array() ? data.size() : 1);
 
   const auto key_position = std::distance(
-    datakeys.begin(), std::find(datakeys.begin(), datakeys.end(), key));
+    datakeys.cbegin(), std::find(datakeys.cbegin(), datakeys.cend(), key));
 
   int index = 0;
 
   for (const auto &d : data.is_array() ? data : Json::array({data}))
   {
-    array(index++) = *std::next(d.begin(), key_position);
+    array(index++) = *std::next(d.cbegin(), key_position);
   }
 }
 
@@ -247,7 +247,7 @@ void Element::make_2darray_from_data(
     pairs_distance_and_icol.push_back(std::make_pair(
       pair.second,
       std::distance(
-        keys.begin(), std::find(keys.begin(), keys.end(), pair.first))
+        keys.cbegin(), std::find(keys.cbegin(), keys.cend(), pair.first))
     ));
   }
 
@@ -289,7 +289,7 @@ void Element::check_required_keys(
 
   for (const auto &key : keys)
   {
-    if (std::find(datakeys.begin(), datakeys.end(), key) == datakeys.end())
+    if (std::find(datakeys.cbegin(), datakeys.cend(), key) == datakeys.cend())
     {
       missing_keys.push_back(key);
     }
@@ -319,7 +319,7 @@ bool Element::check_optional_keys(
 
   for (const auto &key : keys)
   {
-    if (std::find(datakeys.begin(), datakeys.end(), key) == datakeys.end())
+    if (std::find(datakeys.cbegin(), datakeys.cend(), key) == datakeys.cend())
     {
       return false;
     }

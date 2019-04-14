@@ -43,13 +43,13 @@ std::pair<bool,bool> StaBeads::check_mol_type_to_abst_beads()
   {
     for (const auto &abst_bead : item.second)
     {
-      auto it_end = abst_bead.end();
-      auto it_index = abst_bead.find("indices-in-mol");
+      const auto it_end = abst_bead.cend();
+      const auto it_index = abst_bead.find("indices-in-mol");
 
       if (it_index == it_end)
       {
         ut::runtime_error(
-          "Mapping to Beads must be specified by 'indices-in-mol'");
+          "Mapping to beads must be specified by 'indices-in-mol'");
       }
 
       if (abst_bead.find("type") != it_end)
@@ -75,11 +75,12 @@ std::pair<bool,bool> StaBeads::check_mol_type_to_abst_beads()
     }
   }
 
-  std::pair<bool,bool> tmp = std::make_pair(false, false);;
+  std::pair<bool,bool> have_type_andor_weights = std::make_pair(false, false);
 
   if (type_counter == counter)
   {
-    tmp.first = true;
+    // all the beads have 'type' attribute
+    have_type_andor_weights.first = true;
   }
   else if (type_counter != 0)
   {
@@ -88,14 +89,15 @@ std::pair<bool,bool> StaBeads::check_mol_type_to_abst_beads()
 
   if (weights_counter == counter)
   {
-    tmp.second = true;
+    // all the beads have 'weights' attribute
+    have_type_andor_weights.second = true;
   }
   else if (weights_counter != 0)
   {
     ut::runtime_error("The number of 'weights' is invalid");
   }
 
-  return tmp;
+  return have_type_andor_weights;
 }
 
 /* ------------------------------------------------------------------ */
@@ -105,7 +107,7 @@ void StaBeads::compute_impl(
   JsonToVoidFunc check_required_keys,
   JsonToBoolFunc check_optional_keys)
 {
-  auto with_additional = check_mol_type_to_abst_beads();
+  auto have_type_andor_weights = check_mol_type_to_abst_beads();
 
   auto el_mols = ext_generator->get_element();
 
@@ -126,24 +128,22 @@ void StaBeads::compute_impl(
 
       auto &back = data.back();
 
-      auto &ids_tmp = back["atom-ids"];
+      auto &ids_ref = back["atom-ids"];
 
       for (const int &index : abst_bead["indices-in-mol"])
       {
-        ids_tmp.push_back(atom_ids.at(index));
+        ids_ref.push_back(atom_ids.at(index));
       }
 
-      if (with_additional.first)
+      if (have_type_andor_weights.first)
       {
         back["type"] = abst_bead["type"];
       }
 
-      if (with_additional.second)
+      if (have_type_andor_weights.second)
       {
         back["atom-weights"] = abst_bead["weights"];
       }
     }
   }
 }
-
-/* ------------------------------------------------------------------ */

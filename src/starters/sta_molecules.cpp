@@ -37,7 +37,7 @@ void StaMolecules::compute_impl(
   {
     int molid = atom["mol"];
 
-    if (id2index.find(molid) == id2index.end())
+    if (id2index.find(molid) == id2index.cend())
     {
       data[max_index]["id"] = molid;
       id2index[molid] = max_index++;
@@ -46,5 +46,3 @@ void StaMolecules::compute_impl(
     data[id2index[molid]]["atom-ids"].push_back(atom["id"]);
   }
 }
-
-/* ------------------------------------------------------------------ */

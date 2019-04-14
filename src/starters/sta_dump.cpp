@@ -17,5 +17,3 @@ StaDump::StaDump(
   filepath = filepath_;
   timestep = timestep_;
 }
-
-/* ------------------------------------------------------------------ */

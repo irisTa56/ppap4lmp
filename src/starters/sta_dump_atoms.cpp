@@ -67,10 +67,11 @@ void StaDumpAtoms::compute_impl(
 
         for (const auto &s : ut::split(line))
         {
+          // NOTE: If string containes '.', it is converted to float.
           is_int_vector.push_back(s.find(".") == Str::npos);
         }
 
-        // set data from the 1st line
+        // read & set data from the 1st line
 
         auto &d = data.front();
 
@@ -88,8 +89,9 @@ void StaDumpAtoms::compute_impl(
           }
         }
 
-        // set data from the remaining lines
+        // read & set data from the remaining lines
 
+        // each tuple contains info of key, int/float, delimiter
         Vec<std::tuple<Str, bool, char>> tuples(is_int_vector.size());
         for (int i = 0; i < tuples.size(); ++i)
         {
@@ -97,12 +99,9 @@ void StaDumpAtoms::compute_impl(
             keys[i], is_int_vector[i], i+1 == tuples.size() ? '\n' : ' ');
         }
 
-        auto begin = tuples.cbegin();
-        auto end = tuples.cend();
-
         for (auto it = data.begin()+1; it != data.end(); ++it)
         {
-          for (auto jt = begin; jt != end; ++jt)
+          for (auto jt = tuples.cbegin(); jt != tuples.cend(); ++jt)
           {
             Str str;
 
@@ -134,5 +133,3 @@ void StaDumpAtoms::compute_impl(
     }
   }
 }
-
-/* ------------------------------------------------------------------ */

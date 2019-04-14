@@ -25,7 +25,7 @@ const bool FilSet::check_if_pass_data_elem(
   {
     auto &set = item.second;
 
-    if (set.find(elem_in_data[item.first]) == set.end()) return false;
+    if (set.find(elem_in_data[item.first]) == set.cend()) return false;
   }
 
   return true;

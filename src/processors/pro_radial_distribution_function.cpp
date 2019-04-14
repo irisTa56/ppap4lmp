@@ -114,7 +114,7 @@ void ProRadialDistributionFunction::run_impl(
     for (int j = i+1; j != n_atoms; ++j)
     {
       if (!sbonds_i.empty() && sbonds_i.find(
-        atoms[j]["id"].get<int>()) != sbonds_i.end()) continue;
+        atoms[j]["id"].get<int>()) != sbonds_i.cend()) continue;
 
       auto dr_original = rs.row(j) - r_i;
 
