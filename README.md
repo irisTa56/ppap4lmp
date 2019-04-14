@@ -7,6 +7,18 @@ PostProcess and Analysis Program for LAMMPS
 
 * [GitHub Pages](https://irista56.github.io/ppap4lmp/)
 
+### Documenting
+
+1. Checkout to `gh-pages` branch.
+2. Remove `docs/` from `.gitignore`.
+3. Run `./documentation.py`.
+4. To publish the documentation, push `docs/` directory as `origin/gh-pages`.
+    ```bash
+    git subtree push --prefix docs origin gh-pages
+    ```
+
+Note that local and remote `gh-pages` branch are different.
+
 ## Installation
 
 ### via Conda
