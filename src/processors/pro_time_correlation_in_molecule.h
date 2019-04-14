@@ -75,7 +75,7 @@ class ProTimeCorrelationInMolecule : public Processor {
     (snapshot of simulation).
   */
   ArrayXd time_correlation_function;
-  /*
+  /*!
     @brief Compute intramolecular vectors
     and conduct customized manipulation using them.
 

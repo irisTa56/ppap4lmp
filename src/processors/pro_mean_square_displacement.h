@@ -69,7 +69,7 @@ class ProMeanSquareDisplacement : public Processor {
     (snapshot of simulation).
   */
   ArrayXd mean_square_displacement;
-  /*
+  /*!
     @brief Extract position vectors from an Element object.
 
     @param positions

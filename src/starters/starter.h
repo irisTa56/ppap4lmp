@@ -33,7 +33,7 @@ class Starter : public Updater {
   void sort_by_id(
     Json &data);
  protected:
-  /*
+  /*!
     Whether to call #sort_by_id after setting data.
   */
   static const bool do_sorting_by_id = true;
