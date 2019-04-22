@@ -124,15 +124,15 @@ void FilComparison::compute_impl(
     check_required_keys(item.first);
   }
 
-  Json passing_data = Json::array();
+  Json remaining_data = Json::array();
 
   for (const auto &d : data)
   {
     if (check_if_pass_data_elem(d, compare_func_list))
     {
-      passing_data.push_back(d);
+      remaining_data.push_back(d);
     }
   }
 
-  data.swap(passing_data);
+  data.swap(remaining_data);
 }

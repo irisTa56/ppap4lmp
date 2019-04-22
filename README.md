@@ -19,6 +19,12 @@ PostProcess and Analysis Program for LAMMPS
 
 Note that local and remote `gh-pages` branch are different.
 
+## Features
+
+* Implemented by C++, Used from Python
+* Data stored in Json structure
+* Extensible without editing existing codes
+
 ## Installation
 
 ### via Conda
@@ -110,11 +116,38 @@ pip install .
 
 3. run tests!
 
-## Features
+### Profiling
 
-* Implemented by C++, Used from Python
-* Data stored in Json structure
-* Extensible without editing existing codes
+Install a profiling tools library.
+
+```bash
+conda install gperftools  # need conda-forge channel
+```
+
+Append the below line to `CMakeLists.txt`.
+
+```bash
+target_link_libraries(_ppap4lmp PRIVATE profiler)
+```
+
+Build & install.
+
+#### Profiling tests
+
+Run the below command instead of `python test.py`.
+
+```bash
+CPUPROFILE=sample.prof python test.py
+# sample.prof (output)
+```
+
+Profile interactively.
+
+```bash
+pprof ../ppap4lmp/_ppap4lmp.cpython-36m-x86_64-linux-gnu.so sample.prof
+```
+
+
 
 ## Acknowledgement
 
