@@ -122,6 +122,7 @@ Install a profiling tools library.
 
 ```bash
 conda install gperftools  # need conda-forge channel
+pip install yep  # libprofile should be found
 ```
 
 Append the below line to `CMakeLists.txt`.
@@ -137,17 +138,15 @@ Build & install.
 Run the below command instead of `python test.py`.
 
 ```bash
-CPUPROFILE=sample.prof python test.py
-# sample.prof (output)
+python -m yep -- test.py
 ```
 
 Profile interactively.
 
 ```bash
-pprof ../ppap4lmp/_ppap4lmp.cpython-36m-x86_64-linux-gnu.so sample.prof
+# If you used Conda's Python
+pprof $CONDA_PYTHON_EXE test.py.prof
 ```
-
-
 
 ## Acknowledgement
 

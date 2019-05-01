@@ -189,9 +189,9 @@ setup(
   url="https://github.com/irisTa56/ppap4lmp",
   ext_modules=[CMakeExtension("ppap4lmp._ppap4lmp")],
   cmdclass=dict(build_ext=CMakeBuild),
-  classifiers=(
+  classifiers=[
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
-  ),
+  ],
   packages=find_packages(),
 )
