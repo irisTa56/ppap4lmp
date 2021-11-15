@@ -15,6 +15,8 @@
 
 namespace ut = utils;
 
+static const Set<Str> INTEGER_PROPERTY_KEYS{"id", "mol", "type"};
+
 /* ------------------------------------------------------------------ */
 
 void StaDumpAtoms::compute_impl(
@@ -61,35 +63,12 @@ void StaDumpAtoms::compute_impl(
         auto keys = ut::split(line);
         keys.erase(keys.begin(), keys.begin()+2);
 
-        std::getline(ifs, line);
-
         Vec<bool> is_int_vector;
 
-        for (const auto &s : ut::split(line))
+        for (const auto &k : keys)
         {
-          // NOTE: If string containes '.', it is converted to float.
-          is_int_vector.push_back(s.find(".") == Str::npos);
+          is_int_vector.push_back(INTEGER_PROPERTY_KEYS.find(k) != INTEGER_PROPERTY_KEYS.end());
         }
-
-        // read & set data from the 1st line
-
-        auto &d = data.front();
-
-        auto strs = ut::split(line);
-
-        for (int i = 0; i != is_int_vector.size(); ++i)
-        {
-          if (is_int_vector[i])
-          {
-            d[keys[i]] = std::stoi(strs[i]);
-          }
-          else
-          {
-            d[keys[i]] = std::stod(strs[i]);
-          }
-        }
-
-        // read & set data from the remaining lines
 
         // each tuple contains info of key, int/float, delimiter
         Vec<std::tuple<Str, bool, char>> tuples(is_int_vector.size());
@@ -99,7 +78,7 @@ void StaDumpAtoms::compute_impl(
             keys[i], is_int_vector[i], i+1 == tuples.size() ? '\n' : ' ');
         }
 
-        for (auto it = data.begin()+1; it != data.end(); ++it)
+        for (auto it = data.begin(); it != data.end(); ++it)
         {
           for (auto jt = tuples.cbegin(); jt != tuples.cend(); ++jt)
           {
