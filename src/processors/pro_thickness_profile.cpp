@@ -120,12 +120,12 @@ void ProThicknessProfile::run_impl(
 
         if (radius2 < dr2) continue;
 
-        auto ix_in_box = ix - floor(ix*reciprocal_nx)*nx;
-        auto iy_in_box = iy - floor(iy*reciprocal_ny)*ny;
+        Eigen::Index ix_in_box = static_cast<Eigen::Index>(ix - floor(ix*reciprocal_nx)*nx);
+        Eigen::Index iy_in_box = static_cast<Eigen::Index>(iy - floor(iy*reciprocal_ny)*ny);
 
         auto dz2 = radius2 - dr2;
 
-        auto d = atom_z - profile_tmp(ix_in_box, iy_in_box);
+        double d = atom_z - profile_tmp(ix_in_box, iy_in_box);
 
         if (d < 0.0 && dz2 < d*d) continue;
 

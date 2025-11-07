@@ -149,7 +149,7 @@ void ProRadialDistributionFunction::run_impl(
               Adding 2 (not 1) is for taking both directions
               (i -> j & j -> i) into consideration at once.
             */
-            counts(r_index) += 2;
+            counts(static_cast<int>(r_index)) += 2;
 
           }
         }

@@ -172,10 +172,10 @@ void ProRDFWD::run_impl(
               auto r_index = bin_from_r ?
                 floor(r*reciprocal_bin_width) : round(r*reciprocal_bin_width);
 
-              raw_counts(r_index) += 2;
-              Rg2_sum(r_index) += Rg2_i + Rg2_j;
-              Rg2_para_sum(r_index) += Rg2_para_i + Rg2_para_j;
-              Rg2_perp_sum(r_index) += Rg2_perp_i + Rg2_perp_j;
+              raw_counts(static_cast<int>(r_index)) += 2;
+              Rg2_sum(static_cast<int>(r_index)) += Rg2_i + Rg2_j;
+              Rg2_para_sum(static_cast<int>(r_index)) += Rg2_para_i + Rg2_para_j;
+              Rg2_perp_sum(static_cast<int>(r_index)) += Rg2_perp_i + Rg2_perp_j;
             }
 
             auto r_modified = r + (
@@ -213,7 +213,7 @@ void ProRDFWD::run_impl(
               Adding 2 (not 1) is for taking both directions
               (i -> j & j -> i) into consideration at once.
             */
-            counts(r_index) += 2;
+            counts(static_cast<int>(r_index)) += 2;
           }
         }
       }
